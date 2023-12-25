@@ -1,0 +1,25 @@
+var structNPCUtils_1_1TargetSearchResults =
+[
+    [ "TargetSearchResults", "d5/d54/structNPCUtils_1_1TargetSearchResults_a2b379c5690ca3a50972d021b8d7a5a69.html#a2b379c5690ca3a50972d021b8d7a5a69", null ],
+    [ "_adjustedTankDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_ae612de6a87fd75e282d434bfe145cea6.html#ae612de6a87fd75e282d434bfe145cea6", null ],
+    [ "_nearestNPCDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_aaa25dfc4f401d4becfc4c8d8449ad90f.html#aaa25dfc4f401d4becfc4c8d8449ad90f", null ],
+    [ "_nearestNPCIndex", "d5/d54/structNPCUtils_1_1TargetSearchResults_a298b05e84407f4de63739b8bacb072ee.html#a298b05e84407f4de63739b8bacb072ee", null ],
+    [ "_nearestTankDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_a9d277a94be5e235c9eee01fe74420f55.html#a9d277a94be5e235c9eee01fe74420f55", null ],
+    [ "_nearestTankIndex", "d5/d54/structNPCUtils_1_1TargetSearchResults_adbf5bce8b33ee1b2b0c2bbeb787e8786.html#adbf5bce8b33ee1b2b0c2bbeb787e8786", null ],
+    [ "_nearestTankType", "d5/d54/structNPCUtils_1_1TargetSearchResults_a5967011d71d1e39b55ea226d8b83643c.html#a5967011d71d1e39b55ea226d8b83643c", null ],
+    [ "_nearestTargetType", "d5/d54/structNPCUtils_1_1TargetSearchResults_a32f98349bbd4c3995ac17c2b352b3fcf.html#a32f98349bbd4c3995ac17c2b352b3fcf", null ],
+    [ "AdjustedTankDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_a56c1e2b462ba3879b281c395482eb8c5.html#a56c1e2b462ba3879b281c395482eb8c5", null ],
+    [ "FoundNPC", "d5/d54/structNPCUtils_1_1TargetSearchResults_ae23ac795653228715e50f32e2c05bbdf.html#ae23ac795653228715e50f32e2c05bbdf", null ],
+    [ "FoundTank", "d5/d54/structNPCUtils_1_1TargetSearchResults_abebcb651479bd74bc3e8642db454c1d4.html#abebcb651479bd74bc3e8642db454c1d4", null ],
+    [ "FoundTarget", "d5/d54/structNPCUtils_1_1TargetSearchResults_a614bf97227aaa7b4d578e46d68ac5964.html#a614bf97227aaa7b4d578e46d68ac5964", null ],
+    [ "NearestNPC", "d5/d54/structNPCUtils_1_1TargetSearchResults_af80e3bd2a5857479afb2c412ba2cce77.html#af80e3bd2a5857479afb2c412ba2cce77", null ],
+    [ "NearestNPCDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_a011daef2831b97d7b72f846335f42dc4.html#a011daef2831b97d7b72f846335f42dc4", null ],
+    [ "NearestNPCIndex", "d5/d54/structNPCUtils_1_1TargetSearchResults_a678922b19f2ccf8309840b66bf313cdd.html#a678922b19f2ccf8309840b66bf313cdd", null ],
+    [ "NearestTankDistance", "d5/d54/structNPCUtils_1_1TargetSearchResults_a11b7c7aff39960ee878b7bfbbc484b2a.html#a11b7c7aff39960ee878b7bfbbc484b2a", null ],
+    [ "NearestTankOwner", "d5/d54/structNPCUtils_1_1TargetSearchResults_a3c57bed1fe871809999d7f2cbb3de278.html#a3c57bed1fe871809999d7f2cbb3de278", null ],
+    [ "NearestTankOwnerIndex", "d5/d54/structNPCUtils_1_1TargetSearchResults_a640ae1f428c2a38903b9f64eee23a1a0.html#a640ae1f428c2a38903b9f64eee23a1a0", null ],
+    [ "NearestTankType", "d5/d54/structNPCUtils_1_1TargetSearchResults_a3ed96a19a8e30149e89901f3a372bd09.html#a3ed96a19a8e30149e89901f3a372bd09", null ],
+    [ "NearestTargetHitbox", "d5/d54/structNPCUtils_1_1TargetSearchResults_a0c305399b68cf087c30cea933c2af901.html#a0c305399b68cf087c30cea933c2af901", null ],
+    [ "NearestTargetIndex", "d5/d54/structNPCUtils_1_1TargetSearchResults_ad72c30dd86c66db2ee2721d56edb3373.html#ad72c30dd86c66db2ee2721d56edb3373", null ],
+    [ "NearestTargetType", "d5/d54/structNPCUtils_1_1TargetSearchResults_a219c8157c6c28b753039cd886f9a98ff.html#a219c8157c6c28b753039cd886f9a98ff", null ]
+];

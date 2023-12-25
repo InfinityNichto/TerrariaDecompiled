@@ -1,0 +1,26 @@
+var classGolfHelper =
+[
+    [ "ClubProperties", "de/d94/structGolfHelper_1_1ClubProperties.html", "de/d94/structGolfHelper_1_1ClubProperties" ],
+    [ "ContactListener", "dd/d63/classGolfHelper_1_1ContactListener.html", "dd/d63/classGolfHelper_1_1ContactListener" ],
+    [ "ShotStrength", "d2/d1f/structGolfHelper_1_1ShotStrength.html", "d2/d1f/structGolfHelper_1_1ShotStrength" ],
+    [ "CalculateShotStrength", "d4/d2b/classGolfHelper_ae1aad8390ad14b727c8e4b027feb7f76.html#ae1aad8390ad14b727c8e4b027feb7f76", null ],
+    [ "CalculateShotStrength", "d4/d2b/classGolfHelper_ab476264dc2f4998782dc0066b8dfb080.html#ab476264dc2f4998782dc0066b8dfb080", null ],
+    [ "DrawPredictionLine", "d4/d2b/classGolfHelper_afb9d3d8e6524ad4d63a1bacbcfbb2bba.html#afb9d3d8e6524ad4d63a1bacbcfbb2bba", null ],
+    [ "FindGolfBallForHelper", "d4/d2b/classGolfHelper_a2a35fa879e8287ae4ba3d964463b92b3.html#a2a35fa879e8287ae4ba3d964463b92b3", null ],
+    [ "FindHelperFromGolfBall", "d4/d2b/classGolfHelper_a717aa40f5ba32360efc956c65a546be1.html#a717aa40f5ba32360efc956c65a546be1", null ],
+    [ "FindVectorOnOval", "d4/d2b/classGolfHelper_acb7b6097f24403b0c991f8db2d2db65e.html#acb7b6097f24403b0c991f8db2d2db65e", null ],
+    [ "GetClubProperties", "d4/d2b/classGolfHelper_a052f669dc4d18b0e7eb62fa392e7d9d4.html#a052f669dc4d18b0e7eb62fa392e7d9d4", null ],
+    [ "GetClubPropertiesFromGolfHelper", "d4/d2b/classGolfHelper_a83c4b03859f7bb183f289271a3aee931.html#a83c4b03859f7bb183f289271a3aee931", null ],
+    [ "HitGolfBall", "d4/d2b/classGolfHelper_afc079f9f158623730d92d0f622cc0bf4.html#afc079f9f158623730d92d0f622cc0bf4", null ],
+    [ "IsGolfBallResting", "d4/d2b/classGolfHelper_a2c1f283fd69c2678ca123b9a35ae281c.html#a2c1f283fd69c2678ca123b9a35ae281c", null ],
+    [ "IsGolfShotValid", "d4/d2b/classGolfHelper_ac3c4bffd162e47710a914013650a0461.html#ac3c4bffd162e47710a914013650a0461", null ],
+    [ "IsPlayerHoldingClub", "d4/d2b/classGolfHelper_a8e54297e90139805de2ea0f86b11e170.html#a8e54297e90139805de2ea0f86b11e170", null ],
+    [ "StepGolfBall", "d4/d2b/classGolfHelper_ac37c28711b1ec6480ffc5aab8bc368b3.html#ac37c28711b1ec6480ffc5aab8bc368b3", null ],
+    [ "ValidateShot", "d4/d2b/classGolfHelper_af99500f8ca10a60c0a9ed04e7ed785af.html#af99500f8ca10a60c0a9ed04e7ed785af", null ],
+    [ "Listener", "d4/d2b/classGolfHelper_a9040e98d43737754143146128c86244c.html#a9040e98d43737754143146128c86244c", null ],
+    [ "PhysicsProperties", "d4/d2b/classGolfHelper_a22cb5f22206a06b0abae8565c85fbba7.html#a22cb5f22206a06b0abae8565c85fbba7", null ],
+    [ "PointsNeededForLevel1", "d4/d2b/classGolfHelper_aae9aa8d89c664556007ec1e378cbe212.html#aae9aa8d89c664556007ec1e378cbe212", null ],
+    [ "PointsNeededForLevel2", "d4/d2b/classGolfHelper_ab5f6ab25ad1b5f36632f3d25979a5d48.html#ab5f6ab25ad1b5f36632f3d25979a5d48", null ],
+    [ "PointsNeededForLevel3", "d4/d2b/classGolfHelper_a9992c8a55a696aed42eabd7187f36219.html#a9992c8a55a696aed42eabd7187f36219", null ],
+    [ "PredictionLine", "d4/d2b/classGolfHelper_a517a58df1dc21997884629f48265c33b.html#a517a58df1dc21997884629f48265c33b", null ]
+];

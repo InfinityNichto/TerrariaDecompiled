@@ -1,0 +1,26 @@
+var classSpriteViewMatrix =
+[
+    [ "SpriteViewMatrix", "dd/dbd/classSpriteViewMatrix_a675c6dc39e95eb0cb7b5270ecea723a6.html#a675c6dc39e95eb0cb7b5270ecea723a6", null ],
+    [ "ClearViewportOverride", "dd/dbd/classSpriteViewMatrix_a8f7f15ee9de37c4efb71959fc1d22b76.html#a8f7f15ee9de37c4efb71959fc1d22b76", null ],
+    [ "Rebuild", "dd/dbd/classSpriteViewMatrix_a1c3516124ed5e38de65f82b72f2ca209.html#a1c3516124ed5e38de65f82b72f2ca209", null ],
+    [ "SetViewportOverride", "dd/dbd/classSpriteViewMatrix_ae8119c28ed0f84d9cc60d571452c159a.html#ae8119c28ed0f84d9cc60d571452c159a", null ],
+    [ "ShouldRebuild", "dd/dbd/classSpriteViewMatrix_a33cc8a3cde937d35af370839fb85f5f6.html#a33cc8a3cde937d35af370839fb85f5f6", null ],
+    [ "_effectMatrix", "dd/dbd/classSpriteViewMatrix_a29391d5ad30045d04f7cde1de9b12e6d.html#a29391d5ad30045d04f7cde1de9b12e6d", null ],
+    [ "_effects", "dd/dbd/classSpriteViewMatrix_a5b5e117948a9d7bf33584a969cc24e13.html#a5b5e117948a9d7bf33584a969cc24e13", null ],
+    [ "_graphicsDevice", "dd/dbd/classSpriteViewMatrix_ac4a36be1555cb9e0825135d196e31515.html#ac4a36be1555cb9e0825135d196e31515", null ],
+    [ "_needsRebuild", "dd/dbd/classSpriteViewMatrix_aee5f3aca8be91590d0600c81d25ff058.html#aee5f3aca8be91590d0600c81d25ff058", null ],
+    [ "_normalizedTransformationMatrix", "dd/dbd/classSpriteViewMatrix_ad2d8fb6bea00bb4c1b1f27fe71e34c9c.html#ad2d8fb6bea00bb4c1b1f27fe71e34c9c", null ],
+    [ "_overrideSystemViewport", "dd/dbd/classSpriteViewMatrix_a4e696577090e47e2048c4327dd40d4c2.html#a4e696577090e47e2048c4327dd40d4c2", null ],
+    [ "_transformationMatrix", "dd/dbd/classSpriteViewMatrix_ae84ccfb41b9db44a5efc173f956ee935.html#ae84ccfb41b9db44a5efc173f956ee935", null ],
+    [ "_translation", "dd/dbd/classSpriteViewMatrix_a345199d5b2af98ebd3d78a37b1a19424.html#a345199d5b2af98ebd3d78a37b1a19424", null ],
+    [ "_viewport", "dd/dbd/classSpriteViewMatrix_aaf523d2d09f4260c742ebfeafd9e3038.html#aaf523d2d09f4260c742ebfeafd9e3038", null ],
+    [ "_zoom", "dd/dbd/classSpriteViewMatrix_a4020f758466be6750956016986874a98.html#a4020f758466be6750956016986874a98", null ],
+    [ "_zoomMatrix", "dd/dbd/classSpriteViewMatrix_a1e258e7340dd54feb9c00e3eb66e18ef.html#a1e258e7340dd54feb9c00e3eb66e18ef", null ],
+    [ "EffectMatrix", "dd/dbd/classSpriteViewMatrix_a402d8dafab8634ef88938e36be57e066.html#a402d8dafab8634ef88938e36be57e066", null ],
+    [ "Effects", "dd/dbd/classSpriteViewMatrix_a5d60f187da38e442aa8163832dbff461.html#a5d60f187da38e442aa8163832dbff461", null ],
+    [ "NormalizedTransformationmatrix", "dd/dbd/classSpriteViewMatrix_aee5ff7940bf0a73a2c05050a72b96336.html#aee5ff7940bf0a73a2c05050a72b96336", null ],
+    [ "TransformationMatrix", "dd/dbd/classSpriteViewMatrix_a2e23b7929c561d66299d67d44da6904e.html#a2e23b7929c561d66299d67d44da6904e", null ],
+    [ "Translation", "dd/dbd/classSpriteViewMatrix_a01694eabff6080955752fc355f3da738.html#a01694eabff6080955752fc355f3da738", null ],
+    [ "Zoom", "dd/dbd/classSpriteViewMatrix_ab0fabd65fc2369ff5e55cfd70ef00c4b.html#ab0fabd65fc2369ff5e55cfd70ef00c4b", null ],
+    [ "ZoomMatrix", "dd/dbd/classSpriteViewMatrix_a1f8ff5fdf347bac80ee753e81b505042.html#a1f8ff5fdf347bac80ee753e81b505042", null ]
+];

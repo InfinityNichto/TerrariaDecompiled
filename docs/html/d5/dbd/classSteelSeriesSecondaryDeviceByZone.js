@@ -1,0 +1,28 @@
+var classSteelSeriesSecondaryDeviceByZone =
+[
+    [ "SteelSeriesSecondaryDeviceByZone", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_ad89150924db7513b8e023ecad3fec845.html#ad89150924db7513b8e023ecad3fec845", null ],
+    [ "CollectEventsToTrack", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_ad7d71cb9cdd7fd696f57a7defe63a428.html#ad7d71cb9cdd7fd696f57a7defe63a428", null ],
+    [ "DebugDraw", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#ad3dfe8cb4af4068e98c3c6a59c4768b2", null ],
+    [ "GetLedCanvasPosition", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a88e7e5ebd38a000207ab9baf8d7e65a4", null ],
+    [ "GetLedGridPosition", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a8e4e0dcf8c5efbf569f689fc4ac0148d", null ],
+    [ "GetProcessedLedColor", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a40e631bbeee39a81ced7b16d614d08f5", null ],
+    [ "GetUnprocessedLedColor", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a5b5ba8ff409b973c08c484738fef33d1", null ],
+    [ "Present", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_abf70da32cbca175ee00a23a528179a21.html#abf70da32cbca175ee00a23a528179a21", null ],
+    [ "ProcessLedColor", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a9f47179ff2fa7561823c774b8850a773", null ],
+    [ "Rasterize", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a8b15ed614698672967c89d6691658924", null ],
+    [ "Render", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a81ae9799afce89cd06a5c9ae3605cc3a", null ],
+    [ "SetLedColor", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#aa26f9068646925cb782e28f3cdc8944f", null ],
+    [ "TryGetEventUpdateRequest", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_a29170c221827312b6c14e094b8426857.html#a29170c221827312b6c14e094b8426857", null ],
+    [ "_backBuffer", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a24a3ae5464c3917ded6d82f150bbb9fb", null ],
+    [ "_colorKey", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_a3f510200c70c53cfa748975d33ff86e2.html#a3f510200c70c53cfa748975d33ff86e2", null ],
+    [ "_colorProfile", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#af4dbf5541fa8bfda3f23725d324fbf7a", null ],
+    [ "_requestList", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_a471838dff5adabf3e1f8df854929dca9.html#a471838dff5adabf3e1f8df854929dca9", null ],
+    [ "_workingFragment", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a1229c7c40735bb7c85636a6b257c8262", null ],
+    [ "_xPosition", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_a59c96c6ed1428baa364a5682db2a9d90.html#a59c96c6ed1428baa364a5682db2a9d90", null ],
+    [ "_yPosition", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_a1a116b7509346ec1ee830896ec16ad69.html#a1a116b7509346ec1ee830896ec16ad69", null ],
+    [ "_zoneTarget", "d5/dbd/classSteelSeriesSecondaryDeviceByZone_af722fa5dbc8df8f02a9088366d381125.html#af722fa5dbc8df8f02a9088366d381125", null ],
+    [ "Type", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#ac09dddaf481d48bfa1d1051df0a42d5a", null ],
+    [ "Vendor", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#aa28b2bc7772bdcec0fd8b94e76eaf869", null ],
+    [ "LedCount", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a844a4175c767105f4310b4d61d311c09", null ],
+    [ "PreferredLevelOfDetail", "d5/dbd/classSteelSeriesSecondaryDeviceByZone.html#a2f8a23712a0954b2fd75612c0e183544", null ]
+];

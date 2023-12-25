@@ -1,0 +1,25 @@
+var classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance =
+[
+    [ "ResourcePackPublisherInstance", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_ab538989934e55457a3845874f89c88b4.html#ab538989934e55457a3845874f89c88b4", null ],
+    [ "CreateItem", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#af88ee6c713d859a2e20de0aca58e3d87", null ],
+    [ "CreateItemResult", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#add957a98abf47edf7a598c861d56e912", null ],
+    [ "FinishedPublishingAction", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a6c9161af9cc6a7700d64a3456efb2e48", null ],
+    [ "GetHeaderText", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_abbda016928edfadaa62cb52b47eb9a37.html#abbda016928edfadaa62cb52b47eb9a37", null ],
+    [ "GetVisibility", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a1a5a2ad54561e1c20bfdc7851265630d", null ],
+    [ "PrepareContentForUpdate", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_ac30286cd81aa9d1de4d4c542062e5888.html#ac30286cd81aa9d1de4d4c542062e5888", null ],
+    [ "PreventUpdatingCertainThings", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a29d8b3a8a1caf9a32e2e171fe999521b", null ],
+    [ "PublishContent", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ac7d24ad819c50775b1bb68263a35369b", null ],
+    [ "TryGetProgress", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a57be724a5aecca913f1431849feeb93b", null ],
+    [ "TryWritingManifestToFolder", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a8b4bad561eed38c83d86823a9872df15", null ],
+    [ "UpdateItem", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a0b8c59e20c7a9c824772a8aebfde65ab", null ],
+    [ "UpdateItemResult", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#aa5852b216f87cba691d851e3be520879", null ],
+    [ "_createItemHook", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a98d17babbbef0b05398f306816282e58", null ],
+    [ "_endAction", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a9134ab4d833b2ae5c47b3d35608f15f3", null ],
+    [ "_entryData", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#acd389b39470c6aa16125f922e441b9b7", null ],
+    [ "_issueReporter", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#aee433cb775e8745faa2caab4d5382069", null ],
+    [ "_publicity", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a08a86427ed6513e2bdfcb16ae94a280e", null ],
+    [ "_publishedFileID", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ad01fd91c0500ed870b442f83cccd7c2f", null ],
+    [ "_resourcePack", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_ad6f57ae5c3d700d7d264babb50f551ad.html#ad6f57ae5c3d700d7d264babb50f551ad", null ],
+    [ "_updateHandle", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a4028353410945176356390b8009cb605", null ],
+    [ "_updateItemHook", "dd/dde/classWorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a9c36a8acc4b713c9cb5e4bd9996add3a", null ]
+];
