@@ -1,0 +1,26 @@
+var classCommonConditions_1_1UndergroundBiome =
+[
+    [ "InDesert", "d8/df7/classCommonConditions_1_1UndergroundBiome_ae33605af89c1b6f02228fe8ac8040d61.html#ae33605af89c1b6f02228fe8ac8040d61", null ],
+    [ "InIce", "d8/df7/classCommonConditions_1_1UndergroundBiome_a0df03f19c5bdcf0e1cc3cc72f3ef2ed0.html#a0df03f19c5bdcf0e1cc3cc72f3ef2ed0", null ],
+    [ "InTemple", "d8/df7/classCommonConditions_1_1UndergroundBiome_a7a8f0f08fed7a2cc6b8050c5845b19e9.html#a7a8f0f08fed7a2cc6b8050c5845b19e9", null ],
+    [ "Corrupt", "d8/df7/classCommonConditions_1_1UndergroundBiome_a24991da9a11d1febc8a099e9fcf55f72.html#a24991da9a11d1febc8a099e9fcf55f72", null ],
+    [ "CorruptDesert", "d8/df7/classCommonConditions_1_1UndergroundBiome_a8ed271dc9eaccd069ce07895459d1bb5.html#a8ed271dc9eaccd069ce07895459d1bb5", null ],
+    [ "CorruptIce", "d8/df7/classCommonConditions_1_1UndergroundBiome_adb0901392eaa29cac3130b2e7384b68b.html#adb0901392eaa29cac3130b2e7384b68b", null ],
+    [ "Crimson", "d8/df7/classCommonConditions_1_1UndergroundBiome_acb574fb89011802010ba0b48e570ab78.html#acb574fb89011802010ba0b48e570ab78", null ],
+    [ "CrimsonDesert", "d8/df7/classCommonConditions_1_1UndergroundBiome_a03f4db4164595abd1341dfc546e328f1.html#a03f4db4164595abd1341dfc546e328f1", null ],
+    [ "CrimsonIce", "d8/df7/classCommonConditions_1_1UndergroundBiome_a9abcb32b07e7cb99147008e773c1ee3b.html#a9abcb32b07e7cb99147008e773c1ee3b", null ],
+    [ "Desert", "d8/df7/classCommonConditions_1_1UndergroundBiome_a88ea6a7e30d9adf531a311aa440273be.html#a88ea6a7e30d9adf531a311aa440273be", null ],
+    [ "Dungeon", "d8/df7/classCommonConditions_1_1UndergroundBiome_a13758ac57ad0c0881ae5be27a229abef.html#a13758ac57ad0c0881ae5be27a229abef", null ],
+    [ "GemCave", "d8/df7/classCommonConditions_1_1UndergroundBiome_a8b29ecc983cbe8a6d2cd5eb61721743b.html#a8b29ecc983cbe8a6d2cd5eb61721743b", null ],
+    [ "Granite", "d8/df7/classCommonConditions_1_1UndergroundBiome_a8a3525c15aeef9e551c0a3aa6965c01d.html#a8a3525c15aeef9e551c0a3aa6965c01d", null ],
+    [ "Hallow", "d8/df7/classCommonConditions_1_1UndergroundBiome_a3a6bf9c972612e1a0a5fbf85bdf04596.html#a3a6bf9c972612e1a0a5fbf85bdf04596", null ],
+    [ "HallowDesert", "d8/df7/classCommonConditions_1_1UndergroundBiome_a6e909e3c7931c61894c9178000b5a0b1.html#a6e909e3c7931c61894c9178000b5a0b1", null ],
+    [ "HallowIce", "d8/df7/classCommonConditions_1_1UndergroundBiome_ad668f3e0f62f9a858af17ed3e87098bf.html#ad668f3e0f62f9a858af17ed3e87098bf", null ],
+    [ "Hive", "d8/df7/classCommonConditions_1_1UndergroundBiome_a0e15583fac98e33c246dade3346847b8.html#a0e15583fac98e33c246dade3346847b8", null ],
+    [ "Ice", "d8/df7/classCommonConditions_1_1UndergroundBiome_a9ac835cf92d516b9b67ac8e2cb840f70.html#a9ac835cf92d516b9b67ac8e2cb840f70", null ],
+    [ "Jungle", "d8/df7/classCommonConditions_1_1UndergroundBiome_a8a2f9cda2c94a95ce77c3a0cdebf0d18.html#a8a2f9cda2c94a95ce77c3a0cdebf0d18", null ],
+    [ "Marble", "d8/df7/classCommonConditions_1_1UndergroundBiome_a0a6a6ff690d20983dd3842c262d6d2d8.html#a0a6a6ff690d20983dd3842c262d6d2d8", null ],
+    [ "Mushroom", "d8/df7/classCommonConditions_1_1UndergroundBiome_a44888f7fe44fe1bc7bca73ad2aef7817.html#a44888f7fe44fe1bc7bca73ad2aef7817", null ],
+    [ "Shimmer", "d8/df7/classCommonConditions_1_1UndergroundBiome_ae4a07b0023965680d21be490ac0fdcd9.html#ae4a07b0023965680d21be490ac0fdcd9", null ],
+    [ "Temple", "d8/df7/classCommonConditions_1_1UndergroundBiome_a4c8e87020fd6fd666a87bd40ebcdd9fb.html#a4c8e87020fd6fd666a87bd40ebcdd9fb", null ]
+];

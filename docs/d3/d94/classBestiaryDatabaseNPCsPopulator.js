@@ -1,0 +1,27 @@
+var classBestiaryDatabaseNPCsPopulator =
+[
+    [ "CommonTags", "dc/d4a/classBestiaryDatabaseNPCsPopulator_1_1CommonTags.html", "dc/d4a/classBestiaryDatabaseNPCsPopulator_1_1CommonTags" ],
+    [ "Conditions", "da/df3/classBestiaryDatabaseNPCsPopulator_1_1Conditions.html", "da/df3/classBestiaryDatabaseNPCsPopulator_1_1Conditions" ],
+    [ "CrownosIconIndexes", "d1/d1e/classBestiaryDatabaseNPCsPopulator_1_1CrownosIconIndexes.html", "d1/d1e/classBestiaryDatabaseNPCsPopulator_1_1CrownosIconIndexes" ],
+    [ "AddDropOverrides", "d3/d94/classBestiaryDatabaseNPCsPopulator_a98a3750b8a2a415c02e88ab2ed6dae39.html#a98a3750b8a2a415c02e88ab2ed6dae39", null ],
+    [ "AddEmptyEntries_CrittersAndEnemies_Automated", "d3/d94/classBestiaryDatabaseNPCsPopulator_a812d5c4d49fb2139a661113c0e119c9e.html#a812d5c4d49fb2139a661113c0e119c9e", null ],
+    [ "AddMultiEntryNPCS_Manual", "d3/d94/classBestiaryDatabaseNPCsPopulator_a28aa8ed38d22d42ef63c719f736a3b75.html#a28aa8ed38d22d42ef63c719f736a3b75", null ],
+    [ "AddNPCBiomeRelationships_AddDecorations_Automated", "d3/d94/classBestiaryDatabaseNPCsPopulator_a6810093d35ce5131db02de9ac96cf5aa.html#a6810093d35ce5131db02de9ac96cf5aa", null ],
+    [ "AddNPCBiomeRelationships_Automated", "d3/d94/classBestiaryDatabaseNPCsPopulator_aead48f82a43ee5fc7b6144b005aaab34.html#aead48f82a43ee5fc7b6144b005aaab34", null ],
+    [ "AddNPCBiomeRelationships_Manual", "d3/d94/classBestiaryDatabaseNPCsPopulator_a67e140844d152c28fdb6c5618a0b2e5d.html#a67e140844d152c28fdb6c5618a0b2e5d", null ],
+    [ "AddTownNPCs_Manual", "d3/d94/classBestiaryDatabaseNPCsPopulator_ae358d48c9a015e8bb70363b441e9df6a.html#ae358d48c9a015e8bb70363b441e9df6a", null ],
+    [ "AdjustEaterOfWorldStats", "d3/d94/classBestiaryDatabaseNPCsPopulator_a8ce8db082e4de047814725c8bd97a341.html#a8ce8db082e4de047814725c8bd97a341", null ],
+    [ "AdjustPirateShipStats", "d3/d94/classBestiaryDatabaseNPCsPopulator_ae16263419a1de8448dd98747ab1b4df0.html#ae16263419a1de8448dd98747ab1b4df0", null ],
+    [ "FindEntryByNPCID", "d3/d94/classBestiaryDatabaseNPCsPopulator_a67cc425743a5e1d665d32828a2f1c24d.html#a67cc425743a5e1d665d32828a2f1c24d", null ],
+    [ "GetExclusions", "d3/d94/classBestiaryDatabaseNPCsPopulator_a835d5cc165b668e25687dd0f5d0b5f27.html#a835d5cc165b668e25687dd0f5d0b5f27", null ],
+    [ "ModifyEntriesThatNeedIt", "d3/d94/classBestiaryDatabaseNPCsPopulator_aa3d50d27c3c859a0e9cde119dbb469eb.html#aa3d50d27c3c859a0e9cde119dbb469eb", null ],
+    [ "ModifyEntriesThatNeedIt_NameOverride", "d3/d94/classBestiaryDatabaseNPCsPopulator_a8124056eb1f8ed1325f49270e61a325c.html#a8124056eb1f8ed1325f49270e61a325c", null ],
+    [ "Populate", "d3/d94/classBestiaryDatabaseNPCsPopulator_a3b416d0643ac02d910a6f2981472b0af.html#a3b416d0643ac02d910a6f2981472b0af", null ],
+    [ "Register", "d3/d94/classBestiaryDatabaseNPCsPopulator_ae57715b3b330b50d1523ca659cdc746f.html#ae57715b3b330b50d1523ca659cdc746f", null ],
+    [ "Register", "d3/d94/classBestiaryDatabaseNPCsPopulator_a9c4e1475d80b73f9eea3d898fb520dd8.html#a9c4e1475d80b73f9eea3d898fb520dd8", null ],
+    [ "RegisterFilters", "d3/d94/classBestiaryDatabaseNPCsPopulator_ad3390f487b682410bc1a45d7b736849e.html#ad3390f487b682410bc1a45d7b736849e", null ],
+    [ "RegisterSortSteps", "d3/d94/classBestiaryDatabaseNPCsPopulator_ab8ef8e92a5399e8b6c4ac2ef2a030691.html#ab8ef8e92a5399e8b6c4ac2ef2a030691", null ],
+    [ "RegisterTestEntries", "d3/d94/classBestiaryDatabaseNPCsPopulator_aa675c3cf7dead1589b47ddfd5f1d1212.html#aa675c3cf7dead1589b47ddfd5f1d1212", null ],
+    [ "TryGivingEntryFlavorTextIfItIsMissing", "d3/d94/classBestiaryDatabaseNPCsPopulator_a444aeb189317ef1ec7f1207c2bb834b3.html#a444aeb189317ef1ec7f1207c2bb834b3", null ],
+    [ "_currentDatabase", "d3/d94/classBestiaryDatabaseNPCsPopulator_aea5f5597e28ea57b293e7e5d29ecca2f.html#aea5f5597e28ea57b293e7e5d29ecca2f", null ]
+];
