@@ -1,0 +1,28 @@
+var classChromaEngine =
+[
+    [ "ChromaEngine", "d9/d66/classChromaEngine_ae30e156ddccbba04f5b872e4f3ab8a97.html#ae30e156ddccbba04f5b872e4f3ab8a97", null ],
+    [ "AddDeviceGroup", "d9/d66/classChromaEngine_a5331b9a390d7668a7d5f61468300106a.html#a5331b9a390d7668a7d5f61468300106a", null ],
+    [ "BindKey", "d9/d66/classChromaEngine_a7b57463a763e2b165f1194d071efbf6f.html#a7b57463a763e2b165f1194d071efbf6f", null ],
+    [ "DebugDraw", "d9/d66/classChromaEngine_a46ead0adf06e6d4b342a4350f819774a.html#a46ead0adf06e6d4b342a4350f819774a", null ],
+    [ "DisableAllDeviceGroups", "d9/d66/classChromaEngine_a5ece8a3bdd9f0c6808c6d702fdc3eab5.html#a5ece8a3bdd9f0c6808c6d702fdc3eab5", null ],
+    [ "DisableDeviceGroup", "d9/d66/classChromaEngine_a62a5ac4b275a03cc8d578c0c9704bf32.html#a62a5ac4b275a03cc8d578c0c9704bf32", null ],
+    [ "Draw", "d9/d66/classChromaEngine_af21b7e447198d806fad4a078f2ea1839.html#af21b7e447198d806fad4a078f2ea1839", null ],
+    [ "EnableAllDeviceGroups", "d9/d66/classChromaEngine_a2c530a4ef5eacb51e7b542887f995404.html#a2c530a4ef5eacb51e7b542887f995404", null ],
+    [ "EnableDeviceGroup", "d9/d66/classChromaEngine_ad8b26ffa77411b95b5f5359f2ffb835d.html#ad8b26ffa77411b95b5f5359f2ffb835d", null ],
+    [ "HasDeviceGroup", "d9/d66/classChromaEngine_a88b659502bfa0488bf4525b4bbabca83.html#a88b659502bfa0488bf4525b4bbabca83", null ],
+    [ "IsDeviceGroupEnabled", "d9/d66/classChromaEngine_a051a6782a2411197da6b0c3ef66feb9d.html#a051a6782a2411197da6b0c3ef66feb9d", null ],
+    [ "LoadSpecialRules", "d9/d66/classChromaEngine_a832e448debb6d528b9078de6f2f7485e.html#a832e448debb6d528b9078de6f2f7485e", null ],
+    [ "RegisterShader", "d9/d66/classChromaEngine_ad46b4fdda18f4f77ed3bed8ee0f510af.html#ad46b4fdda18f4f77ed3bed8ee0f510af", null ],
+    [ "RemoveDeviceGroup", "d9/d66/classChromaEngine_a0d95fcc07421a9c2fc0217d76a75f2b8.html#a0d95fcc07421a9c2fc0217d76a75f2b8", null ],
+    [ "UnbindKey", "d9/d66/classChromaEngine_a2e69f1638038a97da9e3f0f983bcd665.html#a2e69f1638038a97da9e3f0f983bcd665", null ],
+    [ "UnregisterShader", "d9/d66/classChromaEngine_a12b27fe1e0761a2b865a4fdec9332505.html#a12b27fe1e0761a2b865a4fdec9332505", null ],
+    [ "Update", "d9/d66/classChromaEngine_ae10e95916dd59637047c434135bcc6d7.html#ae10e95916dd59637047c434135bcc6d7", null ],
+    [ "_deviceGroups", "d9/d66/classChromaEngine_a109fa4ee3ad1860463b21311ef062a72.html#a109fa4ee3ad1860463b21311ef062a72", null ],
+    [ "_hotkeys", "d9/d66/classChromaEngine_a991b1873c943e6a021b6316430bd4816.html#a991b1873c943e6a021b6316430bd4816", null ],
+    [ "_lastTime", "d9/d66/classChromaEngine_a88e39e552548da6c424ae299bd9cb7d4.html#a88e39e552548da6c424ae299bd9cb7d4", null ],
+    [ "_pipeline", "d9/d66/classChromaEngine_a6c87bb7b1dee548cab38d28844bdd3d9.html#a6c87bb7b1dee548cab38d28844bdd3d9", null ],
+    [ "_shaderSelector", "d9/d66/classChromaEngine_aea75e18dbdf8c82d7072222b01b0d545.html#aea75e18dbdf8c82d7072222b01b0d545", null ],
+    [ "_updateLock", "d9/d66/classChromaEngine_af40098d6bbc2cb6118db2a099f4958eb.html#af40098d6bbc2cb6118db2a099f4958eb", null ],
+    [ "FrameTimeInSeconds", "d9/d66/classChromaEngine_a030aeefa30128c32acd8b4d90611b989.html#a030aeefa30128c32acd8b4d90611b989", null ],
+    [ "OnUpdate", "d9/d66/classChromaEngine_aea5a2cba6bd6a2c99e45947d784ca174.html#aea5a2cba6bd6a2c99e45947d784ca174", null ]
+];

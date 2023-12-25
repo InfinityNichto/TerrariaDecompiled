@@ -1,0 +1,28 @@
+var classFlameParticle =
+[
+    [ "Draw", "db/dca/classFlameParticle_ae154906ea677c90771337964cf5861ca.html#ae154906ea677c90771337964cf5861ca", null ],
+    [ "FetchFromPool", "db/dca/classFlameParticle_af6ac4698f940106520a6288ec3a58bd0.html#af6ac4698f940106520a6288ec3a58bd0", null ],
+    [ "RestInPool", "db/dca/classFlameParticle.html#aae73f8213e600c5960ff3177410225f2", null ],
+    [ "SetBasicInfo", "db/dca/classFlameParticle_a143ddb9ed6ea99bc4c527cdbdd697bf9.html#a143ddb9ed6ea99bc4c527cdbdd697bf9", null ],
+    [ "SetTypeInfo", "db/dca/classFlameParticle_a952482530b917d04e3b73ad895ebbe3d.html#a952482530b917d04e3b73ad895ebbe3d", null ],
+    [ "Update", "db/dca/classFlameParticle_a7109b7dbcf2cdca3c111a0d3bc51c4ae.html#a7109b7dbcf2cdca3c111a0d3bc51c4ae", null ],
+    [ "_frame", "db/dca/classFlameParticle.html#ab67b8c64771361464b9c5f286aa7c455", null ],
+    [ "_indexOfPlayerWhoSpawnedThis", "db/dca/classFlameParticle_a8a3852c72e895fafc3ee4b9a00b41912.html#a8a3852c72e895fafc3ee4b9a00b41912", null ],
+    [ "_origin", "db/dca/classFlameParticle.html#a8bd6685407479a673aa3e2ed00cfae5b", null ],
+    [ "_packedShaderIndex", "db/dca/classFlameParticle_a45ad794f98a33e8e954c22a102a39f7d.html#a45ad794f98a33e8e954c22a102a39f7d", null ],
+    [ "_texture", "db/dca/classFlameParticle.html#a0f1a702bc60faeafd63f0a378c3e7b50", null ],
+    [ "_timeSinceSpawn", "db/dca/classFlameParticle_af83ac6cf178a96b96881428a32ccafad.html#af83ac6cf178a96b96881428a32ccafad", null ],
+    [ "_timeTolive", "db/dca/classFlameParticle_a12eadc2a06d99d586d062fec301f26ce.html#a12eadc2a06d99d586d062fec301f26ce", null ],
+    [ "AccelerationPerFrame", "db/dca/classFlameParticle.html#a69ac961461413140f4a705e53734d80d", null ],
+    [ "FadeOutNormalizedTime", "db/dca/classFlameParticle_a735874eb17bb3c1c603c3a476ba02b84.html#a735874eb17bb3c1c603c3a476ba02b84", null ],
+    [ "LocalPosition", "db/dca/classFlameParticle.html#a08cb980695c243f3318d3c73d0ddfa23", null ],
+    [ "Rotation", "db/dca/classFlameParticle.html#a348ed5650972541e943a4cf616cd07bd", null ],
+    [ "RotationAcceleration", "db/dca/classFlameParticle.html#a6cf2825a99828c047a34f1e5d41bed21", null ],
+    [ "RotationVelocity", "db/dca/classFlameParticle.html#ab633d4ec61733a2b0af92db184fd87a0", null ],
+    [ "Scale", "db/dca/classFlameParticle.html#a830b08e0d471058211a6d8ae0cdaacbe", null ],
+    [ "ScaleAcceleration", "db/dca/classFlameParticle.html#a4bd87635277a1730c0f73db669088ca9", null ],
+    [ "ScaleVelocity", "db/dca/classFlameParticle.html#ab1a5e9569e4efdb4d4562e6417116965", null ],
+    [ "Velocity", "db/dca/classFlameParticle.html#aa754b0d124ed82410a8ef5f559402b63", null ],
+    [ "IsRestingInPool", "db/dca/classFlameParticle.html#ad07923d347d2960a29375aa79906a5f8", null ],
+    [ "ShouldBeRemovedFromRenderer", "db/dca/classFlameParticle.html#aa649d263556297da5e2c70474efe2f0a", null ]
+];
