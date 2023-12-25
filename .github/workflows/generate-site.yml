@@ -14,7 +14,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install Dependencies
-      run: apt install doxygen, graphviz, global
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y doxygen graphviz global
 
     - name: Generate Documentation
       run: |
