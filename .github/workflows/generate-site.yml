@@ -1,0 +1,33 @@
+name: generate-site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: apt-get install doxygen, graphviz, global
+
+    - name: Generate Documentation
+      run: |
+        cd doxygen
+        doxygen Doxyfile
+        mv html ../docs
+        cd ..
+
+    - name: Commit and push
+      run: |
+        git config user.name "InfinityNichto"
+        git config user.email "u5170201@gmail.com"
+        git add .
+        git commit -m "Commit docs"
+        git pull origin main
+        git push
