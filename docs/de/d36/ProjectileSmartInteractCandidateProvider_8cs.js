@@ -1,0 +1,5 @@
+var ProjectileSmartInteractCandidateProvider_8cs =
+[
+    [ "Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider", "d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider.html", "d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider" ],
+    [ "Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider.ReusableCandidate", "d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate.html", "d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate" ]
+];

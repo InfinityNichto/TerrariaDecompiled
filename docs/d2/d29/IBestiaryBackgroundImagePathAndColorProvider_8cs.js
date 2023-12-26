@@ -1,0 +1,4 @@
+var IBestiaryBackgroundImagePathAndColorProvider_8cs =
+[
+    [ "Terraria.GameContent.Bestiary.IBestiaryBackgroundImagePathAndColorProvider", "d2/dfa/interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryBackgroundImagePathAndColorProvider.html", "d2/dfa/interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryBackgroundImagePathAndColorProvider" ]
+];

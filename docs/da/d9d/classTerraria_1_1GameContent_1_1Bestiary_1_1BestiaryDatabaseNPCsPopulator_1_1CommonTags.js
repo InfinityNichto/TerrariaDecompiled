@@ -1,0 +1,5 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags =
+[
+    [ "SpawnConditions", "d0/d9b/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions.html", "d0/d9b/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions" ],
+    [ "GetCommonInfoElementsForFilters", "da/d9d/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_a1684ba0d7dbb19ace1e1d8fbd5ed1f42.html#a1684ba0d7dbb19ace1e1d8fbd5ed1f42", null ]
+];

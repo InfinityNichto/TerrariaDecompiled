@@ -1,0 +1,28 @@
+var classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey =
+[
+    [ "RgbKey", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a47316aadc3ae6525c35ac6e604bcea42.html#a47316aadc3ae6525c35ac6e604bcea42", null ],
+    [ "Clear", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a5965c352d893d07d9a7a0fa7cd3ed2d4.html#a5965c352d893d07d9a7a0fa7cd3ed2d4", null ],
+    [ "FadeTo", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a141d5d6f9ad4240dc398b1e8a9329b6a.html#a141d5d6f9ad4240dc398b1e8a9329b6a", null ],
+    [ "SetBaseColor", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_aad9a8cd8cbfb19184646264301339349.html#aad9a8cd8cbfb19184646264301339349", null ],
+    [ "SetFlashing", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a04f7970d2634d833b45a31bb9414b05e.html#a04f7970d2634d833b45a31bb9414b05e", null ],
+    [ "SetFlashing", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a8ae37e17edbac6b5aabb2bba3f2b1631.html#a8ae37e17edbac6b5aabb2bba3f2b1631", null ],
+    [ "SetIntegerRepresentation", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_ae13cbf3bbb5873dec47d591e42e37961.html#ae13cbf3bbb5873dec47d591e42e37961", null ],
+    [ "SetSolid", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_aa471fef09b30a7d1d0c7ff35e4b1bb29.html#aa471fef09b30a7d1d0c7ff35e4b1bb29", null ],
+    [ "SetSolid", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_abc11ebe06ed89877bece463452661371.html#abc11ebe06ed89877bece463452661371", null ],
+    [ "SetTargetColor", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a615f6477172b130b4f2e2d4ac858a67b.html#a615f6477172b130b4f2e2d4ac858a67b", null ],
+    [ "Update", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a02095f9c230c533ef9c3e790a2399c32.html#a02095f9c230c533ef9c3e790a2399c32", null ],
+    [ "UpdateFadeEffect", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a30abad09f5ae574b3b446ab6d35c7c0e.html#a30abad09f5ae574b3b446ab6d35c7c0e", null ],
+    [ "UpdateFlashingEffect", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a0144bd6a35e3037f77ea496ad5accbf5.html#a0144bd6a35e3037f77ea496ad5accbf5", null ],
+    [ "UpdateSolidEffect", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a5792e4d8510784af169d7f5fcbf2c32a.html#a5792e4d8510784af169d7f5fcbf2c32a", null ],
+    [ "_effectRate", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a50bf88cfb4102e757f7397e9e1205325.html#a50bf88cfb4102e757f7397e9e1205325", null ],
+    [ "_timeRemaining", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a84e1f756eeca6de933ee5c78ab08316c.html#a84e1f756eeca6de933ee5c78ab08316c", null ],
+    [ "_totalTime", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a9d5d52318779475fd925c0a2126a99f6.html#a9d5d52318779475fd925c0a2126a99f6", null ],
+    [ "Key", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_aaf0fdd03fc4c8daf255a1f8c35f75b01.html#aaf0fdd03fc4c8daf255a1f8c35f75b01", null ],
+    [ "KeyTriggerName", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a23ab72c363a3dfdb0a17b36a9d3d8c41.html#a23ab72c363a3dfdb0a17b36a9d3d8c41", null ],
+    [ "BaseColor", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a91e316228918a533d8d88d9534c12f75.html#a91e316228918a533d8d88d9534c12f75", null ],
+    [ "CurrentColor", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a648622398bc70f57c406cf368ada260a.html#a648622398bc70f57c406cf368ada260a", null ],
+    [ "CurrentIntegerRepresentation", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a4f20e388fab46f31cec4a031012c2a39.html#a4f20e388fab46f31cec4a031012c2a39", null ],
+    [ "Effect", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a2a8b76ce217d935ea2e0a0dce2280a2e.html#a2a8b76ce217d935ea2e0a0dce2280a2e", null ],
+    [ "IsVisible", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_ac72840eb41980fcaf3970564aa8a833b.html#ac72840eb41980fcaf3970564aa8a833b", null ],
+    [ "TargetColor", "da/db2/classReLogic_1_1Peripherals_1_1RGB_1_1RgbKey_a95fffc368cd0628cf161a67fee67a921.html#a95fffc368cd0628cf161a67fee67a921", null ]
+];

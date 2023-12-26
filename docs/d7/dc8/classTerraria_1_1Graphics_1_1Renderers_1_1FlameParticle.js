@@ -1,0 +1,28 @@
+var classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle =
+[
+    [ "Draw", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a63309202eeda0e96eee4d52de4a18bd5.html#a63309202eeda0e96eee4d52de4a18bd5", null ],
+    [ "FetchFromPool", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a707f65093cd261d58bff5596fae13f30.html#a707f65093cd261d58bff5596fae13f30", null ],
+    [ "RestInPool", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a1053ccc829ff083eda58e2c424dc9828", null ],
+    [ "SetBasicInfo", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a57ed35aabbc49fc955140ef8cb33bf3c.html#a57ed35aabbc49fc955140ef8cb33bf3c", null ],
+    [ "SetTypeInfo", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_ad247f756c8b92363b4dd403959527ea7.html#ad247f756c8b92363b4dd403959527ea7", null ],
+    [ "Update", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a15eda78cfe5e57b0734c9c2bfcb28321.html#a15eda78cfe5e57b0734c9c2bfcb28321", null ],
+    [ "_frame", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a8239465873487d9676b4a9fac589ccff", null ],
+    [ "_indexOfPlayerWhoSpawnedThis", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a1f498469e7c14e0690120d0abe322a63.html#a1f498469e7c14e0690120d0abe322a63", null ],
+    [ "_origin", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#ac2d27caf1ddf4bca402c998158968c7c", null ],
+    [ "_packedShaderIndex", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_afc3879a1e5288f7c2da26c153484eeac.html#afc3879a1e5288f7c2da26c153484eeac", null ],
+    [ "_texture", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#adbed323160d9e157fa1aa192cb71171f", null ],
+    [ "_timeSinceSpawn", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a4505201d34b5aebf706e8cd0f6138d16.html#a4505201d34b5aebf706e8cd0f6138d16", null ],
+    [ "_timeTolive", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_a8a1ef17517d99bb20e7f25816c256cd1.html#a8a1ef17517d99bb20e7f25816c256cd1", null ],
+    [ "AccelerationPerFrame", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a5cc80500cc837f8ae8a33401f9aa223f", null ],
+    [ "FadeOutNormalizedTime", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle_ab2e8d218b7f646a5ea5e51b8073230ca.html#ab2e8d218b7f646a5ea5e51b8073230ca", null ],
+    [ "LocalPosition", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a0de37b58f2ae916a5089fd67d6c86189", null ],
+    [ "Rotation", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a742071d057f2d77d7cad514d998c1f00", null ],
+    [ "RotationAcceleration", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a0de4f3ffb5dcaf54a9afb970b4a29139", null ],
+    [ "RotationVelocity", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#af4d76b963a2bbd14b08a91407894cd27", null ],
+    [ "Scale", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a81a9f617cb8c975daf5983ae1d87fe5f", null ],
+    [ "ScaleAcceleration", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a7c8b500849ed0e6ef1e37de3474b4529", null ],
+    [ "ScaleVelocity", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a43afa6589f3238f4eac0d0a7228fc507", null ],
+    [ "Velocity", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#a1e61dcbe192c8d3f801cc5931d4f4d73", null ],
+    [ "IsRestingInPool", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#aec5a8a165d01ee43d1247204da29af76", null ],
+    [ "ShouldBeRemovedFromRenderer", "d7/dc8/classTerraria_1_1Graphics_1_1Renderers_1_1FlameParticle.html#af05b5d18f4d815e87d989d6cd0a76f4e", null ]
+];

@@ -1,0 +1,28 @@
+var classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame =
+[
+    [ "Button", "d1/d8a/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_1_1Button.html", "d1/d8a/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_1_1Button" ],
+    [ "MinimapFrame", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a0d19ad90f81f6b9ab8fbc356c9e87687.html#a0d19ad90f81f6b9ab8fbc356c9e87687", null ],
+    [ "DrawBackground", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a20f3c46226ae9f593c09c5d05d29af23.html#a20f3c46226ae9f593c09c5d05d29af23", null ],
+    [ "DrawForeground", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_affc9b87a956e4823b68639801bd5b5c8.html#affc9b87a956e4823b68639801bd5b5c8", null ],
+    [ "GetButtonUnderMouse", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a697f865c3468e638fd0e0a7d80e7ed26.html#a697f865c3468e638fd0e0a7d80e7ed26", null ],
+    [ "ResetZoom", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_aaba3a3b39abfa82753591568b1e37105.html#aaba3a3b39abfa82753591568b1e37105", null ],
+    [ "SetResetButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_ad70715ac1fdb3525a51f2f724ae0040d.html#ad70715ac1fdb3525a51f2f724ae0040d", null ],
+    [ "SetZoomInButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a038ab8cf76682e82fe9f4057fd6bba48.html#a038ab8cf76682e82fe9f4057fd6bba48", null ],
+    [ "SetZoomOutButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a45b206939f4d9b38888f852e24ce0acb.html#a45b206939f4d9b38888f852e24ce0acb", null ],
+    [ "Update", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_acfa4ad3a7b660603dc1614db1c4d06df.html#acfa4ad3a7b660603dc1614db1c4d06df", null ],
+    [ "ValidateState", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a2a345efbb66b6c91fad77f3269529416.html#a2a345efbb66b6c91fad77f3269529416", null ],
+    [ "ZoomInButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_ab196d56f5efb5156ddedc92d0b38f43c.html#ab196d56f5efb5156ddedc92d0b38f43c", null ],
+    [ "ZoomOutButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_ad1023f2df11f69bb2d1461a73f7c89b6.html#ad1023f2df11f69bb2d1461a73f7c89b6", null ],
+    [ "_frameOffset", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a9b2a41a5f3b7b170e0000c6f58d7d2ab.html#a9b2a41a5f3b7b170e0000c6f58d7d2ab", null ],
+    [ "_frameTexture", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a537571ccee5f56779abbebe80541a055.html#a537571ccee5f56779abbebe80541a055", null ],
+    [ "_resetButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a95e36dad5613816bda40c7c7b09224c7.html#a95e36dad5613816bda40c7c7b09224c7", null ],
+    [ "_zoomInButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a41e4385bcb536b68bc893186995d0f1e.html#a41e4385bcb536b68bc893186995d0f1e", null ],
+    [ "_zoomOutButton", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_aa3c81d7ce8f1e010a63bb855b4975318.html#aa3c81d7ce8f1e010a63bb855b4975318", null ],
+    [ "DEFAULT_ZOOM", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_afbf9c4d3e3a96d981558dd37d2e92ba4.html#afbf9c4d3e3a96d981558dd37d2e92ba4", null ],
+    [ "ZOOM_IN_MULTIPLIER", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a42eb4ddfea53378d28988f457cff60a9.html#a42eb4ddfea53378d28988f457cff60a9", null ],
+    [ "ZOOM_OUT_MULTIPLIER", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_ac0c78ffc7468a8b1cb30252aba0153aa.html#ac0c78ffc7468a8b1cb30252aba0153aa", null ],
+    [ "ConfigKey", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_adba3d6ed637c37d3ab272b29e17425ca.html#adba3d6ed637c37d3ab272b29e17425ca", null ],
+    [ "FramePosition", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_abdc3b095a21a1b4d88d58dbbf3acb4df.html#abdc3b095a21a1b4d88d58dbbf3acb4df", null ],
+    [ "MinimapPosition", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a512998f61d1ac6d6545fefb283358499.html#a512998f61d1ac6d6545fefb283358499", null ],
+    [ "NameKey", "d4/daf/classTerraria_1_1GameContent_1_1UI_1_1Minimap_1_1MinimapFrame_a17c3fddbe12e1f6c0c77226f1b2cc306.html#a17c3fddbe12e1f6c0c77226f1b2cc306", null ]
+];

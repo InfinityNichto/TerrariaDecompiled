@@ -1,0 +1,26 @@
+var classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome =
+[
+    [ "InDesert", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_ad7b8ca4a0a8a7d58531fc1944385e943.html#ad7b8ca4a0a8a7d58531fc1944385e943", null ],
+    [ "InIce", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a2218bc4cb14cd3b72e892d3517987332.html#a2218bc4cb14cd3b72e892d3517987332", null ],
+    [ "InTemple", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a8ccc51bd3fe1a548116137aaa1c80637.html#a8ccc51bd3fe1a548116137aaa1c80637", null ],
+    [ "Corrupt", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_ade6779d9a608e52a84eb442799153eb9.html#ade6779d9a608e52a84eb442799153eb9", null ],
+    [ "CorruptDesert", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a6ed084f1df72c5b30319c788fda6aee9.html#a6ed084f1df72c5b30319c788fda6aee9", null ],
+    [ "CorruptIce", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a11ce880609b15a95c5f0ca572e55a943.html#a11ce880609b15a95c5f0ca572e55a943", null ],
+    [ "Crimson", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a2c20e8a4584c0784b7ec4de560b3304c.html#a2c20e8a4584c0784b7ec4de560b3304c", null ],
+    [ "CrimsonDesert", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a2b7775b89ab21ba32be46951e8c6101e.html#a2b7775b89ab21ba32be46951e8c6101e", null ],
+    [ "CrimsonIce", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a57160322fe3dd9194b1be7b54305a100.html#a57160322fe3dd9194b1be7b54305a100", null ],
+    [ "Desert", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a55e0b1931a0abaadb51a4262fba40183.html#a55e0b1931a0abaadb51a4262fba40183", null ],
+    [ "Dungeon", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a97a40d1fb4dfc09728d1e7d7bf41c910.html#a97a40d1fb4dfc09728d1e7d7bf41c910", null ],
+    [ "GemCave", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a20bc262398407fedb482d094036ef8b4.html#a20bc262398407fedb482d094036ef8b4", null ],
+    [ "Granite", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a89517a34c8e0055660ec1c6173c659a8.html#a89517a34c8e0055660ec1c6173c659a8", null ],
+    [ "Hallow", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a27c387910312e1e75f02e98c242f3e8f.html#a27c387910312e1e75f02e98c242f3e8f", null ],
+    [ "HallowDesert", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a80b2a154e27bbde6a07c4d7c6d9a3019.html#a80b2a154e27bbde6a07c4d7c6d9a3019", null ],
+    [ "HallowIce", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_ad798e1d76a935226baa398856c03b2b7.html#ad798e1d76a935226baa398856c03b2b7", null ],
+    [ "Hive", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_acb11d3bb419e48545b8a1bd9d043cb50.html#acb11d3bb419e48545b8a1bd9d043cb50", null ],
+    [ "Ice", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_ac45d8ac430837cb91e4b95e6b365b510.html#ac45d8ac430837cb91e4b95e6b365b510", null ],
+    [ "Jungle", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a776e1f2d83c3579e58089863e9328630.html#a776e1f2d83c3579e58089863e9328630", null ],
+    [ "Marble", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_ac89acc4b125184cc942c61605889147f.html#ac89acc4b125184cc942c61605889147f", null ],
+    [ "Mushroom", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_aceeea9ffe9747101d040681ee25129a2.html#aceeea9ffe9747101d040681ee25129a2", null ],
+    [ "Shimmer", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a95fcdd0aa7f87ae3d27157e9b5cd359a.html#a95fcdd0aa7f87ae3d27157e9b5cd359a", null ],
+    [ "Temple", "d6/d64/classTerraria_1_1GameContent_1_1RGB_1_1CommonConditions_1_1UndergroundBiome_a7acf7390f0c2374ee07977bb8ca963e6.html#a7acf7390f0c2374ee07977bb8ca963e6", null ]
+];

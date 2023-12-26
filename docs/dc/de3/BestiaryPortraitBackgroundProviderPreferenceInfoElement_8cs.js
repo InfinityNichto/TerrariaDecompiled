@@ -1,0 +1,4 @@
+var BestiaryPortraitBackgroundProviderPreferenceInfoElement_8cs =
+[
+    [ "Terraria.GameContent.Bestiary.BestiaryPortraitBackgroundProviderPreferenceInfoElement", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement.html", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement" ]
+];

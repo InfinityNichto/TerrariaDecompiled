@@ -1,0 +1,25 @@
+var classTerraria_1_1Social_1_1WeGame_1_1IPCBase =
+[
+    [ "IPCBase", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a9275e4866bb348d175f9b33fed24eea1.html#a9275e4866bb348d175f9b33fed24eea1", null ],
+    [ "AddPackToList", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a5b8f3e2271039947d2588cb2f6af196b.html#a5b8f3e2271039947d2588cb2f6af196b", null ],
+    [ "BeginReadData", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a114304ecc6ae40000f2b28c337d14dfc.html#a114304ecc6ae40000f2b28c337d14dfc", null ],
+    [ "GetPackList", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a0091000d5db569543378317d875238f6.html#a0091000d5db569543378317d875238f6", null ],
+    [ "HaveDataToRead", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a56182ab24273fe1ea03c6166ec7d66ea.html#a56182ab24273fe1ea03c6166ec7d66ea", null ],
+    [ "ProcessDataArriveEvent", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ab0b9169445e1f76fe31f379430a449.html#a8ab0b9169445e1f76fe31f379430a449", null ],
+    [ "ReadCallback", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a5e263232e8135ba0cb9de5bc9bae21a5.html#a5e263232e8135ba0cb9de5bc9bae21a5", null ],
+    [ "Reset", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8490c80bf89e38253c4a8c48c4309c87.html#a8490c80bf89e38253c4a8c48c4309c87", null ],
+    [ "Send", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a242b5540eadbf7846b19f9ebdf1c891c.html#a242b5540eadbf7846b19f9ebdf1c891c", null ],
+    [ "Send", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a7c4b59ce9fba2b0f977f1e822ace6dcb.html#a7c4b59ce9fba2b0f977f1e822ace6dcb", null ],
+    [ "SendCallback", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ebbe601c4a97b27fc1791cc7798c421.html#a8ebbe601c4a97b27fc1791cc7798c421", null ],
+    [ "_cancelTokenSrc", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a03fefcb4835f83a2acd31ff01684d176.html#a03fefcb4835f83a2acd31ff01684d176", null ],
+    [ "_consumer", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a19e1ad9e8d2bd1ce0dc84ac3246aa949.html#a19e1ad9e8d2bd1ce0dc84ac3246aa949", null ],
+    [ "_haveDataToReadFlag", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_adddf0decbb927830237a8eb0de02a83f.html#adddf0decbb927830237a8eb0de02a83f", null ],
+    [ "_listLock", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a331b29cf510d82d1d6bba42974e11ca0.html#a331b29cf510d82d1d6bba42974e11ca0", null ],
+    [ "_onDataArrive", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ab7bd39022903f09f5c18cf5d58e29845.html#ab7bd39022903f09f5c18cf5d58e29845", null ],
+    [ "_pipeBrokenFlag", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ac36f5f10469cefbfc2a358d3a9a21774.html#ac36f5f10469cefbfc2a358d3a9a21774", null ],
+    [ "_pipeStream", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9", null ],
+    [ "_producer", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a3887875bf62f5a5c456c5c43ab43e5c6.html#a3887875bf62f5a5c456c5c43ab43e5c6", null ],
+    [ "_totalData", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a899e167b81dc2858e412a7cf6e38d933.html#a899e167b81dc2858e412a7cf6e38d933", null ],
+    [ "BufferSize", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a1d45072fb4d8a4270aad5c5dff43258a.html#a1d45072fb4d8a4270aad5c5dff43258a", null ],
+    [ "OnDataArrive", "d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ae7e27ec0e152edaad18e30169ae2d480.html#ae7e27ec0e152edaad18e30169ae2d480", null ]
+];

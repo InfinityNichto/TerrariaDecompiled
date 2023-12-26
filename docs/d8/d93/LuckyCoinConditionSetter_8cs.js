@@ -1,0 +1,4 @@
+var LuckyCoinConditionSetter_8cs =
+[
+    [ "Terraria.GameContent.LootSimulation.LootSimulatorConditionSetterTypes.LuckyCoinConditionSetter", "de/dbd/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1LuckyCoinConditionSetter.html", "de/dbd/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1LuckyCoinConditionSetter" ]
+];

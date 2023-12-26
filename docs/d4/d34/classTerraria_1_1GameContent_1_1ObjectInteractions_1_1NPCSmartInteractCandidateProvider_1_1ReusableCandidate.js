@@ -1,0 +1,7 @@
+var classTerraria_1_1GameContent_1_1ObjectInteractions_1_1NPCSmartInteractCandidateProvider_1_1ReusableCandidate =
+[
+    [ "Reuse", "d4/d34/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1NPCSmartInteractCandidateProvider_1_1ReusableCandidate_a396a86d3f7210414c06af2a77d10d4c5.html#a396a86d3f7210414c06af2a77d10d4c5", null ],
+    [ "WinCandidacy", "d4/d34/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1NPCSmartInteractCandidateProvider_1_1ReusableCandidate_aa79a5231700f75d7a363f55977f11731.html#aa79a5231700f75d7a363f55977f11731", null ],
+    [ "_npcIndexToTarget", "d4/d34/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1NPCSmartInteractCandidateProvider_1_1ReusableCandidate_ae9cae3786506501e9ad554225e8992ce.html#ae9cae3786506501e9ad554225e8992ce", null ],
+    [ "DistanceFromCursor", "d4/d34/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1NPCSmartInteractCandidateProvider_1_1ReusableCandidate_aa16a9bafcbee0ba96caf3985f3e78c21.html#aa16a9bafcbee0ba96caf3985f3e78c21", null ]
+];

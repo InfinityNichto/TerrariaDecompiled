@@ -1,0 +1,27 @@
+var classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager =
+[
+    [ "PowerTypeStorage", "d7/deb/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_1_1PowerTypeStorage.html", "d7/deb/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_1_1PowerTypeStorage" ],
+    [ "CreativePowerManager", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a5827049f93af593e094e809c9267f487.html#a5827049f93af593e094e809c9267f487", null ],
+    [ "ApplyLoadedDataToPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a4a09221d70b9cd1b43a5cb7e49dbf9c5.html#a4a09221d70b9cd1b43a5cb7e49dbf9c5", null ],
+    [ "GetPower< T >", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_ae5ae4d316b0065e2dd78bb45a094bc7a.html#ae5ae4d316b0065e2dd78bb45a094bc7a", null ],
+    [ "GetPowerId< T >", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a619ce2d5277caf143abea90047353851.html#a619ce2d5277caf143abea90047353851", null ],
+    [ "Initialize", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_ac4cb967ab8342ae97cb230aeac720c3d.html#ac4cb967ab8342ae97cb230aeac720c3d", null ],
+    [ "LoadFromWorld", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_af418864efe66497f78921e73ad87f9d2.html#af418864efe66497f78921e73ad87f9d2", null ],
+    [ "LoadToPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a43862ceab3c043f6cdbfac8234592200.html#a43862ceab3c043f6cdbfac8234592200", null ],
+    [ "Register< T >", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_ae20a1ca5253333e5e36c4fecd18dda96.html#ae20a1ca5253333e5e36c4fecd18dda96", null ],
+    [ "Reset", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a0a1538ae8cf80d5ec6cae1b9605da648.html#a0a1538ae8cf80d5ec6cae1b9605da648", null ],
+    [ "ResetDataForNewPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_afb5e2001b254a41ce307ef3fa3ea43fa.html#afb5e2001b254a41ce307ef3fa3ea43fa", null ],
+    [ "ResetPowersForPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a93e1a00c42bd07c9de375d02cac894b3.html#a93e1a00c42bd07c9de375d02cac894b3", null ],
+    [ "SaveToPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_ac3246bb13733f486ab0344bd9055ce1a.html#ac3246bb13733f486ab0344bd9055ce1a", null ],
+    [ "SaveToWorld", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_aa80368e60d1329a678bca286917ec3d7.html#aa80368e60d1329a678bca286917ec3d7", null ],
+    [ "SyncThingsToJoiningPlayer", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a9750da2bea6342ef4a1150cf02b86a1b.html#a9750da2bea6342ef4a1150cf02b86a1b", null ],
+    [ "TryGetPower", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a3f9daa6cbbbff6ae73144e1b41da6eb1.html#a3f9daa6cbbbff6ae73144e1b41da6eb1", null ],
+    [ "TryListingPermissionsFrom", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_acd9ebf451f9d0eadde4e740d0e8560d9.html#acd9ebf451f9d0eadde4e740d0e8560d9", null ],
+    [ "ValidateWorld", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a96fe9f00eabfc1c7bb5629fc9e220daf.html#a96fe9f00eabfc1c7bb5629fc9e220daf", null ],
+    [ "_initialized", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a08466b8791d524c254f4f301b63792b7.html#a08466b8791d524c254f4f301b63792b7", null ],
+    [ "_powerPermissionsLineHeader", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a85f91fbdda4445312f189052671862dd.html#a85f91fbdda4445312f189052671862dd", null ],
+    [ "_powersById", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a326793a054d5cf3800778d3667529a70.html#a326793a054d5cf3800778d3667529a70", null ],
+    [ "_powersByName", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_aeb1023b4f5493892b12d3af07a4f6d4f.html#aeb1023b4f5493892b12d3af07a4f6d4f", null ],
+    [ "_powersCount", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a128444b1ece07d39121b19d40f7c6043.html#a128444b1ece07d39121b19d40f7c6043", null ],
+    [ "Instance", "dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_aef75a009001da8fd39d044a3ebae9681.html#aef75a009001da8fd39d044a3ebae9681", null ]
+];

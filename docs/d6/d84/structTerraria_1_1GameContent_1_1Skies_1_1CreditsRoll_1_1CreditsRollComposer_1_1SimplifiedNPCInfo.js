@@ -1,0 +1,8 @@
+var structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo =
+[
+    [ "SimplifiedNPCInfo", "d6/d84/structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo_a866243ae09250548cba0096765a17054.html#a866243ae09250548cba0096765a17054", null ],
+    [ "GetProperPosition", "d6/d84/structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo_a36c93f6b7d6ef2e404ba01ede5cf2f1e.html#a36c93f6b7d6ef2e404ba01ede5cf2f1e", null ],
+    [ "SpawnNPC", "d6/d84/structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo_adea4098758c12f61da7be657a291c76c.html#adea4098758c12f61da7be657a291c76c", null ],
+    [ "_npcType", "d6/d84/structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo_a2621b2c11e9a24555ec35413f4c9deb5.html#a2621b2c11e9a24555ec35413f4c9deb5", null ],
+    [ "_simplifiedPosition", "d6/d84/structTerraria_1_1GameContent_1_1Skies_1_1CreditsRoll_1_1CreditsRollComposer_1_1SimplifiedNPCInfo_a58e83b0179f6117a297b8bc9c3b6bba5.html#a58e83b0179f6117a297b8bc9c3b6bba5", null ]
+];

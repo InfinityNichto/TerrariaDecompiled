@@ -1,0 +1,4 @@
+var interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryUICollectionInfoProvider =
+[
+    [ "GetEntryUICollectionInfo", "d0/dd4/interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryUICollectionInfoProvider_aa236eb9a5b3edcd35dec2a06f96b2ac3.html#aa236eb9a5b3edcd35dec2a06f96b2ac3", null ]
+];

@@ -1,0 +1,7 @@
+var classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider =
+[
+    [ "ReusableCandidate", "d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate.html", "d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate" ],
+    [ "ClearSelfAndPrepareForCheck", "d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_ab6a8b90b8cdee95cdc639f6f51e04f1a.html#ab6a8b90b8cdee95cdc639f6f51e04f1a", null ],
+    [ "ProvideCandidate", "d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_a58b2ca2897a78901650e8962bf77c62a.html#a58b2ca2897a78901650e8962bf77c62a", null ],
+    [ "_candidate", "d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675.html#aedbc9f957f0b270c2fe913723ab19675", null ]
+];

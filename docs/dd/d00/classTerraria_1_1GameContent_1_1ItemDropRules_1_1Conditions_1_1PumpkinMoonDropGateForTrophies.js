@@ -1,0 +1,6 @@
+var classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1PumpkinMoonDropGateForTrophies =
+[
+    [ "CanDrop", "dd/d00/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1PumpkinMoonDropGateForTrophies_a90dfc7f45c5120b4d6b3687c2065c131.html#a90dfc7f45c5120b4d6b3687c2065c131", null ],
+    [ "CanShowItemDropInUI", "dd/d00/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1PumpkinMoonDropGateForTrophies_af55f7b850bc6878059dac9dd390e6454.html#af55f7b850bc6878059dac9dd390e6454", null ],
+    [ "GetConditionDescription", "dd/d00/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1PumpkinMoonDropGateForTrophies_ad000e9ebb8045dfe89b9cfc6bee58c75.html#ad000e9ebb8045dfe89b9cfc6bee58c75", null ]
+];

@@ -1,0 +1,28 @@
+var classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData =
+[
+    [ "ArmorShaderData", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a0a7cad46b486246983eaa0762b200626.html#a0a7cad46b486246983eaa0762b200626", null ],
+    [ "Apply", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#af9ab60e3e82d5fb346da65e084582276", null ],
+    [ "Apply", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_af8f21d12add0fa0204d42f45826fbd66.html#af8f21d12add0fa0204d42f45826fbd66", null ],
+    [ "GetSecondaryShader", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a93ca573d4521bc7bb08c18ca507409a6.html#a93ca573d4521bc7bb08c18ca507409a6", null ],
+    [ "SwapProgram", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#a5b9bd37cd9c05aeefe6dba93ef99599d", null ],
+    [ "UseColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_ad589673907f013731075f075edc96f41.html#ad589673907f013731075f075edc96f41", null ],
+    [ "UseColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a9ccda805f20bdf22e0ccff87bb761066.html#a9ccda805f20bdf22e0ccff87bb761066", null ],
+    [ "UseColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a503a588a17ab4693c0078b5e23578ed4.html#a503a588a17ab4693c0078b5e23578ed4", null ],
+    [ "UseImage", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a1996ab536946a84efd080f824eb318ac.html#a1996ab536946a84efd080f824eb318ac", null ],
+    [ "UseOpacity", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a1f94a3c001fd34f890b5f926787ac7d3.html#a1f94a3c001fd34f890b5f926787ac7d3", null ],
+    [ "UseSaturation", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_ad2f87ed09dc5028ba730a8bb982490e8.html#ad2f87ed09dc5028ba730a8bb982490e8", null ],
+    [ "UseSecondaryColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_ad74dd16304e298159dd32bb650aa5c5e.html#ad74dd16304e298159dd32bb650aa5c5e", null ],
+    [ "UseSecondaryColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a8ec4f563dbe678eadee89c44ee8d95a4.html#a8ec4f563dbe678eadee89c44ee8d95a4", null ],
+    [ "UseSecondaryColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a448a47a77d9391ed97fc0da6749bc01d.html#a448a47a77d9391ed97fc0da6749bc01d", null ],
+    [ "UseTargetPosition", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a1a5d4a0ca4fd6ccb56045fc562335e4b.html#a1a5d4a0ca4fd6ccb56045fc562335e4b", null ],
+    [ "_effectPass", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#a62dd229a04ca05578f0db438caf70088", null ],
+    [ "_passName", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#aa8418f1f4384aedc9468d9fca45f66fe", null ],
+    [ "_shader", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#a468093906ba6056edce73bed0b1360bc", null ],
+    [ "_uColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a16de3ed64f7e86bbbc7f381aa0740bfe.html#a16de3ed64f7e86bbbc7f381aa0740bfe", null ],
+    [ "_uImage", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a315f688af31ca861d1cdb9eb4cf4c6e6.html#a315f688af31ca861d1cdb9eb4cf4c6e6", null ],
+    [ "_uOpacity", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_ac571ae7654398b33814afd745a34e876.html#ac571ae7654398b33814afd745a34e876", null ],
+    [ "_uSaturation", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_afaece88d2abf7f6dd22485b8a7369a6f.html#afaece88d2abf7f6dd22485b8a7369a6f", null ],
+    [ "_uSecondaryColor", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_a7b9245e2ba5d1f27f009f1eebe5b269f.html#a7b9245e2ba5d1f27f009f1eebe5b269f", null ],
+    [ "_uTargetPosition", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_ad6189cf0398ed9d89f60cfe5f7ae951a.html#ad6189cf0398ed9d89f60cfe5f7ae951a", null ],
+    [ "Shader", "d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData.html#a973c42545bf827a01aab451270424191", null ]
+];

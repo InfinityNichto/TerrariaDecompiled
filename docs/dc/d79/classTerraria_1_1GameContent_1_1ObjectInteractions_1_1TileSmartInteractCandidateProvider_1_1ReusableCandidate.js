@@ -1,0 +1,13 @@
+var classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate =
+[
+    [ "Reuse", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a7de57428770dc640326ed90de45ef558.html#a7de57428770dc640326ed90de45ef558", null ],
+    [ "WinCandidacy", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a41e5e264b4460cbc954e36e7a2023f71.html#a41e5e264b4460cbc954e36e7a2023f71", null ],
+    [ "_aimedX", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a67a252d65cf81abed4f3c7297abf5090.html#a67a252d65cf81abed4f3c7297abf5090", null ],
+    [ "_aimedY", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a196779920cf186ffeb8a4c9cc4d16994.html#a196779920cf186ffeb8a4c9cc4d16994", null ],
+    [ "_hx", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a9cb084757fc778d9a2379cd147f399bf.html#a9cb084757fc778d9a2379cd147f399bf", null ],
+    [ "_hy", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a4b91ac5ccf4eb4bd37d82e91735d1fc3.html#a4b91ac5ccf4eb4bd37d82e91735d1fc3", null ],
+    [ "_lx", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a57fccfe784fce5a1fc38ac472e87ed5c.html#a57fccfe784fce5a1fc38ac472e87ed5c", null ],
+    [ "_ly", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_af2bd8cbfd2d0db7ed26d0a99e44a7828.html#af2bd8cbfd2d0db7ed26d0a99e44a7828", null ],
+    [ "_strictSettings", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a69bd1e09635e0137efd2dc3633efd71c.html#a69bd1e09635e0137efd2dc3633efd71c", null ],
+    [ "DistanceFromCursor", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate_a433e294cd8655c06ad47460341cda249.html#a433e294cd8655c06ad47460341cda249", null ]
+];

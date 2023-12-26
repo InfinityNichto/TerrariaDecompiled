@@ -1,0 +1,10 @@
+var ReLogic_8Peripherals_8RGB_8Razer_2NativeMethods_8cs =
+[
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods", "da/d60/classReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods.html", "da/d60/classReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomKeyboardEffect", "db/d25/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomKeyboardEffect.html", "db/d25/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomKeyboardEffect" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomMouseEffect", "d7/db8/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomMouseEffect.html", "d7/db8/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomMouseEffect" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomHeadsetEffect", "de/d81/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomHeadsetEffect.html", "de/d81/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomHeadsetEffect" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomMousepadEffect", "dc/d5f/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomMousepadEffect.html", "dc/d5f/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomMousepadEffect" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomKeypadEffect", "de/dbf/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomKeypadEffect.html", "de/dbf/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomKeypadEffect" ],
+    [ "ReLogic.Peripherals.RGB.Razer.NativeMethods.CustomChromaLinkEffect", "d0/df6/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomChromaLinkEffect.html", "d0/df6/structReLogic_1_1Peripherals_1_1RGB_1_1Razer_1_1NativeMethods_1_1CustomChromaLinkEffect" ]
+];

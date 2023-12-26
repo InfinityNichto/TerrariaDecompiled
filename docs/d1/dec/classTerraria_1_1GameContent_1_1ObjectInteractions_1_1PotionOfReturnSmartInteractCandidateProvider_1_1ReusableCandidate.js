@@ -1,0 +1,6 @@
+var classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate =
+[
+    [ "Reuse", "d1/dec/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate_ae454c215bef5cb66c071460212f7abee.html#ae454c215bef5cb66c071460212f7abee", null ],
+    [ "WinCandidacy", "d1/dec/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate_ae1aeb768294d984c99502d5d14cd2cdc.html#ae1aeb768294d984c99502d5d14cd2cdc", null ],
+    [ "DistanceFromCursor", "d1/dec/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate_ae01cb162efc3686b68b6c233d18ec8ac.html#ae01cb162efc3686b68b6c233d18ec8ac", null ]
+];

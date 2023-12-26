@@ -1,0 +1,26 @@
+var classTerraria_1_1HitTile =
+[
+    [ "HitTileObject", "d0/d54/classTerraria_1_1HitTile_1_1HitTileObject.html", "d0/d54/classTerraria_1_1HitTile_1_1HitTileObject" ],
+    [ "HitTile", "d5/d35/classTerraria_1_1HitTile_a3bbb2264b3ffa30ba15e7528b2dcd359.html#a3bbb2264b3ffa30ba15e7528b2dcd359", null ],
+    [ "AddDamage", "d5/d35/classTerraria_1_1HitTile_a8a24aff8755bf61b362b88601b624f26.html#a8a24aff8755bf61b362b88601b624f26", null ],
+    [ "Clear", "d5/d35/classTerraria_1_1HitTile_a63495572789dccf1bad01706ace7937e.html#a63495572789dccf1bad01706ace7937e", null ],
+    [ "ClearAllTilesAtThisLocation", "d5/d35/classTerraria_1_1HitTile_a139eab8c859721ac4b6a4b5e5e58b48e.html#a139eab8c859721ac4b6a4b5e5e58b48e", null ],
+    [ "ClearThisTile", "d5/d35/classTerraria_1_1HitTile_af9b7d2eae43c4f1a4dc673e6d17a362b.html#af9b7d2eae43c4f1a4dc673e6d17a362b", null ],
+    [ "DrawFreshAnimations", "d5/d35/classTerraria_1_1HitTile_a5b2017d6c6e301dcbedef9260b9a4a44.html#a5b2017d6c6e301dcbedef9260b9a4a44", null ],
+    [ "HitObject", "d5/d35/classTerraria_1_1HitTile_ae131ca4a6029cc9bb18c62ae1f853772.html#ae131ca4a6029cc9bb18c62ae1f853772", null ],
+    [ "Prune", "d5/d35/classTerraria_1_1HitTile_a1f5f0a3bb191ffa8c055e4769d537824.html#a1f5f0a3bb191ffa8c055e4769d537824", null ],
+    [ "SortSlots", "d5/d35/classTerraria_1_1HitTile_a7823353ecc2eaf4b245e1db2eae19a5a.html#a7823353ecc2eaf4b245e1db2eae19a5a", null ],
+    [ "TryClearingAndPruning", "d5/d35/classTerraria_1_1HitTile_a664bf48f87197312e2fc98016bca22ac.html#a664bf48f87197312e2fc98016bca22ac", null ],
+    [ "TryFinding", "d5/d35/classTerraria_1_1HitTile_a71dbfba08fd631e73d025103c6b58aa6.html#a71dbfba08fd631e73d025103c6b58aa6", null ],
+    [ "UpdatePosition", "d5/d35/classTerraria_1_1HitTile_ae75ae805433bfec7cc2c27a2b2141bbb.html#ae75ae805433bfec7cc2c27a2b2141bbb", null ],
+    [ "bufferLocation", "d5/d35/classTerraria_1_1HitTile_a6cce419ec0ca747120f5add059e51af0.html#a6cce419ec0ca747120f5add059e51af0", null ],
+    [ "data", "d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42", null ],
+    [ "lastCrack", "d5/d35/classTerraria_1_1HitTile_a47bf793fe2702204ead320f96a51798e.html#a47bf793fe2702204ead320f96a51798e", null ],
+    [ "MAX_HITTILES", "d5/d35/classTerraria_1_1HitTile_a42c426845fb05c83f8d02d41e5b4c7d8.html#a42c426845fb05c83f8d02d41e5b4c7d8", null ],
+    [ "order", "d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e", null ],
+    [ "rand", "d5/d35/classTerraria_1_1HitTile_a7f13ac5e78777904eb9f0bfb86ba01be.html#a7f13ac5e78777904eb9f0bfb86ba01be", null ],
+    [ "TILE", "d5/d35/classTerraria_1_1HitTile_a103f04c50d692d4784fba82651863829.html#a103f04c50d692d4784fba82651863829", null ],
+    [ "TIMETOLIVE", "d5/d35/classTerraria_1_1HitTile_ae403220c6b7e48cc8e8419985d90ca3f.html#ae403220c6b7e48cc8e8419985d90ca3f", null ],
+    [ "UNUSED", "d5/d35/classTerraria_1_1HitTile_acbe90515a2f296b365c60c1357e8fe64.html#acbe90515a2f296b365c60c1357e8fe64", null ],
+    [ "WALL", "d5/d35/classTerraria_1_1HitTile_aab7182bbe2b397ff5dd4cd38b0fc1b5f.html#aab7182bbe2b397ff5dd4cd38b0fc1b5f", null ]
+];

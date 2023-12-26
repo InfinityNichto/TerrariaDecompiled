@@ -1,0 +1,4 @@
+var structTerraria_1_1GameContent_1_1UI_1_1Elements_1_1ExtraBestiaryInfoPageInformation =
+[
+    [ "BestiaryProgressReport", "dd/d63/structTerraria_1_1GameContent_1_1UI_1_1Elements_1_1ExtraBestiaryInfoPageInformation_a03f5ba05a8b4a7eec2a882656d846ea4.html#a03f5ba05a8b4a7eec2a882656d846ea4", null ]
+];

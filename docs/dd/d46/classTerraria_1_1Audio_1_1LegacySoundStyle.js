@@ -1,0 +1,27 @@
+var classTerraria_1_1Audio_1_1LegacySoundStyle =
+[
+    [ "LegacySoundStyle", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_aab73bcab48345702854e2f552839352e.html#aab73bcab48345702854e2f552839352e", null ],
+    [ "LegacySoundStyle", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a03bdd7f0ffecbf9694aa4483b8159018.html#a03bdd7f0ffecbf9694aa4483b8159018", null ],
+    [ "LegacySoundStyle", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a716be98ca850af1f959bd5cbfb809596.html#a716be98ca850af1f959bd5cbfb809596", null ],
+    [ "AsAmbient", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a9f335899d240000eb45a4f0c96befd42.html#a9f335899d240000eb45a4f0c96befd42", null ],
+    [ "AsMusic", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a44d9ee5f82dabf7906317b57918433c5.html#a44d9ee5f82dabf7906317b57918433c5", null ],
+    [ "AsSound", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_ae58defe77cd8ff54f4350b1766ab579f.html#ae58defe77cd8ff54f4350b1766ab579f", null ],
+    [ "GetRandomPitch", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#a839c77c149702ea14fe711a6b47da46a", null ],
+    [ "GetRandomSound", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_af23d17882661c69b804f21fc3359fe69.html#af23d17882661c69b804f21fc3359fe69", null ],
+    [ "Includes", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a63308f86a8225c891a97149f579fe3e7.html#a63308f86a8225c891a97149f579fe3e7", null ],
+    [ "WithPitchVariance", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a8617725bc187fa6df572a7b876b19511.html#a8617725bc187fa6df572a7b876b19511", null ],
+    [ "WithVolume", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a0c42c56e50e1d6669634f92ab89903dd.html#a0c42c56e50e1d6669634f92ab89903dd", null ],
+    [ "_pitchVariance", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#af8f383d44d876267cdad6cb323fe91fc", null ],
+    [ "_random", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#a3b057f11d52fe2f37d23ad41cc98f1fb", null ],
+    [ "_style", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a6c717c3753c620c53f1458797c5b5be2.html#a6c717c3753c620c53f1458797c5b5be2", null ],
+    [ "_type", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#ad8768d44554ae5326ba806533a14270f", null ],
+    [ "_volume", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#a26d85058ae7db3e3a98f6c360cd96f19", null ],
+    [ "Random", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a9985688206c3149503055a8be76963c2.html#a9985688206c3149503055a8be76963c2", null ],
+    [ "SoundId", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a28e26999848bb58c2e82c4e66e31dd7d.html#a28e26999848bb58c2e82c4e66e31dd7d", null ],
+    [ "Variations", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_ae9935ba3bc0239a75813bc0fcd4a655c.html#ae9935ba3bc0239a75813bc0fcd4a655c", null ],
+    [ "IsTrackable", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_aab194d67cf44b9e4cb52b46085116b0e.html#aab194d67cf44b9e4cb52b46085116b0e", null ],
+    [ "PitchVariance", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#a6281d7334cef8f0292fb858dbaf61f2b", null ],
+    [ "Style", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle_a8f7de9208fd41e8501e46344c9299b76.html#a8f7de9208fd41e8501e46344c9299b76", null ],
+    [ "Type", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#afdcae274b60869e6b3cc0d87c6b317e4", null ],
+    [ "Volume", "dd/d46/classTerraria_1_1Audio_1_1LegacySoundStyle.html#a74bd5e264a442c312a9191fc168c3622", null ]
+];

@@ -1,0 +1,16 @@
+var Segments_8cs =
+[
+    [ "Terraria.GameContent.Animations.Segments", "d4/d94/classTerraria_1_1GameContent_1_1Animations_1_1Segments.html", "d4/d94/classTerraria_1_1GameContent_1_1Animations_1_1Segments" ],
+    [ "Terraria.GameContent.Animations.Segments.LocalizedTextSegment", "d3/d64/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1LocalizedTextSegment.html", "d3/d64/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1LocalizedTextSegment" ],
+    [ "Terraria.GameContent.Animations.Segments.AnimationSegmentWithActions< T >", "d6/d22/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1AnimationSegmentWithActions.html", "d6/d22/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1AnimationSegmentWithActions" ],
+    [ "Terraria.GameContent.Animations.Segments.PlayerSegment", "d6/da9/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment.html", "d6/da9/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment" ],
+    [ "Terraria.GameContent.Animations.Segments.PlayerSegment.IShaderEffect", "d6/d6d/interfaceTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment_1_1IShaderEffect.html", "d6/d6d/interfaceTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment_1_1IShaderEffect" ],
+    [ "Terraria.GameContent.Animations.Segments.PlayerSegment.ImmediateSpritebatchForPlayerDyesEffect", "d2/dbd/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment_1_1ImmediateSpritebatchForPlayerDyesEffect.html", "d2/dbd/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1PlayerSegment_1_1ImmediateSpritebatchForPlayerDyesEffect" ],
+    [ "Terraria.GameContent.Animations.Segments.NPCSegment", "d2/d78/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1NPCSegment.html", "d2/d78/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1NPCSegment" ],
+    [ "Terraria.GameContent.Animations.Segments.LooseSprite", "d5/d10/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1LooseSprite.html", "d5/d10/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1LooseSprite" ],
+    [ "Terraria.GameContent.Animations.Segments.SpriteSegment", "d4/dd7/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment.html", "d4/dd7/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment" ],
+    [ "Terraria.GameContent.Animations.Segments.SpriteSegment.IShaderEffect", "d9/d8b/interfaceTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment_1_1IShaderEffect.html", "d9/d8b/interfaceTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment_1_1IShaderEffect" ],
+    [ "Terraria.GameContent.Animations.Segments.SpriteSegment.MaskedFadeEffect", "d0/d71/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment_1_1MaskedFadeEffect.html", "d0/d71/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1SpriteSegment_1_1MaskedFadeEffect" ],
+    [ "Terraria.GameContent.Animations.Segments.Panning", "da/dc4/structTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1Panning.html", "da/dc4/structTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1Panning" ],
+    [ "Terraria.GameContent.Animations.Segments.EmoteSegment", "d5/d44/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1EmoteSegment.html", "d5/d44/classTerraria_1_1GameContent_1_1Animations_1_1Segments_1_1EmoteSegment" ]
+];

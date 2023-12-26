@@ -1,0 +1,10 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider =
+[
+    [ "SalamanderShellyDadUICollectionInfoProvider", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_ad4b5e4536874b2f4a2674e68616d4018.html#ad4b5e4536874b2f4a2674e68616d4018", null ],
+    [ "GetEntryUICollectionInfo", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_ae325c12f7472bcd79265c17d67016947.html#ae325c12f7472bcd79265c17d67016947", null ],
+    [ "GetLowestAvailableUnlockStateFromEntriesThatAreInWorld", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_a0c6a40e74102f3b3bba181b38cd25847.html#a0c6a40e74102f3b3bba181b38cd25847", null ],
+    [ "IsIncludedInCurrentWorld", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_a5bf15999547f34a03fe66957e449b345.html#a5bf15999547f34a03fe66957e449b345", null ],
+    [ "ProvideUIElement", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_a6cd3bcbc91bd7390a333a9aede021b5a.html#a6cd3bcbc91bd7390a333a9aede021b5a", null ],
+    [ "_killCountNeededToFullyUnlock", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_afd26673200ef1089f155dbede5b0fc37.html#afd26673200ef1089f155dbede5b0fc37", null ],
+    [ "_persistentIdentifierToCheck", "d3/d74/classTerraria_1_1GameContent_1_1Bestiary_1_1SalamanderShellyDadUICollectionInfoProvider_a2da6bc7e9d2e2245b2f320d5caf0a389.html#a2da6bc7e9d2e2245b2f320d5caf0a389", null ]
+];

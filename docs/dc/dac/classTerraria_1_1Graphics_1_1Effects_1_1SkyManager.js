@@ -1,0 +1,27 @@
+var classTerraria_1_1Graphics_1_1Effects_1_1SkyManager =
+[
+    [ "Activate", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#a224b091552cf08f4c607416929807a2b", null ],
+    [ "Bind", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#adbf65de80e8bec0758f91537dcf1a220", null ],
+    [ "Deactivate", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#ac5b6d021a29d4a2c7034c20794a73ccc", null ],
+    [ "Draw", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a351aa02ecc08581877fd669660d2581f.html#a351aa02ecc08581877fd669660d2581f", null ],
+    [ "DrawDepthRange", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_aaf25619ea31d0cf801210bdd26433521.html#aaf25619ea31d0cf801210bdd26433521", null ],
+    [ "DrawRemainingDepth", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a485a8cbd7ba16617881a2aeb9efcd009.html#a485a8cbd7ba16617881a2aeb9efcd009", null ],
+    [ "DrawToDepth", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a3f8f2b2e94d274c89da03651062ea283.html#a3f8f2b2e94d274c89da03651062ea283", null ],
+    [ "Load", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#a8035e11cc67d280f092840b1c6d43d77", null ],
+    [ "OnActivate", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_ad71a326cfafe2717071936a2da358f51.html#ad71a326cfafe2717071936a2da358f51", null ],
+    [ "OnActivate", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#a840b21c4c987af2824229d7abef56342", null ],
+    [ "OnDeactivate", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#ab9cb19404881406db4b4fd054f66765b", null ],
+    [ "ProcessCloudAlpha", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a12c056baa8e094dc8e72317fe74c6126.html#a12c056baa8e094dc8e72317fe74c6126", null ],
+    [ "ProcessTileColor", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a897043d342e73c71ce52f908d0f0436b.html#a897043d342e73c71ce52f908d0f0436b", null ],
+    [ "Reset", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a8d266cc08b6f91eb91f402ce6a87a8e0.html#a8d266cc08b6f91eb91f402ce6a87a8e0", null ],
+    [ "ResetDepthTracker", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_adda0a8451938cbd1c269efc3fcafb9a8.html#adda0a8451938cbd1c269efc3fcafb9a8", null ],
+    [ "SetStartingDepth", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a28e05bc1b8af7d95ded486ac346661e1.html#a28e05bc1b8af7d95ded486ac346661e1", null ],
+    [ "Update", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a74988a394acb2945b881fbf9631b0f5f.html#a74988a394acb2945b881fbf9631b0f5f", null ],
+    [ "_activeSkies", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_aed45b1a2f802241244482e66a6e8f81b.html#aed45b1a2f802241244482e66a6e8f81b", null ],
+    [ "_effects", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#aaad78fc2703161bc56978dfbc7a40efc", null ],
+    [ "_isLoaded", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#ae84fcd0adf6dceb5e88cdf4ce432ec5d", null ],
+    [ "_lastDepth", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_a986930a9a97cab33854715e859c84a0d.html#a986930a9a97cab33854715e859c84a0d", null ],
+    [ "Instance", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager_ae974ca13d5ded377df9919e397d486b9.html#ae974ca13d5ded377df9919e397d486b9", null ],
+    [ "IsLoaded", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#ab9b1223a55a0821e320d37aca0c561ca", null ],
+    [ "this[string key]", "dc/dac/classTerraria_1_1Graphics_1_1Effects_1_1SkyManager.html#a75aa67f89b65d5b2ff3a7716e21fb6e3", null ]
+];

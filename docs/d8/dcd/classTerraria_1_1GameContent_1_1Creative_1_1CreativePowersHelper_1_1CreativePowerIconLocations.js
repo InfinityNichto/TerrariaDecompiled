@@ -1,0 +1,26 @@
+var classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations =
+[
+    [ "BlockPlacementRange", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a49676120344cdf7255563d046e6bc36c.html#a49676120344cdf7255563d046e6bc36c", null ],
+    [ "Deprecated", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_acb501ab94ae3d8acb2e866fd7e937175.html#acb501ab94ae3d8acb2e866fd7e937175", null ],
+    [ "EnemySpawnRate", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_ac48c6bfc066eafadf4d06de12fa71c75.html#ac48c6bfc066eafadf4d06de12fa71c75", null ],
+    [ "EnemyStrengthSlider", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a79220e2064c37cfe21e8a1d398dc64e3.html#a79220e2064c37cfe21e8a1d398dc64e3", null ],
+    [ "FreezeTime", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a7a60bb079e0d2f8dfffc88b1340367f5.html#a7a60bb079e0d2f8dfffc88b1340367f5", null ],
+    [ "GameEvents", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_aedcc8c26b0e5e14d2bd5e4e46481f8fe.html#aedcc8c26b0e5e14d2bd5e4e46481f8fe", null ],
+    [ "Godmode", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_abf94cd54b3a359dc89b0dfdb54c0dbf6.html#abf94cd54b3a359dc89b0dfdb54c0dbf6", null ],
+    [ "ItemDuplication", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_aac8afa616d7fccb604d5372b837d245d.html#aac8afa616d7fccb604d5372b837d245d", null ],
+    [ "ItemResearch", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_aa9b26bcc05a37a851fffd7e9b6ff257c.html#aa9b26bcc05a37a851fffd7e9b6ff257c", null ],
+    [ "ModifyTime", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a5fdd3a4be017fe32f56e24430cdb17f3.html#a5fdd3a4be017fe32f56e24430cdb17f3", null ],
+    [ "PersonalCategory", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_ac5b5e2d5f109801a5b1496f5cbadb392.html#ac5b5e2d5f109801a5b1496f5cbadb392", null ],
+    [ "RainFreeze", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a0102237a667119fd674d4499d3051f7c.html#a0102237a667119fd674d4499d3051f7c", null ],
+    [ "RainStrength", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_aa34a065db0c097717fa3d072303df27f.html#aa34a065db0c097717fa3d072303df27f", null ],
+    [ "StopBiomeSpread", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a2014830e194ec45380b12d2cefe71ca9.html#a2014830e194ec45380b12d2cefe71ca9", null ],
+    [ "TimeCategory", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a70a6aa2f11a78a5e2878c25f5faadc9f.html#a70a6aa2f11a78a5e2878c25f5faadc9f", null ],
+    [ "TimeDawn", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a74445092be24115f4e4091ffb66716b8.html#a74445092be24115f4e4091ffb66716b8", null ],
+    [ "TimeDusk", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_ace792a73ed573a044cc1778958a432c8.html#ace792a73ed573a044cc1778958a432c8", null ],
+    [ "TimeMidnight", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a0d6a4db6e2e669b90deb37850e349ec5.html#a0d6a4db6e2e669b90deb37850e349ec5", null ],
+    [ "TimeNoon", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a5e22d62d147a2f11b7bc64df504254ca.html#a5e22d62d147a2f11b7bc64df504254ca", null ],
+    [ "Unassigned", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a07f266ffb6355b53ea72cd3fbfdc5b3a.html#a07f266ffb6355b53ea72cd3fbfdc5b3a", null ],
+    [ "WeatherCategory", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a3a8fc3e9ef52b10af93cf58ad3e0de7f.html#a3a8fc3e9ef52b10af93cf58ad3e0de7f", null ],
+    [ "WindDirection", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a194c070ac9856ffac69e0cc59e1beffa.html#a194c070ac9856ffac69e0cc59e1beffa", null ],
+    [ "WindFreeze", "d8/dcd/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowersHelper_1_1CreativePowerIconLocations_a1a53c878f76f29c71062c3b0470e2e61.html#a1a53c878f76f29c71062c3b0470e2e61", null ]
+];

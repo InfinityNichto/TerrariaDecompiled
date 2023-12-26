@@ -1,0 +1,5 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Times =
+[
+    [ "DayTime", "db/dea/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Times_a7024f31d9d9528fa94449e0291881e3f.html#a7024f31d9d9528fa94449e0291881e3f", null ],
+    [ "NightTime", "db/dea/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Times_a4124e072fbbe8d13e065c74f831a2d1a.html#a4124e072fbbe8d13e065c74f831a2d1a", null ]
+];

@@ -1,0 +1,25 @@
+var structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults =
+[
+    [ "TargetSearchResults", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_ac2e397d1aa62f334881fa4d4a5e29181.html#ac2e397d1aa62f334881fa4d4a5e29181", null ],
+    [ "_adjustedTankDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_ae27e9f2ebb7d83aa9a8cd5d6a7065437.html#ae27e9f2ebb7d83aa9a8cd5d6a7065437", null ],
+    [ "_nearestNPCDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a32fc6e06a30eb1985d6e0c3f607005dc.html#a32fc6e06a30eb1985d6e0c3f607005dc", null ],
+    [ "_nearestNPCIndex", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a684c12d167c7dfc08d6bdd6bb2bb2f7b.html#a684c12d167c7dfc08d6bdd6bb2bb2f7b", null ],
+    [ "_nearestTankDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a081564df44d29db42da4e5c1e4f0c9b7.html#a081564df44d29db42da4e5c1e4f0c9b7", null ],
+    [ "_nearestTankIndex", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a5e603776f69a0401828879fa7e666859.html#a5e603776f69a0401828879fa7e666859", null ],
+    [ "_nearestTankType", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a55f9d2edcc0b6ee2c214265be7c62678.html#a55f9d2edcc0b6ee2c214265be7c62678", null ],
+    [ "_nearestTargetType", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a0c45e70c048246d7f93daed61ad924db.html#a0c45e70c048246d7f93daed61ad924db", null ],
+    [ "AdjustedTankDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_ac6a56019d81f77f22a083e6566da76a6.html#ac6a56019d81f77f22a083e6566da76a6", null ],
+    [ "FoundNPC", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_ad1e94e9dccfd05598c10e41931570ba8.html#ad1e94e9dccfd05598c10e41931570ba8", null ],
+    [ "FoundTank", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a687cb22671cea105fbee7a5da3e54a66.html#a687cb22671cea105fbee7a5da3e54a66", null ],
+    [ "FoundTarget", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a186a96a8a0fcee8769aea1cc2b6d326b.html#a186a96a8a0fcee8769aea1cc2b6d326b", null ],
+    [ "NearestNPC", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a549776095f29fbb9c33892aaa2119973.html#a549776095f29fbb9c33892aaa2119973", null ],
+    [ "NearestNPCDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a488af514231812897fba29f661e3ade8.html#a488af514231812897fba29f661e3ade8", null ],
+    [ "NearestNPCIndex", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a17f16d9f828563091a7a4d3815b18bb8.html#a17f16d9f828563091a7a4d3815b18bb8", null ],
+    [ "NearestTankDistance", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a93d2d6935ab3622f7e7d364d2167f523.html#a93d2d6935ab3622f7e7d364d2167f523", null ],
+    [ "NearestTankOwner", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a25c9f5dfdcd6cd6fb4dd6a8e9fa81842.html#a25c9f5dfdcd6cd6fb4dd6a8e9fa81842", null ],
+    [ "NearestTankOwnerIndex", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a7a0140e97514fa975ee8b7f03f7aeb45.html#a7a0140e97514fa975ee8b7f03f7aeb45", null ],
+    [ "NearestTankType", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a6888954d11c79cdf2f0d7f1e3ff0450b.html#a6888954d11c79cdf2f0d7f1e3ff0450b", null ],
+    [ "NearestTargetHitbox", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_aeaa4066a5680dff845078a70c1c44d2b.html#aeaa4066a5680dff845078a70c1c44d2b", null ],
+    [ "NearestTargetIndex", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_a4b1953d554f86ff48a6b0aeb3992ab58.html#a4b1953d554f86ff48a6b0aeb3992ab58", null ],
+    [ "NearestTargetType", "df/d8d/structTerraria_1_1Utilities_1_1NPCUtils_1_1TargetSearchResults_ab7360c39fad512c65d1a4b1408bcd470.html#ab7360c39fad512c65d1a4b1408bcd470", null ]
+];

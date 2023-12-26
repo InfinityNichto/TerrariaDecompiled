@@ -1,0 +1,26 @@
+var structTerraria_1_1DataStructures_1_1FishingAttempt =
+[
+    [ "atmo", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_ac94d8d5060691662a6f3c308133c591a.html#ac94d8d5060691662a6f3c308133c591a", null ],
+    [ "bobberType", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a11e9b2743330cc5b72abd4fb69f1368a.html#a11e9b2743330cc5b72abd4fb69f1368a", null ],
+    [ "CanFishInLava", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a9ab1223aa577ad1d892d808dbc9e3930.html#a9ab1223aa577ad1d892d808dbc9e3930", null ],
+    [ "chumsInWater", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_ac190ff8470c2319c23bfc4cf9ea92828.html#ac190ff8470c2319c23bfc4cf9ea92828", null ],
+    [ "common", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a3b70a11c0c3d2e3c8e905f0685ff1efa.html#a3b70a11c0c3d2e3c8e905f0685ff1efa", null ],
+    [ "crate", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_ade9b0ad957f7ca62d672d308f1958953.html#ade9b0ad957f7ca62d672d308f1958953", null ],
+    [ "fishingLevel", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a029127c1f278987c2b829b768fccddae.html#a029127c1f278987c2b829b768fccddae", null ],
+    [ "heightLevel", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a2654a65d9d7abea4eac012d0745ef5f6.html#a2654a65d9d7abea4eac012d0745ef5f6", null ],
+    [ "inHoney", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a1c6498e3e4c682b6352b3c03f442eb93.html#a1c6498e3e4c682b6352b3c03f442eb93", null ],
+    [ "inLava", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a1dddafbe457ed6195dd5f1d9f02dd31a.html#a1dddafbe457ed6195dd5f1d9f02dd31a", null ],
+    [ "legendary", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_acbbc0fe7315d703bb0bbc58b30375c6b.html#acbbc0fe7315d703bb0bbc58b30375c6b", null ],
+    [ "playerFishingConditions", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a4dada719ba3b71847358c6dca49d7019.html#a4dada719ba3b71847358c6dca49d7019", null ],
+    [ "questFish", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a9f6c415ed8b1787252afde33737ed029.html#a9f6c415ed8b1787252afde33737ed029", null ],
+    [ "rare", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a1c0643a5b227aaec756242a9225f7dd0.html#a1c0643a5b227aaec756242a9225f7dd0", null ],
+    [ "rolledEnemySpawn", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a4c97591b95b81ca462788b3a2d370e90.html#a4c97591b95b81ca462788b3a2d370e90", null ],
+    [ "rolledItemDrop", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_aaff24a5f2548f7a25a9110df8fc4a1a3.html#aaff24a5f2548f7a25a9110df8fc4a1a3", null ],
+    [ "uncommon", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a1c23d741cd5f20a3b46f3d139498cd35.html#a1c23d741cd5f20a3b46f3d139498cd35", null ],
+    [ "veryrare", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_ac63dd3d0c7970d4863dc0aa8f40286ca.html#ac63dd3d0c7970d4863dc0aa8f40286ca", null ],
+    [ "waterNeededToFish", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a36b60c80dab25f0c066663240b4525a1.html#a36b60c80dab25f0c066663240b4525a1", null ],
+    [ "waterQuality", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a39dbc409da60fe7707311483a1f95e8f.html#a39dbc409da60fe7707311483a1f95e8f", null ],
+    [ "waterTilesCount", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_ad8e1499a95281e8d0e3f810c277413cb.html#ad8e1499a95281e8d0e3f810c277413cb", null ],
+    [ "X", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a617f5eab577c355854c8172fa55d61be.html#a617f5eab577c355854c8172fa55d61be", null ],
+    [ "Y", "dd/d93/structTerraria_1_1DataStructures_1_1FishingAttempt_a171c3816312a6820a1a5e00a1e317b24.html#a171c3816312a6820a1a5e00a1e317b24", null ]
+];

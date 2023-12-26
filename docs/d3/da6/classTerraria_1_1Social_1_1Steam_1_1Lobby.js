@@ -1,0 +1,26 @@
+var classTerraria_1_1Social_1_1Steam_1_1Lobby =
+[
+    [ "Lobby", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ae05cf5ce0cda09ed54d106684212c4a3.html#ae05cf5ce0cda09ed54d106684212c4a3", null ],
+    [ "Create", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ab2e1a3dc748e55754ccb0fefb3372bdd.html#ab2e1a3dc748e55754ccb0fefb3372bdd", null ],
+    [ "GetMessage", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a157271586b9afd03a624dbb05737fff2.html#a157271586b9afd03a624dbb05737fff2", null ],
+    [ "GetUserByIndex", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a6cbd957eeabf7899d4ab04c494b058a3.html#a6cbd957eeabf7899d4ab04c494b058a3", null ],
+    [ "GetUserCount", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ae960659bc492b0a464552cfb8399a007.html#ae960659bc492b0a464552cfb8399a007", null ],
+    [ "Join", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a005fe6ba972cb9eea8c7851336bcceb7.html#a005fe6ba972cb9eea8c7851336bcceb7", null ],
+    [ "Leave", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a402cd0c28329f4b420e833aba84e3e64.html#a402cd0c28329f4b420e833aba84e3e64", null ],
+    [ "OnLobbyCreated", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_aaae434d75236f7dbc835241adb7b391b.html#aaae434d75236f7dbc835241adb7b391b", null ],
+    [ "OnLobbyEntered", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a4c53702db690c71a23fb7c23ec68854e.html#a4c53702db690c71a23fb7c23ec68854e", null ],
+    [ "OpenInviteOverlay", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_af3497ce09cef70cf74c0abe8306d7721.html#af3497ce09cef70cf74c0abe8306d7721", null ],
+    [ "SendMessage", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a648348b62acfab44dfaa2b35b0913838.html#a648348b62acfab44dfaa2b35b0913838", null ],
+    [ "SendMessage", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a70421d58fac9424764549d589d73bd25.html#a70421d58fac9424764549d589d73bd25", null ],
+    [ "Set", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a9d3fa8720ed60567120f6dfa403a0a10.html#a9d3fa8720ed60567120f6dfa403a0a10", null ],
+    [ "SetPlayedWith", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ad8e8a84e436684d27906b19904c8b702.html#ad8e8a84e436684d27906b19904c8b702", null ],
+    [ "_lobbyCreated", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a98fa982e73f952ffce9a259fd1ee452f.html#a98fa982e73f952ffce9a259fd1ee452f", null ],
+    [ "_lobbyCreatedExternalCallback", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a755216c4b72d0ff83ea19b9bd09d52fb.html#a755216c4b72d0ff83ea19b9bd09d52fb", null ],
+    [ "_lobbyEnter", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a1d293264cd1fca1bfbf807b889a98a70.html#a1d293264cd1fca1bfbf807b889a98a70", null ],
+    [ "_lobbyEnterExternalCallback", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a5f2f9338192b697fe108fbcf4ee315a1.html#a5f2f9338192b697fe108fbcf4ee315a1", null ],
+    [ "_messageBuffer", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ae6e6b6f27ac0d691eb14d7fa08e94265.html#ae6e6b6f27ac0d691eb14d7fa08e94265", null ],
+    [ "_usersSeen", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a4ca9a49d829ee8ae3abdb2c86d1de2ea.html#a4ca9a49d829ee8ae3abdb2c86d1de2ea", null ],
+    [ "Id", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_af4a78422a16c4a99c12fda93c7ef5825.html#af4a78422a16c4a99c12fda93c7ef5825", null ],
+    [ "Owner", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a801abb54b982a6e7ff5e78cf94723d3e.html#a801abb54b982a6e7ff5e78cf94723d3e", null ],
+    [ "State", "d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_aea24de54f5f23bc1659c97d4752b0506.html#aea24de54f5f23bc1659c97d4752b0506", null ]
+];

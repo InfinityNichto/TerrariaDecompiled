@@ -1,0 +1,8 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement =
+[
+    [ "BestiaryPortraitBackgroundProviderPreferenceInfoElement", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a16669f92e06320d0e1fe2703cc7f52ed.html#a16669f92e06320d0e1fe2703cc7f52ed", null ],
+    [ "GetPreferredProvider", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a4465b0412ddc89663f139207e96ab112.html#a4465b0412ddc89663f139207e96ab112", null ],
+    [ "Matches", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a0c4dcfe2194811d5b011ddbdb5158f41.html#a0c4dcfe2194811d5b011ddbdb5158f41", null ],
+    [ "ProvideUIElement", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a78f1532df36b8e6a409c042efbfcf5de.html#a78f1532df36b8e6a409c042efbfcf5de", null ],
+    [ "_preferredProvider", "dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a091619d213176bae59b9478342db86cc.html#a091619d213176bae59b9478342db86cc", null ]
+];

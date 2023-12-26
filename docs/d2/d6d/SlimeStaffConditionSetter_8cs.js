@@ -1,0 +1,4 @@
+var SlimeStaffConditionSetter_8cs =
+[
+    [ "Terraria.GameContent.LootSimulation.LootSimulatorConditionSetterTypes.SlimeStaffConditionSetter", "db/db9/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1SlimeStaffConditionSetter.html", "db/db9/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1SlimeStaffConditionSetter" ]
+];

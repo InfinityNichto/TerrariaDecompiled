@@ -1,0 +1,4 @@
+var structTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1PlayerInfoForClosingDoors =
+[
+    [ "hitboxToNotCloseDoor", "d5/d21/structTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1PlayerInfoForClosingDoors_a2399ce45af3ae7b0af0d310529659619.html#a2399ce45af3ae7b0af0d310529659619", null ]
+];

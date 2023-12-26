@@ -1,0 +1,26 @@
+var classTerraria_1_1ID_1_1ArmorIDs_1_1Face =
+[
+    [ "Sets", "d9/dab/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_1_1Sets.html", "d9/dab/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_1_1Sets" ],
+    [ "AngelHalo", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a9a5ee3d32c41fea013c2e60b6e775de8.html#a9a5ee3d32c41fea013c2e60b6e775de8", null ],
+    [ "ArcaneFlower", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a4835e68d908caa18b58be7de30c319d4.html#a4835e68d908caa18b58be7de30c319d4", null ],
+    [ "ArcticDivingGear", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_aeba7123f94e9b5df4c92002c5ffc6ef5.html#aeba7123f94e9b5df4c92002c5ffc6ef5", null ],
+    [ "Blindfold", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a482e72524cbdd4236f14f29437ecc59e.html#a482e72524cbdd4236f14f29437ecc59e", null ],
+    [ "BoneHelm", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a54002576a0d83ef9c9cc3f73905298b8.html#a54002576a0d83ef9c9cc3f73905298b8", null ],
+    [ "Count", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a84f5c189914cc4db2e2ceb2178e0451c.html#a84f5c189914cc4db2e2ceb2178e0451c", null ],
+    [ "DivingGear", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_abce5164eb6400cc25ee14ac096dddc8c.html#abce5164eb6400cc25ee14ac096dddc8c", null ],
+    [ "JellyfishDivingGear", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a9d8aae93552ccad4a42cec8571dd78ba.html#a9d8aae93552ccad4a42cec8571dd78ba", null ],
+    [ "JimsDroneVisor", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a2804d3bcdfbc0caaea9ba3ae1eae0396.html#a2804d3bcdfbc0caaea9ba3ae1eae0396", null ],
+    [ "JungleRose", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a842bf2eb22be1aa9c141e5e11fb76630.html#a842bf2eb22be1aa9c141e5e11fb76630", null ],
+    [ "LavaSkull", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a336b639f9796da21e5770067866c52de.html#a336b639f9796da21e5770067866c52de", null ],
+    [ "LavaSkullAlt", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a904ba97581052b5e8485cb48b58f776d.html#a904ba97581052b5e8485cb48b58f776d", null ],
+    [ "MoltenSkullRose", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a5797399436d4005fab8dc4ec4a94083a.html#a5797399436d4005fab8dc4ec4a94083a", null ],
+    [ "MoltenSkullRoseAlt", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a094c8987bd3caf445edb05203af1f658.html#a094c8987bd3caf445edb05203af1f658", null ],
+    [ "NaturesGift", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a854c2aac0418a9e174288f57bc797742.html#a854c2aac0418a9e174288f57bc797742", null ],
+    [ "ObsidianRose", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_ae40cf39b4f502c7f98124ca87b2714e5.html#ae40cf39b4f502c7f98124ca87b2714e5", null ],
+    [ "ObsidianSkull", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_afdd61f8359ccc46e1778745d81b6cb42.html#afdd61f8359ccc46e1778745d81b6cb42", null ],
+    [ "ObsidianSkullAlt", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a1585c22d2df110193fa07d0ecffebaf0.html#a1585c22d2df110193fa07d0ecffebaf0", null ],
+    [ "ObsidianSkullRose", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_aae3fa44ba9dfeec4aef8d071acce66d3.html#aae3fa44ba9dfeec4aef8d071acce66d3", null ],
+    [ "ObsidianSkullRoseAlt", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a972c19dc3de17e02196e79c1b71aff9f.html#a972c19dc3de17e02196e79c1b71aff9f", null ],
+    [ "ReflectiveShades", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a95dccd42d920d4118091a618c1e02a21.html#a95dccd42d920d4118091a618c1e02a21", null ],
+    [ "SpectreGoggles", "de/d20/classTerraria_1_1ID_1_1ArmorIDs_1_1Face_a034cb26c621a0bc285f30f69785a6510.html#a034cb26c621a0bc285f30f69785a6510", null ]
+];

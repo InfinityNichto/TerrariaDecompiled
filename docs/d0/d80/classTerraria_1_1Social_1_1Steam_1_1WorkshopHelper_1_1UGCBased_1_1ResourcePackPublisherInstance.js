@@ -1,0 +1,25 @@
+var classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance =
+[
+    [ "ResourcePackPublisherInstance", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_ae4f58543630ac690330800528c7d3ffd.html#ae4f58543630ac690330800528c7d3ffd", null ],
+    [ "CreateItem", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a89ab4e16143e1338f71e6e694287bb57", null ],
+    [ "CreateItemResult", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a477d9edbad099a6135d1ee050d9899f9", null ],
+    [ "FinishedPublishingAction", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a384071735b82ddca2810afe1cab978b9", null ],
+    [ "GetHeaderText", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_ab4c235353fcdf11e2c35f29a431b5278.html#ab4c235353fcdf11e2c35f29a431b5278", null ],
+    [ "GetVisibility", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ab96296aadbf1b4099680df0df5d04ac8", null ],
+    [ "PrepareContentForUpdate", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_a34f2eef0918249ce8679367ad41d3c32.html#a34f2eef0918249ce8679367ad41d3c32", null ],
+    [ "PreventUpdatingCertainThings", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a565d0afb5cc2b680e58609268a2f1f32", null ],
+    [ "PublishContent", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a8963840f44576e93b9de9f93fe6008ee", null ],
+    [ "TryGetProgress", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a063421977eed50435a4e2b823ef4ef14", null ],
+    [ "TryWritingManifestToFolder", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a94ef699063bd4fb6ea3c83b90feae54f", null ],
+    [ "UpdateItem", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a52bc6e3f42c428c91beb680909173b3d", null ],
+    [ "UpdateItemResult", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a1a57ea98f799a1b72072da90579f8bba", null ],
+    [ "_createItemHook", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#abf6e92f962a2f29e4c14adf52e4e65c0", null ],
+    [ "_endAction", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ada0c186f4b54a2e053b854c3fe87bf3c", null ],
+    [ "_entryData", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#af5f6a37b4ef2732b6d59f8b5376ebd84", null ],
+    [ "_issueReporter", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ab3ea25914b4eb4fee3a9d24d6df93d8a", null ],
+    [ "_publicity", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a114b96ba63841ead3142243480fa64f2", null ],
+    [ "_publishedFileID", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a3a26f8936ba3556197707cb0b9cade94", null ],
+    [ "_resourcePack", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance_a96819f1f2e5f4e8fcbfc2514dc45871c.html#a96819f1f2e5f4e8fcbfc2514dc45871c", null ],
+    [ "_updateHandle", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#ac05534f74f16da9fa3625843dee2b1e0", null ],
+    [ "_updateItemHook", "d0/d80/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1ResourcePackPublisherInstance.html#a570115805b5b68e0a1e05bd59ce5a122", null ]
+];

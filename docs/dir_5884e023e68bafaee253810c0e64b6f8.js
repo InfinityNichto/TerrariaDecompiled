@@ -1,0 +1,25 @@
+var dir_5884e023e68bafaee253810c0e64b6f8 =
+[
+    [ "AchievementsSocialModule.cs", "d4/d71/Terraria_8Social_8Base_2AchievementsSocialModule_8cs.html", "d4/d71/Terraria_8Social_8Base_2AchievementsSocialModule_8cs" ],
+    [ "AWorkshopEntry.cs", "da/da9/AWorkshopEntry_8cs.html", "da/da9/AWorkshopEntry_8cs" ],
+    [ "AWorkshopProgressReporter.cs", "d6/df6/AWorkshopProgressReporter_8cs.html", "d6/df6/AWorkshopProgressReporter_8cs" ],
+    [ "AWorkshopTagsCollection.cs", "d5/dbc/AWorkshopTagsCollection_8cs.html", "d5/dbc/AWorkshopTagsCollection_8cs" ],
+    [ "CloudSocialModule.cs", "dd/d69/Terraria_8Social_8Base_2CloudSocialModule_8cs.html", "dd/d69/Terraria_8Social_8Base_2CloudSocialModule_8cs" ],
+    [ "FoundWorkshopEntryInfo.cs", "dd/dca/FoundWorkshopEntryInfo_8cs.html", "dd/dca/FoundWorkshopEntryInfo_8cs" ],
+    [ "FriendsSocialModule.cs", "d4/ddb/Terraria_8Social_8Base_2FriendsSocialModule_8cs.html", "d4/ddb/Terraria_8Social_8Base_2FriendsSocialModule_8cs" ],
+    [ "NetSocialModule.cs", "df/d23/Terraria_8Social_8Base_2NetSocialModule_8cs.html", "df/d23/Terraria_8Social_8Base_2NetSocialModule_8cs" ],
+    [ "OverlaySocialModule.cs", "d7/d93/Terraria_8Social_8Base_2OverlaySocialModule_8cs.html", "d7/d93/Terraria_8Social_8Base_2OverlaySocialModule_8cs" ],
+    [ "PlatformSocialModule.cs", "d1/d7c/Terraria_8Social_8Base_2PlatformSocialModule_8cs.html", "d1/d7c/Terraria_8Social_8Base_2PlatformSocialModule_8cs" ],
+    [ "RichPresenceState.cs", "db/d6a/RichPresenceState_8cs.html", "db/d6a/RichPresenceState_8cs" ],
+    [ "ServerJoinRequestEvent.cs", "dd/d1d/ServerJoinRequestEvent_8cs.html", "dd/d1d/ServerJoinRequestEvent_8cs" ],
+    [ "ServerJoinRequestsManager.cs", "dc/da9/ServerJoinRequestsManager_8cs.html", "dc/da9/ServerJoinRequestsManager_8cs" ],
+    [ "TexturePackWorkshopEntry.cs", "d8/d5d/TexturePackWorkshopEntry_8cs.html", "d8/d5d/TexturePackWorkshopEntry_8cs" ],
+    [ "UserJoinToServerRequest.cs", "d2/d0f/UserJoinToServerRequest_8cs.html", "d2/d0f/UserJoinToServerRequest_8cs" ],
+    [ "WorkshopBranding.cs", "d7/dfd/WorkshopBranding_8cs.html", "d7/dfd/WorkshopBranding_8cs" ],
+    [ "WorkshopIssueReporter.cs", "dd/d4c/WorkshopIssueReporter_8cs.html", "dd/d4c/WorkshopIssueReporter_8cs" ],
+    [ "WorkshopItemPublicSettingId.cs", "de/d78/WorkshopItemPublicSettingId_8cs.html", "de/d78/WorkshopItemPublicSettingId_8cs" ],
+    [ "WorkshopItemPublishSettings.cs", "dd/dfc/WorkshopItemPublishSettings_8cs.html", "dd/dfc/WorkshopItemPublishSettings_8cs" ],
+    [ "WorkshopSocialModule.cs", "d9/dd0/Terraria_8Social_8Base_2WorkshopSocialModule_8cs.html", "d9/dd0/Terraria_8Social_8Base_2WorkshopSocialModule_8cs" ],
+    [ "WorkshopTagOption.cs", "d4/db2/WorkshopTagOption_8cs.html", "d4/db2/WorkshopTagOption_8cs" ],
+    [ "WorldWorkshopEntry.cs", "d8/df1/WorldWorkshopEntry_8cs.html", "d8/df1/WorldWorkshopEntry_8cs" ]
+];

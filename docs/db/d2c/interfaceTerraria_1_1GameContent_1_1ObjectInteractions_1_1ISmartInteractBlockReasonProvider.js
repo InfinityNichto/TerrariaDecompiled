@@ -1,0 +1,4 @@
+var interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractBlockReasonProvider =
+[
+    [ "ShouldBlockSmartInteract", "db/d2c/interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractBlockReasonProvider_a6c30b567a8104550069e97844f8516f0.html#a6c30b567a8104550069e97844f8516f0", null ]
+];

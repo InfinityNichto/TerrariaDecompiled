@@ -1,0 +1,26 @@
+var classTerraria_1_1GameContent_1_1TeleportPylonsSystem =
+[
+    [ "AddForClient", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a99572a7cb4931c761dffce0eb6a07786.html#a99572a7cb4931c761dffce0eb6a07786", null ],
+    [ "DoesPositionHaveEnoughNPCs", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a49e5bbd658cb0f5a854d248a224efea3.html#a49e5bbd658cb0f5a854d248a224efea3", null ],
+    [ "DoesPylonAcceptTeleportation", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a4a99503dc05e19da0af3b22d5ad0cb33.html#a4a99503dc05e19da0af3b22d5ad0cb33", null ],
+    [ "DoesPylonHaveEnoughNPCsAroundIt", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_abd3626f487034cfe24ce05c0672832a2.html#abd3626f487034cfe24ce05c0672832a2", null ],
+    [ "HandleTeleportRequest", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a1eaf25bb8db51787f9e2614918a39104.html#a1eaf25bb8db51787f9e2614918a39104", null ],
+    [ "HasAnyPylon", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a65354e0267d8fd4822880dd6d22d36b0.html#a65354e0267d8fd4822880dd6d22d36b0", null ],
+    [ "HasPylonOfType", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_ac7a12317e311c5d6f1cb8d1022578c65.html#ac7a12317e311c5d6f1cb8d1022578c65", null ],
+    [ "HowManyNPCsDoesPylonNeed", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a2daee2d8b707cab8dd869c3496829f7f.html#a2daee2d8b707cab8dd869c3496829f7f", null ],
+    [ "IsPlayerNearAPylon", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a6f72345a072f38f39b559b938289085e.html#a6f72345a072f38f39b559b938289085e", null ],
+    [ "OnPlayerJoining", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_aa282c0b7c1f1f43f3ea0d4001dd1d984.html#aa282c0b7c1f1f43f3ea0d4001dd1d984", null ],
+    [ "RemoveForClient", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a187c12f2416f7d348bd74096fbb009bf.html#a187c12f2416f7d348bd74096fbb009bf", null ],
+    [ "RequestImmediateUpdate", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a065bf9839006911a0f34f517d058dd8c.html#a065bf9839006911a0f34f517d058dd8c", null ],
+    [ "RequestTeleportation", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a2ccecb2d69e8f7f08482516a13a1e210.html#a2ccecb2d69e8f7f08482516a13a1e210", null ],
+    [ "Reset", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a53b3cedaf9dadc911dda61b620741536.html#a53b3cedaf9dadc911dda61b620741536", null ],
+    [ "SpawnInWorldDust", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_add4f1fd36fd6f4c38a9fbdfbf3a6937b.html#add4f1fd36fd6f4c38a9fbdfbf3a6937b", null ],
+    [ "Update", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a281a5d88a0ab2714a03581ef89e5eeb3.html#a281a5d88a0ab2714a03581ef89e5eeb3", null ],
+    [ "UpdatePylonsListAndBroadcastChanges", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a9c750237c021915c180c4900e2eadbde.html#a9c750237c021915c180c4900e2eadbde", null ],
+    [ "_cooldownForUpdatingPylonsList", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a92b44df1b2d1bcd61e2b076c1105b6f6.html#a92b44df1b2d1bcd61e2b076c1105b6f6", null ],
+    [ "_pylons", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_ac5142a270e635f9c47fdea264bfb6377.html#ac5142a270e635f9c47fdea264bfb6377", null ],
+    [ "_pylonsOld", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_adde88f72ba35f7e2bfa4c6abb201ed67.html#adde88f72ba35f7e2bfa4c6abb201ed67", null ],
+    [ "_sceneMetrics", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_a08f7429c5e5dd52b1ee39579a3b5374b.html#a08f7429c5e5dd52b1ee39579a3b5374b", null ],
+    [ "CooldownTimePerPylonsListUpdate", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_ada7cf157381b9af274ead377e903794d.html#ada7cf157381b9af274ead377e903794d", null ],
+    [ "Pylons", "d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_ad9f818f88f7f3e8992b3d793a6275f83.html#ad9f818f88f7f3e8992b3d793a6275f83", null ]
+];

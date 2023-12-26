@@ -1,0 +1,27 @@
+var classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule =
+[
+    [ "CompleteAchievement", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_adb7adee2dd2138aef47935b3d7c64610.html#adb7adee2dd2138aef47935b3d7c64610", null ],
+    [ "GetEncryptionKey", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a77cec47a372054d53e0cfccb695cad4e.html#a77cec47a372054d53e0cfccb695cad4e", null ],
+    [ "GetFloatStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_ab1f0a262286d631853688a57487ee012.html#ab1f0a262286d631853688a57487ee012", null ],
+    [ "GetIntStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_ad7b37eb0c57217077eca0de576205e64.html#ad7b37eb0c57217077eca0de576205e64", null ],
+    [ "GetMyPlayerAchievement", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_aad3cc390ac69e7a16c0116f96f041bf5.html#aad3cc390ac69e7a16c0116f96f041bf5", null ],
+    [ "GetMyPlayerStats", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a792eefe79220ec9a88f387464c8996db.html#a792eefe79220ec9a88f387464c8996db", null ],
+    [ "GetSavePath", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_adb75a175c7fb1078c39401c50d57fa85.html#adb75a175c7fb1078c39401c50d57fa85", null ],
+    [ "Initialize", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_ac87c6fe2d918c40bc328b3aabf076977.html#ac87c6fe2d918c40bc328b3aabf076977", null ],
+    [ "IsAchievementCompleted", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a4d0217a8c21ec1ac48c7acf23d8904a1.html#a4d0217a8c21ec1ac48c7acf23d8904a1", null ],
+    [ "RailEventCallBack", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a5e7d3ff49e8da818d69e4abdcaff47a6.html#a5e7d3ff49e8da818d69e4abdcaff47a6", null ],
+    [ "SaveAchievement", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a54647a894e4ac4ad6f0ca7073ef81db9.html#a54647a894e4ac4ad6f0ca7073ef81db9", null ],
+    [ "SaveStats", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a00eb2bda120edcc48b399516b0e494e9.html#a00eb2bda120edcc48b399516b0e494e9", null ],
+    [ "SetFloatStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_ab65cc06ad185b17c6ae41f6cd338d57e.html#ab65cc06ad185b17c6ae41f6cd338d57e", null ],
+    [ "SetIntStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_af8dd09aa1cb654b17f74cf06a60c6d15.html#af8dd09aa1cb654b17f74cf06a60c6d15", null ],
+    [ "Shutdown", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a874f4379bc3b906ec9cc72fe55e73b83.html#a874f4379bc3b906ec9cc72fe55e73b83", null ],
+    [ "StoreStats", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a5c4dfd3a81fe17b3b0de0aa2f52e4d27.html#a5c4dfd3a81fe17b3b0de0aa2f52e4d27", null ],
+    [ "UpdateFloatStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a3078889c91bb968617e01e645763549e.html#a3078889c91bb968617e01e645763549e", null ],
+    [ "UpdateIntStat", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a0f426d60c194baa2c2999019571dda9d.html#a0f426d60c194baa2c2999019571dda9d", null ],
+    [ "_areAchievementReceived", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_acf42aaef250214fe4f382d1f75f7170b.html#acf42aaef250214fe4f382d1f75f7170b", null ],
+    [ "_areStatsReceived", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_ad826acfbf1bf70cc556295dff5ee3e3f.html#ad826acfbf1bf70cc556295dff5ee3e3f", null ],
+    [ "_callbackHelper", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a92e13e74542496f104cea4b1271c9b14.html#a92e13e74542496f104cea4b1271c9b14", null ],
+    [ "_playerAchievement", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a6135cbe4dc39752b2a406204c3a7c5a3.html#a6135cbe4dc39752b2a406204c3a7c5a3", null ],
+    [ "_playerStats", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a84edd692ffc4df8e829e4a68955801f2.html#a84edd692ffc4df8e829e4a68955801f2", null ],
+    [ "FILE_NAME", "d1/d23/classTerraria_1_1Social_1_1WeGame_1_1AchievementsSocialModule_a4450bf4a36f8eb7605c5e3dccaa78bbf.html#a4450bf4a36f8eb7605c5e3dccaa78bbf", null ]
+];

@@ -1,0 +1,6 @@
+var classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1FrostMoonDropGateForTrophies =
+[
+    [ "CanDrop", "dd/d01/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1FrostMoonDropGateForTrophies_a01c7a732dbeff60d5145345674694dc9.html#a01c7a732dbeff60d5145345674694dc9", null ],
+    [ "CanShowItemDropInUI", "dd/d01/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1FrostMoonDropGateForTrophies_a1b96e9dbc9994b47bc6ee991ab23cfca.html#a1b96e9dbc9994b47bc6ee991ab23cfca", null ],
+    [ "GetConditionDescription", "dd/d01/classTerraria_1_1GameContent_1_1ItemDropRules_1_1Conditions_1_1FrostMoonDropGateForTrophies_acb6fdfc4fc95713bd92b88495bb45400.html#acb6fdfc4fc95713bd92b88495bb45400", null ]
+];

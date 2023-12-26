@@ -1,0 +1,5 @@
+var TileSmartInteractCandidateProvider_8cs =
+[
+    [ "Terraria.GameContent.ObjectInteractions.TileSmartInteractCandidateProvider", "d6/dbd/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider.html", "d6/dbd/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider" ],
+    [ "Terraria.GameContent.ObjectInteractions.TileSmartInteractCandidateProvider.ReusableCandidate", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate.html", "dc/d79/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1TileSmartInteractCandidateProvider_1_1ReusableCandidate" ]
+];

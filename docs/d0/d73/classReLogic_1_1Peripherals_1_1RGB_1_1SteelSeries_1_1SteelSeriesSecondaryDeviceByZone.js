@@ -1,0 +1,28 @@
+var classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone =
+[
+    [ "SteelSeriesSecondaryDeviceByZone", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_a94cb5f11a00e4091e56a479eb6004bd3.html#a94cb5f11a00e4091e56a479eb6004bd3", null ],
+    [ "CollectEventsToTrack", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aad8b7cc52fcd25f0ec5cc990d507a151.html#aad8b7cc52fcd25f0ec5cc990d507a151", null ],
+    [ "DebugDraw", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a5fc3eeb19a8f42094702205facd1744b", null ],
+    [ "GetLedCanvasPosition", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a07898be418f54ac6bcdf481271395caa", null ],
+    [ "GetLedGridPosition", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a714f2917d0d6546a75874990cb58a8a1", null ],
+    [ "GetProcessedLedColor", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a03984491ca2679abca0d83170b6261f0", null ],
+    [ "GetUnprocessedLedColor", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a16dd3f77cc709a16400f9c6526cc3f34", null ],
+    [ "Present", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aef7a65b9425eb954e27fa3d0b166c4bf.html#aef7a65b9425eb954e27fa3d0b166c4bf", null ],
+    [ "ProcessLedColor", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a021f28bf2f5449c0649eadf8e13ed3f7", null ],
+    [ "Rasterize", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a13c4f827799f3824e112445f45ec8e08", null ],
+    [ "Render", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#ac42c27504493f20d7670f30d0c5b24d9", null ],
+    [ "SetLedColor", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a259427565026c3657c3f345291451118", null ],
+    [ "TryGetEventUpdateRequest", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_a4bed27a2d89e87113574c17e65666462.html#a4bed27a2d89e87113574c17e65666462", null ],
+    [ "_backBuffer", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#aff76b4e0d4e4cc30a87b64f5bb690ac7", null ],
+    [ "_colorKey", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_acd021247777cd6e436c0c4094cf0f6a9.html#acd021247777cd6e436c0c4094cf0f6a9", null ],
+    [ "_colorProfile", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a857205177ed87f4b35e05cfa3d3b9bba", null ],
+    [ "_requestList", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_ae165ba93374381e9e6035b40d73b67ba.html#ae165ba93374381e9e6035b40d73b67ba", null ],
+    [ "_workingFragment", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a03f92b05cabff630d8fc3423bb7b3d0c", null ],
+    [ "_xPosition", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_ac084f9b59812cbd7316cca6fd54f3c1f.html#ac084f9b59812cbd7316cca6fd54f3c1f", null ],
+    [ "_yPosition", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_a77374886847ef2e389251852c7d5216d.html#a77374886847ef2e389251852c7d5216d", null ],
+    [ "_zoneTarget", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aa9fc7cfabf1a7081c490134154db534c.html#aa9fc7cfabf1a7081c490134154db534c", null ],
+    [ "Type", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#aecc8ad2b54c65b49ec08a75ab8a090a1", null ],
+    [ "Vendor", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#af9f70c3f4c837b56f291d807de51ca89", null ],
+    [ "LedCount", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a025e4ccd295081f4a26f4293a7238ec6", null ],
+    [ "PreferredLevelOfDetail", "d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone.html#a9065041691dd204ba75b2abdf396c6a5", null ]
+];

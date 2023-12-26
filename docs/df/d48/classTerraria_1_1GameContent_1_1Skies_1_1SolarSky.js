@@ -1,0 +1,28 @@
+var classTerraria_1_1GameContent_1_1Skies_1_1SolarSky =
+[
+    [ "Meteor", "dd/d69/structTerraria_1_1GameContent_1_1Skies_1_1SolarSky_1_1Meteor.html", "dd/d69/structTerraria_1_1GameContent_1_1Skies_1_1SolarSky_1_1Meteor" ],
+    [ "Activate", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_af0b031588320f519a370bfcd1b4a8dec.html#af0b031588320f519a370bfcd1b4a8dec", null ],
+    [ "Deactivate", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_ac81ec57d551ec75e4bf4b26166accb85.html#ac81ec57d551ec75e4bf4b26166accb85", null ],
+    [ "Draw", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_ad3e8fbd2a78808f8724290aebb04facf.html#ad3e8fbd2a78808f8724290aebb04facf", null ],
+    [ "GetCloudAlpha", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a1d16c1f2c48f9c143ba91bcaa79e8456.html#a1d16c1f2c48f9c143ba91bcaa79e8456", null ],
+    [ "IsActive", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a9670a6f873e19438a2eebd9f091b3b5b.html#a9670a6f873e19438a2eebd9f091b3b5b", null ],
+    [ "IsVisible", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#adfa42c45dfb692b944a96be2693f17d9", null ],
+    [ "Load", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#ac2c3545fc138f8bb2f81c3373a788570", null ],
+    [ "OnLoad", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_aab982db5b146c4ac0c3264a8f88edc82.html#aab982db5b146c4ac0c3264a8f88edc82", null ],
+    [ "OnTileColor", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a025704793ac9502dddf42d875f40f140.html#a025704793ac9502dddf42d875f40f140", null ],
+    [ "Reset", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a52b21974f47ceb738b5f690fba59447d.html#a52b21974f47ceb738b5f690fba59447d", null ],
+    [ "SortMethod", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_aaa0fc9383238ae6740ca1962d9e35937.html#aaa0fc9383238ae6740ca1962d9e35937", null ],
+    [ "Update", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a8c090f57f130c575264bb46092cfcfa4.html#a8c090f57f130c575264bb46092cfcfa4", null ],
+    [ "_bgTexture", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_ad02e2ee9d4b5ed20641c9d819d47c0b3.html#ad02e2ee9d4b5ed20641c9d819d47c0b3", null ],
+    [ "_fadeOpacity", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a2fe78fc08ec36f0806b65107dabf4fb8.html#a2fe78fc08ec36f0806b65107dabf4fb8", null ],
+    [ "_isActive", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_af33b71483dfe59eaed7290560aae4b5b.html#af33b71483dfe59eaed7290560aae4b5b", null ],
+    [ "_isLoaded", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#a40880abec1e79b3c3dec330238ee0f09", null ],
+    [ "_meteors", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_ac0d0f18e1c097cc7e314f1857d06a385.html#ac0d0f18e1c097cc7e314f1857d06a385", null ],
+    [ "_meteorTexture", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a7f6693096fc8fea9416f84dd86684552.html#a7f6693096fc8fea9416f84dd86684552", null ],
+    [ "_planetTexture", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_af2767631afc5440b042bfd763ee2bf80.html#af2767631afc5440b042bfd763ee2bf80", null ],
+    [ "_priority", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#a143aae521c814f60433f73f3724b50ec", null ],
+    [ "_random", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky_a5d81e84b81ae780ef81acb39ac7307a1.html#a5d81e84b81ae780ef81acb39ac7307a1", null ],
+    [ "Opacity", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#ad87e515d34d0e191480777fdf7ae7a04", null ],
+    [ "IsLoaded", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#abe14fd7997240378347e73438e71517e", null ],
+    [ "Priority", "df/d48/classTerraria_1_1GameContent_1_1Skies_1_1SolarSky.html#af800b0ebaa0d932ca9d1d28845120599", null ]
+];

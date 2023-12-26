@@ -1,0 +1,27 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator =
+[
+    [ "CommonTags", "da/d9d/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags.html", "da/d9d/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags" ],
+    [ "Conditions", "d3/db6/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1Conditions.html", "d3/db6/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1Conditions" ],
+    [ "CrownosIconIndexes", "d8/d48/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CrownosIconIndexes.html", "d8/d48/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CrownosIconIndexes" ],
+    [ "AddDropOverrides", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_af742ff9592c3374f4fa519515b277563.html#af742ff9592c3374f4fa519515b277563", null ],
+    [ "AddEmptyEntries_CrittersAndEnemies_Automated", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ad90f8337f18f3810e303c9eee141d170.html#ad90f8337f18f3810e303c9eee141d170", null ],
+    [ "AddMultiEntryNPCS_Manual", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a252bb8352b55024713fe4dacfa1f54b6.html#a252bb8352b55024713fe4dacfa1f54b6", null ],
+    [ "AddNPCBiomeRelationships_AddDecorations_Automated", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ae5cae1b1823f06e635ea620f1a9489a9.html#ae5cae1b1823f06e635ea620f1a9489a9", null ],
+    [ "AddNPCBiomeRelationships_Automated", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a9004f016a99777b43eaa641552f6acfc.html#a9004f016a99777b43eaa641552f6acfc", null ],
+    [ "AddNPCBiomeRelationships_Manual", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a30805356c625fb2c853d54e110ba9d66.html#a30805356c625fb2c853d54e110ba9d66", null ],
+    [ "AddTownNPCs_Manual", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a5921348edfcfc57114f51c4f60f1befb.html#a5921348edfcfc57114f51c4f60f1befb", null ],
+    [ "AdjustEaterOfWorldStats", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ab390700754cd04baaeabda9f74ace382.html#ab390700754cd04baaeabda9f74ace382", null ],
+    [ "AdjustPirateShipStats", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a491bcba3843799c893020c40eefe8d3e.html#a491bcba3843799c893020c40eefe8d3e", null ],
+    [ "FindEntryByNPCID", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a011df3b17873e3da576ee8fe3f7c581f.html#a011df3b17873e3da576ee8fe3f7c581f", null ],
+    [ "GetExclusions", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_afe167009d0cb1debc8cfe17b8249fa44.html#afe167009d0cb1debc8cfe17b8249fa44", null ],
+    [ "ModifyEntriesThatNeedIt", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ab16b78d8cb52df9c1811237900cef100.html#ab16b78d8cb52df9c1811237900cef100", null ],
+    [ "ModifyEntriesThatNeedIt_NameOverride", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ab377d8d7f2ca3270b215cc9e7253e1d2.html#ab377d8d7f2ca3270b215cc9e7253e1d2", null ],
+    [ "Populate", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_aa81b91cbba80ab07755d6b55e78c1be6.html#aa81b91cbba80ab07755d6b55e78c1be6", null ],
+    [ "Register", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a3540d59464b4cebbeba40c689d8bd55e.html#a3540d59464b4cebbeba40c689d8bd55e", null ],
+    [ "Register", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_aa017e83bf91f8fd5c88f6a4a145a28fd.html#aa017e83bf91f8fd5c88f6a4a145a28fd", null ],
+    [ "RegisterFilters", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ac322fb1b4c01b08c3bb1fc91a1c4da8d.html#ac322fb1b4c01b08c3bb1fc91a1c4da8d", null ],
+    [ "RegisterSortSteps", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_acdaeb99fc841e2c9a3739fc7b06e9b48.html#acdaeb99fc841e2c9a3739fc7b06e9b48", null ],
+    [ "RegisterTestEntries", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a054a1e88277e9dcda2ea251418e63a97.html#a054a1e88277e9dcda2ea251418e63a97", null ],
+    [ "TryGivingEntryFlavorTextIfItIsMissing", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a99f3c795b30d7425e5d91022c1e7ea4e.html#a99f3c795b30d7425e5d91022c1e7ea4e", null ],
+    [ "_currentDatabase", "d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_a56cd2cc4fe219cb65e3ae4aa121479f9.html#a56cd2cc4fe219cb65e3ae4aa121479f9", null ]
+];

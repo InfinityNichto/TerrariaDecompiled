@@ -1,0 +1,26 @@
+var classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper =
+[
+    [ "ClubProperties", "db/dc2/structTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ClubProperties.html", "db/dc2/structTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ClubProperties" ],
+    [ "ContactListener", "de/d60/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ContactListener.html", "de/d60/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ContactListener" ],
+    [ "ShotStrength", "d0/d7c/structTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ShotStrength.html", "d0/d7c/structTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ShotStrength" ],
+    [ "CalculateShotStrength", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_ab5e0ac4c337d82d7939ef99ee6335474.html#ab5e0ac4c337d82d7939ef99ee6335474", null ],
+    [ "CalculateShotStrength", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a39908f3b209f69421d1d1120a89c2175.html#a39908f3b209f69421d1d1120a89c2175", null ],
+    [ "DrawPredictionLine", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a98e4ba6242e39eb2b188f54d0430a311.html#a98e4ba6242e39eb2b188f54d0430a311", null ],
+    [ "FindGolfBallForHelper", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a3eb286acbaa84fecdc8315a1717ecfae.html#a3eb286acbaa84fecdc8315a1717ecfae", null ],
+    [ "FindHelperFromGolfBall", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a95c896d87cffc8236dc731bafbfbbf29.html#a95c896d87cffc8236dc731bafbfbbf29", null ],
+    [ "FindVectorOnOval", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a2ee5ec46c0853d4ca22a93d1b9162356.html#a2ee5ec46c0853d4ca22a93d1b9162356", null ],
+    [ "GetClubProperties", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_adef5cf4d98c83781af0d0b339a5ee3eb.html#adef5cf4d98c83781af0d0b339a5ee3eb", null ],
+    [ "GetClubPropertiesFromGolfHelper", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a597539314676c2a8986f9efcfe3da0eb.html#a597539314676c2a8986f9efcfe3da0eb", null ],
+    [ "HitGolfBall", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a26e0a141a37a50fcd5788370a51c301c.html#a26e0a141a37a50fcd5788370a51c301c", null ],
+    [ "IsGolfBallResting", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a99c23d9bf06bcd0cb77d52326e566162.html#a99c23d9bf06bcd0cb77d52326e566162", null ],
+    [ "IsGolfShotValid", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_ae9f2ba1d2530e7d9548e2ea57bec5baf.html#ae9f2ba1d2530e7d9548e2ea57bec5baf", null ],
+    [ "IsPlayerHoldingClub", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_afe30862e5cf8bc2facb0556c4b7830a8.html#afe30862e5cf8bc2facb0556c4b7830a8", null ],
+    [ "StepGolfBall", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a6068bf9ccb8f34b2c1f5814d96153d82.html#a6068bf9ccb8f34b2c1f5814d96153d82", null ],
+    [ "ValidateShot", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a3488bf5d23940188499f52d1ec1450a0.html#a3488bf5d23940188499f52d1ec1450a0", null ],
+    [ "Listener", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a876719e20ac0b0b5d23f58c5a106fc74.html#a876719e20ac0b0b5d23f58c5a106fc74", null ],
+    [ "PhysicsProperties", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a1b2c867c64864a40634e0c0fce3c0a06.html#a1b2c867c64864a40634e0c0fce3c0a06", null ],
+    [ "PointsNeededForLevel1", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a1d489053837defebffd3aea13c1fc2a8.html#a1d489053837defebffd3aea13c1fc2a8", null ],
+    [ "PointsNeededForLevel2", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a9b722a9046ecb49e81e5e54835b5b536.html#a9b722a9046ecb49e81e5e54835b5b536", null ],
+    [ "PointsNeededForLevel3", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_acd5e49d26854a6c6db364267c1396c72.html#acd5e49d26854a6c6db364267c1396c72", null ],
+    [ "PredictionLine", "d9/d7a/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_a22a75b4d36317742c0f21fb38c7e77b9.html#a22a75b4d36317742c0f21fb38c7e77b9", null ]
+];

@@ -1,0 +1,7 @@
+var namespaceTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes =
+[
+    [ "FastConditionSetter", "d5/d84/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1FastConditionSetter.html", "d5/d84/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1FastConditionSetter" ],
+    [ "LuckyCoinConditionSetter", "de/dbd/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1LuckyCoinConditionSetter.html", "de/dbd/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1LuckyCoinConditionSetter" ],
+    [ "SlimeStaffConditionSetter", "db/db9/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1SlimeStaffConditionSetter.html", "db/db9/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1SlimeStaffConditionSetter" ],
+    [ "StackedConditionSetter", "d1/dbc/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1StackedConditionSetter.html", "d1/dbc/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1StackedConditionSetter" ]
+];

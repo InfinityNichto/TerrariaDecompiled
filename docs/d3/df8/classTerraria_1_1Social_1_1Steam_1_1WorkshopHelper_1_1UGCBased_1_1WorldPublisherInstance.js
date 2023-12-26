@@ -1,0 +1,25 @@
+var classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance =
+[
+    [ "WorldPublisherInstance", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance_a4be9b3d835ef76022f83cf0ebf4b6954.html#a4be9b3d835ef76022f83cf0ebf4b6954", null ],
+    [ "CreateItem", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a89ab4e16143e1338f71e6e694287bb57", null ],
+    [ "CreateItemResult", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a477d9edbad099a6135d1ee050d9899f9", null ],
+    [ "FinishedPublishingAction", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a384071735b82ddca2810afe1cab978b9", null ],
+    [ "GetHeaderText", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance_a17a8f20de3edf52dbc53b99a6b99b4df.html#a17a8f20de3edf52dbc53b99a6b99b4df", null ],
+    [ "GetVisibility", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#ab96296aadbf1b4099680df0df5d04ac8", null ],
+    [ "PrepareContentForUpdate", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance_a3e829cae8f71b0bc9d9c69f72a301765.html#a3e829cae8f71b0bc9d9c69f72a301765", null ],
+    [ "PreventUpdatingCertainThings", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a565d0afb5cc2b680e58609268a2f1f32", null ],
+    [ "PublishContent", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a8963840f44576e93b9de9f93fe6008ee", null ],
+    [ "TryGetProgress", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a063421977eed50435a4e2b823ef4ef14", null ],
+    [ "TryWritingManifestToFolder", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a94ef699063bd4fb6ea3c83b90feae54f", null ],
+    [ "UpdateItem", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a52bc6e3f42c428c91beb680909173b3d", null ],
+    [ "UpdateItemResult", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a1a57ea98f799a1b72072da90579f8bba", null ],
+    [ "_createItemHook", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#abf6e92f962a2f29e4c14adf52e4e65c0", null ],
+    [ "_endAction", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#ada0c186f4b54a2e053b854c3fe87bf3c", null ],
+    [ "_entryData", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#af5f6a37b4ef2732b6d59f8b5376ebd84", null ],
+    [ "_issueReporter", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#ab3ea25914b4eb4fee3a9d24d6df93d8a", null ],
+    [ "_publicity", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a114b96ba63841ead3142243480fa64f2", null ],
+    [ "_publishedFileID", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a3a26f8936ba3556197707cb0b9cade94", null ],
+    [ "_updateHandle", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#ac05534f74f16da9fa3625843dee2b1e0", null ],
+    [ "_updateItemHook", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance.html#a570115805b5b68e0a1e05bd59ce5a122", null ],
+    [ "_world", "d3/df8/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1WorldPublisherInstance_a288636a8347046d966db17e31b33ceff.html#a288636a8347046d966db17e31b33ceff", null ]
+];

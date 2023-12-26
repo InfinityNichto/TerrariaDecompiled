@@ -1,0 +1,4 @@
+var interfaceTerraria_1_1GameContent_1_1ItemDropRules_1_1IProvideItemConditionDescription =
+[
+    [ "GetConditionDescription", "dc/d71/interfaceTerraria_1_1GameContent_1_1ItemDropRules_1_1IProvideItemConditionDescription_ad14c6b1f4671fc1b09bc6790c89110cb.html#ad14c6b1f4671fc1b09bc6790c89110cb", null ]
+];

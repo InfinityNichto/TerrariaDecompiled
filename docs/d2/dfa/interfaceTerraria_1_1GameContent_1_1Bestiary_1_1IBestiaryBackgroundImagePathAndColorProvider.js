@@ -1,0 +1,5 @@
+var interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryBackgroundImagePathAndColorProvider =
+[
+    [ "GetBackgroundColor", "d2/dfa/interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryBackgroundImagePathAndColorProvider_a9cc91c3c07c1d21ed600a8630981dd83.html#a9cc91c3c07c1d21ed600a8630981dd83", null ],
+    [ "GetBackgroundImage", "d2/dfa/interfaceTerraria_1_1GameContent_1_1Bestiary_1_1IBestiaryBackgroundImagePathAndColorProvider_ad4354c4e3927868f6516a8ea81ecebf4.html#ad4354c4e3927868f6516a8ea81ecebf4", null ]
+];

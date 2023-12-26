@@ -1,0 +1,28 @@
+var classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData =
+[
+    [ "ReflectiveArmorShaderData", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData_a8128ac055c433c69767d68b68028ec3c.html#a8128ac055c433c69767d68b68028ec3c", null ],
+    [ "Apply", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#af9ab60e3e82d5fb346da65e084582276", null ],
+    [ "Apply", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData_abf768a7b31ef40cd252cf249ebaa159a.html#abf768a7b31ef40cd252cf249ebaa159a", null ],
+    [ "GetSecondaryShader", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a93ca573d4521bc7bb08c18ca507409a6", null ],
+    [ "SwapProgram", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a5b9bd37cd9c05aeefe6dba93ef99599d", null ],
+    [ "UseColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#ad589673907f013731075f075edc96f41", null ],
+    [ "UseColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a9ccda805f20bdf22e0ccff87bb761066", null ],
+    [ "UseColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a503a588a17ab4693c0078b5e23578ed4", null ],
+    [ "UseImage", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a1996ab536946a84efd080f824eb318ac", null ],
+    [ "UseOpacity", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a1f94a3c001fd34f890b5f926787ac7d3", null ],
+    [ "UseSaturation", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#ad2f87ed09dc5028ba730a8bb982490e8", null ],
+    [ "UseSecondaryColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#ad74dd16304e298159dd32bb650aa5c5e", null ],
+    [ "UseSecondaryColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a8ec4f563dbe678eadee89c44ee8d95a4", null ],
+    [ "UseSecondaryColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a448a47a77d9391ed97fc0da6749bc01d", null ],
+    [ "UseTargetPosition", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a1a5d4a0ca4fd6ccb56045fc562335e4b", null ],
+    [ "_effectPass", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a62dd229a04ca05578f0db438caf70088", null ],
+    [ "_passName", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#aa8418f1f4384aedc9468d9fca45f66fe", null ],
+    [ "_shader", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a468093906ba6056edce73bed0b1360bc", null ],
+    [ "_uColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a16de3ed64f7e86bbbc7f381aa0740bfe", null ],
+    [ "_uImage", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a315f688af31ca861d1cdb9eb4cf4c6e6", null ],
+    [ "_uOpacity", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#ac571ae7654398b33814afd745a34e876", null ],
+    [ "_uSaturation", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#afaece88d2abf7f6dd22485b8a7369a6f", null ],
+    [ "_uSecondaryColor", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a7b9245e2ba5d1f27f009f1eebe5b269f", null ],
+    [ "_uTargetPosition", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#ad6189cf0398ed9d89f60cfe5f7ae951a", null ],
+    [ "Shader", "db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1ReflectiveArmorShaderData.html#a973c42545bf827a01aab451270424191", null ]
+];

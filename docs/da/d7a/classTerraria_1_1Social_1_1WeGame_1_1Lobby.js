@@ -1,0 +1,26 @@
+var classTerraria_1_1Social_1_1WeGame_1_1Lobby =
+[
+    [ "Create", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a39a32f36fca4079fc3e877940b84ef64.html#a39a32f36fca4079fc3e877940b84ef64", null ],
+    [ "GetMessage", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a496556e54fedf4154f5bba60634f893e.html#a496556e54fedf4154f5bba60634f893e", null ],
+    [ "GetRailServerHelper", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a30cd11e95ab9249a358f9800f8bebc65.html#a30cd11e95ab9249a358f9800f8bebc65", null ],
+    [ "GetServer", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_ad21138cdcb8105172ef85e90e65ae5a2.html#ad21138cdcb8105172ef85e90e65ae5a2", null ],
+    [ "GetUserByIndex", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a18dcc8a70c14d87e6654fdaa9a6157a6.html#a18dcc8a70c14d87e6654fdaa9a6157a6", null ],
+    [ "GetUserCount", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a00a28c209ba66e21a433991964e3df96.html#a00a28c209ba66e21a433991964e3df96", null ],
+    [ "Join", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_ab70c0b3505d33519acb4f1893106811c.html#ab70c0b3505d33519acb4f1893106811c", null ],
+    [ "Leave", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a0ba9983e8652073718558f9de5a97776.html#a0ba9983e8652073718558f9de5a97776", null ],
+    [ "OnGameServerCreated", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a486f5e22909c94c929500df03845df46.html#a486f5e22909c94c929500df03845df46", null ],
+    [ "OnRailEvent", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a2ccb0b9673eefe12aed6f8f4a81c340d.html#a2ccb0b9673eefe12aed6f8f4a81c340d", null ],
+    [ "OpenInviteOverlay", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a689af367d9202806bd59da5f74507606.html#a689af367d9202806bd59da5f74507606", null ],
+    [ "RegisterGameServerEvent", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_ac3bfb42e497188984a6a87d4b23a87f5.html#ac3bfb42e497188984a6a87d4b23a87f5", null ],
+    [ "SendMessage", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_acf1dcde2e37f4947450ebb138a1535c7.html#acf1dcde2e37f4947450ebb138a1535c7", null ],
+    [ "SendMessage", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_af76f3835c68a81ff3e7349ca35062b22.html#af76f3835c68a81ff3e7349ca35062b22", null ],
+    [ "Set", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_ae7cda0fe45e2841561d11ee0b5ae6ddf.html#ae7cda0fe45e2841561d11ee0b5ae6ddf", null ],
+    [ "SetPlayedWith", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a8e23654a45cd8085c30c1c6ef1594c85.html#a8e23654a45cd8085c30c1c6ef1594c85", null ],
+    [ "_callbackHelper", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a184b8b59af25cbc689fae84fe86c899c.html#a184b8b59af25cbc689fae84fe86c899c", null ],
+    [ "_gameServer", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a1b229393f84be4a320b75334c4ca03a0.html#a1b229393f84be4a320b75334c4ca03a0", null ],
+    [ "_gameServerInitSuccess", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a3f2ba70071bfa3415da4ac5a76357ca5.html#a3f2ba70071bfa3415da4ac5a76357ca5", null ],
+    [ "_lobbyCreatedExternalCallback", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a64feef94a729eed29439c63ad364d235.html#a64feef94a729eed29439c63ad364d235", null ],
+    [ "_server_id", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_ada9a2956b6f7da61e6a375a3ba9d9800.html#ada9a2956b6f7da61e6a375a3ba9d9800", null ],
+    [ "State", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a958638033bb302bc13f99150aabf3e5e.html#a958638033bb302bc13f99150aabf3e5e", null ],
+    [ "RailServerHelper", "da/d7a/classTerraria_1_1Social_1_1WeGame_1_1Lobby_a848a8f4066fc5af5b6b578a77419893a.html#a848a8f4066fc5af5b6b578a77419893a", null ]
+];

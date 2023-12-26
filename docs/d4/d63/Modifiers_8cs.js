@@ -1,0 +1,26 @@
+var Modifiers_8cs =
+[
+    [ "Terraria.WorldBuilding.Modifiers", "d1/df2/classTerraria_1_1WorldBuilding_1_1Modifiers.html", "d1/df2/classTerraria_1_1WorldBuilding_1_1Modifiers" ],
+    [ "Terraria.WorldBuilding.Modifiers.ShapeScale", "d4/dc3/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1ShapeScale.html", "d4/dc3/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1ShapeScale" ],
+    [ "Terraria.WorldBuilding.Modifiers.Expand", "dd/d36/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Expand.html", "dd/d36/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Expand" ],
+    [ "Terraria.WorldBuilding.Modifiers.RadialDither", "dd/dbb/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1RadialDither.html", "dd/dbb/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1RadialDither" ],
+    [ "Terraria.WorldBuilding.Modifiers.Blotches", "dc/dc0/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Blotches.html", "dc/dc0/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Blotches" ],
+    [ "Terraria.WorldBuilding.Modifiers.InShape", "d3/d6e/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1InShape.html", "d3/d6e/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1InShape" ],
+    [ "Terraria.WorldBuilding.Modifiers.NotInShape", "d2/d82/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1NotInShape.html", "d2/d82/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1NotInShape" ],
+    [ "Terraria.WorldBuilding.Modifiers.Conditions", "de/ddb/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Conditions.html", "de/ddb/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Conditions" ],
+    [ "Terraria.WorldBuilding.Modifiers.OnlyWalls", "d7/da8/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1OnlyWalls.html", "d7/da8/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1OnlyWalls" ],
+    [ "Terraria.WorldBuilding.Modifiers.OnlyTiles", "d8/de1/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1OnlyTiles.html", "d8/de1/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1OnlyTiles" ],
+    [ "Terraria.WorldBuilding.Modifiers.IsTouching", "d6/d53/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsTouching.html", "d6/d53/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsTouching" ],
+    [ "Terraria.WorldBuilding.Modifiers.NotTouching", "d1/dc7/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1NotTouching.html", "d1/dc7/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1NotTouching" ],
+    [ "Terraria.WorldBuilding.Modifiers.IsTouchingAir", "d5/d81/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsTouchingAir.html", "d5/d81/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsTouchingAir" ],
+    [ "Terraria.WorldBuilding.Modifiers.SkipTiles", "d7/d62/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1SkipTiles.html", "d7/d62/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1SkipTiles" ],
+    [ "Terraria.WorldBuilding.Modifiers.HasLiquid", "d6/dc2/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1HasLiquid.html", "d6/dc2/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1HasLiquid" ],
+    [ "Terraria.WorldBuilding.Modifiers.SkipWalls", "d5/d5c/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1SkipWalls.html", "d5/d5c/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1SkipWalls" ],
+    [ "Terraria.WorldBuilding.Modifiers.IsEmpty", "df/d71/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsEmpty.html", "df/d71/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsEmpty" ],
+    [ "Terraria.WorldBuilding.Modifiers.IsSolid", "db/d41/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsSolid.html", "db/d41/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsSolid" ],
+    [ "Terraria.WorldBuilding.Modifiers.IsNotSolid", "dc/d6e/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsNotSolid.html", "dc/d6e/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1IsNotSolid" ],
+    [ "Terraria.WorldBuilding.Modifiers.RectangleMask", "d7/db9/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1RectangleMask.html", "d7/db9/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1RectangleMask" ],
+    [ "Terraria.WorldBuilding.Modifiers.Offset", "da/dad/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Offset.html", "da/dad/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Offset" ],
+    [ "Terraria.WorldBuilding.Modifiers.Dither", "df/d4c/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Dither.html", "df/d4c/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Dither" ],
+    [ "Terraria.WorldBuilding.Modifiers.Flip", "d8/dab/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Flip.html", "d8/dab/classTerraria_1_1WorldBuilding_1_1Modifiers_1_1Flip" ]
+];

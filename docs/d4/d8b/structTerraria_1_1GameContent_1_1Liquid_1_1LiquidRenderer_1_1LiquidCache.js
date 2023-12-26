@@ -1,0 +1,26 @@
+var structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache =
+[
+    [ "BottomWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a7fb9893df6ff237dcf90f15bfd706c21.html#a7fb9893df6ff237dcf90f15bfd706c21", null ],
+    [ "FrameOffset", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_ae7b36302299a39372158cf776194369b.html#ae7b36302299a39372158cf776194369b", null ],
+    [ "HasBottomEdge", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a0ce61b1073e08e5d65b2379149b508e6.html#a0ce61b1073e08e5d65b2379149b508e6", null ],
+    [ "HasLeftEdge", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_adf71e8ae83a655b367d83a8d0bf02d76.html#adf71e8ae83a655b367d83a8d0bf02d76", null ],
+    [ "HasLiquid", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a551b97a7d01e4c677e069e94f444478f.html#a551b97a7d01e4c677e069e94f444478f", null ],
+    [ "HasRightEdge", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_adcc3aaf96b2c2d912ac0fa28bb569645.html#adcc3aaf96b2c2d912ac0fa28bb569645", null ],
+    [ "HasTopEdge", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_ad3632f2079c74e5532facc053323ee0c.html#ad3632f2079c74e5532facc053323ee0c", null ],
+    [ "HasVisibleLiquid", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a0d3dd870210bfb9b7776be47936da045.html#a0d3dd870210bfb9b7776be47936da045", null ],
+    [ "HasWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_afa7933013b965b36c746d61e5c3c3a05.html#afa7933013b965b36c746d61e5c3c3a05", null ],
+    [ "IsHalfBrick", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a4bed5363b9a91e8e895b79a912ee13c8.html#a4bed5363b9a91e8e895b79a912ee13c8", null ],
+    [ "IsSolid", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a9709655c203dc01656fbdd064f62c161.html#a9709655c203dc01656fbdd064f62c161", null ],
+    [ "LeftWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a01ec7087bb9f2f0a051f0f936178983f.html#a01ec7087bb9f2f0a051f0f936178983f", null ],
+    [ "LiquidLevel", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a0dc4677f60ca5f8fab25624d233f7305.html#a0dc4677f60ca5f8fab25624d233f7305", null ],
+    [ "Opacity", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a1f932a899ba5afab214a9cca623291b8.html#a1f932a899ba5afab214a9cca623291b8", null ],
+    [ "RightWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a9296e3a3066b86fbe3d52a67523c310f.html#a9296e3a3066b86fbe3d52a67523c310f", null ],
+    [ "TopWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a44d49b379da7cd92a6a30398ca0e5b11.html#a44d49b379da7cd92a6a30398ca0e5b11", null ],
+    [ "Type", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a7b935312c59ab41e74b269e10de5f3b2.html#a7b935312c59ab41e74b269e10de5f3b2", null ],
+    [ "VisibleBottomWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_acdf69fc0016ef24807758816b5b49a4b.html#acdf69fc0016ef24807758816b5b49a4b", null ],
+    [ "VisibleLeftWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_aab01e5817067c7bc7d10e176a67a7238.html#aab01e5817067c7bc7d10e176a67a7238", null ],
+    [ "VisibleLiquidLevel", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_aaed8f033f041f3e9a4f34bc2c093c390.html#aaed8f033f041f3e9a4f34bc2c093c390", null ],
+    [ "VisibleRightWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a473fd5c5fc07099e2051e3506a2bfa00.html#a473fd5c5fc07099e2051e3506a2bfa00", null ],
+    [ "VisibleTopWall", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_ad9f3e9cb126218cae8166123596e299c.html#ad9f3e9cb126218cae8166123596e299c", null ],
+    [ "VisibleType", "d4/d8b/structTerraria_1_1GameContent_1_1Liquid_1_1LiquidRenderer_1_1LiquidCache_a0b9f6da4fb49f186c7af01880dffaf72.html#a0b9f6da4fb49f186c7af01880dffaf72", null ]
+];

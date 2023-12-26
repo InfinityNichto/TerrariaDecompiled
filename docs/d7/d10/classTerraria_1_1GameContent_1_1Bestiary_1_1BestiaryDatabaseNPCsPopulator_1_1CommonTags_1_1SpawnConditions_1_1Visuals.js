@@ -1,0 +1,11 @@
+var classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals =
+[
+    [ "Blizzard", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_a9df14ebee64406bacfe80121867e2ab0.html#a9df14ebee64406bacfe80121867e2ab0", null ],
+    [ "EclipseSun", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_aef3a7ba00837b3c892feede22bbfa764.html#aef3a7ba00837b3c892feede22bbfa764", null ],
+    [ "FrostMoon", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_aaff8f74d97fb6131bdd0c2c58bf2c4ba.html#aaff8f74d97fb6131bdd0c2c58bf2c4ba", null ],
+    [ "Meteor", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_a8b12678ee4e07f0c37f15a17e151dec7.html#a8b12678ee4e07f0c37f15a17e151dec7", null ],
+    [ "Moon", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_a6f3c79d77e7333c817134a5c6ff5c042.html#a6f3c79d77e7333c817134a5c6ff5c042", null ],
+    [ "PumpkinMoon", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_a879fd2e1efb01bfd13ad7d3c5cbcea33.html#a879fd2e1efb01bfd13ad7d3c5cbcea33", null ],
+    [ "Rain", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_aee50cc9e9d7748cd9ab69e9932ee8b7f.html#aee50cc9e9d7748cd9ab69e9932ee8b7f", null ],
+    [ "Sun", "d7/d10/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_1_1CommonTags_1_1SpawnConditions_1_1Visuals_ae0f090bcb7c105416b5d6f5bdbc860d8.html#ae0f090bcb7c105416b5d6f5bdbc860d8", null ]
+];

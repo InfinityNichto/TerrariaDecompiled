@@ -1,0 +1,5 @@
+var classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_1_1ExplosivePlacementAttempt =
+[
+    [ "ExplosivePlacementAttempt", "d7/d94/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_1_1ExplosivePlacementAttempt_abc259cd1692997fed94f4a174833ce8b.html#abc259cd1692997fed94f4a174833ce8b", null ],
+    [ "position", "d7/d94/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_1_1ExplosivePlacementAttempt_ad0f47e6b9a2dff93c38e08645a0beb87.html#ad0f47e6b9a2dff93c38e08645a0beb87", null ]
+];

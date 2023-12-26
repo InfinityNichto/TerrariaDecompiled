@@ -1,0 +1,4 @@
+var classTerraria_1_1GameContent_1_1ObjectInteractions_1_1BlockBecauseYouAreOverAnImportantTile =
+[
+    [ "ShouldBlockSmartInteract", "d9/d6f/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1BlockBecauseYouAreOverAnImportantTile_acf842a672cebc654c04c30dcbbbf4405.html#acf842a672cebc654c04c30dcbbbf4405", null ]
+];

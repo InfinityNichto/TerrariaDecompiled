@@ -1,0 +1,4 @@
+var StackedConditionSetter_8cs =
+[
+    [ "Terraria.GameContent.LootSimulation.LootSimulatorConditionSetterTypes.StackedConditionSetter", "d1/dbc/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1StackedConditionSetter.html", "d1/dbc/classTerraria_1_1GameContent_1_1LootSimulation_1_1LootSimulatorConditionSetterTypes_1_1StackedConditionSetter" ]
+];

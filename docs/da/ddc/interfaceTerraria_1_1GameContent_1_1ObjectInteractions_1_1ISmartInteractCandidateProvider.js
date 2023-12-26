@@ -1,0 +1,5 @@
+var interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractCandidateProvider =
+[
+    [ "ClearSelfAndPrepareForCheck", "da/ddc/interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractCandidateProvider_a146a74053a54922cf90598af1df4eaec.html#a146a74053a54922cf90598af1df4eaec", null ],
+    [ "ProvideCandidate", "da/ddc/interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractCandidateProvider_a38508ae27905aaacbba1ff9ea64dea1e.html#a38508ae27905aaacbba1ff9ea64dea1e", null ]
+];

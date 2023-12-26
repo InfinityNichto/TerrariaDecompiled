@@ -1,0 +1,28 @@
+var classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData =
+[
+    [ "TwilightDyeShaderData", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData_a4231d9759194f96ccf684966f7c1c0b3.html#a4231d9759194f96ccf684966f7c1c0b3", null ],
+    [ "Apply", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#af9ab60e3e82d5fb346da65e084582276", null ],
+    [ "Apply", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData_a4bb71e682b192a61625f4a04532e2f6f.html#a4bb71e682b192a61625f4a04532e2f6f", null ],
+    [ "GetSecondaryShader", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a93ca573d4521bc7bb08c18ca507409a6", null ],
+    [ "SwapProgram", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a5b9bd37cd9c05aeefe6dba93ef99599d", null ],
+    [ "UseColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#ad589673907f013731075f075edc96f41", null ],
+    [ "UseColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a9ccda805f20bdf22e0ccff87bb761066", null ],
+    [ "UseColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a503a588a17ab4693c0078b5e23578ed4", null ],
+    [ "UseImage", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a1996ab536946a84efd080f824eb318ac", null ],
+    [ "UseOpacity", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a1f94a3c001fd34f890b5f926787ac7d3", null ],
+    [ "UseSaturation", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#ad2f87ed09dc5028ba730a8bb982490e8", null ],
+    [ "UseSecondaryColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#ad74dd16304e298159dd32bb650aa5c5e", null ],
+    [ "UseSecondaryColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a8ec4f563dbe678eadee89c44ee8d95a4", null ],
+    [ "UseSecondaryColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a448a47a77d9391ed97fc0da6749bc01d", null ],
+    [ "UseTargetPosition", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a1a5d4a0ca4fd6ccb56045fc562335e4b", null ],
+    [ "_effectPass", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a62dd229a04ca05578f0db438caf70088", null ],
+    [ "_passName", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#aa8418f1f4384aedc9468d9fca45f66fe", null ],
+    [ "_shader", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a468093906ba6056edce73bed0b1360bc", null ],
+    [ "_uColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a16de3ed64f7e86bbbc7f381aa0740bfe", null ],
+    [ "_uImage", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a315f688af31ca861d1cdb9eb4cf4c6e6", null ],
+    [ "_uOpacity", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#ac571ae7654398b33814afd745a34e876", null ],
+    [ "_uSaturation", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#afaece88d2abf7f6dd22485b8a7369a6f", null ],
+    [ "_uSecondaryColor", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a7b9245e2ba5d1f27f009f1eebe5b269f", null ],
+    [ "_uTargetPosition", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#ad6189cf0398ed9d89f60cfe5f7ae951a", null ],
+    [ "Shader", "dd/d25/classTerraria_1_1GameContent_1_1Dyes_1_1TwilightDyeShaderData.html#a973c42545bf827a01aab451270424191", null ]
+];

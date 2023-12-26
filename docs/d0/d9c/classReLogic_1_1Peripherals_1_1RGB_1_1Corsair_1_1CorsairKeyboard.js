@@ -1,0 +1,26 @@
+var classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard =
+[
+    [ "CorsairKeyboard", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_abc07d6efb7401ccbbadafcc66e1e863d.html#abc07d6efb7401ccbbadafcc66e1e863d", null ],
+    [ "Create", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_ae5b9906a332f97b43eee8e163258d3db.html#ae5b9906a332f97b43eee8e163258d3db", null ],
+    [ "DebugDraw", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a5fc3eeb19a8f42094702205facd1744b", null ],
+    [ "GetLedCanvasPosition", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a07898be418f54ac6bcdf481271395caa", null ],
+    [ "GetLedGridPosition", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a714f2917d0d6546a75874990cb58a8a1", null ],
+    [ "GetProcessedLedColor", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a03984491ca2679abca0d83170b6261f0", null ],
+    [ "GetUnprocessedLedColor", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a16dd3f77cc709a16400f9c6526cc3f34", null ],
+    [ "Present", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_ae726941960f221129434ba9cc526c6c8.html#ae726941960f221129434ba9cc526c6c8", null ],
+    [ "ProcessLedColor", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a021f28bf2f5449c0649eadf8e13ed3f7", null ],
+    [ "Rasterize", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a13c4f827799f3824e112445f45ec8e08", null ],
+    [ "Render", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#ac42c27504493f20d7670f30d0c5b24d9", null ],
+    [ "Render", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_a0201d0b522c5bad82ba5490c0504ce2f.html#a0201d0b522c5bad82ba5490c0504ce2f", null ],
+    [ "SetLedColor", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a259427565026c3657c3f345291451118", null ],
+    [ "_backBuffer", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#aff76b4e0d4e4cc30a87b64f5bb690ac7", null ],
+    [ "_colorProfile", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a857205177ed87f4b35e05cfa3d3b9bba", null ],
+    [ "_corsairToXnaKeys", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_a4faf4452e0e273abf5fe0c4496c12dbd.html#a4faf4452e0e273abf5fe0c4496c12dbd", null ],
+    [ "_ledColors", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_acf7f525882cb1d2017632352ddcb10e8.html#acf7f525882cb1d2017632352ddcb10e8", null ],
+    [ "_workingFragment", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a03f92b05cabff630d8fc3423bb7b3d0c", null ],
+    [ "_xnaKeyToIndex", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_a40e232c2691403695cc97cf3767d13fc.html#a40e232c2691403695cc97cf3767d13fc", null ],
+    [ "Type", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#aecc8ad2b54c65b49ec08a75ab8a090a1", null ],
+    [ "Vendor", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#af9f70c3f4c837b56f291d807de51ca89", null ],
+    [ "LedCount", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a025e4ccd295081f4a26f4293a7238ec6", null ],
+    [ "PreferredLevelOfDetail", "d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard.html#a9065041691dd204ba75b2abdf396c6a5", null ]
+];

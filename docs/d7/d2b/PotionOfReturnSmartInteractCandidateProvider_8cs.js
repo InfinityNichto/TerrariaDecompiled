@@ -1,0 +1,5 @@
+var PotionOfReturnSmartInteractCandidateProvider_8cs =
+[
+    [ "Terraria.GameContent.ObjectInteractions.PotionOfReturnSmartInteractCandidateProvider", "df/da8/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider.html", "df/da8/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider" ],
+    [ "Terraria.GameContent.ObjectInteractions.PotionOfReturnSmartInteractCandidateProvider.ReusableCandidate", "d1/dec/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate.html", "d1/dec/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1PotionOfReturnSmartInteractCandidateProvider_1_1ReusableCandidate" ]
+];
