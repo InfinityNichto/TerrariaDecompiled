@@ -17,14 +17,14 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y graphviz global
+        wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
 
     - name: Generate Documentation
       run: |
         ulimit -H -a
-        wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
         tar -xzvf doxygen-1.10.0.linux.bin.tar.gz
         mv doxygen-1.10.0/bin/doxygen .
-        rm -r doxygen-1.10.0
+        rm -r doxygen-1.10.0 doxygen-1.10.0.linux.bin.tar.gz
         chmod +x ./doxygen
         ./doxygen Doxyfile
         rm -r ./docs doxygen
