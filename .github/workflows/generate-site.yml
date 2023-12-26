@@ -16,11 +16,12 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y doxygen graphviz global
+        sudo apt-get install -y graphviz global
 
     - name: Generate Documentation
       run: |
-        doxygen Doxyfile
+        chmod +x ./doxygen
+        ./doxygen Doxyfile
         rm -r ./docs
         mv html docs
 
