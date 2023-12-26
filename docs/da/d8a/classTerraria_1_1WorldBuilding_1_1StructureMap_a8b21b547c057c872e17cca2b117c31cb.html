@@ -126,6 +126,42 @@ $(function(){initNavTree('da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        lock (<a class="code hl_variable" href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_a70e84b7489ee904168744714487fadd0.html#a70e84b7489ee904168744714487fadd0">_lock</a>)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (area.X &lt; 0 || area.Y &lt; 0 || area.X + area.Width &gt; Main.maxTilesX - 1 || area.Y + area.Height &gt; Main.maxTilesY - 1)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            Rectangle rectangle = <span class="keyword">new</span> Rectangle(area.X - padding, area.Y - padding, area.Width + padding * 2, area.Height + padding * 2);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_ae4ffea94fc2efaa98d9e04849fc06879.html#ae4ffea94fc2efaa98d9e04849fc06879">_protectedStructures</a>.Count; i++)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">if</span> (rectangle.Intersects(<a class="code hl_variable" href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_ae4ffea94fc2efaa98d9e04849fc06879.html#ae4ffea94fc2efaa98d9e04849fc06879">_protectedStructures</a>[i]))</div>
+<div class="line"><span class="lineno">   33</span>                {</div>
+<div class="line"><span class="lineno">   34</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   35</span>                }</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = rectangle.X; j &lt; rectangle.X + rectangle.Width; j++)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = rectangle.Y; k &lt; rectangle.Y + rectangle.Height; k++)</div>
+<div class="line"><span class="lineno">   40</span>                {</div>
+<div class="line"><span class="lineno">   41</span>                    <span class="keywordflow">if</span> (Main.tile[j, k].active())</div>
+<div class="line"><span class="lineno">   42</span>                    {</div>
+<div class="line"><span class="lineno">   43</span>                        ushort type = Main.tile[j, k].type;</div>
+<div class="line"><span class="lineno">   44</span>                        <span class="keywordflow">if</span> (!validTiles[type])</div>
+<div class="line"><span class="lineno">   45</span>                        {</div>
+<div class="line"><span class="lineno">   46</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>                        }</div>
+<div class="line"><span class="lineno">   48</span>                    }</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1StructureMap_a70e84b7489ee904168744714487fadd0_html_a70e84b7489ee904168744714487fadd0"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_a70e84b7489ee904168744714487fadd0.html#a70e84b7489ee904168744714487fadd0">Terraria.WorldBuilding.StructureMap._lock</a></div><div class="ttdeci">readonly object _lock</div><div class="ttdef"><b>Definition</b> StructureMap.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1StructureMap_ae4ffea94fc2efaa98d9e04849fc06879_html_ae4ffea94fc2efaa98d9e04849fc06879"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_ae4ffea94fc2efaa98d9e04849fc06879.html#ae4ffea94fc2efaa98d9e04849fc06879">Terraria.WorldBuilding.StructureMap._protectedStructures</a></div><div class="ttdeci">readonly List&lt; Rectangle &gt; _protectedStructures</div><div class="ttdef"><b>Definition</b> StructureMap.cs:12</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_a70e84b7489ee904168744714487fadd0.html#a70e84b7489ee904168744714487fadd0">Terraria.WorldBuilding.StructureMap._lock</a>, <a class="el" href="../../da/d8a/classTerraria_1_1WorldBuilding_1_1StructureMap_ae4ffea94fc2efaa98d9e04849fc06879.html#ae4ffea94fc2efaa98d9e04849fc06879">Terraria.WorldBuilding.StructureMap._protectedStructures</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

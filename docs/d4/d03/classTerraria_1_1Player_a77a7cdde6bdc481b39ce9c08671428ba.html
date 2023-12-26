@@ -117,6 +117,41 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a77a7cdde6bdc481b39ce9c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">19778</span>    {</div>
+<div class="line"><span class="lineno">19779</span>        Point point = thePos.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">19780</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[point.X, point.Y];</div>
+<div class="line"><span class="lineno">19781</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span> || !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CanKillTile(point.X, point.Y, <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SpecialKillTileContext.MowingTheGrass))</div>
+<div class="line"><span class="lineno">19782</span>        {</div>
+<div class="line"><span class="lineno">19783</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">19784</span>        }</div>
+<div class="line"><span class="lineno">19785</span>        ushort num = 0;</div>
+<div class="line"><span class="lineno">19786</span>        <span class="keywordflow">switch</span> (tile.type)</div>
+<div class="line"><span class="lineno">19787</span>        {</div>
+<div class="line"><span class="lineno">19788</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">19789</span>            num = 477;</div>
+<div class="line"><span class="lineno">19790</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">19791</span>        <span class="keywordflow">case</span> 109:</div>
+<div class="line"><span class="lineno">19792</span>            num = 492;</div>
+<div class="line"><span class="lineno">19793</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">19794</span>        }</div>
+<div class="line"><span class="lineno">19795</span>        <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno">19796</span>        {</div>
+<div class="line"><span class="lineno">19797</span>            <span class="keywordtype">int</span> num2 = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile_GetTileDustAmount(fail: true, tile);</div>
+<div class="line"><span class="lineno">19798</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno">19799</span>            {</div>
+<div class="line"><span class="lineno">19800</span>                <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile_MakeTileDust(point.X, point.Y, tile);</div>
+<div class="line"><span class="lineno">19801</span>            }</div>
+<div class="line"><span class="lineno">19802</span>            tile.type = num;</div>
+<div class="line"><span class="lineno">19803</span>            <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">19804</span>            {</div>
+<div class="line"><span class="lineno">19805</span>                NetMessage.SendTileSquare(-1, point.X, point.Y);</div>
+<div class="line"><span class="lineno">19806</span>            }</div>
+<div class="line"><span class="lineno">19807</span>        }</div>
+<div class="line"><span class="lineno">19808</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a5b5f5b5d6fe8bbc886bec39648d8f870.html#a5b5f5b5d6fe8bbc886bec39648d8f870">Terraria.WorldGen.CanKillTile()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ad9c2000598569fe8cd3fe790c24ff737.html#ad9c2000598569fe8cd3fe790c24ff737">Terraria.WorldGen.KillTile_GetTileDustAmount()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a8e04f1a24b866bee95ced233ff1815e5.html#a8e04f1a24b866bee95ced233ff1815e5">Terraria.WorldGen.KillTile_MakeTileDust()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

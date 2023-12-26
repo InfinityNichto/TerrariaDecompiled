@@ -121,6 +121,99 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_a93d7f62a932ba7
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2731</span>    {</div>
+<div class="line"><span class="lineno"> 2732</span>        success = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2733</span>        <span class="keywordflow">if</span> (item.stack &lt; 1)</div>
+<div class="line"><span class="lineno"> 2734</span>        {</div>
+<div class="line"><span class="lineno"> 2735</span>            <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno"> 2736</span>        }</div>
+<div class="line"><span class="lineno"> 2737</span>        <span class="keywordflow">if</span> (item.headSlot == -1 &amp;&amp; item.bodySlot == -1 &amp;&amp; item.legSlot == -1 &amp;&amp; !item.accessory)</div>
+<div class="line"><span class="lineno"> 2738</span>        {</div>
+<div class="line"><span class="lineno"> 2739</span>            <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno"> 2740</span>        }</div>
+<div class="line"><span class="lineno"> 2741</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[Main.myPlayer];</div>
+<div class="line"><span class="lineno"> 2742</span>        <span class="keywordtype">int</span> num = ((item.vanity &amp;&amp; !item.accessory) ? 10 : 0);</div>
+<div class="line"><span class="lineno"> 2743</span>        item.favorited = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2744</span>        Item result = item;</div>
+<div class="line"><span class="lineno"> 2745</span>        <span class="keywordflow">if</span> (item.headSlot != -1)</div>
+<div class="line"><span class="lineno"> 2746</span>        {</div>
+<div class="line"><span class="lineno"> 2747</span>            result = player.armor[num].Clone();</div>
+<div class="line"><span class="lineno"> 2748</span>            player.armor[num] = item.Clone();</div>
+<div class="line"><span class="lineno"> 2749</span>        }</div>
+<div class="line"><span class="lineno"> 2750</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.bodySlot != -1)</div>
+<div class="line"><span class="lineno"> 2751</span>        {</div>
+<div class="line"><span class="lineno"> 2752</span>            result = player.armor[num + 1].Clone();</div>
+<div class="line"><span class="lineno"> 2753</span>            player.armor[num + 1] = item.Clone();</div>
+<div class="line"><span class="lineno"> 2754</span>        }</div>
+<div class="line"><span class="lineno"> 2755</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.legSlot != -1)</div>
+<div class="line"><span class="lineno"> 2756</span>        {</div>
+<div class="line"><span class="lineno"> 2757</span>            result = player.armor[num + 2].Clone();</div>
+<div class="line"><span class="lineno"> 2758</span>            player.armor[num + 2] = item.Clone();</div>
+<div class="line"><span class="lineno"> 2759</span>        }</div>
+<div class="line"><span class="lineno"> 2760</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.accessory)</div>
+<div class="line"><span class="lineno"> 2761</span>        {</div>
+<div class="line"><span class="lineno"> 2762</span>            <span class="keywordtype">int</span> num2 = 3;</div>
+<div class="line"><span class="lineno"> 2763</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 3; i &lt; 10; i++)</div>
+<div class="line"><span class="lineno"> 2764</span>            {</div>
+<div class="line"><span class="lineno"> 2765</span>                <span class="keywordflow">if</span> (player.IsItemSlotUnlockedAndUsable(i))</div>
+<div class="line"><span class="lineno"> 2766</span>                {</div>
+<div class="line"><span class="lineno"> 2767</span>                    num2 = i;</div>
+<div class="line"><span class="lineno"> 2768</span>                    <span class="keywordflow">if</span> (player.armor[i].type == 0)</div>
+<div class="line"><span class="lineno"> 2769</span>                    {</div>
+<div class="line"><span class="lineno"> 2770</span>                        <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> = i - 3;</div>
+<div class="line"><span class="lineno"> 2771</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2772</span>                    }</div>
+<div class="line"><span class="lineno"> 2773</span>                }</div>
+<div class="line"><span class="lineno"> 2774</span>            }</div>
+<div class="line"><span class="lineno"> 2775</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; player.armor.Length; j++)</div>
+<div class="line"><span class="lineno"> 2776</span>            {</div>
+<div class="line"><span class="lineno"> 2777</span>                <span class="keywordflow">if</span> (item.IsTheSameAs(player.armor[j]))</div>
+<div class="line"><span class="lineno"> 2778</span>                {</div>
+<div class="line"><span class="lineno"> 2779</span>                    <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> = j - 3;</div>
+<div class="line"><span class="lineno"> 2780</span>                }</div>
+<div class="line"><span class="lineno"> 2781</span>                <span class="keywordflow">if</span> (j &lt; 10 &amp;&amp; item.wingSlot &gt; 0 &amp;&amp; player.armor[j].wingSlot &gt; 0)</div>
+<div class="line"><span class="lineno"> 2782</span>                {</div>
+<div class="line"><span class="lineno"> 2783</span>                    <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> = j - 3;</div>
+<div class="line"><span class="lineno"> 2784</span>                }</div>
+<div class="line"><span class="lineno"> 2785</span>            }</div>
+<div class="line"><span class="lineno"> 2786</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> &gt; num2)</div>
+<div class="line"><span class="lineno"> 2787</span>            {</div>
+<div class="line"><span class="lineno"> 2788</span>                <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno"> 2789</span>            }</div>
+<div class="line"><span class="lineno"> 2790</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> &lt; 0)</div>
+<div class="line"><span class="lineno"> 2791</span>            {</div>
+<div class="line"><span class="lineno"> 2792</span>                <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> = num2 - 3;</div>
+<div class="line"><span class="lineno"> 2793</span>            }</div>
+<div class="line"><span class="lineno"> 2794</span>            <span class="keywordtype">int</span> num3 = 3 + <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a>;</div>
+<div class="line"><span class="lineno"> 2795</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a12cf0e91764b6645a6b9644bfab9e1df.html#a12cf0e91764b6645a6b9644bfab9e1df">isEquipLocked</a>(player.armor[num3].type))</div>
+<div class="line"><span class="lineno"> 2796</span>            {</div>
+<div class="line"><span class="lineno"> 2797</span>                <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno"> 2798</span>            }</div>
+<div class="line"><span class="lineno"> 2799</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; player.armor.Length; k++)</div>
+<div class="line"><span class="lineno"> 2800</span>            {</div>
+<div class="line"><span class="lineno"> 2801</span>                <span class="keywordflow">if</span> (item.IsTheSameAs(player.armor[k]))</div>
+<div class="line"><span class="lineno"> 2802</span>                {</div>
+<div class="line"><span class="lineno"> 2803</span>                    num3 = k;</div>
+<div class="line"><span class="lineno"> 2804</span>                }</div>
+<div class="line"><span class="lineno"> 2805</span>            }</div>
+<div class="line"><span class="lineno"> 2806</span>            result = player.armor[num3].Clone();</div>
+<div class="line"><span class="lineno"> 2807</span>            player.armor[num3] = item.Clone();</div>
+<div class="line"><span class="lineno"> 2808</span>            <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">accSlotToSwapTo</a> = 0;</div>
+<div class="line"><span class="lineno"> 2809</span>        }</div>
+<div class="line"><span class="lineno"> 2810</span>        <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(7);</div>
+<div class="line"><span class="lineno"> 2811</span>        Recipe.FindRecipes();</div>
+<div class="line"><span class="lineno"> 2812</span>        success = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2813</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2814</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a12cf0e91764b6645a6b9644bfab9e1df_html_a12cf0e91764b6645a6b9644bfab9e1df"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a12cf0e91764b6645a6b9644bfab9e1df.html#a12cf0e91764b6645a6b9644bfab9e1df">Terraria.UI.ItemSlot.isEquipLocked</a></div><div class="ttdeci">static bool isEquipLocked(int type)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:329</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44_html_a379affbb486c7d93b475a6c2235f1d44"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">Terraria.UI.ItemSlot.accSlotToSwapTo</a></div><div class="ttdeci">static int accSlotToSwapTo</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:155</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_a7dcefce5a065aaec8ff1114bdf365853.html#a7dcefce5a065aaec8ff1114bdf365853">Terraria.Item.accessory</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a379affbb486c7d93b475a6c2235f1d44.html#a379affbb486c7d93b475a6c2235f1d44">Terraria.UI.ItemSlot.accSlotToSwapTo</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a40263bc1aa24417c265f18648db5bab3.html#a40263bc1aa24417c265f18648db5bab3">Terraria.Player.armor</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adcb818c6384dae96d406a7e07418c1fc.html#adcb818c6384dae96d406a7e07418c1fc">Terraria.Item.bodySlot</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Terraria.Item.Clone()</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_ae41569d5e6adbe1a2eff6cfac7391480.html#ae41569d5e6adbe1a2eff6cfac7391480">Terraria.Recipe.FindRecipes()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a48f9a360d35e839e767f26dc93c6bad4.html#a48f9a360d35e839e767f26dc93c6bad4">Terraria.Item.headSlot</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a12cf0e91764b6645a6b9644bfab9e1df.html#a12cf0e91764b6645a6b9644bfab9e1df">Terraria.UI.ItemSlot.isEquipLocked()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa250b11a6a3319b75f3693073a80d071.html#aa250b11a6a3319b75f3693073a80d071">Terraria.Player.IsItemSlotUnlockedAndUsable()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4cbdcbd7e1256eee0e1a3c7b9fd2541f.html#a4cbdcbd7e1256eee0e1a3c7b9fd2541f">Terraria.Item.IsTheSameAs()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_acd6a8f13b8dee87697f58d4f1fe6c3bd.html#acd6a8f13b8dee87697f58d4f1fe6c3bd">Terraria.Item.legSlot</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_ac2d58bdd5856de732c8c408f0095b298.html#ac2d58bdd5856de732c8c408f0095b298">Terraria.Item.wingSlot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_acfbcce7e7e8fdee5c69d9e17ffc79c8d.html#acfbcce7e7e8fdee5c69d9e17ffc79c8d">Terraria.UI.ItemSlot.SwapEquip()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

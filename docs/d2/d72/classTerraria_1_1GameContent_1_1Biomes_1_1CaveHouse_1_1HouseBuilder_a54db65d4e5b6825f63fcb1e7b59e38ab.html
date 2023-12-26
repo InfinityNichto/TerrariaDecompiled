@@ -117,6 +117,64 @@ $(function(){initNavTree('d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveH
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  298</span>    {</div>
+<div class="line"><span class="lineno">  299</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Rectangle&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Rectangle&gt;</a>();</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>.Min((Rectangle room) =&gt; room.Left);</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>.Max((Rectangle room) =&gt; room.Right) - 1;</div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordtype">int</span> num3 = 6;</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">while</span> (num3 &gt; 4 &amp;&amp; (num2 - num) % num3 != 0)</div>
+<div class="line"><span class="lineno">  304</span>        {</div>
+<div class="line"><span class="lineno">  305</span>            num3--;</div>
+<div class="line"><span class="lineno">  306</span>        }</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i &lt;= num2; i += num3)</div>
+<div class="line"><span class="lineno">  308</span>        {</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>.Count; j++)</div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                Rectangle rectangle = <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>[j];</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">if</span> (i &lt; rectangle.X || i &gt;= rectangle.X + rectangle.Width)</div>
+<div class="line"><span class="lineno">  313</span>                {</div>
+<div class="line"><span class="lineno">  314</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  315</span>                }</div>
+<div class="line"><span class="lineno">  316</span>                <span class="keywordtype">int</span> num4 = rectangle.Y + rectangle.Height;</div>
+<div class="line"><span class="lineno">  317</span>                <span class="keywordtype">int</span> num5 = 50;</div>
+<div class="line"><span class="lineno">  318</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = j + 1; k &lt; <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>.Count; k++)</div>
+<div class="line"><span class="lineno">  319</span>                {</div>
+<div class="line"><span class="lineno">  320</span>                    <span class="keywordflow">if</span> (i &gt;= <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>[k].X &amp;&amp; i &lt; <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>[k].X + <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>[k].Width)</div>
+<div class="line"><span class="lineno">  321</span>                    {</div>
+<div class="line"><span class="lineno">  322</span>                        num5 = Math.Min(num5, <a class="code hl_property" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Rooms</a>[k].Y - num4);</div>
+<div class="line"><span class="lineno">  323</span>                    }</div>
+<div class="line"><span class="lineno">  324</span>                }</div>
+<div class="line"><span class="lineno">  325</span>                <span class="keywordflow">if</span> (num5 &gt; 0)</div>
+<div class="line"><span class="lineno">  326</span>                {</div>
+<div class="line"><span class="lineno">  327</span>                    Point result;</div>
+<div class="line"><span class="lineno">  328</span>                    <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="../../d6/d1f/classTerraria_1_1WorldBuilding_1_1WorldUtils.html">WorldUtils</a>.<a class="code hl_function" href="../../d6/d1f/classTerraria_1_1WorldBuilding_1_1WorldUtils_a2afa71136849722c517115ad53e5ea65.html#a2afa71136849722c517115ad53e5ea65">Find</a>(<span class="keyword">new</span> Point(i, num4), <a class="code hl_class" href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches.html">Searches</a>.<a class="code hl_function" href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches_a0a2b7ab503ac7ec649d55daaf8612a42.html#a0a2b7ab503ac7ec649d55daaf8612a42">Chain</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches.html">Searches</a>.<a class="code hl_class" href="../../d0/d82/classTerraria_1_1WorldBuilding_1_1Searches_1_1Down.html">Down</a>(num5), <span class="keyword">new</span> <a class="code hl_class" href="../../dd/d12/classTerraria_1_1WorldBuilding_1_1Conditions.html">Conditions</a>.<a class="code hl_class" href="../../de/d6f/classTerraria_1_1WorldBuilding_1_1Conditions_1_1IsSolid.html">IsSolid</a>()), out result);</div>
+<div class="line"><span class="lineno">  329</span>                    <span class="keywordflow">if</span> (num5 &lt; 50)</div>
+<div class="line"><span class="lineno">  330</span>                    {</div>
+<div class="line"><span class="lineno">  331</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  332</span>                        result = <span class="keyword">new</span> Point(i, num4 + num5);</div>
+<div class="line"><span class="lineno">  333</span>                    }</div>
+<div class="line"><span class="lineno">  334</span>                    <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  335</span>                    {</div>
+<div class="line"><span class="lineno">  336</span>                        list.Add(<span class="keyword">new</span> Rectangle(i, num4, 1, result.Y - num4));</div>
+<div class="line"><span class="lineno">  337</span>                    }</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613_html_a312f05b58d1ee529667913c61915d613"><div class="ttname"><a href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Terraria.GameContent.Biomes.CaveHouse.HouseBuilder.Rooms</a></div><div class="ttdeci">ReadOnlyCollection&lt; Rectangle &gt; Rooms</div><div class="ttdef"><b>Definition</b> HouseBuilder.cs:52</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1Conditions_1_1IsSolid_html"><div class="ttname"><a href="../../de/d6f/classTerraria_1_1WorldBuilding_1_1Conditions_1_1IsSolid.html">Terraria.WorldBuilding.Conditions.IsSolid</a></div><div class="ttdef"><b>Definition</b> Conditions.cs:51</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1Conditions_html"><div class="ttname"><a href="../../dd/d12/classTerraria_1_1WorldBuilding_1_1Conditions.html">Terraria.WorldBuilding.Conditions</a></div><div class="ttdef"><b>Definition</b> Conditions.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1Searches_1_1Down_html"><div class="ttname"><a href="../../d0/d82/classTerraria_1_1WorldBuilding_1_1Searches_1_1Down.html">Terraria.WorldBuilding.Searches.Down</a></div><div class="ttdef"><b>Definition</b> Searches.cs:52</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1Searches_a0a2b7ab503ac7ec649d55daaf8612a42_html_a0a2b7ab503ac7ec649d55daaf8612a42"><div class="ttname"><a href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches_a0a2b7ab503ac7ec649d55daaf8612a42.html#a0a2b7ab503ac7ec649d55daaf8612a42">Terraria.WorldBuilding.Searches.Chain</a></div><div class="ttdeci">static GenSearch Chain(GenSearch search, params GenCondition[] conditions)</div><div class="ttdef"><b>Definition</b> Searches.cs:123</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1Searches_html"><div class="ttname"><a href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches.html">Terraria.WorldBuilding.Searches</a></div><div class="ttdef"><b>Definition</b> Searches.cs:6</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1WorldUtils_a2afa71136849722c517115ad53e5ea65_html_a2afa71136849722c517115ad53e5ea65"><div class="ttname"><a href="../../d6/d1f/classTerraria_1_1WorldBuilding_1_1WorldUtils_a2afa71136849722c517115ad53e5ea65.html#a2afa71136849722c517115ad53e5ea65">Terraria.WorldBuilding.WorldUtils.Find</a></div><div class="ttdeci">static bool Find(Point origin, GenSearch search, out Point result)</div><div class="ttdef"><b>Definition</b> WorldUtils.cs:27</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1WorldUtils_html"><div class="ttname"><a href="../../d6/d1f/classTerraria_1_1WorldBuilding_1_1WorldUtils.html">Terraria.WorldBuilding.WorldUtils</a></div><div class="ttdef"><b>Definition</b> WorldUtils.cs:7</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/db6/classTerraria_1_1WorldBuilding_1_1Searches_a0a2b7ab503ac7ec649d55daaf8612a42.html#a0a2b7ab503ac7ec649d55daaf8612a42">Terraria.WorldBuilding.Searches.Chain()</a>, <a class="el" href="../../d6/d1f/classTerraria_1_1WorldBuilding_1_1WorldUtils_a2afa71136849722c517115ad53e5ea65.html#a2afa71136849722c517115ad53e5ea65">Terraria.WorldBuilding.WorldUtils.Find()</a>, and <a class="el" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a312f05b58d1ee529667913c61915d613.html#a312f05b58d1ee529667913c61915d613">Terraria.GameContent.Biomes.CaveHouse.HouseBuilder.Rooms</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d72/classTerraria_1_1GameContent_1_1Biomes_1_1CaveHouse_1_1HouseBuilder_a862904b8f9bd23def124cc50ef4d0ab7.html#a862904b8f9bd23def124cc50ef4d0ab7">Terraria.GameContent.Biomes.CaveHouse.HouseBuilder.PlaceSupportBeams()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

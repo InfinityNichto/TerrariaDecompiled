@@ -121,6 +121,81 @@ $(function(){initNavTree('d5/dd9/classTerraria_1_1WorldGen_1_1Spread_aaa0a9d5118
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  275</span>        {</div>
+<div class="line"><span class="lineno">  276</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(x, y))</div>
+<div class="line"><span class="lineno">  277</span>            {</div>
+<div class="line"><span class="lineno">  278</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  279</span>            }</div>
+<div class="line"><span class="lineno">  280</span>            ushort mossWall = <a class="code hl_class" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">GenVars</a>.<a class="code hl_variable" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_ac43c7296849958bb18f9191b53894441.html#ac43c7296849958bb18f9191b53894441">mossWall</a>;</div>
+<div class="line"><span class="lineno">  281</span>            ushort mossTile = <a class="code hl_class" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">GenVars</a>.<a class="code hl_variable" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_affa0a9c6ec400a3a599b6a7fee9a1069.html#affa0a9c6ec400a3a599b6a7fee9a1069">mossTile</a>;</div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">  283</span>            <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">  284</span>            HashSet&lt;Point&gt; hashSet = <span class="keyword">new</span> HashSet&lt;Point&gt;();</div>
+<div class="line"><span class="lineno">  285</span>            list2.Add(<span class="keyword">new</span> Point(x, y));</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">while</span> (list2.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  287</span>            {</div>
+<div class="line"><span class="lineno">  288</span>                list.Clear();</div>
+<div class="line"><span class="lineno">  289</span>                list.AddRange(list2);</div>
+<div class="line"><span class="lineno">  290</span>                list2.Clear();</div>
+<div class="line"><span class="lineno">  291</span>                <span class="keywordflow">while</span> (list.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  292</span>                {</div>
+<div class="line"><span class="lineno">  293</span>                    Point item = list[0];</div>
+<div class="line"><span class="lineno">  294</span>                    <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(item.X, item.Y, 1))</div>
+<div class="line"><span class="lineno">  295</span>                    {</div>
+<div class="line"><span class="lineno">  296</span>                        list.Remove(item);</div>
+<div class="line"><span class="lineno">  297</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  298</span>                    }</div>
+<div class="line"><span class="lineno">  299</span>                    hashSet.Add(item);</div>
+<div class="line"><span class="lineno">  300</span>                    list.Remove(item);</div>
+<div class="line"><span class="lineno">  301</span>                    <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[item.X, item.Y];</div>
+<div class="line"><span class="lineno">  302</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(item.X, item.Y) || tile.wall != 0)</div>
+<div class="line"><span class="lineno">  303</span>                    {</div>
+<div class="line"><span class="lineno">  304</span>                        <span class="keywordflow">if</span> (tile.active())</div>
+<div class="line"><span class="lineno">  305</span>                        {</div>
+<div class="line"><span class="lineno">  306</span>                            <span class="keywordflow">if</span> (tile.wall == 0)</div>
+<div class="line"><span class="lineno">  307</span>                            {</div>
+<div class="line"><span class="lineno">  308</span>                                tile.wall = mossWall;</div>
+<div class="line"><span class="lineno">  309</span>                            }</div>
+<div class="line"><span class="lineno">  310</span>                            <span class="keywordflow">if</span> (tile.type == 1)</div>
+<div class="line"><span class="lineno">  311</span>                            {</div>
+<div class="line"><span class="lineno">  312</span>                                tile.type = mossTile;</div>
+<div class="line"><span class="lineno">  313</span>                            }</div>
+<div class="line"><span class="lineno">  314</span>                        }</div>
+<div class="line"><span class="lineno">  315</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  316</span>                    }</div>
+<div class="line"><span class="lineno">  317</span>                    tile.wall = mossWall;</div>
+<div class="line"><span class="lineno">  318</span>                    Point item2 = <span class="keyword">new</span> Point(item.X - 1, item.Y);</div>
+<div class="line"><span class="lineno">  319</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno">  320</span>                    {</div>
+<div class="line"><span class="lineno">  321</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno">  322</span>                    }</div>
+<div class="line"><span class="lineno">  323</span>                    item2 = <span class="keyword">new</span> Point(item.X + 1, item.Y);</div>
+<div class="line"><span class="lineno">  324</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno">  325</span>                    {</div>
+<div class="line"><span class="lineno">  326</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno">  327</span>                    }</div>
+<div class="line"><span class="lineno">  328</span>                    item2 = <span class="keyword">new</span> Point(item.X, item.Y - 1);</div>
+<div class="line"><span class="lineno">  329</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno">  330</span>                    {</div>
+<div class="line"><span class="lineno">  331</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno">  332</span>                    }</div>
+<div class="line"><span class="lineno">  333</span>                    item2 = <span class="keyword">new</span> Point(item.X, item.Y + 1);</div>
+<div class="line"><span class="lineno">  334</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno">  335</span>                    {</div>
+<div class="line"><span class="lineno">  336</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno">  337</span>                    }</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_ac43c7296849958bb18f9191b53894441_html_ac43c7296849958bb18f9191b53894441"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_ac43c7296849958bb18f9191b53894441.html#ac43c7296849958bb18f9191b53894441">Terraria.WorldBuilding.GenVars.mossWall</a></div><div class="ttdeci">static ushort mossWall</div><div class="ttdef"><b>Definition</b> GenVars.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_affa0a9c6ec400a3a599b6a7fee9a1069_html_affa0a9c6ec400a3a599b6a7fee9a1069"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_affa0a9c6ec400a3a599b6a7fee9a1069.html#affa0a9c6ec400a3a599b6a7fee9a1069">Terraria.WorldBuilding.GenVars.mossTile</a></div><div class="ttdeci">static ushort mossTile</div><div class="ttdef"><b>Definition</b> GenVars.cs:30</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_html"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">Terraria.WorldBuilding.GenVars</a></div><div class="ttdef"><b>Definition</b> GenVars.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_affa0a9c6ec400a3a599b6a7fee9a1069.html#affa0a9c6ec400a3a599b6a7fee9a1069">Terraria.WorldBuilding.GenVars.mossTile</a>, <a class="el" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_ac43c7296849958bb18f9191b53894441.html#ac43c7296849958bb18f9191b53894441">Terraria.WorldBuilding.GenVars.mossWall</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

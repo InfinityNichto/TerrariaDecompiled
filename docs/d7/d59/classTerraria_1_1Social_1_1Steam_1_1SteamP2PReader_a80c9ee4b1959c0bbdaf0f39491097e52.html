@@ -131,6 +131,45 @@ $(function(){initNavTree('d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PRea
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="comment">//IL_0019: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  134</span>        <span class="comment">//IL_002f: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  135</span>        uint num = 0u;</div>
+<div class="line"><span class="lineno">  136</span>        lock (<a class="code hl_variable" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf.html#aaa51f0261b0b7545cbe508f5642952bf">_pendingReadBuffers</a>)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf.html#aaa51f0261b0b7545cbe508f5642952bf">_pendingReadBuffers</a>.ContainsKey(user))</div>
+<div class="line"><span class="lineno">  139</span>            {</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span>            Queue&lt;ReadResult&gt; queue = <a class="code hl_variable" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf.html#aaa51f0261b0b7545cbe508f5642952bf">_pendingReadBuffers</a>[user];</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">while</span> (queue.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                ReadResult readResult = queue.Peek();</div>
+<div class="line"><span class="lineno">  146</span>                uint num2 = Math.Min((uint)bufferSize - num, readResult.Size - readResult.Offset);</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><span class="lineno">  150</span>                }</div>
+<div class="line"><span class="lineno">  151</span>                Array.Copy(readResult.Data, readResult.Offset, buffer, bufferOffset + num, num2);</div>
+<div class="line"><span class="lineno">  152</span>                <span class="keywordflow">if</span> (num2 == readResult.Size - readResult.Offset)</div>
+<div class="line"><span class="lineno">  153</span>                {</div>
+<div class="line"><span class="lineno">  154</span>                    <a class="code hl_variable" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_ae68ca897fa5a4d199241d83e84fc6dba.html#ae68ca897fa5a4d199241d83e84fc6dba">_bufferPool</a>.Enqueue(queue.Dequeue().Data);</div>
+<div class="line"><span class="lineno">  155</span>                }</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  157</span>                {</div>
+<div class="line"><span class="lineno">  158</span>                    readResult.Offset += num2;</div>
+<div class="line"><span class="lineno">  159</span>                }</div>
+<div class="line"><span class="lineno">  160</span>                num += num2;</div>
+<div class="line"><span class="lineno">  161</span>            }</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf_html_aaa51f0261b0b7545cbe508f5642952bf"><div class="ttname"><a href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf.html#aaa51f0261b0b7545cbe508f5642952bf">Terraria.Social.Steam.SteamP2PReader._pendingReadBuffers</a></div><div class="ttdeci">Dictionary&lt; CSteamID, Queue&lt; ReadResult &gt; &gt; _pendingReadBuffers</div><div class="ttdef"><b>Definition</b> SteamP2PReader.cs:31</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_ae68ca897fa5a4d199241d83e84fc6dba_html_ae68ca897fa5a4d199241d83e84fc6dba"><div class="ttname"><a href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_ae68ca897fa5a4d199241d83e84fc6dba.html#ae68ca897fa5a4d199241d83e84fc6dba">Terraria.Social.Steam.SteamP2PReader._bufferPool</a></div><div class="ttdeci">Queue&lt; byte[]&gt; _bufferPool</div><div class="ttdef"><b>Definition</b> SteamP2PReader.cs:35</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_ae68ca897fa5a4d199241d83e84fc6dba.html#ae68ca897fa5a4d199241d83e84fc6dba">Terraria.Social.Steam.SteamP2PReader._bufferPool</a>, <a class="el" href="../../d7/d59/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_aaa51f0261b0b7545cbe508f5642952bf.html#aaa51f0261b0b7545cbe508f5642952bf">Terraria.Social.Steam.SteamP2PReader._pendingReadBuffers</a>, <a class="el" href="../../d3/db4/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_1_1ReadResult_a9c3a41c15c8de3d3f64ea48efd5ca253.html#a9c3a41c15c8de3d3f64ea48efd5ca253">Terraria.Social.Steam.SteamP2PReader.ReadResult.Data</a>, <a class="el" href="../../d3/db4/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_1_1ReadResult_aed23a2ddfb54bff180400468f2e82d78.html#aed23a2ddfb54bff180400468f2e82d78">Terraria.Social.Steam.SteamP2PReader.ReadResult.Offset</a>, and <a class="el" href="../../d3/db4/classTerraria_1_1Social_1_1Steam_1_1SteamP2PReader_1_1ReadResult_a8807d30dea51d76c6bcea7f45a672c5c.html#a8807d30dea51d76c6bcea7f45a672c5c">Terraria.Social.Steam.SteamP2PReader.ReadResult.Size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_a38032f5931d289fb5a0f6f3e26b0a50c.html#a38032f5931d289fb5a0f6f3e26b0a50c">Terraria.Social.Steam.NetSocialModule.Receive()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

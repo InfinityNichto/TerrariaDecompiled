@@ -121,6 +121,31 @@ $(function(){initNavTree('d2/dfe/classTerraria_1_1NetMessage_ae11bf2a8ffaedfadeb
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2711</span>    {</div>
+<div class="line"><span class="lineno"> 2712</span>        <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno"> 2713</span>        {</div>
+<div class="line"><span class="lineno"> 2714</span>            <a class="code hl_function" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">SendData</a>(48, -1, -1, <span class="keyword">null</span>, x, y);</div>
+<div class="line"><span class="lineno"> 2715</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2716</span>        }</div>
+<div class="line"><span class="lineno"> 2717</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 256; i++)</div>
+<div class="line"><span class="lineno"> 2718</span>        {</div>
+<div class="line"><span class="lineno"> 2719</span>            <span class="keywordflow">if</span> ((<a class="code hl_variable" href="../../d2/dfe/classTerraria_1_1NetMessage_a943b11ae75732ed0413dcf3317e9d37b.html#a943b11ae75732ed0413dcf3317e9d37b">buffer</a>[i].broadcast || Netplay.Clients[i].State &gt;= 3) &amp;&amp; Netplay.Clients[i].IsConnected())</div>
+<div class="line"><span class="lineno"> 2720</span>            {</div>
+<div class="line"><span class="lineno"> 2721</span>                <span class="keywordtype">int</span> num = x / 200;</div>
+<div class="line"><span class="lineno"> 2722</span>                <span class="keywordtype">int</span> num2 = y / 150;</div>
+<div class="line"><span class="lineno"> 2723</span>                <span class="keywordflow">if</span> (Netplay.Clients[i].TileSections[num, num2])</div>
+<div class="line"><span class="lineno"> 2724</span>                {</div>
+<div class="line"><span class="lineno"> 2725</span>                    <a class="code hl_function" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">SendData</a>(48, i, -1, <span class="keyword">null</span>, x, y);</div>
+<div class="line"><span class="lineno"> 2726</span>                }</div>
+<div class="line"><span class="lineno"> 2727</span>            }</div>
+<div class="line"><span class="lineno"> 2728</span>        }</div>
+<div class="line"><span class="lineno"> 2729</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263_html_a0099400efdc729b71368da55adc01263"><div class="ttname"><a href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData</a></div><div class="ttdeci">static void SendData(int msgType, int remoteClient=-1, int ignoreClient=-1, NetworkText text=null, int number=0, float number2=0f, float number3=0f, float number4=0f, int number5=0, int number6=0, int number7=0)</div><div class="ttdef"><b>Definition</b> NetMessage.cs:88</div></div>
+<div class="ttc" id="aclassTerraria_1_1NetMessage_a943b11ae75732ed0413dcf3317e9d37b_html_a943b11ae75732ed0413dcf3317e9d37b"><div class="ttname"><a href="../../d2/dfe/classTerraria_1_1NetMessage_a943b11ae75732ed0413dcf3317e9d37b.html#a943b11ae75732ed0413dcf3317e9d37b">Terraria.NetMessage.buffer</a></div><div class="ttdeci">static MessageBuffer[] buffer</div><div class="ttdef"><b>Definition</b> NetMessage.cs:61</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a943b11ae75732ed0413dcf3317e9d37b.html#a943b11ae75732ed0413dcf3317e9d37b">Terraria.NetMessage.buffer</a>, <a class="el" href="../../db/d90/classTerraria_1_1Netplay_a8498091591db1a14a866f81d39b3d667.html#a8498091591db1a14a866f81d39b3d667">Terraria.Netplay.Clients</a>, <a class="el" href="../../dc/d01/classTerraria_1_1RemoteClient_ac81c152a58ad2349694c928f8ad4f8f4.html#ac81c152a58ad2349694c928f8ad4f8f4">Terraria.RemoteClient.IsConnected()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../dc/d01/classTerraria_1_1RemoteClient_a409bcd2ac811bdd648573f9b4a30fc16.html#a409bcd2ac811bdd648573f9b4a30fc16">Terraria.RemoteClient.State</a>, and <a class="el" href="../../dc/d01/classTerraria_1_1RemoteClient_afc0ffd0dc9bad8c0b12bf8a6200e781e.html#afc0ffd0dc9bad8c0b12bf8a6200e781e">Terraria.RemoteClient.TileSections</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aa5bce4fa427b329d3c89d222b82423e6.html#aa5bce4fa427b329d3c89d222b82423e6">Terraria.WorldGen.EmptyLiquid()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a7760d71937f0a0d8815f6448e14ab5a0.html#a7760d71937f0a0d8815f6448e14ab5a0">Terraria.Player.ItemCheck_UseBuckets()</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a164baab2268f972844b58fbb470b7c65.html#a164baab2268f972844b58fbb470b7c65">Terraria.WorldGen.PlaceLiquid()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

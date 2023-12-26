@@ -161,6 +161,93 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a34e040a412aa50b5758
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2111</span>    {</div>
+<div class="line"><span class="lineno"> 2112</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno"> 2113</span>        <span class="keywordflow">if</span> ((uint)Direction &gt; 1u)</div>
+<div class="line"><span class="lineno"> 2114</span>        {</div>
+<div class="line"><span class="lineno"> 2115</span>            <span class="keywordflow">if</span> ((uint)(Direction - 2) &lt;= 1u)</div>
+<div class="line"><span class="lineno"> 2116</span>            {</div>
+<div class="line"><span class="lineno"> 2117</span>                Vector2 vector = ((Direction == 2) ? (Vector2.UnitY * testMagnitude) : (-Vector2.UnitY * testMagnitude));</div>
+<div class="line"><span class="lineno"> 2118</span>                Vector4 vec = <span class="keyword">new</span> Vector4(position, vector.X, vector.Y);</div>
+<div class="line"><span class="lineno"> 2119</span>                <span class="keywordtype">int</span> y = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(position.Y + (<span class="keywordtype">float</span>)((Direction == 2) ? Height : 0)) / 16;</div>
+<div class="line"><span class="lineno"> 2120</span>                <span class="keywordtype">float</span> num = Math.Min(16f - position.X % 16f, Width);</div>
+<div class="line"><span class="lineno"> 2121</span>                <span class="keywordtype">float</span> num2 = num;</div>
+<div class="line"><span class="lineno"> 2122</span>                <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, (<span class="keywordtype">int</span>)num, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2123</span>                {</div>
+<div class="line"><span class="lineno"> 2124</span>                    list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)position.X / 16, y));</div>
+<div class="line"><span class="lineno"> 2125</span>                }</div>
+<div class="line"><span class="lineno"> 2126</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, (<span class="keywordtype">int</span>)num, Height, gravDir, fallThrough).YZW() != vec.YZW())</div>
+<div class="line"><span class="lineno"> 2127</span>                {</div>
+<div class="line"><span class="lineno"> 2128</span>                    list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)position.X / 16, y));</div>
+<div class="line"><span class="lineno"> 2129</span>                }</div>
+<div class="line"><span class="lineno"> 2130</span>                <span class="keywordflow">for</span> (; num2 + 16f &lt;= (float)(Width - 16); num2 += 16f)</div>
+<div class="line"><span class="lineno"> 2131</span>                {</div>
+<div class="line"><span class="lineno"> 2132</span>                    <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector + Vector2.UnitX * num2, vector, 16, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2133</span>                    {</div>
+<div class="line"><span class="lineno"> 2134</span>                        list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)(position.X + num2) / 16, y));</div>
+<div class="line"><span class="lineno"> 2135</span>                    }</div>
+<div class="line"><span class="lineno"> 2136</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position + Vector2.UnitX * num2, vector, 16, Height, gravDir, fallThrough).YZW() != vec.YZW())</div>
+<div class="line"><span class="lineno"> 2137</span>                    {</div>
+<div class="line"><span class="lineno"> 2138</span>                        list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)(position.X + num2) / 16, y));</div>
+<div class="line"><span class="lineno"> 2139</span>                    }</div>
+<div class="line"><span class="lineno"> 2140</span>                }</div>
+<div class="line"><span class="lineno"> 2141</span>                <span class="keywordtype">int</span> width = Width - (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num2;</div>
+<div class="line"><span class="lineno"> 2142</span>                <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector + Vector2.UnitX * num2, vector, width, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2143</span>                {</div>
+<div class="line"><span class="lineno"> 2144</span>                    list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)(position.X + num2) / 16, y));</div>
+<div class="line"><span class="lineno"> 2145</span>                }</div>
+<div class="line"><span class="lineno"> 2146</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position + Vector2.UnitX * num2, vector, width, Height, gravDir, fallThrough).YZW() != vec.YZW())</div>
+<div class="line"><span class="lineno"> 2147</span>                {</div>
+<div class="line"><span class="lineno"> 2148</span>                    list.Add(<span class="keyword">new</span> Point((<span class="keywordtype">int</span>)(position.X + num2) / 16, y));</div>
+<div class="line"><span class="lineno"> 2149</span>                }</div>
+<div class="line"><span class="lineno"> 2150</span>            }</div>
+<div class="line"><span class="lineno"> 2151</span>        }</div>
+<div class="line"><span class="lineno"> 2152</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2153</span>        {</div>
+<div class="line"><span class="lineno"> 2154</span>            Vector2 vector = ((Direction == 0) ? (Vector2.UnitX * testMagnitude) : (-Vector2.UnitX * testMagnitude));</div>
+<div class="line"><span class="lineno"> 2155</span>            Vector4 vec = <span class="keyword">new</span> Vector4(position, vector.X, vector.Y);</div>
+<div class="line"><span class="lineno"> 2156</span>            <span class="keywordtype">int</span> y = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(position.X + (<span class="keywordtype">float</span>)((Direction == 0) ? Width : 0)) / 16;</div>
+<div class="line"><span class="lineno"> 2157</span>            <span class="keywordtype">float</span> num3 = Math.Min(16f - position.Y % 16f, Height);</div>
+<div class="line"><span class="lineno"> 2158</span>            <span class="keywordtype">float</span> num4 = num3;</div>
+<div class="line"><span class="lineno"> 2159</span>            <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, Width, (<span class="keywordtype">int</span>)num3, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2160</span>            {</div>
+<div class="line"><span class="lineno"> 2161</span>                list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)position.Y / 16));</div>
+<div class="line"><span class="lineno"> 2162</span>            }</div>
+<div class="line"><span class="lineno"> 2163</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, Width, (<span class="keywordtype">int</span>)num3, gravDir, fallThrough).XZW() != vec.XZW())</div>
+<div class="line"><span class="lineno"> 2164</span>            {</div>
+<div class="line"><span class="lineno"> 2165</span>                list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)position.Y / 16));</div>
+<div class="line"><span class="lineno"> 2166</span>            }</div>
+<div class="line"><span class="lineno"> 2167</span>            <span class="keywordflow">for</span> (; num4 + 16f &lt;= (float)(Height - 16); num4 += 16f)</div>
+<div class="line"><span class="lineno"> 2168</span>            {</div>
+<div class="line"><span class="lineno"> 2169</span>                <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector + Vector2.UnitY * num4, vector, Width, 16, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2170</span>                {</div>
+<div class="line"><span class="lineno"> 2171</span>                    list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)(position.Y + num4) / 16));</div>
+<div class="line"><span class="lineno"> 2172</span>                }</div>
+<div class="line"><span class="lineno"> 2173</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position + Vector2.UnitY * num4, vector, Width, 16, gravDir, fallThrough).XZW() != vec.XZW())</div>
+<div class="line"><span class="lineno"> 2174</span>                {</div>
+<div class="line"><span class="lineno"> 2175</span>                    list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)(position.Y + num4) / 16));</div>
+<div class="line"><span class="lineno"> 2176</span>                }</div>
+<div class="line"><span class="lineno"> 2177</span>            }</div>
+<div class="line"><span class="lineno"> 2178</span>            <span class="keywordtype">int</span> height = Height - (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num4;</div>
+<div class="line"><span class="lineno"> 2179</span>            <span class="keywordflow">if</span> (checkCardinals &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector + Vector2.UnitY * num4, vector, Width, height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2180</span>            {</div>
+<div class="line"><span class="lineno"> 2181</span>                list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)(position.Y + num4) / 16));</div>
+<div class="line"><span class="lineno"> 2182</span>            }</div>
+<div class="line"><span class="lineno"> 2183</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (checkSlopes &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position + Vector2.UnitY * num4, vector, Width, height, gravDir, fallThrough).XZW() != vec.XZW())</div>
+<div class="line"><span class="lineno"> 2184</span>            {</div>
+<div class="line"><span class="lineno"> 2185</span>                list.Add(<span class="keyword">new</span> Point(y, (<span class="keywordtype">int</span>)(position.Y + num4) / 16));</div>
+<div class="line"><span class="lineno"> 2186</span>            }</div>
+<div class="line"><span class="lineno"> 2187</span>        }</div>
+<div class="line"><span class="lineno"> 2188</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno"> 2189</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8_html_a5e225736f6e3c509b9915a06cf908dd8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision</a></div><div class="ttdeci">static Vector2 TileCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, bool fallThrough=false, bool fall2=false, int gravDir=1)</div><div class="ttdef"><b>Definition</b> Collision.cs:1910</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642_html_a725c5d327800d1e48a2adf0fb7b41642"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">Terraria.Collision.SlopeCollision</a></div><div class="ttdeci">static Vector4 SlopeCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, float gravity=0f, bool fall=false)</div><div class="ttdef"><b>Definition</b> Collision.cs:1580</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">Terraria.Collision.SlopeCollision()</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab5c7c58f0a1b673531847232c4345332.html#ab5c7c58f0a1b673531847232c4345332">Terraria.Player.UpdateTouchingTiles()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

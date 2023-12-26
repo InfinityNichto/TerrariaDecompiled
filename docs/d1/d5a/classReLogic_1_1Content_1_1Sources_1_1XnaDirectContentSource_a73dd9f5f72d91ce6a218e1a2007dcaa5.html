@@ -121,6 +121,20 @@ $(function(){initNavTree('d1/d5a/classReLogic_1_1Content_1_1Sources_1_1XnaDirect
 <p>Must be threadsafe! </p>
 
 <p>Implements <a class="el" href="../../de/d36/interfaceReLogic_1_1Content_1_1Sources_1_1IContentSource_ac9e3385be8e7018917cc005e8fe0932a.html#ac9e3385be8e7018917cc005e8fe0932a">ReLogic.Content.Sources.IContentSource</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> File.OpenRead(<a class="code hl_variable" href="../../d1/d5a/classReLogic_1_1Content_1_1Sources_1_1XnaDirectContentSource_a9d9b9ca6ee95d24d7fa7149e08d19fc3.html#a9d9b9ca6ee95d24d7fa7149e08d19fc3">_rootDirectories</a>.Select((<span class="keywordtype">string</span> rootDir) =&gt; Path.Combine(rootDir, assetName)).First(File.Exists));</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a> innerException)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">throw</span> AssetLoadException.FromMissingAsset(assetName, innerException);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Sources_1_1XnaDirectContentSource_a9d9b9ca6ee95d24d7fa7149e08d19fc3_html_a9d9b9ca6ee95d24d7fa7149e08d19fc3"><div class="ttname"><a href="../../d1/d5a/classReLogic_1_1Content_1_1Sources_1_1XnaDirectContentSource_a9d9b9ca6ee95d24d7fa7149e08d19fc3.html#a9d9b9ca6ee95d24d7fa7149e08d19fc3">ReLogic.Content.Sources.XnaDirectContentSource._rootDirectories</a></div><div class="ttdeci">readonly string[] _rootDirectories</div><div class="ttdef"><b>Definition</b> XnaDirectContentSource.cs:10</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d5a/classReLogic_1_1Content_1_1Sources_1_1XnaDirectContentSource_a9d9b9ca6ee95d24d7fa7149e08d19fc3.html#a9d9b9ca6ee95d24d7fa7149e08d19fc3">ReLogic.Content.Sources.XnaDirectContentSource._rootDirectories</a>, and <a class="el" href="../../dc/d39/classReLogic_1_1Content_1_1AssetLoadException_a21057e203d27adf47f0704763458e5f6.html#a21057e203d27adf47f0704763458e5f6">ReLogic.Content.AssetLoadException.FromMissingAsset()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

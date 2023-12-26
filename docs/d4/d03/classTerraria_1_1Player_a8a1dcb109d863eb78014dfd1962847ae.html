@@ -126,6 +126,30 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a8a1dcb109d863eb78014df
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">23254</span>    {</div>
+<div class="line"><span class="lineno">23255</span>        <span class="keywordtype">int</span> num = x + dir;</div>
+<div class="line"><span class="lineno">23256</span>        <span class="keywordflow">if</span> (Main.tile[num, y] != <span class="keyword">null</span> &amp;&amp; Main.tile[num, y].active() &amp;&amp; Main.tileRope[Main.tile[num, y].type])</div>
+<div class="line"><span class="lineno">23257</span>        {</div>
+<div class="line"><span class="lineno">23258</span>            <span class="keywordtype">int</span> num2 = num * 16 + 8 - <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a> / 2;</div>
+<div class="line"><span class="lineno">23259</span>            <span class="keywordtype">float</span> y2 = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y;</div>
+<div class="line"><span class="lineno">23260</span>            y2 = y * 16 + 22;</div>
+<div class="line"><span class="lineno">23261</span>            <span class="keywordflow">if</span> ((!Main.tile[num, y - 1].active() || !Main.tileRope[Main.tile[num, y - 1].type]) &amp;&amp; (!Main.tile[num, y + 1].active() || !Main.tileRope[Main.tile[num, y + 1].type]))</div>
+<div class="line"><span class="lineno">23262</span>            {</div>
+<div class="line"><span class="lineno">23263</span>                y2 = y * 16 + 22;</div>
+<div class="line"><span class="lineno">23264</span>            }</div>
+<div class="line"><span class="lineno">23265</span>            <span class="keywordflow">if</span> (Collision.SolidCollision(<span class="keyword">new</span> Vector2(num2, y2), <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>))</div>
+<div class="line"><span class="lineno">23266</span>            {</div>
+<div class="line"><span class="lineno">23267</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">23268</span>            }</div>
+<div class="line"><span class="lineno">23269</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">23270</span>        }</div>
+<div class="line"><span class="lineno">23271</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">23272</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ab90b2aba94f5d7de3ee33f3c0b27ea3e.html#ab90b2aba94f5d7de3ee33f3c0b27ea3e">Terraria.Collision.SolidCollision()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a82fc63b4de96aac9d7de5b6270c2e6e2.html#a82fc63b4de96aac9d7de5b6270c2e6e2">Terraria.Main.tileRope</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

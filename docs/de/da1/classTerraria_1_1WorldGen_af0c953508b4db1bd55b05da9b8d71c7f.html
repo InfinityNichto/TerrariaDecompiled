@@ -117,6 +117,103 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_af0c953508b4db1bd55b0
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">23189</span>    {</div>
+<div class="line"><span class="lineno">23190</span>        <span class="keywordtype">double</span> num = 0.1 + <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">NextDouble</a>() * 0.35;</div>
+<div class="line"><span class="lineno">23191</span>        <span class="keywordtype">double</span> num2 = 0.1 + <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">NextDouble</a>() * 0.35;</div>
+<div class="line"><span class="lineno">23192</span>        <span class="keywordtype">int</span> num3 = 20;</div>
+<div class="line"><span class="lineno">23193</span>        <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Main.worldSurface;</div>
+<div class="line"><span class="lineno">23194</span>        <span class="keywordflow">if</span> (!undergroundOnly)</div>
+<div class="line"><span class="lineno">23195</span>        {</div>
+<div class="line"><span class="lineno">23196</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; Main.maxTilesX - 1; i++)</div>
+<div class="line"><span class="lineno">23197</span>            {</div>
+<div class="line"><span class="lineno">23198</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num3; j &lt; num4; j++)</div>
+<div class="line"><span class="lineno">23199</span>                {</div>
+<div class="line"><span class="lineno">23200</span>                    <span class="keywordflow">if</span> (i &lt; 380)</div>
+<div class="line"><span class="lineno">23201</span>                    {</div>
+<div class="line"><span class="lineno">23202</span>                        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">NextDouble</a>() &lt; num &amp;&amp; Main.tile[i, j].liquid == 0)</div>
+<div class="line"><span class="lineno">23203</span>                        {</div>
+<div class="line"><span class="lineno">23204</span>                            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a3f9b4b4f055f359f5d73f8cc678600bd.html#a3f9b4b4f055f359f5d73f8cc678600bd">GrowPalmTree</a>(i, j);</div>
+<div class="line"><span class="lineno">23205</span>                        }</div>
+<div class="line"><span class="lineno">23206</span>                    }</div>
+<div class="line"><span class="lineno">23207</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &gt; Main.maxTilesX - 380 &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">NextDouble</a>() &lt; num2 &amp;&amp; Main.tile[i, j].liquid == 0)</div>
+<div class="line"><span class="lineno">23208</span>                    {</div>
+<div class="line"><span class="lineno">23209</span>                        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a3f9b4b4f055f359f5d73f8cc678600bd.html#a3f9b4b4f055f359f5d73f8cc678600bd">GrowPalmTree</a>(i, j);</div>
+<div class="line"><span class="lineno">23210</span>                    }</div>
+<div class="line"><span class="lineno">23211</span>                    <span class="keywordtype">int</span> num5 = 20;</div>
+<div class="line"><span class="lineno">23212</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_ad5981efba8ea9f35d9ecf9176ffa315b.html#ad5981efba8ea9f35d9ecf9176ffa315b">drunkWorldGen</a>)</div>
+<div class="line"><span class="lineno">23213</span>                    {</div>
+<div class="line"><span class="lineno">23214</span>                        num5 /= 3;</div>
+<div class="line"><span class="lineno">23215</span>                    }</div>
+<div class="line"><span class="lineno">23216</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a1af1906e7b940914158eafdb3abc62e5.html#a1af1906e7b940914158eafdb3abc62e5">remixWorldGen</a>)</div>
+<div class="line"><span class="lineno">23217</span>                    {</div>
+<div class="line"><span class="lineno">23218</span>                        num5 /= 2;</div>
+<div class="line"><span class="lineno">23219</span>                    }</div>
+<div class="line"><span class="lineno">23220</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].type == 2 &amp;&amp; (Main.tenthAnniversaryWorld || <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(num5) == 0))</div>
+<div class="line"><span class="lineno">23221</span>                    {</div>
+<div class="line"><span class="lineno">23222</span>                        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2) == 0)</div>
+<div class="line"><span class="lineno">23223</span>                        {</div>
+<div class="line"><span class="lineno">23224</span>                            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6.html#a209694bfc09bca9dd7183b795ed2eae6">GrowTreeWithSettings</a>(i, j, GrowTreeSettings.Profiles.VanityTree_Willow);</div>
+<div class="line"><span class="lineno">23225</span>                        }</div>
+<div class="line"><span class="lineno">23226</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">23227</span>                        {</div>
+<div class="line"><span class="lineno">23228</span>                            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6.html#a209694bfc09bca9dd7183b795ed2eae6">GrowTreeWithSettings</a>(i, j, GrowTreeSettings.Profiles.VanityTree_Sakura);</div>
+<div class="line"><span class="lineno">23229</span>                        }</div>
+<div class="line"><span class="lineno">23230</span>                    }</div>
+<div class="line"><span class="lineno">23231</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">23232</span>                    {</div>
+<div class="line"><span class="lineno">23233</span>                        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ac1e555f0dc5b294237d05b891e046f03.html#ac1e555f0dc5b294237d05b891e046f03">GrowTree</a>(i, j);</div>
+<div class="line"><span class="lineno">23234</span>                    }</div>
+<div class="line"><span class="lineno">23235</span>                }</div>
+<div class="line"><span class="lineno">23236</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(3) == 0)</div>
+<div class="line"><span class="lineno">23237</span>                {</div>
+<div class="line"><span class="lineno">23238</span>                    i++;</div>
+<div class="line"><span class="lineno">23239</span>                }</div>
+<div class="line"><span class="lineno">23240</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(4) == 0)</div>
+<div class="line"><span class="lineno">23241</span>                {</div>
+<div class="line"><span class="lineno">23242</span>                    i++;</div>
+<div class="line"><span class="lineno">23243</span>                }</div>
+<div class="line"><span class="lineno">23244</span>            }</div>
+<div class="line"><span class="lineno">23245</span>        }</div>
+<div class="line"><span class="lineno">23246</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a1af1906e7b940914158eafdb3abc62e5.html#a1af1906e7b940914158eafdb3abc62e5">remixWorldGen</a>)</div>
+<div class="line"><span class="lineno">23247</span>        {</div>
+<div class="line"><span class="lineno">23248</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">23249</span>        }</div>
+<div class="line"><span class="lineno">23250</span>        num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Main.worldSurface;</div>
+<div class="line"><span class="lineno">23251</span>        num4 = Main.maxTilesY - 300;</div>
+<div class="line"><span class="lineno">23252</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 1; k &lt; Main.maxTilesX - 1; k++)</div>
+<div class="line"><span class="lineno">23253</span>        {</div>
+<div class="line"><span class="lineno">23254</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = num3; l &lt; num4; l++)</div>
+<div class="line"><span class="lineno">23255</span>            {</div>
+<div class="line"><span class="lineno">23256</span>                <span class="keywordtype">int</span> maxValue = 7;</div>
+<div class="line"><span class="lineno">23257</span>                <span class="keywordflow">if</span> (Main.tile[k, l].type == 2 &amp;&amp; (Main.tenthAnniversaryWorld || <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(maxValue) == 0))</div>
+<div class="line"><span class="lineno">23258</span>                {</div>
+<div class="line"><span class="lineno">23259</span>                    <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2) == 0)</div>
+<div class="line"><span class="lineno">23260</span>                    {</div>
+<div class="line"><span class="lineno">23261</span>                        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6.html#a209694bfc09bca9dd7183b795ed2eae6">GrowTreeWithSettings</a>(k, l, GrowTreeSettings.Profiles.VanityTree_Willow);</div>
+<div class="line"><span class="lineno">23262</span>                    }</div>
+<div class="line"><span class="lineno">23263</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">23264</span>                    {</div>
+<div class="line"><span class="lineno">23265</span>                        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6.html#a209694bfc09bca9dd7183b795ed2eae6">GrowTreeWithSettings</a>(k, l, GrowTreeSettings.Profiles.VanityTree_Sakura);</div>
+<div class="line"><span class="lineno">23266</span>                    }</div>
+<div class="line"><span class="lineno">23267</span>                }</div>
+<div class="line"><span class="lineno">23268</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">23269</span>                {</div>
+<div class="line"><span class="lineno">23270</span>                    <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ac1e555f0dc5b294237d05b891e046f03.html#ac1e555f0dc5b294237d05b891e046f03">GrowTree</a>(k, l);</div>
+<div class="line"><span class="lineno">23271</span>                }</div>
+<div class="line"><span class="lineno">23272</span>            }</div>
+<div class="line"><span class="lineno">23273</span>        }</div>
+<div class="line"><span class="lineno">23274</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4_html_ac305c60065e38f1ae87d49fb1a56dae4"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">Terraria.Utilities.UnifiedRandom.NextDouble</a></div><div class="ttdeci">virtual double NextDouble()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:136</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a1af1906e7b940914158eafdb3abc62e5_html_a1af1906e7b940914158eafdb3abc62e5"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a1af1906e7b940914158eafdb3abc62e5.html#a1af1906e7b940914158eafdb3abc62e5">Terraria.WorldGen.remixWorldGen</a></div><div class="ttdeci">static bool remixWorldGen</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1148</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6_html_a209694bfc09bca9dd7183b795ed2eae6"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a209694bfc09bca9dd7183b795ed2eae6.html#a209694bfc09bca9dd7183b795ed2eae6">Terraria.WorldGen.GrowTreeWithSettings</a></div><div class="ttdeci">static bool GrowTreeWithSettings(int checkedX, int checkedY, GrowTreeSettings settings)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:22212</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a3f9b4b4f055f359f5d73f8cc678600bd_html_a3f9b4b4f055f359f5d73f8cc678600bd"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a3f9b4b4f055f359f5d73f8cc678600bd.html#a3f9b4b4f055f359f5d73f8cc678600bd">Terraria.WorldGen.GrowPalmTree</a></div><div class="ttdeci">static bool GrowPalmTree(int i, int y)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:18785</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ac1e555f0dc5b294237d05b891e046f03_html_ac1e555f0dc5b294237d05b891e046f03"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ac1e555f0dc5b294237d05b891e046f03.html#ac1e555f0dc5b294237d05b891e046f03">Terraria.WorldGen.GrowTree</a></div><div class="ttdeci">static bool GrowTree(int i, int y)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:21606</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ad5981efba8ea9f35d9ecf9176ffa315b_html_ad5981efba8ea9f35d9ecf9176ffa315b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ad5981efba8ea9f35d9ecf9176ffa315b.html#ad5981efba8ea9f35d9ecf9176ffa315b">Terraria.WorldGen.drunkWorldGen</a></div><div class="ttdeci">static bool drunkWorldGen</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1154</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac7fa136a7411cb9bd1e6bdf4eb03ff3b.html#ac7fa136a7411cb9bd1e6bdf4eb03ff3b">Terraria.Main.tenthAnniversaryWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d6/d5c/classTerraria_1_1WorldGen_1_1GrowTreeSettings_1_1Profiles_ab948cf9c5609aff688c4d1d3ef752e7b.html#ab948cf9c5609aff688c4d1d3ef752e7b">Terraria.WorldGen.GrowTreeSettings.Profiles.VanityTree_Sakura</a>, <a class="el" href="../../d6/d5c/classTerraria_1_1WorldGen_1_1GrowTreeSettings_1_1Profiles_a7de58664885de762894359073682f31f.html#a7de58664885de762894359073682f31f">Terraria.WorldGen.GrowTreeSettings.Profiles.VanityTree_Willow</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
 
 </div>
 </div>

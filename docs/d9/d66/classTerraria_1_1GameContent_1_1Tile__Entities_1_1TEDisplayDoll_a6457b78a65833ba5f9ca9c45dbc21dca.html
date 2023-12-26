@@ -133,6 +133,37 @@ $(function(){initNavTree('d9/d66/classTerraria_1_1GameContent_1_1Tile__Entities_
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../db/d56/classTerraria_1_1DataStructures_1_1TileEntity_aa3c4016d73319126d3637202446698f9.html#aa3c4016d73319126d3637202446698f9">Terraria.DataStructures.TileEntity</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>    {</div>
+<div class="line"><span class="lineno">  319</span>        instruction = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  320</span>        Item item = inv[slot];</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">if</span> (item.IsAir || item.favorited)</div>
+<div class="line"><span class="lineno">  322</span>        {</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  324</span>        }</div>
+<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno">  326</span>        {</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d66/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TEDisplayDoll_a87491dbe9382091c6a2ac3b5ffdb57cf.html#a87491dbe9382091c6a2ac3b5ffdb57cf">FitsDisplayDoll</a>(item))</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                instruction = Lang.misc[76].Value;</div>
+<div class="line"><span class="lineno">  331</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  332</span>            }</div>
+<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">case</span> 23:</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(item).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  338</span>            {</div>
+<div class="line"><span class="lineno">  339</span>                instruction = Lang.misc[68].Value;</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  341</span>            }</div>
+<div class="line"><span class="lineno">  342</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  343</span>        }</div>
+<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  345</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Tile__Entities_1_1TEDisplayDoll_a87491dbe9382091c6a2ac3b5ffdb57cf_html_a87491dbe9382091c6a2ac3b5ffdb57cf"><div class="ttname"><a href="../../d9/d66/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TEDisplayDoll_a87491dbe9382091c6a2ac3b5ffdb57cf.html#a87491dbe9382091c6a2ac3b5ffdb57cf">Terraria.GameContent.Tile_Entities.TEDisplayDoll.FitsDisplayDoll</a></div><div class="ttdeci">static bool FitsDisplayDoll(Item item)</div><div class="ttdef"><b>Definition</b> TEDisplayDoll.cs:452</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d40/structTerraria_1_1Player_1_1ItemSpaceStatus_a89d81ee012b8231662d9d4b379a91399.html#a89d81ee012b8231662d9d4b379a91399">Terraria.Player.ItemSpaceStatus.CanTakeItemToPersonalInventory</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6fca7ce5ad9961010659dca6692ce791.html#a6fca7ce5ad9961010659dca6692ce791">Terraria.Item.favorited</a>, <a class="el" href="../../d9/d66/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TEDisplayDoll_a87491dbe9382091c6a2ac3b5ffdb57cf.html#a87491dbe9382091c6a2ac3b5ffdb57cf">Terraria.GameContent.Tile_Entities.TEDisplayDoll.FitsDisplayDoll()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6092d6f80443cfc07335ec274665656d.html#a6092d6f80443cfc07335ec274665656d">Terraria.Item.IsAir</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a860d1c9b6feadbe7f85125de00e16e91.html#a860d1c9b6feadbe7f85125de00e16e91">Terraria.Player.ItemSpace()</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a5ca4a1d83b757527531a1b2fbd9620ce.html#a5ca4a1d83b757527531a1b2fbd9620ce">Terraria.Lang.misc</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

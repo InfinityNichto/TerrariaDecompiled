@@ -136,6 +136,42 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_ad80d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> ((edgesToTest &amp; <a class="code hl_enumeration" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a05213fbac4d5db4be99736bc194cb2c8.html#a05213fbac4d5db4be99736bc194cb2c8">TileEdges</a>.Bottom) != 0)</div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_enumvalue" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y + 1];</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a73a6e6e58bc30002689171b19a663b04.html#a73a6e6e58bc30002689171b19a663b04">IsNeighborSolid</a>(tile) &amp;&amp; tile.slope() != 1 &amp;&amp; tile.slope() != 2 &amp;&amp; !tile.halfBrick())</div>
+<div class="line"><span class="lineno">  284</span>            {</div>
+<div class="line"><span class="lineno">  285</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  286</span>            }</div>
+<div class="line"><span class="lineno">  287</span>            edge.Start = <span class="keyword">new</span> Vector2(tilePosition.X, tilePosition.Y + 16f);</div>
+<div class="line"><span class="lineno">  288</span>            edge.End = <span class="keyword">new</span> Vector2(tilePosition.X + 16f, tilePosition.Y + 16f);</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> ((edgesToTest &amp; <a class="code hl_enumeration" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a05213fbac4d5db4be99736bc194cb2c8.html#a05213fbac4d5db4be99736bc194cb2c8">TileEdges</a>.Top) != 0)</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            <a class="code hl_enumvalue" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[x, y - 1];</div>
+<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">if</span> (!Main.tile[x, y].halfBrick() &amp;&amp; <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a73a6e6e58bc30002689171b19a663b04.html#a73a6e6e58bc30002689171b19a663b04">IsNeighborSolid</a>(tile2) &amp;&amp; tile2.slope() != 3 &amp;&amp; tile2.slope() != 4)</div>
+<div class="line"><span class="lineno">  295</span>            {</div>
+<div class="line"><span class="lineno">  296</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  297</span>            }</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (Main.tile[x, y].halfBrick())</div>
+<div class="line"><span class="lineno">  299</span>            {</div>
+<div class="line"><span class="lineno">  300</span>                tilePosition.Y += 8f;</div>
+<div class="line"><span class="lineno">  301</span>            }</div>
+<div class="line"><span class="lineno">  302</span>            edge.Start = <span class="keyword">new</span> Vector2(tilePosition.X, tilePosition.Y);</div>
+<div class="line"><span class="lineno">  303</span>            edge.End = <span class="keyword">new</span> Vector2(tilePosition.X + 16f, tilePosition.Y);</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  305</span>        }</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Physics_1_1BallCollision_a05213fbac4d5db4be99736bc194cb2c8_html_a05213fbac4d5db4be99736bc194cb2c8"><div class="ttname"><a href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a05213fbac4d5db4be99736bc194cb2c8.html#a05213fbac4d5db4be99736bc194cb2c8">Terraria.Physics.BallCollision.TileEdges</a></div><div class="ttdeci">TileEdges</div><div class="ttdef"><b>Definition</b> BallCollision.cs:12</div></div>
+<div class="ttc" id="aclassTerraria_1_1Physics_1_1BallCollision_a73a6e6e58bc30002689171b19a663b04_html_a73a6e6e58bc30002689171b19a663b04"><div class="ttname"><a href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a73a6e6e58bc30002689171b19a663b04.html#a73a6e6e58bc30002689171b19a663b04">Terraria.Physics.BallCollision.IsNeighborSolid</a></div><div class="ttdeci">static bool IsNeighborSolid(Tile tile)</div><div class="ttdef"><b>Definition</b> BallCollision.cs:355</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd_html_a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Terraria.Physics.BallPassThroughType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a73a6e6e58bc30002689171b19a663b04.html#a73a6e6e58bc30002689171b19a663b04">Terraria.Physics.BallCollision.IsNeighborSolid()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b8d5326dd098b3ac63072a92e67bd.html#a741b8d5326dd098b3ac63072a92e67bd">Terraria.Physics.BallCollision.GetCollisionPointForTile()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

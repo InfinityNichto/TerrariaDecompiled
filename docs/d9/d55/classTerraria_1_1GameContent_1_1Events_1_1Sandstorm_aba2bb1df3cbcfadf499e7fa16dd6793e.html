@@ -117,6 +117,130 @@ $(function(){initNavTree('d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sands
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (Main.gamePaused)</div>
+<div class="line"><span class="lineno">  167</span>        {</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordtype">int</span> sandTileCount = Main.SceneMetrics.SandTileCount;</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[Main.myPlayer];</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_function" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a0184f5dbbf265939c80369fe31d76315.html#a0184f5dbbf265939c80369fe31d76315">ShouldSandstormDustPersist</a>();</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_function" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a64e89caf51dc5e8ef27a2f3c56c015fc.html#a64e89caf51dc5e8ef27a2f3c56c015fc">HandleEffectAndSky</a>(flag &amp;&amp; Main.UseStormEffects);</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (sandTileCount &lt; 100 || (<span class="keywordtype">double</span>)player.position.Y &gt; Main.worldSurface * 16.0 || player.ZoneBeach)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordtype">int</span> maxValue = 1;</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (!flag || Main.rand.Next(maxValue) != 0)</div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordtype">int</span> num = Math.Sign(Main.windSpeedCurrent);</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordtype">float</span> num2 = Math.Abs(Main.windSpeedCurrent);</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (num2 &lt; 0.01f)</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">float</span> num3 = (float)num * MathHelper.Lerp(0.9f, 1f, num2);</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">float</span> num4 = 2000f / (float)sandTileCount;</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">float</span> value = 3f / num4;</div>
+<div class="line"><span class="lineno">  192</span>        value = MathHelper.Clamp(value, 0.77f, 1f);</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordtype">int</span> num5 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num4;</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordtype">float</span> num6 = (float)Main.screenWidth / (<span class="keywordtype">float</span>)Main.maxScreenW;</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordtype">int</span> num7 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(1000f * num6);</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordtype">float</span> num8 = 20f * <a class="code hl_variable" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce.html#acd5365d5c225d0df55e0a1f43c04e1ce">Severity</a>;</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">float</span> num9 = (float)num7 * (Main.gfxQuality * 0.5f + 0.5f) + (float)num7 * 0.1f - (<span class="keywordtype">float</span>)Dust.SandStormCount;</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (num9 &lt;= 0f)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordtype">float</span> num10 = (float)Main.screenWidth + 1000f;</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordtype">float</span> num11 = Main.screenHeight;</div>
+<div class="line"><span class="lineno">  204</span>        Vector2 vector = Main.screenPosition + player.velocity;</div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_class" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom.html">WeightedRandom&lt;Color&gt;</a> weightedRandom = <span class="keyword">new</span> <a class="code hl_class" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom.html">WeightedRandom&lt;Color&gt;</a>();</div>
+<div class="line"><span class="lineno">  206</span>        weightedRandom.<a class="code hl_function" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Add</a>(<span class="keyword">new</span> Color(200, 160, 20, 180), Main.SceneMetrics.GetTileCount(53) + Main.SceneMetrics.GetTileCount(396) + Main.SceneMetrics.GetTileCount(397));</div>
+<div class="line"><span class="lineno">  207</span>        weightedRandom.<a class="code hl_function" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Add</a>(<span class="keyword">new</span> Color(103, 98, 122, 180), Main.SceneMetrics.GetTileCount(112) + Main.SceneMetrics.GetTileCount(400) + Main.SceneMetrics.GetTileCount(398));</div>
+<div class="line"><span class="lineno">  208</span>        weightedRandom.<a class="code hl_function" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Add</a>(<span class="keyword">new</span> Color(135, 43, 34, 180), Main.SceneMetrics.GetTileCount(234) + Main.SceneMetrics.GetTileCount(401) + Main.SceneMetrics.GetTileCount(399));</div>
+<div class="line"><span class="lineno">  209</span>        weightedRandom.<a class="code hl_function" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Add</a>(<span class="keyword">new</span> Color(213, 196, 197, 180), Main.SceneMetrics.GetTileCount(116) + Main.SceneMetrics.GetTileCount(403) + Main.SceneMetrics.GetTileCount(402));</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordtype">float</span> num12 = MathHelper.Lerp(0.2f, 0.35f, <a class="code hl_variable" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce.html#acd5365d5c225d0df55e0a1f43c04e1ce">Severity</a>);</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">float</span> num13 = MathHelper.Lerp(0.5f, 0.7f, <a class="code hl_variable" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce.html#acd5365d5c225d0df55e0a1f43c04e1ce">Severity</a>);</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">float</span> amount = (value - 0.77f) / 0.23000002f;</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">int</span> maxValue2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)MathHelper.Lerp(1f, 10f, amount);</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (float)i &lt; num8; i++)</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">if</span> (Main.rand.Next(num5 / 4) != 0)</div>
+<div class="line"><span class="lineno">  217</span>            {</div>
+<div class="line"><span class="lineno">  218</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  219</span>            }</div>
+<div class="line"><span class="lineno">  220</span>            Vector2 position = <span class="keyword">new</span> Vector2(Main.rand.NextFloat() * num10 - 500f, Main.rand.NextFloat() * -50f);</div>
+<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (Main.rand.Next(3) == 0 &amp;&amp; num == 1)</div>
+<div class="line"><span class="lineno">  222</span>            {</div>
+<div class="line"><span class="lineno">  223</span>                position.X = Main.rand.Next(500) - 500;</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.rand.Next(3) == 0 &amp;&amp; num == -1)</div>
+<div class="line"><span class="lineno">  226</span>            {</div>
+<div class="line"><span class="lineno">  227</span>                position.X = Main.rand.Next(500) + Main.screenWidth;</div>
+<div class="line"><span class="lineno">  228</span>            }</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">if</span> (position.X &lt; 0f || position.X &gt; (<span class="keywordtype">float</span>)Main.screenWidth)</div>
+<div class="line"><span class="lineno">  230</span>            {</div>
+<div class="line"><span class="lineno">  231</span>                position.Y += Main.rand.NextFloat() * num11 * 0.9f;</div>
+<div class="line"><span class="lineno">  232</span>            }</div>
+<div class="line"><span class="lineno">  233</span>            position += vector;</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordtype">int</span> num14 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.X / 16;</div>
+<div class="line"><span class="lineno">  235</span>            <span class="keywordtype">int</span> num15 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.Y / 16;</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(num14, num15, 10) || Main.tile[num14, num15] == <span class="keyword">null</span> || Main.tile[num14, num15].wall != 0)</div>
+<div class="line"><span class="lineno">  237</span>            {</div>
+<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  239</span>            }</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 1; j++)</div>
+<div class="line"><span class="lineno">  241</span>            {</div>
+<div class="line"><span class="lineno">  242</span>                Dust dust = Main.dust[Dust.NewDust(position, 10, 10, 268)];</div>
+<div class="line"><span class="lineno">  243</span>                dust.velocity.Y = 2f + Main.rand.NextFloat() * 0.2f;</div>
+<div class="line"><span class="lineno">  244</span>                dust.velocity.Y *= dust.scale;</div>
+<div class="line"><span class="lineno">  245</span>                dust.velocity.Y *= 0.35f;</div>
+<div class="line"><span class="lineno">  246</span>                dust.velocity.X = num3 * 5f + Main.rand.NextFloat() * 1f;</div>
+<div class="line"><span class="lineno">  247</span>                dust.velocity.X += num3 * num13 * 20f;</div>
+<div class="line"><span class="lineno">  248</span>                dust.fadeIn += num13 * 0.2f;</div>
+<div class="line"><span class="lineno">  249</span>                dust.velocity *= 1f + num12 * 0.5f;</div>
+<div class="line"><span class="lineno">  250</span>                dust.color = weightedRandom;</div>
+<div class="line"><span class="lineno">  251</span>                dust.velocity *= 1f + num12;</div>
+<div class="line"><span class="lineno">  252</span>                dust.velocity *= value;</div>
+<div class="line"><span class="lineno">  253</span>                dust.scale = 0.9f;</div>
+<div class="line"><span class="lineno">  254</span>                num9 -= 1f;</div>
+<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">if</span> (num9 &lt;= 0f)</div>
+<div class="line"><span class="lineno">  256</span>                {</div>
+<div class="line"><span class="lineno">  257</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  258</span>                }</div>
+<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">if</span> (Main.rand.Next(maxValue2) != 0)</div>
+<div class="line"><span class="lineno">  260</span>                {</div>
+<div class="line"><span class="lineno">  261</span>                    j--;</div>
+<div class="line"><span class="lineno">  262</span>                    position += Utils.RandomVector2(Main.rand, -10f, 10f) + dust.velocity * -1.1f;</div>
+<div class="line"><span class="lineno">  263</span>                    num14 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.X / 16;</div>
+<div class="line"><span class="lineno">  264</span>                    num15 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.Y / 16;</div>
+<div class="line"><span class="lineno">  265</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(num14, num15, 10) &amp;&amp; Main.tile[num14, num15] != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  266</span>                    {</div>
+<div class="line"><span class="lineno">  267</span>                        _ = Main.tile[num14, num15].wall;</div>
+<div class="line"><span class="lineno">  268</span>                    }</div>
+<div class="line"><span class="lineno">  269</span>                }</div>
+<div class="line"><span class="lineno">  270</span>            }</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> (num9 &lt;= 0f)</div>
+<div class="line"><span class="lineno">  272</span>            {</div>
+<div class="line"><span class="lineno">  273</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a0184f5dbbf265939c80369fe31d76315_html_a0184f5dbbf265939c80369fe31d76315"><div class="ttname"><a href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a0184f5dbbf265939c80369fe31d76315.html#a0184f5dbbf265939c80369fe31d76315">Terraria.GameContent.Events.Sandstorm.ShouldSandstormDustPersist</a></div><div class="ttdeci">static bool ShouldSandstormDustPersist()</div><div class="ttdef"><b>Definition</b> Sandstorm.cs:155</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a64e89caf51dc5e8ef27a2f3c56c015fc_html_a64e89caf51dc5e8ef27a2f3c56c015fc"><div class="ttname"><a href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a64e89caf51dc5e8ef27a2f3c56c015fc.html#a64e89caf51dc5e8ef27a2f3c56c015fc">Terraria.GameContent.Events.Sandstorm.HandleEffectAndSky</a></div><div class="ttdeci">static void HandleEffectAndSky(bool toState)</div><div class="ttdef"><b>Definition</b> Sandstorm.cs:134</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce_html_acd5365d5c225d0df55e0a1f43c04e1ce"><div class="ttname"><a href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce.html#acd5365d5c225d0df55e0a1f43c04e1ce">Terraria.GameContent.Events.Sandstorm.Severity</a></div><div class="ttdeci">static float Severity</div><div class="ttdef"><b>Definition</b> Sandstorm.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf_html_a192af865fff953a29bee13ac655cecbf"><div class="ttname"><a href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Terraria.Utilities.WeightedRandom.Add</a></div><div class="ttdeci">void Add(T element, double weight=1.0)</div><div class="ttdef"><b>Definition</b> WeightedRandom.cs:50</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1WeightedRandom_html"><div class="ttname"><a href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom.html">Terraria.Utilities.WeightedRandom</a></div><div class="ttdef"><b>Definition</b> WeightedRandom.cs:8</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d78/classTerraria_1_1Utilities_1_1WeightedRandom_a192af865fff953a29bee13ac655cecbf.html#a192af865fff953a29bee13ac655cecbf">Terraria.Utilities.WeightedRandom&lt; T &gt;.Add()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd8308b7b2c8e2abc50ce1934c95920f.html#afd8308b7b2c8e2abc50ce1934c95920f">Terraria.Main.dust</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aee73474c7805b1ea345a38caf0124a35.html#aee73474c7805b1ea345a38caf0124a35">Terraria.Main.gamePaused</a>, <a class="el" href="../../d0/d62/classTerraria_1_1SceneMetrics_ac81999ec1f083d1f8d6e76c019532a8e.html#ac81999ec1f083d1f8d6e76c019532a8e">Terraria.SceneMetrics.GetTileCount()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4690d0dad61160420cf390b0c4788c78.html#a4690d0dad61160420cf390b0c4788c78">Terraria.Main.gfxQuality</a>, <a class="el" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a64e89caf51dc5e8ef27a2f3c56c015fc.html#a64e89caf51dc5e8ef27a2f3c56c015fc">Terraria.GameContent.Events.Sandstorm.HandleEffectAndSky()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a88e8261f8cb52a93361d232fd40ba068.html#a88e8261f8cb52a93361d232fd40ba068">Terraria.Main.maxScreenW</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a977a36a9376966862406a3094e3b70ab.html#a977a36a9376966862406a3094e3b70ab">Terraria.Dust.NewDust()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a237b6e7a7a5bbbed9191bc96e3a51e4b.html#a237b6e7a7a5bbbed9191bc96e3a51e4b">Terraria.Utils.RandomVector2()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a14f2c9775bba3e9a62b1ef4206ef306a.html#a14f2c9775bba3e9a62b1ef4206ef306a">Terraria.Dust.SandStormCount</a>, <a class="el" href="../../d0/d62/classTerraria_1_1SceneMetrics_a7751c1a48f0642781d715dde8f866dd1.html#a7751c1a48f0642781d715dde8f866dd1">Terraria.SceneMetrics.SandTileCount</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a9eb19b363b15be2983b60ad6e973c616.html#a9eb19b363b15be2983b60ad6e973c616">Terraria.Dust.scale</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0372d39122b586f7476147e3797e8b45.html#a0372d39122b586f7476147e3797e8b45">Terraria.Main.SceneMetrics</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d02013f8d3b3236b9c18fed7f98274c.html#a6d02013f8d3b3236b9c18fed7f98274c">Terraria.Main.screenHeight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad1faaf9a13eee5a95e0f8690feb12e91.html#ad1faaf9a13eee5a95e0f8690feb12e91">Terraria.Main.screenWidth</a>, <a class="el" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_acd5365d5c225d0df55e0a1f43c04e1ce.html#acd5365d5c225d0df55e0a1f43c04e1ce">Terraria.GameContent.Events.Sandstorm.Severity</a>, <a class="el" href="../../d9/d55/classTerraria_1_1GameContent_1_1Events_1_1Sandstorm_a0184f5dbbf265939c80369fe31d76315.html#a0184f5dbbf265939c80369fe31d76315">Terraria.GameContent.Events.Sandstorm.ShouldSandstormDustPersist()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a679114d97bb21f2280feb1e25ed68356.html#a679114d97bb21f2280feb1e25ed68356">Terraria.Main.UseStormEffects</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0b78c4c78d6798cbe000761a6740608d.html#a0b78c4c78d6798cbe000761a6740608d">Terraria.Main.windSpeedCurrent</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a61b7a095a294107c19cf4018e18664d6.html#a61b7a095a294107c19cf4018e18664d6">Terraria.Player.ZoneBeach</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a96341b8439a15bcefc0f119767e24e35.html#a96341b8439a15bcefc0f119767e24e35">Terraria.Main.DoUpdate()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

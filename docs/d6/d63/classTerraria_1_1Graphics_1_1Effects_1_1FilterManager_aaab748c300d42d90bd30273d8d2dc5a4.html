@@ -121,6 +121,48 @@ $(function(){initNavTree('d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterM
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.Contains(effect))</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (effect.Active)</div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (effect.Priority &gt;= <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">_priorityThreshold</a>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">_activeFilterCount</a>--;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.Remove(effect);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            effect.Opacity = 0f;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (effect.Priority &gt;= <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">_priorityThreshold</a>)</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">_activeFilterCount</a>++;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.AddLast(effect);</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">for</span> (LinkedListNode&lt;Filter&gt; linkedListNode = <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.First; linkedListNode != <span class="keyword">null</span>; linkedListNode = linkedListNode.Next)</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            Filter value = linkedListNode.Value;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (effect.Priority &lt;= value.Priority)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.AddAfter(linkedListNode, effect);</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.AddLast(effect);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7_html_a2e5e3a3f9cec68c6ab602bbaaaf48fd7"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">Terraria.Graphics.Effects.FilterManager._activeFilterCount</a></div><div class="ttdeci">int _activeFilterCount</div><div class="ttdef"><b>Definition</b> FilterManager.cs:19</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0_html_a578052ab453af4ca1ef45d6f9d8353a0"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">Terraria.Graphics.Effects.FilterManager._activeFilters</a></div><div class="ttdeci">LinkedList&lt; Filter &gt; _activeFilters</div><div class="ttdef"><b>Definition</b> FilterManager.cs:13</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860_html_adcf6196091683b4944e35c89cd852860"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">Terraria.Graphics.Effects.FilterManager._priorityThreshold</a></div><div class="ttdeci">EffectPriority _priorityThreshold</div><div class="ttdef"><b>Definition</b> FilterManager.cs:17</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">Terraria.Graphics.Effects.FilterManager._activeFilterCount</a>, <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">Terraria.Graphics.Effects.FilterManager._activeFilters</a>, <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">Terraria.Graphics.Effects.FilterManager._priorityThreshold</a>, <a class="el" href="../../de/d0d/classTerraria_1_1Graphics_1_1Effects_1_1Filter_aef39766a54288dbaa2ac3a0570b2be19.html#aef39766a54288dbaa2ac3a0570b2be19">Terraria.Graphics.Effects.Filter.Active</a>, and <a class="el" href="../../d1/d23/classTerraria_1_1Graphics_1_1Effects_1_1GameEffect_af800b0ebaa0d932ca9d1d28845120599.html#af800b0ebaa0d932ca9d1d28845120599">Terraria.Graphics.Effects.GameEffect.Priority</a>.</p>
 
 </div>
 </div>

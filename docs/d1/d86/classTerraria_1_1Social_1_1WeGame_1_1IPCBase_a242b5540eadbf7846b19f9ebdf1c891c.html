@@ -117,6 +117,28 @@ $(function(){initNavTree('d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  171</span>    {</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9">_pipeStream</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9">_pipeStream</a>.IsConnected)</div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  176</span>            {</div>
+<div class="line"><span class="lineno">  177</span>                <a class="code hl_variable" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9">_pipeStream</a>.BeginWrite(data, 0, data.Length, <a class="code hl_function" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ebbe601c4a97b27fc1791cc7798c421.html#a8ebbe601c4a97b27fc1791cc7798c421">SendCallback</a>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  178</span>                result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  179</span>            }</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">catch</span> (IOException ex)</div>
+<div class="line"><span class="lineno">  181</span>            {</div>
+<div class="line"><span class="lineno">  182</span>                <a class="code hl_variable" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ac36f5f10469cefbfc2a358d3a9a21774.html#ac36f5f10469cefbfc2a358d3a9a21774">_pipeBrokenFlag</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  183</span>                WeGameHelper.WriteDebugString(<span class="stringliteral">&quot;Send Exception, {0}&quot;</span>, ex.Message);</div>
+<div class="line"><span class="lineno">  184</span>            }</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9_html_a52c3da3c18e2e8eadbdf6af8275cf1c9"><div class="ttname"><a href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9">Terraria.Social.WeGame.IPCBase._pipeStream</a></div><div class="ttdeci">PipeStream _pipeStream</div><div class="ttdef"><b>Definition</b> IPCBase.cs:25</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ebbe601c4a97b27fc1791cc7798c421_html_a8ebbe601c4a97b27fc1791cc7798c421"><div class="ttname"><a href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ebbe601c4a97b27fc1791cc7798c421.html#a8ebbe601c4a97b27fc1791cc7798c421">Terraria.Social.WeGame.IPCBase.SendCallback</a></div><div class="ttdeci">virtual void SendCallback(IAsyncResult result)</div><div class="ttdef"><b>Definition</b> IPCBase.cs:189</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1IPCBase_ac36f5f10469cefbfc2a358d3a9a21774_html_ac36f5f10469cefbfc2a358d3a9a21774"><div class="ttname"><a href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ac36f5f10469cefbfc2a358d3a9a21774.html#ac36f5f10469cefbfc2a358d3a9a21774">Terraria.Social.WeGame.IPCBase._pipeBrokenFlag</a></div><div class="ttdeci">volatile bool _pipeBrokenFlag</div><div class="ttdef"><b>Definition</b> IPCBase.cs:23</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_ac36f5f10469cefbfc2a358d3a9a21774.html#ac36f5f10469cefbfc2a358d3a9a21774">Terraria.Social.WeGame.IPCBase._pipeBrokenFlag</a>, <a class="el" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a52c3da3c18e2e8eadbdf6af8275cf1c9.html#a52c3da3c18e2e8eadbdf6af8275cf1c9">Terraria.Social.WeGame.IPCBase._pipeStream</a>, <a class="el" href="../../d1/d86/classTerraria_1_1Social_1_1WeGame_1_1IPCBase_a8ebbe601c4a97b27fc1791cc7798c421.html#a8ebbe601c4a97b27fc1791cc7798c421">Terraria.Social.WeGame.IPCBase.SendCallback()</a>, and <a class="el" href="../../d1/d07/classTerraria_1_1Social_1_1WeGame_1_1WeGameHelper_a67a3b77b9430515e11c98575c19b8e7e.html#a67a3b77b9430515e11c98575c19b8e7e">Terraria.Social.WeGame.WeGameHelper.WriteDebugString()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

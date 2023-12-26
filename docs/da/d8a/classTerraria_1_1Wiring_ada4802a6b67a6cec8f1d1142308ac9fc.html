@@ -117,6 +117,65 @@ $(function(){initNavTree('da/d8a/classTerraria_1_1Wiring_ada4802a6b67a6cec8f1d11
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  450</span>    {</div>
+<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_a3c56fc424ebc66cd1132bd43f11f916c.html#a3c56fc424ebc66cd1132bd43f11f916c">_numInPump</a>; i++)</div>
+<div class="line"><span class="lineno">  452</span>        {</div>
+<div class="line"><span class="lineno">  453</span>            <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_a2c0036dc101a0ae7f2082a9660e56476.html#a2c0036dc101a0ae7f2082a9660e56476">_inPumpX</a>[i];</div>
+<div class="line"><span class="lineno">  454</span>            <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_a27ba6190bac4b1fc09fe40697c5772cf.html#a27ba6190bac4b1fc09fe40697c5772cf">_inPumpY</a>[i];</div>
+<div class="line"><span class="lineno">  455</span>            <span class="keywordtype">int</span> liquid = Main.tile[num, num2].liquid;</div>
+<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> (liquid &lt;= 0)</div>
+<div class="line"><span class="lineno">  457</span>            {</div>
+<div class="line"><span class="lineno">  458</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  459</span>            }</div>
+<div class="line"><span class="lineno">  460</span>            <span class="keywordtype">byte</span> b = Main.tile[num, num2].liquidType();</div>
+<div class="line"><span class="lineno">  461</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_ad307584fc144222b9aa6b3e59dc574a9.html#ad307584fc144222b9aa6b3e59dc574a9">_numOutPump</a>; j++)</div>
+<div class="line"><span class="lineno">  462</span>            {</div>
+<div class="line"><span class="lineno">  463</span>                <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_a3b4f84278b256c641e45ca131f13dedd.html#a3b4f84278b256c641e45ca131f13dedd">_outPumpX</a>[j];</div>
+<div class="line"><span class="lineno">  464</span>                <span class="keywordtype">int</span> num4 = <a class="code hl_variable" href="../../da/d8a/classTerraria_1_1Wiring_ae464a0c54797e0cc7fe9a123520d4bf3.html#ae464a0c54797e0cc7fe9a123520d4bf3">_outPumpY</a>[j];</div>
+<div class="line"><span class="lineno">  465</span>                <span class="keywordtype">int</span> liquid2 = Main.tile[num3, num4].liquid;</div>
+<div class="line"><span class="lineno">  466</span>                <span class="keywordflow">if</span> (liquid2 &gt;= 255)</div>
+<div class="line"><span class="lineno">  467</span>                {</div>
+<div class="line"><span class="lineno">  468</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  469</span>                }</div>
+<div class="line"><span class="lineno">  470</span>                <span class="keywordtype">byte</span> b2 = Main.tile[num3, num4].liquidType();</div>
+<div class="line"><span class="lineno">  471</span>                <span class="keywordflow">if</span> (liquid2 == 0)</div>
+<div class="line"><span class="lineno">  472</span>                {</div>
+<div class="line"><span class="lineno">  473</span>                    b2 = b;</div>
+<div class="line"><span class="lineno">  474</span>                }</div>
+<div class="line"><span class="lineno">  475</span>                <span class="keywordflow">if</span> (b2 == b)</div>
+<div class="line"><span class="lineno">  476</span>                {</div>
+<div class="line"><span class="lineno">  477</span>                    <span class="keywordtype">int</span> num5 = liquid;</div>
+<div class="line"><span class="lineno">  478</span>                    <span class="keywordflow">if</span> (num5 + liquid2 &gt; 255)</div>
+<div class="line"><span class="lineno">  479</span>                    {</div>
+<div class="line"><span class="lineno">  480</span>                        num5 = 255 - liquid2;</div>
+<div class="line"><span class="lineno">  481</span>                    }</div>
+<div class="line"><span class="lineno">  482</span>                    Main.tile[num3, num4].liquid += (byte)num5;</div>
+<div class="line"><span class="lineno">  483</span>                    Main.tile[num, num2].liquid -= (byte)num5;</div>
+<div class="line"><span class="lineno">  484</span>                    liquid = Main.tile[num, num2].liquid;</div>
+<div class="line"><span class="lineno">  485</span>                    Main.tile[num3, num4].liquidType(b);</div>
+<div class="line"><span class="lineno">  486</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(num3, num4);</div>
+<div class="line"><span class="lineno">  487</span>                    <span class="keywordflow">if</span> (Main.tile[num, num2].liquid == 0)</div>
+<div class="line"><span class="lineno">  488</span>                    {</div>
+<div class="line"><span class="lineno">  489</span>                        Main.tile[num, num2].liquidType(0);</div>
+<div class="line"><span class="lineno">  490</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(num, num2);</div>
+<div class="line"><span class="lineno">  491</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  492</span>                    }</div>
+<div class="line"><span class="lineno">  493</span>                }</div>
+<div class="line"><span class="lineno">  494</span>            }</div>
+<div class="line"><span class="lineno">  495</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(num, num2);</div>
+<div class="line"><span class="lineno">  496</span>        }</div>
+<div class="line"><span class="lineno">  497</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_a27ba6190bac4b1fc09fe40697c5772cf_html_a27ba6190bac4b1fc09fe40697c5772cf"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_a27ba6190bac4b1fc09fe40697c5772cf.html#a27ba6190bac4b1fc09fe40697c5772cf">Terraria.Wiring._inPumpY</a></div><div class="ttdeci">static int[] _inPumpY</div><div class="ttdef"><b>Definition</b> Wiring.cs:43</div></div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_a2c0036dc101a0ae7f2082a9660e56476_html_a2c0036dc101a0ae7f2082a9660e56476"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_a2c0036dc101a0ae7f2082a9660e56476.html#a2c0036dc101a0ae7f2082a9660e56476">Terraria.Wiring._inPumpX</a></div><div class="ttdeci">static int[] _inPumpX</div><div class="ttdef"><b>Definition</b> Wiring.cs:41</div></div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_a3b4f84278b256c641e45ca131f13dedd_html_a3b4f84278b256c641e45ca131f13dedd"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_a3b4f84278b256c641e45ca131f13dedd.html#a3b4f84278b256c641e45ca131f13dedd">Terraria.Wiring._outPumpX</a></div><div class="ttdeci">static int[] _outPumpX</div><div class="ttdef"><b>Definition</b> Wiring.cs:47</div></div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_a3c56fc424ebc66cd1132bd43f11f916c_html_a3c56fc424ebc66cd1132bd43f11f916c"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_a3c56fc424ebc66cd1132bd43f11f916c.html#a3c56fc424ebc66cd1132bd43f11f916c">Terraria.Wiring._numInPump</a></div><div class="ttdeci">static int _numInPump</div><div class="ttdef"><b>Definition</b> Wiring.cs:45</div></div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_ad307584fc144222b9aa6b3e59dc574a9_html_ad307584fc144222b9aa6b3e59dc574a9"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_ad307584fc144222b9aa6b3e59dc574a9.html#ad307584fc144222b9aa6b3e59dc574a9">Terraria.Wiring._numOutPump</a></div><div class="ttdeci">static int _numOutPump</div><div class="ttdef"><b>Definition</b> Wiring.cs:51</div></div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_ae464a0c54797e0cc7fe9a123520d4bf3_html_ae464a0c54797e0cc7fe9a123520d4bf3"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_ae464a0c54797e0cc7fe9a123520d4bf3.html#ae464a0c54797e0cc7fe9a123520d4bf3">Terraria.Wiring._outPumpY</a></div><div class="ttdeci">static int[] _outPumpY</div><div class="ttdef"><b>Definition</b> Wiring.cs:49</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a2c0036dc101a0ae7f2082a9660e56476.html#a2c0036dc101a0ae7f2082a9660e56476">Terraria.Wiring._inPumpX</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a27ba6190bac4b1fc09fe40697c5772cf.html#a27ba6190bac4b1fc09fe40697c5772cf">Terraria.Wiring._inPumpY</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a3c56fc424ebc66cd1132bd43f11f916c.html#a3c56fc424ebc66cd1132bd43f11f916c">Terraria.Wiring._numInPump</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ad307584fc144222b9aa6b3e59dc574a9.html#ad307584fc144222b9aa6b3e59dc574a9">Terraria.Wiring._numOutPump</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a3b4f84278b256c641e45ca131f13dedd.html#a3b4f84278b256c641e45ca131f13dedd">Terraria.Wiring._outPumpX</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae464a0c54797e0cc7fe9a123520d4bf3.html#ae464a0c54797e0cc7fe9a123520d4bf3">Terraria.Wiring._outPumpY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ac88be77e240e0719cae066d4e14b8347.html#ac88be77e240e0719cae066d4e14b8347">Terraria.Wiring.TripWire()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

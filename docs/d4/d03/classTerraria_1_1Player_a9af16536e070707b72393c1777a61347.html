@@ -126,6 +126,90 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a9af16536e070707b72393c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49103</span>    {</div>
+<div class="line"><span class="lineno">49104</span>        pullTheBobber = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49105</span>        baitTypeUsed = 0;</div>
+<div class="line"><span class="lineno">49106</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">49107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 54; i &lt; 58; i++)</div>
+<div class="line"><span class="lineno">49108</span>        {</div>
+<div class="line"><span class="lineno">49109</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].stack &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].bait &gt; 0)</div>
+<div class="line"><span class="lineno">49110</span>            {</div>
+<div class="line"><span class="lineno">49111</span>                num = i;</div>
+<div class="line"><span class="lineno">49112</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">49113</span>            }</div>
+<div class="line"><span class="lineno">49114</span>        }</div>
+<div class="line"><span class="lineno">49115</span>        <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno">49116</span>        {</div>
+<div class="line"><span class="lineno">49117</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 50; j++)</div>
+<div class="line"><span class="lineno">49118</span>            {</div>
+<div class="line"><span class="lineno">49119</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[j].stack &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[j].bait &gt; 0)</div>
+<div class="line"><span class="lineno">49120</span>                {</div>
+<div class="line"><span class="lineno">49121</span>                    num = j;</div>
+<div class="line"><span class="lineno">49122</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">49123</span>                }</div>
+<div class="line"><span class="lineno">49124</span>            }</div>
+<div class="line"><span class="lineno">49125</span>        }</div>
+<div class="line"><span class="lineno">49126</span>        <span class="keywordflow">if</span> (num &lt;= -1)</div>
+<div class="line"><span class="lineno">49127</span>        {</div>
+<div class="line"><span class="lineno">49128</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">49129</span>        }</div>
+<div class="line"><span class="lineno">49130</span>        Item item = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num];</div>
+<div class="line"><span class="lineno">49131</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49132</span>        <span class="keywordtype">float</span> num2 = 1f + (float)item.<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_ae9bed95eb0c53b72bf4211435beb5e84.html#ae9bed95eb0c53b72bf4211435beb5e84">bait</a> / 6f;</div>
+<div class="line"><span class="lineno">49133</span>        <span class="keywordflow">if</span> (num2 &lt; 1f)</div>
+<div class="line"><span class="lineno">49134</span>        {</div>
+<div class="line"><span class="lineno">49135</span>            num2 = 1f;</div>
+<div class="line"><span class="lineno">49136</span>        }</div>
+<div class="line"><span class="lineno">49137</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0696aa654e577b6ab4381ba355897cbb.html#a0696aa654e577b6ab4381ba355897cbb">accTackleBox</a>)</div>
+<div class="line"><span class="lineno">49138</span>        {</div>
+<div class="line"><span class="lineno">49139</span>            num2 += 1f;</div>
+<div class="line"><span class="lineno">49140</span>        }</div>
+<div class="line"><span class="lineno">49141</span>        <span class="keywordflow">if</span> (Main.rand.NextFloat() * num2 &lt; 1f)</div>
+<div class="line"><span class="lineno">49142</span>        {</div>
+<div class="line"><span class="lineno">49143</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49144</span>        }</div>
+<div class="line"><span class="lineno">49145</span>        <span class="keywordflow">if</span> (bobber.localAI[1] == -1f)</div>
+<div class="line"><span class="lineno">49146</span>        {</div>
+<div class="line"><span class="lineno">49147</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49148</span>        }</div>
+<div class="line"><span class="lineno">49149</span>        <span class="keywordflow">if</span> (bobber.localAI[1] &gt; 0f)</div>
+<div class="line"><span class="lineno">49150</span>        {</div>
+<div class="line"><span class="lineno">49151</span>            Item item2 = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">49152</span>            item2.SetDefaults((<span class="keywordtype">int</span>)bobber.localAI[1]);</div>
+<div class="line"><span class="lineno">49153</span>            <span class="keywordflow">if</span> (item2.rare &lt; 0)</div>
+<div class="line"><span class="lineno">49154</span>            {</div>
+<div class="line"><span class="lineno">49155</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49156</span>            }</div>
+<div class="line"><span class="lineno">49157</span>        }</div>
+<div class="line"><span class="lineno">49158</span>        baitTypeUsed = item.type;</div>
+<div class="line"><span class="lineno">49159</span>        <span class="keywordflow">if</span> (baitTypeUsed == 2895)</div>
+<div class="line"><span class="lineno">49160</span>        {</div>
+<div class="line"><span class="lineno">49161</span>            flag = Main.rand.Next(20) == 0;</div>
+<div class="line"><span class="lineno">49162</span>        }</div>
+<div class="line"><span class="lineno">49163</span>        <span class="keywordflow">if</span> (baitTypeUsed == 2673)</div>
+<div class="line"><span class="lineno">49164</span>        {</div>
+<div class="line"><span class="lineno">49165</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49166</span>        }</div>
+<div class="line"><span class="lineno">49167</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">49168</span>        {</div>
+<div class="line"><span class="lineno">49169</span>            <span class="keywordflow">if</span> (item.type == 4361 || item.type == 4362)</div>
+<div class="line"><span class="lineno">49170</span>            {</div>
+<div class="line"><span class="lineno">49171</span>                <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.LadyBugKilled(base.Center, item.type == 4362);</div>
+<div class="line"><span class="lineno">49172</span>            }</div>
+<div class="line"><span class="lineno">49173</span>            item.stack--;</div>
+<div class="line"><span class="lineno">49174</span>            <span class="keywordflow">if</span> (item.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">49175</span>            {</div>
+<div class="line"><span class="lineno">49176</span>                item.SetDefaults();</div>
+<div class="line"><span class="lineno">49177</span>            }</div>
+<div class="line"><span class="lineno">49178</span>        }</div>
+<div class="line"><span class="lineno">49179</span>        pullTheBobber = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49180</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Item_ae9bed95eb0c53b72bf4211435beb5e84_html_ae9bed95eb0c53b72bf4211435beb5e84"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_ae9bed95eb0c53b72bf4211435beb5e84.html#ae9bed95eb0c53b72bf4211435beb5e84">Terraria.Item.bait</a></div><div class="ttdeci">int bait</div><div class="ttdef"><b>Definition</b> Item.cs:99</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0696aa654e577b6ab4381ba355897cbb_html_a0696aa654e577b6ab4381ba355897cbb"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0696aa654e577b6ab4381ba355897cbb.html#a0696aa654e577b6ab4381ba355897cbb">Terraria.Player.accTackleBox</a></div><div class="ttdeci">bool accTackleBox</div><div class="ttdef"><b>Definition</b> Player.cs:961</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_ae9bed95eb0c53b72bf4211435beb5e84.html#ae9bed95eb0c53b72bf4211435beb5e84">Terraria.Item.bait</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_aac117a05bb588420e318c1dd89084245.html#aac117a05bb588420e318c1dd89084245">Terraria.NPC.LadyBugKilled()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">Terraria.Projectile.localAI</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4298ce75f8fc2a75f19804ca2acd4fb6.html#a4298ce75f8fc2a75f19804ca2acd4fb6">Terraria.Item.rare</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

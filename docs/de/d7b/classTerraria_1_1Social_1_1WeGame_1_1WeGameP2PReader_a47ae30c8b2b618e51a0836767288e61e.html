@@ -131,6 +131,43 @@ $(function(){initNavTree('de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PR
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>        uint num = 0u;</div>
+<div class="line"><span class="lineno">  158</span>        lock (<a class="code hl_variable" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf.html#a76a8676d4f9e9e182eef726e634a2cbf">_pendingReadBuffers</a>)</div>
+<div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf.html#a76a8676d4f9e9e182eef726e634a2cbf">_pendingReadBuffers</a>.ContainsKey(user))</div>
+<div class="line"><span class="lineno">  161</span>            {</div>
+<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  163</span>            }</div>
+<div class="line"><span class="lineno">  164</span>            Queue&lt;ReadResult&gt; queue = <a class="code hl_variable" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf.html#a76a8676d4f9e9e182eef726e634a2cbf">_pendingReadBuffers</a>[user];</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">while</span> (queue.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                ReadResult readResult = queue.Peek();</div>
+<div class="line"><span class="lineno">  168</span>                uint num2 = Math.Min((uint)bufferSize - num, readResult.Size - readResult.Offset);</div>
+<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">  170</span>                {</div>
+<div class="line"><span class="lineno">  171</span>                    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><span class="lineno">  172</span>                }</div>
+<div class="line"><span class="lineno">  173</span>                Array.Copy(readResult.Data, readResult.Offset, buffer, bufferOffset + num, num2);</div>
+<div class="line"><span class="lineno">  174</span>                <span class="keywordflow">if</span> (num2 == readResult.Size - readResult.Offset)</div>
+<div class="line"><span class="lineno">  175</span>                {</div>
+<div class="line"><span class="lineno">  176</span>                    <a class="code hl_variable" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a018a0ad921c106f0f7303dd349fe36a5.html#a018a0ad921c106f0f7303dd349fe36a5">_bufferPool</a>.Enqueue(queue.Dequeue().Data);</div>
+<div class="line"><span class="lineno">  177</span>                }</div>
+<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  179</span>                {</div>
+<div class="line"><span class="lineno">  180</span>                    readResult.Offset += num2;</div>
+<div class="line"><span class="lineno">  181</span>                }</div>
+<div class="line"><span class="lineno">  182</span>                num += num2;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a018a0ad921c106f0f7303dd349fe36a5_html_a018a0ad921c106f0f7303dd349fe36a5"><div class="ttname"><a href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a018a0ad921c106f0f7303dd349fe36a5.html#a018a0ad921c106f0f7303dd349fe36a5">Terraria.Social.WeGame.WeGameP2PReader._bufferPool</a></div><div class="ttdeci">Queue&lt; byte[]&gt; _bufferPool</div><div class="ttdef"><b>Definition</b> WeGameP2PReader.cs:35</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf_html_a76a8676d4f9e9e182eef726e634a2cbf"><div class="ttname"><a href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf.html#a76a8676d4f9e9e182eef726e634a2cbf">Terraria.Social.WeGame.WeGameP2PReader._pendingReadBuffers</a></div><div class="ttdeci">Dictionary&lt; RailID, Queue&lt; ReadResult &gt; &gt; _pendingReadBuffers</div><div class="ttdef"><b>Definition</b> WeGameP2PReader.cs:31</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a018a0ad921c106f0f7303dd349fe36a5.html#a018a0ad921c106f0f7303dd349fe36a5">Terraria.Social.WeGame.WeGameP2PReader._bufferPool</a>, <a class="el" href="../../de/d7b/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_a76a8676d4f9e9e182eef726e634a2cbf.html#a76a8676d4f9e9e182eef726e634a2cbf">Terraria.Social.WeGame.WeGameP2PReader._pendingReadBuffers</a>, <a class="el" href="../../dc/d6d/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_1_1ReadResult_a80f3dee0145d3df5676e842c709e2f10.html#a80f3dee0145d3df5676e842c709e2f10">Terraria.Social.WeGame.WeGameP2PReader.ReadResult.Data</a>, <a class="el" href="../../dc/d6d/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_1_1ReadResult_ad3a9d2dd4fef1ba22bd5943b5934806c.html#ad3a9d2dd4fef1ba22bd5943b5934806c">Terraria.Social.WeGame.WeGameP2PReader.ReadResult.Offset</a>, and <a class="el" href="../../dc/d6d/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PReader_1_1ReadResult_a2b3df6112102ac70058a43c13faacb60.html#a2b3df6112102ac70058a43c13faacb60">Terraria.Social.WeGame.WeGameP2PReader.ReadResult.Size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d78/classTerraria_1_1Social_1_1WeGame_1_1NetSocialModule_a0d2f54516ff9b8606dba238edabb9f0d.html#a0d2f54516ff9b8606dba238edabb9f0d">Terraria.Social.WeGame.NetSocialModule.Receive()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

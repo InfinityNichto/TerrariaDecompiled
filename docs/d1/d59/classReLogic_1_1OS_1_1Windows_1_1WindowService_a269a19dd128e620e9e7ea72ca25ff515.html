@@ -119,6 +119,16 @@ $(function(){initNavTree('d1/d59/classReLogic_1_1OS_1_1Windows_1_1WindowService_
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d82/interfaceReLogic_1_1OS_1_1IWindowService_aad6e190490a44cb612d8ace27b38e156.html#aad6e190490a44cb612d8ace27b38e156">ReLogic.OS.IWindowService</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        IntPtr stdHandle = NativeMethods.GetStdHandle(NativeMethods.StdHandleType.Input);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (NativeMethods.GetConsoleMode(stdHandle, out var lpMode))</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            lpMode = ((!enabled) ? (lpMode &amp; ~NativeMethods.ConsoleMode.QuickEditMode) : (lpMode | NativeMethods.ConsoleMode.QuickEditMode));</div>
+<div class="line"><span class="lineno">   29</span>            NativeMethods.SetConsoleMode(stdHandle, lpMode);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d8f/classReLogic_1_1OS_1_1Windows_1_1NativeMethods_a10e1fc207a5c9cb5c9c330fbeb8106be.html#a10e1fc207a5c9cb5c9c330fbeb8106be">ReLogic.OS.Windows.NativeMethods.GetConsoleMode()</a>, <a class="el" href="../../d2/d8f/classReLogic_1_1OS_1_1Windows_1_1NativeMethods_a6cfa49969fc66c813b057563e2808f63.html#a6cfa49969fc66c813b057563e2808f63">ReLogic.OS.Windows.NativeMethods.GetStdHandle()</a>, and <a class="el" href="../../d2/d8f/classReLogic_1_1OS_1_1Windows_1_1NativeMethods_a9ecff7d9489f6657235d82cb2822213b.html#a9ecff7d9489f6657235d82cb2822213b">ReLogic.OS.Windows.NativeMethods.SetConsoleMode()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

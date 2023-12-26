@@ -121,6 +121,52 @@ $(function(){initNavTree('dd/db1/classTerraria_1_1GameContent_1_1Generation_1_1S
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        Queue&lt;Point&gt; queue = <span class="keyword">new</span> Queue&lt;Point&gt;();</div>
+<div class="line"><span class="lineno">   20</span>        HashSet&lt;Point16&gt; hashSet = <span class="keyword">new</span> HashSet&lt;Point16&gt;();</div>
+<div class="line"><span class="lineno">   21</span>        queue.Enqueue(origin);</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../dd/db1/classTerraria_1_1GameContent_1_1Generation_1_1ShapeFloodFill_a23fd5a9dbbfa24d399e64a467b962add.html#a23fd5a9dbbfa24d399e64a467b962add">_maximumActions</a>;</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">while</span> (queue.Count &gt; 0 &amp;&amp; num &gt; 0)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            Point point = queue.Dequeue();</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (!hashSet.Contains(<span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(point.X, point.Y)) &amp;&amp; <a class="code hl_function" href="../../da/d11/classTerraria_1_1WorldBuilding_1_1GenShape_ac7f152b8b3efbdad08bf11a36c98f085.html#ac7f152b8b3efbdad08bf11a36c98f085">UnitApply</a>(action, origin, point.X, point.Y))</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                hashSet.Add(<span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(point));</div>
+<div class="line"><span class="lineno">   29</span>                num--;</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">if</span> (point.X + 1 &lt; Main.maxTilesX - 1)</div>
+<div class="line"><span class="lineno">   31</span>                {</div>
+<div class="line"><span class="lineno">   32</span>                    queue.Enqueue(<span class="keyword">new</span> Point(point.X + 1, point.Y));</div>
+<div class="line"><span class="lineno">   33</span>                }</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">if</span> (point.X - 1 &gt;= 1)</div>
+<div class="line"><span class="lineno">   35</span>                {</div>
+<div class="line"><span class="lineno">   36</span>                    queue.Enqueue(<span class="keyword">new</span> Point(point.X - 1, point.Y));</div>
+<div class="line"><span class="lineno">   37</span>                }</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span> (point.Y + 1 &lt; Main.maxTilesY - 1)</div>
+<div class="line"><span class="lineno">   39</span>                {</div>
+<div class="line"><span class="lineno">   40</span>                    queue.Enqueue(<span class="keyword">new</span> Point(point.X, point.Y + 1));</div>
+<div class="line"><span class="lineno">   41</span>                }</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (point.Y - 1 &gt;= 1)</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    queue.Enqueue(<span class="keyword">new</span> Point(point.X, point.Y - 1));</div>
+<div class="line"><span class="lineno">   45</span>                }</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">while</span> (queue.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            Point item = queue.Dequeue();</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (!hashSet.Contains(<span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(item.X, item.Y)))</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                queue.Enqueue(item);</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> queue.Count == 0;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Generation_1_1ShapeFloodFill_a23fd5a9dbbfa24d399e64a467b962add_html_a23fd5a9dbbfa24d399e64a467b962add"><div class="ttname"><a href="../../dd/db1/classTerraria_1_1GameContent_1_1Generation_1_1ShapeFloodFill_a23fd5a9dbbfa24d399e64a467b962add.html#a23fd5a9dbbfa24d399e64a467b962add">Terraria.GameContent.Generation.ShapeFloodFill._maximumActions</a></div><div class="ttdeci">int _maximumActions</div><div class="ttdef"><b>Definition</b> ShapeFloodFill.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenShape_ac7f152b8b3efbdad08bf11a36c98f085_html_ac7f152b8b3efbdad08bf11a36c98f085"><div class="ttname"><a href="../../da/d11/classTerraria_1_1WorldBuilding_1_1GenShape_ac7f152b8b3efbdad08bf11a36c98f085.html#ac7f152b8b3efbdad08bf11a36c98f085">Terraria.WorldBuilding.GenShape.UnitApply</a></div><div class="ttdeci">bool UnitApply(GenAction action, Point origin, int x, int y, params object[] args)</div><div class="ttdef"><b>Definition</b> GenShape.cs:13</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_html"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Terraria.DataStructures.Point16</a></div><div class="ttdef"><b>Definition</b> Point16.cs:6</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/db1/classTerraria_1_1GameContent_1_1Generation_1_1ShapeFloodFill_a23fd5a9dbbfa24d399e64a467b962add.html#a23fd5a9dbbfa24d399e64a467b962add">Terraria.GameContent.Generation.ShapeFloodFill._maximumActions</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, and <a class="el" href="../../da/d11/classTerraria_1_1WorldBuilding_1_1GenShape_ac7f152b8b3efbdad08bf11a36c98f085.html#ac7f152b8b3efbdad08bf11a36c98f085">Terraria.WorldBuilding.GenShape.UnitApply()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

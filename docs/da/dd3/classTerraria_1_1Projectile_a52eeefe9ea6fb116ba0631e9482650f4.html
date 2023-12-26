@@ -117,6 +117,176 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a52eeefe9ea6fb116ba
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">59149</span>    {</div>
+<div class="line"><span class="lineno">59150</span>        <span class="comment">//IL_003e: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">59151</span>        <span class="comment">//IL_0027: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">59152</span>        <span class="comment">//IL_002c: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">59153</span>        <span class="comment">//IL_008d: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">59154</span>        <span class="comment">//IL_0092: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">59155</span>        <span class="keywordtype">float</span> num = 300f;</div>
+<div class="line"><span class="lineno">59156</span>        <a class="code hl_struct" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">SlotId</a> val;</div>
+<div class="line"><span class="lineno">59157</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_ada285a4b7e9fbdda91ced68508997a3d.html#ada285a4b7e9fbdda91ced68508997a3d">soundDelay</a> == 0)</div>
+<div class="line"><span class="lineno">59158</span>        {</div>
+<div class="line"><span class="lineno">59159</span>            <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_ada285a4b7e9fbdda91ced68508997a3d.html#ada285a4b7e9fbdda91ced68508997a3d">soundDelay</a> = -1;</div>
+<div class="line"><span class="lineno">59160</span>            <span class="keywordtype">float</span>[] array = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>;</div>
+<div class="line"><span class="lineno">59161</span>            val = <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a60780f059789de8541120c6cdb85954d.html#a60780f059789de8541120c6cdb85954d">PlayTrackedSound</a>(<a class="code hl_class" href="../../de/dce/classTerraria_1_1ID_1_1SoundID.html">SoundID</a>.<a class="code hl_variable" href="../../de/dce/classTerraria_1_1ID_1_1SoundID_aeafb9df2e6322ad9cfa5a887e4091e0e.html#aeafb9df2e6322ad9cfa5a887e4091e0e">DD2_BookStaffTwisterLoop</a>, base.Center);</div>
+<div class="line"><span class="lineno">59162</span>            array[1] = ((<a class="code hl_struct" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">SlotId</a>)(ref val)).ToFloat();</div>
+<div class="line"><span class="lineno">59163</span>        }</div>
+<div class="line"><span class="lineno">59164</span>        <a class="code hl_class" href="../../da/de5/classTerraria_1_1Audio_1_1ActiveSound.html">ActiveSound</a> activeSound = <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a96f4e765a0f1ed2e5bd375175956e969.html#a96f4e765a0f1ed2e5bd375175956e969">GetActiveSound</a>(<a class="code hl_struct" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">SlotId</a>.<a class="code hl_function" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ad0e13c2958741f3da355eaac58abdfc5.html#ad0e13c2958741f3da355eaac58abdfc5">FromFloat</a>(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[1]));</div>
+<div class="line"><span class="lineno">59165</span>        <span class="keywordflow">if</span> (activeSound != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">59166</span>        {</div>
+<div class="line"><span class="lineno">59167</span>            activeSound.Position = base.Center;</div>
+<div class="line"><span class="lineno">59168</span>            activeSound.Volume = 1f - Math.Max(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] - (num - 15f), 0f) / 15f;</div>
+<div class="line"><span class="lineno">59169</span>        }</div>
+<div class="line"><span class="lineno">59170</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">59171</span>        {</div>
+<div class="line"><span class="lineno">59172</span>            <span class="keywordtype">float</span>[] array2 = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>;</div>
+<div class="line"><span class="lineno">59173</span>            val = <a class="code hl_struct" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">SlotId</a>.<a class="code hl_variable" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ab9210169eaafc9912216f2ec3a008779.html#ab9210169eaafc9912216f2ec3a008779">Invalid</a>;</div>
+<div class="line"><span class="lineno">59174</span>            array2[1] = ((<a class="code hl_struct" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">SlotId</a>)(ref val)).ToFloat();</div>
+<div class="line"><span class="lineno">59175</span>        }</div>
+<div class="line"><span class="lineno">59176</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &gt;= 16f &amp;&amp; <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &lt; num - 15f)</div>
+<div class="line"><span class="lineno">59177</span>        {</div>
+<div class="line"><span class="lineno">59178</span>            <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] = num - 15f;</div>
+<div class="line"><span class="lineno">59179</span>        }</div>
+<div class="line"><span class="lineno">59180</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] += 1f;</div>
+<div class="line"><span class="lineno">59181</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &gt;= num)</div>
+<div class="line"><span class="lineno">59182</span>        {</div>
+<div class="line"><span class="lineno">59183</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Kill</a>();</div>
+<div class="line"><span class="lineno">59184</span>        }</div>
+<div class="line"><span class="lineno">59185</span>        Vector2 top = base.Top;</div>
+<div class="line"><span class="lineno">59186</span>        Vector2 bottom = base.Bottom;</div>
+<div class="line"><span class="lineno">59187</span>        Vector2 vector = Vector2.Lerp(top, bottom, 0.5f);</div>
+<div class="line"><span class="lineno">59188</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(0f, bottom.Y - top.Y);</div>
+<div class="line"><span class="lineno">59189</span>        vector2.X = vector2.Y * 0.2f;</div>
+<div class="line"><span class="lineno">59190</span>        <span class="keywordtype">int</span> num2 = 16;</div>
+<div class="line"><span class="lineno">59191</span>        <span class="keywordtype">int</span> num3 = 160;</div>
+<div class="line"><span class="lineno">59192</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)</div>
+<div class="line"><span class="lineno">59193</span>        {</div>
+<div class="line"><span class="lineno">59194</span>            Vector2 vector3 = <span class="keyword">new</span> Vector2(base.Center.X - (<span class="keywordtype">float</span>)(num2 / 2), <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y + (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a> - (<span class="keywordtype">float</span>)num3);</div>
+<div class="line"><span class="lineno">59195</span>            <span class="keywordflow">if</span> (Collision.SolidCollision(vector3, num2, num3) || Collision.WetCollision(vector3, num2, num3))</div>
+<div class="line"><span class="lineno">59196</span>            {</div>
+<div class="line"><span class="lineno">59197</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &gt; 0f)</div>
+<div class="line"><span class="lineno">59198</span>                {</div>
+<div class="line"><span class="lineno">59199</span>                    velocity.Y = 0f;</div>
+<div class="line"><span class="lineno">59200</span>                }</div>
+<div class="line"><span class="lineno">59201</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &gt; -4f)</div>
+<div class="line"><span class="lineno">59202</span>                {</div>
+<div class="line"><span class="lineno">59203</span>                    velocity.Y -= 2f;</div>
+<div class="line"><span class="lineno">59204</span>                }</div>
+<div class="line"><span class="lineno">59205</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">59206</span>                {</div>
+<div class="line"><span class="lineno">59207</span>                    velocity.Y -= 4f;</div>
+<div class="line"><span class="lineno">59208</span>                    <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] += 2f;</div>
+<div class="line"><span class="lineno">59209</span>                }</div>
+<div class="line"><span class="lineno">59210</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &lt; -16f)</div>
+<div class="line"><span class="lineno">59211</span>                {</div>
+<div class="line"><span class="lineno">59212</span>                    velocity.Y = -16f;</div>
+<div class="line"><span class="lineno">59213</span>                }</div>
+<div class="line"><span class="lineno">59214</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">59215</span>            }</div>
+<div class="line"><span class="lineno">59216</span>            <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] -= 1f;</div>
+<div class="line"><span class="lineno">59217</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &lt; 0f)</div>
+<div class="line"><span class="lineno">59218</span>            {</div>
+<div class="line"><span class="lineno">59219</span>                <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] = 0f;</div>
+<div class="line"><span class="lineno">59220</span>            }</div>
+<div class="line"><span class="lineno">59221</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &lt; 0f)</div>
+<div class="line"><span class="lineno">59222</span>            {</div>
+<div class="line"><span class="lineno">59223</span>                velocity.Y = 0f;</div>
+<div class="line"><span class="lineno">59224</span>            }</div>
+<div class="line"><span class="lineno">59225</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &lt; 4f)</div>
+<div class="line"><span class="lineno">59226</span>            {</div>
+<div class="line"><span class="lineno">59227</span>                velocity.Y += 2f;</div>
+<div class="line"><span class="lineno">59228</span>            }</div>
+<div class="line"><span class="lineno">59229</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">59230</span>            {</div>
+<div class="line"><span class="lineno">59231</span>                velocity.Y += 4f;</div>
+<div class="line"><span class="lineno">59232</span>            }</div>
+<div class="line"><span class="lineno">59233</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y &gt; 16f)</div>
+<div class="line"><span class="lineno">59234</span>            {</div>
+<div class="line"><span class="lineno">59235</span>                velocity.Y = 16f;</div>
+<div class="line"><span class="lineno">59236</span>            }</div>
+<div class="line"><span class="lineno">59237</span>        }</div>
+<div class="line"><span class="lineno">59238</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &lt; num - 30f)</div>
+<div class="line"><span class="lineno">59239</span>        {</div>
+<div class="line"><span class="lineno">59240</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 1; j++)</div>
+<div class="line"><span class="lineno">59241</span>            {</div>
+<div class="line"><span class="lineno">59242</span>                <span class="keywordtype">float</span> value = -1f;</div>
+<div class="line"><span class="lineno">59243</span>                <span class="keywordtype">float</span> value2 = 0.9f;</div>
+<div class="line"><span class="lineno">59244</span>                <span class="keywordtype">float</span> amount = Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">59245</span>                Vector2 vector4 = <span class="keyword">new</span> Vector2(MathHelper.Lerp(0.1f, 1f, Main.rand.NextFloat()), MathHelper.Lerp(value, value2, amount));</div>
+<div class="line"><span class="lineno">59246</span>                vector4.X *= MathHelper.Lerp(2.2f, 0.6f, amount);</div>
+<div class="line"><span class="lineno">59247</span>                vector4.X *= -1f;</div>
+<div class="line"><span class="lineno">59248</span>                Vector2 vector5 = <span class="keyword">new</span> Vector2(6f, 10f);</div>
+<div class="line"><span class="lineno">59249</span>                Vector2 vector6 = vector + vector2 * vector4 * 0.5f + vector5;</div>
+<div class="line"><span class="lineno">59250</span>                Dust dust = Main.dust[Dust.NewDust(vector6, 0, 0, 274)];</div>
+<div class="line"><span class="lineno">59251</span>                dust.position = vector6;</div>
+<div class="line"><span class="lineno">59252</span>                dust.fadeIn = 1.3f;</div>
+<div class="line"><span class="lineno">59253</span>                dust.scale = 0.87f;</div>
+<div class="line"><span class="lineno">59254</span>                dust.alpha = 211;</div>
+<div class="line"><span class="lineno">59255</span>                <span class="keywordflow">if</span> (vector4.X &gt; -1.2f)</div>
+<div class="line"><span class="lineno">59256</span>                {</div>
+<div class="line"><span class="lineno">59257</span>                    dust.velocity.X = 1f + Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">59258</span>                }</div>
+<div class="line"><span class="lineno">59259</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">59260</span>                dust.velocity.Y = Main.rand.NextFloat() * -0.5f - 1.3f;</div>
+<div class="line"><span class="lineno">59261</span>                dust.velocity.X += velocity.X * 2.1f;</div>
+<div class="line"><span class="lineno">59262</span>                dust.noLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">59263</span>            }</div>
+<div class="line"><span class="lineno">59264</span>        }</div>
+<div class="line"><span class="lineno">59265</span>        Vector2 vector7 = base.Bottom + <span class="keyword">new</span> Vector2(-25f, -25f);</div>
+<div class="line"><span class="lineno">59266</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
+<div class="line"><span class="lineno">59267</span>        {</div>
+<div class="line"><span class="lineno">59268</span>            Dust dust2 = Dust.NewDustDirect(vector7, 50, 25, 31, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X, -2f, 100);</div>
+<div class="line"><span class="lineno">59269</span>            dust2.fadeIn = 1.1f;</div>
+<div class="line"><span class="lineno">59270</span>            dust2.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">59271</span>        }</div>
+<div class="line"><span class="lineno">59272</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 1; l++)</div>
+<div class="line"><span class="lineno">59273</span>        {</div>
+<div class="line"><span class="lineno">59274</span>            <span class="keywordflow">if</span> (Main.rand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">59275</span>            {</div>
+<div class="line"><span class="lineno">59276</span>                Gore gore = Gore.NewGoreDirect(base.TopLeft + Main.rand.NextVector2Square(0f, 1f) * base.Size, <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X * 1.5f, (0f - Main.rand.NextFloat()) * 16f), Utils.SelectRandom&lt;<span class="keywordtype">int</span>&gt;(Main.rand, 1007, 1008, 1008));</div>
+<div class="line"><span class="lineno">59277</span>                gore.timeLeft = 60;</div>
+<div class="line"><span class="lineno">59278</span>                gore.alpha = 50;</div>
+<div class="line"><span class="lineno">59279</span>                gore.velocity.X += <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X;</div>
+<div class="line"><span class="lineno">59280</span>            }</div>
+<div class="line"><span class="lineno">59281</span>        }</div>
+<div class="line"><span class="lineno">59282</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; 1; m++)</div>
+<div class="line"><span class="lineno">59283</span>        {</div>
+<div class="line"><span class="lineno">59284</span>            <span class="keywordflow">if</span> (Main.rand.Next(7) == 0)</div>
+<div class="line"><span class="lineno">59285</span>            {</div>
+<div class="line"><span class="lineno">59286</span>                Gore gore2 = Gore.NewGoreDirect(base.TopLeft + Main.rand.NextVector2Square(0f, 1f) * base.Size, <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X * 1.5f, (0f - Main.rand.NextFloat()) * 16f), Utils.SelectRandom&lt;<span class="keywordtype">int</span>&gt;(Main.rand, 1007, 1008, 1008));</div>
+<div class="line"><span class="lineno">59287</span>                gore2.timeLeft = 0;</div>
+<div class="line"><span class="lineno">59288</span>                gore2.alpha = 80;</div>
+<div class="line"><span class="lineno">59289</span>            }</div>
+<div class="line"><span class="lineno">59290</span>        }</div>
+<div class="line"><span class="lineno">59291</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; 1; n++)</div>
+<div class="line"><span class="lineno">59292</span>        {</div>
+<div class="line"><span class="lineno">59293</span>            <span class="keywordflow">if</span> (Main.rand.Next(7) == 0)</div>
+<div class="line"><span class="lineno">59294</span>            {</div>
+<div class="line"><span class="lineno">59295</span>                Gore gore3 = Gore.NewGoreDirect(base.TopLeft + Main.rand.NextVector2Square(0f, 1f) * base.Size, <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X * 1.5f, (0f - Main.rand.NextFloat()) * 16f), Utils.SelectRandom&lt;<span class="keywordtype">int</span>&gt;(Main.rand, 1007, 1008, 1008));</div>
+<div class="line"><span class="lineno">59296</span>                gore3.timeLeft = 0;</div>
+<div class="line"><span class="lineno">59297</span>                gore3.alpha = 80;</div>
+<div class="line"><span class="lineno">59298</span>            }</div>
+<div class="line"><span class="lineno">59299</span>        }</div>
+<div class="line"><span class="lineno">59300</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1ActiveSound_html"><div class="ttname"><a href="../../da/de5/classTerraria_1_1Audio_1_1ActiveSound.html">Terraria.Audio.ActiveSound</a></div><div class="ttdef"><b>Definition</b> ActiveSound.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a60780f059789de8541120c6cdb85954d_html_a60780f059789de8541120c6cdb85954d"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a60780f059789de8541120c6cdb85954d.html#a60780f059789de8541120c6cdb85954d">Terraria.Audio.SoundEngine.PlayTrackedSound</a></div><div class="ttdeci">static SlotId PlayTrackedSound(SoundStyle style, Vector2 position)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:109</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a96f4e765a0f1ed2e5bd375175956e969_html_a96f4e765a0f1ed2e5bd375175956e969"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a96f4e765a0f1ed2e5bd375175956e969.html#a96f4e765a0f1ed2e5bd375175956e969">Terraria.Audio.SoundEngine.GetActiveSound</a></div><div class="ttdeci">static ActiveSound GetActiveSound(SlotId id)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:99</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1SoundID_aeafb9df2e6322ad9cfa5a887e4091e0e_html_aeafb9df2e6322ad9cfa5a887e4091e0e"><div class="ttname"><a href="../../de/dce/classTerraria_1_1ID_1_1SoundID_aeafb9df2e6322ad9cfa5a887e4091e0e.html#aeafb9df2e6322ad9cfa5a887e4091e0e">Terraria.ID.SoundID.DD2_BookStaffTwisterLoop</a></div><div class="ttdeci">static readonly LegacySoundStyle DD2_BookStaffTwisterLoop</div><div class="ttdef"><b>Definition</b> SoundID.cs:936</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1SoundID_html"><div class="ttname"><a href="../../de/dce/classTerraria_1_1ID_1_1SoundID.html">Terraria.ID.SoundID</a></div><div class="ttdef"><b>Definition</b> SoundID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6_html_a40dd3cce3595df3e5e6f3ecd2616a6a6"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">Terraria.Projectile.localAI</a></div><div class="ttdeci">float[] localAI</div><div class="ttdef"><b>Definition</b> Projectile.cs:120</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861_html_ad720c809bf9147dbd21e7fa78f88d861"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> Projectile.cs:59438</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ada285a4b7e9fbdda91ced68508997a3d_html_ada285a4b7e9fbdda91ced68508997a3d"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ada285a4b7e9fbdda91ced68508997a3d.html#ada285a4b7e9fbdda91ced68508997a3d">Terraria.Projectile.soundDelay</a></div><div class="ttdeci">int soundDelay</div><div class="ttdef"><b>Definition</b> Projectile.cs:130</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1SlotId_ab9210169eaafc9912216f2ec3a008779_html_ab9210169eaafc9912216f2ec3a008779"><div class="ttname"><a href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ab9210169eaafc9912216f2ec3a008779.html#ab9210169eaafc9912216f2ec3a008779">ReLogic.Utilities.SlotId.Invalid</a></div><div class="ttdeci">static readonly SlotId Invalid</div><div class="ttdef"><b>Definition</b> SlotId.cs:5</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1SlotId_ad0e13c2958741f3da355eaac58abdfc5_html_ad0e13c2958741f3da355eaac58abdfc5"><div class="ttname"><a href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ad0e13c2958741f3da355eaac58abdfc5.html#ad0e13c2958741f3da355eaac58abdfc5">ReLogic.Utilities.SlotId.FromFloat</a></div><div class="ttdeci">static SlotId FromFloat(float value)</div><div class="ttdef"><b>Definition</b> SlotId.cs:80</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1SlotId_html"><div class="ttname"><a href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId.html">ReLogic.Utilities.SlotId</a></div><div class="ttdef"><b>Definition</b> SlotId.cs:4</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/dce/classTerraria_1_1ID_1_1SoundID_aeafb9df2e6322ad9cfa5a887e4091e0e.html#aeafb9df2e6322ad9cfa5a887e4091e0e">Terraria.ID.SoundID.DD2_BookStaffTwisterLoop</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd8308b7b2c8e2abc50ce1934c95920f.html#afd8308b7b2c8e2abc50ce1934c95920f">Terraria.Main.dust</a>, <a class="el" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ad0e13c2958741f3da355eaac58abdfc5.html#ad0e13c2958741f3da355eaac58abdfc5">ReLogic.Utilities.SlotId.FromFloat()</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a96f4e765a0f1ed2e5bd375175956e969.html#a96f4e765a0f1ed2e5bd375175956e969">Terraria.Audio.SoundEngine.GetActiveSound()</a>, <a class="el" href="../../db/dce/structReLogic_1_1Utilities_1_1SlotId_ab9210169eaafc9912216f2ec3a008779.html#ab9210169eaafc9912216f2ec3a008779">ReLogic.Utilities.SlotId.Invalid</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a977a36a9376966862406a3094e3b70ab.html#a977a36a9376966862406a3094e3b70ab">Terraria.Dust.NewDust()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a6f50d9725660d35b1ff1d942ebb75ce3.html#a6f50d9725660d35b1ff1d942ebb75ce3">Terraria.Gore.NewGoreDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a60780f059789de8541120c6cdb85954d.html#a60780f059789de8541120c6cdb85954d">Terraria.Audio.SoundEngine.PlayTrackedSound()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ab90b2aba94f5d7de3ee33f3c0b27ea3e.html#ab90b2aba94f5d7de3ee33f3c0b27ea3e">Terraria.Collision.SolidCollision()</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1c65206ace403aa59afc32d20e5d282e.html#a1c65206ace403aa59afc32d20e5d282e">Terraria.Collision.WetCollision()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

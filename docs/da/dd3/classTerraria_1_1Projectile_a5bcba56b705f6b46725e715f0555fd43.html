@@ -121,6 +121,50 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a5bcba56b705f6b4672
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">40257</span>    {</div>
+<div class="line"><span class="lineno">40258</span>        <span class="keywordtype">int</span> num = master.bodyFrame.Height;</div>
+<div class="line"><span class="lineno">40259</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">40260</span>        {</div>
+<div class="line"><span class="lineno">40261</span>            num = 1;</div>
+<div class="line"><span class="lineno">40262</span>        }</div>
+<div class="line"><span class="lineno">40263</span>        Vector2 vector = Main.OffsetsPlayerHeadgear[master.bodyFrame.Y / num];</div>
+<div class="line"><span class="lineno">40264</span>        vector.Y -= 2f;</div>
+<div class="line"><span class="lineno">40265</span>        <span class="keywordflow">if</span> (master.mount.Active &amp;&amp; master.mount.Type == 52)</div>
+<div class="line"><span class="lineno">40266</span>        {</div>
+<div class="line"><span class="lineno">40267</span>            vector.Y += 6f;</div>
+<div class="line"><span class="lineno">40268</span>            vector.X -= master.direction * 10;</div>
+<div class="line"><span class="lineno">40269</span>        }</div>
+<div class="line"><span class="lineno">40270</span>        <span class="keywordflow">switch</span> (stackedIndex % 6)</div>
+<div class="line"><span class="lineno">40271</span>        {</div>
+<div class="line"><span class="lineno">40272</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">40273</span>            vector += <span class="keyword">new</span> Vector2(master.direction * 8, master.gravDir * -2f);</div>
+<div class="line"><span class="lineno">40274</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40275</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">40276</span>            vector += <span class="keyword">new</span> Vector2(master.direction * -10, master.gravDir * -2f);</div>
+<div class="line"><span class="lineno">40277</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40278</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">40279</span>            vector += <span class="keyword">new</span> Vector2(master.direction * 10, master.gravDir * -10f);</div>
+<div class="line"><span class="lineno">40280</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40281</span>        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">40282</span>            vector += <span class="keyword">new</span> Vector2(master.direction * -12, master.gravDir * -10f);</div>
+<div class="line"><span class="lineno">40283</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40284</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">40285</span>        {</div>
+<div class="line"><span class="lineno">40286</span>            Vector2 vector2 = vector;</div>
+<div class="line"><span class="lineno">40287</span>            _ = master.direction;</div>
+<div class="line"><span class="lineno">40288</span>            vector = vector2 + <span class="keyword">new</span> Vector2(0f, master.gravDir * -10f);</div>
+<div class="line"><span class="lineno">40289</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40290</span>        }</div>
+<div class="line"><span class="lineno">40291</span>        }</div>
+<div class="line"><span class="lineno">40292</span>        vector += <span class="keyword">new</span> Vector2(0f, master.gravDir * -16f) * (stackedIndex / 6);</div>
+<div class="line"><span class="lineno">40293</span>        Vector2 vector3 = master.RotatedRelativePoint(master.MountedCenter);</div>
+<div class="line"><span class="lineno">40294</span>        _ = master.direction;</div>
+<div class="line"><span class="lineno">40295</span>        <span class="keywordflow">return</span> (vector3 + <span class="keyword">new</span> Vector2(0f, master.gravDir * -21f) + vector).Floor();</div>
+<div class="line"><span class="lineno">40296</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d0d/classTerraria_1_1Mount_a76bba8bc2fda5cc0279360b9c3a40492.html#a76bba8bc2fda5cc0279360b9c3a40492">Terraria.Mount.Active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aacc80d29ae947e7d0b276bae01d1eaab.html#aacc80d29ae947e7d0b276bae01d1eaab">Terraria.Player.bodyFrame</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a91f87cf800a6e04a964043869e2cbb59.html#a91f87cf800a6e04a964043869e2cbb59">Terraria.Player.mount</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a6334845df797462c030f12272454ed5c.html#a6334845df797462c030f12272454ed5c">Terraria.Player.MountedCenter</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47da456446753a521a0dcbdb5750254c.html#a47da456446753a521a0dcbdb5750254c">Terraria.Main.OffsetsPlayerHeadgear</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aced636f7d8226147a3bf19c099b2bbee.html#aced636f7d8226147a3bf19c099b2bbee">Terraria.Player.RotatedRelativePoint()</a>, and <a class="el" href="../../d2/d0d/classTerraria_1_1Mount_a14bfe517856e03cf2202161d6520dd23.html#a14bfe517856e03cf2202161d6520dd23">Terraria.Mount.Type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_ace572a7f5e3f10ae44176f47390a7444.html#ace572a7f5e3f10ae44176f47390a7444">Terraria.Main.SortBabyBirdProjectiles()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

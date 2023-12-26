@@ -121,6 +121,20 @@ $(function(){initNavTree('dd/ded/classnativefiledialog_ac6566d4b3f5f2c251dee9ae2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">byte</span>* intPtr = <a class="code hl_function" href="../../dd/ded/classnativefiledialog_af172b44c73f31328a5348648ce1d6c3a.html#af172b44c73f31328a5348648ce1d6c3a">Utf8EncodeNullable</a>(defaultPath);</div>
+<div class="line"><span class="lineno">  122</span>        IntPtr outPath2;</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_enumeration" href="../../dd/ded/classnativefiledialog_a364fae02e73c59ab753899df27b24bc1.html#a364fae02e73c59ab753899df27b24bc1">nfdresult_t</a> result = <a class="code hl_function" href="../../dd/ded/classnativefiledialog_a429104c25c30e7bc83e17ef94de8bfdb.html#a429104c25c30e7bc83e17ef94de8bfdb">INTERNAL_NFD_PickFolder</a>(intPtr, out outPath2);</div>
+<div class="line"><span class="lineno">  124</span>        Marshal.FreeHGlobal((IntPtr)intPtr);</div>
+<div class="line"><span class="lineno">  125</span>        outPath = <a class="code hl_function" href="../../dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e.html#ad1b7355ccadfd8cfe0249460a3cdc65e">UTF8_ToManaged</a>(outPath2, freePtr: true);</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aclassnativefiledialog_a364fae02e73c59ab753899df27b24bc1_html_a364fae02e73c59ab753899df27b24bc1"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_a364fae02e73c59ab753899df27b24bc1.html#a364fae02e73c59ab753899df27b24bc1">nativefiledialog.nfdresult_t</a></div><div class="ttdeci">nfdresult_t</div><div class="ttdef"><b>Definition</b> nativefiledialog.cs:8</div></div>
+<div class="ttc" id="aclassnativefiledialog_a429104c25c30e7bc83e17ef94de8bfdb_html_a429104c25c30e7bc83e17ef94de8bfdb"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_a429104c25c30e7bc83e17ef94de8bfdb.html#a429104c25c30e7bc83e17ef94de8bfdb">nativefiledialog.INTERNAL_NFD_PickFolder</a></div><div class="ttdeci">static unsafe nfdresult_t INTERNAL_NFD_PickFolder(byte *defaultPath, out IntPtr outPath)</div></div>
+<div class="ttc" id="aclassnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e_html_ad1b7355ccadfd8cfe0249460a3cdc65e"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e.html#ad1b7355ccadfd8cfe0249460a3cdc65e">nativefiledialog.UTF8_ToManaged</a></div><div class="ttdeci">static unsafe string UTF8_ToManaged(IntPtr s, bool freePtr=false)</div><div class="ttdef"><b>Definition</b> nativefiledialog.cs:45</div></div>
+<div class="ttc" id="aclassnativefiledialog_af172b44c73f31328a5348648ce1d6c3a_html_af172b44c73f31328a5348648ce1d6c3a"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_af172b44c73f31328a5348648ce1d6c3a.html#af172b44c73f31328a5348648ce1d6c3a">nativefiledialog.Utf8EncodeNullable</a></div><div class="ttdeci">static unsafe byte * Utf8EncodeNullable(string str)</div><div class="ttdef"><b>Definition</b> nativefiledialog.cs:30</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/ded/classnativefiledialog_a429104c25c30e7bc83e17ef94de8bfdb.html#a429104c25c30e7bc83e17ef94de8bfdb">INTERNAL_NFD_PickFolder()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e.html#ad1b7355ccadfd8cfe0249460a3cdc65e">UTF8_ToManaged()</a>, and <a class="el" href="../../dd/ded/classnativefiledialog_af172b44c73f31328a5348648ce1d6c3a.html#af172b44c73f31328a5348648ce1d6c3a">Utf8EncodeNullable()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

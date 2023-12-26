@@ -121,6 +121,106 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a1dcdc7f5a611caa62c8d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">42381</span>    {</div>
+<div class="line"><span class="lineno">42382</span>        <span class="keywordtype">int</span> num = i;</div>
+<div class="line"><span class="lineno">42383</span>        <span class="keywordtype">int</span> num2 = j;</div>
+<div class="line"><span class="lineno">42384</span>        <span class="keywordtype">int</span> num3;</div>
+<div class="line"><span class="lineno">42385</span>        <span class="keywordflow">for</span> (num3 = Main.tile[i, j].frameX / 18; num3 &gt;= 2; num3 -= 2)</div>
+<div class="line"><span class="lineno">42386</span>        {</div>
+<div class="line"><span class="lineno">42387</span>        }</div>
+<div class="line"><span class="lineno">42388</span>        <span class="keywordtype">int</span> num4;</div>
+<div class="line"><span class="lineno">42389</span>        <span class="keywordflow">for</span> (num4 = Main.tile[i, j].frameY / 18; num4 &gt;= 3; num4 -= 3)</div>
+<div class="line"><span class="lineno">42390</span>        {</div>
+<div class="line"><span class="lineno">42391</span>        }</div>
+<div class="line"><span class="lineno">42392</span>        num = i - num3;</div>
+<div class="line"><span class="lineno">42393</span>        num2 = j - num4;</div>
+<div class="line"><span class="lineno">42394</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num; k &lt; num + 2; k++)</div>
+<div class="line"><span class="lineno">42395</span>        {</div>
+<div class="line"><span class="lineno">42396</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = num2; l &lt; num2 + 3; l++)</div>
+<div class="line"><span class="lineno">42397</span>            {</div>
+<div class="line"><span class="lineno">42398</span>                <span class="keywordflow">if</span> (Main.tile[k, l] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">42399</span>                {</div>
+<div class="line"><span class="lineno">42400</span>                    Main.tile[k, l] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">42401</span>                }</div>
+<div class="line"><span class="lineno">42402</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[k, l];</div>
+<div class="line"><span class="lineno">42403</span>                <span class="keywordflow">if</span> (!tile.active())</div>
+<div class="line"><span class="lineno">42404</span>                {</div>
+<div class="line"><span class="lineno">42405</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">42406</span>                }</div>
+<div class="line"><span class="lineno">42407</span>                <span class="keywordflow">if</span> (tile.type == 410)</div>
+<div class="line"><span class="lineno">42408</span>                {</div>
+<div class="line"><span class="lineno">42409</span>                    <span class="keywordflow">if</span> (tile.frameY &lt; 56)</div>
+<div class="line"><span class="lineno">42410</span>                    {</div>
+<div class="line"><span class="lineno">42411</span>                        tile.frameY += 56;</div>
+<div class="line"><span class="lineno">42412</span>                    }</div>
+<div class="line"><span class="lineno">42413</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42414</span>                    {</div>
+<div class="line"><span class="lineno">42415</span>                        tile.frameY -= 56;</div>
+<div class="line"><span class="lineno">42416</span>                    }</div>
+<div class="line"><span class="lineno">42417</span>                }</div>
+<div class="line"><span class="lineno">42418</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 480)</div>
+<div class="line"><span class="lineno">42419</span>                {</div>
+<div class="line"><span class="lineno">42420</span>                    <span class="keywordflow">if</span> (tile.frameY &lt; 54)</div>
+<div class="line"><span class="lineno">42421</span>                    {</div>
+<div class="line"><span class="lineno">42422</span>                        tile.frameY += 54;</div>
+<div class="line"><span class="lineno">42423</span>                    }</div>
+<div class="line"><span class="lineno">42424</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42425</span>                    {</div>
+<div class="line"><span class="lineno">42426</span>                        tile.frameY -= 54;</div>
+<div class="line"><span class="lineno">42427</span>                    }</div>
+<div class="line"><span class="lineno">42428</span>                }</div>
+<div class="line"><span class="lineno">42429</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 509)</div>
+<div class="line"><span class="lineno">42430</span>                {</div>
+<div class="line"><span class="lineno">42431</span>                    <span class="keywordflow">if</span> (tile.frameY &lt; 54)</div>
+<div class="line"><span class="lineno">42432</span>                    {</div>
+<div class="line"><span class="lineno">42433</span>                        tile.frameY += 54;</div>
+<div class="line"><span class="lineno">42434</span>                    }</div>
+<div class="line"><span class="lineno">42435</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42436</span>                    {</div>
+<div class="line"><span class="lineno">42437</span>                        tile.frameY -= 54;</div>
+<div class="line"><span class="lineno">42438</span>                    }</div>
+<div class="line"><span class="lineno">42439</span>                }</div>
+<div class="line"><span class="lineno">42440</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 657)</div>
+<div class="line"><span class="lineno">42441</span>                {</div>
+<div class="line"><span class="lineno">42442</span>                    <span class="keywordflow">if</span> (tile.frameY &lt; 54)</div>
+<div class="line"><span class="lineno">42443</span>                    {</div>
+<div class="line"><span class="lineno">42444</span>                        tile.frameY += 54;</div>
+<div class="line"><span class="lineno">42445</span>                    }</div>
+<div class="line"><span class="lineno">42446</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42447</span>                    {</div>
+<div class="line"><span class="lineno">42448</span>                        tile.frameY -= 54;</div>
+<div class="line"><span class="lineno">42449</span>                    }</div>
+<div class="line"><span class="lineno">42450</span>                }</div>
+<div class="line"><span class="lineno">42451</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 658)</div>
+<div class="line"><span class="lineno">42452</span>                {</div>
+<div class="line"><span class="lineno">42453</span>                    <span class="keywordtype">short</span> num5 = 54;</div>
+<div class="line"><span class="lineno">42454</span>                    <span class="keywordtype">short</span> num6 = 3;</div>
+<div class="line"><span class="lineno">42455</span>                    <span class="keywordtype">short</span> num7 = (short)(num5 * num6);</div>
+<div class="line"><span class="lineno">42456</span>                    tile.frameY += num5;</div>
+<div class="line"><span class="lineno">42457</span>                    <span class="keywordflow">if</span> (tile.frameY &gt;= num7)</div>
+<div class="line"><span class="lineno">42458</span>                    {</div>
+<div class="line"><span class="lineno">42459</span>                        tile.frameY -= num7;</div>
+<div class="line"><span class="lineno">42460</span>                    }</div>
+<div class="line"><span class="lineno">42461</span>                }</div>
+<div class="line"><span class="lineno">42462</span>            }</div>
+<div class="line"><span class="lineno">42463</span>        }</div>
+<div class="line"><span class="lineno">42464</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.running)</div>
+<div class="line"><span class="lineno">42465</span>        {</div>
+<div class="line"><span class="lineno">42466</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num, num2);</div>
+<div class="line"><span class="lineno">42467</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num, num2 + 1);</div>
+<div class="line"><span class="lineno">42468</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num, num2 + 2);</div>
+<div class="line"><span class="lineno">42469</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num + 1, num2);</div>
+<div class="line"><span class="lineno">42470</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num + 1, num2 + 1);</div>
+<div class="line"><span class="lineno">42471</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num + 1, num2 + 2);</div>
+<div class="line"><span class="lineno">42472</span>        }</div>
+<div class="line"><span class="lineno">42473</span>        NetMessage.SendTileSquare(-1, num, num2, 2, 3);</div>
+<div class="line"><span class="lineno">42474</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Terraria.DataStructures.TileDataType.Wiring</a></div><div class="ttdeci">@ Wiring</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a4b851e7741ed5e25cfe2621f44e8bd64.html#a4b851e7741ed5e25cfe2621f44e8bd64">Terraria.Wiring.running</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_aaca74303fbf3f52eafb7e52ce7d8e27b.html#aaca74303fbf3f52eafb7e52ce7d8e27b">Terraria.Wiring.SkipWire()</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae920fead53d67935735061efbeb09563.html#ae920fead53d67935735061efbeb09563">Terraria.Wiring.HitWireSingle()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8b27a9ab46a3bd51b25499cdf7417694.html#a8b27a9ab46a3bd51b25499cdf7417694">Terraria.Player.TileInteractionsUse()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

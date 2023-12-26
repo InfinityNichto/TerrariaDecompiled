@@ -121,6 +121,260 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a8a6704559c91ea74b6ec
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">35435</span>    {</div>
+<div class="line"><span class="lineno">35436</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a084cd1696624eb1c206478c862e84b55.html#a084cd1696624eb1c206478c862e84b55">destroyObject</a>)</div>
+<div class="line"><span class="lineno">35437</span>        {</div>
+<div class="line"><span class="lineno">35438</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">35439</span>        }</div>
+<div class="line"><span class="lineno">35440</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">35441</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno">35442</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">35443</span>        {</div>
+<div class="line"><span class="lineno">35444</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">35445</span>        }</div>
+<div class="line"><span class="lineno">35446</span>        <span class="keywordtype">int</span> type = tile.type;</div>
+<div class="line"><span class="lineno">35447</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">35448</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">35449</span>        <span class="keywordtype">int</span> num3 = tile.frameX / 18;</div>
+<div class="line"><span class="lineno">35450</span>        <span class="keywordflow">while</span> (num3 &gt;= 3)</div>
+<div class="line"><span class="lineno">35451</span>        {</div>
+<div class="line"><span class="lineno">35452</span>            num3 -= 3;</div>
+<div class="line"><span class="lineno">35453</span>            num++;</div>
+<div class="line"><span class="lineno">35454</span>        }</div>
+<div class="line"><span class="lineno">35455</span>        <span class="keywordtype">int</span> num4 = x - num3;</div>
+<div class="line"><span class="lineno">35456</span>        <span class="keywordtype">int</span> num5 = tile.frameY / 18;</div>
+<div class="line"><span class="lineno">35457</span>        <span class="keywordflow">while</span> (num5 &gt;= 3)</div>
+<div class="line"><span class="lineno">35458</span>        {</div>
+<div class="line"><span class="lineno">35459</span>            num5 -= 3;</div>
+<div class="line"><span class="lineno">35460</span>            num2++;</div>
+<div class="line"><span class="lineno">35461</span>        }</div>
+<div class="line"><span class="lineno">35462</span>        <span class="keywordtype">int</span> num6 = y - num5;</div>
+<div class="line"><span class="lineno">35463</span>        num5 = num2 * 54;</div>
+<div class="line"><span class="lineno">35464</span>        num3 = num * 54;</div>
+<div class="line"><span class="lineno">35465</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num4; i &lt; num4 + 3; i++)</div>
+<div class="line"><span class="lineno">35466</span>        {</div>
+<div class="line"><span class="lineno">35467</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num6; j &lt; num6 + 3; j++)</div>
+<div class="line"><span class="lineno">35468</span>            {</div>
+<div class="line"><span class="lineno">35469</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">35470</span>                <span class="keywordflow">if</span> (tile2 != <span class="keyword">null</span> &amp;&amp; (tile2.type != type || !tile2.active() || tile2.wall &lt;= 0 || tile2.frameX != num3 + (i - num4) * 18 || tile2.frameY != num5 + (j - num6) * 18))</div>
+<div class="line"><span class="lineno">35471</span>                {</div>
+<div class="line"><span class="lineno">35472</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">35473</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35474</span>                }</div>
+<div class="line"><span class="lineno">35475</span>            }</div>
+<div class="line"><span class="lineno">35476</span>        }</div>
+<div class="line"><span class="lineno">35477</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">35478</span>        {</div>
+<div class="line"><span class="lineno">35479</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">35480</span>        }</div>
+<div class="line"><span class="lineno">35481</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a084cd1696624eb1c206478c862e84b55.html#a084cd1696624eb1c206478c862e84b55">destroyObject</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">35482</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num4; k &lt; num4 + 3; k++)</div>
+<div class="line"><span class="lineno">35483</span>        {</div>
+<div class="line"><span class="lineno">35484</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = num6; l &lt; num6 + 3; l++)</div>
+<div class="line"><span class="lineno">35485</span>            {</div>
+<div class="line"><span class="lineno">35486</span>                <span class="keywordflow">if</span> (Main.tile[k, l] != <span class="keyword">null</span> &amp;&amp; Main.tile[k, l].type == type &amp;&amp; Main.tile[k, l].active())</div>
+<div class="line"><span class="lineno">35487</span>                {</div>
+<div class="line"><span class="lineno">35488</span>                    <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(k, l);</div>
+<div class="line"><span class="lineno">35489</span>                }</div>
+<div class="line"><span class="lineno">35490</span>            }</div>
+<div class="line"><span class="lineno">35491</span>        }</div>
+<div class="line"><span class="lineno">35492</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">35493</span>        {</div>
+<div class="line"><span class="lineno">35494</span>        <span class="keywordflow">case</span> 240:</div>
+<div class="line"><span class="lineno">35495</span>            num += num2 * 36;</div>
+<div class="line"><span class="lineno">35496</span>            <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno">35497</span>            {</div>
+<div class="line"><span class="lineno">35498</span>            <span class="keywordflow">case</span> 37:</div>
+<div class="line"><span class="lineno">35499</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1856);</div>
+<div class="line"><span class="lineno">35500</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35501</span>            <span class="keywordflow">case</span> 36:</div>
+<div class="line"><span class="lineno">35502</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1855);</div>
+<div class="line"><span class="lineno">35503</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35504</span>            <span class="keywordflow">case</span> 38:</div>
+<div class="line"><span class="lineno">35505</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1960);</div>
+<div class="line"><span class="lineno">35506</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35507</span>            <span class="keywordflow">case</span> 39:</div>
+<div class="line"><span class="lineno">35508</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1961);</div>
+<div class="line"><span class="lineno">35509</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35510</span>            <span class="keywordflow">case</span> 40:</div>
+<div class="line"><span class="lineno">35511</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1962);</div>
+<div class="line"><span class="lineno">35512</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35513</span>            <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno">35514</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1574);</div>
+<div class="line"><span class="lineno">35515</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35516</span>            <span class="keywordflow">case</span> 34:</div>
+<div class="line"><span class="lineno">35517</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1575);</div>
+<div class="line"><span class="lineno">35518</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35519</span>            <span class="keywordflow">case</span> 35:</div>
+<div class="line"><span class="lineno">35520</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1576);</div>
+<div class="line"><span class="lineno">35521</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35522</span>            <span class="keywordflow">case</span> 18:</div>
+<div class="line"><span class="lineno">35523</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1419);</div>
+<div class="line"><span class="lineno">35524</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35525</span>            <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno">35526</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1420);</div>
+<div class="line"><span class="lineno">35527</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35528</span>            <span class="keywordflow">case</span> 20:</div>
+<div class="line"><span class="lineno">35529</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1427);</div>
+<div class="line"><span class="lineno">35530</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35531</span>            <span class="keywordflow">case</span> 21:</div>
+<div class="line"><span class="lineno">35532</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1428);</div>
+<div class="line"><span class="lineno">35533</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35534</span>            <span class="keywordflow">case</span> 54:</div>
+<div class="line"><span class="lineno">35535</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 2489);</div>
+<div class="line"><span class="lineno">35536</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35537</span>            <span class="keywordflow">case</span> 55:</div>
+<div class="line"><span class="lineno">35538</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 2589);</div>
+<div class="line"><span class="lineno">35539</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35540</span>            <span class="keywordflow">case</span> 56:</div>
+<div class="line"><span class="lineno">35541</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3357);</div>
+<div class="line"><span class="lineno">35542</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35543</span>            <span class="keywordflow">case</span> 57:</div>
+<div class="line"><span class="lineno">35544</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3358);</div>
+<div class="line"><span class="lineno">35545</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35546</span>            <span class="keywordflow">case</span> 58:</div>
+<div class="line"><span class="lineno">35547</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3359);</div>
+<div class="line"><span class="lineno">35548</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35549</span>            <span class="keywordflow">case</span> 59:</div>
+<div class="line"><span class="lineno">35550</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3595);</div>
+<div class="line"><span class="lineno">35551</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35552</span>            <span class="keywordflow">case</span> 60:</div>
+<div class="line"><span class="lineno">35553</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3867);</div>
+<div class="line"><span class="lineno">35554</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35555</span>            <span class="keywordflow">case</span> 61:</div>
+<div class="line"><span class="lineno">35556</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3866);</div>
+<div class="line"><span class="lineno">35557</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35558</span>            <span class="keywordflow">case</span> 62:</div>
+<div class="line"><span class="lineno">35559</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 3868);</div>
+<div class="line"><span class="lineno">35560</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35561</span>            <span class="keywordflow">case</span> 69:</div>
+<div class="line"><span class="lineno">35562</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4660);</div>
+<div class="line"><span class="lineno">35563</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35564</span>            <span class="keywordflow">case</span> 70:</div>
+<div class="line"><span class="lineno">35565</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4723);</div>
+<div class="line"><span class="lineno">35566</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35567</span>            <span class="keywordflow">case</span> 71:</div>
+<div class="line"><span class="lineno">35568</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4724);</div>
+<div class="line"><span class="lineno">35569</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35570</span>            <span class="keywordflow">case</span> 72:</div>
+<div class="line"><span class="lineno">35571</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4783);</div>
+<div class="line"><span class="lineno">35572</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35573</span>            <span class="keywordflow">case</span> 73:</div>
+<div class="line"><span class="lineno">35574</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4958);</div>
+<div class="line"><span class="lineno">35575</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35576</span>            <span class="keywordflow">case</span> 74:</div>
+<div class="line"><span class="lineno">35577</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 5087);</div>
+<div class="line"><span class="lineno">35578</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35579</span>            <span class="keywordflow">case</span> 75:</div>
+<div class="line"><span class="lineno">35580</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 5108);</div>
+<div class="line"><span class="lineno">35581</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35582</span>            <span class="keywordflow">case</span> 92:</div>
+<div class="line"><span class="lineno">35583</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 5388);</div>
+<div class="line"><span class="lineno">35584</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35585</span>            <span class="keywordflow">case</span> 76:</div>
+<div class="line"><span class="lineno">35586</span>            <span class="keywordflow">case</span> 77:</div>
+<div class="line"><span class="lineno">35587</span>            <span class="keywordflow">case</span> 78:</div>
+<div class="line"><span class="lineno">35588</span>            <span class="keywordflow">case</span> 79:</div>
+<div class="line"><span class="lineno">35589</span>            <span class="keywordflow">case</span> 80:</div>
+<div class="line"><span class="lineno">35590</span>            <span class="keywordflow">case</span> 81:</div>
+<div class="line"><span class="lineno">35591</span>            <span class="keywordflow">case</span> 82:</div>
+<div class="line"><span class="lineno">35592</span>            <span class="keywordflow">case</span> 83:</div>
+<div class="line"><span class="lineno">35593</span>            <span class="keywordflow">case</span> 84:</div>
+<div class="line"><span class="lineno">35594</span>            <span class="keywordflow">case</span> 85:</div>
+<div class="line"><span class="lineno">35595</span>            <span class="keywordflow">case</span> 86:</div>
+<div class="line"><span class="lineno">35596</span>            <span class="keywordflow">case</span> 87:</div>
+<div class="line"><span class="lineno">35597</span>            <span class="keywordflow">case</span> 88:</div>
+<div class="line"><span class="lineno">35598</span>            <span class="keywordflow">case</span> 89:</div>
+<div class="line"><span class="lineno">35599</span>            <span class="keywordflow">case</span> 90:</div>
+<div class="line"><span class="lineno">35600</span>            <span class="keywordflow">case</span> 91:</div>
+<div class="line"><span class="lineno">35601</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 5218 + num - 76);</div>
+<div class="line"><span class="lineno">35602</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35603</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">35604</span>                <span class="keywordflow">if</span> (num &gt;= 63 &amp;&amp; num &lt;= 68)</div>
+<div class="line"><span class="lineno">35605</span>                {</div>
+<div class="line"><span class="lineno">35606</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 4626 + num - 63);</div>
+<div class="line"><span class="lineno">35607</span>                }</div>
+<div class="line"><span class="lineno">35608</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 41 &amp;&amp; num &lt;= 45)</div>
+<div class="line"><span class="lineno">35609</span>                {</div>
+<div class="line"><span class="lineno">35610</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 2114 + num - 41);</div>
+<div class="line"><span class="lineno">35611</span>                }</div>
+<div class="line"><span class="lineno">35612</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 46 &amp;&amp; num &lt;= 53)</div>
+<div class="line"><span class="lineno">35613</span>                {</div>
+<div class="line"><span class="lineno">35614</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 2442 + num - 46);</div>
+<div class="line"><span class="lineno">35615</span>                }</div>
+<div class="line"><span class="lineno">35616</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 22 &amp;&amp; num &lt;= 25)</div>
+<div class="line"><span class="lineno">35617</span>                {</div>
+<div class="line"><span class="lineno">35618</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1440 + num - 22);</div>
+<div class="line"><span class="lineno">35619</span>                }</div>
+<div class="line"><span class="lineno">35620</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 26 &amp;&amp; num &lt;= 29)</div>
+<div class="line"><span class="lineno">35621</span>                {</div>
+<div class="line"><span class="lineno">35622</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1496 + num - 26);</div>
+<div class="line"><span class="lineno">35623</span>                }</div>
+<div class="line"><span class="lineno">35624</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 30 &amp;&amp; num &lt;= 32)</div>
+<div class="line"><span class="lineno">35625</span>                {</div>
+<div class="line"><span class="lineno">35626</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1538 + num - 30);</div>
+<div class="line"><span class="lineno">35627</span>                }</div>
+<div class="line"><span class="lineno">35628</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">35629</span>                {</div>
+<div class="line"><span class="lineno">35630</span>                    Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, 1360 + num);</div>
+<div class="line"><span class="lineno">35631</span>                }</div>
+<div class="line"><span class="lineno">35632</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35633</span>            }</div>
+<div class="line"><span class="lineno">35634</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35635</span>        <span class="keywordflow">case</span> 440:</div>
+<div class="line"><span class="lineno">35636</span>        {</div>
+<div class="line"><span class="lineno">35637</span>            <span class="keywordtype">int</span> num7 = -1;</div>
+<div class="line"><span class="lineno">35638</span>            <span class="keywordtype">int</span> num8 = -1;</div>
+<div class="line"><span class="lineno">35639</span>            <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno">35640</span>            {</div>
+<div class="line"><span class="lineno">35641</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">35642</span>                num7 = 3644;</div>
+<div class="line"><span class="lineno">35643</span>                num8 = 1526;</div>
+<div class="line"><span class="lineno">35644</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35645</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">35646</span>                num7 = 3645;</div>
+<div class="line"><span class="lineno">35647</span>                num8 = 1524;</div>
+<div class="line"><span class="lineno">35648</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35649</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">35650</span>                num7 = 3646;</div>
+<div class="line"><span class="lineno">35651</span>                num8 = 1525;</div>
+<div class="line"><span class="lineno">35652</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35653</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">35654</span>                num7 = 3647;</div>
+<div class="line"><span class="lineno">35655</span>                num8 = 1523;</div>
+<div class="line"><span class="lineno">35656</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35657</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">35658</span>                num7 = 3648;</div>
+<div class="line"><span class="lineno">35659</span>                num8 = 1522;</div>
+<div class="line"><span class="lineno">35660</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35661</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">35662</span>                num7 = 3649;</div>
+<div class="line"><span class="lineno">35663</span>                num8 = 1527;</div>
+<div class="line"><span class="lineno">35664</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35665</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">35666</span>                num7 = 3650;</div>
+<div class="line"><span class="lineno">35667</span>                num8 = 3643;</div>
+<div class="line"><span class="lineno">35668</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35669</span>            }</div>
+<div class="line"><span class="lineno">35670</span>            <span class="keywordflow">if</span> (num7 != -1)</div>
+<div class="line"><span class="lineno">35671</span>            {</div>
+<div class="line"><span class="lineno">35672</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, num7);</div>
+<div class="line"><span class="lineno">35673</span>            }</div>
+<div class="line"><span class="lineno">35674</span>            <span class="keywordflow">if</span> (num8 != -1 &amp;&amp; num2 == 1)</div>
+<div class="line"><span class="lineno">35675</span>            {</div>
+<div class="line"><span class="lineno">35676</span>                Item.NewItem(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">GetItemSource_FromTileBreak</a>(x, y), x * 16, y * 16, 32, 32, num8);</div>
+<div class="line"><span class="lineno">35677</span>            }</div>
+<div class="line"><span class="lineno">35678</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">35679</span>        }</div>
+<div class="line"><span class="lineno">35680</span>        }</div>
+<div class="line"><span class="lineno">35681</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a084cd1696624eb1c206478c862e84b55.html#a084cd1696624eb1c206478c862e84b55">destroyObject</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">35682</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a084cd1696624eb1c206478c862e84b55_html_a084cd1696624eb1c206478c862e84b55"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a084cd1696624eb1c206478c862e84b55.html#a084cd1696624eb1c206478c862e84b55">Terraria.WorldGen.destroyObject</a></div><div class="ttdeci">static bool destroyObject</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1020</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107_html_ae3a8e494801525c7b348be3bf442e107"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ae3a8e494801525c7b348be3bf442e107.html#ae3a8e494801525c7b348be3bf442e107">Terraria.WorldGen.GetItemSource_FromTileBreak</a></div><div class="ttdeci">static IEntitySource GetItemSource_FromTileBreak(int x, int y)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:59882</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

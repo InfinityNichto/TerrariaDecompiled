@@ -117,6 +117,65 @@ $(function(){initNavTree('db/d90/classTerraria_1_1Netplay_a87c399f8cba32df81f3e5
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  785</span>    {</div>
+<div class="line"><span class="lineno">  786</span>        <a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_af79a6796b340eff224e86ccd81442d56.html#af79a6796b340eff224e86ccd81442d56">BroadcastClient</a> = <span class="keyword">new</span> UdpClient();</div>
+<div class="line"><span class="lineno">  787</span>        <span class="keyword">new</span> IPEndPoint(IPAddress.Any, 0);</div>
+<div class="line"><span class="lineno">  788</span>        BroadcastClient.EnableBroadcast = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  789</span>        <span class="keyword">new</span> DateTime(0L);</div>
+<div class="line"><span class="lineno">  790</span>        <span class="keywordtype">long</span> num = 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  791</span>        <span class="keywordtype">byte</span>[] array;</div>
+<div class="line"><span class="lineno">  792</span>        <span class="keyword">using</span> (MemoryStream memoryStream = <span class="keyword">new</span> MemoryStream())</div>
+<div class="line"><span class="lineno">  793</span>        {</div>
+<div class="line"><span class="lineno">  794</span>            <span class="keyword">using </span>BinaryWriter binaryWriter = <span class="keyword">new</span> BinaryWriter(memoryStream);</div>
+<div class="line"><span class="lineno">  795</span>            <span class="keywordtype">int</span> value = 1010;</div>
+<div class="line"><span class="lineno">  796</span>            binaryWriter.Write(value);</div>
+<div class="line"><span class="lineno">  797</span>            binaryWriter.Write(<a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_aceea9654daeb96b9bc6b440635fdedf2.html#aceea9654daeb96b9bc6b440635fdedf2">ListenPort</a>);</div>
+<div class="line"><span class="lineno">  798</span>            binaryWriter.Write(Main.worldName);</div>
+<div class="line"><span class="lineno">  799</span>            <span class="keywordtype">string</span> text = Dns.GetHostName();</div>
+<div class="line"><span class="lineno">  800</span>            <span class="keywordflow">if</span> (text == <span class="stringliteral">&quot;localhost&quot;</span>)</div>
+<div class="line"><span class="lineno">  801</span>            {</div>
+<div class="line"><span class="lineno">  802</span>                text = Environment.MachineName;</div>
+<div class="line"><span class="lineno">  803</span>            }</div>
+<div class="line"><span class="lineno">  804</span>            binaryWriter.Write(text);</div>
+<div class="line"><span class="lineno">  805</span>            binaryWriter.Write((ushort)Main.maxTilesX);</div>
+<div class="line"><span class="lineno">  806</span>            binaryWriter.Write(Main.ActiveWorldFileData.HasCrimson);</div>
+<div class="line"><span class="lineno">  807</span>            binaryWriter.Write(Main.ActiveWorldFileData.GameMode);</div>
+<div class="line"><span class="lineno">  808</span>            binaryWriter.Write((<span class="keywordtype">byte</span>)Main.maxNetPlayers);</div>
+<div class="line"><span class="lineno">  809</span>            num = memoryStream.Position;</div>
+<div class="line"><span class="lineno">  810</span>            binaryWriter.Write((<span class="keywordtype">byte</span>)0);</div>
+<div class="line"><span class="lineno">  811</span>            binaryWriter.Write(Main.ActiveWorldFileData.IsHardMode);</div>
+<div class="line"><span class="lineno">  812</span>            binaryWriter.Flush();</div>
+<div class="line"><span class="lineno">  813</span>            array = memoryStream.ToArray();</div>
+<div class="line"><span class="lineno">  814</span>        }</div>
+<div class="line"><span class="lineno">  815</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  816</span>        {</div>
+<div class="line"><span class="lineno">  817</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  818</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)</div>
+<div class="line"><span class="lineno">  819</span>            {</div>
+<div class="line"><span class="lineno">  820</span>                <span class="keywordflow">if</span> (Main.player[i].active)</div>
+<div class="line"><span class="lineno">  821</span>                {</div>
+<div class="line"><span class="lineno">  822</span>                    num2++;</div>
+<div class="line"><span class="lineno">  823</span>                }</div>
+<div class="line"><span class="lineno">  824</span>            }</div>
+<div class="line"><span class="lineno">  825</span>            array[(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num] = (<span class="keywordtype">byte</span>)num2;</div>
+<div class="line"><span class="lineno">  826</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  827</span>            {</div>
+<div class="line"><span class="lineno">  828</span>                <a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_af79a6796b340eff224e86ccd81442d56.html#af79a6796b340eff224e86ccd81442d56">BroadcastClient</a>.Send(array, array.Length, <span class="keyword">new</span> IPEndPoint(IPAddress.Broadcast, 8888));</div>
+<div class="line"><span class="lineno">  829</span>            }</div>
+<div class="line"><span class="lineno">  830</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  831</span>            {</div>
+<div class="line"><span class="lineno">  832</span>            }</div>
+<div class="line"><span class="lineno">  833</span>            Thread.Sleep(1000);</div>
+<div class="line"><span class="lineno">  834</span>        }</div>
+<div class="line"><span class="lineno">  835</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Netplay_aceea9654daeb96b9bc6b440635fdedf2_html_aceea9654daeb96b9bc6b440635fdedf2"><div class="ttname"><a href="../../db/d90/classTerraria_1_1Netplay_aceea9654daeb96b9bc6b440635fdedf2.html#aceea9654daeb96b9bc6b440635fdedf2">Terraria.Netplay.ListenPort</a></div><div class="ttdeci">static int ListenPort</div><div class="ttdef"><b>Definition</b> Netplay.cs:47</div></div>
+<div class="ttc" id="aclassTerraria_1_1Netplay_af79a6796b340eff224e86ccd81442d56_html_af79a6796b340eff224e86ccd81442d56"><div class="ttname"><a href="../../db/d90/classTerraria_1_1Netplay_af79a6796b340eff224e86ccd81442d56.html#af79a6796b340eff224e86ccd81442d56">Terraria.Netplay.BroadcastClient</a></div><div class="ttdeci">static UdpClient BroadcastClient</div><div class="ttdef"><b>Definition</b> Netplay.cs:67</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">ReLogic.Peripherals.RGB.Logitech.KeyName.L</a></div><div class="ttdeci">@ L</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a284698a8ab8dc0735f6c7b11225e4d21.html#a284698a8ab8dc0735f6c7b11225e4d21">Terraria.Main.ActiveWorldFileData</a>, <a class="el" href="../../db/d90/classTerraria_1_1Netplay_af79a6796b340eff224e86ccd81442d56.html#af79a6796b340eff224e86ccd81442d56">Terraria.Netplay.BroadcastClient</a>, <a class="el" href="../../db/d90/classTerraria_1_1Netplay_aceea9654daeb96b9bc6b440635fdedf2.html#aceea9654daeb96b9bc6b440635fdedf2">Terraria.Netplay.ListenPort</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6f4e1e954f01050c092ac0eea7ffeeb.html#ab6f4e1e954f01050c092ac0eea7ffeeb">Terraria.Main.maxNetPlayers</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">Terraria.Main.worldName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d90/classTerraria_1_1Netplay_afb73d428030de4c67d889c3e4018a3bc.html#afb73d428030de4c67d889c3e4018a3bc">Terraria.Netplay.StartBroadCasting()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

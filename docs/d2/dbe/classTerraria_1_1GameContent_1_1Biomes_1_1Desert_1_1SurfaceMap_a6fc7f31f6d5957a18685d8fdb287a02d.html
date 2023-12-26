@@ -121,6 +121,41 @@ $(function(){initNavTree('d2/dbe/classTerraria_1_1GameContent_1_1Biomes_1_1Deser
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">int</span> num = Main.maxTilesY / 2;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">short</span>[] array = <span class="keyword">new</span> <span class="keywordtype">short</span>[width];</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startX; i &lt; startX + width; i++)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 50; j &lt; 50 + num; j++)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (Main.tile[i, j].active())</div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].type == 189 || Main.tile[i, j].type == 196 || Main.tile[i, j].type == 460)</div>
+<div class="line"><span class="lineno">   56</span>                    {</div>
+<div class="line"><span class="lineno">   57</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>                    }</div>
+<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   60</span>                    {</div>
+<div class="line"><span class="lineno">   61</span>                        num2 = j;</div>
+<div class="line"><span class="lineno">   62</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   63</span>                    }</div>
+<div class="line"><span class="lineno">   64</span>                }</div>
+<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   66</span>                {</div>
+<div class="line"><span class="lineno">   67</span>                    num2 = num + 50;</div>
+<div class="line"><span class="lineno">   68</span>                }</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>            array[i - startX] = (short)num2;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d2/dbe/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SurfaceMap_ac5d6a79f34112f23b3e28676bc6c78fd.html#ac5d6a79f34112f23b3e28676bc6c78fd">SurfaceMap</a>(array, startX);</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SurfaceMap_ac5d6a79f34112f23b3e28676bc6c78fd_html_ac5d6a79f34112f23b3e28676bc6c78fd"><div class="ttname"><a href="../../d2/dbe/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SurfaceMap_ac5d6a79f34112f23b3e28676bc6c78fd.html#ac5d6a79f34112f23b3e28676bc6c78fd">Terraria.GameContent.Biomes.Desert.SurfaceMap.SurfaceMap</a></div><div class="ttdeci">SurfaceMap(short[] heights, int x)</div><div class="ttdef"><b>Definition</b> SurfaceMap.cs:21</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/dbe/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SurfaceMap_ac5d6a79f34112f23b3e28676bc6c78fd.html#ac5d6a79f34112f23b3e28676bc6c78fd">Terraria.GameContent.Biomes.Desert.SurfaceMap.SurfaceMap()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a4c740c25cee1c0d16dfd4c50b62022da.html#a4c740c25cee1c0d16dfd4c50b62022da">Terraria.GameContent.Biomes.Desert.DesertDescription.CreateFromPlacement()</a>, <a class="el" href="../../d6/d1d/classTerraria_1_1GameContent_1_1Biomes_1_1DunesBiome_1_1DunesDescription_a553a9e4abd543b79269e4766edd6dc3d.html#a553a9e4abd543b79269e4766edd6dc3d">Terraria.GameContent.Biomes.DunesBiome.DunesDescription.CreateFromPlacement()</a>, and <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a5ef4160b1ff3713f2d9e335f04803a73.html#a5ef4160b1ff3713f2d9e335f04803a73">Terraria.GameContent.Biomes.Desert.DesertDescription.UpdateSurfaceMap()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

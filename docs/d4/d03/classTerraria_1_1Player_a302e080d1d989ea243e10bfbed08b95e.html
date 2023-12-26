@@ -126,7 +126,17 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a302e080d1d989ea243e10b
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">40642</span>    {</div>
+<div class="line"><span class="lineno">40643</span>        Vector2 v = targetPos - startPos;</div>
+<div class="line"><span class="lineno">40644</span>        Vector2 vector = v.SafeNormalize(Vector2.Zero);</div>
+<div class="line"><span class="lineno">40645</span>        vector.Y -= 1f;</div>
+<div class="line"><span class="lineno">40646</span>        <span class="keywordtype">float</span> num = v.Length();</div>
+<div class="line"><span class="lineno">40647</span>        num = (float)Math.Pow(num / 700f, 2.0) * 700f;</div>
+<div class="line"><span class="lineno">40648</span>        targetPos.Y += vector.Y * num * rangeCompensation * 1f;</div>
+<div class="line"><span class="lineno">40649</span>        targetPos.X += (0f - vector.X) * num * rangeCompensation * 1f;</div>
+<div class="line"><span class="lineno">40650</span>        <span class="keywordflow">return</span> targetPos;</div>
+<div class="line"><span class="lineno">40651</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

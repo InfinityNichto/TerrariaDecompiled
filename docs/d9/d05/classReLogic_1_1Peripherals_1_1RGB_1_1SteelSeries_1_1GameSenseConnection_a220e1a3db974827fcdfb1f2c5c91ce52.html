@@ -117,6 +117,48 @@ $(function(){initNavTree('d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeri
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>        <span class="comment">//IL_007c: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  316</span>        <span class="comment">//IL_0070: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordtype">string</span> text = _toJSON(msg.data);</div>
+<div class="line"><span class="lineno">  318</span>        JsonMsg jsonMsg = (JsonMsg)(<span class="keywordtype">object</span>)((msg is JsonMsg) ? msg : null);</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (jsonMsg != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  320</span>        {</div>
+<div class="line"><span class="lineno">  321</span>            text = jsonMsg.JsonText;</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span>        <a class="code hl_function" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a832871270f4708a6c4a70ddcdc93de02.html#a832871270f4708a6c4a70ddcdc93de02">_logDbgMsg</a>(text);</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  325</span>        {</div>
+<div class="line"><span class="lineno">  326</span>            <a class="code hl_function" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a7d1d0efed464be7631eeed04c6aac0f7.html#a7d1d0efed464be7631eeed04c6aac0f7">_sendServer</a>(msg.uri, text);</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">catch</span> (WebException ex)</div>
+<div class="line"><span class="lineno">  329</span>        {</div>
+<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">switch</span> (ex.Status)</div>
+<div class="line"><span class="lineno">  331</span>            {</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">case</span> WebExceptionStatus.ProtocolError:</div>
+<div class="line"><span class="lineno">  333</span>                <span class="keywordflow">if</span> (msg.IsCritical())</div>
+<div class="line"><span class="lineno">  334</span>                {</div>
+<div class="line"><span class="lineno">  335</span>                    Stream responseStream = ex.Response.GetResponseStream();</div>
+<div class="line"><span class="lineno">  336</span>                    <span class="keywordtype">string</span> text2 = <span class="keyword">new</span> StreamReader(responseStream, Encoding.UTF8).ReadToEnd();</div>
+<div class="line"><span class="lineno">  337</span>                    responseStream.Close();</div>
+<div class="line"><span class="lineno">  338</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> CriticalMessageIllFormedException(text2);</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">case</span> WebExceptionStatus.ConnectFailure:</div>
+<div class="line"><span class="lineno">  342</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> ServerDownException(ex.Message);</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  344</span>                <a class="code hl_function" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a4cc6a153a7a9ada9c98dd7e7c9654d17.html#a4cc6a153a7a9ada9c98dd7e7c9654d17">_logException</a>(<span class="stringliteral">&quot;Unexpected status&quot;</span>, ex);</div>
+<div class="line"><span class="lineno">  345</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  346</span>            }</div>
+<div class="line"><span class="lineno">  347</span>        }</div>
+<div class="line"><span class="lineno">  348</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a4cc6a153a7a9ada9c98dd7e7c9654d17_html_a4cc6a153a7a9ada9c98dd7e7c9654d17"><div class="ttname"><a href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a4cc6a153a7a9ada9c98dd7e7c9654d17.html#a4cc6a153a7a9ada9c98dd7e7c9654d17">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._logException</a></div><div class="ttdeci">static void _logException(string msg, Exception e)</div><div class="ttdef"><b>Definition</b> GameSenseConnection.cs:297</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a7d1d0efed464be7631eeed04c6aac0f7_html_a7d1d0efed464be7631eeed04c6aac0f7"><div class="ttname"><a href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a7d1d0efed464be7631eeed04c6aac0f7.html#a7d1d0efed464be7631eeed04c6aac0f7">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._sendServer</a></div><div class="ttdeci">void _sendServer(Uri uri, string data)</div><div class="ttdef"><b>Definition</b> GameSenseConnection.cs:451</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a832871270f4708a6c4a70ddcdc93de02_html_a832871270f4708a6c4a70ddcdc93de02"><div class="ttname"><a href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a832871270f4708a6c4a70ddcdc93de02.html#a832871270f4708a6c4a70ddcdc93de02">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._logDbgMsg</a></div><div class="ttdeci">static void _logDbgMsg(string msg)</div><div class="ttdef"><b>Definition</b> GameSenseConnection.cs:305</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a832871270f4708a6c4a70ddcdc93de02.html#a832871270f4708a6c4a70ddcdc93de02">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._logDbgMsg()</a>, <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a4cc6a153a7a9ada9c98dd7e7c9654d17.html#a4cc6a153a7a9ada9c98dd7e7c9654d17">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._logException()</a>, and <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a7d1d0efed464be7631eeed04c6aac0f7.html#a7d1d0efed464be7631eeed04c6aac0f7">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._sendServer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_aaac96d14e91427afbb35d5635e868f88.html#aaac96d14e91427afbb35d5635e868f88">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._gamesenseWrk()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,49 @@ $(function(){initNavTree('d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterM
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        LinkedListNode&lt;Filter&gt; linkedListNode = <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.First;</div>
+<div class="line"><span class="lineno">  100</span>        _ = <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.Count;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">while</span> (linkedListNode != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            Filter value = linkedListNode.Value;</div>
+<div class="line"><span class="lineno">  105</span>            LinkedListNode&lt;Filter&gt; next = linkedListNode.Next;</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (value.Priority &gt;= <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">_priorityThreshold</a>)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                num++;</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (num &gt; <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">_activeFilterCount</a> - <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_aafe1243ed9166ca561bc84d3e3f482d2.html#aafe1243ed9166ca561bc84d3e3f482d2">_filterLimit</a>)</div>
+<div class="line"><span class="lineno">  111</span>                {</div>
+<div class="line"><span class="lineno">  112</span>                    value.Update(gameTime);</div>
+<div class="line"><span class="lineno">  113</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  114</span>                }</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (value.Active &amp;&amp; flag)</div>
+<div class="line"><span class="lineno">  117</span>            {</div>
+<div class="line"><span class="lineno">  118</span>                value.Opacity = Math.Min(value.Opacity + (<span class="keywordtype">float</span>)gameTime.ElapsedGameTime.TotalSeconds * 1f, 1f);</div>
+<div class="line"><span class="lineno">  119</span>            }</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                value.Opacity = Math.Max(value.Opacity - (<span class="keywordtype">float</span>)gameTime.ElapsedGameTime.TotalSeconds * 1f, 0f);</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (!value.Active &amp;&amp; value.Opacity == 0f)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">if</span> (value.Priority &gt;= <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">_priorityThreshold</a>)</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">_activeFilterCount</a>--;</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span>                <a class="code hl_variable" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">_activeFilters</a>.Remove(linkedListNode);</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>            linkedListNode = next;</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7_html_a2e5e3a3f9cec68c6ab602bbaaaf48fd7"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">Terraria.Graphics.Effects.FilterManager._activeFilterCount</a></div><div class="ttdeci">int _activeFilterCount</div><div class="ttdef"><b>Definition</b> FilterManager.cs:19</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0_html_a578052ab453af4ca1ef45d6f9d8353a0"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">Terraria.Graphics.Effects.FilterManager._activeFilters</a></div><div class="ttdeci">LinkedList&lt; Filter &gt; _activeFilters</div><div class="ttdef"><b>Definition</b> FilterManager.cs:13</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_aafe1243ed9166ca561bc84d3e3f482d2_html_aafe1243ed9166ca561bc84d3e3f482d2"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_aafe1243ed9166ca561bc84d3e3f482d2.html#aafe1243ed9166ca561bc84d3e3f482d2">Terraria.Graphics.Effects.FilterManager._filterLimit</a></div><div class="ttdeci">int _filterLimit</div><div class="ttdef"><b>Definition</b> FilterManager.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860_html_adcf6196091683b4944e35c89cd852860"><div class="ttname"><a href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">Terraria.Graphics.Effects.FilterManager._priorityThreshold</a></div><div class="ttdeci">EffectPriority _priorityThreshold</div><div class="ttdef"><b>Definition</b> FilterManager.cs:17</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a2e5e3a3f9cec68c6ab602bbaaaf48fd7.html#a2e5e3a3f9cec68c6ab602bbaaaf48fd7">Terraria.Graphics.Effects.FilterManager._activeFilterCount</a>, <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_a578052ab453af4ca1ef45d6f9d8353a0.html#a578052ab453af4ca1ef45d6f9d8353a0">Terraria.Graphics.Effects.FilterManager._activeFilters</a>, <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_aafe1243ed9166ca561bc84d3e3f482d2.html#aafe1243ed9166ca561bc84d3e3f482d2">Terraria.Graphics.Effects.FilterManager._filterLimit</a>, <a class="el" href="../../d6/d63/classTerraria_1_1Graphics_1_1Effects_1_1FilterManager_adcf6196091683b4944e35c89cd852860.html#adcf6196091683b4944e35c89cd852860">Terraria.Graphics.Effects.FilterManager._priorityThreshold</a>, <a class="el" href="../../de/d0d/classTerraria_1_1Graphics_1_1Effects_1_1Filter_aef39766a54288dbaa2ac3a0570b2be19.html#aef39766a54288dbaa2ac3a0570b2be19">Terraria.Graphics.Effects.Filter.Active</a>, <a class="el" href="../../d1/d23/classTerraria_1_1Graphics_1_1Effects_1_1GameEffect_ad87e515d34d0e191480777fdf7ae7a04.html#ad87e515d34d0e191480777fdf7ae7a04">Terraria.Graphics.Effects.GameEffect.Opacity</a>, <a class="el" href="../../d1/d23/classTerraria_1_1Graphics_1_1Effects_1_1GameEffect_af800b0ebaa0d932ca9d1d28845120599.html#af800b0ebaa0d932ca9d1d28845120599">Terraria.Graphics.Effects.GameEffect.Priority</a>, and <a class="el" href="../../de/d0d/classTerraria_1_1Graphics_1_1Effects_1_1Filter_a1d5eb1ceaa0c7bcdb52a9c66044a1c8d.html#a1d5eb1ceaa0c7bcdb52a9c66044a1c8d">Terraria.Graphics.Effects.Filter.Update()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

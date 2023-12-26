@@ -121,6 +121,46 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a8d9b58105005f8173d15
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">36613</span>    {</div>
+<div class="line"><span class="lineno">36614</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(x, y, 30))</div>
+<div class="line"><span class="lineno">36615</span>        {</div>
+<div class="line"><span class="lineno">36616</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">36617</span>        }</div>
+<div class="line"><span class="lineno">36618</span>        <span class="keywordtype">int</span> num = 4;</div>
+<div class="line"><span class="lineno">36619</span>        <span class="keywordtype">int</span> num2 = 6;</div>
+<div class="line"><span class="lineno">36620</span>        <span class="keywordtype">int</span> num3 = 10;</div>
+<div class="line"><span class="lineno">36621</span>        <span class="keywordtype">int</span> num4 = 60;</div>
+<div class="line"><span class="lineno">36622</span>        <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno">36623</span>        <span class="keywordflow">if</span> (Main.tile[x, y].type == 528)</div>
+<div class="line"><span class="lineno">36624</span>        {</div>
+<div class="line"><span class="lineno">36625</span>            num4 /= 5;</div>
+<div class="line"><span class="lineno">36626</span>        }</div>
+<div class="line"><span class="lineno">36627</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x - num; i &lt;= x + num; i++)</div>
+<div class="line"><span class="lineno">36628</span>        {</div>
+<div class="line"><span class="lineno">36629</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y - num2; j &lt;= y + num3; j++)</div>
+<div class="line"><span class="lineno">36630</span>            {</div>
+<div class="line"><span class="lineno">36631</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a2df81fbb3f85e76c6c383732570e6a13.html#a2df81fbb3f85e76c6c383732570e6a13">IsVine</a>[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno">36632</span>                {</div>
+<div class="line"><span class="lineno">36633</span>                    num5++;</div>
+<div class="line"><span class="lineno">36634</span>                    <span class="keywordflow">if</span> (j &gt; y &amp;&amp; Collision.CanHitLine(<span class="keyword">new</span> Vector2(x * 16, y * 16), 1, 1, <span class="keyword">new</span> Vector2(i * 16, j * 16), 1, 1))</div>
+<div class="line"><span class="lineno">36635</span>                    {</div>
+<div class="line"><span class="lineno">36636</span>                        num5 = ((Main.tile[i, j].type != 528) ? (num5 + (j - y) * 2) : (num5 + (j - y) * 20));</div>
+<div class="line"><span class="lineno">36637</span>                    }</div>
+<div class="line"><span class="lineno">36638</span>                    <span class="keywordflow">if</span> (num5 &gt; num4)</div>
+<div class="line"><span class="lineno">36639</span>                    {</div>
+<div class="line"><span class="lineno">36640</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">36641</span>                    }</div>
+<div class="line"><span class="lineno">36642</span>                }</div>
+<div class="line"><span class="lineno">36643</span>            }</div>
+<div class="line"><span class="lineno">36644</span>        }</div>
+<div class="line"><span class="lineno">36645</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36646</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_a2df81fbb3f85e76c6c383732570e6a13_html_a2df81fbb3f85e76c6c383732570e6a13"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a2df81fbb3f85e76c6c383732570e6a13.html#a2df81fbb3f85e76c6c383732570e6a13">Terraria.ID.TileID.Sets.IsVine</a></div><div class="ttdeci">static bool[] IsVine</div><div class="ttdef"><b>Definition</b> TileID.cs:159</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4dec276f8d2858ee4dd91c23f5bffa52.html#a4dec276f8d2858ee4dd91c23f5bffa52">Terraria.Collision.CanHitLine()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a2df81fbb3f85e76c6c383732570e6a13.html#a2df81fbb3f85e76c6c383732570e6a13">Terraria.ID.TileID.Sets.IsVine</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

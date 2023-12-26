@@ -117,6 +117,134 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a4b62ff980326a30a4741f3
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">27606</span>    {</div>
+<div class="line"><span class="lineno">27607</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>;</div>
+<div class="line"><span class="lineno">27608</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">gravDir</a> == -1f)</div>
+<div class="line"><span class="lineno">27609</span>        {</div>
+<div class="line"><span class="lineno">27610</span>            num = 4;</div>
+<div class="line"><span class="lineno">27611</span>        }</div>
+<div class="line"><span class="lineno">27612</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><span class="lineno">27613</span>        {</div>
+<div class="line"><span class="lineno">27614</span>            <span class="keywordtype">int</span> num2 = ((i == 0) ? 2 : (-2));</div>
+<div class="line"><span class="lineno">27615</span>            Rectangle r = ((i != 0) ? <span class="keyword">new</span> Rectangle((<span class="keywordtype">int</span>)position.X + <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a> - 4, (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y + num - 10, 8, 8) : <span class="keyword">new</span> Rectangle((<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X - 4, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y + num - 10, 8, 8));</div>
+<div class="line"><span class="lineno">27616</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">direction</a> == -1)</div>
+<div class="line"><span class="lineno">27617</span>            {</div>
+<div class="line"><span class="lineno">27618</span>                r.X -= 4;</div>
+<div class="line"><span class="lineno">27619</span>            }</div>
+<div class="line"><span class="lineno">27620</span>            <span class="keywordtype">int</span> type = 6;</div>
+<div class="line"><span class="lineno">27621</span>            <span class="keywordtype">float</span> scale = 2.5f;</div>
+<div class="line"><span class="lineno">27622</span>            <span class="keywordtype">int</span> alpha = 100;</div>
+<div class="line"><span class="lineno">27623</span>            <span class="keywordtype">float</span> num3 = 1f;</div>
+<div class="line"><span class="lineno">27624</span>            Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)(-num2) - <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X * 0.3f, 2f * <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">gravDir</a> - <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y * 0.3f);</div>
+<div class="line"><span class="lineno">27625</span>            Dust dust;</div>
+<div class="line"><span class="lineno">27626</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a71b21f7e46e1a3a277fc930b4280ea5d.html#a71b21f7e46e1a3a277fc930b4280ea5d">vanityRocketBoots</a>)</div>
+<div class="line"><span class="lineno">27627</span>            {</div>
+<div class="line"><span class="lineno">27628</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">27629</span>                type = 6;</div>
+<div class="line"><span class="lineno">27630</span>                scale = 2.5f;</div>
+<div class="line"><span class="lineno">27631</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27632</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">27633</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0c050272462f8bfbb36a35b46f836438.html#a0c050272462f8bfbb36a35b46f836438">socialShadowRocketBoots</a>)</div>
+<div class="line"><span class="lineno">27634</span>                {</div>
+<div class="line"><span class="lineno">27635</span>                    type = 27;</div>
+<div class="line"><span class="lineno">27636</span>                    scale = 1.5f;</div>
+<div class="line"><span class="lineno">27637</span>                }</div>
+<div class="line"><span class="lineno">27638</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27639</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">27640</span>                type = 76;</div>
+<div class="line"><span class="lineno">27641</span>                scale = 1f;</div>
+<div class="line"><span class="lineno">27642</span>                alpha = 20;</div>
+<div class="line"><span class="lineno">27643</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27644</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">27645</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aee3a6dd203955ebc9611adf357981eb2.html#aee3a6dd203955ebc9611adf357981eb2">fairyBoots</a>)</div>
+<div class="line"><span class="lineno">27646</span>                {</div>
+<div class="line"><span class="lineno">27647</span>                    type = Main.rand.NextFromList(<span class="keyword">new</span> <span class="keywordtype">short</span>[6] { 61, 61, 61, 242, 64, 63 });</div>
+<div class="line"><span class="lineno">27648</span>                    scale = 2f;</div>
+<div class="line"><span class="lineno">27649</span>                    alpha = 120;</div>
+<div class="line"><span class="lineno">27650</span>                }</div>
+<div class="line"><span class="lineno">27651</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">27652</span>                {</div>
+<div class="line"><span class="lineno">27653</span>                    type = 16;</div>
+<div class="line"><span class="lineno">27654</span>                    scale = 1.5f;</div>
+<div class="line"><span class="lineno">27655</span>                    alpha = 20;</div>
+<div class="line"><span class="lineno">27656</span>                }</div>
+<div class="line"><span class="lineno">27657</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27658</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">27659</span>            {</div>
+<div class="line"><span class="lineno">27660</span>                <span class="keywordtype">int</span> num4 = Main.rand.Next(6);</div>
+<div class="line"><span class="lineno">27661</span>                r.Y += 2 * (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">gravDir</a>;</div>
+<div class="line"><span class="lineno">27662</span>                <span class="keywordflow">if</span> (num4 == 0 || num4 == 1)</div>
+<div class="line"><span class="lineno">27663</span>                {</div>
+<div class="line"><span class="lineno">27664</span>                    dust = Dust.NewDustDirect(r.TopLeft(), r.Width, r.Height, 278, 0f, 0f, 100, Color.Lerp(Color.LimeGreen, Color.White, Main.rand.NextFloat() * 0.3f));</div>
+<div class="line"><span class="lineno">27665</span>                    dust.shader = <a class="code hl_class" href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders.html">GameShaders</a>.<a class="code hl_variable" href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_a54b516e33096e811cf8b678af7d5d7ed.html#a54b516e33096e811cf8b678af7d5d7ed">Armor</a>.<a class="code hl_function" href="../../dc/df9/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderDataSet_a657ae03b00b34d0e37a85701550417c8.html#a657ae03b00b34d0e37a85701550417c8">GetSecondaryShader</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8bfe0d7a92ea5232c4192175c797a9cc.html#a8bfe0d7a92ea5232c4192175c797a9cc">cShoe</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">27666</span>                    dust.scale = 0.66f;</div>
+<div class="line"><span class="lineno">27667</span>                    dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27668</span>                    dust.velocity *= 0.25f;</div>
+<div class="line"><span class="lineno">27669</span>                    dust.velocity -= <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a> * 0.5f;</div>
+<div class="line"><span class="lineno">27670</span>                    dust.velocity += vector * 0.5f;</div>
+<div class="line"><span class="lineno">27671</span>                    dust.position += dust.velocity * 4f;</div>
+<div class="line"><span class="lineno">27672</span>                    <span class="keywordflow">if</span> (Main.rand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">27673</span>                    {</div>
+<div class="line"><span class="lineno">27674</span>                        dust.fadeIn = 0.8f;</div>
+<div class="line"><span class="lineno">27675</span>                    }</div>
+<div class="line"><span class="lineno">27676</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">27677</span>                }</div>
+<div class="line"><span class="lineno">27678</span>                type = 107;</div>
+<div class="line"><span class="lineno">27679</span>                alpha = 100;</div>
+<div class="line"><span class="lineno">27680</span>                scale = 0.7f;</div>
+<div class="line"><span class="lineno">27681</span>                num3 = 0.5f;</div>
+<div class="line"><span class="lineno">27682</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27683</span>            }</div>
+<div class="line"><span class="lineno">27684</span>            }</div>
+<div class="line"><span class="lineno">27685</span>            dust = Dust.NewDustDirect(r.TopLeft(), r.Width, r.Height, type, 0f, 0f, alpha, <span class="keywordflow">default</span>(Color), scale);</div>
+<div class="line"><span class="lineno">27686</span>            dust.shader = <a class="code hl_class" href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders.html">GameShaders</a>.<a class="code hl_variable" href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_a54b516e33096e811cf8b678af7d5d7ed.html#a54b516e33096e811cf8b678af7d5d7ed">Armor</a>.<a class="code hl_function" href="../../dc/df9/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderDataSet_a657ae03b00b34d0e37a85701550417c8.html#a657ae03b00b34d0e37a85701550417c8">GetSecondaryShader</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8bfe0d7a92ea5232c4192175c797a9cc.html#a8bfe0d7a92ea5232c4192175c797a9cc">cShoe</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">27687</span>            dust.velocity += vector;</div>
+<div class="line"><span class="lineno">27688</span>            dust.velocity *= num3;</div>
+<div class="line"><span class="lineno">27689</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a71b21f7e46e1a3a277fc930b4280ea5d.html#a71b21f7e46e1a3a277fc930b4280ea5d">vanityRocketBoots</a>)</div>
+<div class="line"><span class="lineno">27690</span>            {</div>
+<div class="line"><span class="lineno">27691</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">27692</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27693</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27694</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">27695</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27696</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27697</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">27698</span>                dust.velocity *= 0.1f;</div>
+<div class="line"><span class="lineno">27699</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27700</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">27701</span>                dust.velocity *= 0.05f;</div>
+<div class="line"><span class="lineno">27702</span>                dust.velocity.Y += 0.15f;</div>
+<div class="line"><span class="lineno">27703</span>                dust.noLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27704</span>                <span class="keywordflow">if</span> (Main.rand.Next(2) == 0)</div>
+<div class="line"><span class="lineno">27705</span>                {</div>
+<div class="line"><span class="lineno">27706</span>                    dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27707</span>                    dust.scale = 1.75f;</div>
+<div class="line"><span class="lineno">27708</span>                }</div>
+<div class="line"><span class="lineno">27709</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">27710</span>            }</div>
+<div class="line"><span class="lineno">27711</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aee3a6dd203955ebc9611adf357981eb2.html#aee3a6dd203955ebc9611adf357981eb2">fairyBoots</a>)</div>
+<div class="line"><span class="lineno">27712</span>            {</div>
+<div class="line"><span class="lineno">27713</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27714</span>                dust.noLightEmittence = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">27715</span>            }</div>
+<div class="line"><span class="lineno">27716</span>        }</div>
+<div class="line"><span class="lineno">27717</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f_html_a2dc818b6035d9e739592ea0e9a75945f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition</b> Entity.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderDataSet_a657ae03b00b34d0e37a85701550417c8_html_a657ae03b00b34d0e37a85701550417c8"><div class="ttname"><a href="../../dc/df9/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderDataSet_a657ae03b00b34d0e37a85701550417c8.html#a657ae03b00b34d0e37a85701550417c8">Terraria.Graphics.Shaders.ArmorShaderDataSet.GetSecondaryShader</a></div><div class="ttdeci">ArmorShaderData GetSecondaryShader(int id, Player player)</div><div class="ttdef"><b>Definition</b> ArmorShaderDataSet.cs:63</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_a54b516e33096e811cf8b678af7d5d7ed_html_a54b516e33096e811cf8b678af7d5d7ed"><div class="ttname"><a href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_a54b516e33096e811cf8b678af7d5d7ed.html#a54b516e33096e811cf8b678af7d5d7ed">Terraria.Graphics.Shaders.GameShaders.Armor</a></div><div class="ttdeci">static ArmorShaderDataSet Armor</div><div class="ttdef"><b>Definition</b> GameShaders.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_html"><div class="ttname"><a href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders.html">Terraria.Graphics.Shaders.GameShaders</a></div><div class="ttdef"><b>Definition</b> GameShaders.cs:6</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0c050272462f8bfbb36a35b46f836438_html_a0c050272462f8bfbb36a35b46f836438"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0c050272462f8bfbb36a35b46f836438.html#a0c050272462f8bfbb36a35b46f836438">Terraria.Player.socialShadowRocketBoots</a></div><div class="ttdeci">bool socialShadowRocketBoots</div><div class="ttdef"><b>Definition</b> Player.cs:1229</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33_html_a613d972c327db7fbe5200fd8d4ae8b33"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a></div><div class="ttdeci">float gravDir</div><div class="ttdef"><b>Definition</b> Player.cs:1587</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a71b21f7e46e1a3a277fc930b4280ea5d_html_a71b21f7e46e1a3a277fc930b4280ea5d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a71b21f7e46e1a3a277fc930b4280ea5d.html#a71b21f7e46e1a3a277fc930b4280ea5d">Terraria.Player.vanityRocketBoots</a></div><div class="ttdeci">int vanityRocketBoots</div><div class="ttdef"><b>Definition</b> Player.cs:2325</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a8bfe0d7a92ea5232c4192175c797a9cc_html_a8bfe0d7a92ea5232c4192175c797a9cc"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a8bfe0d7a92ea5232c4192175c797a9cc.html#a8bfe0d7a92ea5232c4192175c797a9cc">Terraria.Player.cShoe</a></div><div class="ttdeci">int cShoe</div><div class="ttdef"><b>Definition</b> Player.cs:2489</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aee3a6dd203955ebc9611adf357981eb2_html_aee3a6dd203955ebc9611adf357981eb2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aee3a6dd203955ebc9611adf357981eb2.html#aee3a6dd203955ebc9611adf357981eb2">Terraria.Player.fairyBoots</a></div><div class="ttdeci">bool fairyBoots</div><div class="ttdef"><b>Definition</b> Player.cs:1709</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d0c/classTerraria_1_1Graphics_1_1Shaders_1_1GameShaders_a54b516e33096e811cf8b678af7d5d7ed.html#a54b516e33096e811cf8b678af7d5d7ed">Terraria.Graphics.Shaders.GameShaders.Armor</a>, <a class="el" href="../../dc/df9/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderDataSet_a657ae03b00b34d0e37a85701550417c8.html#a657ae03b00b34d0e37a85701550417c8">Terraria.Graphics.Shaders.ArmorShaderDataSet.GetSecondaryShader()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

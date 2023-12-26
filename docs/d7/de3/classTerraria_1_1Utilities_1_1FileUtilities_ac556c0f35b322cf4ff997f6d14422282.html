@@ -121,7 +121,20 @@ $(function(){initNavTree('d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_ac5
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  209</span>    {</div>
+<div class="line"><span class="lineno">  210</span>        Directory.CreateDirectory(destinationPath);</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordtype">string</span>[] directories = Directory.GetDirectories(sourcePath, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; directories.Length; i++)</div>
+<div class="line"><span class="lineno">  213</span>        {</div>
+<div class="line"><span class="lineno">  214</span>            Directory.CreateDirectory(directories[i].Replace(sourcePath, destinationPath));</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>        directories = Directory.GetFiles(sourcePath, <span class="stringliteral">&quot;*.*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> obj <span class="keywordflow">in</span> directories)</div>
+<div class="line"><span class="lineno">  218</span>        {</div>
+<div class="line"><span class="lineno">  219</span>            File.Copy(obj, obj.Replace(sourcePath, destinationPath), overwrite: true);</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

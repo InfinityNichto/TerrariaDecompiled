@@ -121,6 +121,58 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aa458721c1e1f291b59a9
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">17171</span>    {</div>
+<div class="line"><span class="lineno">17172</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Main.maxTilesX; i++)</div>
+<div class="line"><span class="lineno">17173</span>        {</div>
+<div class="line"><span class="lineno">17174</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; Main.maxTilesY; j++)</div>
+<div class="line"><span class="lineno">17175</span>            {</div>
+<div class="line"><span class="lineno">17176</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">17177</span>                <span class="keywordflow">if</span> (tile.active())</div>
+<div class="line"><span class="lineno">17178</span>                {</div>
+<div class="line"><span class="lineno">17179</span>                    <span class="keywordflow">if</span> (tile.wall == 244)</div>
+<div class="line"><span class="lineno">17180</span>                    {</div>
+<div class="line"><span class="lineno">17181</span>                        tile.color(livingTreePaintColor);</div>
+<div class="line"><span class="lineno">17182</span>                    }</div>
+<div class="line"><span class="lineno">17183</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 192 || tile.type == 191)</div>
+<div class="line"><span class="lineno">17184</span>                    {</div>
+<div class="line"><span class="lineno">17185</span>                        tile.color(livingTreePaintColor);</div>
+<div class="line"><span class="lineno">17186</span>                    }</div>
+<div class="line"><span class="lineno">17187</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 52 || tile.type == 382)</div>
+<div class="line"><span class="lineno">17188</span>                    {</div>
+<div class="line"><span class="lineno">17189</span>                        <span class="keywordtype">int</span> x = i;</div>
+<div class="line"><span class="lineno">17190</span>                        <span class="keywordtype">int</span> y = j;</div>
+<div class="line"><span class="lineno">17191</span>                        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ac3213e92104e2bf0ca0316526530f023.html#ac3213e92104e2bf0ca0316526530f023">GetVineTop</a>(i, j, out x, out y);</div>
+<div class="line"><span class="lineno">17192</span>                        <span class="keywordflow">if</span> (Main.tile[x, y].type == 192)</div>
+<div class="line"><span class="lineno">17193</span>                        {</div>
+<div class="line"><span class="lineno">17194</span>                            tile.color(livingTreePaintColor);</div>
+<div class="line"><span class="lineno">17195</span>                        }</div>
+<div class="line"><span class="lineno">17196</span>                    }</div>
+<div class="line"><span class="lineno">17197</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 187)</div>
+<div class="line"><span class="lineno">17198</span>                    {</div>
+<div class="line"><span class="lineno">17199</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = tile;</div>
+<div class="line"><span class="lineno">17200</span>                        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">17201</span>                        <span class="keywordflow">while</span> (tile2.type == 187)</div>
+<div class="line"><span class="lineno">17202</span>                        {</div>
+<div class="line"><span class="lineno">17203</span>                            num++;</div>
+<div class="line"><span class="lineno">17204</span>                            tile2 = Main.tile[i, j + num];</div>
+<div class="line"><span class="lineno">17205</span>                        }</div>
+<div class="line"><span class="lineno">17206</span>                        <span class="keywordflow">if</span> (tile2.type == 192)</div>
+<div class="line"><span class="lineno">17207</span>                        {</div>
+<div class="line"><span class="lineno">17208</span>                            tile.color(livingTreePaintColor);</div>
+<div class="line"><span class="lineno">17209</span>                        }</div>
+<div class="line"><span class="lineno">17210</span>                    }</div>
+<div class="line"><span class="lineno">17211</span>                }</div>
+<div class="line"><span class="lineno">17212</span>                <span class="keywordflow">if</span> (tile.wall == 244)</div>
+<div class="line"><span class="lineno">17213</span>                {</div>
+<div class="line"><span class="lineno">17214</span>                    tile.wallColor(livingTreeWallPaintColor);</div>
+<div class="line"><span class="lineno">17215</span>                }</div>
+<div class="line"><span class="lineno">17216</span>            }</div>
+<div class="line"><span class="lineno">17217</span>        }</div>
+<div class="line"><span class="lineno">17218</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ac3213e92104e2bf0ca0316526530f023_html_ac3213e92104e2bf0ca0316526530f023"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ac3213e92104e2bf0ca0316526530f023.html#ac3213e92104e2bf0ca0316526530f023">Terraria.WorldGen.GetVineTop</a></div><div class="ttdeci">static void GetVineTop(int i, int j, out int x, out int y)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54045</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a083f90a80ef987726fd28c52ffc4787e.html#a083f90a80ef987726fd28c52ffc4787e">Terraria.Tile.color()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae29f1e935710d0c9f5e325f873709719.html#ae29f1e935710d0c9f5e325f873709719">Terraria.Tile.wallColor()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,56 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a4f7f370abf3c31824a0411
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 8515</span>    {</div>
+<div class="line"><span class="lineno"> 8516</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 8517</span>        <span class="keywordtype">int</span> num2 = 58;</div>
+<div class="line"><span class="lineno"> 8518</span>        <span class="keywordtype">int</span> num3 = 1;</div>
+<div class="line"><span class="lineno"> 8519</span>        <span class="keywordflow">if</span> (reverseOrder)</div>
+<div class="line"><span class="lineno"> 8520</span>        {</div>
+<div class="line"><span class="lineno"> 8521</span>            num = 57;</div>
+<div class="line"><span class="lineno"> 8522</span>            num2 = -1;</div>
+<div class="line"><span class="lineno"> 8523</span>            num3 = -1;</div>
+<div class="line"><span class="lineno"> 8524</span>        }</div>
+<div class="line"><span class="lineno"> 8525</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i != num2; i += num3)</div>
+<div class="line"><span class="lineno"> 8526</span>        {</div>
+<div class="line"><span class="lineno"> 8527</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].stack &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].type == type)</div>
+<div class="line"><span class="lineno"> 8528</span>            {</div>
+<div class="line"><span class="lineno"> 8529</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>--;</div>
+<div class="line"><span class="lineno"> 8530</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].stack &lt;= 0)</div>
+<div class="line"><span class="lineno"> 8531</span>                {</div>
+<div class="line"><span class="lineno"> 8532</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">SetDefaults</a>();</div>
+<div class="line"><span class="lineno"> 8533</span>                }</div>
+<div class="line"><span class="lineno"> 8534</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 8535</span>            }</div>
+<div class="line"><span class="lineno"> 8536</span>        }</div>
+<div class="line"><span class="lineno"> 8537</span>        <span class="keywordflow">if</span> (includeVoidBag &amp;&amp; <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4.html#a8052710a79a98dfa51fab46d3a2525a4">useVoidBag</a>())</div>
+<div class="line"><span class="lineno"> 8538</span>        {</div>
+<div class="line"><span class="lineno"> 8539</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a174f7a46ca8804e4a668921c29e086c5.html#a174f7a46ca8804e4a668921c29e086c5">FindItem</a>(type, <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">bank4</a>.<a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">item</a>);</div>
+<div class="line"><span class="lineno"> 8540</span>            <span class="keywordflow">if</span> (num4 == -1)</div>
+<div class="line"><span class="lineno"> 8541</span>            {</div>
+<div class="line"><span class="lineno"> 8542</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 8543</span>            }</div>
+<div class="line"><span class="lineno"> 8544</span>            Item item = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">bank4</a>.<a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">item</a>[num4];</div>
+<div class="line"><span class="lineno"> 8545</span>            item.<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>--;</div>
+<div class="line"><span class="lineno"> 8546</span>            <span class="keywordflow">if</span> (item.stack &lt;= 0)</div>
+<div class="line"><span class="lineno"> 8547</span>            {</div>
+<div class="line"><span class="lineno"> 8548</span>                item.TurnToAir();</div>
+<div class="line"><span class="lineno"> 8549</span>            }</div>
+<div class="line"><span class="lineno"> 8550</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 8551</span>        }</div>
+<div class="line"><span class="lineno"> 8552</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 8553</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c_html_a7d12be50c317c1f241b48a4c0fc99d8c"><div class="ttname"><a href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a></div><div class="ttdeci">Item[] item</div><div class="ttdef"><b>Definition</b> Chest.cs:41</div></div>
+<div class="ttc" id="aclassTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74_html_a383996c95e68950a46d631d21abd7b74"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a></div><div class="ttdeci">int stack</div><div class="ttdef"><b>Definition</b> Item.cs:149</div></div>
+<div class="ttc" id="aclassTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9_html_adb2554f9d394eca69180ff503efd10d9"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults</a></div><div class="ttdeci">void SetDefaults(int Type=0)</div><div class="ttdef"><b>Definition</b> Item.cs:47332</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a174f7a46ca8804e4a668921c29e086c5_html_a174f7a46ca8804e4a668921c29e086c5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a174f7a46ca8804e4a668921c29e086c5.html#a174f7a46ca8804e4a668921c29e086c5">Terraria.Player.FindItem</a></div><div class="ttdeci">int FindItem(int netid)</div><div class="ttdef"><b>Definition</b> Player.cs:52383</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372_html_a73703bba0933f97b337e8c62e7bd8372"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">Terraria.Player.bank4</a></div><div class="ttdeci">Chest bank4</div><div class="ttdef"><b>Definition</b> Player.cs:1269</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4_html_a8052710a79a98dfa51fab46d3a2525a4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4.html#a8052710a79a98dfa51fab46d3a2525a4">Terraria.Player.useVoidBag</a></div><div class="ttdeci">bool useVoidBag()</div><div class="ttdef"><b>Definition</b> Player.cs:22085</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_ace3f30b7386560df4055302fd96292f1.html#ace3f30b7386560df4055302fd96292f1">Terraria.Item.TurnToAir()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a85a11f7c4eca6083bdc4ad373a4d67d7.html#a85a11f7c4eca6083bdc4ad373a4d67d7">Terraria.Wiring.MassWireOperation()</a>, and <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_addd7a431a7de0e1b579ecab0be769594.html#addd7a431a7de0e1b579ecab0be769594">Terraria.UI.ItemSlot.TryOpenContainer()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

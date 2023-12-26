@@ -136,6 +136,74 @@ $(function(){initNavTree('de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a71741b6
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordtype">float</span> num = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordtype">int</span> nearestNPCIndex = -1;</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">float</span> num2 = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordtype">float</span> nearestTankDistance = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordtype">int</span> nearestTankIndex = -1;</div>
+<div class="line"><span class="lineno">  203</span>        TargetType tankType = TargetType.Player;</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span> (flags.HasFlag(<a class="code hl_enumeration" href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a71ad18d48b205df7270a57a540704782.html#a71ad18d48b205df7270a57a540704782">TargetSearchFlag</a>.NPCs))</div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                <a class="code hl_enumvalue" href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609.html#a5dce0da8773bb32352b40d1530cd0609a2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[i];</div>
+<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">if</span> (nPC.active &amp;&amp; nPC.whoAmI != searcher.whoAmI &amp;&amp; (npcFilter == <span class="keyword">null</span> || npcFilter(nPC)))</div>
+<div class="line"><span class="lineno">  210</span>                {</div>
+<div class="line"><span class="lineno">  211</span>                    <span class="keywordtype">float</span> num3 = Vector2.DistanceSquared(position, nPC.Center);</div>
+<div class="line"><span class="lineno">  212</span>                    <span class="keywordflow">if</span> (num3 &lt; num)</div>
+<div class="line"><span class="lineno">  213</span>                    {</div>
+<div class="line"><span class="lineno">  214</span>                        nearestNPCIndex = i;</div>
+<div class="line"><span class="lineno">  215</span>                        num = num3;</div>
+<div class="line"><span class="lineno">  216</span>                    }</div>
+<div class="line"><span class="lineno">  217</span>                }</div>
+<div class="line"><span class="lineno">  218</span>            }</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (flags.HasFlag(<a class="code hl_enumeration" href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a71ad18d48b205df7270a57a540704782.html#a71ad18d48b205df7270a57a540704782">TargetSearchFlag</a>.Players))</div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 255; j++)</div>
+<div class="line"><span class="lineno">  223</span>            {</div>
+<div class="line"><span class="lineno">  224</span>                <a class="code hl_enumvalue" href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609.html#a5dce0da8773bb32352b40d1530cd0609a636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[j];</div>
+<div class="line"><span class="lineno">  225</span>                <span class="keywordflow">if</span> (!player.active || player.dead || player.ghost || (playerFilter != <span class="keyword">null</span> &amp;&amp; !playerFilter(player)))</div>
+<div class="line"><span class="lineno">  226</span>                {</div>
+<div class="line"><span class="lineno">  227</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  228</span>                }</div>
+<div class="line"><span class="lineno">  229</span>                <span class="keywordtype">float</span> num4 = Vector2.Distance(position, player.Center);</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordtype">float</span> num5 = num4 - (float)player.aggro;</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordtype">bool</span> flag = searcher != <span class="keyword">null</span> &amp;&amp; player.npcTypeNoAggro[searcher.type];</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">if</span> (searcher != <span class="keyword">null</span> &amp;&amp; flag &amp;&amp; searcher.direction == 0)</div>
+<div class="line"><span class="lineno">  233</span>                {</div>
+<div class="line"><span class="lineno">  234</span>                    num5 += 1000f;</div>
+<div class="line"><span class="lineno">  235</span>                }</div>
+<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">if</span> (num5 &lt; num2)</div>
+<div class="line"><span class="lineno">  237</span>                {</div>
+<div class="line"><span class="lineno">  238</span>                    nearestTankIndex = j;</div>
+<div class="line"><span class="lineno">  239</span>                    num2 = num5;</div>
+<div class="line"><span class="lineno">  240</span>                    nearestTankDistance = num4;</div>
+<div class="line"><span class="lineno">  241</span>                    tankType = TargetType.Player;</div>
+<div class="line"><span class="lineno">  242</span>                }</div>
+<div class="line"><span class="lineno">  243</span>                <span class="keywordflow">if</span> (player.tankPet &gt;= 0 &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">  244</span>                {</div>
+<div class="line"><span class="lineno">  245</span>                    Vector2 center = Main.projectile[player.tankPet].Center;</div>
+<div class="line"><span class="lineno">  246</span>                    num4 = Vector2.Distance(position, center);</div>
+<div class="line"><span class="lineno">  247</span>                    num5 = num4 - 200f;</div>
+<div class="line"><span class="lineno">  248</span>                    <span class="keywordflow">if</span> (num5 &lt; num2 &amp;&amp; num5 &lt; 200f &amp;&amp; Collision.CanHit(position, 0, 0, center, 0, 0))</div>
+<div class="line"><span class="lineno">  249</span>                    {</div>
+<div class="line"><span class="lineno">  250</span>                        nearestTankIndex = j;</div>
+<div class="line"><span class="lineno">  251</span>                        num2 = num5;</div>
+<div class="line"><span class="lineno">  252</span>                        nearestTankDistance = num4;</div>
+<div class="line"><span class="lineno">  253</span>                        tankType = TargetType.TankPet;</div>
+<div class="line"><span class="lineno">  254</span>                    }</div>
+<div class="line"><span class="lineno">  255</span>                }</div>
+<div class="line"><span class="lineno">  256</span>            }</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> TargetSearchResults(searcher, nearestNPCIndex, (<span class="keywordtype">float</span>)Math.Sqrt(num), nearestTankIndex, nearestTankDistance, num2, tankType);</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609_html_a5dce0da8773bb32352b40d1530cd0609a2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609.html#a5dce0da8773bb32352b40d1530cd0609a2bda99597da06a11feafd8760b68aec6">Terraria.Utilities.NPCUtils.TargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609_html_a5dce0da8773bb32352b40d1530cd0609a636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a5dce0da8773bb32352b40d1530cd0609.html#a5dce0da8773bb32352b40d1530cd0609a636da1d35e805b00eae0fcd8333f9234">Terraria.Utilities.NPCUtils.TargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1NPCUtils_a71ad18d48b205df7270a57a540704782_html_a71ad18d48b205df7270a57a540704782"><div class="ttname"><a href="../../de/df0/classTerraria_1_1Utilities_1_1NPCUtils_a71ad18d48b205df7270a57a540704782.html#a71ad18d48b205df7270a57a540704782">Terraria.Utilities.NPCUtils.TargetSearchFlag</a></div><div class="ttdeci">TargetSearchFlag</div><div class="ttdef"><b>Definition</b> NPCUtils.cs:179</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">Terraria.Player.aggro</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a034b07537f9fbe3ac9b208ce884d2d16.html#a034b07537f9fbe3ac9b208ce884d2d16">Terraria.Collision.CanHit()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e.html#a8973f997e12f32690d61b0eeb522134e">Terraria.Entity.Distance()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a03c09983ea0317e6e042d92da4d8c1c8.html#a03c09983ea0317e6e042d92da4d8c1c8">Terraria.Player.ghost</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a49be91a41a4472266314ef7f6676fe36.html#a49be91a41a4472266314ef7f6676fe36">Terraria.Player.npcTypeNoAggro</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a22558d16015585a32d858d86b4a22e11.html#a22558d16015585a32d858d86b4a22e11">Terraria.Player.tankPet</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a8b3690049e6958f9002cdc6605efe7fd.html#a8b3690049e6958f9002cdc6605efe7fd">Terraria.NPC.type</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

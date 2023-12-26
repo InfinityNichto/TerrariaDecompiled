@@ -117,6 +117,31 @@ $(function(){initNavTree('de/d1b/classTerraria_1_1DataStructures_1_1PlayerDrawHe
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  404</span>    {</div>
+<div class="line"><span class="lineno">  405</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;DrawData&gt;</a> drawData = drawinfo.DrawData;</div>
+<div class="line"><span class="lineno">  406</span>        Effect pixelShader = Main.pixelShader;</div>
+<div class="line"><span class="lineno">  407</span>        _ = Main.projectile;</div>
+<div class="line"><span class="lineno">  408</span>        SpriteBatch spriteBatch = Main.spriteBatch;</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; drawData.Count; i++)</div>
+<div class="line"><span class="lineno">  410</span>        {</div>
+<div class="line"><span class="lineno">  411</span>            DrawData cdd = drawData[i];</div>
+<div class="line"><span class="lineno">  412</span>            <span class="keywordflow">if</span> (!cdd.sourceRect.HasValue)</div>
+<div class="line"><span class="lineno">  413</span>            {</div>
+<div class="line"><span class="lineno">  414</span>                cdd.sourceRect = cdd.texture.Frame();</div>
+<div class="line"><span class="lineno">  415</span>            }</div>
+<div class="line"><span class="lineno">  416</span>            PlayerDrawHelper.SetShaderForData(drawinfo.drawPlayer, drawinfo.cHead, ref cdd);</div>
+<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">if</span> (cdd.texture != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  418</span>            {</div>
+<div class="line"><span class="lineno">  419</span>                cdd.Draw(spriteBatch);</div>
+<div class="line"><span class="lineno">  420</span>            }</div>
+<div class="line"><span class="lineno">  421</span>        }</div>
+<div class="line"><span class="lineno">  422</span>        pixelShader.CurrentTechnique.Passes[0].Apply();</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/d89/structTerraria_1_1DataStructures_1_1DrawData_a565ee70a72c950b5aa201371ba5374a7.html#a565ee70a72c950b5aa201371ba5374a7">Terraria.DataStructures.DrawData.Draw()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a390142ea1827067ffe17b2fc5790e5f7.html#a390142ea1827067ffe17b2fc5790e5f7">Terraria.Main.pixelShader</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../da/d84/classTerraria_1_1DataStructures_1_1PlayerDrawHelper_a1d588e79ed6e7e52963889f4acde0404.html#a1d588e79ed6e7e52963889f4acde0404">Terraria.DataStructures.PlayerDrawHelper.SetShaderForData()</a>, <a class="el" href="../../d7/d89/structTerraria_1_1DataStructures_1_1DrawData_a604b4ce99ec477a460db50bcbdfd3a67.html#a604b4ce99ec477a460db50bcbdfd3a67">Terraria.DataStructures.DrawData.sourceRect</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">Terraria.Main.spriteBatch</a>, and <a class="el" href="../../d7/d89/structTerraria_1_1DataStructures_1_1DrawData_a4593bd1264ccc37a05f9baaf1b1ae889.html#a4593bd1264ccc37a05f9baaf1b1ae889">Terraria.DataStructures.DrawData.texture</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af1a2afd94645f561b007a1dcb8ab45ba.html#af1a2afd94645f561b007a1dcb8ab45ba">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayerHead()</a>, and <a class="el" href="../../d1/d86/classTerraria_1_1GameContent_1_1PlayerHeadDrawRenderTargetContent_a0603b539dca0908b02925a1e158bf676.html#a0603b539dca0908b02925a1e158bf676">Terraria.GameContent.PlayerHeadDrawRenderTargetContent.DrawTheContent()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -151,6 +151,65 @@ $(function(){initNavTree('db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a11c24ff
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78.html#a388279d2c11109017890336b2e058c78">_queuedSpriteCount</a> &gt;= <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>.Length)</div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            Array.Resize(ref <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>, <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>.Length &lt;&lt; 1);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>        fixed (SpriteData* ptr = &amp;<a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>[<a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78.html#a388279d2c11109017890336b2e058c78">_queuedSpriteCount</a>])</div>
+<div class="line"><span class="lineno">  204</span>        {</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordtype">float</span> num = destination.Z;</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordtype">float</span> num2 = destination.W;</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (sourceRectangle.HasValue)</div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                Rectangle value = sourceRectangle.Value;</div>
+<div class="line"><span class="lineno">  210</span>                ptr-&gt;Source.X = value.X;</div>
+<div class="line"><span class="lineno">  211</span>                ptr-&gt;Source.Y = value.Y;</div>
+<div class="line"><span class="lineno">  212</span>                ptr-&gt;Source.Z = value.Width;</div>
+<div class="line"><span class="lineno">  213</span>                ptr-&gt;Source.W = value.Height;</div>
+<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">if</span> (scaleDestination)</div>
+<div class="line"><span class="lineno">  215</span>                {</div>
+<div class="line"><span class="lineno">  216</span>                    num *= (float)value.Width;</div>
+<div class="line"><span class="lineno">  217</span>                    num2 *= (float)value.Height;</div>
+<div class="line"><span class="lineno">  218</span>                }</div>
+<div class="line"><span class="lineno">  219</span>            }</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  221</span>            {</div>
+<div class="line"><span class="lineno">  222</span>                <span class="keywordtype">float</span> num3 = texture.Width;</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordtype">float</span> num4 = texture.Height;</div>
+<div class="line"><span class="lineno">  224</span>                ptr-&gt;Source.X = 0f;</div>
+<div class="line"><span class="lineno">  225</span>                ptr-&gt;Source.Y = 0f;</div>
+<div class="line"><span class="lineno">  226</span>                ptr-&gt;Source.Z = num3;</div>
+<div class="line"><span class="lineno">  227</span>                ptr-&gt;Source.W = num4;</div>
+<div class="line"><span class="lineno">  228</span>                <span class="keywordflow">if</span> (scaleDestination)</div>
+<div class="line"><span class="lineno">  229</span>                {</div>
+<div class="line"><span class="lineno">  230</span>                    num *= num3;</div>
+<div class="line"><span class="lineno">  231</span>                    num2 *= num4;</div>
+<div class="line"><span class="lineno">  232</span>                }</div>
+<div class="line"><span class="lineno">  233</span>            }</div>
+<div class="line"><span class="lineno">  234</span>            ptr-&gt;Destination.X = destination.X;</div>
+<div class="line"><span class="lineno">  235</span>            ptr-&gt;Destination.Y = destination.Y;</div>
+<div class="line"><span class="lineno">  236</span>            ptr-&gt;Destination.Z = num;</div>
+<div class="line"><span class="lineno">  237</span>            ptr-&gt;Destination.W = num2;</div>
+<div class="line"><span class="lineno">  238</span>            ptr-&gt;Origin.X = origin.X;</div>
+<div class="line"><span class="lineno">  239</span>            ptr-&gt;Origin.Y = origin.Y;</div>
+<div class="line"><span class="lineno">  240</span>            ptr-&gt;Effects = effects;</div>
+<div class="line"><span class="lineno">  241</span>            ptr-&gt;Colors = colors;</div>
+<div class="line"><span class="lineno">  242</span>            ptr-&gt;Rotation = rotation;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">_spriteTextures</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">_spriteTextures</a>.Length != <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>.Length)</div>
+<div class="line"><span class="lineno">  245</span>        {</div>
+<div class="line"><span class="lineno">  246</span>            Array.Resize(ref <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">_spriteTextures</a>, <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">_spriteDataQueue</a>.Length);</div>
+<div class="line"><span class="lineno">  247</span>        }</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">_spriteTextures</a>[<a class="code hl_variable" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78.html#a388279d2c11109017890336b2e058c78">_queuedSpriteCount</a>++] = texture;</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78_html_a388279d2c11109017890336b2e058c78"><div class="ttname"><a href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78.html#a388279d2c11109017890336b2e058c78">Terraria.Graphics.TileBatch._queuedSpriteCount</a></div><div class="ttdeci">int _queuedSpriteCount</div><div class="ttdef"><b>Definition</b> TileBatch.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d_html_a7f04d8fe5c4f5e85574007c5918d478d"><div class="ttname"><a href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">Terraria.Graphics.TileBatch._spriteTextures</a></div><div class="ttdeci">Texture2D[] _spriteTextures</div><div class="ttdef"><b>Definition</b> TileBatch.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42_html_a8855fc33b57ebd44a3ad15a7984b4b42"><div class="ttname"><a href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">Terraria.Graphics.TileBatch._spriteDataQueue</a></div><div class="ttdeci">SpriteData[] _spriteDataQueue</div><div class="ttdef"><b>Definition</b> TileBatch.cs:30</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a388279d2c11109017890336b2e058c78.html#a388279d2c11109017890336b2e058c78">Terraria.Graphics.TileBatch._queuedSpriteCount</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a8855fc33b57ebd44a3ad15a7984b4b42.html#a8855fc33b57ebd44a3ad15a7984b4b42">Terraria.Graphics.TileBatch._spriteDataQueue</a>, and <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a7f04d8fe5c4f5e85574007c5918d478d.html#a7f04d8fe5c4f5e85574007c5918d478d">Terraria.Graphics.TileBatch._spriteTextures</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a1f9b4e468967d6d4f4bc3afaa37c180f.html#a1f9b4e468967d6d4f4bc3afaa37c180f">Terraria.Graphics.TileBatch.Draw()</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_ac97c6ddc387d3643156a8823e67ef8cb.html#ac97c6ddc387d3643156a8823e67ef8cb">Terraria.Graphics.TileBatch.Draw()</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a3372ec2b63f615707d2bd68abfb9e2d1.html#a3372ec2b63f615707d2bd68abfb9e2d1">Terraria.Graphics.TileBatch.Draw()</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a1ac1ccb6323e9e5e82ae7a5da0f12c99.html#a1ac1ccb6323e9e5e82ae7a5da0f12c99">Terraria.Graphics.TileBatch.Draw()</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_ae8950d97801626d77e3afc431d868c61.html#ae8950d97801626d77e3afc431d868c61">Terraria.Graphics.TileBatch.Draw()</a>, <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a3fc7e456a61b19668a6ab488afda423b.html#a3fc7e456a61b19668a6ab488afda423b">Terraria.Graphics.TileBatch.Draw()</a>, and <a class="el" href="../../db/d9e/classTerraria_1_1Graphics_1_1TileBatch_a086903dd80fafa9a081b23f66493fd92.html#a086903dd80fafa9a081b23f66493fd92">Terraria.Graphics.TileBatch.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

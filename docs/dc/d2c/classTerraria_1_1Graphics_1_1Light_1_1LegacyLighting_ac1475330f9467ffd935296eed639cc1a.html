@@ -121,6 +121,100 @@ $(function(){initNavTree('dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLig
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  536</span>    {</div>
+<div class="line"><span class="lineno">  537</span>        Vector2 unscaledPosition = <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a6eb3ca0e3dd7e5ea9c431f44de4254ad.html#a6eb3ca0e3dd7e5ea9c431f44de4254ad">_camera</a>.<a class="code hl_property" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a013f643e0e139da6a33e2444e4a14f57.html#a013f643e0e139da6a33e2444e4a14f57">UnscaledPosition</a>;</div>
+<div class="line"><span class="lineno">  538</span>        <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Floor(unscaledPosition.X / 16f) - <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a2bec979d24a15183736ca42e612828a3.html#a2bec979d24a15183736ca42e612828a3">_scrX</a>;</div>
+<div class="line"><span class="lineno">  539</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Floor(unscaledPosition.Y / 16f) - <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a3aea30c83b4d338a58a385ad45957745.html#a3aea30c83b4d338a58a385ad45957745">_scrY</a>;</div>
+<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">if</span> (num &gt; 16)</div>
+<div class="line"><span class="lineno">  541</span>        {</div>
+<div class="line"><span class="lineno">  542</span>            num = 0;</div>
+<div class="line"><span class="lineno">  543</span>        }</div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">if</span> (num2 &gt; 16)</div>
+<div class="line"><span class="lineno">  545</span>        {</div>
+<div class="line"><span class="lineno">  546</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">  547</span>        }</div>
+<div class="line"><span class="lineno">  548</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordtype">int</span> num4 = maxLightArrayX;</div>
+<div class="line"><span class="lineno">  550</span>        <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno">  551</span>        <span class="keywordtype">int</span> num6 = maxLightArrayY;</div>
+<div class="line"><span class="lineno">  552</span>        <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno">  553</span>        {</div>
+<div class="line"><span class="lineno">  554</span>            num3 -= num;</div>
+<div class="line"><span class="lineno">  555</span>        }</div>
+<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  557</span>        {</div>
+<div class="line"><span class="lineno">  558</span>            num4 -= num;</div>
+<div class="line"><span class="lineno">  559</span>        }</div>
+<div class="line"><span class="lineno">  560</span>        <span class="keywordflow">if</span> (num2 &lt; 0)</div>
+<div class="line"><span class="lineno">  561</span>        {</div>
+<div class="line"><span class="lineno">  562</span>            num5 -= num2;</div>
+<div class="line"><span class="lineno">  563</span>        }</div>
+<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  565</span>        {</div>
+<div class="line"><span class="lineno">  566</span>            num6 -= num2;</div>
+<div class="line"><span class="lineno">  567</span>        }</div>
+<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a73f2f42a1a6c110029c38070b9869227.html#a73f2f42a1a6c110029c38070b9869227">_rgb</a>)</div>
+<div class="line"><span class="lineno">  569</span>        {</div>
+<div class="line"><span class="lineno">  570</span>            <span class="keywordtype">int</span> num7 = maxLightArrayX;</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>.Length &lt;= num7 + num)</div>
+<div class="line"><span class="lineno">  572</span>            {</div>
+<div class="line"><span class="lineno">  573</span>                num7 = _states.Length - num - 1;</div>
+<div class="line"><span class="lineno">  574</span>            }</div>
+<div class="line"><span class="lineno">  575</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num3; i &lt; num7; i++)</div>
+<div class="line"><span class="lineno">  576</span>            {</div>
+<div class="line"><span class="lineno">  577</span>                LightingState[] array = <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>[i];</div>
+<div class="line"><span class="lineno">  578</span>                LightingState[] array2 = <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>[i + num];</div>
+<div class="line"><span class="lineno">  579</span>                <span class="keywordtype">int</span> num8 = num6;</div>
+<div class="line"><span class="lineno">  580</span>                <span class="keywordflow">if</span> (array2.Length &lt;= num8 + num)</div>
+<div class="line"><span class="lineno">  581</span>                {</div>
+<div class="line"><span class="lineno">  582</span>                    num8 = array2.Length - num2 - 1;</div>
+<div class="line"><span class="lineno">  583</span>                }</div>
+<div class="line"><span class="lineno">  584</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num5; j &lt; num8; j++)</div>
+<div class="line"><span class="lineno">  585</span>                {</div>
+<div class="line"><span class="lineno">  586</span>                    LightingState obj = array[j];</div>
+<div class="line"><span class="lineno">  587</span>                    LightingState lightingState = array2[j + num2];</div>
+<div class="line"><span class="lineno">  588</span>                    obj.R = lightingState.R2;</div>
+<div class="line"><span class="lineno">  589</span>                    obj.G = lightingState.G2;</div>
+<div class="line"><span class="lineno">  590</span>                    obj.B = lightingState.B2;</div>
+<div class="line"><span class="lineno">  591</span>                }</div>
+<div class="line"><span class="lineno">  592</span>            }</div>
+<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  594</span>        }</div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordtype">int</span> num9 = num4;</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>.Length &lt;= num9 + num)</div>
+<div class="line"><span class="lineno">  597</span>        {</div>
+<div class="line"><span class="lineno">  598</span>            num9 = _states.Length - num - 1;</div>
+<div class="line"><span class="lineno">  599</span>        }</div>
+<div class="line"><span class="lineno">  600</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num3; k &lt; num9; k++)</div>
+<div class="line"><span class="lineno">  601</span>        {</div>
+<div class="line"><span class="lineno">  602</span>            LightingState[] array3 = <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>[k];</div>
+<div class="line"><span class="lineno">  603</span>            LightingState[] array4 = <a class="code hl_variable" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">_states</a>[k + num];</div>
+<div class="line"><span class="lineno">  604</span>            <span class="keywordtype">int</span> num10 = num6;</div>
+<div class="line"><span class="lineno">  605</span>            <span class="keywordflow">if</span> (array4.Length &lt;= num10 + num)</div>
+<div class="line"><span class="lineno">  606</span>            {</div>
+<div class="line"><span class="lineno">  607</span>                num10 = array4.Length - num2 - 1;</div>
+<div class="line"><span class="lineno">  608</span>            }</div>
+<div class="line"><span class="lineno">  609</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = num5; l &lt; num10; l++)</div>
+<div class="line"><span class="lineno">  610</span>            {</div>
+<div class="line"><span class="lineno">  611</span>                LightingState obj2 = array3[l];</div>
+<div class="line"><span class="lineno">  612</span>                LightingState lightingState2 = array4[l + num2];</div>
+<div class="line"><span class="lineno">  613</span>                obj2.R = lightingState2.R2;</div>
+<div class="line"><span class="lineno">  614</span>                obj2.G = lightingState2.R2;</div>
+<div class="line"><span class="lineno">  615</span>                obj2.B = lightingState2.R2;</div>
+<div class="line"><span class="lineno">  616</span>            }</div>
+<div class="line"><span class="lineno">  617</span>        }</div>
+<div class="line"><span class="lineno">  618</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Camera_a013f643e0e139da6a33e2444e4a14f57_html_a013f643e0e139da6a33e2444e4a14f57"><div class="ttname"><a href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a013f643e0e139da6a33e2444e4a14f57.html#a013f643e0e139da6a33e2444e4a14f57">Terraria.Graphics.Camera.UnscaledPosition</a></div><div class="ttdeci">Vector2 UnscaledPosition</div><div class="ttdef"><b>Definition</b> Camera.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee_html_a09f4d4574f49acd16d46c4c1644470ee"><div class="ttname"><a href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">Terraria.Graphics.Light.LegacyLighting._states</a></div><div class="ttdeci">LightingState[][] _states</div><div class="ttdef"><b>Definition</b> LegacyLighting.cs:127</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a2bec979d24a15183736ca42e612828a3_html_a2bec979d24a15183736ca42e612828a3"><div class="ttname"><a href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a2bec979d24a15183736ca42e612828a3.html#a2bec979d24a15183736ca42e612828a3">Terraria.Graphics.Light.LegacyLighting._scrX</a></div><div class="ttdeci">int _scrX</div><div class="ttdef"><b>Definition</b> LegacyLighting.cs:135</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a3aea30c83b4d338a58a385ad45957745_html_a3aea30c83b4d338a58a385ad45957745"><div class="ttname"><a href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a3aea30c83b4d338a58a385ad45957745.html#a3aea30c83b4d338a58a385ad45957745">Terraria.Graphics.Light.LegacyLighting._scrY</a></div><div class="ttdeci">int _scrY</div><div class="ttdef"><b>Definition</b> LegacyLighting.cs:137</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a6eb3ca0e3dd7e5ea9c431f44de4254ad_html_a6eb3ca0e3dd7e5ea9c431f44de4254ad"><div class="ttname"><a href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a6eb3ca0e3dd7e5ea9c431f44de4254ad.html#a6eb3ca0e3dd7e5ea9c431f44de4254ad">Terraria.Graphics.Light.LegacyLighting._camera</a></div><div class="ttdeci">readonly Camera _camera</div><div class="ttdef"><b>Definition</b> LegacyLighting.cs:189</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a73f2f42a1a6c110029c38070b9869227_html_a73f2f42a1a6c110029c38070b9869227"><div class="ttname"><a href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a73f2f42a1a6c110029c38070b9869227.html#a73f2f42a1a6c110029c38070b9869227">Terraria.Graphics.Light.LegacyLighting._rgb</a></div><div class="ttdeci">bool _rgb</div><div class="ttdef"><b>Definition</b> LegacyLighting.cs:111</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a6eb3ca0e3dd7e5ea9c431f44de4254ad.html#a6eb3ca0e3dd7e5ea9c431f44de4254ad">Terraria.Graphics.Light.LegacyLighting._camera</a>, <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a73f2f42a1a6c110029c38070b9869227.html#a73f2f42a1a6c110029c38070b9869227">Terraria.Graphics.Light.LegacyLighting._rgb</a>, <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a2bec979d24a15183736ca42e612828a3.html#a2bec979d24a15183736ca42e612828a3">Terraria.Graphics.Light.LegacyLighting._scrX</a>, <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a3aea30c83b4d338a58a385ad45957745.html#a3aea30c83b4d338a58a385ad45957745">Terraria.Graphics.Light.LegacyLighting._scrY</a>, <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a09f4d4574f49acd16d46c4c1644470ee.html#a09f4d4574f49acd16d46c4c1644470ee">Terraria.Graphics.Light.LegacyLighting._states</a>, <a class="el" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_1_1LightingState_a36bb9152a49eca2650a0b542dbc67015.html#a36bb9152a49eca2650a0b542dbc67015">Terraria.Graphics.Light.LegacyLighting.LightingState.B2</a>, <a class="el" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_1_1LightingState_a02d71414eacd75612f3e29ab36dcd46e.html#a02d71414eacd75612f3e29ab36dcd46e">Terraria.Graphics.Light.LegacyLighting.LightingState.G2</a>, <a class="el" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_1_1LightingState_a6deb1b55e844a5d74f1be9853e1d7060.html#a6deb1b55e844a5d74f1be9853e1d7060">Terraria.Graphics.Light.LegacyLighting.LightingState.R2</a>, and <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a013f643e0e139da6a33e2444e4a14f57.html#a013f643e0e139da6a33e2444e4a14f57">Terraria.Graphics.Camera.UnscaledPosition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_a612fa6d858eb7eda0a7a80cafe3ccadd.html#a612fa6d858eb7eda0a7a80cafe3ccadd">Terraria.Graphics.Light.LegacyLighting.ProcessArea()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

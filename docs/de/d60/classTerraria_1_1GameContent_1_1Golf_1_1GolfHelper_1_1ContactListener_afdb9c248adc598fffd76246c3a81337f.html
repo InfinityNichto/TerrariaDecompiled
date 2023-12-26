@@ -117,6 +117,74 @@ $(function(){initNavTree('de/d60/classTerraria_1_1GameContent_1_1Golf_1_1GolfHel
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  184</span>        {</div>
+<div class="line"><span class="lineno">  185</span>            <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(<a class="code hl_class" href="../../de/dce/classTerraria_1_1ID_1_1SoundID.html">SoundID</a>.<a class="code hl_variable" href="../../de/dce/classTerraria_1_1ID_1_1SoundID_a6950f4e897f964837aeff7c6774a1a58.html#a6950f4e897f964837aeff7c6774a1a58">Item129</a>, Center);</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num = 0f; num &lt; 1f; num += 0.085f)</div>
+<div class="line"><span class="lineno">  187</span>            {</div>
+<div class="line"><span class="lineno">  188</span>                Dust dust = Dust.NewDustPerfect(Center, 278, (num * ((<span class="keywordtype">float</span>)Math.PI * 2f)).ToRotationVector2() * <span class="keyword">new</span> Vector2(2f, 0.5f));</div>
+<div class="line"><span class="lineno">  189</span>                dust.fadeIn = 1.2f;</div>
+<div class="line"><span class="lineno">  190</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  191</span>                dust.velocity.X *= 0.7f;</div>
+<div class="line"><span class="lineno">  192</span>                dust.velocity.Y -= 1.5f;</div>
+<div class="line"><span class="lineno">  193</span>                dust.position.Y += 8f;</div>
+<div class="line"><span class="lineno">  194</span>                dust.velocity.X *= 2f;</div>
+<div class="line"><span class="lineno">  195</span>                dust.color = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.5f);</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">float</span> num2 = Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordtype">float</span> num3 = Main.rand.Next(5, 10);</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (float)i &lt; num3; i++)</div>
+<div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>                <span class="keywordtype">int</span> num4 = Main.rand.Next(5, 22);</div>
+<div class="line"><span class="lineno">  202</span>                Vector2 value = (((float)i - num3 / 2f) * ((float)Math.PI * 2f) / 256f - (float)Math.PI / 2f).ToRotationVector2() * <span class="keyword">new</span> Vector2(5f, 1f) * (0.25f + Main.rand.NextFloat() * 0.05f);</div>
+<div class="line"><span class="lineno">  203</span>                Color color = Main.hslToRgb((num2 + (<span class="keywordtype">float</span>)i / num3) % 1f, 0.7f, 0.7f);</div>
+<div class="line"><span class="lineno">  204</span>                color.A = 127;</div>
+<div class="line"><span class="lineno">  205</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num4; j++)</div>
+<div class="line"><span class="lineno">  206</span>                {</div>
+<div class="line"><span class="lineno">  207</span>                    Dust dust2 = Dust.NewDustPerfect(Center + <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)i - num3 / 2f, 0f) * 2f, 278, value);</div>
+<div class="line"><span class="lineno">  208</span>                    dust2.fadeIn = 0.7f;</div>
+<div class="line"><span class="lineno">  209</span>                    dust2.scale = 0.7f;</div>
+<div class="line"><span class="lineno">  210</span>                    dust2.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  211</span>                    dust2.position.Y += -1f;</div>
+<div class="line"><span class="lineno">  212</span>                    dust2.velocity *= (float)j;</div>
+<div class="line"><span class="lineno">  213</span>                    dust2.scale += 0.2f - (float)j * 0.03f;</div>
+<div class="line"><span class="lineno">  214</span>                    dust2.velocity += Main.rand.NextVector2Circular(0.05f, 0.05f);</div>
+<div class="line"><span class="lineno">  215</span>                    dust2.color = color;</div>
+<div class="line"><span class="lineno">  216</span>                }</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num5 = 0f; num5 &lt; 1f; num5 += 0.2f)</div>
+<div class="line"><span class="lineno">  219</span>            {</div>
+<div class="line"><span class="lineno">  220</span>                Dust dust3 = Dust.NewDustPerfect(Center, 278, (num5 * ((<span class="keywordtype">float</span>)Math.PI * 2f)).ToRotationVector2() * <span class="keyword">new</span> Vector2(1f, 0.5f));</div>
+<div class="line"><span class="lineno">  221</span>                dust3.fadeIn = 1.2f;</div>
+<div class="line"><span class="lineno">  222</span>                dust3.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  223</span>                dust3.velocity.X *= 0.7f;</div>
+<div class="line"><span class="lineno">  224</span>                dust3.velocity.Y -= 0.5f;</div>
+<div class="line"><span class="lineno">  225</span>                dust3.position.Y += 8f;</div>
+<div class="line"><span class="lineno">  226</span>                dust3.velocity.X *= 2f;</div>
+<div class="line"><span class="lineno">  227</span>                dust3.color = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.3f);</div>
+<div class="line"><span class="lineno">  228</span>            }</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordtype">float</span> num6 = Main.rand.NextFloatDirection();</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num7 = 0f; num7 &lt; 1f; num7 += 0.15f)</div>
+<div class="line"><span class="lineno">  231</span>            {</div>
+<div class="line"><span class="lineno">  232</span>                Dust dust4 = Dust.NewDustPerfect(Center, 278, (num6 + num7 * ((<span class="keywordtype">float</span>)Math.PI * 2f)).ToRotationVector2() * 4f);</div>
+<div class="line"><span class="lineno">  233</span>                dust4.fadeIn = 1.5f;</div>
+<div class="line"><span class="lineno">  234</span>                dust4.velocity *= 0.5f + num7 * 0.8f;</div>
+<div class="line"><span class="lineno">  235</span>                dust4.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  236</span>                dust4.velocity.X *= 0.35f;</div>
+<div class="line"><span class="lineno">  237</span>                dust4.velocity.Y *= 2f;</div>
+<div class="line"><span class="lineno">  238</span>                dust4.velocity.Y -= 1f;</div>
+<div class="line"><span class="lineno">  239</span>                dust4.velocity.Y = 0f - Math.Abs(dust4.velocity.Y);</div>
+<div class="line"><span class="lineno">  240</span>                dust4.position += dust4.velocity * 3f;</div>
+<div class="line"><span class="lineno">  241</span>                dust4.color = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.6f + Main.rand.NextFloat() * 0.2f);</div>
+<div class="line"><span class="lineno">  242</span>            }</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1SoundID_a6950f4e897f964837aeff7c6774a1a58_html_a6950f4e897f964837aeff7c6774a1a58"><div class="ttname"><a href="../../de/dce/classTerraria_1_1ID_1_1SoundID_a6950f4e897f964837aeff7c6774a1a58.html#a6950f4e897f964837aeff7c6774a1a58">Terraria.ID.SoundID.Item129</a></div><div class="ttdeci">static readonly LegacySoundStyle Item129</div><div class="ttdef"><b>Definition</b> SoundID.cs:672</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1SoundID_html"><div class="ttname"><a href="../../de/dce/classTerraria_1_1ID_1_1SoundID.html">Terraria.ID.SoundID</a></div><div class="ttdef"><b>Definition</b> SoundID.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, <a class="el" href="../../de/dce/classTerraria_1_1ID_1_1SoundID_a6950f4e897f964837aeff7c6774a1a58.html#a6950f4e897f964837aeff7c6774a1a58">Terraria.ID.SoundID.Item129</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_ac85a67b8ea46324cf328fbf3b3e227a2.html#ac85a67b8ea46324cf328fbf3b3e227a2">Terraria.Dust.NewDustPerfect()</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, and <a class="el" href="../../dc/de5/classTerraria_1_1Dust_aed5c553a5864298010d0dfd099cd3f6d.html#aed5c553a5864298010d0dfd099cd3f6d">Terraria.Dust.velocity</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d60/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ContactListener_acee4ab0843207be209115e954f2da5b5.html#acee4ab0843207be209115e954f2da5b5">Terraria.GameContent.Golf.GolfHelper.ContactListener.EmitGolfballExplosion_Old()</a>, and <a class="el" href="../../de/d60/classTerraria_1_1GameContent_1_1Golf_1_1GolfHelper_1_1ContactListener_aaa4373004567c5f07437bb23e02e7ae3.html#aaa4373004567c5f07437bb23e02e7ae3">Terraria.GameContent.Golf.GolfHelper.ContactListener.PutBallInCup_TextAndEffects()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

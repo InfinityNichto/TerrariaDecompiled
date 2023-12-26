@@ -117,6 +117,24 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_af99abab2a05b8244b67a47
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">52175</span>    {</div>
+<div class="line"><span class="lineno">52176</span>        <span class="keywordflow">if</span> (Main.myPlayer != newPlayer.whoAmI || !newPlayer.dead)</div>
+<div class="line"><span class="lineno">52177</span>        {</div>
+<div class="line"><span class="lineno">52178</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">52179</span>        }</div>
+<div class="line"><span class="lineno">52180</span>        <span class="keywordtype">long</span> num = DateTime.UtcNow.ToBinary() - newPlayer.lastTimePlayerWasSaved;</div>
+<div class="line"><span class="lineno">52181</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">52182</span>        {</div>
+<div class="line"><span class="lineno">52183</span>            <span class="keywordtype">int</span> num2 = Utils.Clamp((<span class="keywordtype">int</span>)(Utils.Clamp(<span class="keyword">new</span> TimeSpan(num).TotalSeconds, 0.0, 1000.0) * 60.0), 0, newPlayer.respawnTimer);</div>
+<div class="line"><span class="lineno">52184</span>            newPlayer.respawnTimer -= num2;</div>
+<div class="line"><span class="lineno">52185</span>            <span class="keywordflow">if</span> (newPlayer.respawnTimer == 0)</div>
+<div class="line"><span class="lineno">52186</span>            {</div>
+<div class="line"><span class="lineno">52187</span>                newPlayer.dead = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">52188</span>            }</div>
+<div class="line"><span class="lineno">52189</span>        }</div>
+<div class="line"><span class="lineno">52190</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a7bb3e95991b9fd143763c90502cc807c.html#a7bb3e95991b9fd143763c90502cc807c">Terraria.Player.lastTimePlayerWasSaved</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a6efa498ddde2bebeccf2f952343e7ea2.html#a6efa498ddde2bebeccf2f952343e7ea2">Terraria.Player.respawnTimer</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
 
 </div>
 </div>

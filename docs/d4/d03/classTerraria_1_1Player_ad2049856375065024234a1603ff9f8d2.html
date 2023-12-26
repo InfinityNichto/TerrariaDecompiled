@@ -126,6 +126,96 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ad2049856375065024234a1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">50233</span>    {</div>
+<div class="line"><span class="lineno">50234</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4.html#a31724807dde035e648de8d5f6e58ece4">hitTile</a>.<a class="code hl_function" href="../../d5/d35/classTerraria_1_1HitTile_ae131ca4a6029cc9bb18c62ae1f853772.html#ae131ca4a6029cc9bb18c62ae1f853772">HitObject</a>(x, y, 1);</div>
+<div class="line"><span class="lineno">50235</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno">50236</span>        <span class="keywordflow">if</span> (tile.type == 504)</div>
+<div class="line"><span class="lineno">50237</span>        {</div>
+<div class="line"><span class="lineno">50238</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">50239</span>        }</div>
+<div class="line"><span class="lineno">50240</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a9da4be7245f8b906844f778d4a87628f.html#a9da4be7245f8b906844f778d4a87628f">GetPickaxeDamage</a>(x, y, pickPower, num, tile);</div>
+<div class="line"><span class="lineno">50241</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CanKillTile(x, y))</div>
+<div class="line"><span class="lineno">50242</span>        {</div>
+<div class="line"><span class="lineno">50243</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">50244</span>        }</div>
+<div class="line"><span class="lineno">50245</span>        <span class="keywordflow">if</span> (Main.getGoodWorld)</div>
+<div class="line"><span class="lineno">50246</span>        {</div>
+<div class="line"><span class="lineno">50247</span>            num2 *= 2;</div>
+<div class="line"><span class="lineno">50248</span>        }</div>
+<div class="line"><span class="lineno">50249</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a905755da784f3e41542cca9348dd26fa.html#a905755da784f3e41542cca9348dd26fa">DoesPickTargetTransformOnKill</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4.html#a31724807dde035e648de8d5f6e58ece4">hitTile</a>, num2, x, y, pickPower, num, tile))</div>
+<div class="line"><span class="lineno">50250</span>        {</div>
+<div class="line"><span class="lineno">50251</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">50252</span>        }</div>
+<div class="line"><span class="lineno">50253</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4.html#a31724807dde035e648de8d5f6e58ece4">hitTile</a>.<a class="code hl_function" href="../../d5/d35/classTerraria_1_1HitTile_a8a24aff8755bf61b362b88601b624f26.html#a8a24aff8755bf61b362b88601b624f26">AddDamage</a>(num, num2) &gt;= 100)</div>
+<div class="line"><span class="lineno">50254</span>        {</div>
+<div class="line"><span class="lineno">50255</span>            AchievementsHelper.CurrentlyMining = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">50256</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a75c9ab3f962084dfe6f8fb15b06e090d.html#a75c9ab3f962084dfe6f8fb15b06e090d">ClearMiningCacheAt</a>(x, y, 1);</div>
+<div class="line"><span class="lineno">50257</span>            <span class="keywordflow">if</span> (Main.netMode == 1 &amp;&amp; Main.tileContainer[Main.tile[x, y].type])</div>
+<div class="line"><span class="lineno">50258</span>            {</div>
+<div class="line"><span class="lineno">50259</span>                <span class="keywordflow">if</span> (Main.tile[x, y].type == 470 || Main.tile[x, y].type == 475)</div>
+<div class="line"><span class="lineno">50260</span>                {</div>
+<div class="line"><span class="lineno">50261</span>                    NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 20, x, y);</div>
+<div class="line"><span class="lineno">50262</span>                }</div>
+<div class="line"><span class="lineno">50263</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">50264</span>                {</div>
+<div class="line"><span class="lineno">50265</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(x, y, fail: true);</div>
+<div class="line"><span class="lineno">50266</span>                    NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, x, y, 1f);</div>
+<div class="line"><span class="lineno">50267</span>                }</div>
+<div class="line"><span class="lineno">50268</span>                <span class="keywordflow">if</span> (Main.tile[x, y].type == 21)</div>
+<div class="line"><span class="lineno">50269</span>                {</div>
+<div class="line"><span class="lineno">50270</span>                    NetMessage.SendData(34, -1, -1, <span class="keyword">null</span>, 1, x, y);</div>
+<div class="line"><span class="lineno">50271</span>                }</div>
+<div class="line"><span class="lineno">50272</span>                <span class="keywordflow">if</span> (Main.tile[x, y].type == 467)</div>
+<div class="line"><span class="lineno">50273</span>                {</div>
+<div class="line"><span class="lineno">50274</span>                    NetMessage.SendData(34, -1, -1, <span class="keyword">null</span>, 5, x, y);</div>
+<div class="line"><span class="lineno">50275</span>                }</div>
+<div class="line"><span class="lineno">50276</span>                <span class="keywordflow">if</span> (Main.tile[x, y].type == 88)</div>
+<div class="line"><span class="lineno">50277</span>                {</div>
+<div class="line"><span class="lineno">50278</span>                    NetMessage.SendData(34, -1, -1, <span class="keyword">null</span>, 3, x, y);</div>
+<div class="line"><span class="lineno">50279</span>                }</div>
+<div class="line"><span class="lineno">50280</span>            }</div>
+<div class="line"><span class="lineno">50281</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">50282</span>            {</div>
+<div class="line"><span class="lineno">50283</span>                <span class="keywordtype">bool</span> flag = Main.tile[x, y].active();</div>
+<div class="line"><span class="lineno">50284</span>                <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(x, y);</div>
+<div class="line"><span class="lineno">50285</span>                <span class="keywordflow">if</span> (!Main.dedServ &amp;&amp; flag &amp;&amp; !Main.tile[x, y].active())</div>
+<div class="line"><span class="lineno">50286</span>                {</div>
+<div class="line"><span class="lineno">50287</span>                    <a class="code hl_class" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper.html">AchievementsHelper</a>.<a class="code hl_function" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_a10bdc20baa8fee671eae6b0d913c37de.html#a10bdc20baa8fee671eae6b0d913c37de">HandleMining</a>();</div>
+<div class="line"><span class="lineno">50288</span>                }</div>
+<div class="line"><span class="lineno">50289</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">50290</span>                {</div>
+<div class="line"><span class="lineno">50291</span>                    NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, x, y);</div>
+<div class="line"><span class="lineno">50292</span>                }</div>
+<div class="line"><span class="lineno">50293</span>            }</div>
+<div class="line"><span class="lineno">50294</span>            AchievementsHelper.CurrentlyMining = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">50295</span>        }</div>
+<div class="line"><span class="lineno">50296</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">50297</span>        {</div>
+<div class="line"><span class="lineno">50298</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(x, y, fail: true);</div>
+<div class="line"><span class="lineno">50299</span>            <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">50300</span>            {</div>
+<div class="line"><span class="lineno">50301</span>                NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, x, y, 1f);</div>
+<div class="line"><span class="lineno">50302</span>                NetMessage.SendData(125, -1, -1, <span class="keyword">null</span>, Main.myPlayer, x, y, num2);</div>
+<div class="line"><span class="lineno">50303</span>            }</div>
+<div class="line"><span class="lineno">50304</span>        }</div>
+<div class="line"><span class="lineno">50305</span>        <span class="keywordflow">if</span> (num2 != 0)</div>
+<div class="line"><span class="lineno">50306</span>        {</div>
+<div class="line"><span class="lineno">50307</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4.html#a31724807dde035e648de8d5f6e58ece4">hitTile</a>.<a class="code hl_function" href="../../d5/d35/classTerraria_1_1HitTile_a1f5f0a3bb191ffa8c055e4769d537824.html#a1f5f0a3bb191ffa8c055e4769d537824">Prune</a>();</div>
+<div class="line"><span class="lineno">50308</span>        }</div>
+<div class="line"><span class="lineno">50309</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_a10bdc20baa8fee671eae6b0d913c37de_html_a10bdc20baa8fee671eae6b0d913c37de"><div class="ttname"><a href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_a10bdc20baa8fee671eae6b0d913c37de.html#a10bdc20baa8fee671eae6b0d913c37de">Terraria.GameContent.Achievements.AchievementsHelper.HandleMining</a></div><div class="ttdeci">static void HandleMining()</div><div class="ttdef"><b>Definition</b> AchievementsHelper.cs:390</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_html"><div class="ttname"><a href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper.html">Terraria.GameContent.Achievements.AchievementsHelper</a></div><div class="ttdef"><b>Definition</b> AchievementsHelper.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1HitTile_a1f5f0a3bb191ffa8c055e4769d537824_html_a1f5f0a3bb191ffa8c055e4769d537824"><div class="ttname"><a href="../../d5/d35/classTerraria_1_1HitTile_a1f5f0a3bb191ffa8c055e4769d537824.html#a1f5f0a3bb191ffa8c055e4769d537824">Terraria.HitTile.Prune</a></div><div class="ttdeci">void Prune()</div><div class="ttdef"><b>Definition</b> HitTile.cs:249</div></div>
+<div class="ttc" id="aclassTerraria_1_1HitTile_a8a24aff8755bf61b362b88601b624f26_html_a8a24aff8755bf61b362b88601b624f26"><div class="ttname"><a href="../../d5/d35/classTerraria_1_1HitTile_a8a24aff8755bf61b362b88601b624f26.html#a8a24aff8755bf61b362b88601b624f26">Terraria.HitTile.AddDamage</a></div><div class="ttdeci">int AddDamage(int tileId, int damageAmount, bool updateAmount=true)</div><div class="ttdef"><b>Definition</b> HitTile.cs:177</div></div>
+<div class="ttc" id="aclassTerraria_1_1HitTile_ae131ca4a6029cc9bb18c62ae1f853772_html_ae131ca4a6029cc9bb18c62ae1f853772"><div class="ttname"><a href="../../d5/d35/classTerraria_1_1HitTile_ae131ca4a6029cc9bb18c62ae1f853772.html#ae131ca4a6029cc9bb18c62ae1f853772">Terraria.HitTile.HitObject</a></div><div class="ttdeci">int HitObject(int x, int y, int hitType)</div><div class="ttdef"><b>Definition</b> HitTile.cs:141</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4_html_a31724807dde035e648de8d5f6e58ece4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a31724807dde035e648de8d5f6e58ece4.html#a31724807dde035e648de8d5f6e58ece4">Terraria.Player.hitTile</a></div><div class="ttdeci">HitTile hitTile</div><div class="ttdef"><b>Definition</b> Player.cs:1323</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a75c9ab3f962084dfe6f8fb15b06e090d_html_a75c9ab3f962084dfe6f8fb15b06e090d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a75c9ab3f962084dfe6f8fb15b06e090d.html#a75c9ab3f962084dfe6f8fb15b06e090d">Terraria.Player.ClearMiningCacheAt</a></div><div class="ttdeci">void ClearMiningCacheAt(int x, int y, int hitTileCacheType)</div><div class="ttdef"><b>Definition</b> Player.cs:50311</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a905755da784f3e41542cca9348dd26fa_html_a905755da784f3e41542cca9348dd26fa"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a905755da784f3e41542cca9348dd26fa.html#a905755da784f3e41542cca9348dd26fa">Terraria.Player.DoesPickTargetTransformOnKill</a></div><div class="ttdeci">bool DoesPickTargetTransformOnKill(HitTile hitCounter, int damage, int x, int y, int pickPower, int bufferIndex, Tile tileTarget)</div><div class="ttdef"><b>Definition</b> Player.cs:50528</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a9da4be7245f8b906844f778d4a87628f_html_a9da4be7245f8b906844f778d4a87628f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a9da4be7245f8b906844f778d4a87628f.html#a9da4be7245f8b906844f778d4a87628f">Terraria.Player.GetPickaxeDamage</a></div><div class="ttdeci">int GetPickaxeDamage(int x, int y, int pickPower, int hitBufferIndex, Tile tileTarget)</div><div class="ttdef"><b>Definition</b> Player.cs:50368</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a5b5f5b5d6fe8bbc886bec39648d8f870.html#a5b5f5b5d6fe8bbc886bec39648d8f870">Terraria.WorldGen.CanKillTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a51e4289394258b7819811f8b448b1a52.html#a51e4289394258b7819811f8b448b1a52">Terraria.Main.dedServ</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a84f772769e8cbe43fbf53b6c574be321.html#a84f772769e8cbe43fbf53b6c574be321">Terraria.Main.getGoodWorld</a>, <a class="el" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_a10bdc20baa8fee671eae6b0d913c37de.html#a10bdc20baa8fee671eae6b0d913c37de">Terraria.GameContent.Achievements.AchievementsHelper.HandleMining()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a40929a7616fe8af1e3b0f38d24451033.html#a40929a7616fe8af1e3b0f38d24451033">Terraria.Main.tileContainer</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

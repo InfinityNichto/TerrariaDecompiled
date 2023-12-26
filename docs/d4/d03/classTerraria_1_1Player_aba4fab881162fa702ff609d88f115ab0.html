@@ -117,6 +117,35 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_aba4fab881162fa702ff609
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 5148</span>    {</div>
+<div class="line"><span class="lineno"> 5149</span>        <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a4e91fc16cef94075e4ea9ebe8823908c.html#a4e91fc16cef94075e4ea9ebe8823908c">ClearGrapplingBlacklist</a>();</div>
+<div class="line"><span class="lineno"> 5150</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno"> 5151</span>        {</div>
+<div class="line"><span class="lineno"> 5152</span>            <span class="keywordflow">if</span> (!Main.projectile[i].active || Main.projectile[i].owner != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> || Main.projectile[i].aiStyle != 7 || Main.projectile[i].ai[0] != 2f)</div>
+<div class="line"><span class="lineno"> 5153</span>            {</div>
+<div class="line"><span class="lineno"> 5154</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 5155</span>            }</div>
+<div class="line"><span class="lineno"> 5156</span>            Point point = Main.projectile[i].Center.ToTileCoordinates();</div>
+<div class="line"><span class="lineno"> 5157</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = -1; j &lt;= 1; j++)</div>
+<div class="line"><span class="lineno"> 5158</span>            {</div>
+<div class="line"><span class="lineno"> 5159</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = -1; k &lt;= 1; k++)</div>
+<div class="line"><span class="lineno"> 5160</span>                {</div>
+<div class="line"><span class="lineno"> 5161</span>                    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(point.X + j, point.Y + k))</div>
+<div class="line"><span class="lineno"> 5162</span>                    {</div>
+<div class="line"><span class="lineno"> 5163</span>                        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3195896c49542e6cd3247c0073323dd2.html#a3195896c49542e6cd3247c0073323dd2">_blackListedTileCoordsForGrappling</a>.Add(<span class="keyword">new</span> Point(point.X + j, point.Y + k));</div>
+<div class="line"><span class="lineno"> 5164</span>                    }</div>
+<div class="line"><span class="lineno"> 5165</span>                }</div>
+<div class="line"><span class="lineno"> 5166</span>            }</div>
+<div class="line"><span class="lineno"> 5167</span>        }</div>
+<div class="line"><span class="lineno"> 5168</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3195896c49542e6cd3247c0073323dd2_html_a3195896c49542e6cd3247c0073323dd2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3195896c49542e6cd3247c0073323dd2.html#a3195896c49542e6cd3247c0073323dd2">Terraria.Player._blackListedTileCoordsForGrappling</a></div><div class="ttdeci">HashSet&lt; Point &gt; _blackListedTileCoordsForGrappling</div><div class="ttdef"><b>Definition</b> Player.cs:2579</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a4e91fc16cef94075e4ea9ebe8823908c_html_a4e91fc16cef94075e4ea9ebe8823908c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a4e91fc16cef94075e4ea9ebe8823908c.html#a4e91fc16cef94075e4ea9ebe8823908c">Terraria.Player.ClearGrapplingBlacklist</a></div><div class="ttdeci">void ClearGrapplingBlacklist()</div><div class="ttdef"><b>Definition</b> Player.cs:5137</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3195896c49542e6cd3247c0073323dd2.html#a3195896c49542e6cd3247c0073323dd2">Terraria.Player._blackListedTileCoordsForGrappling</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a1cc80bff99143cb4be83f4375cb8726d.html#a1cc80bff99143cb4be83f4375cb8726d">Terraria.Projectile.aiStyle</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a4e91fc16cef94075e4ea9ebe8823908c.html#a4e91fc16cef94075e4ea9ebe8823908c">Terraria.Player.ClearGrapplingBlacklist()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a70ae3e0d9ccf9eab703180b364db7a68.html#a70ae3e0d9ccf9eab703180b364db7a68">Terraria.Player.QuickGrapple()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

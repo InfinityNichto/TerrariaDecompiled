@@ -117,6 +117,18 @@ $(function(){initNavTree('de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHel
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        position *= 10f;</div>
+<div class="line"><span class="lineno">   76</span>        Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Math.Floor(position.X), (<span class="keywordtype">float</span>)Math.Floor(position.Y));</div>
+<div class="line"><span class="lineno">   77</span>        Point point = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>)vector.X, (<span class="keywordtype">int</span>)vector.Y);</div>
+<div class="line"><span class="lineno">   78</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(position.X - vector.X, position.Y - vector.Y);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordtype">float</span> value = MathHelper.Lerp(<a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">GetStaticNoise</a>(point.X, point.Y), <a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">GetStaticNoise</a>(point.X, point.Y + 1), vector2.Y);</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordtype">float</span> value2 = MathHelper.Lerp(<a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">GetStaticNoise</a>(point.X + 1, point.Y), <a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">GetStaticNoise</a>(point.X + 1, point.Y + 1), vector2.Y);</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> MathHelper.Lerp(value, value2, vector2.X);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a_html_a3098f525b88abb0b7eb724b82bf08b0a"><div class="ttname"><a href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">Terraria.GameContent.RGB.NoiseHelper.GetStaticNoise</a></div><div class="ttdeci">static float GetStaticNoise(int index)</div><div class="ttdef"><b>Definition</b> NoiseHelper.cs:37</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_a3098f525b88abb0b7eb724b82bf08b0a.html#a3098f525b88abb0b7eb724b82bf08b0a">Terraria.GameContent.RGB.NoiseHelper.GetStaticNoise()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

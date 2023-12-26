@@ -133,6 +133,42 @@ $(function(){initNavTree('d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_aa2
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d21/interfaceTerraria_1_1Audio_1_1IAudioSystem_a680d48ca326c9cb7d0f4fa8de6d3a796.html#a680d48ca326c9cb7d0f4fa8de6d3a796">Terraria.Audio.IAudioSystem</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>    {</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (!WaveBank.IsPrepared)</div>
+<div class="line"><span class="lineno">  309</span>        {</div>
+<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  311</span>        }</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">AudioTracks</a>[i].IsPlaying || !<a class="code hl_variable" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">AudioTracks</a>[i].IsStopped)</div>
+<div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (isMainTrackAudible)</div>
+<div class="line"><span class="lineno">  315</span>            {</div>
+<div class="line"><span class="lineno">  316</span>                tempFade -= 0.005f;</div>
+<div class="line"><span class="lineno">  317</span>            }</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.curMusic == 0)</div>
+<div class="line"><span class="lineno">  319</span>            {</div>
+<div class="line"><span class="lineno">  320</span>                tempFade = 0f;</div>
+<div class="line"><span class="lineno">  321</span>            }</div>
+<div class="line"><span class="lineno">  322</span>            <span class="keywordflow">if</span> (tempFade &lt;= 0f)</div>
+<div class="line"><span class="lineno">  323</span>            {</div>
+<div class="line"><span class="lineno">  324</span>                tempFade = 0f;</div>
+<div class="line"><span class="lineno">  325</span>                <a class="code hl_variable" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">AudioTracks</a>[i].<a class="code hl_function" href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a4c121d0e1cbfe38763b61bf57a487d85.html#a4c121d0e1cbfe38763b61bf57a487d85">SetVariable</a>(<span class="stringliteral">&quot;Volume&quot;</span>, 0f);</div>
+<div class="line"><span class="lineno">  326</span>                <a class="code hl_variable" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">AudioTracks</a>[i].<a class="code hl_function" href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a51cfdee1ffc4bd52aa7ff5890ed8a3ce.html#a51cfdee1ffc4bd52aa7ff5890ed8a3ce">Stop</a>(AudioStopOptions.Immediate);</div>
+<div class="line"><span class="lineno">  327</span>            }</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                <a class="code hl_variable" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">AudioTracks</a>[i].<a class="code hl_function" href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a4c121d0e1cbfe38763b61bf57a487d85.html#a4c121d0e1cbfe38763b61bf57a487d85">SetVariable</a>(<span class="stringliteral">&quot;Volume&quot;</span>, totalVolume);</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>        }</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  334</span>        {</div>
+<div class="line"><span class="lineno">  335</span>            tempFade = 0f;</div>
+<div class="line"><span class="lineno">  336</span>        }</div>
+<div class="line"><span class="lineno">  337</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485_html_af9301f2cd5fa8fdb8873be9785774485"><div class="ttname"><a href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">Terraria.Audio.LegacyAudioSystem.AudioTracks</a></div><div class="ttdeci">IAudioTrack[] AudioTracks</div><div class="ttdef"><b>Definition</b> LegacyAudioSystem.cs:12</div></div>
+<div class="ttc" id="ainterfaceTerraria_1_1Audio_1_1IAudioTrack_a4c121d0e1cbfe38763b61bf57a487d85_html_a4c121d0e1cbfe38763b61bf57a487d85"><div class="ttname"><a href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a4c121d0e1cbfe38763b61bf57a487d85.html#a4c121d0e1cbfe38763b61bf57a487d85">Terraria.Audio.IAudioTrack.SetVariable</a></div><div class="ttdeci">void SetVariable(string variableName, float value)</div></div>
+<div class="ttc" id="ainterfaceTerraria_1_1Audio_1_1IAudioTrack_a51cfdee1ffc4bd52aa7ff5890ed8a3ce_html_a51cfdee1ffc4bd52aa7ff5890ed8a3ce"><div class="ttname"><a href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a51cfdee1ffc4bd52aa7ff5890ed8a3ce.html#a51cfdee1ffc4bd52aa7ff5890ed8a3ce">Terraria.Audio.IAudioTrack.Stop</a></div><div class="ttdeci">void Stop(AudioStopOptions options)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/d7c/classTerraria_1_1Audio_1_1LegacyAudioSystem_af9301f2cd5fa8fdb8873be9785774485.html#af9301f2cd5fa8fdb8873be9785774485">Terraria.Audio.LegacyAudioSystem.AudioTracks</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afe84b6f95f5488552e8f00205bad4748.html#afe84b6f95f5488552e8f00205bad4748">Terraria.Main.curMusic</a>, <a class="el" href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a4c121d0e1cbfe38763b61bf57a487d85.html#a4c121d0e1cbfe38763b61bf57a487d85">Terraria.Audio.IAudioTrack.SetVariable()</a>, and <a class="el" href="../../d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a51cfdee1ffc4bd52aa7ff5890ed8a3ce.html#a51cfdee1ffc4bd52aa7ff5890ed8a3ce">Terraria.Audio.IAudioTrack.Stop()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

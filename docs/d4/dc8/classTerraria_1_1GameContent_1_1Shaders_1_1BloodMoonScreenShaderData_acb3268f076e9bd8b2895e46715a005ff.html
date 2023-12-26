@@ -119,6 +119,21 @@ $(function(){initNavTree('d4/dc8/classTerraria_1_1GameContent_1_1Shaders_1_1Bloo
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Shaders_1_1ScreenShaderData_ae1c3bbf9667691da1ef68d4c415fa638.html#ae1c3bbf9667691da1ef68d4c415fa638">Terraria.Graphics.Shaders.ScreenShaderData</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">float</span> num = 1f - Utils.SmoothStep((<span class="keywordtype">float</span>)Main.worldSurface + 50f, (<span class="keywordtype">float</span>)Main.rockLayer + 100f, (Main.screenPosition.Y + (<span class="keywordtype">float</span>)(Main.screenHeight / 2)) / 16f);</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            num = Utils.SmoothStep((<span class="keywordtype">float</span>)(Main.rockLayer + Main.worldSurface) / 2f, (<span class="keywordtype">float</span>)Main.rockLayer, (Main.screenPosition.Y + (<span class="keywordtype">float</span>)(Main.screenHeight / 2)) / 16f);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (Main.shimmerAlpha &gt; 0f)</div>
+<div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            num *= 1f - Main.shimmerAlpha;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Shaders_1_1ScreenShaderData_ab82fa86b9ccb77cdb55444cb7962032c.html#ab82fa86b9ccb77cdb55444cb7962032c">UseOpacity</a>(num * 0.75f);</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Shaders_1_1ScreenShaderData_ab82fa86b9ccb77cdb55444cb7962032c_html_ab82fa86b9ccb77cdb55444cb7962032c"><div class="ttname"><a href="../../d8/dbb/classTerraria_1_1Graphics_1_1Shaders_1_1ScreenShaderData_ab82fa86b9ccb77cdb55444cb7962032c.html#ab82fa86b9ccb77cdb55444cb7962032c">Terraria.Graphics.Shaders.ScreenShaderData.UseOpacity</a></div><div class="ttdeci">ScreenShaderData UseOpacity(float opacity)</div><div class="ttdef"><b>Definition</b> ScreenShaderData.cs:190</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d02013f8d3b3236b9c18fed7f98274c.html#a6d02013f8d3b3236b9c18fed7f98274c">Terraria.Main.screenHeight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d6f09a4da6c2e14d081814d33975189.html#a6d6f09a4da6c2e14d081814d33975189">Terraria.Main.screenPosition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae8d90bf09d56818850be1c013f004352.html#ae8d90bf09d56818850be1c013f004352">Terraria.Main.shimmerAlpha</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a83e49fb858e19d26d139792941289608.html#a83e49fb858e19d26d139792941289608">Terraria.Utils.SmoothStep()</a>, <a class="el" href="../../d8/dbb/classTerraria_1_1Graphics_1_1Shaders_1_1ScreenShaderData_ab82fa86b9ccb77cdb55444cb7962032c.html#ab82fa86b9ccb77cdb55444cb7962032c">Terraria.Graphics.Shaders.ScreenShaderData.UseOpacity()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

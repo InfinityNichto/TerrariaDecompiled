@@ -131,6 +131,122 @@ $(function(){initNavTree('dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLight
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2378</span>    {</div>
+<div class="line"><span class="lineno"> 2379</span>        <span class="keywordtype">float</span> num = 0f;</div>
+<div class="line"><span class="lineno"> 2380</span>        <span class="keywordtype">float</span> num2 = 0f;</div>
+<div class="line"><span class="lineno"> 2381</span>        <span class="keywordtype">float</span> num3 = 0f;</div>
+<div class="line"><span class="lineno"> 2382</span>        <span class="keywordtype">float</span> num4 = (float)(<span class="keywordtype">int</span>)Main.tileColor.R / 255f;</div>
+<div class="line"><span class="lineno"> 2383</span>        <span class="keywordtype">float</span> num5 = (float)(<span class="keywordtype">int</span>)Main.tileColor.G / 255f;</div>
+<div class="line"><span class="lineno"> 2384</span>        <span class="keywordtype">float</span> num6 = (float)(<span class="keywordtype">int</span>)Main.tileColor.B / 255f;</div>
+<div class="line"><span class="lineno"> 2385</span>        <span class="keywordtype">float</span> num7 = (num4 + num5 + num6) / 3f;</div>
+<div class="line"><span class="lineno"> 2386</span>        <span class="keywordflow">if</span> (tile.active() &amp;&amp; <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_acf64cd0a47756808c5ec5799c61204d3.html#acf64cd0a47756808c5ec5799c61204d3">AllowLightInWater</a>[tile.type])</div>
+<div class="line"><span class="lineno"> 2387</span>        {</div>
+<div class="line"><span class="lineno"> 2388</span>            <span class="keywordflow">if</span> (lightColor.X &lt; num7 &amp;&amp; (Main.wallLight[tile.wall] || tile.wall == 73 || tile.wall == 227 || (tile.invisibleWall() &amp;&amp; !<a class="code hl_variable" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247.html#aeb3fc95abc1f1d31b1ee5b4a94358247">_drawInvisibleWalls</a>)))</div>
+<div class="line"><span class="lineno"> 2389</span>            {</div>
+<div class="line"><span class="lineno"> 2390</span>                num = num4;</div>
+<div class="line"><span class="lineno"> 2391</span>                num2 = num5;</div>
+<div class="line"><span class="lineno"> 2392</span>                num3 = num6;</div>
+<div class="line"><span class="lineno"> 2393</span>            }</div>
+<div class="line"><span class="lineno"> 2394</span>        }</div>
+<div class="line"><span class="lineno"> 2395</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((!tile.active() || !Main.tileNoSunLight[tile.type] || ((tile.slope() != 0 || tile.halfBrick() || (tile.invisibleBlock() &amp;&amp; !<a class="code hl_variable" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247.html#aeb3fc95abc1f1d31b1ee5b4a94358247">_drawInvisibleWalls</a>)) &amp;&amp; Main.tile[x, y - 1].liquid == 0 &amp;&amp; Main.tile[x, y + 1].liquid == 0 &amp;&amp; Main.tile[x - 1, y].liquid == 0 &amp;&amp; Main.tile[x + 1, y].liquid == 0)) &amp;&amp; lightColor.X &lt; num7 &amp;&amp; (Main.wallLight[tile.wall] || tile.wall == 73 || tile.wall == 227 || (tile.invisibleWall() &amp;&amp; !<a class="code hl_variable" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247.html#aeb3fc95abc1f1d31b1ee5b4a94358247">_drawInvisibleWalls</a>)))</div>
+<div class="line"><span class="lineno"> 2396</span>        {</div>
+<div class="line"><span class="lineno"> 2397</span>            <span class="keywordflow">if</span> (tile.liquid &lt; 200)</div>
+<div class="line"><span class="lineno"> 2398</span>            {</div>
+<div class="line"><span class="lineno"> 2399</span>                <span class="keywordflow">if</span> (!tile.halfBrick() || Main.tile[x, y - 1].liquid &lt; 200)</div>
+<div class="line"><span class="lineno"> 2400</span>                {</div>
+<div class="line"><span class="lineno"> 2401</span>                    num = num4;</div>
+<div class="line"><span class="lineno"> 2402</span>                    num2 = num5;</div>
+<div class="line"><span class="lineno"> 2403</span>                    num3 = num6;</div>
+<div class="line"><span class="lineno"> 2404</span>                }</div>
+<div class="line"><span class="lineno"> 2405</span>            }</div>
+<div class="line"><span class="lineno"> 2406</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.liquidAlpha[13] &gt; 0f)</div>
+<div class="line"><span class="lineno"> 2407</span>            {</div>
+<div class="line"><span class="lineno"> 2408</span>                <span class="keywordflow">if</span> (Main.rand == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 2409</span>                {</div>
+<div class="line"><span class="lineno"> 2410</span>                    Main.rand = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom.html">UnifiedRandom</a>();</div>
+<div class="line"><span class="lineno"> 2411</span>                }</div>
+<div class="line"><span class="lineno"> 2412</span>                num3 = num6 * 0.175f * (1f + Main.rand.NextFloat() * 0.13f) * Main.liquidAlpha[13];</div>
+<div class="line"><span class="lineno"> 2413</span>            }</div>
+<div class="line"><span class="lineno"> 2414</span>        }</div>
+<div class="line"><span class="lineno"> 2415</span>        <span class="keywordflow">if</span> ((!tile.active() || tile.halfBrick() || !Main.tileNoSunLight[tile.type]) &amp;&amp; ((tile.wall &gt;= 88 &amp;&amp; tile.wall &lt;= 93) || tile.wall == 241) &amp;&amp; tile.liquid &lt; <span class="keywordtype">byte</span>.MaxValue)</div>
+<div class="line"><span class="lineno"> 2416</span>        {</div>
+<div class="line"><span class="lineno"> 2417</span>            num = num4;</div>
+<div class="line"><span class="lineno"> 2418</span>            num2 = num5;</div>
+<div class="line"><span class="lineno"> 2419</span>            num3 = num6;</div>
+<div class="line"><span class="lineno"> 2420</span>            <span class="keywordtype">int</span> num8 = tile.wall - 88;</div>
+<div class="line"><span class="lineno"> 2421</span>            <span class="keywordflow">if</span> (tile.wall == 241)</div>
+<div class="line"><span class="lineno"> 2422</span>            {</div>
+<div class="line"><span class="lineno"> 2423</span>                num8 = 6;</div>
+<div class="line"><span class="lineno"> 2424</span>            }</div>
+<div class="line"><span class="lineno"> 2425</span>            <span class="keywordflow">switch</span> (num8)</div>
+<div class="line"><span class="lineno"> 2426</span>            {</div>
+<div class="line"><span class="lineno"> 2427</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 2428</span>                num *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2429</span>                num2 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2430</span>                num3 *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2431</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2432</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 2433</span>                num *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2434</span>                num2 *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2435</span>                num3 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2436</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2437</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 2438</span>                num *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2439</span>                num2 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2440</span>                num3 *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2441</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2442</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 2443</span>                num *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2444</span>                num2 *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2445</span>                num3 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2446</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2447</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 2448</span>                num *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2449</span>                num2 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2450</span>                num3 *= 0.15f;</div>
+<div class="line"><span class="lineno"> 2451</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2452</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 2453</span>            {</div>
+<div class="line"><span class="lineno"> 2454</span>                <span class="keywordtype">float</span> num9 = 0.2f;</div>
+<div class="line"><span class="lineno"> 2455</span>                <span class="keywordtype">float</span> num10 = 0.7f - num9;</div>
+<div class="line"><span class="lineno"> 2456</span>                num *= num10 + (float)Main.DiscoR / 255f * num9;</div>
+<div class="line"><span class="lineno"> 2457</span>                num2 *= num10 + (float)Main.DiscoG / 255f * num9;</div>
+<div class="line"><span class="lineno"> 2458</span>                num3 *= num10 + (float)Main.DiscoB / 255f * num9;</div>
+<div class="line"><span class="lineno"> 2459</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2460</span>            }</div>
+<div class="line"><span class="lineno"> 2461</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno"> 2462</span>                num *= 0.9f;</div>
+<div class="line"><span class="lineno"> 2463</span>                num2 *= 0.5f;</div>
+<div class="line"><span class="lineno"> 2464</span>                num3 *= 0f;</div>
+<div class="line"><span class="lineno"> 2465</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2466</span>            }</div>
+<div class="line"><span class="lineno"> 2467</span>        }</div>
+<div class="line"><span class="lineno"> 2468</span>        <span class="keywordtype">float</span> num11 = 1f - Main.shimmerDarken;</div>
+<div class="line"><span class="lineno"> 2469</span>        num *= num11;</div>
+<div class="line"><span class="lineno"> 2470</span>        num2 *= num11;</div>
+<div class="line"><span class="lineno"> 2471</span>        num3 *= num11;</div>
+<div class="line"><span class="lineno"> 2472</span>        <span class="keywordflow">if</span> (lightColor.X &lt; num)</div>
+<div class="line"><span class="lineno"> 2473</span>        {</div>
+<div class="line"><span class="lineno"> 2474</span>            lightColor.X = num;</div>
+<div class="line"><span class="lineno"> 2475</span>        }</div>
+<div class="line"><span class="lineno"> 2476</span>        <span class="keywordflow">if</span> (lightColor.Y &lt; num2)</div>
+<div class="line"><span class="lineno"> 2477</span>        {</div>
+<div class="line"><span class="lineno"> 2478</span>            lightColor.Y = num2;</div>
+<div class="line"><span class="lineno"> 2479</span>        }</div>
+<div class="line"><span class="lineno"> 2480</span>        <span class="keywordflow">if</span> (lightColor.Z &lt; num3)</div>
+<div class="line"><span class="lineno"> 2481</span>        {</div>
+<div class="line"><span class="lineno"> 2482</span>            lightColor.Z = num3;</div>
+<div class="line"><span class="lineno"> 2483</span>        }</div>
+<div class="line"><span class="lineno"> 2484</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247_html_aeb3fc95abc1f1d31b1ee5b4a94358247"><div class="ttname"><a href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247.html#aeb3fc95abc1f1d31b1ee5b4a94358247">Terraria.Graphics.Light.TileLightScanner._drawInvisibleWalls</a></div><div class="ttdeci">bool _drawInvisibleWalls</div><div class="ttdef"><b>Definition</b> TileLightScanner.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_acf64cd0a47756808c5ec5799c61204d3_html_acf64cd0a47756808c5ec5799c61204d3"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_acf64cd0a47756808c5ec5799c61204d3.html#acf64cd0a47756808c5ec5799c61204d3">Terraria.ID.TileID.Sets.AllowLightInWater</a></div><div class="ttdeci">static bool[] AllowLightInWater</div><div class="ttdef"><b>Definition</b> TileID.cs:261</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_html"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom.html">Terraria.Utilities.UnifiedRandom</a></div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:7</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aeb3fc95abc1f1d31b1ee5b4a94358247.html#aeb3fc95abc1f1d31b1ee5b4a94358247">Terraria.Graphics.Light.TileLightScanner._drawInvisibleWalls</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_acf64cd0a47756808c5ec5799c61204d3.html#acf64cd0a47756808c5ec5799c61204d3">Terraria.ID.TileID.Sets.AllowLightInWater</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa7d35c16dd9783a8e8018165ddecb29b.html#aa7d35c16dd9783a8e8018165ddecb29b">Terraria.Main.DiscoB</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a80ed0abe9e5cadde470c20a7a6023efb.html#a80ed0abe9e5cadde470c20a7a6023efb">Terraria.Main.DiscoG</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a432c1c30b326a19ab618aad14f242a0f.html#a432c1c30b326a19ab618aad14f242a0f">Terraria.Main.DiscoR</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a994ba3606f0c15d01f258fc7baf06338.html#a994ba3606f0c15d01f258fc7baf06338">Terraria.Tile.invisibleBlock()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a57ac1450e9330144134ae00a73e5afc6.html#a57ac1450e9330144134ae00a73e5afc6">Terraria.Tile.invisibleWall()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a40bc4f49e3cc883de6ad04d801544e4f.html#a40bc4f49e3cc883de6ad04d801544e4f">Terraria.Main.liquidAlpha</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a14b80f930640d25f7fd042397dadbf1e.html#a14b80f930640d25f7fd042397dadbf1e">Terraria.Main.shimmerDarken</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0de4489360667fc677ba2628623abeb8.html#a0de4489360667fc677ba2628623abeb8">Terraria.Main.tileNoSunLight</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac9d968a4d216c16339e13d5538ab96da.html#ac9d968a4d216c16339e13d5538ab96da">Terraria.Main.wallLight</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_afe6e191b5f91e445ecab274d349e2d50.html#afe6e191b5f91e445ecab274d349e2d50">Terraria.Graphics.Light.TileLightScanner.GetTileLight()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

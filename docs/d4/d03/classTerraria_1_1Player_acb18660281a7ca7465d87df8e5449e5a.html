@@ -117,6 +117,91 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_acb18660281a7ca7465d87d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">40478</span>    {</div>
+<div class="line"><span class="lineno">40479</span>        <span class="keywordtype">int</span> damage = 70;</div>
+<div class="line"><span class="lineno">40480</span>        <span class="keywordtype">float</span> knockBack = 1.5f;</div>
+<div class="line"><span class="lineno">40481</span>        <span class="keywordflow">if</span> (Main.rand.Next(15) != 0)</div>
+<div class="line"><span class="lineno">40482</span>        {</div>
+<div class="line"><span class="lineno">40483</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">40484</span>        }</div>
+<div class="line"><span class="lineno">40485</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">40486</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">40487</span>        {</div>
+<div class="line"><span class="lineno">40488</span>            <span class="keywordflow">if</span> (Main.projectile[i].active &amp;&amp; Main.projectile[i].owner == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> &amp;&amp; (Main.projectile[i].type == 567 || Main.projectile[i].type == 568))</div>
+<div class="line"><span class="lineno">40489</span>            {</div>
+<div class="line"><span class="lineno">40490</span>                num++;</div>
+<div class="line"><span class="lineno">40491</span>            }</div>
+<div class="line"><span class="lineno">40492</span>        }</div>
+<div class="line"><span class="lineno">40493</span>        <span class="keywordflow">if</span> (Main.rand.Next(15) &lt; num || num &gt;= 10)</div>
+<div class="line"><span class="lineno">40494</span>        {</div>
+<div class="line"><span class="lineno">40495</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">40496</span>        }</div>
+<div class="line"><span class="lineno">40497</span>        <span class="keywordtype">int</span> num2 = 50;</div>
+<div class="line"><span class="lineno">40498</span>        <span class="keywordtype">int</span> num3 = 24;</div>
+<div class="line"><span class="lineno">40499</span>        <span class="keywordtype">int</span> num4 = 90;</div>
+<div class="line"><span class="lineno">40500</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num2; j++)</div>
+<div class="line"><span class="lineno">40501</span>        {</div>
+<div class="line"><span class="lineno">40502</span>            <span class="keywordtype">int</span> num5 = Main.rand.Next(200 - j * 2, 400 + j * 2);</div>
+<div class="line"><span class="lineno">40503</span>            Vector2 center = base.Center;</div>
+<div class="line"><span class="lineno">40504</span>            center.X += Main.rand.Next(-num5, num5 + 1);</div>
+<div class="line"><span class="lineno">40505</span>            center.Y += Main.rand.Next(-num5, num5 + 1);</div>
+<div class="line"><span class="lineno">40506</span>            <span class="keywordflow">if</span> (Collision.SolidCollision(center, num3, num3) || Collision.WetCollision(center, num3, num3))</div>
+<div class="line"><span class="lineno">40507</span>            {</div>
+<div class="line"><span class="lineno">40508</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">40509</span>            }</div>
+<div class="line"><span class="lineno">40510</span>            center.X += num3 / 2;</div>
+<div class="line"><span class="lineno">40511</span>            center.Y += num3 / 2;</div>
+<div class="line"><span class="lineno">40512</span>            <span class="keywordflow">if</span> (!Collision.CanHit(<span class="keyword">new</span> Vector2(base.Center.X, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y), 1, 1, center, 1, 1) &amp;&amp; !Collision.CanHit(<span class="keyword">new</span> Vector2(base.Center.X, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y - 50f), 1, 1, center, 1, 1))</div>
+<div class="line"><span class="lineno">40513</span>            {</div>
+<div class="line"><span class="lineno">40514</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">40515</span>            }</div>
+<div class="line"><span class="lineno">40516</span>            <span class="keywordtype">int</span> num6 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)center.X / 16;</div>
+<div class="line"><span class="lineno">40517</span>            <span class="keywordtype">int</span> num7 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)center.Y / 16;</div>
+<div class="line"><span class="lineno">40518</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">40519</span>            <span class="keywordflow">if</span> (Main.rand.Next(3) == 0 &amp;&amp; Main.tile[num6, num7] != <span class="keyword">null</span> &amp;&amp; Main.tile[num6, num7].wall &gt; 0)</div>
+<div class="line"><span class="lineno">40520</span>            {</div>
+<div class="line"><span class="lineno">40521</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">40522</span>            }</div>
+<div class="line"><span class="lineno">40523</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">40524</span>            {</div>
+<div class="line"><span class="lineno">40525</span>                center.X -= num4 / 2;</div>
+<div class="line"><span class="lineno">40526</span>                center.Y -= num4 / 2;</div>
+<div class="line"><span class="lineno">40527</span>                <span class="keywordflow">if</span> (Collision.SolidCollision(center, num4, num4))</div>
+<div class="line"><span class="lineno">40528</span>                {</div>
+<div class="line"><span class="lineno">40529</span>                    center.X += num4 / 2;</div>
+<div class="line"><span class="lineno">40530</span>                    center.Y += num4 / 2;</div>
+<div class="line"><span class="lineno">40531</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">40532</span>                }</div>
+<div class="line"><span class="lineno">40533</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.tile[num6, num7] != <span class="keyword">null</span> &amp;&amp; Main.tile[num6, num7].active() &amp;&amp; Main.tile[num6, num7].type == 19)</div>
+<div class="line"><span class="lineno">40534</span>                {</div>
+<div class="line"><span class="lineno">40535</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">40536</span>                }</div>
+<div class="line"><span class="lineno">40537</span>            }</div>
+<div class="line"><span class="lineno">40538</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">40539</span>            {</div>
+<div class="line"><span class="lineno">40540</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">40541</span>            }</div>
+<div class="line"><span class="lineno">40542</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 1000; k++)</div>
+<div class="line"><span class="lineno">40543</span>            {</div>
+<div class="line"><span class="lineno">40544</span>                <span class="keywordflow">if</span> (Main.projectile[k].active &amp;&amp; Main.projectile[k].owner == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> &amp;&amp; Main.projectile[k].aiStyle == 105 &amp;&amp; (center - Main.projectile[k].Center).Length() &lt; 48f)</div>
+<div class="line"><span class="lineno">40545</span>                {</div>
+<div class="line"><span class="lineno">40546</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">40547</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40548</span>                }</div>
+<div class="line"><span class="lineno">40549</span>            }</div>
+<div class="line"><span class="lineno">40550</span>            <span class="keywordflow">if</span> (flag &amp;&amp; Main.myPlayer == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">40551</span>            {</div>
+<div class="line"><span class="lineno">40552</span>                Projectile.NewProjectile(<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd.html#a7c3e517bb9f5b256cb976ee3794b84fd">GetProjectileSource_Accessory</a>(sourceItem), center.X, center.Y, 0f, 0f, 567 + Main.rand.Next(2), damage, knockBack, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>);</div>
+<div class="line"><span class="lineno">40553</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">40554</span>            }</div>
+<div class="line"><span class="lineno">40555</span>        }</div>
+<div class="line"><span class="lineno">40556</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd_html_a7c3e517bb9f5b256cb976ee3794b84fd"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd.html#a7c3e517bb9f5b256cb976ee3794b84fd">Terraria.Player.GetProjectileSource_Accessory</a></div><div class="ttdeci">IEntitySource GetProjectileSource_Accessory(Item item)</div><div class="ttdef"><b>Definition</b> Player.cs:9312</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a1cc80bff99143cb4be83f4375cb8726d.html#a1cc80bff99143cb4be83f4375cb8726d">Terraria.Projectile.aiStyle</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a034b07537f9fbe3ac9b208ce884d2d16.html#a034b07537f9fbe3ac9b208ce884d2d16">Terraria.Collision.CanHit()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aff54f2d7e5d69ffa2ec3a069a6266e50.html#aff54f2d7e5d69ffa2ec3a069a6266e50">Terraria.Projectile.NewProjectile()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ab90b2aba94f5d7de3ee33f3c0b27ea3e.html#ab90b2aba94f5d7de3ee33f3c0b27ea3e">Terraria.Collision.SolidCollision()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1c65206ace403aa59afc32d20e5d282e.html#a1c65206ace403aa59afc32d20e5d282e">Terraria.Collision.WetCollision()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

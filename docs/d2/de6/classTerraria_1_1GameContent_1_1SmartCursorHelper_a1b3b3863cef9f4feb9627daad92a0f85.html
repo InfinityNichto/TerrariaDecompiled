@@ -126,6 +126,69 @@ $(function(){initNavTree('d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelp
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  947</span>    {</div>
+<div class="line"><span class="lineno">  948</span>        <span class="keywordflow">if</span> (providedInfo.item.createTile != 454 || focusedX != -1 || focusedY != -1)</div>
+<div class="line"><span class="lineno">  949</span>        {</div>
+<div class="line"><span class="lineno">  950</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  951</span>        }</div>
+<div class="line"><span class="lineno">  952</span>        <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Clear();</div>
+<div class="line"><span class="lineno">  953</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = providedInfo.reachableStartX; i &lt;= providedInfo.reachableEndX; i++)</div>
+<div class="line"><span class="lineno">  954</span>        {</div>
+<div class="line"><span class="lineno">  955</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = providedInfo.reachableStartY; j &lt;= providedInfo.reachableEndY &amp;&amp; !((double)j &gt; Main.worldSurface - 2.0); j++)</div>
+<div class="line"><span class="lineno">  956</span>            {</div>
+<div class="line"><span class="lineno">  957</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  958</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = i - 2; k &lt;= i + 1; k++)</div>
+<div class="line"><span class="lineno">  959</span>                {</div>
+<div class="line"><span class="lineno">  960</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = j - 1; l &lt;= j + 2; l++)</div>
+<div class="line"><span class="lineno">  961</span>                    {</div>
+<div class="line"><span class="lineno">  962</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[k, l];</div>
+<div class="line"><span class="lineno">  963</span>                        <span class="keywordflow">if</span> (l == j - 1)</div>
+<div class="line"><span class="lineno">  964</span>                        {</div>
+<div class="line"><span class="lineno">  965</span>                            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(tile))</div>
+<div class="line"><span class="lineno">  966</span>                            {</div>
+<div class="line"><span class="lineno">  967</span>                                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  968</span>                            }</div>
+<div class="line"><span class="lineno">  969</span>                        }</div>
+<div class="line"><span class="lineno">  970</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.active() &amp;&amp; (!Main.tileCut[tile.type] || tile.type == 454))</div>
+<div class="line"><span class="lineno">  971</span>                        {</div>
+<div class="line"><span class="lineno">  972</span>                            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  973</span>                        }</div>
+<div class="line"><span class="lineno">  974</span>                    }</div>
+<div class="line"><span class="lineno">  975</span>                }</div>
+<div class="line"><span class="lineno">  976</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  977</span>                {</div>
+<div class="line"><span class="lineno">  978</span>                    <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j));</div>
+<div class="line"><span class="lineno">  979</span>                }</div>
+<div class="line"><span class="lineno">  980</span>            }</div>
+<div class="line"><span class="lineno">  981</span>        }</div>
+<div class="line"><span class="lineno">  982</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  983</span>        {</div>
+<div class="line"><span class="lineno">  984</span>            <span class="keywordtype">float</span> num = -1f;</div>
+<div class="line"><span class="lineno">  985</span>            Tuple&lt;int, int&gt; tuple = <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[0];</div>
+<div class="line"><span class="lineno">  986</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Count; m++)</div>
+<div class="line"><span class="lineno">  987</span>            {</div>
+<div class="line"><span class="lineno">  988</span>                <span class="keywordtype">float</span> num2 = Vector2.Distance(<span class="keyword">new</span> Vector2(<a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[m].Item1, <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[m].Item2) * 16f + Vector2.One * 8f, providedInfo.mouse);</div>
+<div class="line"><span class="lineno">  989</span>                <span class="keywordflow">if</span> (num == -1f || num2 &lt; num)</div>
+<div class="line"><span class="lineno">  990</span>                {</div>
+<div class="line"><span class="lineno">  991</span>                    num = num2;</div>
+<div class="line"><span class="lineno">  992</span>                    tuple = <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[m];</div>
+<div class="line"><span class="lineno">  993</span>                }</div>
+<div class="line"><span class="lineno">  994</span>            }</div>
+<div class="line"><span class="lineno">  995</span>            <span class="keywordflow">if</span> (Collision.InTileBounds(tuple.Item1, tuple.Item2, providedInfo.reachableStartX, providedInfo.reachableStartY, providedInfo.reachableEndX, providedInfo.reachableEndY))</div>
+<div class="line"><span class="lineno">  996</span>            {</div>
+<div class="line"><span class="lineno">  997</span>                focusedX = tuple.Item1;</div>
+<div class="line"><span class="lineno">  998</span>                focusedY = tuple.Item2;</div>
+<div class="line"><span class="lineno">  999</span>            }</div>
+<div class="line"><span class="lineno"> 1000</span>        }</div>
+<div class="line"><span class="lineno"> 1001</span>        <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Clear();</div>
+<div class="line"><span class="lineno"> 1002</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44_html_a6a25b83f390a66990ae6a646e30a2b44"><div class="ttname"><a href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">Terraria.GameContent.SmartCursorHelper._targets</a></div><div class="ttdeci">static List&lt; Tuple&lt; int, int &gt; &gt; _targets</div><div class="ttdef"><b>Definition</b> SmartCursorHelper.cs:42</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">Terraria.GameContent.SmartCursorHelper._targets</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a5cf5916927001dc44bf15ca36d3cc47e.html#a5cf5916927001dc44bf15ca36d3cc47e">Terraria.Item.createTile</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1104a0d74088cc50a62ea175d882bafa.html#a1104a0d74088cc50a62ea175d882bafa">Terraria.Collision.InTileBounds()</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a7887e061a314eea279dfefc3380c0f75.html#a7887e061a314eea279dfefc3380c0f75">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.item</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0a6bb9ff662642d9a31733c731afa0de.html#a0a6bb9ff662642d9a31733c731afa0de">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.mouse</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_abd4870ae3312dbe99d3bdb7a4eeec166.html#abd4870ae3312dbe99d3bdb7a4eeec166">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_afa76d5eba796bc1fa0a05a5eb9a51530.html#afa76d5eba796bc1fa0a05a5eb9a51530">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndY</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a65cc27a15ee3096bab2c688b1c04a752.html#a65cc27a15ee3096bab2c688b1c04a752">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0d82d09c6bd5e86d727178a422375ae8.html#a0d82d09c6bd5e86d727178a422375ae8">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartY</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a2bada5711f957a5370bfe3a550812ff5.html#a2bada5711f957a5370bfe3a550812ff5">Terraria.Main.tileCut</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_abf97830c4eacd4da49a905008c7a5757.html#abf97830c4eacd4da49a905008c7a5757">Terraria.GameContent.SmartCursorHelper.SmartCursorLookup()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

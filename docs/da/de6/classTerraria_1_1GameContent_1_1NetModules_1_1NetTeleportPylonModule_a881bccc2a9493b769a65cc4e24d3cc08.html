@@ -121,6 +121,49 @@ $(function(){initNavTree('da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1N
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">switch</span> ((<a class="code hl_enumeration" href="../../da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c.html#a22c392f7d1aecd7ce48936b7e578897c">SubPacketType</a>)reader.ReadByte())</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c.html#a22c392f7d1aecd7ce48936b7e578897c">SubPacketType</a>.PylonWasAdded:</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (Main.dedServ)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            TeleportPylonInfo info3 = <span class="keywordflow">default</span>(TeleportPylonInfo);</div>
+<div class="line"><span class="lineno">   47</span>            info3.PositionInTiles = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(reader.ReadInt16(), reader.ReadInt16());</div>
+<div class="line"><span class="lineno">   48</span>            info3.TypeOfPylon = (<a class="code hl_enumeration" href="../../d2/df4/namespaceTerraria_1_1GameContent_a724c56e87b8fcaaf8bad8fac1995e23e.html#a724c56e87b8fcaaf8bad8fac1995e23e">TeleportPylonType</a>)reader.ReadByte();</div>
+<div class="line"><span class="lineno">   49</span>            Main.PylonSystem.AddForClient(info3);</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c.html#a22c392f7d1aecd7ce48936b7e578897c">SubPacketType</a>.PylonWasRemoved:</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (Main.dedServ)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            TeleportPylonInfo info2 = <span class="keywordflow">default</span>(TeleportPylonInfo);</div>
+<div class="line"><span class="lineno">   59</span>            info2.PositionInTiles = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(reader.ReadInt16(), reader.ReadInt16());</div>
+<div class="line"><span class="lineno">   60</span>            info2.TypeOfPylon = (<a class="code hl_enumeration" href="../../d2/df4/namespaceTerraria_1_1GameContent_a724c56e87b8fcaaf8bad8fac1995e23e.html#a724c56e87b8fcaaf8bad8fac1995e23e">TeleportPylonType</a>)reader.ReadByte();</div>
+<div class="line"><span class="lineno">   61</span>            Main.PylonSystem.RemoveForClient(info2);</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c.html#a22c392f7d1aecd7ce48936b7e578897c">SubPacketType</a>.PlayerRequestsTeleport:</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            TeleportPylonInfo info = <span class="keywordflow">default</span>(TeleportPylonInfo);</div>
+<div class="line"><span class="lineno">   67</span>            info.PositionInTiles = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(reader.ReadInt16(), reader.ReadInt16());</div>
+<div class="line"><span class="lineno">   68</span>            info.TypeOfPylon = (<a class="code hl_enumeration" href="../../d2/df4/namespaceTerraria_1_1GameContent_a724c56e87b8fcaaf8bad8fac1995e23e.html#a724c56e87b8fcaaf8bad8fac1995e23e">TeleportPylonType</a>)reader.ReadByte();</div>
+<div class="line"><span class="lineno">   69</span>            Main.PylonSystem.HandleTeleportRequest(info, userId);</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c_html_a22c392f7d1aecd7ce48936b7e578897c"><div class="ttname"><a href="../../da/de6/classTerraria_1_1GameContent_1_1NetModules_1_1NetTeleportPylonModule_a22c392f7d1aecd7ce48936b7e578897c.html#a22c392f7d1aecd7ce48936b7e578897c">Terraria.GameContent.NetModules.NetTeleportPylonModule.SubPacketType</a></div><div class="ttdeci">SubPacketType</div><div class="ttdef"><b>Definition</b> NetTeleportPylonModule.cs:10</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_a724c56e87b8fcaaf8bad8fac1995e23e_html_a724c56e87b8fcaaf8bad8fac1995e23e"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_a724c56e87b8fcaaf8bad8fac1995e23e.html#a724c56e87b8fcaaf8bad8fac1995e23e">Terraria.GameContent.TeleportPylonType</a></div><div class="ttdeci">TeleportPylonType</div><div class="ttdef"><b>Definition</b> TeleportPylonType.cs:4</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_html"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Terraria.DataStructures.Point16</a></div><div class="ttdef"><b>Definition</b> Point16.cs:6</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a51e4289394258b7819811f8b448b1a52.html#a51e4289394258b7819811f8b448b1a52">Terraria.Main.dedServ</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6e20969ad2ebd24819ecba0be2de308f.html#a6e20969ad2ebd24819ecba0be2de308f">Terraria.Main.PylonSystem</a>.</p>
 
 </div>
 </div>

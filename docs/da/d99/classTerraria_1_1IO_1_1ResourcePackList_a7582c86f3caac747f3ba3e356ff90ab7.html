@@ -131,6 +131,48 @@ $(function(){initNavTree('da/d99/classTerraria_1_1IO_1_1ResourcePackList_a7582c8
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">foreach</span> (ResourcePackEntry item2 <span class="keywordflow">in</span> <a class="code hl_function" href="../../da/d99/classTerraria_1_1IO_1_1ResourcePackList_a73ab3e57d250730a6bbaa61f68a3652a.html#a73ab3e57d250730a6bbaa61f68a3652a">CreatePackEntryListFromJson</a>(serializedState))</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (item2.FileName == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordtype">string</span> text = Path.Combine(searchPath, item2.FileName);</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordtype">bool</span> flag = File.Exists(text) || Directory.Exists(text);</div>
+<div class="line"><span class="lineno">  100</span>                ResourcePack.BrandingType branding = ResourcePack.BrandingType.None;</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span> (!flag &amp;&amp; <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377.html#adf5001d56d9271790dd3282c7c155377">Workshop</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377.html#adf5001d56d9271790dd3282c7c155377">Workshop</a>.TryGetPath(item2.FileName, out var fullPathFound))</div>
+<div class="line"><span class="lineno">  102</span>                {</div>
+<div class="line"><span class="lineno">  103</span>                    text = fullPathFound;</div>
+<div class="line"><span class="lineno">  104</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  105</span>                    branding = <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377.html#adf5001d56d9271790dd3282c7c155377">Workshop</a>.Branding.ResourcePackBrand;</div>
+<div class="line"><span class="lineno">  106</span>                }</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  108</span>                {</div>
+<div class="line"><span class="lineno">  109</span>                    ResourcePack item = <span class="keyword">new</span> ResourcePack(services, text, branding)</div>
+<div class="line"><span class="lineno">  110</span>                    {</div>
+<div class="line"><span class="lineno">  111</span>                        IsEnabled = item2.Enabled,</div>
+<div class="line"><span class="lineno">  112</span>                        SortingOrder = item2.SortingOrder</div>
+<div class="line"><span class="lineno">  113</span>                    };</div>
+<div class="line"><span class="lineno">  114</span>                    resourcePacks.Add(item);</div>
+<div class="line"><span class="lineno">  115</span>                }</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a> arg)</div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                Console.WriteLine(<span class="stringliteral">&quot;Failed to read resource pack {0}: {1}&quot;</span>, text, arg);</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1ResourcePackList_a73ab3e57d250730a6bbaa61f68a3652a_html_a73ab3e57d250730a6bbaa61f68a3652a"><div class="ttname"><a href="../../da/d99/classTerraria_1_1IO_1_1ResourcePackList_a73ab3e57d250730a6bbaa61f68a3652a.html#a73ab3e57d250730a6bbaa61f68a3652a">Terraria.IO.ResourcePackList.CreatePackEntryListFromJson</a></div><div class="ttdeci">static IEnumerable&lt; ResourcePackEntry &gt; CreatePackEntryListFromJson(JArray serializedState)</div><div class="ttdef"><b>Definition</b> ResourcePackList.cs:190</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377_html_adf5001d56d9271790dd3282c7c155377"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377.html#adf5001d56d9271790dd3282c7c155377">Terraria.Social.SocialAPI.Workshop</a></div><div class="ttdeci">static Terraria.Social.Base.WorkshopSocialModule Workshop</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/d99/classTerraria_1_1IO_1_1ResourcePackList_a73ab3e57d250730a6bbaa61f68a3652a.html#a73ab3e57d250730a6bbaa61f68a3652a">Terraria.IO.ResourcePackList.CreatePackEntryListFromJson()</a>, <a class="el" href="../../d0/dea/structTerraria_1_1IO_1_1ResourcePackList_1_1ResourcePackEntry_a3951c288d43ebbca7645a14771e32ed5.html#a3951c288d43ebbca7645a14771e32ed5">Terraria.IO.ResourcePackList.ResourcePackEntry.Enabled</a>, <a class="el" href="../../d0/dea/structTerraria_1_1IO_1_1ResourcePackList_1_1ResourcePackEntry_a2d2e29ed26f00c32862386cfa16df02b.html#a2d2e29ed26f00c32862386cfa16df02b">Terraria.IO.ResourcePackList.ResourcePackEntry.FileName</a>, and <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_adf5001d56d9271790dd3282c7c155377.html#adf5001d56d9271790dd3282c7c155377">Terraria.Social.SocialAPI.Workshop</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d99/classTerraria_1_1IO_1_1ResourcePackList_a501898863f836902f97515ef3878bd04.html#a501898863f836902f97515ef3878bd04">Terraria.IO.ResourcePackList.FromJson()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

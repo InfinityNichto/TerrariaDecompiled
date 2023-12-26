@@ -117,7 +117,36 @@ $(function(){initNavTree('da/dd6/classReLogic_1_1Peripherals_1_1RGB_1_1Fragment_
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="comment">//IL_00d4: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  161</span>        <span class="comment">//IL_00db: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  162</span>        <span class="comment">//IL_00e0: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  163</span>        <span class="comment">//IL_00e2: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  164</span>        <span class="comment">//IL_00e7: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  165</span>        Vector2[] array = (Vector2[])(<span class="keywordtype">object</span>)<span class="keyword">new</span> Vector2[gridPositions.Length];</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordtype">int</span> num = gridPositions[0].Y;</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">int</span> num2 = gridPositions[0].Y;</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">int</span> num3 = gridPositions[0].X;</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; gridPositions.Length; i++)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            num3 = Math.Min(num3, gridPositions[i].X);</div>
+<div class="line"><span class="lineno">  172</span>            num = Math.Min(num, gridPositions[i].Y);</div>
+<div class="line"><span class="lineno">  173</span>            num2 = Math.Max(num2, gridPositions[i].Y);</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordtype">float</span> num4 = 1f;</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (num2 != num)</div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            num4 = 1f / (float)(num2 - num);</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        Vector2 vector = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">  181</span>        ((Vector2)(ref vector))._002Ector((<span class="keywordtype">float</span>)num3 * (1f / 6f), (<span class="keywordtype">float</span>)num * (1f / 6f));</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; gridPositions.Length; j++)</div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            array[j] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)(gridPositions[j].X - num3), (<span class="keywordtype">float</span>)(gridPositions[j].Y - num)) * num4 + vector;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> array;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

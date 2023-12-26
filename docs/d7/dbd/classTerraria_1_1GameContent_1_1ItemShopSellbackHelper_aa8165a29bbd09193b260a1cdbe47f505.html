@@ -117,6 +117,26 @@ $(function(){initNavTree('d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbac
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        ItemMemo itemMemo = <a class="code hl_variable" href="../../d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a8fbdbbb86a4b52da539fbab3deb40eb6.html#a8fbdbbb86a4b52da539fbab3deb40eb6">_memos</a>.Find((ItemMemo x) =&gt; x.Matches(item));</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (itemMemo == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> stack = itemMemo.stack;</div>
+<div class="line"><span class="lineno">   65</span>        itemMemo.stack -= item.stack;</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (itemMemo.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="../../d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a8fbdbbb86a4b52da539fbab3deb40eb6.html#a8fbdbbb86a4b52da539fbab3deb40eb6">_memos</a>.Remove(itemMemo);</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> stack;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> stack - itemMemo.stack;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a8fbdbbb86a4b52da539fbab3deb40eb6_html_a8fbdbbb86a4b52da539fbab3deb40eb6"><div class="ttname"><a href="../../d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a8fbdbbb86a4b52da539fbab3deb40eb6.html#a8fbdbbb86a4b52da539fbab3deb40eb6">Terraria.GameContent.ItemShopSellbackHelper._memos</a></div><div class="ttdeci">List&lt; ItemMemo &gt; _memos</div><div class="ttdef"><b>Definition</b> ItemShopSellbackHelper.cs:32</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a8fbdbbb86a4b52da539fbab3deb40eb6.html#a8fbdbbb86a4b52da539fbab3deb40eb6">Terraria.GameContent.ItemShopSellbackHelper._memos</a>, <a class="el" href="../../d6/d55/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_1_1ItemMemo_a155fb660c105334858eaf44ac15d5fcb.html#a155fb660c105334858eaf44ac15d5fcb">Terraria.GameContent.ItemShopSellbackHelper.ItemMemo.Matches()</a>, <a class="el" href="../../d6/d55/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_1_1ItemMemo_a19b7bfa7420da7172ba6c7431400303f.html#a19b7bfa7420da7172ba6c7431400303f">Terraria.GameContent.ItemShopSellbackHelper.ItemMemo.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a411a502edce8e51ae49ee6000989ce25.html#a411a502edce8e51ae49ee6000989ce25">Terraria.Chest.AddItemToShop()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

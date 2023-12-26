@@ -121,6 +121,56 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a7079b12e41034f415132
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 6252</span>    {</div>
+<div class="line"><span class="lineno"> 6253</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 6254</span>        {</div>
+<div class="line"><span class="lineno"> 6255</span>            <span class="keywordtype">int</span> num = 120;</div>
+<div class="line"><span class="lineno"> 6256</span>            <span class="keywordtype">int</span> num2 = 80;</div>
+<div class="line"><span class="lineno"> 6257</span>            <span class="keywordtype">int</span> num3 = 3;</div>
+<div class="line"><span class="lineno"> 6258</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)y &gt; Main.worldSurface + (<span class="keywordtype">double</span>)num2)</div>
+<div class="line"><span class="lineno"> 6259</span>            {</div>
+<div class="line"><span class="lineno"> 6260</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6261</span>            }</div>
+<div class="line"><span class="lineno"> 6262</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)y &lt; Main.worldSurface / 2.0)</div>
+<div class="line"><span class="lineno"> 6263</span>            {</div>
+<div class="line"><span class="lineno"> 6264</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6265</span>            }</div>
+<div class="line"><span class="lineno"> 6266</span>            <span class="keywordtype">int</span> num4 = y - num2;</div>
+<div class="line"><span class="lineno"> 6267</span>            <span class="keywordtype">int</span> num5 = x - num / 2;</div>
+<div class="line"><span class="lineno"> 6268</span>            <span class="keywordtype">int</span> num6 = 0;</div>
+<div class="line"><span class="lineno"> 6269</span>            <span class="keywordflow">if</span> (num5 &lt; 0)</div>
+<div class="line"><span class="lineno"> 6270</span>            {</div>
+<div class="line"><span class="lineno"> 6271</span>                num5 = 0;</div>
+<div class="line"><span class="lineno"> 6272</span>            }</div>
+<div class="line"><span class="lineno"> 6273</span>            <span class="keywordflow">if</span> (num5 &gt;= Main.maxTilesX - num)</div>
+<div class="line"><span class="lineno"> 6274</span>            {</div>
+<div class="line"><span class="lineno"> 6275</span>                num5 = Main.maxTilesX - num - 1;</div>
+<div class="line"><span class="lineno"> 6276</span>            }</div>
+<div class="line"><span class="lineno"> 6277</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num5; i &lt; num5 + num; i++)</div>
+<div class="line"><span class="lineno"> 6278</span>            {</div>
+<div class="line"><span class="lineno"> 6279</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num4; j &lt; num4 + num3; j++)</div>
+<div class="line"><span class="lineno"> 6280</span>                {</div>
+<div class="line"><span class="lineno"> 6281</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(i, j) || Main.tile[x, y].wall &gt; 0)</div>
+<div class="line"><span class="lineno"> 6282</span>                    {</div>
+<div class="line"><span class="lineno"> 6283</span>                        num6++;</div>
+<div class="line"><span class="lineno"> 6284</span>                    }</div>
+<div class="line"><span class="lineno"> 6285</span>                }</div>
+<div class="line"><span class="lineno"> 6286</span>            }</div>
+<div class="line"><span class="lineno"> 6287</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)num6 &gt;= (<span class="keywordtype">double</span>)(num * num3) * 0.8)</div>
+<div class="line"><span class="lineno"> 6288</span>            {</div>
+<div class="line"><span class="lineno"> 6289</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6290</span>            }</div>
+<div class="line"><span class="lineno"> 6291</span>        }</div>
+<div class="line"><span class="lineno"> 6292</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 6293</span>        {</div>
+<div class="line"><span class="lineno"> 6294</span>        }</div>
+<div class="line"><span class="lineno"> 6295</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6296</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_abf7db6376db1730f55aa8a580188b87b.html#abf7db6376db1730f55aa8a580188b87b">Terraria.NPC.SpawnNPC()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

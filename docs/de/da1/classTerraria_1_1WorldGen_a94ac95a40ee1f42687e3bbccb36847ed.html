@@ -126,6 +126,369 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a94ac95a40ee1f42687e3
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">46040</span>    {</div>
+<div class="line"><span class="lineno">46041</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">46042</span>        <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno">46043</span>        <span class="keywordtype">int</span> num3 = -1;</div>
+<div class="line"><span class="lineno">46044</span>        <span class="keywordtype">int</span> num4 = -1;</div>
+<div class="line"><span class="lineno">46045</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno">46046</span>        <span class="keywordtype">int</span> type = tile.type;</div>
+<div class="line"><span class="lineno">46047</span>        <span class="keywordtype">int</span> frameX = tile.frameX;</div>
+<div class="line"><span class="lineno">46048</span>        <span class="keywordtype">int</span> frameY = tile.frameY;</div>
+<div class="line"><span class="lineno">46049</span>        <span class="keywordflow">if</span> (Main.tile[x - 1, y] != <span class="keyword">null</span> &amp;&amp; Main.tile[x - 1, y].active())</div>
+<div class="line"><span class="lineno">46050</span>        {</div>
+<div class="line"><span class="lineno">46051</span>            num2 = Main.tile[x - 1, y].type;</div>
+<div class="line"><span class="lineno">46052</span>        }</div>
+<div class="line"><span class="lineno">46053</span>        <span class="keywordflow">if</span> (Main.tile[x + 1, y] != <span class="keyword">null</span> &amp;&amp; Main.tile[x + 1, y].active())</div>
+<div class="line"><span class="lineno">46054</span>        {</div>
+<div class="line"><span class="lineno">46055</span>            num3 = Main.tile[x + 1, y].type;</div>
+<div class="line"><span class="lineno">46056</span>        }</div>
+<div class="line"><span class="lineno">46057</span>        <span class="keywordflow">if</span> (Main.tile[x, y - 1] != <span class="keyword">null</span> &amp;&amp; Main.tile[x, y - 1].active())</div>
+<div class="line"><span class="lineno">46058</span>        {</div>
+<div class="line"><span class="lineno">46059</span>            num = Main.tile[x, y - 1].type;</div>
+<div class="line"><span class="lineno">46060</span>        }</div>
+<div class="line"><span class="lineno">46061</span>        <span class="keywordflow">if</span> (Main.tile[x, y + 1] != <span class="keyword">null</span> &amp;&amp; Main.tile[x, y + 1].active())</div>
+<div class="line"><span class="lineno">46062</span>        {</div>
+<div class="line"><span class="lineno">46063</span>            num4 = Main.tile[x, y + 1].type;</div>
+<div class="line"><span class="lineno">46064</span>        }</div>
+<div class="line"><span class="lineno">46065</span>        <span class="keywordtype">bool</span> flag = settings.IsGroundValid(num4);</div>
+<div class="line"><span class="lineno">46066</span>        <span class="keywordtype">bool</span> flag2 = num3 == type;</div>
+<div class="line"><span class="lineno">46067</span>        <span class="keywordtype">bool</span> flag3 = num2 == type;</div>
+<div class="line"><span class="lineno">46068</span>        <span class="keywordflow">if</span> (!flag &amp;&amp; num4 != type &amp;&amp; ((tile.frameX == 0 &amp;&amp; tile.frameY &lt;= 130) || (tile.frameX == 22 &amp;&amp; tile.frameY &lt;= 130) || (tile.frameX == 44 &amp;&amp; tile.frameY &lt;= 130)))</div>
+<div class="line"><span class="lineno">46069</span>        {</div>
+<div class="line"><span class="lineno">46070</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46071</span>        }</div>
+<div class="line"><span class="lineno">46072</span>        <span class="keywordflow">if</span> (tile.frameX &gt;= 22 &amp;&amp; tile.frameX &lt;= 44 &amp;&amp; tile.frameY &gt;= 132 &amp;&amp; tile.frameY &lt;= 176)</div>
+<div class="line"><span class="lineno">46073</span>        {</div>
+<div class="line"><span class="lineno">46074</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">46075</span>            {</div>
+<div class="line"><span class="lineno">46076</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46077</span>            }</div>
+<div class="line"><span class="lineno">46078</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(tile.frameX == 22 &amp;&amp; flag3) &amp;&amp; !(tile.frameX == 44 &amp;&amp; flag2))</div>
+<div class="line"><span class="lineno">46079</span>            {</div>
+<div class="line"><span class="lineno">46080</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46081</span>            }</div>
+<div class="line"><span class="lineno">46082</span>        }</div>
+<div class="line"><span class="lineno">46083</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((tile.frameX == 88 &amp;&amp; tile.frameY &gt;= 0 &amp;&amp; tile.frameY &lt;= 44) || (tile.frameX == 66 &amp;&amp; tile.frameY &gt;= 66 &amp;&amp; tile.frameY &lt;= 130) || (tile.frameX == 110 &amp;&amp; tile.frameY &gt;= 66 &amp;&amp; tile.frameY &lt;= 110) || (tile.frameX == 132 &amp;&amp; tile.frameY &gt;= 0 &amp;&amp; tile.frameY &lt;= 176))</div>
+<div class="line"><span class="lineno">46084</span>        {</div>
+<div class="line"><span class="lineno">46085</span>            <span class="keywordflow">if</span> (flag3 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno">46086</span>            {</div>
+<div class="line"><span class="lineno">46087</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46088</span>                {</div>
+<div class="line"><span class="lineno">46089</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46090</span>                    tile.frameY = 66;</div>
+<div class="line"><span class="lineno">46091</span>                }</div>
+<div class="line"><span class="lineno">46092</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46093</span>                {</div>
+<div class="line"><span class="lineno">46094</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46095</span>                    tile.frameY = 88;</div>
+<div class="line"><span class="lineno">46096</span>                }</div>
+<div class="line"><span class="lineno">46097</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46098</span>                {</div>
+<div class="line"><span class="lineno">46099</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46100</span>                    tile.frameY = 110;</div>
+<div class="line"><span class="lineno">46101</span>                }</div>
+<div class="line"><span class="lineno">46102</span>            }</div>
+<div class="line"><span class="lineno">46103</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag3)</div>
+<div class="line"><span class="lineno">46104</span>            {</div>
+<div class="line"><span class="lineno">46105</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46106</span>                {</div>
+<div class="line"><span class="lineno">46107</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46108</span>                    tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46109</span>                }</div>
+<div class="line"><span class="lineno">46110</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46111</span>                {</div>
+<div class="line"><span class="lineno">46112</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46113</span>                    tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46114</span>                }</div>
+<div class="line"><span class="lineno">46115</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46116</span>                {</div>
+<div class="line"><span class="lineno">46117</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46118</span>                    tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46119</span>                }</div>
+<div class="line"><span class="lineno">46120</span>            }</div>
+<div class="line"><span class="lineno">46121</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">46122</span>            {</div>
+<div class="line"><span class="lineno">46123</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46124</span>                {</div>
+<div class="line"><span class="lineno">46125</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46126</span>                    tile.frameY = 66;</div>
+<div class="line"><span class="lineno">46127</span>                }</div>
+<div class="line"><span class="lineno">46128</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46129</span>                {</div>
+<div class="line"><span class="lineno">46130</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46131</span>                    tile.frameY = 88;</div>
+<div class="line"><span class="lineno">46132</span>                }</div>
+<div class="line"><span class="lineno">46133</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46134</span>                {</div>
+<div class="line"><span class="lineno">46135</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46136</span>                    tile.frameY = 110;</div>
+<div class="line"><span class="lineno">46137</span>                }</div>
+<div class="line"><span class="lineno">46138</span>            }</div>
+<div class="line"><span class="lineno">46139</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">46140</span>            {</div>
+<div class="line"><span class="lineno">46141</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46142</span>                {</div>
+<div class="line"><span class="lineno">46143</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46144</span>                    tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46145</span>                }</div>
+<div class="line"><span class="lineno">46146</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46147</span>                {</div>
+<div class="line"><span class="lineno">46148</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46149</span>                    tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46150</span>                }</div>
+<div class="line"><span class="lineno">46151</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46152</span>                {</div>
+<div class="line"><span class="lineno">46153</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46154</span>                    tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46155</span>                }</div>
+<div class="line"><span class="lineno">46156</span>            }</div>
+<div class="line"><span class="lineno">46157</span>        }</div>
+<div class="line"><span class="lineno">46158</span>        <span class="keywordflow">if</span> (tile.frameY &gt;= 132 &amp;&amp; tile.frameY &lt;= 176 &amp;&amp; (tile.frameX == 0 || tile.frameX == 66 || tile.frameX == 88))</div>
+<div class="line"><span class="lineno">46159</span>        {</div>
+<div class="line"><span class="lineno">46160</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">46161</span>            {</div>
+<div class="line"><span class="lineno">46162</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46163</span>            }</div>
+<div class="line"><span class="lineno">46164</span>            <span class="keywordflow">if</span> (!flag3 &amp;&amp; !flag2)</div>
+<div class="line"><span class="lineno">46165</span>            {</div>
+<div class="line"><span class="lineno">46166</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46167</span>                {</div>
+<div class="line"><span class="lineno">46168</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46169</span>                    tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46170</span>                }</div>
+<div class="line"><span class="lineno">46171</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46172</span>                {</div>
+<div class="line"><span class="lineno">46173</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46174</span>                    tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46175</span>                }</div>
+<div class="line"><span class="lineno">46176</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46177</span>                {</div>
+<div class="line"><span class="lineno">46178</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46179</span>                    tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46180</span>                }</div>
+<div class="line"><span class="lineno">46181</span>            }</div>
+<div class="line"><span class="lineno">46182</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!flag3)</div>
+<div class="line"><span class="lineno">46183</span>            {</div>
+<div class="line"><span class="lineno">46184</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46185</span>                {</div>
+<div class="line"><span class="lineno">46186</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46187</span>                    tile.frameY = 132;</div>
+<div class="line"><span class="lineno">46188</span>                }</div>
+<div class="line"><span class="lineno">46189</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46190</span>                {</div>
+<div class="line"><span class="lineno">46191</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46192</span>                    tile.frameY = 154;</div>
+<div class="line"><span class="lineno">46193</span>                }</div>
+<div class="line"><span class="lineno">46194</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46195</span>                {</div>
+<div class="line"><span class="lineno">46196</span>                    tile.frameX = 0;</div>
+<div class="line"><span class="lineno">46197</span>                    tile.frameY = 176;</div>
+<div class="line"><span class="lineno">46198</span>                }</div>
+<div class="line"><span class="lineno">46199</span>            }</div>
+<div class="line"><span class="lineno">46200</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!flag2)</div>
+<div class="line"><span class="lineno">46201</span>            {</div>
+<div class="line"><span class="lineno">46202</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46203</span>                {</div>
+<div class="line"><span class="lineno">46204</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46205</span>                    tile.frameY = 132;</div>
+<div class="line"><span class="lineno">46206</span>                }</div>
+<div class="line"><span class="lineno">46207</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46208</span>                {</div>
+<div class="line"><span class="lineno">46209</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46210</span>                    tile.frameY = 154;</div>
+<div class="line"><span class="lineno">46211</span>                }</div>
+<div class="line"><span class="lineno">46212</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46213</span>                {</div>
+<div class="line"><span class="lineno">46214</span>                    tile.frameX = 66;</div>
+<div class="line"><span class="lineno">46215</span>                    tile.frameY = 176;</div>
+<div class="line"><span class="lineno">46216</span>                }</div>
+<div class="line"><span class="lineno">46217</span>            }</div>
+<div class="line"><span class="lineno">46218</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">46219</span>            {</div>
+<div class="line"><span class="lineno">46220</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46221</span>                {</div>
+<div class="line"><span class="lineno">46222</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46223</span>                    tile.frameY = 132;</div>
+<div class="line"><span class="lineno">46224</span>                }</div>
+<div class="line"><span class="lineno">46225</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46226</span>                {</div>
+<div class="line"><span class="lineno">46227</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46228</span>                    tile.frameY = 154;</div>
+<div class="line"><span class="lineno">46229</span>                }</div>
+<div class="line"><span class="lineno">46230</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46231</span>                {</div>
+<div class="line"><span class="lineno">46232</span>                    tile.frameX = 88;</div>
+<div class="line"><span class="lineno">46233</span>                    tile.frameY = 176;</div>
+<div class="line"><span class="lineno">46234</span>                }</div>
+<div class="line"><span class="lineno">46235</span>            }</div>
+<div class="line"><span class="lineno">46236</span>        }</div>
+<div class="line"><span class="lineno">46237</span>        <span class="keywordflow">if</span> ((tile.frameX == 66 &amp;&amp; (tile.frameY == 0 || tile.frameY == 22 || tile.frameY == 44)) || (tile.frameX == 44 &amp;&amp; (tile.frameY == 198 || tile.frameY == 220 || tile.frameY == 242)))</div>
+<div class="line"><span class="lineno">46238</span>        {</div>
+<div class="line"><span class="lineno">46239</span>            <span class="keywordflow">if</span> (!flag2)</div>
+<div class="line"><span class="lineno">46240</span>            {</div>
+<div class="line"><span class="lineno">46241</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46242</span>            }</div>
+<div class="line"><span class="lineno">46243</span>        }</div>
+<div class="line"><span class="lineno">46244</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((tile.frameX == 88 &amp;&amp; (tile.frameY == 66 || tile.frameY == 88 || tile.frameY == 110)) || (tile.frameX == 66 &amp;&amp; (tile.frameY == 198 || tile.frameY == 220 || tile.frameY == 242)))</div>
+<div class="line"><span class="lineno">46245</span>        {</div>
+<div class="line"><span class="lineno">46246</span>            <span class="keywordflow">if</span> (!flag3)</div>
+<div class="line"><span class="lineno">46247</span>            {</div>
+<div class="line"><span class="lineno">46248</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46249</span>            }</div>
+<div class="line"><span class="lineno">46250</span>        }</div>
+<div class="line"><span class="lineno">46251</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num4 == -1)</div>
+<div class="line"><span class="lineno">46252</span>        {</div>
+<div class="line"><span class="lineno">46253</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">46254</span>        }</div>
+<div class="line"><span class="lineno">46255</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num != type &amp;&amp; tile.frameY &lt; 198 &amp;&amp; ((tile.frameX != 22 &amp;&amp; tile.frameX != 44) || tile.frameY &lt; 132))</div>
+<div class="line"><span class="lineno">46256</span>        {</div>
+<div class="line"><span class="lineno">46257</span>            <span class="keywordflow">if</span> (flag3 || flag2)</div>
+<div class="line"><span class="lineno">46258</span>            {</div>
+<div class="line"><span class="lineno">46259</span>                <span class="keywordflow">if</span> (num4 == type)</div>
+<div class="line"><span class="lineno">46260</span>                {</div>
+<div class="line"><span class="lineno">46261</span>                    <span class="keywordflow">if</span> (flag3 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno">46262</span>                    {</div>
+<div class="line"><span class="lineno">46263</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46264</span>                        {</div>
+<div class="line"><span class="lineno">46265</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46266</span>                            tile.frameY = 132;</div>
+<div class="line"><span class="lineno">46267</span>                        }</div>
+<div class="line"><span class="lineno">46268</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46269</span>                        {</div>
+<div class="line"><span class="lineno">46270</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46271</span>                            tile.frameY = 154;</div>
+<div class="line"><span class="lineno">46272</span>                        }</div>
+<div class="line"><span class="lineno">46273</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46274</span>                        {</div>
+<div class="line"><span class="lineno">46275</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46276</span>                            tile.frameY = 176;</div>
+<div class="line"><span class="lineno">46277</span>                        }</div>
+<div class="line"><span class="lineno">46278</span>                    }</div>
+<div class="line"><span class="lineno">46279</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag3)</div>
+<div class="line"><span class="lineno">46280</span>                    {</div>
+<div class="line"><span class="lineno">46281</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46282</span>                        {</div>
+<div class="line"><span class="lineno">46283</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46284</span>                            tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46285</span>                        }</div>
+<div class="line"><span class="lineno">46286</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46287</span>                        {</div>
+<div class="line"><span class="lineno">46288</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46289</span>                            tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46290</span>                        }</div>
+<div class="line"><span class="lineno">46291</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46292</span>                        {</div>
+<div class="line"><span class="lineno">46293</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46294</span>                            tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46295</span>                        }</div>
+<div class="line"><span class="lineno">46296</span>                    }</div>
+<div class="line"><span class="lineno">46297</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">46298</span>                    {</div>
+<div class="line"><span class="lineno">46299</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46300</span>                        {</div>
+<div class="line"><span class="lineno">46301</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46302</span>                            tile.frameY = 66;</div>
+<div class="line"><span class="lineno">46303</span>                        }</div>
+<div class="line"><span class="lineno">46304</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46305</span>                        {</div>
+<div class="line"><span class="lineno">46306</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46307</span>                            tile.frameY = 88;</div>
+<div class="line"><span class="lineno">46308</span>                        }</div>
+<div class="line"><span class="lineno">46309</span>                        <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46310</span>                        {</div>
+<div class="line"><span class="lineno">46311</span>                            tile.frameX = 132;</div>
+<div class="line"><span class="lineno">46312</span>                            tile.frameY = 110;</div>
+<div class="line"><span class="lineno">46313</span>                        }</div>
+<div class="line"><span class="lineno">46314</span>                    }</div>
+<div class="line"><span class="lineno">46315</span>                }</div>
+<div class="line"><span class="lineno">46316</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag3 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno">46317</span>                {</div>
+<div class="line"><span class="lineno">46318</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46319</span>                    {</div>
+<div class="line"><span class="lineno">46320</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46321</span>                        tile.frameY = 132;</div>
+<div class="line"><span class="lineno">46322</span>                    }</div>
+<div class="line"><span class="lineno">46323</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46324</span>                    {</div>
+<div class="line"><span class="lineno">46325</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46326</span>                        tile.frameY = 154;</div>
+<div class="line"><span class="lineno">46327</span>                    }</div>
+<div class="line"><span class="lineno">46328</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46329</span>                    {</div>
+<div class="line"><span class="lineno">46330</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46331</span>                        tile.frameY = 176;</div>
+<div class="line"><span class="lineno">46332</span>                    }</div>
+<div class="line"><span class="lineno">46333</span>                }</div>
+<div class="line"><span class="lineno">46334</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag3)</div>
+<div class="line"><span class="lineno">46335</span>                {</div>
+<div class="line"><span class="lineno">46336</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46337</span>                    {</div>
+<div class="line"><span class="lineno">46338</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46339</span>                        tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46340</span>                    }</div>
+<div class="line"><span class="lineno">46341</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46342</span>                    {</div>
+<div class="line"><span class="lineno">46343</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46344</span>                        tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46345</span>                    }</div>
+<div class="line"><span class="lineno">46346</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46347</span>                    {</div>
+<div class="line"><span class="lineno">46348</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46349</span>                        tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46350</span>                    }</div>
+<div class="line"><span class="lineno">46351</span>                }</div>
+<div class="line"><span class="lineno">46352</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">46353</span>                {</div>
+<div class="line"><span class="lineno">46354</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46355</span>                    {</div>
+<div class="line"><span class="lineno">46356</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46357</span>                        tile.frameY = 66;</div>
+<div class="line"><span class="lineno">46358</span>                    }</div>
+<div class="line"><span class="lineno">46359</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46360</span>                    {</div>
+<div class="line"><span class="lineno">46361</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46362</span>                        tile.frameY = 88;</div>
+<div class="line"><span class="lineno">46363</span>                    }</div>
+<div class="line"><span class="lineno">46364</span>                    <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46365</span>                    {</div>
+<div class="line"><span class="lineno">46366</span>                        tile.frameX = 154;</div>
+<div class="line"><span class="lineno">46367</span>                        tile.frameY = 110;</div>
+<div class="line"><span class="lineno">46368</span>                    }</div>
+<div class="line"><span class="lineno">46369</span>                }</div>
+<div class="line"><span class="lineno">46370</span>            }</div>
+<div class="line"><span class="lineno">46371</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">46372</span>            {</div>
+<div class="line"><span class="lineno">46373</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 0)</div>
+<div class="line"><span class="lineno">46374</span>                {</div>
+<div class="line"><span class="lineno">46375</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46376</span>                    tile.frameY = 0;</div>
+<div class="line"><span class="lineno">46377</span>                }</div>
+<div class="line"><span class="lineno">46378</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 1)</div>
+<div class="line"><span class="lineno">46379</span>                {</div>
+<div class="line"><span class="lineno">46380</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46381</span>                    tile.frameY = 22;</div>
+<div class="line"><span class="lineno">46382</span>                }</div>
+<div class="line"><span class="lineno">46383</span>                <span class="keywordflow">if</span> (tile.frameNumber() == 2)</div>
+<div class="line"><span class="lineno">46384</span>                {</div>
+<div class="line"><span class="lineno">46385</span>                    tile.frameX = 110;</div>
+<div class="line"><span class="lineno">46386</span>                    tile.frameY = 44;</div>
+<div class="line"><span class="lineno">46387</span>                }</div>
+<div class="line"><span class="lineno">46388</span>            }</div>
+<div class="line"><span class="lineno">46389</span>        }</div>
+<div class="line"><span class="lineno">46390</span>        <span class="keywordflow">if</span> (tile.frameX != frameX &amp;&amp; tile.frameY != frameY &amp;&amp; frameX &gt;= 0 &amp;&amp; frameY &gt;= 0)</div>
+<div class="line"><span class="lineno">46391</span>        {</div>
+<div class="line"><span class="lineno">46392</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(x - 1, y);</div>
+<div class="line"><span class="lineno">46393</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(x + 1, y);</div>
+<div class="line"><span class="lineno">46394</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(x, y - 1);</div>
+<div class="line"><span class="lineno">46395</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(x, y + 1);</div>
+<div class="line"><span class="lineno">46396</span>        }</div>
+<div class="line"><span class="lineno">46397</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b_html_a8ed63c06b5939701ff73c08394ab8e7b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">Terraria.WorldGen.TileFrame</a></div><div class="ttdeci">static void TileFrame(int i, int j, bool resetFrame=false, bool noBreak=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:71431</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a832fc5990333b0714f16b8a050affb10.html#a832fc5990333b0714f16b8a050affb10">Terraria.Tile.frameNumber()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d0/db2/structTerraria_1_1WorldGen_1_1CheckTreeSettings_a4b5037db3784c05ed8f279c4e4eda97c.html#a4b5037db3784c05ed8f279c4e4eda97c">Terraria.WorldGen.CheckTreeSettings.IsGroundValid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

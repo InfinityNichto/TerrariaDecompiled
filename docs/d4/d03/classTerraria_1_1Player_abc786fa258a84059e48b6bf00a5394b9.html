@@ -121,6 +121,28 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_abc786fa258a84059e48b6b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">35982</span>    {</div>
+<div class="line"><span class="lineno">35983</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = floorX - 1; i &lt; floorX + 2; i++)</div>
+<div class="line"><span class="lineno">35984</span>        {</div>
+<div class="line"><span class="lineno">35985</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = floorY - 3; j &lt; floorY; j++)</div>
+<div class="line"><span class="lineno">35986</span>            {</div>
+<div class="line"><span class="lineno">35987</span>                <span class="keywordflow">if</span> (Main.tile[i, j] != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">35988</span>                {</div>
+<div class="line"><span class="lineno">35989</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].nactive() &amp;&amp; Main.tileSolid[Main.tile[i, j].type] &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno">35990</span>                    {</div>
+<div class="line"><span class="lineno">35991</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">35992</span>                    }</div>
+<div class="line"><span class="lineno">35993</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].liquid &gt; 0)</div>
+<div class="line"><span class="lineno">35994</span>                    {</div>
+<div class="line"><span class="lineno">35995</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">35996</span>                    }</div>
+<div class="line"><span class="lineno">35997</span>                }</div>
+<div class="line"><span class="lineno">35998</span>            }</div>
+<div class="line"><span class="lineno">35999</span>        }</div>
+<div class="line"><span class="lineno">36000</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36001</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,62 @@ $(function(){initNavTree('d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Part
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1300</span>    {</div>
+<div class="line"><span class="lineno"> 1301</span>        <span class="keywordtype">float</span> num = Main.rand.NextFloat() * ((float)Math.PI * 2f);</div>
+<div class="line"><span class="lineno"> 1302</span>        <span class="keywordtype">float</span> num2 = 6f;</div>
+<div class="line"><span class="lineno"> 1303</span>        <span class="keywordtype">float</span> num3 = Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno"> 1304</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num4 = 0f; num4 &lt; 1f; num4 += 1f / num2)</div>
+<div class="line"><span class="lineno"> 1305</span>        {</div>
+<div class="line"><span class="lineno"> 1306</span>            Vector2 vector = settings.MovementVector * Main.rand.NextFloatDirection() * 0.15f;</div>
+<div class="line"><span class="lineno"> 1307</span>            Vector2 vector2 = <span class="keyword">new</span> Vector2(Main.rand.NextFloat() * 0.4f + 0.4f);</div>
+<div class="line"><span class="lineno"> 1308</span>            <span class="keywordtype">float</span> f = num + Main.rand.NextFloat() * ((float)Math.PI * 2f);</div>
+<div class="line"><span class="lineno"> 1309</span>            <span class="keywordtype">float</span> rotation = (float)Math.PI / 2f;</div>
+<div class="line"><span class="lineno"> 1310</span>            Vector2 vector3 = 1.5f * vector2;</div>
+<div class="line"><span class="lineno"> 1311</span>            <span class="keywordtype">float</span> num5 = 60f;</div>
+<div class="line"><span class="lineno"> 1312</span>            Vector2 vector4 = Main.rand.NextVector2Circular(8f, 8f) * vector2;</div>
+<div class="line"><span class="lineno"> 1313</span>            <a class="code hl_class" href="../../da/d12/classTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle.html">PrettySparkleParticle</a> prettySparkleParticle = <a class="code hl_variable" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">_poolPrettySparkle</a>.<a class="code hl_function" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">RequestParticle</a>();</div>
+<div class="line"><span class="lineno"> 1314</span>            prettySparkleParticle.Velocity = f.ToRotationVector2() * vector3 + vector;</div>
+<div class="line"><span class="lineno"> 1315</span>            prettySparkleParticle.AccelerationPerFrame = f.ToRotationVector2() * -(vector3 / num5) - vector * 1f / 60f;</div>
+<div class="line"><span class="lineno"> 1316</span>            prettySparkleParticle.ColorTint = Main.hslToRgb((num3 + Main.rand.NextFloat() * 0.33f) % 1f, 1f, 0.4f + Main.rand.NextFloat() * 0.25f);</div>
+<div class="line"><span class="lineno"> 1317</span>            prettySparkleParticle.ColorTint.A = 0;</div>
+<div class="line"><span class="lineno"> 1318</span>            prettySparkleParticle.LocalPosition = settings.PositionInWorld + vector4;</div>
+<div class="line"><span class="lineno"> 1319</span>            prettySparkleParticle.Rotation = rotation;</div>
+<div class="line"><span class="lineno"> 1320</span>            prettySparkleParticle.Scale = vector2;</div>
+<div class="line"><span class="lineno"> 1321</span>            Main.ParticleSystem_World_OverPlayers.Add(prettySparkleParticle);</div>
+<div class="line"><span class="lineno"> 1322</span>            prettySparkleParticle = <a class="code hl_variable" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">_poolPrettySparkle</a>.<a class="code hl_function" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">RequestParticle</a>();</div>
+<div class="line"><span class="lineno"> 1323</span>            prettySparkleParticle.Velocity = f.ToRotationVector2() * vector3 + vector;</div>
+<div class="line"><span class="lineno"> 1324</span>            prettySparkleParticle.AccelerationPerFrame = f.ToRotationVector2() * -(vector3 / num5) - vector * 1f / 60f;</div>
+<div class="line"><span class="lineno"> 1325</span>            prettySparkleParticle.ColorTint = <span class="keyword">new</span> Color(255, 255, 255, 0);</div>
+<div class="line"><span class="lineno"> 1326</span>            prettySparkleParticle.LocalPosition = settings.PositionInWorld + vector4;</div>
+<div class="line"><span class="lineno"> 1327</span>            prettySparkleParticle.Rotation = rotation;</div>
+<div class="line"><span class="lineno"> 1328</span>            prettySparkleParticle.Scale = vector2 * 0.6f;</div>
+<div class="line"><span class="lineno"> 1329</span>            Main.ParticleSystem_World_OverPlayers.Add(prettySparkleParticle);</div>
+<div class="line"><span class="lineno"> 1330</span>        }</div>
+<div class="line"><span class="lineno"> 1331</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 12; i++)</div>
+<div class="line"><span class="lineno"> 1332</span>        {</div>
+<div class="line"><span class="lineno"> 1333</span>            Color newColor = Main.hslToRgb((num3 + Main.rand.NextFloat() * 0.12f) % 1f, 1f, 0.4f + Main.rand.NextFloat() * 0.25f);</div>
+<div class="line"><span class="lineno"> 1334</span>            <span class="keywordtype">int</span> num6 = Dust.NewDust(settings.PositionInWorld, 0, 0, 267, 0f, 0f, 0, newColor);</div>
+<div class="line"><span class="lineno"> 1335</span>            Main.dust[num6].velocity = Main.rand.NextVector2Circular(1f, 1f);</div>
+<div class="line"><span class="lineno"> 1336</span>            Main.dust[num6].velocity += settings.MovementVector * Main.rand.NextFloatDirection() * 0.5f;</div>
+<div class="line"><span class="lineno"> 1337</span>            Main.dust[num6].noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1338</span>            Main.dust[num6].scale = 0.6f + Main.rand.NextFloat() * 0.9f;</div>
+<div class="line"><span class="lineno"> 1339</span>            Main.dust[num6].fadeIn = 0.7f + Main.rand.NextFloat() * 0.8f;</div>
+<div class="line"><span class="lineno"> 1340</span>            <span class="keywordflow">if</span> (num6 != 6000)</div>
+<div class="line"><span class="lineno"> 1341</span>            {</div>
+<div class="line"><span class="lineno"> 1342</span>                Dust dust = Dust.CloneDust(num6);</div>
+<div class="line"><span class="lineno"> 1343</span>                dust.scale /= 2f;</div>
+<div class="line"><span class="lineno"> 1344</span>                dust.fadeIn *= 0.75f;</div>
+<div class="line"><span class="lineno"> 1345</span>                dust.color = <span class="keyword">new</span> Color(255, 255, 255, 255);</div>
+<div class="line"><span class="lineno"> 1346</span>            }</div>
+<div class="line"><span class="lineno"> 1347</span>        }</div>
+<div class="line"><span class="lineno"> 1348</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8_html_abfef5c2dc81feeec45f95e8179b82ff8"><div class="ttname"><a href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">Terraria.GameContent.Drawing.ParticleOrchestrator._poolPrettySparkle</a></div><div class="ttdeci">static ParticlePool&lt; PrettySparkleParticle &gt; _poolPrettySparkle</div><div class="ttdef"><b>Definition</b> ParticleOrchestrator.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae_html_a1f9a58d4ae85e98ad9ce442bb5c21bae"><div class="ttname"><a href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">Terraria.Graphics.Renderers.ParticlePool.RequestParticle</a></div><div class="ttdeci">T RequestParticle()</div><div class="ttdef"><b>Definition</b> ParticlePool.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle_html"><div class="ttname"><a href="../../da/d12/classTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle.html">Terraria.Graphics.Renderers.PrettySparkleParticle</a></div><div class="ttdef"><b>Definition</b> PrettySparkleParticle.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">Terraria.GameContent.Drawing.ParticleOrchestrator._poolPrettySparkle</a>, <a class="el" href="../../dd/d5c/classTerraria_1_1Graphics_1_1Renderers_1_1ParticleRenderer_ac78afb0bc22caa02507b26bcefab2fdc.html#ac78afb0bc22caa02507b26bcefab2fdc">Terraria.Graphics.Renderers.ParticleRenderer.Add()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a2f90cbf26845a1fbcc3f1c2c9839c3cc.html#a2f90cbf26845a1fbcc3f1c2c9839c3cc">Terraria.Dust.CloneDust()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd8308b7b2c8e2abc50ce1934c95920f.html#afd8308b7b2c8e2abc50ce1934c95920f">Terraria.Main.dust</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_adf344eac3fd49d0fe7d8f27ad39ab5d4.html#adf344eac3fd49d0fe7d8f27ad39ab5d4">Terraria.Dust.fadeIn</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a977a36a9376966862406a3094e3b70ab.html#a977a36a9376966862406a3094e3b70ab">Terraria.Dust.NewDust()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a267fdf982d8c9f9d95c0eff7903dd906.html#a267fdf982d8c9f9d95c0eff7903dd906">Terraria.Dust.noGravity</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aae9cfe89dca9ef26a596c56ca439bd97.html#aae9cfe89dca9ef26a596c56ca439bd97">Terraria.Main.ParticleSystem_World_OverPlayers</a>, <a class="el" href="../../d5/dfa/structTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestraSettings_a11c5abcab47bcfeb182756b5c3744ec9.html#a11c5abcab47bcfeb182756b5c3744ec9">Terraria.GameContent.Drawing.ParticleOrchestraSettings.PositionInWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">Terraria.Graphics.Renderers.ParticlePool&lt; T &gt;.RequestParticle()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a9eb19b363b15be2983b60ad6e973c616.html#a9eb19b363b15be2983b60ad6e973c616">Terraria.Dust.scale</a>, and <a class="el" href="../../dc/de5/classTerraria_1_1Dust_aed5c553a5864298010d0dfd099cd3f6d.html#aed5c553a5864298010d0dfd099cd3f6d">Terraria.Dust.velocity</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_a67fdbd42f419b929cf4f2442be01f2f3.html#a67fdbd42f419b929cf4f2442be01f2f3">Terraria.GameContent.Drawing.ParticleOrchestrator.SpawnParticlesDirect()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

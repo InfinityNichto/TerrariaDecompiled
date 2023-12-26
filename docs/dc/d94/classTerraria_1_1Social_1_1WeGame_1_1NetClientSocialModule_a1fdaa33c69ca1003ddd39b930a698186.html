@@ -117,6 +117,46 @@ $(function(){initNavTree('dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientS
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  479</span>    {</div>
+<div class="line"><span class="lineno">  480</span>        <span class="comment">//IL_0001: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  481</span>        <span class="comment">//IL_005c: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  482</span>        <span class="comment">//IL_0062: Expected O, but got Unknown</span></div>
+<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)((EventBase)data).result != 0 || data.friend_kvs.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">  484</span>        {</div>
+<div class="line"><span class="lineno">  485</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  486</span>        }</div>
+<div class="line"><span class="lineno">  487</span>        WeGameHelper.WriteDebugString(<span class="stringliteral">&quot;OnGetFriendMetaData - &quot;</span> + <a class="code hl_function" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a34561457d75509b13f027df2b0be92cd.html#a34561457d75509b13f027df2b0be92cd">DumpMataDataString</a>(data.friend_kvs));</div>
+<div class="line"><span class="lineno">  488</span>        <span class="keywordtype">string</span> valueByKey = <a class="code hl_function" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_abe941f13c60ab041f49b1875d561c5d6.html#abe941f13c60ab041f49b1875d561c5d6">GetValueByKey</a>(<a class="code hl_variable" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a94cf81fc6f6f970db1b0c42ea7a04df4.html#a94cf81fc6f6f970db1b0c42ea7a04df4">_serverIDMedataKey</a>, data.friend_kvs);</div>
+<div class="line"><span class="lineno">  489</span>        <span class="keywordflow">if</span> (valueByKey == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  490</span>        {</div>
+<div class="line"><span class="lineno">  491</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  492</span>        }</div>
+<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">if</span> (valueByKey.Length &gt; 0)</div>
+<div class="line"><span class="lineno">  494</span>        {</div>
+<div class="line"><span class="lineno">  495</span>            RailID val = <span class="keyword">new</span> RailID();</div>
+<div class="line"><span class="lineno">  496</span>            ((RailComparableID)val).id_ = ulong.Parse(valueByKey);</div>
+<div class="line"><span class="lineno">  497</span>            <span class="keywordflow">if</span> (((RailComparableID)val).IsValid())</div>
+<div class="line"><span class="lineno">  498</span>            {</div>
+<div class="line"><span class="lineno">  499</span>                <a class="code hl_function" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a05cb792c238c00c09f90d6d409feed87.html#a05cb792c238c00c09f90d6d409feed87">JoinServer</a>(val);</div>
+<div class="line"><span class="lineno">  500</span>            }</div>
+<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  502</span>            {</div>
+<div class="line"><span class="lineno">  503</span>                WeGameHelper.WriteDebugString(<span class="stringliteral">&quot;JoinServer failed, invalid server id&quot;</span>);</div>
+<div class="line"><span class="lineno">  504</span>            }</div>
+<div class="line"><span class="lineno">  505</span>        }</div>
+<div class="line"><span class="lineno">  506</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  507</span>        {</div>
+<div class="line"><span class="lineno">  508</span>            WeGameHelper.WriteDebugString(<span class="stringliteral">&quot;can not find server id key&quot;</span>);</div>
+<div class="line"><span class="lineno">  509</span>        }</div>
+<div class="line"><span class="lineno">  510</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a05cb792c238c00c09f90d6d409feed87_html_a05cb792c238c00c09f90d6d409feed87"><div class="ttname"><a href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a05cb792c238c00c09f90d6d409feed87.html#a05cb792c238c00c09f90d6d409feed87">Terraria.Social.WeGame.NetClientSocialModule.JoinServer</a></div><div class="ttdeci">void JoinServer(RailID server_id)</div><div class="ttdef"><b>Definition</b> NetClientSocialModule.cs:512</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a34561457d75509b13f027df2b0be92cd_html_a34561457d75509b13f027df2b0be92cd"><div class="ttname"><a href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a34561457d75509b13f027df2b0be92cd.html#a34561457d75509b13f027df2b0be92cd">Terraria.Social.WeGame.NetClientSocialModule.DumpMataDataString</a></div><div class="ttdeci">string DumpMataDataString(List&lt; RailKeyValueResult &gt; list)</div><div class="ttdef"><b>Definition</b> NetClientSocialModule.cs:420</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a94cf81fc6f6f970db1b0c42ea7a04df4_html_a94cf81fc6f6f970db1b0c42ea7a04df4"><div class="ttname"><a href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a94cf81fc6f6f970db1b0c42ea7a04df4.html#a94cf81fc6f6f970db1b0c42ea7a04df4">Terraria.Social.WeGame.NetClientSocialModule._serverIDMedataKey</a></div><div class="ttdeci">readonly string _serverIDMedataKey</div><div class="ttdef"><b>Definition</b> NetClientSocialModule.cs:21</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_abe941f13c60ab041f49b1875d561c5d6_html_abe941f13c60ab041f49b1875d561c5d6"><div class="ttname"><a href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_abe941f13c60ab041f49b1875d561c5d6.html#abe941f13c60ab041f49b1875d561c5d6">Terraria.Social.WeGame.NetClientSocialModule.GetValueByKey</a></div><div class="ttdeci">string GetValueByKey(string key, List&lt; RailKeyValueResult &gt; list)</div><div class="ttdef"><b>Definition</b> NetClientSocialModule.cs:430</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a94cf81fc6f6f970db1b0c42ea7a04df4.html#a94cf81fc6f6f970db1b0c42ea7a04df4">Terraria.Social.WeGame.NetClientSocialModule._serverIDMedataKey</a>, <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a34561457d75509b13f027df2b0be92cd.html#a34561457d75509b13f027df2b0be92cd">Terraria.Social.WeGame.NetClientSocialModule.DumpMataDataString()</a>, <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_abe941f13c60ab041f49b1875d561c5d6.html#abe941f13c60ab041f49b1875d561c5d6">Terraria.Social.WeGame.NetClientSocialModule.GetValueByKey()</a>, <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a05cb792c238c00c09f90d6d409feed87.html#a05cb792c238c00c09f90d6d409feed87">Terraria.Social.WeGame.NetClientSocialModule.JoinServer()</a>, and <a class="el" href="../../d1/d07/classTerraria_1_1Social_1_1WeGame_1_1WeGameHelper_a67a3b77b9430515e11c98575c19b8e7e.html#a67a3b77b9430515e11c98575c19b8e7e">Terraria.Social.WeGame.WeGameHelper.WriteDebugString()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a43ac1999368469170b62c57d45088c2a.html#a43ac1999368469170b62c57d45088c2a">Terraria.Social.WeGame.NetClientSocialModule.OnRailEvent()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

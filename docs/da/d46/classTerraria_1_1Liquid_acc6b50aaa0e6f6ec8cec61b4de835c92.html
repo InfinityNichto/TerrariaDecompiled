@@ -117,6 +117,149 @@ $(function(){initNavTree('da/d46/classTerraria_1_1Liquid_acc6b50aaa0e6f6ec8cec61
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1473</span>    {</div>
+<div class="line"><span class="lineno"> 1474</span>        <span class="keywordtype">int</span> num = Main.liquid[l].x;</div>
+<div class="line"><span class="lineno"> 1475</span>        <span class="keywordtype">int</span> num2 = Main.liquid[l].y;</div>
+<div class="line"><span class="lineno"> 1476</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[num - 1, num2];</div>
+<div class="line"><span class="lineno"> 1477</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[num + 1, num2];</div>
+<div class="line"><span class="lineno"> 1478</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile3 = Main.tile[num, num2 + 1];</div>
+<div class="line"><span class="lineno"> 1479</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile4 = Main.tile[num, num2];</div>
+<div class="line"><span class="lineno"> 1480</span>        <span class="keywordtype">byte</span> b = 2;</div>
+<div class="line"><span class="lineno"> 1481</span>        <span class="keywordflow">if</span> (tile4.liquid &lt; b)</div>
+<div class="line"><span class="lineno"> 1482</span>        {</div>
+<div class="line"><span class="lineno"> 1483</span>            tile4.liquid = 0;</div>
+<div class="line"><span class="lineno"> 1484</span>            <span class="keywordflow">if</span> (tile.liquid &lt; b)</div>
+<div class="line"><span class="lineno"> 1485</span>            {</div>
+<div class="line"><span class="lineno"> 1486</span>                tile.liquid = 0;</div>
+<div class="line"><span class="lineno"> 1487</span>            }</div>
+<div class="line"><span class="lineno"> 1488</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1489</span>            {</div>
+<div class="line"><span class="lineno"> 1490</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">AddWater</a>(num - 1, num2);</div>
+<div class="line"><span class="lineno"> 1491</span>            }</div>
+<div class="line"><span class="lineno"> 1492</span>            <span class="keywordflow">if</span> (tile2.liquid &lt; b)</div>
+<div class="line"><span class="lineno"> 1493</span>            {</div>
+<div class="line"><span class="lineno"> 1494</span>                tile2.liquid = 0;</div>
+<div class="line"><span class="lineno"> 1495</span>            }</div>
+<div class="line"><span class="lineno"> 1496</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1497</span>            {</div>
+<div class="line"><span class="lineno"> 1498</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">AddWater</a>(num + 1, num2);</div>
+<div class="line"><span class="lineno"> 1499</span>            }</div>
+<div class="line"><span class="lineno"> 1500</span>        }</div>
+<div class="line"><span class="lineno"> 1501</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile4.liquid &lt; 20)</div>
+<div class="line"><span class="lineno"> 1502</span>        {</div>
+<div class="line"><span class="lineno"> 1503</span>            <span class="keywordflow">if</span> ((tile.liquid &lt; tile4.liquid &amp;&amp; (!tile.nactive() || !Main.tileSolid[tile.type] || Main.tileSolidTop[tile.type])) || (tile2.liquid &lt; tile4.liquid &amp;&amp; (!tile2.nactive() || !Main.tileSolid[tile2.type] || Main.tileSolidTop[tile2.type])) || (tile3.liquid &lt; <span class="keywordtype">byte</span>.MaxValue &amp;&amp; (!tile3.nactive() || !Main.tileSolid[tile3.type] || Main.tileSolidTop[tile3.type])))</div>
+<div class="line"><span class="lineno"> 1504</span>            {</div>
+<div class="line"><span class="lineno"> 1505</span>                tile4.liquid = 0;</div>
+<div class="line"><span class="lineno"> 1506</span>            }</div>
+<div class="line"><span class="lineno"> 1507</span>        }</div>
+<div class="line"><span class="lineno"> 1508</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile3.liquid &lt; <span class="keywordtype">byte</span>.MaxValue &amp;&amp; (!tile3.nactive() || !Main.tileSolid[tile3.type] || Main.tileSolidTop[tile3.type]) &amp;&amp; !<a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a63fb13d119e344d0190d90051743896c.html#a63fb13d119e344d0190d90051743896c">stuck</a> &amp;&amp; (!Main.tile[num, num2].nactive() || !Main.tileSolid[Main.tile[num, num2].type] || Main.tileSolidTop[Main.tile[num, num2].type]))</div>
+<div class="line"><span class="lineno"> 1509</span>        {</div>
+<div class="line"><span class="lineno"> 1510</span>            Main.liquid[l].kill = 0;</div>
+<div class="line"><span class="lineno"> 1511</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1512</span>        }</div>
+<div class="line"><span class="lineno"> 1513</span>        <span class="keywordflow">if</span> (tile4.liquid &lt; 250 &amp;&amp; Main.tile[num, num2 - 1].liquid &gt; 0)</div>
+<div class="line"><span class="lineno"> 1514</span>        {</div>
+<div class="line"><span class="lineno"> 1515</span>            <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">AddWater</a>(num, num2 - 1);</div>
+<div class="line"><span class="lineno"> 1516</span>        }</div>
+<div class="line"><span class="lineno"> 1517</span>        <span class="keywordflow">if</span> (tile4.liquid == 0)</div>
+<div class="line"><span class="lineno"> 1518</span>        {</div>
+<div class="line"><span class="lineno"> 1519</span>            tile4.liquidType(0);</div>
+<div class="line"><span class="lineno"> 1520</span>        }</div>
+<div class="line"><span class="lineno"> 1521</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1522</span>        {</div>
+<div class="line"><span class="lineno"> 1523</span>            <span class="keywordflow">if</span> (tile2.liquid &gt; 0 &amp;&amp; tile2.liquid &lt; 250 &amp;&amp; (!tile2.nactive() || !Main.tileSolid[tile2.type] || Main.tileSolidTop[tile2.type]) &amp;&amp; tile4.liquid != tile2.liquid)</div>
+<div class="line"><span class="lineno"> 1524</span>            {</div>
+<div class="line"><span class="lineno"> 1525</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">AddWater</a>(num + 1, num2);</div>
+<div class="line"><span class="lineno"> 1526</span>            }</div>
+<div class="line"><span class="lineno"> 1527</span>            <span class="keywordflow">if</span> (tile.liquid &gt; 0 &amp;&amp; tile.liquid &lt; 250 &amp;&amp; (!tile.nactive() || !Main.tileSolid[tile.type] || Main.tileSolidTop[tile.type]) &amp;&amp; tile4.liquid != tile.liquid)</div>
+<div class="line"><span class="lineno"> 1528</span>            {</div>
+<div class="line"><span class="lineno"> 1529</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">AddWater</a>(num - 1, num2);</div>
+<div class="line"><span class="lineno"> 1530</span>            }</div>
+<div class="line"><span class="lineno"> 1531</span>            <span class="keywordflow">if</span> (tile4.lava())</div>
+<div class="line"><span class="lineno"> 1532</span>            {</div>
+<div class="line"><span class="lineno"> 1533</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_ac46f50da8d7f01609b826cc0b2490777.html#ac46f50da8d7f01609b826cc0b2490777">LavaCheck</a>(num, num2);</div>
+<div class="line"><span class="lineno"> 1534</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num - 1; i &lt;= num + 1; i++)</div>
+<div class="line"><span class="lineno"> 1535</span>                {</div>
+<div class="line"><span class="lineno"> 1536</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num2 - 1; j &lt;= num2 + 1; j++)</div>
+<div class="line"><span class="lineno"> 1537</span>                    {</div>
+<div class="line"><span class="lineno"> 1538</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile5 = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 1539</span>                        <span class="keywordflow">if</span> (!tile5.active())</div>
+<div class="line"><span class="lineno"> 1540</span>                        {</div>
+<div class="line"><span class="lineno"> 1541</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1542</span>                        }</div>
+<div class="line"><span class="lineno"> 1543</span>                        <span class="keywordflow">if</span> (tile5.type == 2 || tile5.type == 23 || tile5.type == 109 || tile5.type == 199 || tile5.type == 477 || tile5.type == 492)</div>
+<div class="line"><span class="lineno"> 1544</span>                        {</div>
+<div class="line"><span class="lineno"> 1545</span>                            tile5.type = 0;</div>
+<div class="line"><span class="lineno"> 1546</span>                            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(i, j);</div>
+<div class="line"><span class="lineno"> 1547</span>                            <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno"> 1548</span>                            {</div>
+<div class="line"><span class="lineno"> 1549</span>                                NetMessage.SendTileSquare(-1, num, num2, 3);</div>
+<div class="line"><span class="lineno"> 1550</span>                            }</div>
+<div class="line"><span class="lineno"> 1551</span>                        }</div>
+<div class="line"><span class="lineno"> 1552</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile5.type == 60 || tile5.type == 70 || tile5.type == 661 || tile5.type == 662)</div>
+<div class="line"><span class="lineno"> 1553</span>                        {</div>
+<div class="line"><span class="lineno"> 1554</span>                            tile5.type = 59;</div>
+<div class="line"><span class="lineno"> 1555</span>                            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(i, j);</div>
+<div class="line"><span class="lineno"> 1556</span>                            <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno"> 1557</span>                            {</div>
+<div class="line"><span class="lineno"> 1558</span>                                NetMessage.SendTileSquare(-1, num, num2, 3);</div>
+<div class="line"><span class="lineno"> 1559</span>                            }</div>
+<div class="line"><span class="lineno"> 1560</span>                        }</div>
+<div class="line"><span class="lineno"> 1561</span>                    }</div>
+<div class="line"><span class="lineno"> 1562</span>                }</div>
+<div class="line"><span class="lineno"> 1563</span>            }</div>
+<div class="line"><span class="lineno"> 1564</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile4.honey())</div>
+<div class="line"><span class="lineno"> 1565</span>            {</div>
+<div class="line"><span class="lineno"> 1566</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a19dcb33d2c66d1e4d1eadcca4720168e.html#a19dcb33d2c66d1e4d1eadcca4720168e">HoneyCheck</a>(num, num2);</div>
+<div class="line"><span class="lineno"> 1567</span>            }</div>
+<div class="line"><span class="lineno"> 1568</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile4.shimmer())</div>
+<div class="line"><span class="lineno"> 1569</span>            {</div>
+<div class="line"><span class="lineno"> 1570</span>                <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_a0334d7058d432bce67120200ff721974.html#a0334d7058d432bce67120200ff721974">ShimmerCheck</a>(num, num2);</div>
+<div class="line"><span class="lineno"> 1571</span>            }</div>
+<div class="line"><span class="lineno"> 1572</span>        }</div>
+<div class="line"><span class="lineno"> 1573</span>        <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno"> 1574</span>        {</div>
+<div class="line"><span class="lineno"> 1575</span>            <a class="code hl_function" href="../../da/d46/classTerraria_1_1Liquid_ab08ea6d685c0d2eb5fe8a6a69e8e3a00.html#ab08ea6d685c0d2eb5fe8a6a69e8e3a00">NetSendLiquid</a>(num, num2);</div>
+<div class="line"><span class="lineno"> 1576</span>        }</div>
+<div class="line"><span class="lineno"> 1577</span>        <a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">numLiquid</a>--;</div>
+<div class="line"><span class="lineno"> 1578</span>        Main.tile[Main.liquid[l].x, Main.liquid[l].y].checkingLiquid(checkingLiquid: false);</div>
+<div class="line"><span class="lineno"> 1579</span>        Main.liquid[l].x = Main.liquid[<a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">numLiquid</a>].x;</div>
+<div class="line"><span class="lineno"> 1580</span>        Main.liquid[l].y = Main.liquid[<a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">numLiquid</a>].y;</div>
+<div class="line"><span class="lineno"> 1581</span>        Main.liquid[l].kill = Main.liquid[<a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">numLiquid</a>].kill;</div>
+<div class="line"><span class="lineno"> 1582</span>        <span class="keywordflow">if</span> (Main.tileAlch[tile4.type])</div>
+<div class="line"><span class="lineno"> 1583</span>        {</div>
+<div class="line"><span class="lineno"> 1584</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CheckAlch(num, num2);</div>
+<div class="line"><span class="lineno"> 1585</span>        }</div>
+<div class="line"><span class="lineno"> 1586</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile4.type == 518)</div>
+<div class="line"><span class="lineno"> 1587</span>        {</div>
+<div class="line"><span class="lineno"> 1588</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d46/classTerraria_1_1Liquid_a2b0b03b2fed04f5977ba5199b6ac17d8.html#a2b0b03b2fed04f5977ba5199b6ac17d8">quickFall</a>)</div>
+<div class="line"><span class="lineno"> 1589</span>            {</div>
+<div class="line"><span class="lineno"> 1590</span>                <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CheckLilyPad(num, num2);</div>
+<div class="line"><span class="lineno"> 1591</span>            }</div>
+<div class="line"><span class="lineno"> 1592</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.tile[num, num2 + 1].liquid &lt; <span class="keywordtype">byte</span>.MaxValue || Main.tile[num, num2 - 1].liquid &gt; 0)</div>
+<div class="line"><span class="lineno"> 1593</span>            {</div>
+<div class="line"><span class="lineno"> 1594</span>                <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(num, num2);</div>
+<div class="line"><span class="lineno"> 1595</span>            }</div>
+<div class="line"><span class="lineno"> 1596</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1597</span>            {</div>
+<div class="line"><span class="lineno"> 1598</span>                <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CheckLilyPad(num, num2);</div>
+<div class="line"><span class="lineno"> 1599</span>            }</div>
+<div class="line"><span class="lineno"> 1600</span>        }</div>
+<div class="line"><span class="lineno"> 1601</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a0334d7058d432bce67120200ff721974_html_a0334d7058d432bce67120200ff721974"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a0334d7058d432bce67120200ff721974.html#a0334d7058d432bce67120200ff721974">Terraria.Liquid.ShimmerCheck</a></div><div class="ttdeci">static void ShimmerCheck(int x, int y)</div><div class="ttdef"><b>Definition</b> Liquid.cs:1467</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a19dcb33d2c66d1e4d1eadcca4720168e_html_a19dcb33d2c66d1e4d1eadcca4720168e"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a19dcb33d2c66d1e4d1eadcca4720168e.html#a19dcb33d2c66d1e4d1eadcca4720168e">Terraria.Liquid.HoneyCheck</a></div><div class="ttdeci">static void HoneyCheck(int x, int y)</div><div class="ttdef"><b>Definition</b> Liquid.cs:1462</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a2b0b03b2fed04f5977ba5199b6ac17d8_html_a2b0b03b2fed04f5977ba5199b6ac17d8"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a2b0b03b2fed04f5977ba5199b6ac17d8.html#a2b0b03b2fed04f5977ba5199b6ac17d8">Terraria.Liquid.quickFall</a></div><div class="ttdeci">static bool quickFall</div><div class="ttdef"><b>Definition</b> Liquid.cs:31</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a63fb13d119e344d0190d90051743896c_html_a63fb13d119e344d0190d90051743896c"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a63fb13d119e344d0190d90051743896c.html#a63fb13d119e344d0190d90051743896c">Terraria.Liquid.stuck</a></div><div class="ttdeci">static bool stuck</div><div class="ttdef"><b>Definition</b> Liquid.cs:29</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df_html_a870f6363ef2803c64f36ffb7710668df"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">Terraria.Liquid.AddWater</a></div><div class="ttdeci">static void AddWater(int x, int y)</div><div class="ttdef"><b>Definition</b> Liquid.cs:1160</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64_html_a9b91b30e2095133fcfe2f08c80205e64"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">Terraria.Liquid.numLiquid</a></div><div class="ttdeci">static int numLiquid</div><div class="ttdef"><b>Definition</b> Liquid.cs:27</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_ab08ea6d685c0d2eb5fe8a6a69e8e3a00_html_ab08ea6d685c0d2eb5fe8a6a69e8e3a00"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_ab08ea6d685c0d2eb5fe8a6a69e8e3a00.html#ab08ea6d685c0d2eb5fe8a6a69e8e3a00">Terraria.Liquid.NetSendLiquid</a></div><div class="ttdeci">static void NetSendLiquid(int x, int y)</div><div class="ttdef"><b>Definition</b> Liquid.cs:55</div></div>
+<div class="ttc" id="aclassTerraria_1_1Liquid_ac46f50da8d7f01609b826cc0b2490777_html_ac46f50da8d7f01609b826cc0b2490777"><div class="ttname"><a href="../../da/d46/classTerraria_1_1Liquid_ac46f50da8d7f01609b826cc0b2490777.html#ac46f50da8d7f01609b826cc0b2490777">Terraria.Liquid.LavaCheck</a></div><div class="ttdeci">static void LavaCheck(int x, int y)</div><div class="ttdef"><b>Definition</b> Liquid.cs:1447</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a870f6363ef2803c64f36ffb7710668df.html#a870f6363ef2803c64f36ffb7710668df">Terraria.Liquid.AddWater()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a3b23f2a269df150e2f30f440549738cb.html#a3b23f2a269df150e2f30f440549738cb">Terraria.WorldGen.CheckAlch()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a51bea62ea9c2d895b6242d337728b4b6.html#a51bea62ea9c2d895b6242d337728b4b6">Terraria.Tile.checkingLiquid()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a29efc1a39cc18bd1744dcaf0e8bf415d.html#a29efc1a39cc18bd1744dcaf0e8bf415d">Terraria.WorldGen.CheckLilyPad()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_abce32b6727439dc5fd177ed547a260a6.html#abce32b6727439dc5fd177ed547a260a6">Terraria.Tile.honey()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a19dcb33d2c66d1e4d1eadcca4720168e.html#a19dcb33d2c66d1e4d1eadcca4720168e">Terraria.Liquid.HoneyCheck()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_adcb9582289d3c6f9ea5ba4a6870e49d8.html#adcb9582289d3c6f9ea5ba4a6870e49d8">Terraria.Liquid.kill</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac5e7a45a98f6e9037975c4c7e043a7a9.html#ac5e7a45a98f6e9037975c4c7e043a7a9">Terraria.Tile.lava()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_ac46f50da8d7f01609b826cc0b2490777.html#ac46f50da8d7f01609b826cc0b2490777">Terraria.Liquid.LavaCheck()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad232feb7bb358e9c3c2ba5c98bf05c7c.html#ad232feb7bb358e9c3c2ba5c98bf05c7c">Terraria.Main.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_ab08ea6d685c0d2eb5fe8a6a69e8e3a00.html#ab08ea6d685c0d2eb5fe8a6a69e8e3a00">Terraria.Liquid.NetSendLiquid()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a9b91b30e2095133fcfe2f08c80205e64.html#a9b91b30e2095133fcfe2f08c80205e64">Terraria.Liquid.numLiquid</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a2b0b03b2fed04f5977ba5199b6ac17d8.html#a2b0b03b2fed04f5977ba5199b6ac17d8">Terraria.Liquid.quickFall</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac658b0c4cc04dc4d86deb55b99decfc5.html#ac658b0c4cc04dc4d86deb55b99decfc5">Terraria.Tile.shimmer()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a0334d7058d432bce67120200ff721974.html#a0334d7058d432bce67120200ff721974">Terraria.Liquid.ShimmerCheck()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a63fb13d119e344d0190d90051743896c.html#a63fb13d119e344d0190d90051743896c">Terraria.Liquid.stuck</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a84d66f1c457a6997d3f7b1710bd23eda.html#a84d66f1c457a6997d3f7b1710bd23eda">Terraria.Main.tileAlch</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a21bbe1b0b9026deb70d8fb8a57473742.html#a21bbe1b0b9026deb70d8fb8a57473742">Terraria.Liquid.x</a>, and <a class="el" href="../../da/d46/classTerraria_1_1Liquid_ad0eec5356c0831b21d46d41b9356e0ae.html#ad0eec5356c0831b21d46d41b9356e0ae">Terraria.Liquid.y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a6c6df93591da17507249952ec9a3712c.html#a6c6df93591da17507249952ec9a3712c">Terraria.Liquid.UpdateLiquid()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

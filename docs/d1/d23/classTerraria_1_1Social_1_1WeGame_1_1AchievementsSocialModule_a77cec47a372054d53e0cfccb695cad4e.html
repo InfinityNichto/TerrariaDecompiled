@@ -117,7 +117,15 @@ $(function(){initNavTree('d1/d23/classTerraria_1_1Social_1_1WeGame_1_1Achievemen
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        RailID railID = rail_api.RailFactory().RailPlayer().GetRailID();</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">byte</span>[] array = <span class="keyword">new</span> <span class="keywordtype">byte</span>[16];</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">byte</span>[] bytes = BitConverter.GetBytes(((RailComparableID)railID).id_);</div>
+<div class="line"><span class="lineno">  130</span>        Array.Copy(bytes, array, 8);</div>
+<div class="line"><span class="lineno">  131</span>        Array.Copy(bytes, 0, array, 8, 8);</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> array;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

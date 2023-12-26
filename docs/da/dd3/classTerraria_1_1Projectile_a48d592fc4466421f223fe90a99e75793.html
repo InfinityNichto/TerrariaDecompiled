@@ -117,6 +117,135 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a48d592fc4466421f22
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">57936</span>    {</div>
+<div class="line"><span class="lineno">57937</span>        <span class="keywordtype">float</span> num = 40f;</div>
+<div class="line"><span class="lineno">57938</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">type</a> == 922)</div>
+<div class="line"><span class="lineno">57939</span>        {</div>
+<div class="line"><span class="lineno">57940</span>            num = 30f;</div>
+<div class="line"><span class="lineno">57941</span>        }</div>
+<div class="line"><span class="lineno">57942</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] += 1f;</div>
+<div class="line"><span class="lineno">57943</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &gt; 9f)</div>
+<div class="line"><span class="lineno">57944</span>        {</div>
+<div class="line"><span class="lineno">57945</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Kill</a>();</div>
+<div class="line"><span class="lineno">57946</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">57947</span>        }</div>
+<div class="line"><span class="lineno">57948</span>        <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a> = Vector2.Zero;</div>
+<div class="line"><span class="lineno">57949</span>        <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a> = base.Center;</div>
+<div class="line"><span class="lineno">57950</span>        base.Size = <span class="keyword">new</span> Vector2(16f, 16f) * MathHelper.Lerp(5f, num, Utils.GetLerpValue(0f, 9f, <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0]));</div>
+<div class="line"><span class="lineno">57951</span>        base.Center = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>;</div>
+<div class="line"><span class="lineno">57952</span>        Point point = base.TopLeft.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">57953</span>        Point point2 = base.BottomRight.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">57954</span>        <span class="keywordtype">int</span> num2 = point.X / 2 + point2.X / 2;</div>
+<div class="line"><span class="lineno">57955</span>        <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a> / 2;</div>
+<div class="line"><span class="lineno">57956</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] % 3 != 0)</div>
+<div class="line"><span class="lineno">57957</span>        {</div>
+<div class="line"><span class="lineno">57958</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">57959</span>        }</div>
+<div class="line"><span class="lineno">57960</span>        <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] / 3;</div>
+<div class="line"><span class="lineno">57961</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = point.X; i &lt;= point2.X; i++)</div>
+<div class="line"><span class="lineno">57962</span>        {</div>
+<div class="line"><span class="lineno">57963</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = point.Y; j &lt;= point2.Y; j++)</div>
+<div class="line"><span class="lineno">57964</span>            {</div>
+<div class="line"><span class="lineno">57965</span>                <span class="keywordflow">if</span> (Vector2.Distance(base.Center, <span class="keyword">new</span> Vector2(i * 16, j * 16)) &gt; (float)num3)</div>
+<div class="line"><span class="lineno">57966</span>                {</div>
+<div class="line"><span class="lineno">57967</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">57968</span>                }</div>
+<div class="line"><span class="lineno">57969</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely = Framing.GetTileSafely(i, j);</div>
+<div class="line"><span class="lineno">57970</span>                <span class="keywordflow">if</span> (!tileSafely.active() || !Main.tileSolid[tileSafely.type] || Main.tileSolidTop[tileSafely.type] || Main.tileFrameImportant[tileSafely.type])</div>
+<div class="line"><span class="lineno">57971</span>                {</div>
+<div class="line"><span class="lineno">57972</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">57973</span>                }</div>
+<div class="line"><span class="lineno">57974</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely2 = Framing.GetTileSafely(i, j - 1);</div>
+<div class="line"><span class="lineno">57975</span>                <span class="keywordflow">if</span> (tileSafely2.active() &amp;&amp; Main.tileSolid[tileSafely2.type] &amp;&amp; !Main.tileSolidTop[tileSafely2.type])</div>
+<div class="line"><span class="lineno">57976</span>                {</div>
+<div class="line"><span class="lineno">57977</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">57978</span>                }</div>
+<div class="line"><span class="lineno">57979</span>                <span class="keywordtype">int</span> num5 = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile_GetTileDustAmount(fail: true, tileSafely);</div>
+<div class="line"><span class="lineno">57980</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num5; k++)</div>
+<div class="line"><span class="lineno">57981</span>                {</div>
+<div class="line"><span class="lineno">57982</span>                    Dust obj = Main.dust[<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile_MakeTileDust(i, j, tileSafely)];</div>
+<div class="line"><span class="lineno">57983</span>                    obj.velocity.Y -= 3f + (float)num4 * 1.5f;</div>
+<div class="line"><span class="lineno">57984</span>                    obj.velocity.Y *= Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">57985</span>                    obj.velocity.Y *= 0.75f;</div>
+<div class="line"><span class="lineno">57986</span>                    obj.scale += (float)num4 * 0.03f;</div>
+<div class="line"><span class="lineno">57987</span>                }</div>
+<div class="line"><span class="lineno">57988</span>                <span class="keywordflow">if</span> (num4 &gt;= 2)</div>
+<div class="line"><span class="lineno">57989</span>                {</div>
+<div class="line"><span class="lineno">57990</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">type</a> == 922)</div>
+<div class="line"><span class="lineno">57991</span>                    {</div>
+<div class="line"><span class="lineno">57992</span>                        Color newColor = <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.AI_121_QueenSlime_GetDustColor();</div>
+<div class="line"><span class="lineno">57993</span>                        newColor.A = 150;</div>
+<div class="line"><span class="lineno">57994</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; num5 - 1; l++)</div>
+<div class="line"><span class="lineno">57995</span>                        {</div>
+<div class="line"><span class="lineno">57996</span>                            <span class="keywordtype">int</span> num6 = Dust.NewDust(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, 12, 12, 4, 0f, 0f, 50, newColor, 1.5f);</div>
+<div class="line"><span class="lineno">57997</span>                            Main.dust[num6].velocity.Y -= 0.1f + (float)num4 * 0.5f;</div>
+<div class="line"><span class="lineno">57998</span>                            Main.dust[num6].velocity.Y *= Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">57999</span>                            Main.dust[num6].velocity.X *= Main.rand.NextFloatDirection() * 3f;</div>
+<div class="line"><span class="lineno">58000</span>                            Main.dust[num6].position = <span class="keyword">new</span> Vector2(i * 16 + Main.rand.Next(16), j * 16 + Main.rand.Next(16));</div>
+<div class="line"><span class="lineno">58001</span>                            <span class="keywordflow">if</span> (Main.rand.Next(3) != 0)</div>
+<div class="line"><span class="lineno">58002</span>                            {</div>
+<div class="line"><span class="lineno">58003</span>                                Main.dust[num6].velocity *= 0.5f;</div>
+<div class="line"><span class="lineno">58004</span>                                Main.dust[num6].noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">58005</span>                            }</div>
+<div class="line"><span class="lineno">58006</span>                        }</div>
+<div class="line"><span class="lineno">58007</span>                    }</div>
+<div class="line"><span class="lineno">58008</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">58009</span>                    {</div>
+<div class="line"><span class="lineno">58010</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; num5 - 1; m++)</div>
+<div class="line"><span class="lineno">58011</span>                        {</div>
+<div class="line"><span class="lineno">58012</span>                            Dust obj2 = Main.dust[<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile_MakeTileDust(i, j, tileSafely)];</div>
+<div class="line"><span class="lineno">58013</span>                            obj2.velocity.Y -= 1f + (float)num4;</div>
+<div class="line"><span class="lineno">58014</span>                            obj2.velocity.Y *= Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">58015</span>                            obj2.velocity.Y *= 0.75f;</div>
+<div class="line"><span class="lineno">58016</span>                        }</div>
+<div class="line"><span class="lineno">58017</span>                    }</div>
+<div class="line"><span class="lineno">58018</span>                }</div>
+<div class="line"><span class="lineno">58019</span>                <span class="keywordflow">if</span> (num5 &lt;= 0 || Main.rand.Next(3) == 0)</div>
+<div class="line"><span class="lineno">58020</span>                {</div>
+<div class="line"><span class="lineno">58021</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">58022</span>                }</div>
+<div class="line"><span class="lineno">58023</span>                <span class="keywordtype">float</span> num7 = (float)Math.Abs(num2 - i) / (num / 2f);</div>
+<div class="line"><span class="lineno">58024</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">type</a> == 922)</div>
+<div class="line"><span class="lineno">58025</span>                {</div>
+<div class="line"><span class="lineno">58026</span>                    Color newColor2 = <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.AI_121_QueenSlime_GetDustColor();</div>
+<div class="line"><span class="lineno">58027</span>                    newColor2.A = 150;</div>
+<div class="line"><span class="lineno">58028</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; 3; n++)</div>
+<div class="line"><span class="lineno">58029</span>                    {</div>
+<div class="line"><span class="lineno">58030</span>                        <span class="keywordtype">int</span> num8 = Dust.NewDust(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, 31, 0f, 0f, 50, newColor2, 2f - (<span class="keywordtype">float</span>)num4 * 0.15f + num7 * 0.5f);</div>
+<div class="line"><span class="lineno">58031</span>                        Main.dust[num8].velocity.Y -= 0.1f + (float)num4 * 0.5f + num7 * (<span class="keywordtype">float</span>)num4 * 1f;</div>
+<div class="line"><span class="lineno">58032</span>                        Main.dust[num8].velocity.Y *= Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">58033</span>                        Main.dust[num8].velocity.X *= Main.rand.NextFloatDirection() * 3f;</div>
+<div class="line"><span class="lineno">58034</span>                        Main.dust[num8].position = <span class="keyword">new</span> Vector2(i * 16 + 20, j * 16 + 20);</div>
+<div class="line"><span class="lineno">58035</span>                        <span class="keywordflow">if</span> (Main.rand.Next(3) != 0)</div>
+<div class="line"><span class="lineno">58036</span>                        {</div>
+<div class="line"><span class="lineno">58037</span>                            Main.dust[num8].velocity *= 0.5f;</div>
+<div class="line"><span class="lineno">58038</span>                            Main.dust[num8].noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">58039</span>                        }</div>
+<div class="line"><span class="lineno">58040</span>                    }</div>
+<div class="line"><span class="lineno">58041</span>                }</div>
+<div class="line"><span class="lineno">58042</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">58043</span>                {</div>
+<div class="line"><span class="lineno">58044</span>                    Gore gore = Gore.NewGoreDirect(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, Vector2.Zero, 61 + Main.rand.Next(3), 1f - (<span class="keywordtype">float</span>)num4 * 0.15f + num7 * 0.5f);</div>
+<div class="line"><span class="lineno">58045</span>                    gore.velocity.Y -= 0.1f + (float)num4 * 0.5f + num7 * (<span class="keywordtype">float</span>)num4 * 1f;</div>
+<div class="line"><span class="lineno">58046</span>                    gore.velocity.Y *= Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">58047</span>                    gore.position = <span class="keyword">new</span> Vector2(i * 16 + 20, j * 16 + 20);</div>
+<div class="line"><span class="lineno">58048</span>                }</div>
+<div class="line"><span class="lineno">58049</span>            }</div>
+<div class="line"><span class="lineno">58050</span>        }</div>
+<div class="line"><span class="lineno">58051</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50_html_a71cc9e5e6c3b27c751ed856976c4bc50"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition</b> Projectile.cs:108</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861_html_ad720c809bf9147dbd21e7fa78f88d861"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> Projectile.cs:59438</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a3f11fb2398e9015267f71a5f16ad1d36.html#a3f11fb2398e9015267f71a5f16ad1d36">Terraria.NPC.AI_121_QueenSlime_GetDustColor()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd8308b7b2c8e2abc50ce1934c95920f.html#afd8308b7b2c8e2abc50ce1934c95920f">Terraria.Main.dust</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a7223719277be4afd24a2496351a9a22f.html#a7223719277be4afd24a2496351a9a22f">Terraria.Utils.GetLerpValue()</a>, <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_adf8f859033cd5cb805b13aad59a55236.html#adf8f859033cd5cb805b13aad59a55236">Terraria.Framing.GetTileSafely()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ad9c2000598569fe8cd3fe790c24ff737.html#ad9c2000598569fe8cd3fe790c24ff737">Terraria.WorldGen.KillTile_GetTileDustAmount()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a8e04f1a24b866bee95ced233ff1815e5.html#a8e04f1a24b866bee95ced233ff1815e5">Terraria.WorldGen.KillTile_MakeTileDust()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a977a36a9376966862406a3094e3b70ab.html#a977a36a9376966862406a3094e3b70ab">Terraria.Dust.NewDust()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a6f50d9725660d35b1ff1d942ebb75ce3.html#a6f50d9725660d35b1ff1d942ebb75ce3">Terraria.Gore.NewGoreDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a267fdf982d8c9f9d95c0eff7903dd906.html#a267fdf982d8c9f9d95c0eff7903dd906">Terraria.Dust.noGravity</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_a197953088c0205a317559c5e3c8eebe2.html#a197953088c0205a317559c5e3c8eebe2">Terraria.Dust.position</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae338dce4937a8f86359adf78ce853f21.html#ae338dce4937a8f86359adf78ce853f21">Terraria.Main.tileFrameImportant</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../dc/de5/classTerraria_1_1Dust_aed5c553a5864298010d0dfd099cd3f6d.html#aed5c553a5864298010d0dfd099cd3f6d">Terraria.Dust.velocity</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

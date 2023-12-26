@@ -117,6 +117,149 @@ $(function(){initNavTree('de/d13/classTerraria_1_1Initializers_1_1LaunchInitiali
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordtype">string</span> s;</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> ((s = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-forcepriority&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                Process currentProcess = Process.GetCurrentProcess();</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (<span class="keywordtype">int</span>.TryParse(s, out var result))</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">switch</span> (result)</div>
+<div class="line"><span class="lineno">   64</span>                    {</div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   66</span>                        currentProcess.PriorityClass = ProcessPriorityClass.RealTime;</div>
+<div class="line"><span class="lineno">   67</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   68</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   69</span>                        currentProcess.PriorityClass = ProcessPriorityClass.High;</div>
+<div class="line"><span class="lineno">   70</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   72</span>                        currentProcess.PriorityClass = ProcessPriorityClass.AboveNormal;</div>
+<div class="line"><span class="lineno">   73</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   75</span>                        currentProcess.PriorityClass = ProcessPriorityClass.Normal;</div>
+<div class="line"><span class="lineno">   76</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   78</span>                        currentProcess.PriorityClass = ProcessPriorityClass.BelowNormal;</div>
+<div class="line"><span class="lineno">   79</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>                    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">   81</span>                        currentProcess.PriorityClass = ProcessPriorityClass.Idle;</div>
+<div class="line"><span class="lineno">   82</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   84</span>                        currentProcess.PriorityClass = ProcessPriorityClass.High;</div>
+<div class="line"><span class="lineno">   85</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>                    }</div>
+<div class="line"><span class="lineno">   87</span>                }</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   89</span>                {</div>
+<div class="line"><span class="lineno">   90</span>                    currentProcess.PriorityClass = ProcessPriorityClass.High;</div>
+<div class="line"><span class="lineno">   91</span>                }</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">string</span> value;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> ((value = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-maxplayers&quot;</span>, <span class="stringliteral">&quot;-players&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordtype">int</span> num = Convert.ToInt32(value);</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (num &lt;= 255 &amp;&amp; num &gt;= 1)</div>
+<div class="line"><span class="lineno">  106</span>            {</div>
+<div class="line"><span class="lineno">  107</span>                game.SetNetPlayers(num);</div>
+<div class="line"><span class="lineno">  108</span>            }</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">string</span> arg;</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> ((arg = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-pass&quot;</span>, <span class="stringliteral">&quot;-password&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            Netplay.ServerPassword = Main.ConvertFromSafeArgument(arg);</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">string</span> s2;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> ((s2 = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-lang&quot;</span>)) != <span class="keyword">null</span> &amp;&amp; <span class="keywordtype">int</span>.TryParse(s2, out var result2))</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_class" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">LanguageManager</a>.<a class="code hl_variable" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Instance</a>.<a class="code hl_function" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_ad561021177f450158835f6db33868975.html#ad561021177f450158835f6db33868975">SetLanguage</a>(result2);</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> ((s2 = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-language&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_class" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">LanguageManager</a>.<a class="code hl_variable" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Instance</a>.<a class="code hl_function" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_ad561021177f450158835f6db33868975.html#ad561021177f450158835f6db33868975">SetLanguage</a>(s2);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordtype">string</span> worldName;</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> ((worldName = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-worldname&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            game.SetWorldName(worldName);</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">string</span> newMOTD;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> ((newMOTD = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-motd&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            game.NewMOTD(newMOTD);</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">string</span> banFilePath;</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> ((banFilePath = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-banlist&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            Netplay.BanFilePath = banFilePath;</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">HasParameter</a>(<span class="stringliteral">&quot;-autoshutdown&quot;</span>))</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            game.EnableAutoShutdown();</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">HasParameter</a>(<span class="stringliteral">&quot;-secure&quot;</span>))</div>
+<div class="line"><span class="lineno">  144</span>        {</div>
+<div class="line"><span class="lineno">  145</span>            Netplay.SpamCheck = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordtype">string</span> serverWorldRollbacks;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> ((serverWorldRollbacks = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-worldrollbackstokeep&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            game.setServerWorldRollbacks(serverWorldRollbacks);</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordtype">string</span> worldSize;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> ((worldSize = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-autocreate&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            game.autoCreate(worldSize);</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">HasParameter</a>(<span class="stringliteral">&quot;-noupnp&quot;</span>))</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            Netplay.UseUPNP = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">HasParameter</a>(<span class="stringliteral">&quot;-experimental&quot;</span>))</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            Main.UseExperimentalFeatures = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">string</span> world;</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> ((world = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-world&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  167</span>        {</div>
+<div class="line"><span class="lineno">  168</span>            game.SetWorld(world, cloud: false);</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_property" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a1aab11dd6182e4ed340af26fdd1b906f.html#a1aab11dd6182e4ed340af26fdd1b906f">Mode</a> == <a class="code hl_enumeration" href="../../d3/d96/namespaceTerraria_1_1Social_a266edd606831aa4890a0869ce1660a49.html#a266edd606831aa4890a0869ce1660a49">SocialMode</a>.Steam &amp;&amp; (world = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-cloudworld&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            game.SetWorld(world, cloud: true);</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">string</span> configPath;</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> ((configPath = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-config&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            game.LoadDedConfig(configPath);</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordtype">string</span> autogenSeedName;</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> ((autogenSeedName = <a class="code hl_function" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">TryParameter</a>(<span class="stringliteral">&quot;-seed&quot;</span>)) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            Main.AutogenSeedName = autogenSeedName;</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9_html_a1341dc4807f3dc1295a8318415ca67c9"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">Terraria.Initializers.LaunchInitializer.TryParameter</a></div><div class="ttdeci">static string TryParameter(params string[] keys)</div><div class="ttdef"><b>Definition</b> LaunchInitializer.cs:198</div></div>
+<div class="ttc" id="aclassTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34_html_a2629afb1cf0f6e44020524e19c957c34"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">Terraria.Initializers.LaunchInitializer.HasParameter</a></div><div class="ttdeci">static bool HasParameter(params string[] keys)</div><div class="ttdef"><b>Definition</b> LaunchInitializer.cs:186</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LanguageManager_ad561021177f450158835f6db33868975_html_ad561021177f450158835f6db33868975"><div class="ttname"><a href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_ad561021177f450158835f6db33868975.html#ad561021177f450158835f6db33868975">Terraria.Localization.LanguageManager.SetLanguage</a></div><div class="ttdeci">void SetLanguage(int legacyId)</div><div class="ttdef"><b>Definition</b> LanguageManager.cs:49</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69_html_aed75b828ce37c6b9b0bae5bc847d5b69"><div class="ttname"><a href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Terraria.Localization.LanguageManager.Instance</a></div><div class="ttdeci">static LanguageManager Instance</div><div class="ttdef"><b>Definition</b> LanguageManager.cs:21</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LanguageManager_html"><div class="ttname"><a href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">Terraria.Localization.LanguageManager</a></div><div class="ttdef"><b>Definition</b> LanguageManager.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_a1aab11dd6182e4ed340af26fdd1b906f_html_a1aab11dd6182e4ed340af26fdd1b906f"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a1aab11dd6182e4ed340af26fdd1b906f.html#a1aab11dd6182e4ed340af26fdd1b906f">Terraria.Social.SocialAPI.Mode</a></div><div class="ttdeci">static SocialMode Mode</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Social_a266edd606831aa4890a0869ce1660a49_html_a266edd606831aa4890a0869ce1660a49"><div class="ttname"><a href="../../d3/d96/namespaceTerraria_1_1Social_a266edd606831aa4890a0869ce1660a49.html#a266edd606831aa4890a0869ce1660a49">Terraria.Social.SocialMode</a></div><div class="ttdeci">SocialMode</div><div class="ttdef"><b>Definition</b> SocialMode.cs:4</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a66325d83940787471d9ae9aa3b14760c.html#a66325d83940787471d9ae9aa3b14760c">Terraria.Main.autoCreate()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa6757628d97ffd1c06e6e2305550ffc5.html#aa6757628d97ffd1c06e6e2305550ffc5">Terraria.Main.ConvertFromSafeArgument()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a5786bc002e881537012f041fa09f2b6b.html#a5786bc002e881537012f041fa09f2b6b">Terraria.Main.EnableAutoShutdown()</a>, <a class="el" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a2629afb1cf0f6e44020524e19c957c34.html#a2629afb1cf0f6e44020524e19c957c34">Terraria.Initializers.LaunchInitializer.HasParameter()</a>, <a class="el" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Terraria.Localization.LanguageManager.Instance</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6ec1d17c942005b6de9ad71580dc89a4.html#a6ec1d17c942005b6de9ad71580dc89a4">Terraria.Main.LoadDedConfig()</a>, <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a1aab11dd6182e4ed340af26fdd1b906f.html#a1aab11dd6182e4ed340af26fdd1b906f">Terraria.Social.SocialAPI.Mode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6564dd3217a831927b8e4e3958e981a0.html#a6564dd3217a831927b8e4e3958e981a0">Terraria.Main.NewMOTD()</a>, <a class="el" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_ad561021177f450158835f6db33868975.html#ad561021177f450158835f6db33868975">Terraria.Localization.LanguageManager.SetLanguage()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7ed13943d9ec66f7babda8dd049711f7.html#a7ed13943d9ec66f7babda8dd049711f7">Terraria.Main.SetNetPlayers()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0cc09d0dca245240482aff754b4d40a8.html#a0cc09d0dca245240482aff754b4d40a8">Terraria.Main.setServerWorldRollbacks()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7453dc6b40a367b25ac5e718e15c36ba.html#a7453dc6b40a367b25ac5e718e15c36ba">Terraria.Main.SetWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a882a2377f1f2688898fdda2b53e86db7.html#a882a2377f1f2688898fdda2b53e86db7">Terraria.Main.SetWorldName()</a>, and <a class="el" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a1341dc4807f3dc1295a8318415ca67c9.html#a1341dc4807f3dc1295a8318415ca67c9">Terraria.Initializers.LaunchInitializer.TryParameter()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a15722e7caa991f6b6793fd0a83c5a6c7.html#a15722e7caa991f6b6793fd0a83c5a6c7">Terraria.Initializers.LaunchInitializer.LoadParameters()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

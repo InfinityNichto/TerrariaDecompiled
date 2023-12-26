@@ -121,6 +121,56 @@ $(function(){initNavTree('db/d79/classTerraria_1_1Item_a350080289480e9bb1ac50164
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49800</span>    {</div>
+<div class="line"><span class="lineno">49801</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">49802</span>        <span class="keywordtype">int</span> num2 = 400;</div>
+<div class="line"><span class="lineno">49803</span>        <span class="keywordtype">int</span> num3 = 1;</div>
+<div class="line"><span class="lineno">49804</span>        <span class="keywordflow">if</span> (reverseLookup)</div>
+<div class="line"><span class="lineno">49805</span>        {</div>
+<div class="line"><span class="lineno">49806</span>            num = 399;</div>
+<div class="line"><span class="lineno">49807</span>            num2 = -1;</div>
+<div class="line"><span class="lineno">49808</span>            num3 = -1;</div>
+<div class="line"><span class="lineno">49809</span>        }</div>
+<div class="line"><span class="lineno">49810</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49811</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i != num2; i += num3)</div>
+<div class="line"><span class="lineno">49812</span>        {</div>
+<div class="line"><span class="lineno">49813</span>            <span class="keywordflow">if</span> (!Main.item[i].active &amp;&amp; Main.timeItemSlotCannotBeReusedFor[i] == 0)</div>
+<div class="line"><span class="lineno">49814</span>            {</div>
+<div class="line"><span class="lineno">49815</span>                nextItem = i;</div>
+<div class="line"><span class="lineno">49816</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49817</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">49818</span>            }</div>
+<div class="line"><span class="lineno">49819</span>        }</div>
+<div class="line"><span class="lineno">49820</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">49821</span>        {</div>
+<div class="line"><span class="lineno">49822</span>            <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">49823</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 400; j++)</div>
+<div class="line"><span class="lineno">49824</span>            {</div>
+<div class="line"><span class="lineno">49825</span>                <span class="keywordflow">if</span> (Main.timeItemSlotCannotBeReusedFor[j] == 0 &amp;&amp; !Main.item[j].instanced &amp;&amp; Main.item[j].timeSinceItemSpawned &gt; num4)</div>
+<div class="line"><span class="lineno">49826</span>                {</div>
+<div class="line"><span class="lineno">49827</span>                    num4 = Main.item[j].timeSinceItemSpawned;</div>
+<div class="line"><span class="lineno">49828</span>                    nextItem = j;</div>
+<div class="line"><span class="lineno">49829</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49830</span>                }</div>
+<div class="line"><span class="lineno">49831</span>            }</div>
+<div class="line"><span class="lineno">49832</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">49833</span>            {</div>
+<div class="line"><span class="lineno">49834</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 400; k++)</div>
+<div class="line"><span class="lineno">49835</span>                {</div>
+<div class="line"><span class="lineno">49836</span>                    <span class="keywordflow">if</span> (Main.item[k].timeSinceItemSpawned - Main.timeItemSlotCannotBeReusedFor[k] &gt; num4)</div>
+<div class="line"><span class="lineno">49837</span>                    {</div>
+<div class="line"><span class="lineno">49838</span>                        num4 = Main.item[k].timeSinceItemSpawned - Main.timeItemSlotCannotBeReusedFor[k];</div>
+<div class="line"><span class="lineno">49839</span>                        nextItem = k;</div>
+<div class="line"><span class="lineno">49840</span>                    }</div>
+<div class="line"><span class="lineno">49841</span>                }</div>
+<div class="line"><span class="lineno">49842</span>            }</div>
+<div class="line"><span class="lineno">49843</span>        }</div>
+<div class="line"><span class="lineno">49844</span>        <span class="keywordflow">return</span> nextItem;</div>
+<div class="line"><span class="lineno">49845</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6e8ff63f241304e30c8d374f314108be.html#a6e8ff63f241304e30c8d374f314108be">Terraria.Item.instanced</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3261b7e34272bfaef8674674de5e3f18.html#a3261b7e34272bfaef8674674de5e3f18">Terraria.Main.item</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac61941829b52d295474fb8650899285e.html#ac61941829b52d295474fb8650899285e">Terraria.Main.timeItemSlotCannotBeReusedFor</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af8630cc7c87f284f86768c327944466d.html#af8630cc7c87f284f86768c327944466d">Terraria.Item.timeSinceItemSpawned</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d79/classTerraria_1_1Item_a7a438e2f4a4ef1ebb47daca7d30bc055.html#a7a438e2f4a4ef1ebb47daca7d30bc055">Terraria.Item.NewItem()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

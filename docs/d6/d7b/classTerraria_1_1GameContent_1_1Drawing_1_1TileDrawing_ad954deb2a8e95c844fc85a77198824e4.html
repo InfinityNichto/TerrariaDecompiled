@@ -126,6 +126,36 @@ $(function(){initNavTree('d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Tile
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 6497</span>    {</div>
+<div class="line"><span class="lineno"> 6498</span>        <span class="keywordflow">if</span> (!Main.SettingsEnabled_TilesSwayInWind)</div>
+<div class="line"><span class="lineno"> 6499</span>        {</div>
+<div class="line"><span class="lineno"> 6500</span>            <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno"> 6501</span>        }</div>
+<div class="line"><span class="lineno"> 6502</span>        <span class="keywordtype">float</span> num = (float)x * 0.5f + (<span class="keywordtype">float</span>)(y / 100) * 0.5f;</div>
+<div class="line"><span class="lineno"> 6503</span>        <span class="keywordtype">float</span> num2 = (float)Math.Cos(windCounter * 6.2831854820251465 + (<span class="keywordtype">double</span>)num) * 0.5f;</div>
+<div class="line"><span class="lineno"> 6504</span>        <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno"> 6505</span>        {</div>
+<div class="line"><span class="lineno"> 6506</span>            <span class="keywordflow">if</span> (!((<span class="keywordtype">double</span>)y &gt; Main.worldSurface))</div>
+<div class="line"><span class="lineno"> 6507</span>            {</div>
+<div class="line"><span class="lineno"> 6508</span>                <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno"> 6509</span>            }</div>
+<div class="line"><span class="lineno"> 6510</span>            num2 += Main.WindForVisuals;</div>
+<div class="line"><span class="lineno"> 6511</span>        }</div>
+<div class="line"><span class="lineno"> 6512</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6513</span>        {</div>
+<div class="line"><span class="lineno"> 6514</span>            <span class="keywordflow">if</span> (!((<span class="keywordtype">double</span>)y &lt; Main.worldSurface))</div>
+<div class="line"><span class="lineno"> 6515</span>            {</div>
+<div class="line"><span class="lineno"> 6516</span>                <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno"> 6517</span>            }</div>
+<div class="line"><span class="lineno"> 6518</span>            num2 += Main.WindForVisuals;</div>
+<div class="line"><span class="lineno"> 6519</span>        }</div>
+<div class="line"><span class="lineno"> 6520</span>        <span class="keywordtype">float</span> lerpValue = Utils.GetLerpValue(0.08f, 0.18f, Math.Abs(Main.WindForVisuals), clamped: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 6521</span>        <span class="keywordflow">return</span> num2 * lerpValue;</div>
+<div class="line"><span class="lineno"> 6522</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a7223719277be4afd24a2496351a9a22f.html#a7223719277be4afd24a2496351a9a22f">Terraria.Utils.GetLerpValue()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa69749c4b5463010621abc06920cfe99.html#aa69749c4b5463010621abc06920cfe99">Terraria.Main.SettingsEnabled_TilesSwayInWind</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a625fc44f0d4d069d9f5139aebdfe5485.html#a625fc44f0d4d069d9f5139aebdfe5485">Terraria.Main.WindForVisuals</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a3cf1c4c1a904b101328281d1b530fd48.html#a3cf1c4c1a904b101328281d1b530fd48">Terraria.GameContent.Drawing.TileDrawing.DrawAnyDirectionalGrass()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_acd80a8db892108f97c6a36d90a822373.html#acd80a8db892108f97c6a36d90a822373">Terraria.GameContent.Drawing.TileDrawing.DrawGrass()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a829ca377e2da2c79dfbd5f1ae777a60a.html#a829ca377e2da2c79dfbd5f1ae777a60a">Terraria.GameContent.Drawing.TileDrawing.DrawMultiTileGrassInWind()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aaf47da80afe5cb1e502ff9eee39719e8.html#aaf47da80afe5cb1e502ff9eee39719e8">Terraria.GameContent.Drawing.TileDrawing.DrawMultiTileVinesInWind()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a32e5d393d20b2bf95ed5ad8c9726244b.html#a32e5d393d20b2bf95ed5ad8c9726244b">Terraria.GameContent.Drawing.TileDrawing.DrawRisingVineStrip()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab404e3196056907e778a4f615a8302a8.html#ab404e3196056907e778a4f615a8302a8">Terraria.GameContent.Drawing.TileDrawing.DrawTrees()</a>, and <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af1229bdbcbd28de4687c9e39e1989b0c.html#af1229bdbcbd28de4687c9e39e1989b0c">Terraria.GameContent.Drawing.TileDrawing.DrawVineStrip()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

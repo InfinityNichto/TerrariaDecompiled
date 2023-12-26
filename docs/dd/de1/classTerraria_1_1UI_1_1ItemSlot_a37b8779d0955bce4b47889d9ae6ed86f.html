@@ -126,6 +126,231 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_a37b8779d0955bc
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  335</span>    {</div>
+<div class="line"><span class="lineno">  336</span>        Item item = inv[slot];</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_property" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">UsingGamepad</a>)</div>
+<div class="line"><span class="lineno">  338</span>        {</div>
+<div class="line"><span class="lineno">  339</span>            <a class="code hl_class" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator.html">UILinkPointNavigator</a>.<a class="code hl_function" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_ae1a8a20b93b47b42a3a8260222d72b3d.html#ae1a8a20b93b47b42a3a8260222d72b3d">SuggestUsage</a>(<a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adf89bf3c84545ede9948262530005cc0.html#adf89bf3c84545ede9948262530005cc0">GetGamepadPointForSlot</a>(inv, context, slot));</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span>        <span class="keywordtype">bool</span> shiftForcedOn = <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4a8e9a77df1e780ba534ef9202c7b7cb.html#a4a8e9a77df1e780ba534ef9202c7b7cb">ShiftForcedOn</a>;</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">NotUsingGamepad</a> &amp;&amp; Options.DisableLeftShiftTrashCan &amp;&amp; !shiftForcedOn)</div>
+<div class="line"><span class="lineno">  343</span>        {</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">ControlInUse</a> &amp;&amp; !Options.DisableQuickTrash)</div>
+<div class="line"><span class="lineno">  345</span>            {</div>
+<div class="line"><span class="lineno">  346</span>                <span class="keywordflow">if</span> (item.type &gt; 0 &amp;&amp; item.stack &gt; 0 &amp;&amp; !inv[slot].favorited)</div>
+<div class="line"><span class="lineno">  347</span>                {</div>
+<div class="line"><span class="lineno">  348</span>                    <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno">  349</span>                    {</div>
+<div class="line"><span class="lineno">  350</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  351</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  352</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  353</span>                        <span class="keywordflow">if</span> (Main.npcShop &gt; 0 &amp;&amp; !item.favorited)</div>
+<div class="line"><span class="lineno">  354</span>                        {</div>
+<div class="line"><span class="lineno">  355</span>                            Main.cursorOverride = 10;</div>
+<div class="line"><span class="lineno">  356</span>                        }</div>
+<div class="line"><span class="lineno">  357</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  358</span>                        {</div>
+<div class="line"><span class="lineno">  359</span>                            Main.cursorOverride = 6;</div>
+<div class="line"><span class="lineno">  360</span>                        }</div>
+<div class="line"><span class="lineno">  361</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  362</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  363</span>                    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  364</span>                    <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  365</span>                    <span class="keywordflow">case</span> 32:</div>
+<div class="line"><span class="lineno">  366</span>                        <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(item).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  367</span>                        {</div>
+<div class="line"><span class="lineno">  368</span>                            Main.cursorOverride = 6;</div>
+<div class="line"><span class="lineno">  369</span>                        }</div>
+<div class="line"><span class="lineno">  370</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  371</span>                    }</div>
+<div class="line"><span class="lineno">  372</span>                }</div>
+<div class="line"><span class="lineno">  373</span>            }</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">ShiftInUse</a>)</div>
+<div class="line"><span class="lineno">  375</span>            {</div>
+<div class="line"><span class="lineno">  376</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  377</span>                <span class="keywordflow">if</span> (Main.LocalPlayer.tileEntityAnchor.IsInValidUseTileEntity())</div>
+<div class="line"><span class="lineno">  378</span>                {</div>
+<div class="line"><span class="lineno">  379</span>                    flag = Main.LocalPlayer.tileEntityAnchor.GetTileEntity().OverrideItemSlotHover(inv, context, slot);</div>
+<div class="line"><span class="lineno">  380</span>                }</div>
+<div class="line"><span class="lineno">  381</span>                <span class="keywordflow">if</span> (item.type &gt; 0 &amp;&amp; item.stack &gt; 0 &amp;&amp; !inv[slot].favorited &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">  382</span>                {</div>
+<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno">  384</span>                    {</div>
+<div class="line"><span class="lineno">  385</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  386</span>                        <span class="keywordflow">if</span> (Main.CreativeMenu.IsShowingResearchMenu())</div>
+<div class="line"><span class="lineno">  387</span>                        {</div>
+<div class="line"><span class="lineno">  388</span>                            Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  389</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  390</span>                        }</div>
+<div class="line"><span class="lineno">  391</span>                        <span class="keywordflow">goto</span> <span class="keywordflow">case</span> 1;</div>
+<div class="line"><span class="lineno">  392</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  393</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  394</span>                        <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.InReforgeMenu)</div>
+<div class="line"><span class="lineno">  395</span>                        {</div>
+<div class="line"><span class="lineno">  396</span>                            <span class="keywordflow">if</span> (item.maxStack == 1 &amp;&amp; item.Prefix(-3))</div>
+<div class="line"><span class="lineno">  397</span>                            {</div>
+<div class="line"><span class="lineno">  398</span>                                Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  399</span>                            }</div>
+<div class="line"><span class="lineno">  400</span>                        }</div>
+<div class="line"><span class="lineno">  401</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.InGuideCraftMenu)</div>
+<div class="line"><span class="lineno">  402</span>                        {</div>
+<div class="line"><span class="lineno">  403</span>                            <span class="keywordflow">if</span> (item.material)</div>
+<div class="line"><span class="lineno">  404</span>                            {</div>
+<div class="line"><span class="lineno">  405</span>                                Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  406</span>                            }</div>
+<div class="line"><span class="lineno">  407</span>                        }</div>
+<div class="line"><span class="lineno">  408</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.player[Main.myPlayer].chest != -1 &amp;&amp; ChestUI.TryPlacingInChest(item, justCheck: true, context))</div>
+<div class="line"><span class="lineno">  409</span>                        {</div>
+<div class="line"><span class="lineno">  410</span>                            Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  411</span>                        }</div>
+<div class="line"><span class="lineno">  412</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  413</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  414</span>                    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  415</span>                    <span class="keywordflow">case</span> 32:</div>
+<div class="line"><span class="lineno">  416</span>                        <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(item).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  417</span>                        {</div>
+<div class="line"><span class="lineno">  418</span>                            Main.cursorOverride = 8;</div>
+<div class="line"><span class="lineno">  419</span>                        }</div>
+<div class="line"><span class="lineno">  420</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  421</span>                    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  422</span>                    <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  423</span>                    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno">  424</span>                    <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno">  425</span>                    <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno">  426</span>                    <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno">  427</span>                    <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno">  428</span>                    <span class="keywordflow">case</span> 16:</div>
+<div class="line"><span class="lineno">  429</span>                    <span class="keywordflow">case</span> 17:</div>
+<div class="line"><span class="lineno">  430</span>                    <span class="keywordflow">case</span> 18:</div>
+<div class="line"><span class="lineno">  431</span>                    <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno">  432</span>                    <span class="keywordflow">case</span> 20:</div>
+<div class="line"><span class="lineno">  433</span>                    <span class="keywordflow">case</span> 23:</div>
+<div class="line"><span class="lineno">  434</span>                    <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">  435</span>                    <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno">  436</span>                    <span class="keywordflow">case</span> 26:</div>
+<div class="line"><span class="lineno">  437</span>                    <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno">  438</span>                    <span class="keywordflow">case</span> 29:</div>
+<div class="line"><span class="lineno">  439</span>                    <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno">  440</span>                        <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(inv[slot]).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  441</span>                        {</div>
+<div class="line"><span class="lineno">  442</span>                            Main.cursorOverride = 7;</div>
+<div class="line"><span class="lineno">  443</span>                        }</div>
+<div class="line"><span class="lineno">  444</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  445</span>                    }</div>
+<div class="line"><span class="lineno">  446</span>                }</div>
+<div class="line"><span class="lineno">  447</span>            }</div>
+<div class="line"><span class="lineno">  448</span>        }</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">ShiftInUse</a>)</div>
+<div class="line"><span class="lineno">  450</span>        {</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">if</span> (Main.LocalPlayer.tileEntityAnchor.IsInValidUseTileEntity())</div>
+<div class="line"><span class="lineno">  453</span>            {</div>
+<div class="line"><span class="lineno">  454</span>                flag2 = Main.LocalPlayer.tileEntityAnchor.GetTileEntity().OverrideItemSlotHover(inv, context, slot);</div>
+<div class="line"><span class="lineno">  455</span>            }</div>
+<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> (item.type &gt; 0 &amp;&amp; item.stack &gt; 0 &amp;&amp; !inv[slot].favorited &amp;&amp; !flag2)</div>
+<div class="line"><span class="lineno">  457</span>            {</div>
+<div class="line"><span class="lineno">  458</span>                <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno">  459</span>                {</div>
+<div class="line"><span class="lineno">  460</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  462</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  463</span>                    <span class="keywordflow">if</span> (Main.npcShop &gt; 0 &amp;&amp; !item.favorited)</div>
+<div class="line"><span class="lineno">  464</span>                    {</div>
+<div class="line"><span class="lineno">  465</span>                        <span class="keywordflow">if</span> (!Options.DisableQuickTrash)</div>
+<div class="line"><span class="lineno">  466</span>                        {</div>
+<div class="line"><span class="lineno">  467</span>                            Main.cursorOverride = 10;</div>
+<div class="line"><span class="lineno">  468</span>                        }</div>
+<div class="line"><span class="lineno">  469</span>                    }</div>
+<div class="line"><span class="lineno">  470</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.CreativeMenu.IsShowingResearchMenu())</div>
+<div class="line"><span class="lineno">  471</span>                    {</div>
+<div class="line"><span class="lineno">  472</span>                        Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  473</span>                    }</div>
+<div class="line"><span class="lineno">  474</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.InReforgeMenu)</div>
+<div class="line"><span class="lineno">  475</span>                    {</div>
+<div class="line"><span class="lineno">  476</span>                        <span class="keywordflow">if</span> (item.maxStack == 1 &amp;&amp; item.Prefix(-3))</div>
+<div class="line"><span class="lineno">  477</span>                        {</div>
+<div class="line"><span class="lineno">  478</span>                            Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  479</span>                        }</div>
+<div class="line"><span class="lineno">  480</span>                    }</div>
+<div class="line"><span class="lineno">  481</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.InGuideCraftMenu)</div>
+<div class="line"><span class="lineno">  482</span>                    {</div>
+<div class="line"><span class="lineno">  483</span>                        <span class="keywordflow">if</span> (item.material)</div>
+<div class="line"><span class="lineno">  484</span>                        {</div>
+<div class="line"><span class="lineno">  485</span>                            Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  486</span>                        }</div>
+<div class="line"><span class="lineno">  487</span>                    }</div>
+<div class="line"><span class="lineno">  488</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.player[Main.myPlayer].chest != -1)</div>
+<div class="line"><span class="lineno">  489</span>                    {</div>
+<div class="line"><span class="lineno">  490</span>                        <span class="keywordflow">if</span> (ChestUI.TryPlacingInChest(item, justCheck: true, context))</div>
+<div class="line"><span class="lineno">  491</span>                        {</div>
+<div class="line"><span class="lineno">  492</span>                            Main.cursorOverride = 9;</div>
+<div class="line"><span class="lineno">  493</span>                        }</div>
+<div class="line"><span class="lineno">  494</span>                    }</div>
+<div class="line"><span class="lineno">  495</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Options.DisableQuickTrash)</div>
+<div class="line"><span class="lineno">  496</span>                    {</div>
+<div class="line"><span class="lineno">  497</span>                        Main.cursorOverride = 6;</div>
+<div class="line"><span class="lineno">  498</span>                    }</div>
+<div class="line"><span class="lineno">  499</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  500</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  502</span>                <span class="keywordflow">case</span> 32:</div>
+<div class="line"><span class="lineno">  503</span>                    <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(item).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  504</span>                    {</div>
+<div class="line"><span class="lineno">  505</span>                        Main.cursorOverride = 8;</div>
+<div class="line"><span class="lineno">  506</span>                    }</div>
+<div class="line"><span class="lineno">  507</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  509</span>                <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  510</span>                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno">  512</span>                <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno">  513</span>                <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno">  514</span>                <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno">  515</span>                <span class="keywordflow">case</span> 16:</div>
+<div class="line"><span class="lineno">  516</span>                <span class="keywordflow">case</span> 17:</div>
+<div class="line"><span class="lineno">  517</span>                <span class="keywordflow">case</span> 18:</div>
+<div class="line"><span class="lineno">  518</span>                <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno">  519</span>                <span class="keywordflow">case</span> 20:</div>
+<div class="line"><span class="lineno">  520</span>                <span class="keywordflow">case</span> 23:</div>
+<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">  522</span>                <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno">  523</span>                <span class="keywordflow">case</span> 26:</div>
+<div class="line"><span class="lineno">  524</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno">  525</span>                <span class="keywordflow">case</span> 29:</div>
+<div class="line"><span class="lineno">  526</span>                <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno">  527</span>                    <span class="keywordflow">if</span> (Main.player[Main.myPlayer].ItemSpace(inv[slot]).CanTakeItemToPersonalInventory)</div>
+<div class="line"><span class="lineno">  528</span>                    {</div>
+<div class="line"><span class="lineno">  529</span>                        Main.cursorOverride = 7;</div>
+<div class="line"><span class="lineno">  530</span>                    }</div>
+<div class="line"><span class="lineno">  531</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  532</span>                }</div>
+<div class="line"><span class="lineno">  533</span>            }</div>
+<div class="line"><span class="lineno">  534</span>        }</div>
+<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">if</span> (Main.keyState.IsKeyDown(Main.FavoriteKey) &amp;&amp; (<a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adae96feeeda88d6ea5f5d0ae6ccf8ccd.html#adae96feeeda88d6ea5f5d0ae6ccf8ccd">canFavoriteAt</a>[context] || (Main.drawingPlayerChat &amp;&amp; <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ab74e79a6052d1511497605974d0c786f.html#ab74e79a6052d1511497605974d0c786f">canShareAt</a>[context])))</div>
+<div class="line"><span class="lineno">  536</span>        {</div>
+<div class="line"><span class="lineno">  537</span>            <span class="keywordflow">if</span> (item.type &gt; 0 &amp;&amp; item.stack &gt; 0 &amp;&amp; Main.drawingPlayerChat)</div>
+<div class="line"><span class="lineno">  538</span>            {</div>
+<div class="line"><span class="lineno">  539</span>                Main.cursorOverride = 2;</div>
+<div class="line"><span class="lineno">  540</span>            }</div>
+<div class="line"><span class="lineno">  541</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.type &gt; 0 &amp;&amp; item.stack &gt; 0)</div>
+<div class="line"><span class="lineno">  542</span>            {</div>
+<div class="line"><span class="lineno">  543</span>                Main.cursorOverride = 3;</div>
+<div class="line"><span class="lineno">  544</span>            }</div>
+<div class="line"><span class="lineno">  545</span>        }</div>
+<div class="line"><span class="lineno">  546</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa_html_addc6320b79fba238ede21516480229fa"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a></div><div class="ttdeci">static bool UsingGamepad</div><div class="ttdef"><b>Definition</b> PlayerInput.cs:331</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_html"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">Terraria.GameInput.PlayerInput</a></div><div class="ttdef"><b>Definition</b> PlayerInput.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_ae1a8a20b93b47b42a3a8260222d72b3d_html_ae1a8a20b93b47b42a3a8260222d72b3d"><div class="ttname"><a href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_ae1a8a20b93b47b42a3a8260222d72b3d.html#ae1a8a20b93b47b42a3a8260222d72b3d">Terraria.UI.Gamepad.UILinkPointNavigator.SuggestUsage</a></div><div class="ttdeci">static void SuggestUsage(int PointID)</div><div class="ttdef"><b>Definition</b> UILinkPointNavigator.cs:111</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_html"><div class="ttname"><a href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator.html">Terraria.UI.Gamepad.UILinkPointNavigator</a></div><div class="ttdef"><b>Definition</b> UILinkPointNavigator.cs:13</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a4a8e9a77df1e780ba534ef9202c7b7cb_html_a4a8e9a77df1e780ba534ef9202c7b7cb"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4a8e9a77df1e780ba534ef9202c7b7cb.html#a4a8e9a77df1e780ba534ef9202c7b7cb">Terraria.UI.ItemSlot.ShiftForcedOn</a></div><div class="ttdeci">static bool ShiftForcedOn</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:129</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b_html_a5b454684e9628e7c82a86ac410eea67b"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">Terraria.UI.ItemSlot.NotUsingGamepad</a></div><div class="ttdeci">static bool NotUsingGamepad</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:175</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7_html_a8bfd4bd045c7860b3770bdcb5a75f0c7"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">Terraria.UI.ItemSlot.ShiftInUse</a></div><div class="ttdeci">static bool ShiftInUse</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:162</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910_html_aa7033809cb6ff3bb0deff5633c6af910"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">Terraria.UI.ItemSlot.ControlInUse</a></div><div class="ttdeci">static bool ControlInUse</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:173</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_ab74e79a6052d1511497605974d0c786f_html_ab74e79a6052d1511497605974d0c786f"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ab74e79a6052d1511497605974d0c786f.html#ab74e79a6052d1511497605974d0c786f">Terraria.UI.ItemSlot.canShareAt</a></div><div class="ttdeci">static bool[] canShareAt</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:135</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_adae96feeeda88d6ea5f5d0ae6ccf8ccd_html_adae96feeeda88d6ea5f5d0ae6ccf8ccd"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adae96feeeda88d6ea5f5d0ae6ccf8ccd.html#adae96feeeda88d6ea5f5d0ae6ccf8ccd">Terraria.UI.ItemSlot.canFavoriteAt</a></div><div class="ttdeci">static bool[] canFavoriteAt</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:133</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_adf89bf3c84545ede9948262530005cc0_html_adf89bf3c84545ede9948262530005cc0"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adf89bf3c84545ede9948262530005cc0.html#adf89bf3c84545ede9948262530005cc0">Terraria.UI.ItemSlot.GetGamepadPointForSlot</a></div><div class="ttdeci">static int GetGamepadPointForSlot(Item[] inv, int context, int slot)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:2333</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adae96feeeda88d6ea5f5d0ae6ccf8ccd.html#adae96feeeda88d6ea5f5d0ae6ccf8ccd">Terraria.UI.ItemSlot.canFavoriteAt</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ab74e79a6052d1511497605974d0c786f.html#ab74e79a6052d1511497605974d0c786f">Terraria.UI.ItemSlot.canShareAt</a>, <a class="el" href="../../d1/d40/structTerraria_1_1Player_1_1ItemSpaceStatus_a89d81ee012b8231662d9d4b379a91399.html#a89d81ee012b8231662d9d4b379a91399">Terraria.Player.ItemSpaceStatus.CanTakeItemToPersonalInventory</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">Terraria.UI.ItemSlot.ControlInUse</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4ce98b5e40669b226b4b8cfce47ba600.html#a4ce98b5e40669b226b4b8cfce47ba600">Terraria.Main.CreativeMenu</a>, <a class="el" href="../../dd/dbb/classTerraria_1_1UI_1_1ItemSlot_1_1Options_aa3d7b1cd735c1f24ab8025bdb6ce940f.html#aa3d7b1cd735c1f24ab8025bdb6ce940f">Terraria.UI.ItemSlot.Options.DisableLeftShiftTrashCan</a>, <a class="el" href="../../dd/dbb/classTerraria_1_1UI_1_1ItemSlot_1_1Options_ac3910545a323cd670eb6ab99b3cf4b67.html#ac3910545a323cd670eb6ab99b3cf4b67">Terraria.UI.ItemSlot.Options.DisableQuickTrash</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a183a6c449e99e4dc38c302c437f69166.html#a183a6c449e99e4dc38c302c437f69166">Terraria.Main.drawingPlayerChat</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6fca7ce5ad9961010659dca6692ce791.html#a6fca7ce5ad9961010659dca6692ce791">Terraria.Item.favorited</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa0e5083393057f4b86bba56d70ceda04.html#aa0e5083393057f4b86bba56d70ceda04">Terraria.Main.FavoriteKey</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_adf89bf3c84545ede9948262530005cc0.html#adf89bf3c84545ede9948262530005cc0">Terraria.UI.ItemSlot.GetGamepadPointForSlot()</a>, <a class="el" href="../../d4/d52/structTerraria_1_1DataStructures_1_1PlayerInteractionAnchor_ae34349c65bee51c051ecef7f357cd957.html#ae34349c65bee51c051ecef7f357cd957">Terraria.DataStructures.PlayerInteractionAnchor.GetTileEntity()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa9e3acbc2ab73cd7d10ea74230b603f5.html#aa9e3acbc2ab73cd7d10ea74230b603f5">Terraria.Main.InGuideCraftMenu</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d25a024cdf44203b9d86238750768d1.html#a8d25a024cdf44203b9d86238750768d1">Terraria.Main.InReforgeMenu</a>, <a class="el" href="../../d4/d52/structTerraria_1_1DataStructures_1_1PlayerInteractionAnchor_aed923af41529fe1265f46ec23e36f19b.html#aed923af41529fe1265f46ec23e36f19b">Terraria.DataStructures.PlayerInteractionAnchor.IsInValidUseTileEntity()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a860d1c9b6feadbe7f85125de00e16e91.html#a860d1c9b6feadbe7f85125de00e16e91">Terraria.Player.ItemSpace()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa1f565debf0bfb27358749448954102a.html#aa1f565debf0bfb27358749448954102a">Terraria.Main.keyState</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae9af3d8626cfbb1c8bf7568b6810f9bc.html#ae9af3d8626cfbb1c8bf7568b6810f9bc">Terraria.Main.LocalPlayer</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a1a4cdaeb02884a2241a6d830250a8d12.html#a1a4cdaeb02884a2241a6d830250a8d12">Terraria.Item.material</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a43f51e33be93f066916198e4804b5008.html#a43f51e33be93f066916198e4804b5008">Terraria.Item.maxStack</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">Terraria.UI.ItemSlot.NotUsingGamepad</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa1220dd1dfd6bb05571b40806a32177c.html#aa1220dd1dfd6bb05571b40806a32177c">Terraria.Main.npcShop</a>, <a class="el" href="../../db/d56/classTerraria_1_1DataStructures_1_1TileEntity_ac5c0e3661e33d512e5245222cf1dbc65.html#ac5c0e3661e33d512e5245222cf1dbc65">Terraria.DataStructures.TileEntity.OverrideItemSlotHover()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4928326c0c5a324286cf922203704666.html#a4928326c0c5a324286cf922203704666">Terraria.Item.Prefix()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4a8e9a77df1e780ba534ef9202c7b7cb.html#a4a8e9a77df1e780ba534ef9202c7b7cb">Terraria.UI.ItemSlot.ShiftForcedOn</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">Terraria.UI.ItemSlot.ShiftInUse</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_ae1a8a20b93b47b42a3a8260222d72b3d.html#ae1a8a20b93b47b42a3a8260222d72b3d">Terraria.UI.Gamepad.UILinkPointNavigator.SuggestUsage()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afdb9578068c0ee34410c84f23b6b5527.html#afdb9578068c0ee34410c84f23b6b5527">Terraria.Player.tileEntityAnchor</a>, <a class="el" href="../../d8/dd3/classTerraria_1_1UI_1_1ChestUI_ab722f1cf8f9a2c9699bfbf389e18fdb0.html#ab722f1cf8f9a2c9699bfbf389e18fdb0">Terraria.UI.ChestUI.TryPlacingInChest()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -136,6 +136,115 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a595787048145bc8e77a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1476</span>    {</div>
+<div class="line"><span class="lineno"> 1477</span>        <span class="keywordflow">if</span> (Velocity.Y != gravity)</div>
+<div class="line"><span class="lineno"> 1478</span>        {</div>
+<div class="line"><span class="lineno"> 1479</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector4(Position, Velocity.X, Velocity.Y);</div>
+<div class="line"><span class="lineno"> 1480</span>        }</div>
+<div class="line"><span class="lineno"> 1481</span>        Vector2 vector = Position;</div>
+<div class="line"><span class="lineno"> 1482</span>        <span class="keywordtype">int</span> value = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(vector.X / 16f);</div>
+<div class="line"><span class="lineno"> 1483</span>        <span class="keywordtype">int</span> value2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((vector.X + (<span class="keywordtype">float</span>)Width) / 16f);</div>
+<div class="line"><span class="lineno"> 1484</span>        <span class="keywordtype">int</span> value3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.Y + (<span class="keywordtype">float</span>)Height + 4f) / 16f);</div>
+<div class="line"><span class="lineno"> 1485</span>        value = Utils.Clamp(value, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 1486</span>        value2 = Utils.Clamp(value2, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 1487</span>        value3 = Utils.Clamp(value3, 0, Main.maxTilesY - 3);</div>
+<div class="line"><span class="lineno"> 1488</span>        <span class="keywordtype">float</span> num = (value3 + 3) * 16;</div>
+<div class="line"><span class="lineno"> 1489</span>        <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno"> 1490</span>        <span class="keywordtype">int</span> num3 = -1;</div>
+<div class="line"><span class="lineno"> 1491</span>        <span class="keywordtype">int</span> num4 = 1;</div>
+<div class="line"><span class="lineno"> 1492</span>        <span class="keywordflow">if</span> (Velocity.X &lt; 0f)</div>
+<div class="line"><span class="lineno"> 1493</span>        {</div>
+<div class="line"><span class="lineno"> 1494</span>            num4 = 2;</div>
+<div class="line"><span class="lineno"> 1495</span>        }</div>
+<div class="line"><span class="lineno"> 1496</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = value; i &lt;= value2; i++)</div>
+<div class="line"><span class="lineno"> 1497</span>        {</div>
+<div class="line"><span class="lineno"> 1498</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = value3; j &lt;= value3 + 1; j++)</div>
+<div class="line"><span class="lineno"> 1499</span>            {</div>
+<div class="line"><span class="lineno"> 1500</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1501</span>                {</div>
+<div class="line"><span class="lineno"> 1502</span>                    Main.tile[i, j] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno"> 1503</span>                }</div>
+<div class="line"><span class="lineno"> 1504</span>                <span class="keywordflow">if</span> (!Main.tile[i, j].nactive() || (!Main.tileSolid[Main.tile[i, j].type] &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type]))</div>
+<div class="line"><span class="lineno"> 1505</span>                {</div>
+<div class="line"><span class="lineno"> 1506</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1507</span>                }</div>
+<div class="line"><span class="lineno"> 1508</span>                <span class="keywordtype">int</span> num5 = j * 16;</div>
+<div class="line"><span class="lineno"> 1509</span>                <span class="keywordflow">if</span> (Main.tile[i, j].halfBrick())</div>
+<div class="line"><span class="lineno"> 1510</span>                {</div>
+<div class="line"><span class="lineno"> 1511</span>                    num5 += 8;</div>
+<div class="line"><span class="lineno"> 1512</span>                }</div>
+<div class="line"><span class="lineno"> 1513</span>                <span class="keywordflow">if</span> (!<span class="keyword">new</span> Rectangle(i * 16, j * 16 - 17, 16, 16).Intersects(<span class="keyword">new</span> Rectangle((<span class="keywordtype">int</span>)Position.X, (<span class="keywordtype">int</span>)Position.Y, Width, Height)) || !((<span class="keywordtype">float</span>)num5 &lt;= num))</div>
+<div class="line"><span class="lineno"> 1514</span>                {</div>
+<div class="line"><span class="lineno"> 1515</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1516</span>                }</div>
+<div class="line"><span class="lineno"> 1517</span>                <span class="keywordflow">if</span> (num == (<span class="keywordtype">float</span>)num5)</div>
+<div class="line"><span class="lineno"> 1518</span>                {</div>
+<div class="line"><span class="lineno"> 1519</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].slope() == 0)</div>
+<div class="line"><span class="lineno"> 1520</span>                    {</div>
+<div class="line"><span class="lineno"> 1521</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1522</span>                    }</div>
+<div class="line"><span class="lineno"> 1523</span>                    <span class="keywordflow">if</span> (num2 != -1 &amp;&amp; num3 != -1 &amp;&amp; Main.tile[num2, num3] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2, num3].slope() != 0)</div>
+<div class="line"><span class="lineno"> 1524</span>                    {</div>
+<div class="line"><span class="lineno"> 1525</span>                        <span class="keywordflow">if</span> (Main.tile[i, j].slope() == num4)</div>
+<div class="line"><span class="lineno"> 1526</span>                        {</div>
+<div class="line"><span class="lineno"> 1527</span>                            num = num5;</div>
+<div class="line"><span class="lineno"> 1528</span>                            num2 = i;</div>
+<div class="line"><span class="lineno"> 1529</span>                            num3 = j;</div>
+<div class="line"><span class="lineno"> 1530</span>                        }</div>
+<div class="line"><span class="lineno"> 1531</span>                    }</div>
+<div class="line"><span class="lineno"> 1532</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1533</span>                    {</div>
+<div class="line"><span class="lineno"> 1534</span>                        num = num5;</div>
+<div class="line"><span class="lineno"> 1535</span>                        num2 = i;</div>
+<div class="line"><span class="lineno"> 1536</span>                        num3 = j;</div>
+<div class="line"><span class="lineno"> 1537</span>                    }</div>
+<div class="line"><span class="lineno"> 1538</span>                }</div>
+<div class="line"><span class="lineno"> 1539</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1540</span>                {</div>
+<div class="line"><span class="lineno"> 1541</span>                    num = num5;</div>
+<div class="line"><span class="lineno"> 1542</span>                    num2 = i;</div>
+<div class="line"><span class="lineno"> 1543</span>                    num3 = j;</div>
+<div class="line"><span class="lineno"> 1544</span>                }</div>
+<div class="line"><span class="lineno"> 1545</span>            }</div>
+<div class="line"><span class="lineno"> 1546</span>        }</div>
+<div class="line"><span class="lineno"> 1547</span>        <span class="keywordtype">int</span> num6 = num2;</div>
+<div class="line"><span class="lineno"> 1548</span>        <span class="keywordtype">int</span> num7 = num3;</div>
+<div class="line"><span class="lineno"> 1549</span>        <span class="keywordflow">if</span> (num2 != -1 &amp;&amp; num3 != -1 &amp;&amp; Main.tile[num6, num7] != <span class="keyword">null</span> &amp;&amp; Main.tile[num6, num7].slope() &gt; 0)</div>
+<div class="line"><span class="lineno"> 1550</span>        {</div>
+<div class="line"><span class="lineno"> 1551</span>            <span class="keywordtype">int</span> num8 = Main.tile[num6, num7].slope();</div>
+<div class="line"><span class="lineno"> 1552</span>            Vector2 vector2 = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 1553</span>            vector2.X = num6 * 16;</div>
+<div class="line"><span class="lineno"> 1554</span>            vector2.Y = num7 * 16;</div>
+<div class="line"><span class="lineno"> 1555</span>            <span class="keywordflow">switch</span> (num8)</div>
+<div class="line"><span class="lineno"> 1556</span>            {</div>
+<div class="line"><span class="lineno"> 1557</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1558</span>            {</div>
+<div class="line"><span class="lineno"> 1559</span>                <span class="keywordtype">float</span> num9 = vector2.X + 16f - (Position.X + (float)Width);</div>
+<div class="line"><span class="lineno"> 1560</span>                <span class="keywordflow">if</span> (Position.Y + (<span class="keywordtype">float</span>)Height &gt;= vector2.Y + num9 &amp;&amp; Velocity.X &lt; 0f)</div>
+<div class="line"><span class="lineno"> 1561</span>                {</div>
+<div class="line"><span class="lineno"> 1562</span>                    Velocity.Y += Math.Abs(Velocity.X);</div>
+<div class="line"><span class="lineno"> 1563</span>                }</div>
+<div class="line"><span class="lineno"> 1564</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1565</span>            }</div>
+<div class="line"><span class="lineno"> 1566</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1567</span>            {</div>
+<div class="line"><span class="lineno"> 1568</span>                <span class="keywordtype">float</span> num9 = Position.X - vector2.X;</div>
+<div class="line"><span class="lineno"> 1569</span>                <span class="keywordflow">if</span> (Position.Y + (<span class="keywordtype">float</span>)Height &gt;= vector2.Y + num9 &amp;&amp; Velocity.X &gt; 0f)</div>
+<div class="line"><span class="lineno"> 1570</span>                {</div>
+<div class="line"><span class="lineno"> 1571</span>                    Velocity.Y += Math.Abs(Velocity.X);</div>
+<div class="line"><span class="lineno"> 1572</span>                }</div>
+<div class="line"><span class="lineno"> 1573</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1574</span>            }</div>
+<div class="line"><span class="lineno"> 1575</span>            }</div>
+<div class="line"><span class="lineno"> 1576</span>        }</div>
+<div class="line"><span class="lineno"> 1577</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector4(Position, Velocity.X, Velocity.Y);</div>
+<div class="line"><span class="lineno"> 1578</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a95dcdd775a5e22bdb3fb02d63c577911.html#a95dcdd775a5e22bdb3fb02d63c577911">Terraria.NPC.Collision_WalkDownSlopes()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab72864d892bcbcc23afb74b6eada98a2.html#ab72864d892bcbcc23afb74b6eada98a2">Terraria.Player.SlopeDownMovement()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

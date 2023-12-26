@@ -117,6 +117,73 @@ $(function(){initNavTree('dc/ddf/classTerraria_1_1Chest_a44e7bd02ff2fed8d10733ae
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 3541</span>    {</div>
+<div class="line"><span class="lineno"> 3542</span>        <span class="keywordtype">int</span> num = 8000;</div>
+<div class="line"><span class="lineno"> 3543</span>        <a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b.html#ad4bab4a88fa7b08b468487696f88d94b">_chestInUse</a>.Clear();</div>
+<div class="line"><span class="lineno"> 3544</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)</div>
+<div class="line"><span class="lineno"> 3545</span>        {</div>
+<div class="line"><span class="lineno"> 3546</span>            <span class="keywordflow">if</span> (Main.player[i].active &amp;&amp; Main.player[i].chest &gt;= 0 &amp;&amp; Main.player[i].chest &lt; num)</div>
+<div class="line"><span class="lineno"> 3547</span>            {</div>
+<div class="line"><span class="lineno"> 3548</span>                <a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b.html#ad4bab4a88fa7b08b468487696f88d94b">_chestInUse</a>.Add(Main.player[i].chest);</div>
+<div class="line"><span class="lineno"> 3549</span>            }</div>
+<div class="line"><span class="lineno"> 3550</span>        }</div>
+<div class="line"><span class="lineno"> 3551</span>        <a class="code hl_function" href="../../dc/ddf/classTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b.html#a3ea566cb6aef3308dad824429fe9796b">Chest</a> chest = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 3552</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num; j++)</div>
+<div class="line"><span class="lineno"> 3553</span>        {</div>
+<div class="line"><span class="lineno"> 3554</span>            chest = Main.chest[j];</div>
+<div class="line"><span class="lineno"> 3555</span>            <span class="keywordflow">if</span> (chest != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 3556</span>            {</div>
+<div class="line"><span class="lineno"> 3557</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b.html#ad4bab4a88fa7b08b468487696f88d94b">_chestInUse</a>.Contains(j))</div>
+<div class="line"><span class="lineno"> 3558</span>                {</div>
+<div class="line"><span class="lineno"> 3559</span>                    chest.frameCounter++;</div>
+<div class="line"><span class="lineno"> 3560</span>                }</div>
+<div class="line"><span class="lineno"> 3561</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3562</span>                {</div>
+<div class="line"><span class="lineno"> 3563</span>                    chest.frameCounter--;</div>
+<div class="line"><span class="lineno"> 3564</span>                }</div>
+<div class="line"><span class="lineno"> 3565</span>                <span class="keywordflow">if</span> (chest.eatingAnimationTime == 9 &amp;&amp; chest.frame == 1)</div>
+<div class="line"><span class="lineno"> 3566</span>                {</div>
+<div class="line"><span class="lineno"> 3567</span>                    <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(7, <span class="keyword">new</span> Vector2(chest.x * 16 + 16, chest.y * 16 + 16));</div>
+<div class="line"><span class="lineno"> 3568</span>                }</div>
+<div class="line"><span class="lineno"> 3569</span>                <span class="keywordflow">if</span> (chest.eatingAnimationTime &gt; 0)</div>
+<div class="line"><span class="lineno"> 3570</span>                {</div>
+<div class="line"><span class="lineno"> 3571</span>                    chest.eatingAnimationTime--;</div>
+<div class="line"><span class="lineno"> 3572</span>                }</div>
+<div class="line"><span class="lineno"> 3573</span>                <span class="keywordflow">if</span> (chest.frameCounter &lt; chest.eatingAnimationTime)</div>
+<div class="line"><span class="lineno"> 3574</span>                {</div>
+<div class="line"><span class="lineno"> 3575</span>                    chest.frameCounter = chest.eatingAnimationTime;</div>
+<div class="line"><span class="lineno"> 3576</span>                }</div>
+<div class="line"><span class="lineno"> 3577</span>                <span class="keywordflow">if</span> (chest.frameCounter &lt; 0)</div>
+<div class="line"><span class="lineno"> 3578</span>                {</div>
+<div class="line"><span class="lineno"> 3579</span>                    chest.frameCounter = 0;</div>
+<div class="line"><span class="lineno"> 3580</span>                }</div>
+<div class="line"><span class="lineno"> 3581</span>                <span class="keywordflow">if</span> (chest.frameCounter &gt; 10)</div>
+<div class="line"><span class="lineno"> 3582</span>                {</div>
+<div class="line"><span class="lineno"> 3583</span>                    chest.frameCounter = 10;</div>
+<div class="line"><span class="lineno"> 3584</span>                }</div>
+<div class="line"><span class="lineno"> 3585</span>                <span class="keywordflow">if</span> (chest.frameCounter == 0)</div>
+<div class="line"><span class="lineno"> 3586</span>                {</div>
+<div class="line"><span class="lineno"> 3587</span>                    chest.frame = 0;</div>
+<div class="line"><span class="lineno"> 3588</span>                }</div>
+<div class="line"><span class="lineno"> 3589</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chest.frameCounter == 10)</div>
+<div class="line"><span class="lineno"> 3590</span>                {</div>
+<div class="line"><span class="lineno"> 3591</span>                    chest.frame = 2;</div>
+<div class="line"><span class="lineno"> 3592</span>                }</div>
+<div class="line"><span class="lineno"> 3593</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3594</span>                {</div>
+<div class="line"><span class="lineno"> 3595</span>                    chest.frame = 1;</div>
+<div class="line"><span class="lineno"> 3596</span>                }</div>
+<div class="line"><span class="lineno"> 3597</span>            }</div>
+<div class="line"><span class="lineno"> 3598</span>        }</div>
+<div class="line"><span class="lineno"> 3599</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b_html_a3ea566cb6aef3308dad824429fe9796b"><div class="ttname"><a href="../../dc/ddf/classTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b.html#a3ea566cb6aef3308dad824429fe9796b">Terraria.Chest.Chest</a></div><div class="ttdeci">Chest(bool bank=false)</div><div class="ttdef"><b>Definition</b> Chest.cs:59</div></div>
+<div class="ttc" id="aclassTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b_html_ad4bab4a88fa7b08b468487696f88d94b"><div class="ttname"><a href="../../dc/ddf/classTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b.html#ad4bab4a88fa7b08b468487696f88d94b">Terraria.Chest._chestInUse</a></div><div class="ttdeci">static HashSet&lt; int &gt; _chestInUse</div><div class="ttdef"><b>Definition</b> Chest.cs:57</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_ad4bab4a88fa7b08b468487696f88d94b.html#ad4bab4a88fa7b08b468487696f88d94b">Terraria.Chest._chestInUse</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_aca756ff942a1e2d13bd6e23fed0c802c.html#aca756ff942a1e2d13bd6e23fed0c802c">Terraria.Chest.eatingAnimationTime</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a418a5cc0921cee12b93d44a581c5de11.html#a418a5cc0921cee12b93d44a581c5de11">Terraria.Chest.frame</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a959d1d2cd625abea591fe3168a94a121.html#a959d1d2cd625abea591fe3168a94a121">Terraria.Chest.frameCounter</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a05f297dafeb5936070f43e8a49b5ce91.html#a05f297dafeb5936070f43e8a49b5ce91">Terraria.Chest.x</a>, and <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a66024685f339f6bc059218d4857248fc.html#a66024685f339f6bc059218d4857248fc">Terraria.Chest.y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a39cdec3f201787a467045358bfcba377.html#a39cdec3f201787a467045358bfcba377">Terraria.Main.DoUpdateInWorld()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

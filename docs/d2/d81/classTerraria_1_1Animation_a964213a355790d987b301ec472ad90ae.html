@@ -131,6 +131,28 @@ $(function(){initNavTree('d2/d81/classTerraria_1_1Animation_a964213a355790d987b3
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a> coordinates = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(x, y);</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (x &gt;= 0 &amp;&amp; x &lt; Main.maxTilesX &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; Main.maxTilesY)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            Animation animation = <span class="keyword">new</span> Animation();</div>
+<div class="line"><span class="lineno">  108</span>            animation.SetDefaults(type);</div>
+<div class="line"><span class="lineno">  109</span>            animation._tileType = tileType;</div>
+<div class="line"><span class="lineno">  110</span>            animation._coordinates = coordinates;</div>
+<div class="line"><span class="lineno">  111</span>            animation._temporary = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="../../d2/d81/classTerraria_1_1Animation_a84a0cd7975039d2d2934098381a1ec1e.html#a84a0cd7975039d2d2934098381a1ec1e">_awaitingAddition</a>.Add(animation);</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                NetMessage.SendTemporaryAnimation(-1, type, tileType, x, y);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Animation_a84a0cd7975039d2d2934098381a1ec1e_html_a84a0cd7975039d2d2934098381a1ec1e"><div class="ttname"><a href="../../d2/d81/classTerraria_1_1Animation_a84a0cd7975039d2d2934098381a1ec1e.html#a84a0cd7975039d2d2934098381a1ec1e">Terraria.Animation._awaitingAddition</a></div><div class="ttdeci">static List&lt; Animation &gt; _awaitingAddition</div><div class="ttdef"><b>Definition</b> Animation.cs:14</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_html"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Terraria.DataStructures.Point16</a></div><div class="ttdef"><b>Definition</b> Point16.cs:6</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d81/classTerraria_1_1Animation_a84a0cd7975039d2d2934098381a1ec1e.html#a84a0cd7975039d2d2934098381a1ec1e">Terraria.Animation._awaitingAddition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_aac72ed53e234f43694a2f6c05e570468.html#aac72ed53e234f43694a2f6c05e570468">Terraria.NetMessage.SendTemporaryAnimation()</a>, and <a class="el" href="../../d2/d81/classTerraria_1_1Animation_aa8a6c8f35429fc92a5f5bc1547b87a0b.html#aa8a6c8f35429fc92a5f5bc1547b87a0b">Terraria.Animation.SetDefaults()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae920fead53d67935735061efbeb09563.html#ae920fead53d67935735061efbeb09563">Terraria.Wiring.HitWireSingle()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8b27a9ab46a3bd51b25499cdf7417694.html#a8b27a9ab46a3bd51b25499cdf7417694">Terraria.Player.TileInteractionsUse()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

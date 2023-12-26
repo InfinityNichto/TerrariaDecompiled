@@ -126,6 +126,35 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ad92204cb4c4620bbfea2f1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4012</span>    {</div>
+<div class="line"><span class="lineno"> 4013</span>        <span class="keywordtype">byte</span> result = 0;</div>
+<div class="line"><span class="lineno"> 4014</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)</div>
+<div class="line"><span class="lineno"> 4015</span>        {</div>
+<div class="line"><span class="lineno"> 4016</span>            <span class="keywordflow">if</span> (Main.player[i].active)</div>
+<div class="line"><span class="lineno"> 4017</span>            {</div>
+<div class="line"><span class="lineno"> 4018</span>                result = (byte)i;</div>
+<div class="line"><span class="lineno"> 4019</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4020</span>            }</div>
+<div class="line"><span class="lineno"> 4021</span>        }</div>
+<div class="line"><span class="lineno"> 4022</span>        <span class="keywordtype">float</span> num = -1f;</div>
+<div class="line"><span class="lineno"> 4023</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 255; j++)</div>
+<div class="line"><span class="lineno"> 4024</span>        {</div>
+<div class="line"><span class="lineno"> 4025</span>            <span class="keywordflow">if</span> (Main.player[j].active &amp;&amp; !Main.player[j].dead)</div>
+<div class="line"><span class="lineno"> 4026</span>            {</div>
+<div class="line"><span class="lineno"> 4027</span>                <span class="keywordtype">float</span> num2 = Math.Abs(Main.player[j].position.X + (<span class="keywordtype">float</span>)(Main.player[j].width / 2) - (Position.X + (<span class="keywordtype">float</span>)(Width / 2))) + Math.Abs(Main.player[j].position.Y + (<span class="keywordtype">float</span>)(Main.player[j].height / 2) - (Position.Y + (<span class="keywordtype">float</span>)(Height / 2)));</div>
+<div class="line"><span class="lineno"> 4028</span>                <span class="keywordflow">if</span> (num == -1f || num2 &lt; num)</div>
+<div class="line"><span class="lineno"> 4029</span>                {</div>
+<div class="line"><span class="lineno"> 4030</span>                    num = num2;</div>
+<div class="line"><span class="lineno"> 4031</span>                    result = (byte)j;</div>
+<div class="line"><span class="lineno"> 4032</span>                }</div>
+<div class="line"><span class="lineno"> 4033</span>            }</div>
+<div class="line"><span class="lineno"> 4034</span>        }</div>
+<div class="line"><span class="lineno"> 4035</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 4036</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_af998ad2acbc8e9008e7d83aad42551f2.html#af998ad2acbc8e9008e7d83aad42551f2">Terraria.NPC.AI()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ade6daf19b968d8070968d9aaea851492.html#ade6daf19b968d8070968d9aaea851492">Terraria.Projectile.AI_001()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a8e4db0a4e1a82b0c09dabf6d0316a651.html#a8e4db0a4e1a82b0c09dabf6d0316a651">Terraria.NPC.AI_121_QueenSlime()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4da1bf75b6e4d18aec16f7e7dd0c886d.html#a4da1bf75b6e4d18aec16f7e7dd0c886d">Terraria.WorldGen.CheckSign()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a17d05144ba2f3856c8842600e910e7c0.html#a17d05144ba2f3856c8842600e910e7c0">Terraria.WorldGen.GetPlayerForTile()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_afe75d8b9b117906307674590f2cc98c2.html#afe75d8b9b117906307674590f2cc98c2">Terraria.WorldGen.KillTile_DropBait()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a045170fc6f1b895112dd7bf062e37ab7.html#a045170fc6f1b895112dd7bf062e37ab7">Terraria.WorldGen.KillTile_GetTreeDrops()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a1285ee63df9110af96b22f28bf4027fa.html#a1285ee63df9110af96b22f28bf4027fa">Terraria.NPC.NPCLoot()</a>, <a class="el" href="../../d9/da6/classTerraria_1_1GameContent_1_1UI_1_1EmoteBubble_a26971c74fa10b114e660029e8e94f587.html#a26971c74fa10b114e660029e8e94f587">Terraria.GameContent.UI.EmoteBubble.PickNPCEmote()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a151f67f93a6b8c8674e5be28b84801ed.html#a151f67f93a6b8c8674e5be28b84801ed">Terraria.WorldGen.SmashAltar()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aa6229aa3c50b9e544a2ebec9efb3be4a.html#aa6229aa3c50b9e544a2ebec9efb3be4a">Terraria.WorldGen.SpawnThingsFromPot()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a4d7eb05d90840ace746f34f98fda801a.html#a4d7eb05d90840ace746f34f98fda801a">Terraria.NPC.SpawnWOF()</a>, <a class="el" href="../../dd/db5/classTerraria_1_1GameContent_1_1Events_1_1DD2Event_a7c5dc8d6873ad8633786726af5c1dc20.html#a7c5dc8d6873ad8633786726af5c1dc20">Terraria.GameContent.Events.DD2Event.SummonBetsy()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a172d9fc82fc36587b85bb266f9868bf2.html#a172d9fc82fc36587b85bb266f9868bf2">Terraria.Main.UpdateTime()</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a0453453e072ffa23407a1fbf268d297e.html#a0453453e072ffa23407a1fbf268d297e">Terraria.WorldGen.UpdateWorld()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

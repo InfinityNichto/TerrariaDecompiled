@@ -126,6 +126,34 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_a93a4e2a51d8fb
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  524</span>    {</div>
+<div class="line"><span class="lineno">  525</span>        WorldFileData worldFileData = <span class="keyword">new</span> WorldFileData(Main.GetWorldPathFromName(name, cloudSave), cloudSave);</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">if</span> (Main.autoGenFileLocation != <span class="keyword">null</span> &amp;&amp; Main.autoGenFileLocation != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            worldFileData = <span class="keyword">new</span> WorldFileData(Main.autoGenFileLocation, cloudSave);</div>
+<div class="line"><span class="lineno">  529</span>            Main.autoGenFileLocation = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  530</span>        }</div>
+<div class="line"><span class="lineno">  531</span>        worldFileData.Name = name;</div>
+<div class="line"><span class="lineno">  532</span>        worldFileData.GameMode = GameMode;</div>
+<div class="line"><span class="lineno">  533</span>        worldFileData.CreationTime = DateTime.Now;</div>
+<div class="line"><span class="lineno">  534</span>        worldFileData.Metadata = FileMetadata.FromCurrentSettings(FileType.World);</div>
+<div class="line"><span class="lineno">  535</span>        worldFileData.SetFavorite(favorite: false);</div>
+<div class="line"><span class="lineno">  536</span>        worldFileData.WorldGeneratorVersion = 1198295875585uL;</div>
+<div class="line"><span class="lineno">  537</span>        worldFileData.UniqueId = Guid.NewGuid();</div>
+<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">if</span> (Main.DefaultSeed == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  539</span>        {</div>
+<div class="line"><span class="lineno">  540</span>            worldFileData.SetSeedToRandom();</div>
+<div class="line"><span class="lineno">  541</span>        }</div>
+<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  543</span>        {</div>
+<div class="line"><span class="lineno">  544</span>            worldFileData.SetSeed(Main.DefaultSeed);</div>
+<div class="line"><span class="lineno">  545</span>        }</div>
+<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  547</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_addf198e4cb0c9a50159680967b434bf3.html#addf198e4cb0c9a50159680967b434bf3">Terraria.Main.autoGenFileLocation</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a637b3c96e03384fd3158facd548dd081.html#a637b3c96e03384fd3158facd548dd081">Terraria.Main.DefaultSeed</a>, <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_ae463bcf339fec8c9ba5305cf3546fc2e.html#ae463bcf339fec8c9ba5305cf3546fc2e">Terraria.IO.FileMetadata.FromCurrentSettings()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a00e5b8c4b828bb879842a6e0a86ff245.html#a00e5b8c4b828bb879842a6e0a86ff245">Terraria.Main.GetWorldPathFromName()</a>, <a class="el" href="../../d6/d99/classTerraria_1_1IO_1_1FileData_a2bc084bb3cfcff7d9d77fa77056d39df.html#a2bc084bb3cfcff7d9d77fa77056d39df">Terraria.IO.FileData.SetFavorite()</a>, <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a8118585089ccd90579d0d5b9009cac52.html#a8118585089ccd90579d0d5b9009cac52">Terraria.IO.WorldFileData.SetSeed()</a>, and <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a723ef2a9e1343860d64c578f5fecfb0a.html#a723ef2a9e1343860d64c578f5fecfb0a">Terraria.IO.WorldFileData.SetSeedToRandom()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_acc7c7058447ffaab5490befcb8ff2bf4.html#acc7c7058447ffaab5490befcb8ff2bf4">Terraria.Main.DedServ()</a>, <a class="el" href="../../dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation_a617da90cbc5ca4a2df777ec3991cf6f8.html#a617da90cbc5ca4a2df777ec3991cf6f8">Terraria.GameContent.UI.States.UIWorldCreation.FinishCreatingWorld()</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1c041c6d14c59fa0e7e8fdf66ecb7dbd.html#a1c041c6d14c59fa0e7e8fdf66ecb7dbd">Terraria.IO.WorldFile.LoadWorld()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac97de5f92bc872de2218ae1327429b84.html#ac97de5f92bc872de2218ae1327429b84">Terraria.Main.OnWorldNamed()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,35 @@ $(function(){initNavTree('d6/dad/classTerraria_1_1GameContent_1_1Biomes_1_1Terra
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  359</span>    {</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; history.Length / 2; i++)</div>
+<div class="line"><span class="lineno">  361</span>        {</div>
+<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">if</span> (history[history.Length - 1] &lt;= targetHeight)</div>
+<div class="line"><span class="lineno">  363</span>            {</div>
+<div class="line"><span class="lineno">  364</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  365</span>            }</div>
+<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; history.Length - i * 2; j++)</div>
+<div class="line"><span class="lineno">  367</span>            {</div>
+<div class="line"><span class="lineno">  368</span>                <span class="keywordtype">double</span> num = history[history.Length - j - 1];</div>
+<div class="line"><span class="lineno">  369</span>                num -= 1.0;</div>
+<div class="line"><span class="lineno">  370</span>                history[history.Length - j - 1] = num;</div>
+<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">if</span> (num &lt;= targetHeight)</div>
+<div class="line"><span class="lineno">  372</span>                {</div>
+<div class="line"><span class="lineno">  373</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  374</span>                }</div>
+<div class="line"><span class="lineno">  375</span>            }</div>
+<div class="line"><span class="lineno">  376</span>        }</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; history.Length; k++)</div>
+<div class="line"><span class="lineno">  378</span>        {</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keywordtype">double</span> worldSurface = history[history.Length - k - 1];</div>
+<div class="line"><span class="lineno">  380</span>            <a class="code hl_function" href="../../d6/dad/classTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_a9041a1c2fac452dcb791ecf18dc1897e.html#a9041a1c2fac452dcb791ecf18dc1897e">RetargetColumn</a>(targetX - k, worldSurface);</div>
+<div class="line"><span class="lineno">  381</span>        }</div>
+<div class="line"><span class="lineno">  382</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_a9041a1c2fac452dcb791ecf18dc1897e_html_a9041a1c2fac452dcb791ecf18dc1897e"><div class="ttname"><a href="../../d6/dad/classTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_a9041a1c2fac452dcb791ecf18dc1897e.html#a9041a1c2fac452dcb791ecf18dc1897e">Terraria.GameContent.Biomes.TerrainPass.RetargetColumn</a></div><div class="ttdeci">static void RetargetColumn(int x, double worldSurface)</div><div class="ttdef"><b>Definition</b> TerrainPass.cs:228</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/da4/classTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_1_1SurfaceHistory_acdc23fc467b1fcfd7c5dcef77c0c01a5.html#acdc23fc467b1fcfd7c5dcef77c0c01a5">Terraria.GameContent.Biomes.TerrainPass.SurfaceHistory.Length</a>, and <a class="el" href="../../d6/dad/classTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_a9041a1c2fac452dcb791ecf18dc1897e.html#a9041a1c2fac452dcb791ecf18dc1897e">Terraria.GameContent.Biomes.TerrainPass.RetargetColumn()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dad/classTerraria_1_1GameContent_1_1Biomes_1_1TerrainPass_a0874a3419c1884b57d72a826e9ec00b0.html#a0874a3419c1884b57d72a826e9ec00b0">Terraria.GameContent.Biomes.TerrainPass.ApplyPass()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

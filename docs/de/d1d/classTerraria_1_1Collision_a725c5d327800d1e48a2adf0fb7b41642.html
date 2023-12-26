@@ -141,6 +141,245 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1581</span>    {</div>
+<div class="line"><span class="lineno"> 1582</span>        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">stair</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1583</span>        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">stairFall</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1584</span>        <span class="keywordtype">bool</span>[] array = <span class="keyword">new</span> <span class="keywordtype">bool</span>[5];</div>
+<div class="line"><span class="lineno"> 1585</span>        <span class="keywordtype">float</span> y = Position.Y;</div>
+<div class="line"><span class="lineno"> 1586</span>        <span class="keywordtype">float</span> y2 = Position.Y;</div>
+<div class="line"><span class="lineno"> 1587</span>        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a5c165712ff96c307767bc801e5b819c8.html#a5c165712ff96c307767bc801e5b819c8">sloping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1588</span>        Vector2 vector = Position;</div>
+<div class="line"><span class="lineno"> 1589</span>        Vector2 vector2 = Position;</div>
+<div class="line"><span class="lineno"> 1590</span>        Vector2 vector3 = Velocity;</div>
+<div class="line"><span class="lineno"> 1591</span>        <span class="keywordtype">int</span> value = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.X / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 1592</span>        <span class="keywordtype">int</span> value2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.X + (<span class="keywordtype">float</span>)Width) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 1593</span>        <span class="keywordtype">int</span> value3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.Y / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 1594</span>        <span class="keywordtype">int</span> value4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.Y + (<span class="keywordtype">float</span>)Height) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 1595</span>        <span class="keywordtype">int</span> num = Utils.Clamp(value, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 1596</span>        value2 = Utils.Clamp(value2, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 1597</span>        value3 = Utils.Clamp(value3, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno"> 1598</span>        value4 = Utils.Clamp(value4, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno"> 1599</span>        Vector2 vector4 = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 1600</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i &lt; value2; i++)</div>
+<div class="line"><span class="lineno"> 1601</span>        {</div>
+<div class="line"><span class="lineno"> 1602</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = value3; j &lt; value4; j++)</div>
+<div class="line"><span class="lineno"> 1603</span>            {</div>
+<div class="line"><span class="lineno"> 1604</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span> || !Main.tile[i, j].active() || Main.tile[i, j].inActive() || (!Main.tileSolid[Main.tile[i, j].type] &amp;&amp; (!Main.tileSolidTop[Main.tile[i, j].type] || Main.tile[i, j].frameY != 0)))</div>
+<div class="line"><span class="lineno"> 1605</span>                {</div>
+<div class="line"><span class="lineno"> 1606</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1607</span>                }</div>
+<div class="line"><span class="lineno"> 1608</span>                vector4.X = i * 16;</div>
+<div class="line"><span class="lineno"> 1609</span>                vector4.Y = j * 16;</div>
+<div class="line"><span class="lineno"> 1610</span>                <span class="keywordtype">int</span> num2 = 16;</div>
+<div class="line"><span class="lineno"> 1611</span>                <span class="keywordflow">if</span> (Main.tile[i, j].halfBrick())</div>
+<div class="line"><span class="lineno"> 1612</span>                {</div>
+<div class="line"><span class="lineno"> 1613</span>                    vector4.Y += 8f;</div>
+<div class="line"><span class="lineno"> 1614</span>                    num2 -= 8;</div>
+<div class="line"><span class="lineno"> 1615</span>                }</div>
+<div class="line"><span class="lineno"> 1616</span>                <span class="keywordflow">if</span> (!(Position.X + (<span class="keywordtype">float</span>)Width &gt; vector4.X) || !(Position.X &lt; vector4.X + 16f) || !(Position.Y + (float)Height &gt; vector4.Y) || !(Position.Y &lt; vector4.Y + (float)num2))</div>
+<div class="line"><span class="lineno"> 1617</span>                {</div>
+<div class="line"><span class="lineno"> 1618</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1619</span>                }</div>
+<div class="line"><span class="lineno"> 1620</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1621</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 1622</span>                {</div>
+<div class="line"><span class="lineno"> 1623</span>                    <span class="keywordflow">if</span> (Velocity.Y &lt; 0f)</div>
+<div class="line"><span class="lineno"> 1624</span>                    {</div>
+<div class="line"><span class="lineno"> 1625</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1626</span>                    }</div>
+<div class="line"><span class="lineno"> 1627</span>                    <span class="keywordflow">if</span> (Position.Y + (<span class="keywordtype">float</span>)Height &lt; (float)(j * 16) || Position.Y + (float)Height - (1f + Math.Abs(Velocity.X)) &gt; (<span class="keywordtype">float</span>)(j * 16 + 16))</div>
+<div class="line"><span class="lineno"> 1628</span>                    {</div>
+<div class="line"><span class="lineno"> 1629</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1630</span>                    }</div>
+<div class="line"><span class="lineno"> 1631</span>                    <span class="keywordflow">if</span> (((Main.tile[i, j].slope() == 1 &amp;&amp; Velocity.X &gt;= 0f) || (Main.tile[i, j].slope() == 2 &amp;&amp; Velocity.X &lt;= 0f)) &amp;&amp; (Position.Y + (float)Height) / 16f - 1f == (float)j)</div>
+<div class="line"><span class="lineno"> 1632</span>                    {</div>
+<div class="line"><span class="lineno"> 1633</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1634</span>                    }</div>
+<div class="line"><span class="lineno"> 1635</span>                }</div>
+<div class="line"><span class="lineno"> 1636</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1637</span>                {</div>
+<div class="line"><span class="lineno"> 1638</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1639</span>                }</div>
+<div class="line"><span class="lineno"> 1640</span>                <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1641</span>                <span class="keywordflow">if</span> (fall &amp;&amp; <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 1642</span>                {</div>
+<div class="line"><span class="lineno"> 1643</span>                    flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1644</span>                }</div>
+<div class="line"><span class="lineno"> 1645</span>                <span class="keywordtype">int</span> num3 = Main.tile[i, j].slope();</div>
+<div class="line"><span class="lineno"> 1646</span>                vector4.X = i * 16;</div>
+<div class="line"><span class="lineno"> 1647</span>                vector4.Y = j * 16;</div>
+<div class="line"><span class="lineno"> 1648</span>                <span class="keywordflow">if</span> (!(Position.X + (<span class="keywordtype">float</span>)Width &gt; vector4.X) || !(Position.X &lt; vector4.X + 16f) || !(Position.Y + (float)Height &gt; vector4.Y) || !(Position.Y &lt; vector4.Y + 16f))</div>
+<div class="line"><span class="lineno"> 1649</span>                {</div>
+<div class="line"><span class="lineno"> 1650</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1651</span>                }</div>
+<div class="line"><span class="lineno"> 1652</span>                <span class="keywordtype">float</span> num4 = 0f;</div>
+<div class="line"><span class="lineno"> 1653</span>                <span class="keywordflow">if</span> (num3 == 3 || num3 == 4)</div>
+<div class="line"><span class="lineno"> 1654</span>                {</div>
+<div class="line"><span class="lineno"> 1655</span>                    <span class="keywordflow">if</span> (num3 == 3)</div>
+<div class="line"><span class="lineno"> 1656</span>                    {</div>
+<div class="line"><span class="lineno"> 1657</span>                        num4 = Position.X - vector4.X;</div>
+<div class="line"><span class="lineno"> 1658</span>                    }</div>
+<div class="line"><span class="lineno"> 1659</span>                    <span class="keywordflow">if</span> (num3 == 4)</div>
+<div class="line"><span class="lineno"> 1660</span>                    {</div>
+<div class="line"><span class="lineno"> 1661</span>                        num4 = vector4.X + 16f - (Position.X + (float)Width);</div>
+<div class="line"><span class="lineno"> 1662</span>                    }</div>
+<div class="line"><span class="lineno"> 1663</span>                    <span class="keywordflow">if</span> (num4 &gt;= 0f)</div>
+<div class="line"><span class="lineno"> 1664</span>                    {</div>
+<div class="line"><span class="lineno"> 1665</span>                        <span class="keywordflow">if</span> (Position.Y &lt;= vector4.Y + 16f - num4)</div>
+<div class="line"><span class="lineno"> 1666</span>                        {</div>
+<div class="line"><span class="lineno"> 1667</span>                            <span class="keywordtype">float</span> num5 = vector4.Y + 16f - vector.Y - num4;</div>
+<div class="line"><span class="lineno"> 1668</span>                            <span class="keywordflow">if</span> (Position.Y + num5 &gt; y2)</div>
+<div class="line"><span class="lineno"> 1669</span>                            {</div>
+<div class="line"><span class="lineno"> 1670</span>                                vector2.Y = Position.Y + num5;</div>
+<div class="line"><span class="lineno"> 1671</span>                                y2 = vector2.Y;</div>
+<div class="line"><span class="lineno"> 1672</span>                                <span class="keywordflow">if</span> (vector3.Y &lt; 0.0101f)</div>
+<div class="line"><span class="lineno"> 1673</span>                                {</div>
+<div class="line"><span class="lineno"> 1674</span>                                    vector3.Y = 0.0101f;</div>
+<div class="line"><span class="lineno"> 1675</span>                                }</div>
+<div class="line"><span class="lineno"> 1676</span>                                array[num3] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1677</span>                            }</div>
+<div class="line"><span class="lineno"> 1678</span>                        }</div>
+<div class="line"><span class="lineno"> 1679</span>                    }</div>
+<div class="line"><span class="lineno"> 1680</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Position.Y &gt; vector4.Y)</div>
+<div class="line"><span class="lineno"> 1681</span>                    {</div>
+<div class="line"><span class="lineno"> 1682</span>                        <span class="keywordtype">float</span> num6 = vector4.Y + 16f;</div>
+<div class="line"><span class="lineno"> 1683</span>                        <span class="keywordflow">if</span> (vector2.Y &lt; num6)</div>
+<div class="line"><span class="lineno"> 1684</span>                        {</div>
+<div class="line"><span class="lineno"> 1685</span>                            vector2.Y = num6;</div>
+<div class="line"><span class="lineno"> 1686</span>                            <span class="keywordflow">if</span> (vector3.Y &lt; 0.0101f)</div>
+<div class="line"><span class="lineno"> 1687</span>                            {</div>
+<div class="line"><span class="lineno"> 1688</span>                                vector3.Y = 0.0101f;</div>
+<div class="line"><span class="lineno"> 1689</span>                            }</div>
+<div class="line"><span class="lineno"> 1690</span>                        }</div>
+<div class="line"><span class="lineno"> 1691</span>                    }</div>
+<div class="line"><span class="lineno"> 1692</span>                }</div>
+<div class="line"><span class="lineno"> 1693</span>                <span class="keywordflow">if</span> (num3 != 1 &amp;&amp; num3 != 2)</div>
+<div class="line"><span class="lineno"> 1694</span>                {</div>
+<div class="line"><span class="lineno"> 1695</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1696</span>                }</div>
+<div class="line"><span class="lineno"> 1697</span>                <span class="keywordflow">if</span> (num3 == 1)</div>
+<div class="line"><span class="lineno"> 1698</span>                {</div>
+<div class="line"><span class="lineno"> 1699</span>                    num4 = Position.X - vector4.X;</div>
+<div class="line"><span class="lineno"> 1700</span>                }</div>
+<div class="line"><span class="lineno"> 1701</span>                <span class="keywordflow">if</span> (num3 == 2)</div>
+<div class="line"><span class="lineno"> 1702</span>                {</div>
+<div class="line"><span class="lineno"> 1703</span>                    num4 = vector4.X + 16f - (Position.X + (float)Width);</div>
+<div class="line"><span class="lineno"> 1704</span>                }</div>
+<div class="line"><span class="lineno"> 1705</span>                <span class="keywordflow">if</span> (num4 &gt;= 0f)</div>
+<div class="line"><span class="lineno"> 1706</span>                {</div>
+<div class="line"><span class="lineno"> 1707</span>                    <span class="keywordflow">if</span> (!(Position.Y + (<span class="keywordtype">float</span>)Height &gt;= vector4.Y + num4))</div>
+<div class="line"><span class="lineno"> 1708</span>                    {</div>
+<div class="line"><span class="lineno"> 1709</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1710</span>                    }</div>
+<div class="line"><span class="lineno"> 1711</span>                    <span class="keywordtype">float</span> num7 = vector4.Y - (vector.Y + (float)Height) + num4;</div>
+<div class="line"><span class="lineno"> 1712</span>                    <span class="keywordflow">if</span> (!(Position.Y + num7 &lt; y))</div>
+<div class="line"><span class="lineno"> 1713</span>                    {</div>
+<div class="line"><span class="lineno"> 1714</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1715</span>                    }</div>
+<div class="line"><span class="lineno"> 1716</span>                    <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno"> 1717</span>                    {</div>
+<div class="line"><span class="lineno"> 1718</span>                        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">stairFall</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1719</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1720</span>                    }</div>
+<div class="line"><span class="lineno"> 1721</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 1722</span>                    {</div>
+<div class="line"><span class="lineno"> 1723</span>                        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">stair</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1724</span>                    }</div>
+<div class="line"><span class="lineno"> 1725</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1726</span>                    {</div>
+<div class="line"><span class="lineno"> 1727</span>                        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">stair</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1728</span>                    }</div>
+<div class="line"><span class="lineno"> 1729</span>                    vector2.Y = Position.Y + num7;</div>
+<div class="line"><span class="lineno"> 1730</span>                    y = vector2.Y;</div>
+<div class="line"><span class="lineno"> 1731</span>                    <span class="keywordflow">if</span> (vector3.Y &gt; 0f)</div>
+<div class="line"><span class="lineno"> 1732</span>                    {</div>
+<div class="line"><span class="lineno"> 1733</span>                        vector3.Y = 0f;</div>
+<div class="line"><span class="lineno"> 1734</span>                    }</div>
+<div class="line"><span class="lineno"> 1735</span>                    array[num3] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1736</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1737</span>                }</div>
+<div class="line"><span class="lineno"> 1738</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[Main.tile[i, j].type] &amp;&amp; !(Position.Y + (<span class="keywordtype">float</span>)Height - 4f - Math.Abs(Velocity.X) &lt;= vector4.Y))</div>
+<div class="line"><span class="lineno"> 1739</span>                {</div>
+<div class="line"><span class="lineno"> 1740</span>                    <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno"> 1741</span>                    {</div>
+<div class="line"><span class="lineno"> 1742</span>                        <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">stairFall</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1743</span>                    }</div>
+<div class="line"><span class="lineno"> 1744</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1745</span>                }</div>
+<div class="line"><span class="lineno"> 1746</span>                <span class="keywordtype">float</span> num8 = vector4.Y - (float)Height;</div>
+<div class="line"><span class="lineno"> 1747</span>                <span class="keywordflow">if</span> (!(vector2.Y &gt; num8))</div>
+<div class="line"><span class="lineno"> 1748</span>                {</div>
+<div class="line"><span class="lineno"> 1749</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1750</span>                }</div>
+<div class="line"><span class="lineno"> 1751</span>                <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno"> 1752</span>                {</div>
+<div class="line"><span class="lineno"> 1753</span>                    <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">stairFall</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1754</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1755</span>                }</div>
+<div class="line"><span class="lineno"> 1756</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 1757</span>                {</div>
+<div class="line"><span class="lineno"> 1758</span>                    <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">stair</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1759</span>                }</div>
+<div class="line"><span class="lineno"> 1760</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1761</span>                {</div>
+<div class="line"><span class="lineno"> 1762</span>                    <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">stair</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1763</span>                }</div>
+<div class="line"><span class="lineno"> 1764</span>                vector2.Y = num8;</div>
+<div class="line"><span class="lineno"> 1765</span>                <span class="keywordflow">if</span> (vector3.Y &gt; 0f)</div>
+<div class="line"><span class="lineno"> 1766</span>                {</div>
+<div class="line"><span class="lineno"> 1767</span>                    vector3.Y = 0f;</div>
+<div class="line"><span class="lineno"> 1768</span>                }</div>
+<div class="line"><span class="lineno"> 1769</span>            }</div>
+<div class="line"><span class="lineno"> 1770</span>        }</div>
+<div class="line"><span class="lineno"> 1771</span>        Vector2 position = Position;</div>
+<div class="line"><span class="lineno"> 1772</span>        Vector2 velocity = vector2 - Position;</div>
+<div class="line"><span class="lineno"> 1773</span>        Vector2 vector5 = <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position, velocity, Width, Height);</div>
+<div class="line"><span class="lineno"> 1774</span>        <span class="keywordflow">if</span> (vector5.Y &gt; velocity.Y)</div>
+<div class="line"><span class="lineno"> 1775</span>        {</div>
+<div class="line"><span class="lineno"> 1776</span>            <span class="keywordtype">float</span> num9 = velocity.Y - vector5.Y;</div>
+<div class="line"><span class="lineno"> 1777</span>            vector2.Y = Position.Y + vector5.Y;</div>
+<div class="line"><span class="lineno"> 1778</span>            <span class="keywordflow">if</span> (array[1])</div>
+<div class="line"><span class="lineno"> 1779</span>            {</div>
+<div class="line"><span class="lineno"> 1780</span>                vector2.X = Position.X - num9;</div>
+<div class="line"><span class="lineno"> 1781</span>            }</div>
+<div class="line"><span class="lineno"> 1782</span>            <span class="keywordflow">if</span> (array[2])</div>
+<div class="line"><span class="lineno"> 1783</span>            {</div>
+<div class="line"><span class="lineno"> 1784</span>                vector2.X = Position.X + num9;</div>
+<div class="line"><span class="lineno"> 1785</span>            }</div>
+<div class="line"><span class="lineno"> 1786</span>            vector3.X = 0f;</div>
+<div class="line"><span class="lineno"> 1787</span>            vector3.Y = 0f;</div>
+<div class="line"><span class="lineno"> 1788</span>            <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a4365211e4961e8f39001622661f436de.html#a4365211e4961e8f39001622661f436de">up</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1789</span>        }</div>
+<div class="line"><span class="lineno"> 1790</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vector5.Y &lt; velocity.Y)</div>
+<div class="line"><span class="lineno"> 1791</span>        {</div>
+<div class="line"><span class="lineno"> 1792</span>            <span class="keywordtype">float</span> num10 = vector5.Y - velocity.Y;</div>
+<div class="line"><span class="lineno"> 1793</span>            vector2.Y = Position.Y + vector5.Y;</div>
+<div class="line"><span class="lineno"> 1794</span>            <span class="keywordflow">if</span> (array[3])</div>
+<div class="line"><span class="lineno"> 1795</span>            {</div>
+<div class="line"><span class="lineno"> 1796</span>                vector2.X = Position.X - num10;</div>
+<div class="line"><span class="lineno"> 1797</span>            }</div>
+<div class="line"><span class="lineno"> 1798</span>            <span class="keywordflow">if</span> (array[4])</div>
+<div class="line"><span class="lineno"> 1799</span>            {</div>
+<div class="line"><span class="lineno"> 1800</span>                vector2.X = Position.X + num10;</div>
+<div class="line"><span class="lineno"> 1801</span>            }</div>
+<div class="line"><span class="lineno"> 1802</span>            vector3.X = 0f;</div>
+<div class="line"><span class="lineno"> 1803</span>            vector3.Y = 0f;</div>
+<div class="line"><span class="lineno"> 1804</span>        }</div>
+<div class="line"><span class="lineno"> 1805</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector4(vector2, vector3.X, vector3.Y);</div>
+<div class="line"><span class="lineno"> 1806</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7_html_a1ec5bca6d8ebfef591fa7f7553a158d7"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">Terraria.Collision.stair</a></div><div class="ttdeci">static bool stair</div><div class="ttdef"><b>Definition</b> Collision.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a4365211e4961e8f39001622661f436de_html_a4365211e4961e8f39001622661f436de"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a4365211e4961e8f39001622661f436de.html#a4365211e4961e8f39001622661f436de">Terraria.Collision.up</a></div><div class="ttdeci">static bool up</div><div class="ttdef"><b>Definition</b> Collision.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520_html_a4752d3d05e80342f20c4510eaad8e520"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">Terraria.Collision.stairFall</a></div><div class="ttdeci">static bool stairFall</div><div class="ttdef"><b>Definition</b> Collision.cs:22</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a5c165712ff96c307767bc801e5b819c8_html_a5c165712ff96c307767bc801e5b819c8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a5c165712ff96c307767bc801e5b819c8.html#a5c165712ff96c307767bc801e5b819c8">Terraria.Collision.sloping</a></div><div class="ttdeci">static bool sloping</div><div class="ttdef"><b>Definition</b> Collision.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8_html_a5e225736f6e3c509b9915a06cf908dd8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision</a></div><div class="ttdeci">static Vector2 TileCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, bool fallThrough=false, bool fall2=false, int gravDir=1)</div><div class="ttdef"><b>Definition</b> Collision.cs:1910</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b_html_abb51d85dd32dec48d4b04dfb6bc27a5b"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a></div><div class="ttdeci">static bool[] Platforms</div><div class="ttdef"><b>Definition</b> TileID.cs:163</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5c165712ff96c307767bc801e5b819c8.html#a5c165712ff96c307767bc801e5b819c8">Terraria.Collision.sloping</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1ec5bca6d8ebfef591fa7f7553a158d7.html#a1ec5bca6d8ebfef591fa7f7553a158d7">Terraria.Collision.stair</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4752d3d05e80342f20c4510eaad8e520.html#a4752d3d05e80342f20c4510eaad8e520">Terraria.Collision.stairFall</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4365211e4961e8f39001622661f436de.html#a4365211e4961e8f39001622661f436de">Terraria.Collision.up</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_ad588289720021e8532b8c73ca42be173.html#ad588289720021e8532b8c73ca42be173">Terraria.Player.CheckForGoodTeleportationSpot()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_ab7a7bf28f78b7fde5e72b3010266478b.html#ab7a7bf28f78b7fde5e72b3010266478b">Terraria.NPC.Collision_MoveSlopesAndStairFall()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a0cf1ab4501e76b1ad0b3227922d7a402.html#a0cf1ab4501e76b1ad0b3227922d7a402">Terraria.NPC.Collision_MoveSnailOnSlopes()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a34e040a412aa50b57581a40ced1f36cc.html#a34e040a412aa50b57581a40ced1f36cc">Terraria.Collision.FindCollisionTile()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_ada185d31bc87cbbbd97902a4e8f729fa.html#ada185d31bc87cbbbd97902a4e8f729fa">Terraria.Gore.Gore_UpdateLeaf()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a1d4ec4eed2d29a40af426a27444be1f3.html#a1d4ec4eed2d29a40af426a27444be1f3">Terraria.Projectile.HandleMovement()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_adebf5e71425ce4a698e93ec7a6532023.html#adebf5e71425ce4a698e93ec7a6532023">Terraria.Collision.IsClearSpotTest()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a163b0d30ddfed8c9be14687942d3494a.html#a163b0d30ddfed8c9be14687942d3494a">Terraria.Item.MoveInWorld()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aab6c7391bd54a355bea35339603007c9.html#aab6c7391bd54a355bea35339603007c9">Terraria.Player.SlopingCollision()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_ab9078152d6eee8a04d22d83b7a49e88e.html#ab9078152d6eee8a04d22d83b7a49e88e">Terraria.Gore.Update()</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a18954fd0bba518db1783a247a6bb3e97.html#a18954fd0bba518db1783a247a6bb3e97">Terraria.Projectile.UpdatePosition()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,138 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aa15ca40d760e57dec8b6
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 6057</span>    {</div>
+<div class="line"><span class="lineno"> 6058</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(originX, originY, 2))</div>
+<div class="line"><span class="lineno"> 6059</span>        {</div>
+<div class="line"><span class="lineno"> 6060</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6061</span>        }</div>
+<div class="line"><span class="lineno"> 6062</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno"> 6063</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno"> 6064</span>        HashSet&lt;Point&gt; hashSet = <span class="keyword">new</span> HashSet&lt;Point&gt;();</div>
+<div class="line"><span class="lineno"> 6065</span>        Dictionary&lt;ushort, int&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;ushort, int&gt;();</div>
+<div class="line"><span class="lineno"> 6066</span>        list2.Add(<span class="keyword">new</span> Point(originX, originY));</div>
+<div class="line"><span class="lineno"> 6067</span>        <span class="keywordflow">while</span> (list2.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 6068</span>        {</div>
+<div class="line"><span class="lineno"> 6069</span>            list.Clear();</div>
+<div class="line"><span class="lineno"> 6070</span>            list.AddRange(list2);</div>
+<div class="line"><span class="lineno"> 6071</span>            list2.Clear();</div>
+<div class="line"><span class="lineno"> 6072</span>            <span class="keywordflow">while</span> (list.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 6073</span>            {</div>
+<div class="line"><span class="lineno"> 6074</span>                <span class="keywordflow">if</span> (hashSet.Count &gt;= maxWallsThreshold)</div>
+<div class="line"><span class="lineno"> 6075</span>                {</div>
+<div class="line"><span class="lineno"> 6076</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6077</span>                }</div>
+<div class="line"><span class="lineno"> 6078</span>                Point item = list[0];</div>
+<div class="line"><span class="lineno"> 6079</span>                <span class="keywordflow">if</span> (hashSet.Contains(item))</div>
+<div class="line"><span class="lineno"> 6080</span>                {</div>
+<div class="line"><span class="lineno"> 6081</span>                    list.Remove(item);</div>
+<div class="line"><span class="lineno"> 6082</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 6083</span>                }</div>
+<div class="line"><span class="lineno"> 6084</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(item.X, item.Y, 1))</div>
+<div class="line"><span class="lineno"> 6085</span>                {</div>
+<div class="line"><span class="lineno"> 6086</span>                    list.Remove(item);</div>
+<div class="line"><span class="lineno"> 6087</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 6088</span>                }</div>
+<div class="line"><span class="lineno"> 6089</span>                hashSet.Add(item);</div>
+<div class="line"><span class="lineno"> 6090</span>                list.Remove(item);</div>
+<div class="line"><span class="lineno"> 6091</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[item.X, item.Y];</div>
+<div class="line"><span class="lineno"> 6092</span>                <span class="keywordflow">if</span> (tile.wall != 0)</div>
+<div class="line"><span class="lineno"> 6093</span>                {</div>
+<div class="line"><span class="lineno"> 6094</span>                    <span class="keywordflow">if</span> (dictionary.ContainsKey(tile.wall))</div>
+<div class="line"><span class="lineno"> 6095</span>                    {</div>
+<div class="line"><span class="lineno"> 6096</span>                        dictionary[tile.wall] = dictionary[tile.wall] + 1;</div>
+<div class="line"><span class="lineno"> 6097</span>                    }</div>
+<div class="line"><span class="lineno"> 6098</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6099</span>                    {</div>
+<div class="line"><span class="lineno"> 6100</span>                        dictionary[tile.wall] = 1;</div>
+<div class="line"><span class="lineno"> 6101</span>                    }</div>
+<div class="line"><span class="lineno"> 6102</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 6103</span>                }</div>
+<div class="line"><span class="lineno"> 6104</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6105</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 6106</span>                {</div>
+<div class="line"><span class="lineno"> 6107</span>                    <span class="keywordtype">int</span> y = item.Y;</div>
+<div class="line"><span class="lineno"> 6108</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = item.X - 1; i &lt;= item.X + 1; i++)</div>
+<div class="line"><span class="lineno"> 6109</span>                    {</div>
+<div class="line"><span class="lineno"> 6110</span>                        <span class="keywordflow">if</span> (!Main.tile[i, y].active())</div>
+<div class="line"><span class="lineno"> 6111</span>                        {</div>
+<div class="line"><span class="lineno"> 6112</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6113</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6114</span>                        }</div>
+<div class="line"><span class="lineno"> 6115</span>                    }</div>
+<div class="line"><span class="lineno"> 6116</span>                }</div>
+<div class="line"><span class="lineno"> 6117</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 6118</span>                {</div>
+<div class="line"><span class="lineno"> 6119</span>                    <span class="keywordtype">int</span> x = item.X;</div>
+<div class="line"><span class="lineno"> 6120</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = item.Y - 1; j &lt;= item.Y + 1; j++)</div>
+<div class="line"><span class="lineno"> 6121</span>                    {</div>
+<div class="line"><span class="lineno"> 6122</span>                        <span class="keywordflow">if</span> (!Main.tile[x, j].active())</div>
+<div class="line"><span class="lineno"> 6123</span>                        {</div>
+<div class="line"><span class="lineno"> 6124</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6125</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6126</span>                        }</div>
+<div class="line"><span class="lineno"> 6127</span>                    }</div>
+<div class="line"><span class="lineno"> 6128</span>                }</div>
+<div class="line"><span class="lineno"> 6129</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 6130</span>                {</div>
+<div class="line"><span class="lineno"> 6131</span>                    Point item2 = <span class="keyword">new</span> Point(item.X - 1, item.Y);</div>
+<div class="line"><span class="lineno"> 6132</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno"> 6133</span>                    {</div>
+<div class="line"><span class="lineno"> 6134</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno"> 6135</span>                    }</div>
+<div class="line"><span class="lineno"> 6136</span>                    item2 = <span class="keyword">new</span> Point(item.X + 1, item.Y);</div>
+<div class="line"><span class="lineno"> 6137</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno"> 6138</span>                    {</div>
+<div class="line"><span class="lineno"> 6139</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno"> 6140</span>                    }</div>
+<div class="line"><span class="lineno"> 6141</span>                    item2 = <span class="keyword">new</span> Point(item.X, item.Y - 1);</div>
+<div class="line"><span class="lineno"> 6142</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno"> 6143</span>                    {</div>
+<div class="line"><span class="lineno"> 6144</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno"> 6145</span>                    }</div>
+<div class="line"><span class="lineno"> 6146</span>                    item2 = <span class="keyword">new</span> Point(item.X, item.Y + 1);</div>
+<div class="line"><span class="lineno"> 6147</span>                    <span class="keywordflow">if</span> (!hashSet.Contains(item2))</div>
+<div class="line"><span class="lineno"> 6148</span>                    {</div>
+<div class="line"><span class="lineno"> 6149</span>                        list2.Add(item2);</div>
+<div class="line"><span class="lineno"> 6150</span>                    }</div>
+<div class="line"><span class="lineno"> 6151</span>                }</div>
+<div class="line"><span class="lineno"> 6152</span>            }</div>
+<div class="line"><span class="lineno"> 6153</span>        }</div>
+<div class="line"><span class="lineno"> 6154</span>        <span class="keywordflow">if</span> (hashSet.Count == 1)</div>
+<div class="line"><span class="lineno"> 6155</span>        {</div>
+<div class="line"><span class="lineno"> 6156</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6157</span>        }</div>
+<div class="line"><span class="lineno"> 6158</span>        ushort wall = 0;</div>
+<div class="line"><span class="lineno"> 6159</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno"> 6160</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;ushort, int&gt; item3 <span class="keywordflow">in</span> dictionary)</div>
+<div class="line"><span class="lineno"> 6161</span>        {</div>
+<div class="line"><span class="lineno"> 6162</span>            <span class="keywordflow">if</span> (item3.Value &gt; num)</div>
+<div class="line"><span class="lineno"> 6163</span>            {</div>
+<div class="line"><span class="lineno"> 6164</span>                wall = item3.Key;</div>
+<div class="line"><span class="lineno"> 6165</span>                num = item3.Value;</div>
+<div class="line"><span class="lineno"> 6166</span>            }</div>
+<div class="line"><span class="lineno"> 6167</span>        }</div>
+<div class="line"><span class="lineno"> 6168</span>        <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno"> 6169</span>        {</div>
+<div class="line"><span class="lineno"> 6170</span>            wall = 2;</div>
+<div class="line"><span class="lineno"> 6171</span>        }</div>
+<div class="line"><span class="lineno"> 6172</span>        <span class="keywordflow">foreach</span> (Point item4 <span class="keywordflow">in</span> hashSet)</div>
+<div class="line"><span class="lineno"> 6173</span>        {</div>
+<div class="line"><span class="lineno"> 6174</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[item4.X, item4.Y];</div>
+<div class="line"><span class="lineno"> 6175</span>            <span class="keywordflow">if</span> (tile2.wall == 0)</div>
+<div class="line"><span class="lineno"> 6176</span>            {</div>
+<div class="line"><span class="lineno"> 6177</span>                tile2.wall = wall;</div>
+<div class="line"><span class="lineno"> 6178</span>            }</div>
+<div class="line"><span class="lineno"> 6179</span>        }</div>
+<div class="line"><span class="lineno"> 6180</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6181</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4a9ff3b2c6bf80f7e8fa81ea640d0784.html#a4a9ff3b2c6bf80f7e8fa81ea640d0784">Terraria.WorldGen.FillWallHolesInColumn()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,43 @@ $(function(){initNavTree('d2/dfe/classTerraria_1_1NetMessage_a25a7345a340a5dfc86
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2755</span>    {</div>
+<div class="line"><span class="lineno"> 2756</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2757</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno"> 2758</span>        {</div>
+<div class="line"><span class="lineno"> 2759</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[i];</div>
+<div class="line"><span class="lineno"> 2760</span>            <span class="keywordflow">if</span> (!nPC.active)</div>
+<div class="line"><span class="lineno"> 2761</span>            {</div>
+<div class="line"><span class="lineno"> 2762</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2763</span>            }</div>
+<div class="line"><span class="lineno"> 2764</span>            <span class="keywordtype">bool</span> flag2 = nPC.townNPC &amp;&amp; <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.TypeToDefaultHeadIndex(nPC.type) &gt; 0;</div>
+<div class="line"><span class="lineno"> 2765</span>            <span class="keywordflow">if</span> (nPC.aiStyle == 7)</div>
+<div class="line"><span class="lineno"> 2766</span>            {</div>
+<div class="line"><span class="lineno"> 2767</span>                flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2768</span>            }</div>
+<div class="line"><span class="lineno"> 2769</span>            <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno"> 2770</span>            {</div>
+<div class="line"><span class="lineno"> 2771</span>                <span class="keywordflow">if</span> (!flag &amp;&amp; nPC.type == 368)</div>
+<div class="line"><span class="lineno"> 2772</span>                {</div>
+<div class="line"><span class="lineno"> 2773</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2774</span>                }</div>
+<div class="line"><span class="lineno"> 2775</span>                <span class="keywordtype">byte</span> householdStatus = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.TownManager.GetHouseholdStatus(nPC);</div>
+<div class="line"><span class="lineno"> 2776</span>                <a class="code hl_function" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">SendData</a>(60, plr, -1, <span class="keyword">null</span>, i, nPC.homeTileX, nPC.homeTileY, (<span class="keywordtype">int</span>)householdStatus);</div>
+<div class="line"><span class="lineno"> 2777</span>            }</div>
+<div class="line"><span class="lineno"> 2778</span>        }</div>
+<div class="line"><span class="lineno"> 2779</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 2780</span>        {</div>
+<div class="line"><span class="lineno"> 2781</span>            <a class="code hl_function" href="../../d2/dfe/classTerraria_1_1NetMessage_aa2288a324711f828b5cd3b7995547aa7.html#aa2288a324711f828b5cd3b7995547aa7">SendTravelShop</a>(plr);</div>
+<div class="line"><span class="lineno"> 2782</span>        }</div>
+<div class="line"><span class="lineno"> 2783</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263_html_a0099400efdc729b71368da55adc01263"><div class="ttname"><a href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData</a></div><div class="ttdeci">static void SendData(int msgType, int remoteClient=-1, int ignoreClient=-1, NetworkText text=null, int number=0, float number2=0f, float number3=0f, float number4=0f, int number5=0, int number6=0, int number7=0)</div><div class="ttdef"><b>Definition</b> NetMessage.cs:88</div></div>
+<div class="ttc" id="aclassTerraria_1_1NetMessage_aa2288a324711f828b5cd3b7995547aa7_html_aa2288a324711f828b5cd3b7995547aa7"><div class="ttname"><a href="../../d2/dfe/classTerraria_1_1NetMessage_aa2288a324711f828b5cd3b7995547aa7.html#aa2288a324711f828b5cd3b7995547aa7">Terraria.NetMessage.SendTravelShop</a></div><div class="ttdeci">static void SendTravelShop(int remoteClient)</div><div class="ttdef"><b>Definition</b> NetMessage.cs:2621</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a3c6509c304d59a59cd8119e7849c8c7b.html#a3c6509c304d59a59cd8119e7849c8c7b">Terraria.NPC.aiStyle</a>, <a class="el" href="../../da/d75/classTerraria_1_1GameContent_1_1TownRoomManager_a04556c2bc54c4c8f57c69b89434703df.html#a04556c2bc54c4c8f57c69b89434703df">Terraria.GameContent.TownRoomManager.GetHouseholdStatus()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a707a46d1de85d1ace60dc76a36477e2b.html#a707a46d1de85d1ace60dc76a36477e2b">Terraria.NPC.homeTileX</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_afacdc5dddcb7a8ea399198751ee18584.html#afacdc5dddcb7a8ea399198751ee18584">Terraria.NPC.homeTileY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_aa2288a324711f828b5cd3b7995547aa7.html#aa2288a324711f828b5cd3b7995547aa7">Terraria.NetMessage.SendTravelShop()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a278a568e82b05e93a26d011e808fd2c8.html#a278a568e82b05e93a26d011e808fd2c8">Terraria.WorldGen.TownManager</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a8b3690049e6958f9002cdc6605efe7fd.html#a8b3690049e6958f9002cdc6605efe7fd">Terraria.NPC.type</a>, and <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a0a3ce580c070f202b7c43b094e931b6a.html#a0a3ce580c070f202b7c43b094e931b6a">Terraria.NPC.TypeToDefaultHeadIndex()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_af515690d04a1cd4b0d129d3273667157.html#af515690d04a1cd4b0d129d3273667157">Terraria.NetMessage.SyncConnectedPlayer()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,150 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a9c6f089ac4765bd520
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">18292</span>    {</div>
+<div class="line"><span class="lineno">18293</span>        <span class="keywordflow">if</span> (Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].active)</div>
+<div class="line"><span class="lineno">18294</span>        {</div>
+<div class="line"><span class="lineno">18295</span>            <span class="keywordtype">double</span> timeForVisualEffects = Main.timeForVisualEffects;</div>
+<div class="line"><span class="lineno">18296</span>            <span class="keywordflow">switch</span> (Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].name)</div>
+<div class="line"><span class="lineno">18297</span>            {</div>
+<div class="line"><span class="lineno">18298</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Cenx&quot;</span>:</div>
+<div class="line"><span class="lineno">18299</span>            {</div>
+<div class="line"><span class="lineno">18300</span>                <span class="keywordtype">float</span> amount2 = Utils.PingPongFrom01To010(laserIndex / 6f);</div>
+<div class="line"><span class="lineno">18301</span>                amount2 = MathHelper.SmoothStep(0f, 1f, amount2);</div>
+<div class="line"><span class="lineno">18302</span>                amount2 = MathHelper.SmoothStep(0f, 1f, amount2);</div>
+<div class="line"><span class="lineno">18303</span>                <span class="keywordflow">return</span> Main.rgbToHsl(Color.Lerp(<span class="keyword">new</span> Color(0.3f, 1f, 0.2f), Color.HotPink, amount2)).X;</div>
+<div class="line"><span class="lineno">18304</span>            }</div>
+<div class="line"><span class="lineno">18305</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Crowno&quot;</span>:</div>
+<div class="line"><span class="lineno">18306</span>                laserLuminance = MathHelper.Lerp(0.25f, 0.4f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18307</span>                laserAlphaMultiplier = 0.5f;</div>
+<div class="line"><span class="lineno">18308</span>                <span class="keywordflow">return</span> MathHelper.Lerp(127f / 180f, 47f / 60f, Utils.Turn01ToCyclic010(laserIndex / 6f));</div>
+<div class="line"><span class="lineno">18309</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Tsuki&quot;</span>:</div>
+<div class="line"><span class="lineno">18310</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Yoraiz0r&quot;</span>:</div>
+<div class="line"><span class="lineno">18311</span>                <span class="keywordflow">return</span> 0.92f;</div>
+<div class="line"><span class="lineno">18312</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Lazure&quot;</span>:</div>
+<div class="line"><span class="lineno">18313</span>                <span class="keywordflow">return</span> MathHelper.Lerp(8f / 15f, 83f / 90f, Utils.Turn01ToCyclic010(laserIndex / 6f));</div>
+<div class="line"><span class="lineno">18314</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Jaxrud&quot;</span>:</div>
+<div class="line"><span class="lineno">18315</span>                <span class="keywordflow">return</span> MathHelper.Lerp(13f / 72f, 0.43611112f, Utils.Turn01ToCyclic010(laserIndex / 6f));</div>
+<div class="line"><span class="lineno">18316</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Ghostar&quot;</span>:</div>
+<div class="line"><span class="lineno">18317</span>                laserLuminance = MathHelper.Lerp(0.4f, 0.7f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18318</span>                laserAlphaMultiplier = 0.3f;</div>
+<div class="line"><span class="lineno">18319</span>                <span class="keywordflow">return</span> 0.66f;</div>
+<div class="line"><span class="lineno">18320</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Devalaous&quot;</span>:</div>
+<div class="line"><span class="lineno">18321</span>                <span class="keywordflow">return</span> 0.66f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.1f;</div>
+<div class="line"><span class="lineno">18322</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Leinfors&quot;</span>:</div>
+<div class="line"><span class="lineno">18323</span>                <span class="keywordflow">return</span> 0.73f + (float)Math.Cos(timeForVisualEffects / 3.0 * 6.2831854820251465) * 0.03f;</div>
+<div class="line"><span class="lineno">18324</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Aeroblop&quot;</span>:</div>
+<div class="line"><span class="lineno">18325</span>                <span class="keywordflow">return</span> 0.25f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.1f;</div>
+<div class="line"><span class="lineno">18326</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Doylee&quot;</span>:</div>
+<div class="line"><span class="lineno">18327</span>                <span class="keywordflow">return</span> 0.84f + (float)Math.Cos(timeForVisualEffects / 90.0 * 6.2831854820251465) * 0.16f;</div>
+<div class="line"><span class="lineno">18328</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Darkhalis&quot;</span>:</div>
+<div class="line"><span class="lineno">18329</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Arkhalis&quot;</span>:</div>
+<div class="line"><span class="lineno">18330</span>                <span class="keywordflow">return</span> 0.75f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.07f;</div>
+<div class="line"><span class="lineno">18331</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Nike Leon&quot;</span>:</div>
+<div class="line"><span class="lineno">18332</span>                <span class="keywordflow">return</span> 0.07f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.04f;</div>
+<div class="line"><span class="lineno">18333</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Suweeka&quot;</span>:</div>
+<div class="line"><span class="lineno">18334</span>                <span class="keywordflow">return</span> 0.5f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.18f;</div>
+<div class="line"><span class="lineno">18335</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;W1K&quot;</span>:</div>
+<div class="line"><span class="lineno">18336</span>                <span class="keywordflow">return</span> 0.75f + (float)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465) * 0.05f;</div>
+<div class="line"><span class="lineno">18337</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Grox The Great&quot;</span>:</div>
+<div class="line"><span class="lineno">18338</span>                <span class="keywordflow">return</span> 0.41f + (float)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465) * 0.1f;</div>
+<div class="line"><span class="lineno">18339</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Acamaeda&quot;</span>:</div>
+<div class="line"><span class="lineno">18340</span>                <span class="keywordflow">return</span> 0.18f + (float)Math.Cos(timeForVisualEffects / 90.0 * 6.2831854820251465) * 0.1f;</div>
+<div class="line"><span class="lineno">18341</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Alchemystics&quot;</span>:</div>
+<div class="line"><span class="lineno">18342</span>                <span class="keywordflow">return</span> 0.73f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.18f;</div>
+<div class="line"><span class="lineno">18343</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Antithesis&quot;</span>:</div>
+<div class="line"><span class="lineno">18344</span>                laserLuminance = 0.25f;</div>
+<div class="line"><span class="lineno">18345</span>                laserAlphaMultiplier = 0.4f;</div>
+<div class="line"><span class="lineno">18346</span>                <span class="keywordflow">return</span> 0.7f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.05f;</div>
+<div class="line"><span class="lineno">18347</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Aurora3500&quot;</span>:</div>
+<div class="line"><span class="lineno">18348</span>                laserLuminance = MathHelper.Lerp(0f, 0.5f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18349</span>                laserAlphaMultiplier = 0.25f;</div>
+<div class="line"><span class="lineno">18350</span>                <span class="keywordflow">return</span> 0.35f;</div>
+<div class="line"><span class="lineno">18351</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Bame&quot;</span>:</div>
+<div class="line"><span class="lineno">18352</span>            {</div>
+<div class="line"><span class="lineno">18353</span>                <span class="keywordtype">float</span> amount = Utils.PingPongFrom01To010(laserIndex / 6f);</div>
+<div class="line"><span class="lineno">18354</span>                amount = MathHelper.SmoothStep(0f, 1f, amount);</div>
+<div class="line"><span class="lineno">18355</span>                amount = MathHelper.SmoothStep(0f, 1f, amount);</div>
+<div class="line"><span class="lineno">18356</span>                <span class="keywordflow">return</span> Main.rgbToHsl(Color.Lerp(Color.Yellow, <span class="keyword">new</span> Color(0.2f, 0f, 0.7f), amount)).X;</div>
+<div class="line"><span class="lineno">18357</span>            }</div>
+<div class="line"><span class="lineno">18358</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Criddle&quot;</span>:</div>
+<div class="line"><span class="lineno">18359</span>                <span class="keywordflow">return</span> 0.91f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.19f;</div>
+<div class="line"><span class="lineno">18360</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Darthkitten&quot;</span>:</div>
+<div class="line"><span class="lineno">18361</span>                laserLuminance = MathHelper.Lerp(0.4f, 0.9f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18362</span>                laserAlphaMultiplier = 0.3f;</div>
+<div class="line"><span class="lineno">18363</span>                <span class="keywordflow">return</span> 1f;</div>
+<div class="line"><span class="lineno">18364</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;darthmorf&quot;</span>:</div>
+<div class="line"><span class="lineno">18365</span>                laserLuminance = MathHelper.Lerp(0f, 0.2f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18366</span>                laserAlphaMultiplier = 0.4f;</div>
+<div class="line"><span class="lineno">18367</span>                <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">18368</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Discipile&quot;</span>:</div>
+<div class="line"><span class="lineno">18369</span>                laserLuminance = MathHelper.Lerp(0f, 0.4f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18370</span>                laserAlphaMultiplier = 0.35f;</div>
+<div class="line"><span class="lineno">18371</span>                <span class="keywordflow">return</span> 0.55f;</div>
+<div class="line"><span class="lineno">18372</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Jenosis&quot;</span>:</div>
+<div class="line"><span class="lineno">18373</span>                <span class="keywordflow">return</span> 0.66f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.08f;</div>
+<div class="line"><span class="lineno">18374</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Kazzymodus&quot;</span>:</div>
+<div class="line"><span class="lineno">18375</span>                laserLuminance = MathHelper.Lerp(0.6f, 0.8f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 90.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18376</span>                laserAlphaMultiplier = 0.3f;</div>
+<div class="line"><span class="lineno">18377</span>                <span class="keywordflow">return</span> 0.33f;</div>
+<div class="line"><span class="lineno">18378</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Khaios&quot;</span>:</div>
+<div class="line"><span class="lineno">18379</span>                laserLuminance = MathHelper.Lerp(0f, 0.1f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18380</span>                laserAlphaMultiplier = 0.25f;</div>
+<div class="line"><span class="lineno">18381</span>                <span class="keywordflow">return</span> 0.35f;</div>
+<div class="line"><span class="lineno">18382</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Loki&quot;</span>:</div>
+<div class="line"><span class="lineno">18383</span>                laserLuminance = MathHelper.Lerp(0f, 0.3f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 5.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18384</span>                laserAlphaMultiplier = 0.4f;</div>
+<div class="line"><span class="lineno">18385</span>                <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">18386</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;ManaUser&quot;</span>:</div>
+<div class="line"><span class="lineno">18387</span>                <span class="keywordflow">return</span> 0.49f + (float)Math.Cos(timeForVisualEffects / 140.0 * 6.2831854820251465) * 0.08f;</div>
+<div class="line"><span class="lineno">18388</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Mid&quot;</span>:</div>
+<div class="line"><span class="lineno">18389</span>                laserLuminance = 0.25f;</div>
+<div class="line"><span class="lineno">18390</span>                laserAlphaMultiplier = 0.4f;</div>
+<div class="line"><span class="lineno">18391</span>                <span class="keywordflow">return</span> 0.86f + (float)Math.Cos(timeForVisualEffects / 270.0 * 6.2831854820251465) * 0.13f;</div>
+<div class="line"><span class="lineno">18392</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Nimbus&quot;</span>:</div>
+<div class="line"><span class="lineno">18393</span>                laserLuminance = MathHelper.Lerp(0f, 0.3f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 20.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18394</span>                laserAlphaMultiplier = 0.2f;</div>
+<div class="line"><span class="lineno">18395</span>                <span class="keywordflow">return</span> 0.75f;</div>
+<div class="line"><span class="lineno">18396</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;ppowersteef&quot;</span>:</div>
+<div class="line"><span class="lineno">18397</span>                laserLuminance = MathHelper.Lerp(0.1f, 0.5f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18398</span>                laserAlphaMultiplier = 0.25f;</div>
+<div class="line"><span class="lineno">18399</span>                <span class="keywordflow">return</span> 0.6f;</div>
+<div class="line"><span class="lineno">18400</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;RBrandon&quot;</span>:</div>
+<div class="line"><span class="lineno">18401</span>                laserLuminance = MathHelper.Lerp(0f, 0.5f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 105.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18402</span>                laserAlphaMultiplier = 0.4f;</div>
+<div class="line"><span class="lineno">18403</span>                <span class="keywordflow">return</span> 1f;</div>
+<div class="line"><span class="lineno">18404</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Redigit&quot;</span>:</div>
+<div class="line"><span class="lineno">18405</span>                <span class="keywordflow">return</span> 0.7f;</div>
+<div class="line"><span class="lineno">18406</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Serenity&quot;</span>:</div>
+<div class="line"><span class="lineno">18407</span>                laserLuminance = MathHelper.Lerp(0.9f, 0.65f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18408</span>                laserAlphaMultiplier = 0.3f;</div>
+<div class="line"><span class="lineno">18409</span>                <span class="keywordflow">return</span> 0.85f;</div>
+<div class="line"><span class="lineno">18410</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Sigma&quot;</span>:</div>
+<div class="line"><span class="lineno">18411</span>                <span class="keywordflow">return</span> 0.06f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.06f;</div>
+<div class="line"><span class="lineno">18412</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;teiull&quot;</span>:</div>
+<div class="line"><span class="lineno">18413</span>                <span class="keywordflow">return</span> 0.5f + (float)Math.Cos(timeForVisualEffects / 45.0 * 6.2831854820251465) * 0.3f;</div>
+<div class="line"><span class="lineno">18414</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unit One&quot;</span>:</div>
+<div class="line"><span class="lineno">18415</span>                <span class="keywordflow">return</span> 0.38f + (float)Math.Cos(timeForVisualEffects / 90.0 * 6.2831854820251465) * 0.24f;</div>
+<div class="line"><span class="lineno">18416</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Vulpes Inculta&quot;</span>:</div>
+<div class="line"><span class="lineno">18417</span>                <span class="keywordflow">return</span> 0.7f + (float)Math.Cos(timeForVisualEffects / 180.0 * 6.2831854820251465) * 0.05f;</div>
+<div class="line"><span class="lineno">18418</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Waze3174&quot;</span>:</div>
+<div class="line"><span class="lineno">18419</span>                <span class="keywordflow">return</span> 0.38f + (float)Math.Cos(timeForVisualEffects / 90.0 * 6.2831854820251465) * 0.24f;</div>
+<div class="line"><span class="lineno">18420</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Xman101&quot;</span>:</div>
+<div class="line"><span class="lineno">18421</span>                laserLuminance = MathHelper.Lerp(0.9f, 0.55f, Utils.GetLerpValue(-1f, 1f, (<span class="keywordtype">float</span>)Math.Cos(timeForVisualEffects / 120.0 * 6.2831854820251465)));</div>
+<div class="line"><span class="lineno">18422</span>                laserAlphaMultiplier = 0.2f;</div>
+<div class="line"><span class="lineno">18423</span>                <span class="keywordflow">return</span> 0.33f;</div>
+<div class="line"><span class="lineno">18424</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Zoomo&quot;</span>:</div>
+<div class="line"><span class="lineno">18425</span>                <span class="keywordflow">return</span> 0.77f;</div>
+<div class="line"><span class="lineno">18426</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Random&quot;</span>:</div>
+<div class="line"><span class="lineno">18427</span>                <span class="keywordflow">return</span> Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">18428</span>            }</div>
+<div class="line"><span class="lineno">18429</span>        }</div>
+<div class="line"><span class="lineno">18430</span>        <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)laserIndex / 6f;</div>
+<div class="line"><span class="lineno">18431</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a7223719277be4afd24a2496351a9a22f.html#a7223719277be4afd24a2496351a9a22f">Terraria.Utils.GetLerpValue()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0d3c51710cd1629940eb7743f3e83b09.html#a0d3c51710cd1629940eb7743f3e83b09">Terraria.Player.name</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_ace5abf11f01dac36c0af0f61ab255c10.html#ace5abf11f01dac36c0af0f61ab255c10">Terraria.Utils.PingPongFrom01To010()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aba54d6a437cb7ecd12fdd4aa36cb45d2.html#aba54d6a437cb7ecd12fdd4aa36cb45d2">Terraria.Main.rgbToHsl()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a633bdb2ffc80ef50d2146d2424c6228b.html#a633bdb2ffc80ef50d2146d2424c6228b">Terraria.Main.timeForVisualEffects</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a738e534b58d5ed6a9aa474e4de9713d7.html#a738e534b58d5ed6a9aa474e4de9713d7">Terraria.Utils.Turn01ToCyclic010()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

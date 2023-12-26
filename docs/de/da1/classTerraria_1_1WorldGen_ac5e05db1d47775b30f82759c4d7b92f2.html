@@ -117,6 +117,21 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_ac5e05db1d47775b30f82
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">76818</span>    {</div>
+<div class="line"><span class="lineno">76819</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">76820</span>        {</div>
+<div class="line"><span class="lineno">76821</span>            <span class="keywordflow">if</span> (Main.npc[i].active &amp;&amp; (Main.npc[i].type == 437 || Main.npc[i].type == 438 || Main.npc[i].type == 379))</div>
+<div class="line"><span class="lineno">76822</span>            {</div>
+<div class="line"><span class="lineno">76823</span>                Main.npc[i].active = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">76824</span>                <span class="keywordflow">if</span> (Main.netMode != 1)</div>
+<div class="line"><span class="lineno">76825</span>                {</div>
+<div class="line"><span class="lineno">76826</span>                    NetMessage.SendData(23, -1, -1, <span class="keyword">null</span>, i);</div>
+<div class="line"><span class="lineno">76827</span>                }</div>
+<div class="line"><span class="lineno">76828</span>            }</div>
+<div class="line"><span class="lineno">76829</span>        }</div>
+<div class="line"><span class="lineno">76830</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, and <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a8b3690049e6958f9002cdc6605efe7fd.html#a8b3690049e6958f9002cdc6605efe7fd">Terraria.NPC.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

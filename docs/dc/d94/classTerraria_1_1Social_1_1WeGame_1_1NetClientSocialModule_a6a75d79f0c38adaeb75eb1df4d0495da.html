@@ -117,6 +117,26 @@ $(function(){initNavTree('dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientS
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordtype">string</span>[] commandLineArgs = Environment.GetCommandLineArgs();</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> commandLineArgs)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;--rail_connect_cmd=&quot;</span>;</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordtype">int</span> num = text.IndexOf(text2);</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                ulong result = 0uL;</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">if</span> (ulong.TryParse(text.Substring(num + text2.Length), out result))</div>
+<div class="line"><span class="lineno">  169</span>                {</div>
+<div class="line"><span class="lineno">  170</span>                    ((RailComparableID)server_id).id_ = result;</div>
+<div class="line"><span class="lineno">  171</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  172</span>                }</div>
+<div class="line"><span class="lineno">  173</span>            }</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d94/classTerraria_1_1Social_1_1WeGame_1_1NetClientSocialModule_a8880d3c6fd7e9391810f3935148ffc48.html#a8880d3c6fd7e9391810f3935148ffc48">Terraria.Social.WeGame.NetClientSocialModule.CheckParameters()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,80 @@ $(function(){initNavTree('d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Tile
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 7602</span>    {</div>
+<div class="line"><span class="lineno"> 7603</span>        Vector2 unscaledPosition = Main.Camera.UnscaledPosition;</div>
+<div class="line"><span class="lineno"> 7604</span>        Vector2 zero = Vector2.Zero;</div>
+<div class="line"><span class="lineno"> 7605</span>        <span class="keywordtype">int</span> num = 4;</div>
+<div class="line"><span class="lineno"> 7606</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">_specialsCount</a>[num];</div>
+<div class="line"><span class="lineno"> 7607</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno"> 7608</span>        {</div>
+<div class="line"><span class="lineno"> 7609</span>            Point point = <a class="code hl_variable" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">_specialPositions</a>[num][i];</div>
+<div class="line"><span class="lineno"> 7610</span>            <span class="keywordtype">int</span> x = point.X;</div>
+<div class="line"><span class="lineno"> 7611</span>            <span class="keywordtype">int</span> num3 = point.Y;</div>
+<div class="line"><span class="lineno"> 7612</span>            <span class="keywordtype">int</span> sizeX = 1;</div>
+<div class="line"><span class="lineno"> 7613</span>            <span class="keywordtype">int</span> num4 = 1;</div>
+<div class="line"><span class="lineno"> 7614</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, num3];</div>
+<div class="line"><span class="lineno"> 7615</span>            <span class="keywordflow">if</span> (tile != <span class="keyword">null</span> &amp;&amp; tile.active())</div>
+<div class="line"><span class="lineno"> 7616</span>            {</div>
+<div class="line"><span class="lineno"> 7617</span>                <span class="keywordflow">switch</span> (Main.tile[x, num3].type)</div>
+<div class="line"><span class="lineno"> 7618</span>                {</div>
+<div class="line"><span class="lineno"> 7619</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 7620</span>                    sizeX = 2;</div>
+<div class="line"><span class="lineno"> 7621</span>                    num4 = 5;</div>
+<div class="line"><span class="lineno"> 7622</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7623</span>                <span class="keywordflow">case</span> 236:</div>
+<div class="line"><span class="lineno"> 7624</span>                <span class="keywordflow">case</span> 238:</div>
+<div class="line"><span class="lineno"> 7625</span>                    sizeX = (num4 = 2);</div>
+<div class="line"><span class="lineno"> 7626</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7627</span>                <span class="keywordflow">case</span> 233:</div>
+<div class="line"><span class="lineno"> 7628</span>                    sizeX = ((Main.tile[x, num3].frameY != 0) ? 2 : 3);</div>
+<div class="line"><span class="lineno"> 7629</span>                    num4 = 2;</div>
+<div class="line"><span class="lineno"> 7630</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7631</span>                <span class="keywordflow">case</span> 530:</div>
+<div class="line"><span class="lineno"> 7632</span>                <span class="keywordflow">case</span> 651:</div>
+<div class="line"><span class="lineno"> 7633</span>                    sizeX = 3;</div>
+<div class="line"><span class="lineno"> 7634</span>                    num4 = 2;</div>
+<div class="line"><span class="lineno"> 7635</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7636</span>                <span class="keywordflow">case</span> 485:</div>
+<div class="line"><span class="lineno"> 7637</span>                <span class="keywordflow">case</span> 490:</div>
+<div class="line"><span class="lineno"> 7638</span>                <span class="keywordflow">case</span> 521:</div>
+<div class="line"><span class="lineno"> 7639</span>                <span class="keywordflow">case</span> 522:</div>
+<div class="line"><span class="lineno"> 7640</span>                <span class="keywordflow">case</span> 523:</div>
+<div class="line"><span class="lineno"> 7641</span>                <span class="keywordflow">case</span> 524:</div>
+<div class="line"><span class="lineno"> 7642</span>                <span class="keywordflow">case</span> 525:</div>
+<div class="line"><span class="lineno"> 7643</span>                <span class="keywordflow">case</span> 526:</div>
+<div class="line"><span class="lineno"> 7644</span>                <span class="keywordflow">case</span> 527:</div>
+<div class="line"><span class="lineno"> 7645</span>                <span class="keywordflow">case</span> 652:</div>
+<div class="line"><span class="lineno"> 7646</span>                    sizeX = 2;</div>
+<div class="line"><span class="lineno"> 7647</span>                    num4 = 2;</div>
+<div class="line"><span class="lineno"> 7648</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7649</span>                <span class="keywordflow">case</span> 489:</div>
+<div class="line"><span class="lineno"> 7650</span>                    sizeX = 2;</div>
+<div class="line"><span class="lineno"> 7651</span>                    num4 = 3;</div>
+<div class="line"><span class="lineno"> 7652</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7653</span>                <span class="keywordflow">case</span> 493:</div>
+<div class="line"><span class="lineno"> 7654</span>                    sizeX = 1;</div>
+<div class="line"><span class="lineno"> 7655</span>                    num4 = 2;</div>
+<div class="line"><span class="lineno"> 7656</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7657</span>                <span class="keywordflow">case</span> 519:</div>
+<div class="line"><span class="lineno"> 7658</span>                    sizeX = 1;</div>
+<div class="line"><span class="lineno"> 7659</span>                    num4 = <a class="code hl_function" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa1834e12119afafb002004e35cad2e95.html#aa1834e12119afafb002004e35cad2e95">ClimbCatTail</a>(x, num3);</div>
+<div class="line"><span class="lineno"> 7660</span>                    num3 -= num4 - 1;</div>
+<div class="line"><span class="lineno"> 7661</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 7662</span>                }</div>
+<div class="line"><span class="lineno"> 7663</span>                <a class="code hl_function" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a829ca377e2da2c79dfbd5f1ae777a60a.html#a829ca377e2da2c79dfbd5f1ae777a60a">DrawMultiTileGrassInWind</a>(unscaledPosition, zero, x, num3, sizeX, num4);</div>
+<div class="line"><span class="lineno"> 7664</span>            }</div>
+<div class="line"><span class="lineno"> 7665</span>        }</div>
+<div class="line"><span class="lineno"> 7666</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a829ca377e2da2c79dfbd5f1ae777a60a_html_a829ca377e2da2c79dfbd5f1ae777a60a"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a829ca377e2da2c79dfbd5f1ae777a60a.html#a829ca377e2da2c79dfbd5f1ae777a60a">Terraria.GameContent.Drawing.TileDrawing.DrawMultiTileGrassInWind</a></div><div class="ttdeci">void DrawMultiTileGrassInWind(Vector2 screenPosition, Vector2 offSet, int topLeftX, int topLeftY, int sizeX, int sizeY)</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:7777</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa1834e12119afafb002004e35cad2e95_html_aa1834e12119afafb002004e35cad2e95"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa1834e12119afafb002004e35cad2e95.html#aa1834e12119afafb002004e35cad2e95">Terraria.GameContent.Drawing.TileDrawing.ClimbCatTail</a></div><div class="ttdeci">int ClimbCatTail(int originx, int originy)</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:7668</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef_html_ab517a179b7049e7b28b3e60f492954ef"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">Terraria.GameContent.Drawing.TileDrawing._specialPositions</a></div><div class="ttdeci">Point[][] _specialPositions</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:75</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf_html_af219d870ab59557f15af1fc3081ccbdf"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">Terraria.GameContent.Drawing.TileDrawing._specialsCount</a></div><div class="ttdeci">int[] _specialsCount</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:73</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">Terraria.GameContent.Drawing.TileDrawing._specialPositions</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">Terraria.GameContent.Drawing.TileDrawing._specialsCount</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7a1651da7dd4354d18c9c1a64de10789.html#a7a1651da7dd4354d18c9c1a64de10789">Terraria.Main.Camera</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa1834e12119afafb002004e35cad2e95.html#aa1834e12119afafb002004e35cad2e95">Terraria.GameContent.Drawing.TileDrawing.ClimbCatTail()</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a829ca377e2da2c79dfbd5f1ae777a60a.html#a829ca377e2da2c79dfbd5f1ae777a60a">Terraria.GameContent.Drawing.TileDrawing.DrawMultiTileGrassInWind()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a013f643e0e139da6a33e2444e4a14f57.html#a013f643e0e139da6a33e2444e4a14f57">Terraria.Graphics.Camera.UnscaledPosition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a195bc3275a5fbd6fe52452a5a2251e49.html#a195bc3275a5fbd6fe52452a5a2251e49">Terraria.GameContent.Drawing.TileDrawing.PostDrawTiles()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

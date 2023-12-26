@@ -117,6 +117,96 @@ $(function(){initNavTree('df/d43/classTerraria_1_1CombatText_a0933f746c373579518
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_aa2a3e7d5b750bdd12e4d859e450e0212.html#aa2a3e7d5b750bdd12e4d859e450e0212">active</a>)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">float</span> targetScale = <a class="code hl_property" href="../../df/d43/classTerraria_1_1CombatText_a9995d96db2759e89526b9e26ab4e61b3.html#a9995d96db2759e89526b9e26ab4e61b3">TargetScale</a>;</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">alpha</a> += (float)<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">alphaDir</a> * 0.05f;</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">alpha</a> &lt;= 0.6)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">alphaDir</a> = 1;</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">alpha</a> &gt;= 1f)</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">alpha</a> = 1f;</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">alphaDir</a> = -1;</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a8b0e28f0e654027fc54f6ba36f7e2c53.html#a8b0e28f0e654027fc54f6ba36f7e2c53">dot</a>)</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            velocity.Y += 0.15f;</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            velocity.Y *= 0.92f;</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9.html#a5235c18945d111c7c0c135cbafa543a9">crit</a>)</div>
+<div class="line"><span class="lineno">  152</span>            {</div>
+<div class="line"><span class="lineno">  153</span>                velocity.Y *= 0.92f;</div>
+<div class="line"><span class="lineno">  154</span>            }</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        velocity.X *= 0.93f;</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a191fc5100ca324041ea4c61983d86f91.html#a191fc5100ca324041ea4c61983d86f91">position</a> += <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a9921b6e8a480a9c8f24f84b178e22079.html#a9921b6e8a480a9c8f24f84b178e22079">velocity</a>;</div>
+<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca.html#a9ddc54bc93dfda98e0e0b41142ae8fca">lifeTime</a>--;</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca.html#a9ddc54bc93dfda98e0e0b41142ae8fca">lifeTime</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> -= 0.1f * targetScale;</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> &lt; 0.1)</div>
+<div class="line"><span class="lineno">  163</span>            {</div>
+<div class="line"><span class="lineno">  164</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_aa2a3e7d5b750bdd12e4d859e450e0212.html#aa2a3e7d5b750bdd12e4d859e450e0212">active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  165</span>            }</div>
+<div class="line"><span class="lineno">  166</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca.html#a9ddc54bc93dfda98e0e0b41142ae8fca">lifeTime</a> = 0;</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9.html#a5235c18945d111c7c0c135cbafa543a9">crit</a>)</div>
+<div class="line"><span class="lineno">  168</span>            {</div>
+<div class="line"><span class="lineno">  169</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">alphaDir</a> = -1;</div>
+<div class="line"><span class="lineno">  170</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> += 0.07f * targetScale;</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9.html#a5235c18945d111c7c0c135cbafa543a9">crit</a>)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a9921b6e8a480a9c8f24f84b178e22079.html#a9921b6e8a480a9c8f24f84b178e22079">velocity</a>.X &lt; 0f)</div>
+<div class="line"><span class="lineno">  177</span>            {</div>
+<div class="line"><span class="lineno">  178</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_afdd4fadb530edcc2943d0291d6a137cd.html#afdd4fadb530edcc2943d0291d6a137cd">rotation</a> += 0.001f;</div>
+<div class="line"><span class="lineno">  179</span>            }</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  181</span>            {</div>
+<div class="line"><span class="lineno">  182</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_afdd4fadb530edcc2943d0291d6a137cd.html#afdd4fadb530edcc2943d0291d6a137cd">rotation</a> -= 0.001f;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a8b0e28f0e654027fc54f6ba36f7e2c53.html#a8b0e28f0e654027fc54f6ba36f7e2c53">dot</a>)</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> += 0.5f * targetScale;</div>
+<div class="line"><span class="lineno">  188</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> &gt; 0.8 * (double)targetScale)</div>
+<div class="line"><span class="lineno">  189</span>            {</div>
+<div class="line"><span class="lineno">  190</span>                <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> = 0.8f * targetScale;</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> &lt; targetScale)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> += 0.1f * targetScale;</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> &gt; targetScale)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            <a class="code hl_variable" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">scale</a> = targetScale;</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493_html_a0e66a1e184a2564b785290bf95eec493"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">Terraria.CombatText.scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition</b> CombatText.cs:38</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a191fc5100ca324041ea4c61983d86f91_html_a191fc5100ca324041ea4c61983d86f91"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a191fc5100ca324041ea4c61983d86f91.html#a191fc5100ca324041ea4c61983d86f91">Terraria.CombatText.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> CombatText.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9_html_a5235c18945d111c7c0c135cbafa543a9"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9.html#a5235c18945d111c7c0c135cbafa543a9">Terraria.CombatText.crit</a></div><div class="ttdeci">bool crit</div><div class="ttdef"><b>Definition</b> CombatText.cs:48</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead_html_a57c73a3697c35d1601a16369d6d28ead"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">Terraria.CombatText.alphaDir</a></div><div class="ttdeci">int alphaDir</div><div class="ttdef"><b>Definition</b> CombatText.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a8b0e28f0e654027fc54f6ba36f7e2c53_html_a8b0e28f0e654027fc54f6ba36f7e2c53"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a8b0e28f0e654027fc54f6ba36f7e2c53.html#a8b0e28f0e654027fc54f6ba36f7e2c53">Terraria.CombatText.dot</a></div><div class="ttdeci">bool dot</div><div class="ttdef"><b>Definition</b> CombatText.cs:50</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a9921b6e8a480a9c8f24f84b178e22079_html_a9921b6e8a480a9c8f24f84b178e22079"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a9921b6e8a480a9c8f24f84b178e22079.html#a9921b6e8a480a9c8f24f84b178e22079">Terraria.CombatText.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> CombatText.cs:30</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a9995d96db2759e89526b9e26ab4e61b3_html_a9995d96db2759e89526b9e26ab4e61b3"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a9995d96db2759e89526b9e26ab4e61b3.html#a9995d96db2759e89526b9e26ab4e61b3">Terraria.CombatText.TargetScale</a></div><div class="ttdeci">static float TargetScale</div><div class="ttdef"><b>Definition</b> CombatText.cs:52</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca_html_a9ddc54bc93dfda98e0e0b41142ae8fca"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca.html#a9ddc54bc93dfda98e0e0b41142ae8fca">Terraria.CombatText.lifeTime</a></div><div class="ttdeci">int lifeTime</div><div class="ttdef"><b>Definition</b> CombatText.cs:46</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_aa2a3e7d5b750bdd12e4d859e450e0212_html_aa2a3e7d5b750bdd12e4d859e450e0212"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_aa2a3e7d5b750bdd12e4d859e450e0212.html#aa2a3e7d5b750bdd12e4d859e450e0212">Terraria.CombatText.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition</b> CombatText.cs:44</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e_html_af3cc311c0a1fb311028656920e92d89e"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">Terraria.CombatText.alpha</a></div><div class="ttdeci">float alpha</div><div class="ttdef"><b>Definition</b> CombatText.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1CombatText_afdd4fadb530edcc2943d0291d6a137cd_html_afdd4fadb530edcc2943d0291d6a137cd"><div class="ttname"><a href="../../df/d43/classTerraria_1_1CombatText_afdd4fadb530edcc2943d0291d6a137cd.html#afdd4fadb530edcc2943d0291d6a137cd">Terraria.CombatText.rotation</a></div><div class="ttdeci">float rotation</div><div class="ttdef"><b>Definition</b> CombatText.cs:40</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d43/classTerraria_1_1CombatText_aa2a3e7d5b750bdd12e4d859e450e0212.html#aa2a3e7d5b750bdd12e4d859e450e0212">Terraria.CombatText.active</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_af3cc311c0a1fb311028656920e92d89e.html#af3cc311c0a1fb311028656920e92d89e">Terraria.CombatText.alpha</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a57c73a3697c35d1601a16369d6d28ead.html#a57c73a3697c35d1601a16369d6d28ead">Terraria.CombatText.alphaDir</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a5235c18945d111c7c0c135cbafa543a9.html#a5235c18945d111c7c0c135cbafa543a9">Terraria.CombatText.crit</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a8b0e28f0e654027fc54f6ba36f7e2c53.html#a8b0e28f0e654027fc54f6ba36f7e2c53">Terraria.CombatText.dot</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a9ddc54bc93dfda98e0e0b41142ae8fca.html#a9ddc54bc93dfda98e0e0b41142ae8fca">Terraria.CombatText.lifeTime</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a191fc5100ca324041ea4c61983d86f91.html#a191fc5100ca324041ea4c61983d86f91">Terraria.CombatText.position</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_afdd4fadb530edcc2943d0291d6a137cd.html#afdd4fadb530edcc2943d0291d6a137cd">Terraria.CombatText.rotation</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a0e66a1e184a2564b785290bf95eec493.html#a0e66a1e184a2564b785290bf95eec493">Terraria.CombatText.scale</a>, <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a9995d96db2759e89526b9e26ab4e61b3.html#a9995d96db2759e89526b9e26ab4e61b3">Terraria.CombatText.TargetScale</a>, and <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a9921b6e8a480a9c8f24f84b178e22079.html#a9921b6e8a480a9c8f24f84b178e22079">Terraria.CombatText.velocity</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d43/classTerraria_1_1CombatText_a3be540c8f4a03a53948be0339057aa75.html#a3be540c8f4a03a53948be0339057aa75">Terraria.CombatText.UpdateCombatText()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

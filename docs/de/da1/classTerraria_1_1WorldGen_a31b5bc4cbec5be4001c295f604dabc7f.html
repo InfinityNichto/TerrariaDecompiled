@@ -151,6 +151,158 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a31b5bc4cbec5be4001c2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">53553</span>    {</div>
+<div class="line"><span class="lineno">53554</span>        _ = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">53555</span>        <span class="keywordtype">int</span> num = i + xoffset;</div>
+<div class="line"><span class="lineno">53556</span>        topTextureFrameWidth = 80;</div>
+<div class="line"><span class="lineno">53557</span>        topTextureFrameHeight = 80;</div>
+<div class="line"><span class="lineno">53558</span>        floorY = j;</div>
+<div class="line"><span class="lineno">53559</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">53560</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 100; k++)</div>
+<div class="line"><span class="lineno">53561</span>        {</div>
+<div class="line"><span class="lineno">53562</span>            floorY = j + k;</div>
+<div class="line"><span class="lineno">53563</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[num, floorY];</div>
+<div class="line"><span class="lineno">53564</span>            <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">53565</span>            {</div>
+<div class="line"><span class="lineno">53566</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">53567</span>            }</div>
+<div class="line"><span class="lineno">53568</span>            <span class="keywordflow">switch</span> (tile.type)</div>
+<div class="line"><span class="lineno">53569</span>            {</div>
+<div class="line"><span class="lineno">53570</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">53571</span>            <span class="keywordflow">case</span> 477:</div>
+<div class="line"><span class="lineno">53572</span>            {</div>
+<div class="line"><span class="lineno">53573</span>                <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">53574</span>                num4 = ((num &lt;= Main.treeX[0]) ? <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(0) : ((num &lt;= Main.treeX[1]) ? <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(1) : ((num &gt; Main.treeX[2]) ? <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(3) : <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(2))));</div>
+<div class="line"><span class="lineno">53575</span>                <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno">53576</span>                {</div>
+<div class="line"><span class="lineno">53577</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">53578</span>                    treeStyle = 0;</div>
+<div class="line"><span class="lineno">53579</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">53580</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">53581</span>                    treeStyle = 10;</div>
+<div class="line"><span class="lineno">53582</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">53583</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">53584</span>                    treeStyle = 5 + num4;</div>
+<div class="line"><span class="lineno">53585</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">53586</span>                }</div>
+<div class="line"><span class="lineno">53587</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53588</span>            }</div>
+<div class="line"><span class="lineno">53589</span>            <span class="keywordflow">case</span> 23:</div>
+<div class="line"><span class="lineno">53590</span>            <span class="keywordflow">case</span> 661:</div>
+<div class="line"><span class="lineno">53591</span>                treeStyle = 1;</div>
+<div class="line"><span class="lineno">53592</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53593</span>            <span class="keywordflow">case</span> 70:</div>
+<div class="line"><span class="lineno">53594</span>                treeStyle = 14;</div>
+<div class="line"><span class="lineno">53595</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53596</span>            <span class="keywordflow">case</span> 199:</div>
+<div class="line"><span class="lineno">53597</span>            <span class="keywordflow">case</span> 662:</div>
+<div class="line"><span class="lineno">53598</span>                treeStyle = 5;</div>
+<div class="line"><span class="lineno">53599</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53600</span>            <span class="keywordflow">case</span> 60:</div>
+<div class="line"><span class="lineno">53601</span>                topTextureFrameHeight = 96;</div>
+<div class="line"><span class="lineno">53602</span>                topTextureFrameWidth = 114;</div>
+<div class="line"><span class="lineno">53603</span>                treeStyle = 2;</div>
+<div class="line"><span class="lineno">53604</span>                num2 = <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(5);</div>
+<div class="line"><span class="lineno">53605</span>                <span class="keywordflow">if</span> (num2 == 1)</div>
+<div class="line"><span class="lineno">53606</span>                {</div>
+<div class="line"><span class="lineno">53607</span>                    treeStyle = 11;</div>
+<div class="line"><span class="lineno">53608</span>                    topTextureFrameWidth = 116;</div>
+<div class="line"><span class="lineno">53609</span>                }</div>
+<div class="line"><span class="lineno">53610</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)floorY &gt; Main.worldSurface)</div>
+<div class="line"><span class="lineno">53611</span>                {</div>
+<div class="line"><span class="lineno">53612</span>                    treeStyle = 13;</div>
+<div class="line"><span class="lineno">53613</span>                    topTextureFrameWidth = 116;</div>
+<div class="line"><span class="lineno">53614</span>                }</div>
+<div class="line"><span class="lineno">53615</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53616</span>            <span class="keywordflow">case</span> 147:</div>
+<div class="line"><span class="lineno">53617</span>                treeStyle = 4;</div>
+<div class="line"><span class="lineno">53618</span>                num2 = <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">TreeTops</a>.<a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">GetTreeStyle</a>(6);</div>
+<div class="line"><span class="lineno">53619</span>                <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">53620</span>                {</div>
+<div class="line"><span class="lineno">53621</span>                    treeStyle = 12;</div>
+<div class="line"><span class="lineno">53622</span>                    <span class="keywordflow">if</span> (i % 10 == 0)</div>
+<div class="line"><span class="lineno">53623</span>                    {</div>
+<div class="line"><span class="lineno">53624</span>                        treeStyle = 18;</div>
+<div class="line"><span class="lineno">53625</span>                    }</div>
+<div class="line"><span class="lineno">53626</span>                }</div>
+<div class="line"><span class="lineno">53627</span>                <span class="keywordflow">if</span> (num2 == 2 || num2 == 3 || num2 == 32 || num2 == 4 || num2 == 42 || num2 == 5 || num2 == 7)</div>
+<div class="line"><span class="lineno">53628</span>                {</div>
+<div class="line"><span class="lineno">53629</span>                    <span class="keywordflow">if</span> (num2 % 2 == 0)</div>
+<div class="line"><span class="lineno">53630</span>                    {</div>
+<div class="line"><span class="lineno">53631</span>                        <span class="keywordflow">if</span> (i &lt; Main.maxTilesX / 2)</div>
+<div class="line"><span class="lineno">53632</span>                        {</div>
+<div class="line"><span class="lineno">53633</span>                            treeStyle = 16;</div>
+<div class="line"><span class="lineno">53634</span>                        }</div>
+<div class="line"><span class="lineno">53635</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">53636</span>                        {</div>
+<div class="line"><span class="lineno">53637</span>                            treeStyle = 17;</div>
+<div class="line"><span class="lineno">53638</span>                        }</div>
+<div class="line"><span class="lineno">53639</span>                    }</div>
+<div class="line"><span class="lineno">53640</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &gt; Main.maxTilesX / 2)</div>
+<div class="line"><span class="lineno">53641</span>                    {</div>
+<div class="line"><span class="lineno">53642</span>                        treeStyle = 16;</div>
+<div class="line"><span class="lineno">53643</span>                    }</div>
+<div class="line"><span class="lineno">53644</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">53645</span>                    {</div>
+<div class="line"><span class="lineno">53646</span>                        treeStyle = 17;</div>
+<div class="line"><span class="lineno">53647</span>                    }</div>
+<div class="line"><span class="lineno">53648</span>                }</div>
+<div class="line"><span class="lineno">53649</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53650</span>            <span class="keywordflow">case</span> 109:</div>
+<div class="line"><span class="lineno">53651</span>            <span class="keywordflow">case</span> 492:</div>
+<div class="line"><span class="lineno">53652</span>            {</div>
+<div class="line"><span class="lineno">53653</span>                topTextureFrameHeight = 140;</div>
+<div class="line"><span class="lineno">53654</span>                <span class="keywordtype">int</span> num3 = (treeStyle = <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_aff525ad959916534454d7c43d5ad1e6f.html#aff525ad959916534454d7c43d5ad1e6f">GetHollowTreeFoliageStyle</a>());</div>
+<div class="line"><span class="lineno">53655</span>                <span class="keywordflow">if</span> (num3 == 19)</div>
+<div class="line"><span class="lineno">53656</span>                {</div>
+<div class="line"><span class="lineno">53657</span>                    topTextureFrameWidth = 120;</div>
+<div class="line"><span class="lineno">53658</span>                }</div>
+<div class="line"><span class="lineno">53659</span>                <span class="keywordflow">if</span> (num3 == 20)</div>
+<div class="line"><span class="lineno">53660</span>                {</div>
+<div class="line"><span class="lineno">53661</span>                    treeStyle = 20;</div>
+<div class="line"><span class="lineno">53662</span>                    <span class="keywordflow">if</span> (i % 6 == 1)</div>
+<div class="line"><span class="lineno">53663</span>                    {</div>
+<div class="line"><span class="lineno">53664</span>                        treeFrame += 3;</div>
+<div class="line"><span class="lineno">53665</span>                    }</div>
+<div class="line"><span class="lineno">53666</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 6 == 2)</div>
+<div class="line"><span class="lineno">53667</span>                    {</div>
+<div class="line"><span class="lineno">53668</span>                        treeFrame += 6;</div>
+<div class="line"><span class="lineno">53669</span>                    }</div>
+<div class="line"><span class="lineno">53670</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 6 == 3)</div>
+<div class="line"><span class="lineno">53671</span>                    {</div>
+<div class="line"><span class="lineno">53672</span>                        treeFrame += 9;</div>
+<div class="line"><span class="lineno">53673</span>                    }</div>
+<div class="line"><span class="lineno">53674</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 6 == 4)</div>
+<div class="line"><span class="lineno">53675</span>                    {</div>
+<div class="line"><span class="lineno">53676</span>                        treeFrame += 12;</div>
+<div class="line"><span class="lineno">53677</span>                    }</div>
+<div class="line"><span class="lineno">53678</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 6 == 5)</div>
+<div class="line"><span class="lineno">53679</span>                    {</div>
+<div class="line"><span class="lineno">53680</span>                        treeFrame += 15;</div>
+<div class="line"><span class="lineno">53681</span>                    }</div>
+<div class="line"><span class="lineno">53682</span>                }</div>
+<div class="line"><span class="lineno">53683</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 3 == 1)</div>
+<div class="line"><span class="lineno">53684</span>                {</div>
+<div class="line"><span class="lineno">53685</span>                    treeFrame += 3;</div>
+<div class="line"><span class="lineno">53686</span>                }</div>
+<div class="line"><span class="lineno">53687</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i % 3 == 2)</div>
+<div class="line"><span class="lineno">53688</span>                {</div>
+<div class="line"><span class="lineno">53689</span>                    treeFrame += 6;</div>
+<div class="line"><span class="lineno">53690</span>                }</div>
+<div class="line"><span class="lineno">53691</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53692</span>            }</div>
+<div class="line"><span class="lineno">53693</span>            }</div>
+<div class="line"><span class="lineno">53694</span>        }</div>
+<div class="line"><span class="lineno">53695</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">53696</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d_html_abf1dff00f8e5fae3078101946f00408d"><div class="ttname"><a href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_abf1dff00f8e5fae3078101946f00408d.html#abf1dff00f8e5fae3078101946f00408d">Terraria.GameContent.TreeTopsInfo.GetTreeStyle</a></div><div class="ttdeci">int GetTreeStyle(int areaId)</div><div class="ttdef"><b>Definition</b> TreeTopsInfo.cs:86</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376_html_a4fcd93cff369424b3cabc7ec65fec376"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4fcd93cff369424b3cabc7ec65fec376.html#a4fcd93cff369424b3cabc7ec65fec376">Terraria.WorldGen.TreeTops</a></div><div class="ttdeci">static TreeTopsInfo TreeTops</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1178</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_aff525ad959916534454d7c43d5ad1e6f_html_aff525ad959916534454d7c43d5ad1e6f"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_aff525ad959916534454d7c43d5ad1e6f.html#aff525ad959916534454d7c43d5ad1e6f">Terraria.WorldGen.GetHollowTreeFoliageStyle</a></div><div class="ttdeci">static int GetHollowTreeFoliageStyle()</div><div class="ttdef"><b>Definition</b> WorldGen.cs:53698</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a42562f5fb23da20caf88269400373347.html#a42562f5fb23da20caf88269400373347">Terraria.Main.treeX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab404e3196056907e778a4f615a8302a8.html#ab404e3196056907e778a4f615a8302a8">Terraria.GameContent.Drawing.TileDrawing.DrawTrees()</a>, and <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa215925fd000aee17a338f46b111da17.html#aa215925fd000aee17a338f46b111da17">Terraria.GameContent.Drawing.TileDrawing.MakeExtraPreparations()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

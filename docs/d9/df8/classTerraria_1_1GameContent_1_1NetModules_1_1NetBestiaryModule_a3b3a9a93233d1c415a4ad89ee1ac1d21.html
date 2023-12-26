@@ -121,6 +121,43 @@ $(function(){initNavTree('d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1N
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (Main.dedServ)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">switch</span> ((<a class="code hl_enumeration" href="../../d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3.html#a41472658321748ef4560659a19c874f3">BestiaryUnlockType</a>)reader.ReadByte())</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3.html#a41472658321748ef4560659a19c874f3">BestiaryUnlockType</a>.Kill:</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">short</span> key3 = reader.ReadInt16();</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordtype">string</span> bestiaryCreditId3 = <a class="code hl_class" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples.html">ContentSamples</a>.<a class="code hl_variable" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39.html#a8e413c5d86ef158f351d63fc925f3b39">NpcsByNetId</a>[key3].GetBestiaryCreditId();</div>
+<div class="line"><span class="lineno">   53</span>            ushort killCount = reader.ReadUInt16();</div>
+<div class="line"><span class="lineno">   54</span>            Main.BestiaryTracker.Kills.SetKillCountDirectly(bestiaryCreditId3, killCount);</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3.html#a41472658321748ef4560659a19c874f3">BestiaryUnlockType</a>.Chat:</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">short</span> key2 = reader.ReadInt16();</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordtype">string</span> bestiaryCreditId2 = <a class="code hl_class" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples.html">ContentSamples</a>.<a class="code hl_variable" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39.html#a8e413c5d86ef158f351d63fc925f3b39">NpcsByNetId</a>[key2].GetBestiaryCreditId();</div>
+<div class="line"><span class="lineno">   61</span>            Main.BestiaryTracker.Chats.SetWasChatWithDirectly(bestiaryCreditId2);</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3.html#a41472658321748ef4560659a19c874f3">BestiaryUnlockType</a>.Sight:</div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">short</span> key = reader.ReadInt16();</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordtype">string</span> bestiaryCreditId = <a class="code hl_class" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples.html">ContentSamples</a>.<a class="code hl_variable" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39.html#a8e413c5d86ef158f351d63fc925f3b39">NpcsByNetId</a>[key].GetBestiaryCreditId();</div>
+<div class="line"><span class="lineno">   68</span>            Main.BestiaryTracker.Sights.SetWasSeenDirectly(bestiaryCreditId);</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3_html_a41472658321748ef4560659a19c874f3"><div class="ttname"><a href="../../d9/df8/classTerraria_1_1GameContent_1_1NetModules_1_1NetBestiaryModule_a41472658321748ef4560659a19c874f3.html#a41472658321748ef4560659a19c874f3">Terraria.GameContent.NetModules.NetBestiaryModule.BestiaryUnlockType</a></div><div class="ttdeci">BestiaryUnlockType</div><div class="ttdef"><b>Definition</b> NetBestiaryModule.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39_html_a8e413c5d86ef158f351d63fc925f3b39"><div class="ttname"><a href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39.html#a8e413c5d86ef158f351d63fc925f3b39">Terraria.ID.ContentSamples.NpcsByNetId</a></div><div class="ttdeci">static Dictionary&lt; int, NPC &gt; NpcsByNetId</div><div class="ttdef"><b>Definition</b> ContentSamples.cs:805</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ContentSamples_html"><div class="ttname"><a href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples.html">Terraria.ID.ContentSamples</a></div><div class="ttdef"><b>Definition</b> ContentSamples.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8e0cac19840bd9833b14d2f3e7cc81a9.html#a8e0cac19840bd9833b14d2f3e7cc81a9">Terraria.Main.BestiaryTracker</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a51e4289394258b7819811f8b448b1a52.html#a51e4289394258b7819811f8b448b1a52">Terraria.Main.dedServ</a>, and <a class="el" href="../../d4/d49/classTerraria_1_1ID_1_1ContentSamples_a8e413c5d86ef158f351d63fc925f3b39.html#a8e413c5d86ef158f351d63fc925f3b39">Terraria.ID.ContentSamples.NpcsByNetId</a>.</p>
 
 </div>
 </div>

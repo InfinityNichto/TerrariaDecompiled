@@ -131,6 +131,56 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aa7d83bd6c0ccfab68ef4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">26499</span>    {</div>
+<div class="line"><span class="lineno">26500</span>        <span class="keywordtype">int</span> num = <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">X</a>;</div>
+<div class="line"><span class="lineno">26501</span>        caveOpenningSize--;</div>
+<div class="line"><span class="lineno">26502</span>        <span class="keywordtype">bool</span> flag;</div>
+<div class="line"><span class="lineno">26503</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">26504</span>        {</div>
+<div class="line"><span class="lineno">26505</span>            num += direction;</div>
+<div class="line"><span class="lineno">26506</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">26507</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = Y - caveOpenningSize + 1; i &lt; <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a> - 1; i++)</div>
+<div class="line"><span class="lineno">26508</span>            {</div>
+<div class="line"><span class="lineno">26509</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num, i))</div>
+<div class="line"><span class="lineno">26510</span>                {</div>
+<div class="line"><span class="lineno">26511</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26512</span>                }</div>
+<div class="line"><span class="lineno">26513</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num + direction, i))</div>
+<div class="line"><span class="lineno">26514</span>                {</div>
+<div class="line"><span class="lineno">26515</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26516</span>                }</div>
+<div class="line"><span class="lineno">26517</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num + direction * 2, i))</div>
+<div class="line"><span class="lineno">26518</span>                {</div>
+<div class="line"><span class="lineno">26519</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">26520</span>                }</div>
+<div class="line"><span class="lineno">26521</span>                Main.tile[num, i].active(active: false);</div>
+<div class="line"><span class="lineno">26522</span>            }</div>
+<div class="line"><span class="lineno">26523</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = Y - caveOpenningSize; j &lt; <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a>; j++)</div>
+<div class="line"><span class="lineno">26524</span>            {</div>
+<div class="line"><span class="lineno">26525</span>                Main.tile[num - direction, j].active(active: false);</div>
+<div class="line"><span class="lineno">26526</span>            }</div>
+<div class="line"><span class="lineno">26527</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num - direction, Y - caveOpenningSize - 1))</div>
+<div class="line"><span class="lineno">26528</span>            {</div>
+<div class="line"><span class="lineno">26529</span>                Main.tile[num - direction, <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a> - caveOpenningSize - 1].wall = 0;</div>
+<div class="line"><span class="lineno">26530</span>            }</div>
+<div class="line"><span class="lineno">26531</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num - direction, Y))</div>
+<div class="line"><span class="lineno">26532</span>            {</div>
+<div class="line"><span class="lineno">26533</span>                Main.tile[num - direction, <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a>].wall = 0;</div>
+<div class="line"><span class="lineno">26534</span>            }</div>
+<div class="line"><span class="lineno">26535</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2) == 0)</div>
+<div class="line"><span class="lineno">26536</span>            {</div>
+<div class="line"><span class="lineno">26537</span>                <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a> += <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-1, 2);</div>
+<div class="line"><span class="lineno">26538</span>            }</div>
+<div class="line"><span class="lineno">26539</span>        }</div>
+<div class="line"><span class="lineno">26540</span>        <span class="keywordflow">while</span> (!flag &amp;&amp; num &gt;= 50 &amp;&amp; num &lt;= Main.maxTilesX - 50 &amp;&amp; Math.Abs(num - X) &lt;= 100);</div>
+<div class="line"><span class="lineno">26541</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">ReLogic.Peripherals.RGB.Logitech.KeyName.X</a></div><div class="ttdeci">@ X</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">ReLogic.Peripherals.RGB.Logitech.KeyName.Y</a></div><div class="ttdeci">@ Y</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

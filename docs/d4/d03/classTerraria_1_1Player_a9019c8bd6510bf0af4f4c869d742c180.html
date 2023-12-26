@@ -117,6 +117,63 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a9019c8bd6510bf0af4f4c8
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4913</span>    {</div>
+<div class="line"><span class="lineno"> 4914</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 4915</span>        Item item = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 4916</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">maxBuffs</a>; i++)</div>
+<div class="line"><span class="lineno"> 4917</span>        {</div>
+<div class="line"><span class="lineno"> 4918</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">buffTime</a>[i] &gt;= 1)</div>
+<div class="line"><span class="lineno"> 4919</span>            {</div>
+<div class="line"><span class="lineno"> 4920</span>                <span class="keywordtype">int</span> num2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c.html#a8750cf1c0394b81bb0a2e78ef27e1f6c">QuickBuff_FindFoodPriority</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i]);</div>
+<div class="line"><span class="lineno"> 4921</span>                <span class="keywordflow">if</span> (num &lt;= num2)</div>
+<div class="line"><span class="lineno"> 4922</span>                {</div>
+<div class="line"><span class="lineno"> 4923</span>                    num = num2 + 1;</div>
+<div class="line"><span class="lineno"> 4924</span>                }</div>
+<div class="line"><span class="lineno"> 4925</span>            }</div>
+<div class="line"><span class="lineno"> 4926</span>        }</div>
+<div class="line"><span class="lineno"> 4927</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 58; j++)</div>
+<div class="line"><span class="lineno"> 4928</span>        {</div>
+<div class="line"><span class="lineno"> 4929</span>            Item item2 = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[j];</div>
+<div class="line"><span class="lineno"> 4930</span>            <span class="keywordflow">if</span> (!item2.IsAir)</div>
+<div class="line"><span class="lineno"> 4931</span>            {</div>
+<div class="line"><span class="lineno"> 4932</span>                <span class="keywordtype">int</span> num3 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c.html#a8750cf1c0394b81bb0a2e78ef27e1f6c">QuickBuff_FindFoodPriority</a>(item2.buffType);</div>
+<div class="line"><span class="lineno"> 4933</span>                <span class="keywordflow">if</span> (num3 &gt;= num &amp;&amp; (item == <span class="keyword">null</span> || item.buffTime &lt; item2.buffTime || num3 &gt; num))</div>
+<div class="line"><span class="lineno"> 4934</span>                {</div>
+<div class="line"><span class="lineno"> 4935</span>                    item = item2;</div>
+<div class="line"><span class="lineno"> 4936</span>                    num = num3;</div>
+<div class="line"><span class="lineno"> 4937</span>                }</div>
+<div class="line"><span class="lineno"> 4938</span>            }</div>
+<div class="line"><span class="lineno"> 4939</span>        }</div>
+<div class="line"><span class="lineno"> 4940</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4.html#a8052710a79a98dfa51fab46d3a2525a4">useVoidBag</a>())</div>
+<div class="line"><span class="lineno"> 4941</span>        {</div>
+<div class="line"><span class="lineno"> 4942</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 40; k++)</div>
+<div class="line"><span class="lineno"> 4943</span>            {</div>
+<div class="line"><span class="lineno"> 4944</span>                Item item3 = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">bank4</a>.<a class="code hl_variable" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">item</a>[k];</div>
+<div class="line"><span class="lineno"> 4945</span>                <span class="keywordflow">if</span> (!item3.IsAir)</div>
+<div class="line"><span class="lineno"> 4946</span>                {</div>
+<div class="line"><span class="lineno"> 4947</span>                    <span class="keywordtype">int</span> num4 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c.html#a8750cf1c0394b81bb0a2e78ef27e1f6c">QuickBuff_FindFoodPriority</a>(item3.buffType);</div>
+<div class="line"><span class="lineno"> 4948</span>                    <span class="keywordflow">if</span> (num4 &gt;= num &amp;&amp; (item == <span class="keyword">null</span> || item.buffTime &lt; item3.buffTime || num4 &gt; num))</div>
+<div class="line"><span class="lineno"> 4949</span>                    {</div>
+<div class="line"><span class="lineno"> 4950</span>                        item = item3;</div>
+<div class="line"><span class="lineno"> 4951</span>                        num = num4;</div>
+<div class="line"><span class="lineno"> 4952</span>                    }</div>
+<div class="line"><span class="lineno"> 4953</span>                }</div>
+<div class="line"><span class="lineno"> 4954</span>            }</div>
+<div class="line"><span class="lineno"> 4955</span>        }</div>
+<div class="line"><span class="lineno"> 4956</span>        <span class="keywordflow">return</span> item;</div>
+<div class="line"><span class="lineno"> 4957</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c_html_a7d12be50c317c1f241b48a4c0fc99d8c"><div class="ttname"><a href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a></div><div class="ttdeci">Item[] item</div><div class="ttdef"><b>Definition</b> Chest.cs:41</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1_html_a29f3e6c334d743f6d52482a5265180e1"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a></div><div class="ttdeci">static readonly int maxBuffs</div><div class="ttdef"><b>Definition</b> Player.cs:1191</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372_html_a73703bba0933f97b337e8c62e7bd8372"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">Terraria.Player.bank4</a></div><div class="ttdeci">Chest bank4</div><div class="ttdef"><b>Definition</b> Player.cs:1269</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4_html_a8052710a79a98dfa51fab46d3a2525a4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4.html#a8052710a79a98dfa51fab46d3a2525a4">Terraria.Player.useVoidBag</a></div><div class="ttdeci">bool useVoidBag()</div><div class="ttdef"><b>Definition</b> Player.cs:22085</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c_html_a8750cf1c0394b81bb0a2e78ef27e1f6c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c.html#a8750cf1c0394b81bb0a2e78ef27e1f6c">Terraria.Player.QuickBuff_FindFoodPriority</a></div><div class="ttdeci">int QuickBuff_FindFoodPriority(int buffType)</div><div class="ttdef"><b>Definition</b> Player.cs:4959</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b_html_a96747bc1f8725c45b617ca3aeadd6c3b"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">Terraria.Player.buffTime</a></div><div class="ttdeci">int[] buffTime</div><div class="ttdef"><b>Definition</b> Player.cs:1195</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa_html_aba34ea74335a27cda62cca4057b79eaa"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a></div><div class="ttdeci">int[] buffType</div><div class="ttdef"><b>Definition</b> Player.cs:1193</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">Terraria.Player.bank4</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a64994febdfd64561a73ab9dd8df46183.html#a64994febdfd64561a73ab9dd8df46183">Terraria.Item.buffTime</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">Terraria.Player.buffTime</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a65366b0e395f67d5f9c6e7dc4ca3d02a.html#a65366b0e395f67d5f9c6e7dc4ca3d02a">Terraria.Item.buffType</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6092d6f80443cfc07335ec274665656d.html#a6092d6f80443cfc07335ec274665656d">Terraria.Item.IsAir</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8750cf1c0394b81bb0a2e78ef27e1f6c.html#a8750cf1c0394b81bb0a2e78ef27e1f6c">Terraria.Player.QuickBuff_FindFoodPriority()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8052710a79a98dfa51fab46d3a2525a4.html#a8052710a79a98dfa51fab46d3a2525a4">Terraria.Player.useVoidBag()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3cacb3a4e80b9b3b876ee1f745d4bab3.html#a3cacb3a4e80b9b3b876ee1f745d4bab3">Terraria.Player.QuickBuff()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

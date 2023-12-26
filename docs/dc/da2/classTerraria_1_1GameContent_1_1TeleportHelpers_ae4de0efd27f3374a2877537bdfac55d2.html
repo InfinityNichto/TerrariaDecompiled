@@ -131,6 +131,99 @@ $(function(){initNavTree('dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        landingPoint = <span class="keywordflow">default</span>(Point);</div>
+<div class="line"><span class="lineno">   10</span>        Point point = <span class="keyword">new</span> Point(startX, 50);</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordtype">int</span> num = 1;</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">int</span> num3 = 1;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">int</span> num5 = 5000;</div>
+<div class="line"><span class="lineno">   16</span>        Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)player.width * 0.5f, player.height);</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">int</span> num6 = 40;</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidOrSlopedTile(Main.tile[point.X, point.Y]);</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordtype">int</span> num7 = 0;</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordtype">int</span> num8 = 400;</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">while</span> (num4 &lt; num5 &amp;&amp; num7 &lt; num8)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            num4++;</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[point.X, point.Y];</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[point.X, point.Y + num3];</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordtype">bool</span> flag2 = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidOrSlopedTile(tile) || tile.liquid &gt; 0;</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordtype">bool</span> flag3 = <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidOrSlopedTile(tile2) || tile2.liquid &gt; 0;</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a5a08d1cd553093dd75838dc2a50d835a.html#a5a08d1cd553093dd75838dc2a50d835a">IsInSolidTilesExtended</a>(<span class="keyword">new</span> Vector2(point.X * 16 + 8, point.Y * 16 + 15) - vector, player.velocity, player.width, player.height, (<span class="keywordtype">int</span>)player.gravDir))</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   31</span>                {</div>
+<div class="line"><span class="lineno">   32</span>                    point.Y += num;</div>
+<div class="line"><span class="lineno">   33</span>                }</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   35</span>                {</div>
+<div class="line"><span class="lineno">   36</span>                    point.Y += num2;</div>
+<div class="line"><span class="lineno">   37</span>                }</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    point.Y += num;</div>
+<div class="line"><span class="lineno">   45</span>                }</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    point.Y += num2;</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a5a08d1cd553093dd75838dc2a50d835a.html#a5a08d1cd553093dd75838dc2a50d835a">IsInSolidTilesExtended</a>(<span class="keyword">new</span> Vector2(point.X * 16 + 8, point.Y * 16 + 15 + 16) - vector, player.velocity, player.width, player.height, (<span class="keywordtype">int</span>)player.gravDir) &amp;&amp; !flag3 &amp;&amp; (<span class="keywordtype">double</span>)point.Y &lt; Main.worldSurface)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                point.Y += num;</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (tile2.liquid &gt; 0)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                point.X += crawlOffsetX;</div>
+<div class="line"><span class="lineno">   61</span>                num7++;</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a532f5efa563116fe1838ec98836becb6.html#a532f5efa563116fe1838ec98836becb6">TileIsDangerous</a>(point.X, point.Y))</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                point.X += crawlOffsetX;</div>
+<div class="line"><span class="lineno">   67</span>                num7++;</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a532f5efa563116fe1838ec98836becb6.html#a532f5efa563116fe1838ec98836becb6">TileIsDangerous</a>(point.X, point.Y + num3))</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                point.X += crawlOffsetX;</div>
+<div class="line"><span class="lineno">   73</span>                num7++;</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (point.Y &gt;= num6)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            point.Y += num;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (num4 == num5 || num7 &gt;= num8)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(point.X, point.Y, 40))</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        landingPoint = point;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1TeleportHelpers_a532f5efa563116fe1838ec98836becb6_html_a532f5efa563116fe1838ec98836becb6"><div class="ttname"><a href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a532f5efa563116fe1838ec98836becb6.html#a532f5efa563116fe1838ec98836becb6">Terraria.GameContent.TeleportHelpers.TileIsDangerous</a></div><div class="ttdeci">static bool TileIsDangerous(int x, int y)</div><div class="ttdef"><b>Definition</b> TeleportHelpers.cs:94</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1TeleportHelpers_a5a08d1cd553093dd75838dc2a50d835a_html_a5a08d1cd553093dd75838dc2a50d835a"><div class="ttname"><a href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a5a08d1cd553093dd75838dc2a50d835a.html#a5a08d1cd553093dd75838dc2a50d835a">Terraria.GameContent.TeleportHelpers.IsInSolidTilesExtended</a></div><div class="ttdeci">static bool IsInSolidTilesExtended(Vector2 testPosition, Vector2 playerVelocity, int width, int height, int gravDir)</div><div class="ttdef"><b>Definition</b> TeleportHelpers.cs:112</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a5a08d1cd553093dd75838dc2a50d835a.html#a5a08d1cd553093dd75838dc2a50d835a">Terraria.GameContent.TeleportHelpers.IsInSolidTilesExtended()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_afaddd88e31ca4f3c708ff2e806929408.html#afaddd88e31ca4f3c708ff2e806929408">Terraria.WorldGen.SolidOrSlopedTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_a532f5efa563116fe1838ec98836becb6.html#a532f5efa563116fe1838ec98836becb6">Terraria.GameContent.TeleportHelpers.TileIsDangerous()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a092ecc112d6abc32a2d66b37b44e4253.html#a092ecc112d6abc32a2d66b37b44e4253">Terraria.Player.MagicConch()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

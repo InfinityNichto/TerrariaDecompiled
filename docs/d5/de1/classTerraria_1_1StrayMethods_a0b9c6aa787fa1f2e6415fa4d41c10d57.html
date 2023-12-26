@@ -126,6 +126,26 @@ $(function(){initNavTree('d5/de1/classTerraria_1_1StrayMethods_a0b9c6aa787fa1f2e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   68</span>        Point point = position.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -1; i &lt;= 1; i++)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            Collision.ExpandVertically(point.X + i, point.Y, out var topY, out var bottomY, expandUp, expandDown);</div>
+<div class="line"><span class="lineno">   72</span>            topY++;</div>
+<div class="line"><span class="lineno">   73</span>            bottomY--;</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (bottomY - topY &lt; 10)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a3d36193fc4343b52d6d0f3d7149b3e13.html#a3d36193fc4343b52d6d0f3d7149b3e13">Terraria.Collision.ExpandVertically()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a86038d41090cc1bc8428bf0115ca67dd.html#a86038d41090cc1bc8428bf0115ca67dd">Terraria.Player.CommandForbiddenStorm()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

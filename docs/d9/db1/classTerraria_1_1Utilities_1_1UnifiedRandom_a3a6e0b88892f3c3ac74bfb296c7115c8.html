@@ -117,6 +117,47 @@ $(function(){initNavTree('d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a3a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>.Length; i++)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[i] = 0;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> num = ((Seed == <span class="keywordtype">int</span>.MinValue) ? <span class="keywordtype">int</span>.MaxValue : Math.Abs(Seed));</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> num2 = 161803398 - num;</div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[55] = num2;</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">int</span> num3 = 1;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; 55; j++)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">int</span> num4 = 21 * j % 55;</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[num4] = num3;</div>
+<div class="line"><span class="lineno">   44</span>            num3 = num2 - num3;</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (num3 &lt; 0)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                num3 += <span class="keywordtype">int</span>.MaxValue;</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            num2 = <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[num4];</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 1; k &lt; 5; k++)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 1; l &lt; 56; l++)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[l] -= <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[1 + (l + 30) % 55];</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[l] &lt; 0)</div>
+<div class="line"><span class="lineno">   57</span>                {</div>
+<div class="line"><span class="lineno">   58</span>                    <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">SeedArray</a>[l] += <span class="keywordtype">int</span>.MaxValue;</div>
+<div class="line"><span class="lineno">   59</span>                }</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a46af90abeb550abec9b2c3b4d07d0b45.html#a46af90abeb550abec9b2c3b4d07d0b45">inext</a> = 0;</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a3f37461acb6979519b4704ef553f7aca.html#a3f37461acb6979519b4704ef553f7aca">inextp</a> = 21;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_a3f37461acb6979519b4704ef553f7aca_html_a3f37461acb6979519b4704ef553f7aca"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a3f37461acb6979519b4704ef553f7aca.html#a3f37461acb6979519b4704ef553f7aca">Terraria.Utilities.UnifiedRandom.inextp</a></div><div class="ttdeci">int inextp</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_a46af90abeb550abec9b2c3b4d07d0b45_html_a46af90abeb550abec9b2c3b4d07d0b45"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a46af90abeb550abec9b2c3b4d07d0b45.html#a46af90abeb550abec9b2c3b4d07d0b45">Terraria.Utilities.UnifiedRandom.inext</a></div><div class="ttdeci">int inext</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a_html_ab511caf158078dadfd9b8b08bb763d8a"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">Terraria.Utilities.UnifiedRandom.SeedArray</a></div><div class="ttdeci">int[] SeedArray</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:18</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a46af90abeb550abec9b2c3b4d07d0b45.html#a46af90abeb550abec9b2c3b4d07d0b45">Terraria.Utilities.UnifiedRandom.inext</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a3f37461acb6979519b4704ef553f7aca.html#a3f37461acb6979519b4704ef553f7aca">Terraria.Utilities.UnifiedRandom.inextp</a>, and <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ab511caf158078dadfd9b8b08bb763d8a.html#ab511caf158078dadfd9b8b08bb763d8a">Terraria.Utilities.UnifiedRandom.SeedArray</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_a64d4816e28e782a1a2207629b4553b26.html#a64d4816e28e782a1a2207629b4553b26">Terraria.Utilities.UnifiedRandom.UnifiedRandom()</a>, and <a class="el" href="../../dc/ddb/classTerraria_1_1GameContent_1_1FlexibleTileWand_a095c961662c7613b69dce04c6eb938a6.html#a095c961662c7613b69dce04c6eb938a6">Terraria.GameContent.FlexibleTileWand.TryGetPlacementOption()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

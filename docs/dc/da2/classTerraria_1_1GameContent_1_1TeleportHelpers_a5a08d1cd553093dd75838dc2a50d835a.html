@@ -136,6 +136,45 @@ $(function(){initNavTree('dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (Collision.LavaCollision(testPosition, width, height))</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (Collision.AnyHurtingTiles(testPosition, width, height))</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (Collision.SolidCollision(testPosition, width, height))</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        Vector2 vector = Vector2.UnitX * 16f;</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (Collision.TileCollision(testPosition - vector, vector, width, height, fallThrough: false, fall2: false, gravDir) != vector)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        vector = -Vector2.UnitX * 16f;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (Collision.TileCollision(testPosition - vector, vector, width, height, fallThrough: false, fall2: false, gravDir) != vector)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        vector = Vector2.UnitY * 16f;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (Collision.TileCollision(testPosition - vector, vector, width, height, fallThrough: false, fall2: false, gravDir) != vector)</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>        vector = -Vector2.UnitY * 16f;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (Collision.TileCollision(testPosition - vector, vector, width, height, fallThrough: false, fall2: false, gravDir) != vector)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4e2df742f5814cb987f27a7fe6205007.html#a4e2df742f5814cb987f27a7fe6205007">Terraria.Collision.AnyHurtingTiles()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ab2f5c368ae90cebe04fdeef98fa98a6b.html#ab2f5c368ae90cebe04fdeef98fa98a6b">Terraria.Collision.LavaCollision()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ab90b2aba94f5d7de3ee33f3c0b27ea3e.html#ab90b2aba94f5d7de3ee33f3c0b27ea3e">Terraria.Collision.SolidCollision()</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/da2/classTerraria_1_1GameContent_1_1TeleportHelpers_ae4de0efd27f3374a2877537bdfac55d2.html#ae4de0efd27f3374a2877537bdfac55d2">Terraria.GameContent.TeleportHelpers.RequestMagicConchTeleportPosition()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

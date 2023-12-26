@@ -131,6 +131,66 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a164baab2268f972844b5
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1372</span>    {</div>
+<div class="line"><span class="lineno"> 1373</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(x, y))</div>
+<div class="line"><span class="lineno"> 1374</span>        {</div>
+<div class="line"><span class="lineno"> 1375</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1376</span>        }</div>
+<div class="line"><span class="lineno"> 1377</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno"> 1378</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1379</span>        {</div>
+<div class="line"><span class="lineno"> 1380</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1381</span>        }</div>
+<div class="line"><span class="lineno"> 1382</span>        <span class="keywordtype">byte</span> b = tile.liquidType();</div>
+<div class="line"><span class="lineno"> 1383</span>        <span class="keywordflow">if</span> (tile.nactive() &amp;&amp; Main.tileSolid[tile.type] &amp;&amp; !Main.tileSolidTop[tile.type])</div>
+<div class="line"><span class="lineno"> 1384</span>        {</div>
+<div class="line"><span class="lineno"> 1385</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1386</span>        }</div>
+<div class="line"><span class="lineno"> 1387</span>        <span class="keywordflow">if</span> (tile.liquid == 0 || liquidType == b)</div>
+<div class="line"><span class="lineno"> 1388</span>        {</div>
+<div class="line"><span class="lineno"> 1389</span>            tile.liquidType(liquidType);</div>
+<div class="line"><span class="lineno"> 1390</span>            <span class="keywordflow">if</span> (amount + tile.liquid &gt; 255)</div>
+<div class="line"><span class="lineno"> 1391</span>            {</div>
+<div class="line"><span class="lineno"> 1392</span>                amount = (byte)(255 - tile.liquid);</div>
+<div class="line"><span class="lineno"> 1393</span>            }</div>
+<div class="line"><span class="lineno"> 1394</span>            tile.liquid += amount;</div>
+<div class="line"><span class="lineno"> 1395</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">SquareTileFrame</a>(x, y);</div>
+<div class="line"><span class="lineno"> 1396</span>            <span class="keywordflow">if</span> (Main.netMode != 0)</div>
+<div class="line"><span class="lineno"> 1397</span>            {</div>
+<div class="line"><span class="lineno"> 1398</span>                NetMessage.sendWater(x, y);</div>
+<div class="line"><span class="lineno"> 1399</span>            }</div>
+<div class="line"><span class="lineno"> 1400</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1401</span>        }</div>
+<div class="line"><span class="lineno"> 1402</span>        <span class="keywordtype">int</span> liquidMergeTileType = 0;</div>
+<div class="line"><span class="lineno"> 1403</span>        <span class="keywordtype">bool</span> waterNearby = b == 0;</div>
+<div class="line"><span class="lineno"> 1404</span>        <span class="keywordtype">bool</span> lavaNearby = b == 1;</div>
+<div class="line"><span class="lineno"> 1405</span>        <span class="keywordtype">bool</span> honeyNearby = b == 2;</div>
+<div class="line"><span class="lineno"> 1406</span>        <span class="keywordtype">bool</span> shimmerNearby = b == 3;</div>
+<div class="line"><span class="lineno"> 1407</span>        <span class="keywordtype">int</span> liquidMergeType = 0;</div>
+<div class="line"><span class="lineno"> 1408</span>        Liquid.GetLiquidMergeTypes(liquidType, out liquidMergeTileType, out liquidMergeType, waterNearby, lavaNearby, honeyNearby, shimmerNearby);</div>
+<div class="line"><span class="lineno"> 1409</span>        <span class="keywordflow">if</span> (liquidMergeTileType != 0)</div>
+<div class="line"><span class="lineno"> 1410</span>        {</div>
+<div class="line"><span class="lineno"> 1411</span>            tile.liquid = 0;</div>
+<div class="line"><span class="lineno"> 1412</span>            tile.liquidType(0);</div>
+<div class="line"><span class="lineno"> 1413</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(x, y, liquidMergeTileType, mute: true);</div>
+<div class="line"><span class="lineno"> 1414</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">SquareTileFrame</a>(x, y);</div>
+<div class="line"><span class="lineno"> 1415</span>            <span class="keywordflow">if</span> (Main.netMode != 0)</div>
+<div class="line"><span class="lineno"> 1416</span>            {</div>
+<div class="line"><span class="lineno"> 1417</span>                NetMessage.SendTileSquare(-1, x - 1, y - 1, <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ab8305889f68cb64b5ae7f140a0b3251f.html#ab8305889f68cb64b5ae7f140a0b3251f">GetLiquidChangeType</a>(liquidType, b));</div>
+<div class="line"><span class="lineno"> 1418</span>            }</div>
+<div class="line"><span class="lineno"> 1419</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1420</span>        }</div>
+<div class="line"><span class="lineno"> 1421</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1422</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c_html_a44be8e88cfbc0e27b42eea0f79c37c3c"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile</a></div><div class="ttdeci">static bool PlaceTile(int i, int j, int Type, bool mute=false, bool forced=false, int plr=-1, int style=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:50270</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ab8305889f68cb64b5ae7f140a0b3251f_html_ab8305889f68cb64b5ae7f140a0b3251f"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ab8305889f68cb64b5ae7f140a0b3251f.html#ab8305889f68cb64b5ae7f140a0b3251f">Terraria.WorldGen.GetLiquidChangeType</a></div><div class="ttdeci">static TileChangeType GetLiquidChangeType(int liquidType, int otherLiquidType)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1449</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e_html_ae3b5adc363d3e7e034448d39efbe155e"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame</a></div><div class="ttdeci">static void SquareTileFrame(int i, int j, bool resetFrame=true)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:70362</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ab8305889f68cb64b5ae7f140a0b3251f.html#ab8305889f68cb64b5ae7f140a0b3251f">Terraria.WorldGen.GetLiquidChangeType()</a>, <a class="el" href="../../da/d46/classTerraria_1_1Liquid_a0192f4a318c56e74150ac22171b484fb.html#a0192f4a318c56e74150ac22171b484fb">Terraria.Liquid.GetLiquidMergeTypes()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile()</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_ae11bf2a8ffaedfadebaa364735a89929.html#ae11bf2a8ffaedfadebaa364735a89929">Terraria.NetMessage.sendWater()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d5a/classTerraria_1_1DelegateMethods_ac2523f825a5e4545a822401a4f7c8bbc.html#ac2523f825a5e4545a822401a4f7c8bbc">Terraria.DelegateMethods.SpreadHoney()</a>, <a class="el" href="../../dc/d5a/classTerraria_1_1DelegateMethods_a564647d096bb6a79723cdfa1ee221aca.html#a564647d096bb6a79723cdfa1ee221aca">Terraria.DelegateMethods.SpreadLava()</a>, and <a class="el" href="../../dc/d5a/classTerraria_1_1DelegateMethods_a07537e6ca7ed9c1fa0a1873419ff68f0.html#a07537e6ca7ed9c1fa0a1873419ff68f0">Terraria.DelegateMethods.SpreadWater()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

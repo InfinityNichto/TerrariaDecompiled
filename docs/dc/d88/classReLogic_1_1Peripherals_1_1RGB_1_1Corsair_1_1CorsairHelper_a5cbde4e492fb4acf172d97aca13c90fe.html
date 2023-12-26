@@ -121,6 +121,51 @@ $(function(){initNavTree('dc/d88/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="comment">//IL_0036: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   12</span>        <span class="comment">//IL_004b: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   13</span>        <span class="comment">//IL_006b: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   14</span>        <span class="comment">//IL_0083: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   15</span>        <span class="comment">//IL_00e8: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   16</span>        <span class="comment">//IL_00ea: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   17</span>        <span class="comment">//IL_0189: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   18</span>        <span class="comment">//IL_018e: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   19</span>        Point[] array = (Point[])(<span class="keywordtype">object</span>)<span class="keyword">new</span> Point[leds.Length];</div>
+<div class="line"><span class="lineno">   20</span>        Vector2[] array2 = (Vector2[])(<span class="keywordtype">object</span>)<span class="keyword">new</span> Vector2[leds.Length];</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordtype">double</span> num = 0.0;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">double</span> num2 = 0.0;</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (leds.Length != 0)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            num = leds[0].Top + (double)offset.Y;</div>
+<div class="line"><span class="lineno">   26</span>            num2 = leds[0].Top + (double)offset.Y;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        Point point = <span class="keywordflow">default</span>(Point);</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; leds.Length; i++)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            leds[i].Left += offset.X;</div>
+<div class="line"><span class="lineno">   32</span>            leds[i].Top += offset.Y;</div>
+<div class="line"><span class="lineno">   33</span>            ((Point)(ref point))._002Ector((<span class="keywordtype">int</span>)Math.Floor((leds[i].Left + leds[i].Width * 0.5) / 20.0), (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Floor(leds[i].Top / 20.0));</div>
+<div class="line"><span class="lineno">   34</span>            array[i] = point;</div>
+<div class="line"><span class="lineno">   35</span>            num = Math.Min(leds[i].<a class="code hl_enumvalue" href="../../d8/d48/namespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154.html#af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00">Top</a>, num);</div>
+<div class="line"><span class="lineno">   36</span>            num2 = Math.Max(leds[i].<a class="code hl_enumvalue" href="../../d8/d48/namespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154.html#af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00">Top</a>, num2);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">double</span> num3 = 1.0;</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (num != num2)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            num3 = 1.0 / (num2 - num);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; leds.Length; j++)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            array2[j] = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)((leds[j].Left + leds[j].Width * 0.5) * num3), (<span class="keywordtype">float</span>)((leds[j].<a class="code hl_enumvalue" href="../../d8/d48/namespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154.html#af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00">Top</a> - num) * num3));</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> Fragment.FromCustom(array, array2);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154_html_af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00"><div class="ttname"><a href="../../d8/d48/namespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154.html#af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00">ReLogic.Peripherals.RGB.ShaderLayer.Top</a></div><div class="ttdeci">@ Top</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd6/classReLogic_1_1Peripherals_1_1RGB_1_1Fragment_aa6ebf57d4391117daba76145362052c2.html#aa6ebf57d4391117daba76145362052c2">ReLogic.Peripherals.RGB.Fragment.FromCustom()</a>, <a class="el" href="../../d2/d80/structReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairLedPosition_aa455858cadb2707b8391ab28d367689f.html#aa455858cadb2707b8391ab28d367689f">ReLogic.Peripherals.RGB.Corsair.CorsairLedPosition.Left</a>, <a class="el" href="../../d2/d80/structReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairLedPosition_a32bda7cb26a0ca0d6f134dade0d322af.html#a32bda7cb26a0ca0d6f134dade0d322af">ReLogic.Peripherals.RGB.Corsair.CorsairLedPosition.Top</a>, and <a class="el" href="../../d8/d48/namespaceReLogic_1_1Peripherals_1_1RGB_af60a48faafcb85a13c9cfe63fa946154.html#af60a48faafcb85a13c9cfe63fa946154aa4ffdcf0dc1f31b9acaf295d75b51d00">ReLogic.Peripherals.RGB.Top</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d9c/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairKeyboard_ae5b9906a332f97b43eee8e163258d3db.html#ae5b9906a332f97b43eee8e163258d3db">ReLogic.Peripherals.RGB.Corsair.CorsairKeyboard.Create()</a>, and <a class="el" href="../../dc/dff/classReLogic_1_1Peripherals_1_1RGB_1_1Corsair_1_1CorsairMousepad_a3e3bfc95d66f3e236b94f97b40291e12.html#a3e3bfc95d66f3e236b94f97b40291e12">ReLogic.Peripherals.RGB.Corsair.CorsairMousepad.Create()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

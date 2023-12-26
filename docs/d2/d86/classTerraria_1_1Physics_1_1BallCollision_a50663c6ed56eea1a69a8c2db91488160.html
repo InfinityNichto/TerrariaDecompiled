@@ -121,6 +121,27 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a5066
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  365</span>    {</div>
+<div class="line"><span class="lineno">  366</span>        Vector2 value = point - lineSegment.<a class="code hl_variable" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6.html#a88b3a7fe4f6e62f88930da8fcc9d0cb6">Start</a>;</div>
+<div class="line"><span class="lineno">  367</span>        Vector2 vector = lineSegment.End - lineSegment.<a class="code hl_variable" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6.html#a88b3a7fe4f6e62f88930da8fcc9d0cb6">Start</a>;</div>
+<div class="line"><span class="lineno">  368</span>        <span class="keywordtype">float</span> num = vector.LengthSquared();</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordtype">float</span> num2 = Vector2.Dot(value, vector) / num;</div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (num2 &lt; 0f)</div>
+<div class="line"><span class="lineno">  371</span>        {</div>
+<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">return</span> lineSegment.<a class="code hl_variable" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6.html#a88b3a7fe4f6e62f88930da8fcc9d0cb6">Start</a>;</div>
+<div class="line"><span class="lineno">  373</span>        }</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span> (num2 &gt; 1f)</div>
+<div class="line"><span class="lineno">  375</span>        {</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">return</span> lineSegment.<a class="code hl_variable" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_aa17545752d3b66f75deb2b3d2f0aeefb.html#aa17545752d3b66f75deb2b3d2f0aeefb">End</a>;</div>
+<div class="line"><span class="lineno">  377</span>        }</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> lineSegment.Start + vector * num2;</div>
+<div class="line"><span class="lineno">  379</span>    }</div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6_html_a88b3a7fe4f6e62f88930da8fcc9d0cb6"><div class="ttname"><a href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6.html#a88b3a7fe4f6e62f88930da8fcc9d0cb6">Terraria.DataStructures.LineSegment.Start</a></div><div class="ttdeci">Vector2 Start</div><div class="ttdef"><b>Definition</b> LineSegment.cs:7</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1LineSegment_aa17545752d3b66f75deb2b3d2f0aeefb_html_aa17545752d3b66f75deb2b3d2f0aeefb"><div class="ttname"><a href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_aa17545752d3b66f75deb2b3d2f0aeefb.html#aa17545752d3b66f75deb2b3d2f0aeefb">Terraria.DataStructures.LineSegment.End</a></div><div class="ttdeci">Vector2 End</div><div class="ttdef"><b>Definition</b> LineSegment.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_aa17545752d3b66f75deb2b3d2f0aeefb.html#aa17545752d3b66f75deb2b3d2f0aeefb">Terraria.DataStructures.LineSegment.End</a>, and <a class="el" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment_a88b3a7fe4f6e62f88930da8fcc9d0cb6.html#a88b3a7fe4f6e62f88930da8fcc9d0cb6">Terraria.DataStructures.LineSegment.Start</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b8d5326dd098b3ac63072a92e67bd.html#a741b8d5326dd098b3ac63072a92e67bd">Terraria.Physics.BallCollision.GetCollisionPointForTile()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

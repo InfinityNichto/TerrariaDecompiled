@@ -121,6 +121,51 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aad979cd10c2fda77edd3
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">45738</span>    {</div>
+<div class="line"><span class="lineno">45739</span>        <span class="keywordtype">int</span> num = j;</div>
+<div class="line"><span class="lineno">45740</span>        <span class="keywordtype">int</span> num2 = i;</div>
+<div class="line"><span class="lineno">45741</span>        <span class="keywordflow">while</span> (Main.tile[num2, num] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2, num].active() &amp;&amp; Main.tile[num2, num].type == 80)</div>
+<div class="line"><span class="lineno">45742</span>        {</div>
+<div class="line"><span class="lineno">45743</span>            num++;</div>
+<div class="line"><span class="lineno">45744</span>            <span class="keywordflow">if</span> (Main.tile[num2, num] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">45745</span>            {</div>
+<div class="line"><span class="lineno">45746</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">45747</span>            }</div>
+<div class="line"><span class="lineno">45748</span>            <span class="keywordflow">if</span> (!Main.tile[num2, num].active() || Main.tile[num2, num].type != 80)</div>
+<div class="line"><span class="lineno">45749</span>            {</div>
+<div class="line"><span class="lineno">45750</span>                <span class="keywordflow">if</span> (Main.tile[num2 - 1, num] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 - 1, num].active() &amp;&amp; Main.tile[num2 - 1, num].type == 80 &amp;&amp; Main.tile[num2 - 1, num - 1] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 - 1, num - 1].active() &amp;&amp; Main.tile[num2 - 1, num - 1].type == 80 &amp;&amp; num2 &gt;= i)</div>
+<div class="line"><span class="lineno">45751</span>                {</div>
+<div class="line"><span class="lineno">45752</span>                    num2--;</div>
+<div class="line"><span class="lineno">45753</span>                }</div>
+<div class="line"><span class="lineno">45754</span>                <span class="keywordflow">if</span> (Main.tile[num2 + 1, num] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 + 1, num].active() &amp;&amp; Main.tile[num2 + 1, num].type == 80 &amp;&amp; Main.tile[num2 + 1, num - 1] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 + 1, num - 1].active() &amp;&amp; Main.tile[num2 + 1, num - 1].type == 80 &amp;&amp; num2 &lt;= i)</div>
+<div class="line"><span class="lineno">45755</span>                {</div>
+<div class="line"><span class="lineno">45756</span>                    num2++;</div>
+<div class="line"><span class="lineno">45757</span>                }</div>
+<div class="line"><span class="lineno">45758</span>            }</div>
+<div class="line"><span class="lineno">45759</span>        }</div>
+<div class="line"><span class="lineno">45760</span>        <span class="keywordflow">if</span> (!Main.tile[num2, num].nactive() || Main.tile[num2, num].halfBrick() || Main.tile[num2, num].slope() != 0 || (Main.tile[num2, num].type != 53 &amp;&amp; Main.tile[num2, num].type != 112 &amp;&amp; Main.tile[num2, num].type != 116 &amp;&amp; Main.tile[num2, num].type != 234))</div>
+<div class="line"><span class="lineno">45761</span>        {</div>
+<div class="line"><span class="lineno">45762</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(i, j);</div>
+<div class="line"><span class="lineno">45763</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">45764</span>        }</div>
+<div class="line"><span class="lineno">45765</span>        <span class="keywordflow">if</span> (i != num2)</div>
+<div class="line"><span class="lineno">45766</span>        {</div>
+<div class="line"><span class="lineno">45767</span>            <span class="keywordflow">if</span> ((!Main.tile[i, j + 1].active() || Main.tile[i, j + 1].type != 80) &amp;&amp; (!Main.tile[i - 1, j].active() || Main.tile[i - 1, j].type != 80) &amp;&amp; (!Main.tile[i + 1, j].active() || Main.tile[i + 1, j].type != 80))</div>
+<div class="line"><span class="lineno">45768</span>            {</div>
+<div class="line"><span class="lineno">45769</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(i, j);</div>
+<div class="line"><span class="lineno">45770</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">45771</span>            }</div>
+<div class="line"><span class="lineno">45772</span>        }</div>
+<div class="line"><span class="lineno">45773</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == num2 &amp;&amp; (!Main.tile[i, j + 1].active() || (Main.tile[i, j + 1].type != 80 &amp;&amp; Main.tile[i, j + 1].type != 53 &amp;&amp; Main.tile[i, j + 1].type != 112 &amp;&amp; Main.tile[i, j + 1].type != 116 &amp;&amp; Main.tile[i, j + 1].type != 234)))</div>
+<div class="line"><span class="lineno">45774</span>        {</div>
+<div class="line"><span class="lineno">45775</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(i, j);</div>
+<div class="line"><span class="lineno">45776</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">45777</span>        }</div>
+<div class="line"><span class="lineno">45778</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">45779</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

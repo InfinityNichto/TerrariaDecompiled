@@ -123,6 +123,32 @@ $(function(){initNavTree('dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeri
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d8/d60/interfaceReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1IGameSenseDevice_aafbb520f194187b9254f14e698b77665.html#aafbb520f194187b9254f14e698b77665">ReLogic.Peripherals.RGB.SteelSeries.IGameSenseDevice</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">foreach</span> (Bind_Event bind_Event <span class="keywordflow">in</span> bindEvents)</div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (bind_Event.handlers.Length &gt;= 1)</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                AbstractHandler obj = bind_Event.handlers[0];</div>
+<div class="line"><span class="lineno">  130</span>                ContextColorEventHandlerType contextColorEventHandlerType = (ContextColorEventHandlerType)(<span class="keywordtype">object</span>)((obj is ContextColorEventHandlerType) ? obj : null);</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (contextColorEventHandlerType != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  132</span>                {</div>
+<div class="line"><span class="lineno">  133</span>                    ColorKey colorKey = <span class="keyword">new</span> ColorKey</div>
+<div class="line"><span class="lineno">  134</span>                    {</div>
+<div class="line"><span class="lineno">  135</span>                        EventName = bind_Event.eventName,</div>
+<div class="line"><span class="lineno">  136</span>                        TriggerName = contextColorEventHandlerType.ContextFrameKey</div>
+<div class="line"><span class="lineno">  137</span>                    };</div>
+<div class="line"><span class="lineno">  138</span>                    <a class="code hl_variable" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a4c9e1015a81f32870f78c49c70763328.html#a4c9e1015a81f32870f78c49c70763328">_keyboardTriggersForLookup</a>.Add(contextColorEventHandlerType.ContextFrameKey, colorKey);</div>
+<div class="line"><span class="lineno">  139</span>                    <a class="code hl_variable" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_adfe6d5ad4139614439c7c100c7ff01a0.html#adfe6d5ad4139614439c7c100c7ff01a0">_keyboardTriggersForIteration</a>.Add(colorKey);</div>
+<div class="line"><span class="lineno">  140</span>                }</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a522114a77be59f0adf9d28c623c4d91a.html#a522114a77be59f0adf9d28c623c4d91a">eventTrackers</a>.AddRange(miscEvents);</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a4c9e1015a81f32870f78c49c70763328_html_a4c9e1015a81f32870f78c49c70763328"><div class="ttname"><a href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a4c9e1015a81f32870f78c49c70763328.html#a4c9e1015a81f32870f78c49c70763328">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard._keyboardTriggersForLookup</a></div><div class="ttdeci">readonly Dictionary&lt; string, ColorKey &gt; _keyboardTriggersForLookup</div><div class="ttdef"><b>Definition</b> SteelSeriesKeyboard.cs:21</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a522114a77be59f0adf9d28c623c4d91a_html_a522114a77be59f0adf9d28c623c4d91a"><div class="ttname"><a href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a522114a77be59f0adf9d28c623c4d91a.html#a522114a77be59f0adf9d28c623c4d91a">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard.eventTrackers</a></div><div class="ttdeci">readonly List&lt; ARgbGameValueTracker &gt; eventTrackers</div><div class="ttdef"><b>Definition</b> SteelSeriesKeyboard.cs:25</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_adfe6d5ad4139614439c7c100c7ff01a0_html_adfe6d5ad4139614439c7c100c7ff01a0"><div class="ttname"><a href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_adfe6d5ad4139614439c7c100c7ff01a0.html#adfe6d5ad4139614439c7c100c7ff01a0">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard._keyboardTriggersForIteration</a></div><div class="ttdeci">readonly List&lt; ColorKey &gt; _keyboardTriggersForIteration</div><div class="ttdef"><b>Definition</b> SteelSeriesKeyboard.cs:23</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_adfe6d5ad4139614439c7c100c7ff01a0.html#adfe6d5ad4139614439c7c100c7ff01a0">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard._keyboardTriggersForIteration</a>, <a class="el" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a4c9e1015a81f32870f78c49c70763328.html#a4c9e1015a81f32870f78c49c70763328">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard._keyboardTriggersForLookup</a>, and <a class="el" href="../../dc/da8/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesKeyboard_a522114a77be59f0adf9d28c623c4d91a.html#a522114a77be59f0adf9d28c623c4d91a">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesKeyboard.eventTrackers</a>.</p>
 
 </div>
 </div>

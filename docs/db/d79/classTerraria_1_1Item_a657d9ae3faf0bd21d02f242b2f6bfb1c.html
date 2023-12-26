@@ -136,6 +136,32 @@ $(function(){initNavTree('db/d79/classTerraria_1_1Item_a657d9ae3faf0bd21d02f242b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  438</span>    {</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f.html#a4e726c2ed4adbc5957b1c413589f272f">cachedItemSpawnsByType</a>[t] == -1)</div>
+<div class="line"><span class="lineno">  440</span>        {</div>
+<div class="line"><span class="lineno">  441</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  442</span>        }</div>
+<div class="line"><span class="lineno">  443</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f.html#a4e726c2ed4adbc5957b1c413589f272f">cachedItemSpawnsByType</a>[t];</div>
+<div class="line"><span class="lineno">  444</span>        <a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f.html#a4e726c2ed4adbc5957b1c413589f272f">cachedItemSpawnsByType</a>[t] = (stopCaching ? (-1) : 0);</div>
+<div class="line"><span class="lineno">  445</span>        Item item = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">  446</span>        item.SetDefaults(t);</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">while</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  448</span>        {</div>
+<div class="line"><span class="lineno">  449</span>            <span class="keywordtype">int</span> num2 = item.maxStack;</div>
+<div class="line"><span class="lineno">  450</span>            <span class="keywordflow">if</span> (num &lt; num2)</div>
+<div class="line"><span class="lineno">  451</span>            {</div>
+<div class="line"><span class="lineno">  452</span>                num2 = num;</div>
+<div class="line"><span class="lineno">  453</span>            }</div>
+<div class="line"><span class="lineno">  454</span>            <a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">NewItem</a>(reason, (<span class="keywordtype">int</span>)pos.X, (<span class="keywordtype">int</span>)pos.Y, (<span class="keywordtype">int</span>)spread.X, (<span class="keywordtype">int</span>)spread.Y, t, num2);</div>
+<div class="line"><span class="lineno">  455</span>            num -= num2;</div>
+<div class="line"><span class="lineno">  456</span>        }</div>
+<div class="line"><span class="lineno">  457</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f_html_a4e726c2ed4adbc5957b1c413589f272f"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f.html#a4e726c2ed4adbc5957b1c413589f272f">Terraria.Item.cachedItemSpawnsByType</a></div><div class="ttdeci">static int[] cachedItemSpawnsByType</div><div class="ttdef"><b>Definition</b> Item.cs:59</div></div>
+<div class="ttc" id="aclassTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604_html_ae0f057a4ed207ce83cd3141063371604"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem</a></div><div class="ttdeci">static int NewItem(IEntitySource source, Vector2 pos, Vector2 randomBox, int Type, int Stack=1, bool noBroadcast=false, int prefixGiven=0, bool noGrabDelay=false, bool reverseLookup=false)</div><div class="ttdef"><b>Definition</b> Item.cs:49697</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_a4e726c2ed4adbc5957b1c413589f272f.html#a4e726c2ed4adbc5957b1c413589f272f">Terraria.Item.cachedItemSpawnsByType</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a43f51e33be93f066916198e4804b5008.html#a43f51e33be93f066916198e4804b5008">Terraria.Item.maxStack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem()</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a42e7df87e1541d18fab2c39ec4abe337.html#a42e7df87e1541d18fab2c39ec4abe337">Terraria.Wiring.MassWireOperationInner()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

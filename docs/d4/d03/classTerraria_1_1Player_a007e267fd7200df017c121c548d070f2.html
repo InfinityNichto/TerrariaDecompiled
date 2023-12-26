@@ -117,6 +117,86 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a007e267fd7200df017c121
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">17413</span>    {</div>
+<div class="line"><span class="lineno">17414</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3ff9b0003b5c00f29e3aa3c9f80303c1.html#a3ff9b0003b5c00f29e3aa3c9f80303c1">happyFunTorchTime</a>)</div>
+<div class="line"><span class="lineno">17415</span>        {</div>
+<div class="line"><span class="lineno">17416</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a346e5e08ae6ccee8de7057b1a16bda14.html#a346e5e08ae6ccee8de7057b1a16bda14">luckyTorchCounter</a> = 0;</div>
+<div class="line"><span class="lineno">17417</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_ac87ae6ff514d035c589931d73c4ab77d.html#ac87ae6ff514d035c589931d73c4ab77d">TorchAttack</a>();</div>
+<div class="line"><span class="lineno">17418</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">17419</span>        }</div>
+<div class="line"><span class="lineno">17420</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7eb70e485b5c1c244f7cf356409f5323.html#a7eb70e485b5c1c244f7cf356409f5323">torchGodCooldown</a> &gt; 0)</div>
+<div class="line"><span class="lineno">17421</span>        {</div>
+<div class="line"><span class="lineno">17422</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7eb70e485b5c1c244f7cf356409f5323.html#a7eb70e485b5c1c244f7cf356409f5323">torchGodCooldown</a>--;</div>
+<div class="line"><span class="lineno">17423</span>        }</div>
+<div class="line"><span class="lineno">17424</span>        Vector2 nextTorchLuckCheckCenter = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa135b27f184012f174ec4d0a5def2884.html#aa135b27f184012f174ec4d0a5def2884">_nextTorchLuckCheckCenter</a>;</div>
+<div class="line"><span class="lineno">17425</span>        <span class="keywordflow">if</span> (<span class="keyword">false</span> | ((<span class="keywordtype">double</span>)nextTorchLuckCheckCenter.Y &lt; Main.worldSurface * 16.0) | <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">dead</a>)</div>
+<div class="line"><span class="lineno">17426</span>        {</div>
+<div class="line"><span class="lineno">17427</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a5be026b3ad563c655012a2b36ceefbe2.html#a5be026b3ad563c655012a2b36ceefbe2">UpdateTorchLuck_ConsumeCountersAndCalculate</a>();</div>
+<div class="line"><span class="lineno">17428</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">17429</span>        }</div>
+<div class="line"><span class="lineno">17430</span>        <span class="keywordtype">int</span> num = 1;</div>
+<div class="line"><span class="lineno">17431</span>        <span class="keywordtype">int</span> num2 = 40;</div>
+<div class="line"><span class="lineno">17432</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)nextTorchLuckCheckCenter.Y / 16 - num2;</div>
+<div class="line"><span class="lineno">17433</span>        <span class="keywordtype">int</span> value = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)nextTorchLuckCheckCenter.X / 16 - num2;</div>
+<div class="line"><span class="lineno">17434</span>        <span class="keywordtype">int</span> value2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)nextTorchLuckCheckCenter.X / 16 + num2;</div>
+<div class="line"><span class="lineno">17435</span>        value = Utils.Clamp(value, 10, Main.maxTilesX - 10);</div>
+<div class="line"><span class="lineno">17436</span>        value2 = Utils.Clamp(value2, 10, Main.maxTilesX - 10);</div>
+<div class="line"><span class="lineno">17437</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">17438</span>        {</div>
+<div class="line"><span class="lineno">17439</span>            <span class="keywordtype">int</span> num4 = num3 + i + <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a346e5e08ae6ccee8de7057b1a16bda14.html#a346e5e08ae6ccee8de7057b1a16bda14">luckyTorchCounter</a> * num;</div>
+<div class="line"><span class="lineno">17440</span>            <span class="keywordflow">if</span> (num4 &lt; 10 || num4 &gt; Main.maxTilesY - 10)</div>
+<div class="line"><span class="lineno">17441</span>            {</div>
+<div class="line"><span class="lineno">17442</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">17443</span>            }</div>
+<div class="line"><span class="lineno">17444</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = value; j &lt;= value2; j++)</div>
+<div class="line"><span class="lineno">17445</span>            {</div>
+<div class="line"><span class="lineno">17446</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[j, num4];</div>
+<div class="line"><span class="lineno">17447</span>                <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">17448</span>                {</div>
+<div class="line"><span class="lineno">17449</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">17450</span>                }</div>
+<div class="line"><span class="lineno">17451</span>                <span class="keywordflow">if</span> (!tile.active() || tile.type != 4 || tile.frameX &lt; 0 || tile.frameY &lt; 0)</div>
+<div class="line"><span class="lineno">17452</span>                {</div>
+<div class="line"><span class="lineno">17453</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">17454</span>                }</div>
+<div class="line"><span class="lineno">17455</span>                <span class="keywordflow">if</span> (tile.frameX &lt; 66)</div>
+<div class="line"><span class="lineno">17456</span>                {</div>
+<div class="line"><span class="lineno">17457</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9cf70e68bd6ad640bb796a88b00787cd.html#a9cf70e68bd6ad640bb796a88b00787cd">nearbyTorches</a>++;</div>
+<div class="line"><span class="lineno">17458</span>                }</div>
+<div class="line"><span class="lineno">17459</span>                <span class="keywordtype">int</span> num5 = tile.frameY / 22;</div>
+<div class="line"><span class="lineno">17460</span>                <span class="keywordflow">if</span> (num5 &lt; <a class="code hl_class" href="../../da/d9a/classTerraria_1_1ID_1_1TorchID.html">TorchID</a>.<a class="code hl_variable" href="../../da/d9a/classTerraria_1_1ID_1_1TorchID_a245e9750a08bdb5efb9dd4381b25dc6a.html#a245e9750a08bdb5efb9dd4381b25dc6a">Count</a>)</div>
+<div class="line"><span class="lineno">17461</span>                {</div>
+<div class="line"><span class="lineno">17462</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a81e735646bc94b9928fffe190f1ac7bf.html#a81e735646bc94b9928fffe190f1ac7bf">nearbyTorch</a>[num5] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">17463</span>                    <span class="keywordflow">if</span> (num5 == 17 &amp;&amp; (tile.liquid == 0 || tile.liquidType() != 0))</div>
+<div class="line"><span class="lineno">17464</span>                    {</div>
+<div class="line"><span class="lineno">17465</span>                        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ac8a5a0da50badc7b28400beac09005d2.html#ac8a5a0da50badc7b28400beac09005d2">dryCoralTorch</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">17466</span>                    }</div>
+<div class="line"><span class="lineno">17467</span>                }</div>
+<div class="line"><span class="lineno">17468</span>            }</div>
+<div class="line"><span class="lineno">17469</span>            <span class="keywordflow">if</span> (num4 &gt;= (<span class="keywordtype">int</span>)nextTorchLuckCheckCenter.Y / 16 + num2)</div>
+<div class="line"><span class="lineno">17470</span>            {</div>
+<div class="line"><span class="lineno">17471</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a5be026b3ad563c655012a2b36ceefbe2.html#a5be026b3ad563c655012a2b36ceefbe2">UpdateTorchLuck_ConsumeCountersAndCalculate</a>();</div>
+<div class="line"><span class="lineno">17472</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">17473</span>            }</div>
+<div class="line"><span class="lineno">17474</span>        }</div>
+<div class="line"><span class="lineno">17475</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a346e5e08ae6ccee8de7057b1a16bda14.html#a346e5e08ae6ccee8de7057b1a16bda14">luckyTorchCounter</a>++;</div>
+<div class="line"><span class="lineno">17476</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TorchID_a245e9750a08bdb5efb9dd4381b25dc6a_html_a245e9750a08bdb5efb9dd4381b25dc6a"><div class="ttname"><a href="../../da/d9a/classTerraria_1_1ID_1_1TorchID_a245e9750a08bdb5efb9dd4381b25dc6a.html#a245e9750a08bdb5efb9dd4381b25dc6a">Terraria.ID.TorchID.Count</a></div><div class="ttdeci">static readonly short Count</div><div class="ttdef"><b>Definition</b> TorchID.cs:132</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TorchID_html"><div class="ttname"><a href="../../da/d9a/classTerraria_1_1ID_1_1TorchID.html">Terraria.ID.TorchID</a></div><div class="ttdef"><b>Definition</b> TorchID.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a346e5e08ae6ccee8de7057b1a16bda14_html_a346e5e08ae6ccee8de7057b1a16bda14"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a346e5e08ae6ccee8de7057b1a16bda14.html#a346e5e08ae6ccee8de7057b1a16bda14">Terraria.Player.luckyTorchCounter</a></div><div class="ttdeci">int luckyTorchCounter</div><div class="ttdef"><b>Definition</b> Player.cs:2617</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3ff9b0003b5c00f29e3aa3c9f80303c1_html_a3ff9b0003b5c00f29e3aa3c9f80303c1"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3ff9b0003b5c00f29e3aa3c9f80303c1.html#a3ff9b0003b5c00f29e3aa3c9f80303c1">Terraria.Player.happyFunTorchTime</a></div><div class="ttdeci">bool happyFunTorchTime</div><div class="ttdef"><b>Definition</b> Player.cs:2625</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a5be026b3ad563c655012a2b36ceefbe2_html_a5be026b3ad563c655012a2b36ceefbe2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a5be026b3ad563c655012a2b36ceefbe2.html#a5be026b3ad563c655012a2b36ceefbe2">Terraria.Player.UpdateTorchLuck_ConsumeCountersAndCalculate</a></div><div class="ttdeci">void UpdateTorchLuck_ConsumeCountersAndCalculate()</div><div class="ttdef"><b>Definition</b> Player.cs:17600</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7eb70e485b5c1c244f7cf356409f5323_html_a7eb70e485b5c1c244f7cf356409f5323"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7eb70e485b5c1c244f7cf356409f5323.html#a7eb70e485b5c1c244f7cf356409f5323">Terraria.Player.torchGodCooldown</a></div><div class="ttdeci">int torchGodCooldown</div><div class="ttdef"><b>Definition</b> Player.cs:2629</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a81e735646bc94b9928fffe190f1ac7bf_html_a81e735646bc94b9928fffe190f1ac7bf"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a81e735646bc94b9928fffe190f1ac7bf.html#a81e735646bc94b9928fffe190f1ac7bf">Terraria.Player.nearbyTorch</a></div><div class="ttdeci">bool[] nearbyTorch</div><div class="ttdef"><b>Definition</b> Player.cs:2613</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a9cf70e68bd6ad640bb796a88b00787cd_html_a9cf70e68bd6ad640bb796a88b00787cd"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a9cf70e68bd6ad640bb796a88b00787cd.html#a9cf70e68bd6ad640bb796a88b00787cd">Terraria.Player.nearbyTorches</a></div><div class="ttdeci">int nearbyTorches</div><div class="ttdef"><b>Definition</b> Player.cs:2619</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aa135b27f184012f174ec4d0a5def2884_html_aa135b27f184012f174ec4d0a5def2884"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aa135b27f184012f174ec4d0a5def2884.html#aa135b27f184012f174ec4d0a5def2884">Terraria.Player._nextTorchLuckCheckCenter</a></div><div class="ttdeci">Vector2 _nextTorchLuckCheckCenter</div><div class="ttdef"><b>Definition</b> Player.cs:2623</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ac87ae6ff514d035c589931d73c4ab77d_html_ac87ae6ff514d035c589931d73c4ab77d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ac87ae6ff514d035c589931d73c4ab77d.html#ac87ae6ff514d035c589931d73c4ab77d">Terraria.Player.TorchAttack</a></div><div class="ttdeci">void TorchAttack()</div><div class="ttdef"><b>Definition</b> Player.cs:17493</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ac8a5a0da50badc7b28400beac09005d2_html_ac8a5a0da50badc7b28400beac09005d2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ac8a5a0da50badc7b28400beac09005d2.html#ac8a5a0da50badc7b28400beac09005d2">Terraria.Player.dryCoralTorch</a></div><div class="ttdeci">bool dryCoralTorch</div><div class="ttdef"><b>Definition</b> Player.cs:2615</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9_html_afcb21ea4241f14068f70913ced534ed9"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a></div><div class="ttdeci">bool dead</div><div class="ttdef"><b>Definition</b> Player.cs:1307</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/d9a/classTerraria_1_1ID_1_1TorchID_a245e9750a08bdb5efb9dd4381b25dc6a.html#a245e9750a08bdb5efb9dd4381b25dc6a">Terraria.ID.TorchID.Count</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

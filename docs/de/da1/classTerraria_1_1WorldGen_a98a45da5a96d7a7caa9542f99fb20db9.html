@@ -121,6 +121,32 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a98a45da5a96d7a7caa95
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">25036</span>    {</div>
+<div class="line"><span class="lineno">25037</span>        <span class="keywordflow">if</span> ((Main.tile[x, y].active() &amp; (Main.tile[x, y].type == 226)) || Main.tile[x, y].wall == 87)</div>
+<div class="line"><span class="lineno">25038</span>        {</div>
+<div class="line"><span class="lineno">25039</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">25040</span>        }</div>
+<div class="line"><span class="lineno">25041</span>        <span class="keywordtype">int</span> num = 6;</div>
+<div class="line"><span class="lineno">25042</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x - num; i &lt;= x + num; i++)</div>
+<div class="line"><span class="lineno">25043</span>        {</div>
+<div class="line"><span class="lineno">25044</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y - num; j &lt;= y + num; j++)</div>
+<div class="line"><span class="lineno">25045</span>            {</div>
+<div class="line"><span class="lineno">25046</span>                <span class="keywordflow">if</span> (!Main.tile[i, j].active() &amp;&amp; Main.tile[i, j].wall == 87)</div>
+<div class="line"><span class="lineno">25047</span>                {</div>
+<div class="line"><span class="lineno">25048</span>                    i = x;</div>
+<div class="line"><span class="lineno">25049</span>                    j = y;</div>
+<div class="line"><span class="lineno">25050</span>                    Main.tile[i, j].active(active: true);</div>
+<div class="line"><span class="lineno">25051</span>                    Main.tile[i, j].type = 226;</div>
+<div class="line"><span class="lineno">25052</span>                    Main.tile[i, j].liquid = 0;</div>
+<div class="line"><span class="lineno">25053</span>                    Main.tile[i, j].slope(0);</div>
+<div class="line"><span class="lineno">25054</span>                    Main.tile[i, j].halfBrick(halfBrick: false);</div>
+<div class="line"><span class="lineno">25055</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">25056</span>                }</div>
+<div class="line"><span class="lineno">25057</span>            }</div>
+<div class="line"><span class="lineno">25058</span>        }</div>
+<div class="line"><span class="lineno">25059</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

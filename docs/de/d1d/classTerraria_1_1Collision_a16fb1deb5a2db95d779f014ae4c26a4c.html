@@ -131,6 +131,41 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a16fb1deb5a2db95d779
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2953</span>    {</div>
+<div class="line"><span class="lineno"> 2954</span>        <span class="keywordflow">if</span> (startX &lt; 0)</div>
+<div class="line"><span class="lineno"> 2955</span>        {</div>
+<div class="line"><span class="lineno"> 2956</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2957</span>        }</div>
+<div class="line"><span class="lineno"> 2958</span>        <span class="keywordflow">if</span> (endX &gt;= Main.maxTilesX)</div>
+<div class="line"><span class="lineno"> 2959</span>        {</div>
+<div class="line"><span class="lineno"> 2960</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2961</span>        }</div>
+<div class="line"><span class="lineno"> 2962</span>        <span class="keywordflow">if</span> (startY &lt; 0)</div>
+<div class="line"><span class="lineno"> 2963</span>        {</div>
+<div class="line"><span class="lineno"> 2964</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2965</span>        }</div>
+<div class="line"><span class="lineno"> 2966</span>        <span class="keywordflow">if</span> (endY &gt;= Main.maxTilesY)</div>
+<div class="line"><span class="lineno"> 2967</span>        {</div>
+<div class="line"><span class="lineno"> 2968</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2969</span>        }</div>
+<div class="line"><span class="lineno"> 2970</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startX; i &lt; endX + 1; i++)</div>
+<div class="line"><span class="lineno"> 2971</span>        {</div>
+<div class="line"><span class="lineno"> 2972</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = startY; j &lt; endY + 1; j++)</div>
+<div class="line"><span class="lineno"> 2973</span>            {</div>
+<div class="line"><span class="lineno"> 2974</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 2975</span>                {</div>
+<div class="line"><span class="lineno"> 2976</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2977</span>                }</div>
+<div class="line"><span class="lineno"> 2978</span>                <span class="keywordflow">if</span> (Main.tile[i, j].active() &amp;&amp; !Main.tile[i, j].inActive() &amp;&amp; Main.tileSolid[Main.tile[i, j].type] &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 2979</span>                {</div>
+<div class="line"><span class="lineno"> 2980</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2981</span>                }</div>
+<div class="line"><span class="lineno"> 2982</span>            }</div>
+<div class="line"><span class="lineno"> 2983</span>        }</div>
+<div class="line"><span class="lineno"> 2984</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2985</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,42 @@ $(function(){initNavTree('d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWri
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="comment">//IL_0017: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   48</span>        <span class="comment">//IL_0034: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   49</span>        <span class="comment">//IL_0025: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   50</span>        lock (<a class="code hl_variable" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_abfb0795935572d7a37c6dc04e1454daa.html#abfb0795935572d7a37c6dc04e1454daa">_lock</a>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            Queue&lt;WriteInformation&gt; queue2 = (<a class="code hl_variable" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3.html#ae9d1d69589ec726f49a17a22c03a32c3">_pendingSendData</a>.ContainsKey(user) ? <a class="code hl_variable" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3.html#ae9d1d69589ec726f49a17a22c03a32c3">_pendingSendData</a>[user] : (<a class="code hl_variable" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3.html#ae9d1d69589ec726f49a17a22c03a32c3">_pendingSendData</a>[user] = <span class="keyword">new</span> Queue&lt;WriteInformation&gt;()));</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">int</span> num = length;</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">while</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                WriteInformation writeInformation;</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (queue2.Count == 0 || 1024 - queue2.Peek().Size == 0)</div>
+<div class="line"><span class="lineno">   59</span>                {</div>
+<div class="line"><span class="lineno">   60</span>                    writeInformation = ((_bufferPool.Count &lt;= 0) ? <span class="keyword">new</span> WriteInformation() : <span class="keyword">new</span> WriteInformation(<a class="code hl_variable" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_a363855a770512d98e400df586434bdc7.html#a363855a770512d98e400df586434bdc7">_bufferPool</a>.Dequeue()));</div>
+<div class="line"><span class="lineno">   61</span>                    queue2.Enqueue(writeInformation);</div>
+<div class="line"><span class="lineno">   62</span>                }</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   64</span>                {</div>
+<div class="line"><span class="lineno">   65</span>                    writeInformation = queue2.Peek();</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordtype">int</span> num3 = Math.Min(num, 1024 - writeInformation.Size);</div>
+<div class="line"><span class="lineno">   68</span>                Array.Copy(data, num2, writeInformation.Data, writeInformation.Size, num3);</div>
+<div class="line"><span class="lineno">   69</span>                writeInformation.Size += num3;</div>
+<div class="line"><span class="lineno">   70</span>                num -= num3;</div>
+<div class="line"><span class="lineno">   71</span>                num2 += num3;</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_a363855a770512d98e400df586434bdc7_html_a363855a770512d98e400df586434bdc7"><div class="ttname"><a href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_a363855a770512d98e400df586434bdc7.html#a363855a770512d98e400df586434bdc7">Terraria.Social.Steam.SteamP2PWriter._bufferPool</a></div><div class="ttdeci">Queue&lt; byte[]&gt; _bufferPool</div><div class="ttdef"><b>Definition</b> SteamP2PWriter.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_abfb0795935572d7a37c6dc04e1454daa_html_abfb0795935572d7a37c6dc04e1454daa"><div class="ttname"><a href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_abfb0795935572d7a37c6dc04e1454daa.html#abfb0795935572d7a37c6dc04e1454daa">Terraria.Social.Steam.SteamP2PWriter._lock</a></div><div class="ttdeci">object _lock</div><div class="ttdef"><b>Definition</b> SteamP2PWriter.cs:38</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3_html_ae9d1d69589ec726f49a17a22c03a32c3"><div class="ttname"><a href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3.html#ae9d1d69589ec726f49a17a22c03a32c3">Terraria.Social.Steam.SteamP2PWriter._pendingSendData</a></div><div class="ttdeci">Dictionary&lt; CSteamID, Queue&lt; WriteInformation &gt; &gt; _pendingSendData</div><div class="ttdef"><b>Definition</b> SteamP2PWriter.cs:30</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_a363855a770512d98e400df586434bdc7.html#a363855a770512d98e400df586434bdc7">Terraria.Social.Steam.SteamP2PWriter._bufferPool</a>, <a class="el" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_abfb0795935572d7a37c6dc04e1454daa.html#abfb0795935572d7a37c6dc04e1454daa">Terraria.Social.Steam.SteamP2PWriter._lock</a>, <a class="el" href="../../d2/d0f/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_ae9d1d69589ec726f49a17a22c03a32c3.html#ae9d1d69589ec726f49a17a22c03a32c3">Terraria.Social.Steam.SteamP2PWriter._pendingSendData</a>, <a class="el" href="../../d7/d4a/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_1_1WriteInformation_a7a50f6158abacda330255adb6fbf948f.html#a7a50f6158abacda330255adb6fbf948f">Terraria.Social.Steam.SteamP2PWriter.WriteInformation.Data</a>, and <a class="el" href="../../d7/d4a/classTerraria_1_1Social_1_1Steam_1_1SteamP2PWriter_1_1WriteInformation_a988730b721acd7d55c21a94998b5d396.html#a988730b721acd7d55c21a94998b5d396">Terraria.Social.Steam.SteamP2PWriter.WriteInformation.Size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_ab2b5269a0e0342953b2617cda44f778e.html#ab2b5269a0e0342953b2617cda44f778e">Terraria.Social.Steam.NetSocialModule.Send()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,62 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_ab8abb6e7e23b36a5fcd4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">44159</span>    {</div>
+<div class="line"><span class="lineno">44160</span>        ushort type = 254;</div>
+<div class="line"><span class="lineno">44161</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(6) * 36;</div>
+<div class="line"><span class="lineno">44162</span>        <span class="keywordflow">if</span> (x &lt; 5 || x &gt; Main.maxTilesX - 5 || superY &lt; 5 || superY &gt; Main.maxTilesY - 5)</div>
+<div class="line"><span class="lineno">44163</span>        {</div>
+<div class="line"><span class="lineno">44164</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">44165</span>        }</div>
+<div class="line"><span class="lineno">44166</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">44167</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x - 1; i &lt; x + 1; i++)</div>
+<div class="line"><span class="lineno">44168</span>        {</div>
+<div class="line"><span class="lineno">44169</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = superY - 1; j &lt; superY + 1; j++)</div>
+<div class="line"><span class="lineno">44170</span>            {</div>
+<div class="line"><span class="lineno">44171</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">44172</span>                {</div>
+<div class="line"><span class="lineno">44173</span>                    Main.tile[i, j] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">44174</span>                }</div>
+<div class="line"><span class="lineno">44175</span>                <span class="keywordflow">if</span> (Main.tile[i, j].active() &amp;&amp; Main.tile[i, j].type != 3 &amp;&amp; Main.tile[i, j].type != 73 &amp;&amp; Main.tile[i, j].type != 113 &amp;&amp; Main.tile[i, j].type != 110 &amp;&amp; (Main.tile[i, j].type != 185 || Main.tile[i, j].frameY != 0))</div>
+<div class="line"><span class="lineno">44176</span>                {</div>
+<div class="line"><span class="lineno">44177</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">44178</span>                }</div>
+<div class="line"><span class="lineno">44179</span>                <span class="keywordflow">if</span> (Main.tile[i, j].liquid &gt; 0)</div>
+<div class="line"><span class="lineno">44180</span>                {</div>
+<div class="line"><span class="lineno">44181</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">44182</span>                }</div>
+<div class="line"><span class="lineno">44183</span>            }</div>
+<div class="line"><span class="lineno">44184</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(i, superY + 1) || (Main.tile[i, superY + 1].type != 2 &amp;&amp; Main.tile[i, superY + 1].type != 109))</div>
+<div class="line"><span class="lineno">44185</span>            {</div>
+<div class="line"><span class="lineno">44186</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">44187</span>            }</div>
+<div class="line"><span class="lineno">44188</span>        }</div>
+<div class="line"><span class="lineno">44189</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">44190</span>        {</div>
+<div class="line"><span class="lineno">44191</span>            Main.tile[x - 1, superY - 1].active(active: true);</div>
+<div class="line"><span class="lineno">44192</span>            Main.tile[x - 1, superY - 1].frameY = (short)num;</div>
+<div class="line"><span class="lineno">44193</span>            Main.tile[x - 1, superY - 1].frameX = 0;</div>
+<div class="line"><span class="lineno">44194</span>            Main.tile[x - 1, superY - 1].type = type;</div>
+<div class="line"><span class="lineno">44195</span>            Main.tile[x, superY - 1].active(active: true);</div>
+<div class="line"><span class="lineno">44196</span>            Main.tile[x, superY - 1].frameY = (short)num;</div>
+<div class="line"><span class="lineno">44197</span>            Main.tile[x, superY - 1].frameX = 18;</div>
+<div class="line"><span class="lineno">44198</span>            Main.tile[x, superY - 1].type = type;</div>
+<div class="line"><span class="lineno">44199</span>            Main.tile[x - 1, superY].active(active: true);</div>
+<div class="line"><span class="lineno">44200</span>            Main.tile[x - 1, superY].frameY = (short)(num + 18);</div>
+<div class="line"><span class="lineno">44201</span>            Main.tile[x - 1, superY].frameX = 0;</div>
+<div class="line"><span class="lineno">44202</span>            Main.tile[x - 1, superY].type = type;</div>
+<div class="line"><span class="lineno">44203</span>            Main.tile[x, superY].active(active: true);</div>
+<div class="line"><span class="lineno">44204</span>            Main.tile[x, superY].frameY = (short)(num + 18);</div>
+<div class="line"><span class="lineno">44205</span>            Main.tile[x, superY].frameX = 18;</div>
+<div class="line"><span class="lineno">44206</span>            Main.tile[x, superY].type = type;</div>
+<div class="line"><span class="lineno">44207</span>        }</div>
+<div class="line"><span class="lineno">44208</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

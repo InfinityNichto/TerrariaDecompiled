@@ -117,7 +117,32 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a4f800785dcf5693928bde8
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">50728</span>    {</div>
+<div class="line"><span class="lineno">50729</span>        TimeSpan timeSpan = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a45300124bb3a50866021b80396dcb9f3.html#a45300124bb3a50866021b80396dcb9f3">dpsEnd</a> - <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">dpsStart</a>;</div>
+<div class="line"><span class="lineno">50730</span>        <span class="keywordtype">float</span> num = (float)timeSpan.Milliseconds / 1000f;</div>
+<div class="line"><span class="lineno">50731</span>        num += (float)timeSpan.Seconds;</div>
+<div class="line"><span class="lineno">50732</span>        num += (float)timeSpan.Minutes / 60f;</div>
+<div class="line"><span class="lineno">50733</span>        <span class="keywordflow">if</span> (num &gt;= 3f)</div>
+<div class="line"><span class="lineno">50734</span>        {</div>
+<div class="line"><span class="lineno">50735</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">dpsStart</a> = DateTime.Now;</div>
+<div class="line"><span class="lineno">50736</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">dpsStart</a> = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">dpsStart</a>.AddSeconds(-1.0);</div>
+<div class="line"><span class="lineno">50737</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab5ccba895ce7ed6aab2b1d574409391d.html#ab5ccba895ce7ed6aab2b1d574409391d">dpsDamage</a> = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab5ccba895ce7ed6aab2b1d574409391d.html#ab5ccba895ce7ed6aab2b1d574409391d">dpsDamage</a> / num);</div>
+<div class="line"><span class="lineno">50738</span>            timeSpan = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a45300124bb3a50866021b80396dcb9f3.html#a45300124bb3a50866021b80396dcb9f3">dpsEnd</a> - <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">dpsStart</a>;</div>
+<div class="line"><span class="lineno">50739</span>            num = (float)timeSpan.Milliseconds / 1000f;</div>
+<div class="line"><span class="lineno">50740</span>            num += (float)timeSpan.Seconds;</div>
+<div class="line"><span class="lineno">50741</span>            num += (float)timeSpan.Minutes / 60f;</div>
+<div class="line"><span class="lineno">50742</span>        }</div>
+<div class="line"><span class="lineno">50743</span>        <span class="keywordflow">if</span> (num &lt; 1f)</div>
+<div class="line"><span class="lineno">50744</span>        {</div>
+<div class="line"><span class="lineno">50745</span>            num = 1f;</div>
+<div class="line"><span class="lineno">50746</span>        }</div>
+<div class="line"><span class="lineno">50747</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((float)<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab5ccba895ce7ed6aab2b1d574409391d.html#ab5ccba895ce7ed6aab2b1d574409391d">dpsDamage</a> / num);</div>
+<div class="line"><span class="lineno">50748</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005_html_a2b59456110b1d7958d3f30172212c005"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a2b59456110b1d7958d3f30172212c005.html#a2b59456110b1d7958d3f30172212c005">Terraria.Player.dpsStart</a></div><div class="ttdeci">DateTime dpsStart</div><div class="ttdef"><b>Definition</b> Player.cs:2199</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a45300124bb3a50866021b80396dcb9f3_html_a45300124bb3a50866021b80396dcb9f3"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a45300124bb3a50866021b80396dcb9f3.html#a45300124bb3a50866021b80396dcb9f3">Terraria.Player.dpsEnd</a></div><div class="ttdeci">DateTime dpsEnd</div><div class="ttdef"><b>Definition</b> Player.cs:2201</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ab5ccba895ce7ed6aab2b1d574409391d_html_ab5ccba895ce7ed6aab2b1d574409391d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ab5ccba895ce7ed6aab2b1d574409391d.html#ab5ccba895ce7ed6aab2b1d574409391d">Terraria.Player.dpsDamage</a></div><div class="ttdeci">int dpsDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2205</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -121,7 +121,39 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a5fe787a10eab0a21f83dcf
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">47683</span>    {</div>
+<div class="line"><span class="lineno">47684</span>        <span class="keywordtype">float</span> num = rotation + (float)Math.PI / 2f;</div>
+<div class="line"><span class="lineno">47685</span>        Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Math.Cos(num), (<span class="keywordtype">float</span>)Math.Sin(num));</div>
+<div class="line"><span class="lineno">47686</span>        <span class="keywordflow">switch</span> (stretch)</div>
+<div class="line"><span class="lineno">47687</span>        {</div>
+<div class="line"><span class="lineno">47688</span>        <span class="keywordflow">case</span> CompositeArmStretchAmount.Full:</div>
+<div class="line"><span class="lineno">47689</span>            vector *= 10f;</div>
+<div class="line"><span class="lineno">47690</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47691</span>        <span class="keywordflow">case</span> CompositeArmStretchAmount.None:</div>
+<div class="line"><span class="lineno">47692</span>            vector *= 4f;</div>
+<div class="line"><span class="lineno">47693</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47694</span>        <span class="keywordflow">case</span> CompositeArmStretchAmount.Quarter:</div>
+<div class="line"><span class="lineno">47695</span>            vector *= 6f;</div>
+<div class="line"><span class="lineno">47696</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47697</span>        <span class="keywordflow">case</span> CompositeArmStretchAmount.ThreeQuarters:</div>
+<div class="line"><span class="lineno">47698</span>            vector *= 8f;</div>
+<div class="line"><span class="lineno">47699</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47700</span>        }</div>
+<div class="line"><span class="lineno">47701</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">direction</a> == -1)</div>
+<div class="line"><span class="lineno">47702</span>        {</div>
+<div class="line"><span class="lineno">47703</span>            vector += <span class="keyword">new</span> Vector2(4f, -2f);</div>
+<div class="line"><span class="lineno">47704</span>            vector += <span class="keyword">new</span> Vector2(0f, -3f).RotatedBy(rotation + (<span class="keywordtype">float</span>)Math.PI / 2f);</div>
+<div class="line"><span class="lineno">47705</span>        }</div>
+<div class="line"><span class="lineno">47706</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47707</span>        {</div>
+<div class="line"><span class="lineno">47708</span>            vector += <span class="keyword">new</span> Vector2(-4f, -2f);</div>
+<div class="line"><span class="lineno">47709</span>            vector += <span class="keyword">new</span> Vector2(0f, 3f).RotatedBy(rotation + (<span class="keywordtype">float</span>)Math.PI / 2f);</div>
+<div class="line"><span class="lineno">47710</span>        }</div>
+<div class="line"><span class="lineno">47711</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="../../d4/d03/classTerraria_1_1Player_a6334845df797462c030f12272454ed5c.html#a6334845df797462c030f12272454ed5c">MountedCenter</a> + vector;</div>
+<div class="line"><span class="lineno">47712</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f_html_a2dc818b6035d9e739592ea0e9a75945f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition</b> Entity.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a6334845df797462c030f12272454ed5c_html_a6334845df797462c030f12272454ed5c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a6334845df797462c030f12272454ed5c.html#a6334845df797462c030f12272454ed5c">Terraria.Player.MountedCenter</a></div><div class="ttdeci">Vector2 MountedCenter</div><div class="ttdef"><b>Definition</b> Player.cs:2853</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

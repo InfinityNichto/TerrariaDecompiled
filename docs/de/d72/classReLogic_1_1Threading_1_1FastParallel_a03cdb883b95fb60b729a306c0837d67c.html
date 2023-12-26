@@ -131,6 +131,55 @@ $(function(){initNavTree('de/d72/classReLogic_1_1Threading_1_1FastParallel_a03cd
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> num = toExclusive - fromInclusive;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">int</span> num2 = Math.Min(Math.Max(1, Environment.ProcessorCount + 1 - 1 - 1), num);</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_a64c21198c4a4f94ae8ee271df5a78aa4.html#a64c21198c4a4f94ae8ee271df5a78aa4">ForceTasksOnCallingThread</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            num2 = 1;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> num3 = num / num2;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> num4 = num % num2;</div>
+<div class="line"><span class="lineno">   66</span>        CountdownEvent countdownEvent = <span class="keyword">new</span> CountdownEvent(num2);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> num5 = toExclusive;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num6 = num2 - 1; num6 &gt;= 0; num6--)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">int</span> num7 = num3;</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (num6 &lt; num4)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                num7++;</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>            num5 -= num7;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordtype">int</span> num8 = num5;</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordtype">int</span> toExclusive2 = num8 + num7;</div>
+<div class="line"><span class="lineno">   78</span>            RangeTask rangeTask = <span class="keyword">new</span> RangeTask(callback, num8, toExclusive2, context, countdownEvent);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (num6 &lt; 1)</div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                <a class="code hl_function" href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_acdf71731890cccdafcd25f55b9d5adde.html#acdf71731890cccdafcd25f55b9d5adde">InvokeTask</a>(rangeTask);</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                ThreadPool.QueueUserWorkItem(<a class="code hl_function" href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_acdf71731890cccdafcd25f55b9d5adde.html#acdf71731890cccdafcd25f55b9d5adde">InvokeTask</a>, rangeTask);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (countdownEvent.Wait(10000))</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        ThreadPool.GetAvailableThreads(out var workerThreads, out var _);</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d4/d67/classException.html">Exception</a>($<span class="stringliteral">&quot;Fatal Deadlock in FastParallelFor. pending: {ThreadPool.PendingWorkItemCount}. avail: {workerThreads}&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassReLogic_1_1Threading_1_1FastParallel_a64c21198c4a4f94ae8ee271df5a78aa4_html_a64c21198c4a4f94ae8ee271df5a78aa4"><div class="ttname"><a href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_a64c21198c4a4f94ae8ee271df5a78aa4.html#a64c21198c4a4f94ae8ee271df5a78aa4">ReLogic.Threading.FastParallel.ForceTasksOnCallingThread</a></div><div class="ttdeci">static bool ForceTasksOnCallingThread</div><div class="ttdef"><b>Definition</b> FastParallel.cs:45</div></div>
+<div class="ttc" id="aclassReLogic_1_1Threading_1_1FastParallel_acdf71731890cccdafcd25f55b9d5adde_html_acdf71731890cccdafcd25f55b9d5adde"><div class="ttname"><a href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_acdf71731890cccdafcd25f55b9d5adde.html#acdf71731890cccdafcd25f55b9d5adde">ReLogic.Threading.FastParallel.InvokeTask</a></div><div class="ttdeci">static void InvokeTask(object context)</div><div class="ttdef"><b>Definition</b> FastParallel.cs:96</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_a64c21198c4a4f94ae8ee271df5a78aa4.html#a64c21198c4a4f94ae8ee271df5a78aa4">ReLogic.Threading.FastParallel.ForceTasksOnCallingThread</a>, and <a class="el" href="../../de/d72/classReLogic_1_1Threading_1_1FastParallel_acdf71731890cccdafcd25f55b9d5adde.html#acdf71731890cccdafcd25f55b9d5adde">ReLogic.Threading.FastParallel.InvokeTask()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/dcf/classTerraria_1_1Graphics_1_1Light_1_1LightMap_aac9abcc4708d7882d74539005e6dd1e0.html#aac9abcc4708d7882d74539005e6dd1e0">Terraria.Graphics.Light.LightMap.BlurPass()</a>, <a class="el" href="../../dc/d2c/classTerraria_1_1Graphics_1_1Light_1_1LegacyLighting_ae6c1aa2b022b663aeb3b0a1d7a5dfdd9.html#ae6c1aa2b022b663aeb3b0a1d7a5dfdd9">Terraria.Graphics.Light.LegacyLighting.DoColors()</a>, <a class="el" href="../../dc/d87/classTerraria_1_1Graphics_1_1Light_1_1TileLightScanner_aa6822b75eab9a4c436d73d3ee4cfce4d.html#aa6822b75eab9a4c436d73d3ee4cfce4d">Terraria.Graphics.Light.TileLightScanner.ExportTo()</a>, and <a class="el" href="../../dc/d40/classTerraria_1_1Graphics_1_1Light_1_1LightingEngine_a72882a172c793d132e0e57024db6d57c.html#a72882a172c793d132e0e57024db6d57c">Terraria.Graphics.Light.LightingEngine.ExportToMiniMap()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

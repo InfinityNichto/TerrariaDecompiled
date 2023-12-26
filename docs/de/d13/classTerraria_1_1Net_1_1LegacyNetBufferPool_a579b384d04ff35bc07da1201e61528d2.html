@@ -117,6 +117,32 @@ $(function(){initNavTree('de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a57
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">int</span> num = buffer.Length;</div>
+<div class="line"><span class="lineno">   76</span>        lock (<a class="code hl_variable" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_ad51311451e72ce1876e6de1e27366aa2.html#ad51311451e72ce1876e6de1e27366aa2">bufferLock</a>)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (num &lt;= 256)</div>
+<div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                <a class="code hl_variable" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a818e3447057b9b94a039e306ca237b33.html#a818e3447057b9b94a039e306ca237b33">_smallBufferQueue</a>.Enqueue(buffer);</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &lt;= 1024)</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                <a class="code hl_variable" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a3d73b572dbd3abdbe5a808fb891744a9.html#a3d73b572dbd3abdbe5a808fb891744a9">_mediumBufferQueue</a>.Enqueue(buffer);</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &lt;= 16384)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <a class="code hl_variable" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_aa36b74a32ccf722e83a11677d27691d2.html#aa36b74a32ccf722e83a11677d27691d2">_largeBufferQueue</a>.Enqueue(buffer);</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1LegacyNetBufferPool_a3d73b572dbd3abdbe5a808fb891744a9_html_a3d73b572dbd3abdbe5a808fb891744a9"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a3d73b572dbd3abdbe5a808fb891744a9.html#a3d73b572dbd3abdbe5a808fb891744a9">Terraria.Net.LegacyNetBufferPool._mediumBufferQueue</a></div><div class="ttdeci">static Queue&lt; byte[]&gt; _mediumBufferQueue</div><div class="ttdef"><b>Definition</b> LegacyNetBufferPool.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1LegacyNetBufferPool_a818e3447057b9b94a039e306ca237b33_html_a818e3447057b9b94a039e306ca237b33"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a818e3447057b9b94a039e306ca237b33.html#a818e3447057b9b94a039e306ca237b33">Terraria.Net.LegacyNetBufferPool._smallBufferQueue</a></div><div class="ttdeci">static Queue&lt; byte[]&gt; _smallBufferQueue</div><div class="ttdef"><b>Definition</b> LegacyNetBufferPool.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1LegacyNetBufferPool_aa36b74a32ccf722e83a11677d27691d2_html_aa36b74a32ccf722e83a11677d27691d2"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_aa36b74a32ccf722e83a11677d27691d2.html#aa36b74a32ccf722e83a11677d27691d2">Terraria.Net.LegacyNetBufferPool._largeBufferQueue</a></div><div class="ttdeci">static Queue&lt; byte[]&gt; _largeBufferQueue</div><div class="ttdef"><b>Definition</b> LegacyNetBufferPool.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1LegacyNetBufferPool_ad51311451e72ce1876e6de1e27366aa2_html_ad51311451e72ce1876e6de1e27366aa2"><div class="ttname"><a href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_ad51311451e72ce1876e6de1e27366aa2.html#ad51311451e72ce1876e6de1e27366aa2">Terraria.Net.LegacyNetBufferPool.bufferLock</a></div><div class="ttdeci">static object bufferLock</div><div class="ttdef"><b>Definition</b> LegacyNetBufferPool.cs:14</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_aa36b74a32ccf722e83a11677d27691d2.html#aa36b74a32ccf722e83a11677d27691d2">Terraria.Net.LegacyNetBufferPool._largeBufferQueue</a>, <a class="el" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a3d73b572dbd3abdbe5a808fb891744a9.html#a3d73b572dbd3abdbe5a808fb891744a9">Terraria.Net.LegacyNetBufferPool._mediumBufferQueue</a>, <a class="el" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_a818e3447057b9b94a039e306ca237b33.html#a818e3447057b9b94a039e306ca237b33">Terraria.Net.LegacyNetBufferPool._smallBufferQueue</a>, and <a class="el" href="../../de/d13/classTerraria_1_1Net_1_1LegacyNetBufferPool_ad51311451e72ce1876e6de1e27366aa2.html#ad51311451e72ce1876e6de1e27366aa2">Terraria.Net.LegacyNetBufferPool.bufferLock</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_aed0e633aeba78cb470d2561c812cd767.html#aed0e633aeba78cb470d2561c812cd767">Terraria.Net.Sockets.TcpSocket.SendCallback()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

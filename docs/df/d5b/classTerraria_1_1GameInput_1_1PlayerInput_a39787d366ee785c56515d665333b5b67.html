@@ -117,6 +117,27 @@ $(function(){initNavTree('df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_a3978
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1766</span>    {</div>
+<div class="line"><span class="lineno"> 1767</span>        <span class="keywordtype">string</span>[] array = text.Split(<span class="keyword">new</span> <span class="keywordtype">string</span>[1] { <span class="stringliteral">&quot;\r\n&quot;</span> }, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno"> 1768</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text2 <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno"> 1769</span>        {</div>
+<div class="line"><span class="lineno"> 1770</span>            <span class="keywordflow">if</span> (text2.Contains(<span class="stringliteral">&quot;: {&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1771</span>            {</div>
+<div class="line"><span class="lineno"> 1772</span>                <span class="keywordtype">string</span> text3 = text2.Substring(0, text2.IndexOf(<span class="charliteral">&#39;&quot;&#39;</span>));</div>
+<div class="line"><span class="lineno"> 1773</span>                <span class="keywordtype">string</span> text4 = text2 + <span class="stringliteral">&quot;\r\n  &quot;</span>;</div>
+<div class="line"><span class="lineno"> 1774</span>                <span class="keywordtype">string</span> newValue = text4.Replace(<span class="stringliteral">&quot;: {\r\n  &quot;</span>, <span class="stringliteral">&quot;: \r\n&quot;</span> + text3 + <span class="stringliteral">&quot;{\r\n  &quot;</span>);</div>
+<div class="line"><span class="lineno"> 1775</span>                text = text.Replace(text4, newValue);</div>
+<div class="line"><span class="lineno"> 1776</span>            }</div>
+<div class="line"><span class="lineno"> 1777</span>        }</div>
+<div class="line"><span class="lineno"> 1778</span>        text = text.Replace(<span class="stringliteral">&quot;[\r\n        &quot;</span>, <span class="stringliteral">&quot;[&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1779</span>        text = text.Replace(<span class="stringliteral">&quot;[\r\n      &quot;</span>, <span class="stringliteral">&quot;[&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1780</span>        text = text.Replace(<span class="stringliteral">&quot;\&quot;\r\n      &quot;</span>, <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1781</span>        text = text.Replace(<span class="stringliteral">&quot;\&quot;,\r\n        &quot;</span>, <span class="stringliteral">&quot;\&quot;, &quot;</span>);</div>
+<div class="line"><span class="lineno"> 1782</span>        text = text.Replace(<span class="stringliteral">&quot;\&quot;,\r\n      &quot;</span>, <span class="stringliteral">&quot;\&quot;, &quot;</span>);</div>
+<div class="line"><span class="lineno"> 1783</span>        text = text.Replace(<span class="stringliteral">&quot;\r\n    ]&quot;</span>, <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1784</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation_ae4ee25bd5d3068c5d9dd630cb98e3762.html#ae4ee25bd5d3068c5d9dd630cb98e3762">Terraria.GameContent.UI.States.UICharacterCreation.Click_CopyPlayerTemplate()</a>, and <a class="el" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_a6b14f82f15831108aac73154f1cf8228.html#a6b14f82f15831108aac73154f1cf8228">Terraria.GameInput.PlayerInput.Initialize()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

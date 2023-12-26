@@ -136,6 +136,57 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a053f15a713b70f4346f4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">41858</span>    {</div>
+<div class="line"><span class="lineno">41859</span>        <span class="keywordflow">if</span> (x &lt; 5 || x &gt; Main.maxTilesX - 5 || y &lt; 5 || y &gt; Main.maxTilesY - 5)</div>
+<div class="line"><span class="lineno">41860</span>        {</div>
+<div class="line"><span class="lineno">41861</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">41862</span>        }</div>
+<div class="line"><span class="lineno">41863</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">41864</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x - 3; i &lt; x + 3; i++)</div>
+<div class="line"><span class="lineno">41865</span>        {</div>
+<div class="line"><span class="lineno">41866</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y - 2; j &lt;= y; j++)</div>
+<div class="line"><span class="lineno">41867</span>            {</div>
+<div class="line"><span class="lineno">41868</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">41869</span>                {</div>
+<div class="line"><span class="lineno">41870</span>                    Main.tile[i, j] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">41871</span>                }</div>
+<div class="line"><span class="lineno">41872</span>                <span class="keywordflow">if</span> (Main.tile[i, j].active())</div>
+<div class="line"><span class="lineno">41873</span>                {</div>
+<div class="line"><span class="lineno">41874</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">41875</span>                }</div>
+<div class="line"><span class="lineno">41876</span>            }</div>
+<div class="line"><span class="lineno">41877</span>            <span class="keywordflow">if</span> (Main.tile[i, y + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">41878</span>            {</div>
+<div class="line"><span class="lineno">41879</span>                Main.tile[i, y + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">41880</span>            }</div>
+<div class="line"><span class="lineno">41881</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a622da04861d766a27cf7b48216e3aa00.html#a622da04861d766a27cf7b48216e3aa00">SolidTile2</a>(i, y + 1) &amp;&amp; (!Main.tile[i, y + 1].nactive() || !Main.tileSolidTop[Main.tile[i, y + 1].type] || Main.tile[i, y + 1].frameY != 0))</div>
+<div class="line"><span class="lineno">41882</span>            {</div>
+<div class="line"><span class="lineno">41883</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">41884</span>            }</div>
+<div class="line"><span class="lineno">41885</span>        }</div>
+<div class="line"><span class="lineno">41886</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">41887</span>        {</div>
+<div class="line"><span class="lineno">41888</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">41889</span>        }</div>
+<div class="line"><span class="lineno">41890</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">41891</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = x - 3; k &lt; x + 3; k++)</div>
+<div class="line"><span class="lineno">41892</span>        {</div>
+<div class="line"><span class="lineno">41893</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">41894</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = y - 2; l &lt;= y; l++)</div>
+<div class="line"><span class="lineno">41895</span>            {</div>
+<div class="line"><span class="lineno">41896</span>                Main.tile[k, l].active(active: true);</div>
+<div class="line"><span class="lineno">41897</span>                Main.tile[k, l].frameY = (short)num2;</div>
+<div class="line"><span class="lineno">41898</span>                Main.tile[k, l].frameX = (short)num;</div>
+<div class="line"><span class="lineno">41899</span>                Main.tile[k, l].type = type;</div>
+<div class="line"><span class="lineno">41900</span>                num2 += 18;</div>
+<div class="line"><span class="lineno">41901</span>            }</div>
+<div class="line"><span class="lineno">41902</span>            num += 18;</div>
+<div class="line"><span class="lineno">41903</span>        }</div>
+<div class="line"><span class="lineno">41904</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a622da04861d766a27cf7b48216e3aa00_html_a622da04861d766a27cf7b48216e3aa00"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a622da04861d766a27cf7b48216e3aa00.html#a622da04861d766a27cf7b48216e3aa00">Terraria.WorldGen.SolidTile2</a></div><div class="ttdeci">static bool SolidTile2(Tile testTile)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:60689</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

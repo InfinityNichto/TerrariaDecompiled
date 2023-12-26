@@ -141,6 +141,105 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a7937c77f0f6d3e9972c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordtype">float</span> num = lineWidth * 0.5f;</div>
+<div class="line"><span class="lineno">  249</span>        Vector2 position = lineStart;</div>
+<div class="line"><span class="lineno">  250</span>        Vector2 dimensions = lineEnd - lineStart;</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (dimensions.X &gt; 0f)</div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            dimensions.X += lineWidth;</div>
+<div class="line"><span class="lineno">  254</span>            position.X -= num;</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  257</span>        {</div>
+<div class="line"><span class="lineno">  258</span>            position.X += dimensions.X - num;</div>
+<div class="line"><span class="lineno">  259</span>            dimensions.X = 0f - dimensions.X + lineWidth;</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (dimensions.Y &gt; 0f)</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            dimensions.Y += lineWidth;</div>
+<div class="line"><span class="lineno">  264</span>            position.Y -= num;</div>
+<div class="line"><span class="lineno">  265</span>        }</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  267</span>        {</div>
+<div class="line"><span class="lineno">  268</span>            position.Y += dimensions.Y - num;</div>
+<div class="line"><span class="lineno">  269</span>            dimensions.Y = 0f - dimensions.Y + lineWidth;</div>
+<div class="line"><span class="lineno">  270</span>        }</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_afae514da9741510c6d3dd55f045cb3b2.html#afae514da9741510c6d3dd55f045cb3b2">CheckAABBvAABBCollision</a>(objectPosition, objectDimensions, position, dimensions))</div>
+<div class="line"><span class="lineno">  272</span>        {</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span>        Vector2 vector = objectPosition - lineStart;</div>
+<div class="line"><span class="lineno">  276</span>        Vector2 spinningpoint = vector + objectDimensions;</div>
+<div class="line"><span class="lineno">  277</span>        Vector2 spinningpoint2 = <span class="keyword">new</span> Vector2(vector.X, spinningpoint.Y);</div>
+<div class="line"><span class="lineno">  278</span>        Vector2 spinningpoint3 = <span class="keyword">new</span> Vector2(spinningpoint.X, vector.Y);</div>
+<div class="line"><span class="lineno">  279</span>        Vector2 vector2 = lineEnd - lineStart;</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordtype">float</span> num2 = vector2.Length();</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordtype">float</span> num3 = (float)Math.Atan2(vector2.Y, vector2.X);</div>
+<div class="line"><span class="lineno">  282</span>        Vector2[] array = <span class="keyword">new</span> Vector2[4]</div>
+<div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>            vector.RotatedBy(0f - num3),</div>
+<div class="line"><span class="lineno">  285</span>            spinningpoint3.RotatedBy(0f - num3),</div>
+<div class="line"><span class="lineno">  286</span>            spinningpoint.RotatedBy(0f - num3),</div>
+<div class="line"><span class="lineno">  287</span>            spinningpoint2.RotatedBy(0f - num3)</div>
+<div class="line"><span class="lineno">  288</span>        };</div>
+<div class="line"><span class="lineno">  289</span>        collisionPoint = num2;</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">if</span> (Math.Abs(array[i].Y) &lt; num &amp;&amp; array[i].X &lt; collisionPoint &amp;&amp; array[i].X &gt;= 0f)</div>
+<div class="line"><span class="lineno">  294</span>            {</div>
+<div class="line"><span class="lineno">  295</span>                collisionPoint = array[i].X;</div>
+<div class="line"><span class="lineno">  296</span>                result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  297</span>            }</div>
+<div class="line"><span class="lineno">  298</span>        }</div>
+<div class="line"><span class="lineno">  299</span>        Vector2 vector3 = <span class="keyword">new</span> Vector2(0f, num);</div>
+<div class="line"><span class="lineno">  300</span>        Vector2 vector4 = <span class="keyword">new</span> Vector2(num2, num);</div>
+<div class="line"><span class="lineno">  301</span>        Vector2 vector5 = <span class="keyword">new</span> Vector2(0f, 0f - num);</div>
+<div class="line"><span class="lineno">  302</span>        Vector2 vector6 = <span class="keyword">new</span> Vector2(num2, 0f - num);</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; array.Length; j++)</div>
+<div class="line"><span class="lineno">  304</span>        {</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordtype">int</span> num4 = (j + 1) % array.Length;</div>
+<div class="line"><span class="lineno">  306</span>            Vector2 vector7 = vector4 - vector3;</div>
+<div class="line"><span class="lineno">  307</span>            Vector2 vector8 = array[num4] - array[j];</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordtype">float</span> num5 = vector7.X * vector8.Y - vector7.Y * vector8.X;</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span> (num5 != 0f)</div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                Vector2 vector9 = array[j] - vector3;</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordtype">float</span> num6 = (vector9.X * vector8.Y - vector9.Y * vector8.X) / num5;</div>
+<div class="line"><span class="lineno">  313</span>                <span class="keywordflow">if</span> (num6 &gt;= 0f &amp;&amp; num6 &lt;= 1f)</div>
+<div class="line"><span class="lineno">  314</span>                {</div>
+<div class="line"><span class="lineno">  315</span>                    <span class="keywordtype">float</span> num7 = (vector9.X * vector7.Y - vector9.Y * vector7.X) / num5;</div>
+<div class="line"><span class="lineno">  316</span>                    <span class="keywordflow">if</span> (num7 &gt;= 0f &amp;&amp; num7 &lt;= 1f)</div>
+<div class="line"><span class="lineno">  317</span>                    {</div>
+<div class="line"><span class="lineno">  318</span>                        result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  319</span>                        collisionPoint = Math.Min(collisionPoint, vector3.X + num6 * vector7.X);</div>
+<div class="line"><span class="lineno">  320</span>                    }</div>
+<div class="line"><span class="lineno">  321</span>                }</div>
+<div class="line"><span class="lineno">  322</span>            }</div>
+<div class="line"><span class="lineno">  323</span>            vector7 = vector6 - vector5;</div>
+<div class="line"><span class="lineno">  324</span>            num5 = vector7.X * vector8.Y - vector7.Y * vector8.X;</div>
+<div class="line"><span class="lineno">  325</span>            <span class="keywordflow">if</span> (num5 == 0f)</div>
+<div class="line"><span class="lineno">  326</span>            {</div>
+<div class="line"><span class="lineno">  327</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  328</span>            }</div>
+<div class="line"><span class="lineno">  329</span>            Vector2 vector10 = array[j] - vector5;</div>
+<div class="line"><span class="lineno">  330</span>            <span class="keywordtype">float</span> num8 = (vector10.X * vector8.Y - vector10.Y * vector8.X) / num5;</div>
+<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">if</span> (num8 &gt;= 0f &amp;&amp; num8 &lt;= 1f)</div>
+<div class="line"><span class="lineno">  332</span>            {</div>
+<div class="line"><span class="lineno">  333</span>                <span class="keywordtype">float</span> num9 = (vector10.X * vector7.Y - vector10.Y * vector7.X) / num5;</div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (num9 &gt;= 0f &amp;&amp; num9 &lt;= 1f)</div>
+<div class="line"><span class="lineno">  335</span>                {</div>
+<div class="line"><span class="lineno">  336</span>                    result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  337</span>                    collisionPoint = Math.Min(collisionPoint, vector5.X + num8 * vector7.X);</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Collision_afae514da9741510c6d3dd55f045cb3b2_html_afae514da9741510c6d3dd55f045cb3b2"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_afae514da9741510c6d3dd55f045cb3b2.html#afae514da9741510c6d3dd55f045cb3b2">Terraria.Collision.CheckAABBvAABBCollision</a></div><div class="ttdeci">static bool CheckAABBvAABBCollision(Vector2 position1, Vector2 dimensions1, Vector2 position2, Vector2 dimensions2)</div><div class="ttdef"><b>Definition</b> Collision.cs:157</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_afae514da9741510c6d3dd55f045cb3b2.html#afae514da9741510c6d3dd55f045cb3b2">Terraria.Collision.CheckAABBvAABBCollision()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

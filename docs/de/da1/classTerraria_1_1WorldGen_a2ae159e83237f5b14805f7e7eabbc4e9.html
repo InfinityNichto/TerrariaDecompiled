@@ -126,6 +126,168 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a2ae159e83237f5b14805
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">32349</span>    {</div>
+<div class="line"><span class="lineno">32350</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">32351</span>        <span class="keywordflow">if</span> (Main.tile[i, j - 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32352</span>        {</div>
+<div class="line"><span class="lineno">32353</span>            Main.tile[i, j - 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32354</span>        }</div>
+<div class="line"><span class="lineno">32355</span>        <span class="keywordflow">if</span> (Main.tile[i, j - 2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32356</span>        {</div>
+<div class="line"><span class="lineno">32357</span>            Main.tile[i, j - 2] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32358</span>        }</div>
+<div class="line"><span class="lineno">32359</span>        <span class="keywordflow">if</span> (Main.tile[i, j + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32360</span>        {</div>
+<div class="line"><span class="lineno">32361</span>            Main.tile[i, j + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32362</span>        }</div>
+<div class="line"><span class="lineno">32363</span>        <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32364</span>        {</div>
+<div class="line"><span class="lineno">32365</span>            Main.tile[i, j] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32366</span>        }</div>
+<div class="line"><span class="lineno">32367</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">32368</span>        <span class="keywordflow">if</span> (tile.type != 10)</div>
+<div class="line"><span class="lineno">32369</span>        {</div>
+<div class="line"><span class="lineno">32370</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">32371</span>        }</div>
+<div class="line"><span class="lineno">32372</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a4931423356e90d7dd5e6198b4c29eabf.html#a4931423356e90d7dd5e6198b4c29eabf">IsLockedDoor</a>(tile))</div>
+<div class="line"><span class="lineno">32373</span>        {</div>
+<div class="line"><span class="lineno">32374</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">32375</span>        }</div>
+<div class="line"><span class="lineno">32376</span>        <span class="keywordtype">short</span> num2 = 0;</div>
+<div class="line"><span class="lineno">32377</span>        <span class="keywordtype">int</span> num3 = tile.frameY;</div>
+<div class="line"><span class="lineno">32378</span>        <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">32379</span>        <span class="keywordflow">while</span> (num3 &gt;= 54)</div>
+<div class="line"><span class="lineno">32380</span>        {</div>
+<div class="line"><span class="lineno">32381</span>            num3 -= 54;</div>
+<div class="line"><span class="lineno">32382</span>            num4++;</div>
+<div class="line"><span class="lineno">32383</span>        }</div>
+<div class="line"><span class="lineno">32384</span>        <span class="keywordflow">if</span> (tile.frameX &gt;= 54)</div>
+<div class="line"><span class="lineno">32385</span>        {</div>
+<div class="line"><span class="lineno">32386</span>            <span class="keywordtype">int</span> num5 = tile.frameX / 54;</div>
+<div class="line"><span class="lineno">32387</span>            num4 += 36 * num5;</div>
+<div class="line"><span class="lineno">32388</span>            num2 += (short)(72 * num5);</div>
+<div class="line"><span class="lineno">32389</span>        }</div>
+<div class="line"><span class="lineno">32390</span>        num = j - num3 / 18;</div>
+<div class="line"><span class="lineno">32391</span>        <span class="keywordtype">int</span> num6 = i;</div>
+<div class="line"><span class="lineno">32392</span>        TileColorCache cache = Main.tile[num6, num].BlockColorAndCoating();</div>
+<div class="line"><span class="lineno">32393</span>        <span class="keywordflow">if</span> (Main.tile[num6, num + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32394</span>        {</div>
+<div class="line"><span class="lineno">32395</span>            Main.tile[num6, num + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32396</span>        }</div>
+<div class="line"><span class="lineno">32397</span>        TileColorCache cache2 = Main.tile[num6, num + 1].BlockColorAndCoating();</div>
+<div class="line"><span class="lineno">32398</span>        <span class="keywordflow">if</span> (Main.tile[num6, num + 2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32399</span>        {</div>
+<div class="line"><span class="lineno">32400</span>            Main.tile[num6, num + 2] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32401</span>        }</div>
+<div class="line"><span class="lineno">32402</span>        TileColorCache cache3 = Main.tile[num6, num + 2].BlockColorAndCoating();</div>
+<div class="line"><span class="lineno">32403</span>        <span class="keywordtype">int</span> num7;</div>
+<div class="line"><span class="lineno">32404</span>        <span class="keywordflow">if</span> (direction == -1)</div>
+<div class="line"><span class="lineno">32405</span>        {</div>
+<div class="line"><span class="lineno">32406</span>            num6 = i - 1;</div>
+<div class="line"><span class="lineno">32407</span>            num2 += 36;</div>
+<div class="line"><span class="lineno">32408</span>            num7 = i - 1;</div>
+<div class="line"><span class="lineno">32409</span>        }</div>
+<div class="line"><span class="lineno">32410</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">32411</span>        {</div>
+<div class="line"><span class="lineno">32412</span>            num6 = i;</div>
+<div class="line"><span class="lineno">32413</span>            num7 = i + 1;</div>
+<div class="line"><span class="lineno">32414</span>        }</div>
+<div class="line"><span class="lineno">32415</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num; k &lt; num + 3; k++)</div>
+<div class="line"><span class="lineno">32416</span>        {</div>
+<div class="line"><span class="lineno">32417</span>            <span class="keywordflow">if</span> (Main.tile[num7, k] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32418</span>            {</div>
+<div class="line"><span class="lineno">32419</span>                Main.tile[num7, k] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32420</span>            }</div>
+<div class="line"><span class="lineno">32421</span>            <span class="keywordflow">if</span> (Main.tile[num7, k].active())</div>
+<div class="line"><span class="lineno">32422</span>            {</div>
+<div class="line"><span class="lineno">32423</span>                <span class="keywordflow">if</span> (!Main.tileCut[Main.tile[num7, k].type] &amp;&amp; Main.tile[num7, k].type != 3 &amp;&amp; Main.tile[num7, k].type != 24 &amp;&amp; Main.tile[num7, k].type != 52 &amp;&amp; Main.tile[num7, k].type != 61 &amp;&amp; Main.tile[num7, k].type != 62 &amp;&amp; Main.tile[num7, k].type != 69 &amp;&amp; Main.tile[num7, k].type != 655 &amp;&amp; Main.tile[num7, k].type != 71 &amp;&amp; Main.tile[num7, k].type != 73 &amp;&amp; Main.tile[num7, k].type != 74 &amp;&amp; Main.tile[num7, k].type != 110 &amp;&amp; Main.tile[num7, k].type != 113 &amp;&amp; Main.tile[num7, k].type != 115 &amp;&amp; Main.tile[num7, k].type != 165)</div>
+<div class="line"><span class="lineno">32424</span>                {</div>
+<div class="line"><span class="lineno">32425</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">32426</span>                }</div>
+<div class="line"><span class="lineno">32427</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(num7, k);</div>
+<div class="line"><span class="lineno">32428</span>            }</div>
+<div class="line"><span class="lineno">32429</span>        }</div>
+<div class="line"><span class="lineno">32430</span>        <span class="keywordflow">if</span> (Main.netMode != 1 &amp;&amp; <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.running)</div>
+<div class="line"><span class="lineno">32431</span>        {</div>
+<div class="line"><span class="lineno">32432</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6, num);</div>
+<div class="line"><span class="lineno">32433</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6, num + 1);</div>
+<div class="line"><span class="lineno">32434</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6, num + 2);</div>
+<div class="line"><span class="lineno">32435</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6 + 1, num);</div>
+<div class="line"><span class="lineno">32436</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6 + 1, num + 1);</div>
+<div class="line"><span class="lineno">32437</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Wiring</a>.SkipWire(num6 + 1, num + 2);</div>
+<div class="line"><span class="lineno">32438</span>        }</div>
+<div class="line"><span class="lineno">32439</span>        <span class="keywordtype">int</span> num8 = num4 % 36 * 54;</div>
+<div class="line"><span class="lineno">32440</span>        <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(8, i * 16, j * 16);</div>
+<div class="line"><span class="lineno">32441</span>        Main.tile[num6, num].active(active: true);</div>
+<div class="line"><span class="lineno">32442</span>        Main.tile[num6, num].type = 11;</div>
+<div class="line"><span class="lineno">32443</span>        Main.tile[num6, num].frameY = (short)num8;</div>
+<div class="line"><span class="lineno">32444</span>        Main.tile[num6, num].frameX = num2;</div>
+<div class="line"><span class="lineno">32445</span>        Main.tile[num6, num].UseBlockColors(cache);</div>
+<div class="line"><span class="lineno">32446</span>        <span class="keywordflow">if</span> (Main.tile[num6 + 1, num] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32447</span>        {</div>
+<div class="line"><span class="lineno">32448</span>            Main.tile[num6 + 1, num] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32449</span>        }</div>
+<div class="line"><span class="lineno">32450</span>        Main.tile[num6 + 1, num].active(active: true);</div>
+<div class="line"><span class="lineno">32451</span>        Main.tile[num6 + 1, num].type = 11;</div>
+<div class="line"><span class="lineno">32452</span>        Main.tile[num6 + 1, num].frameY = (short)num8;</div>
+<div class="line"><span class="lineno">32453</span>        Main.tile[num6 + 1, num].frameX = (short)(num2 + 18);</div>
+<div class="line"><span class="lineno">32454</span>        Main.tile[num6 + 1, num].UseBlockColors(cache);</div>
+<div class="line"><span class="lineno">32455</span>        <span class="keywordflow">if</span> (Main.tile[num6, num + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32456</span>        {</div>
+<div class="line"><span class="lineno">32457</span>            Main.tile[num6, num + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32458</span>        }</div>
+<div class="line"><span class="lineno">32459</span>        Main.tile[num6, num + 1].active(active: true);</div>
+<div class="line"><span class="lineno">32460</span>        Main.tile[num6, num + 1].type = 11;</div>
+<div class="line"><span class="lineno">32461</span>        Main.tile[num6, num + 1].frameY = (short)(num8 + 18);</div>
+<div class="line"><span class="lineno">32462</span>        Main.tile[num6, num + 1].frameX = num2;</div>
+<div class="line"><span class="lineno">32463</span>        Main.tile[num6, num + 1].UseBlockColors(cache2);</div>
+<div class="line"><span class="lineno">32464</span>        <span class="keywordflow">if</span> (Main.tile[num6 + 1, num + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32465</span>        {</div>
+<div class="line"><span class="lineno">32466</span>            Main.tile[num6 + 1, num + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32467</span>        }</div>
+<div class="line"><span class="lineno">32468</span>        Main.tile[num6 + 1, num + 1].active(active: true);</div>
+<div class="line"><span class="lineno">32469</span>        Main.tile[num6 + 1, num + 1].type = 11;</div>
+<div class="line"><span class="lineno">32470</span>        Main.tile[num6 + 1, num + 1].frameY = (short)(num8 + 18);</div>
+<div class="line"><span class="lineno">32471</span>        Main.tile[num6 + 1, num + 1].frameX = (short)(num2 + 18);</div>
+<div class="line"><span class="lineno">32472</span>        Main.tile[num6 + 1, num + 1].UseBlockColors(cache2);</div>
+<div class="line"><span class="lineno">32473</span>        <span class="keywordflow">if</span> (Main.tile[num6, num + 2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32474</span>        {</div>
+<div class="line"><span class="lineno">32475</span>            Main.tile[num6, num + 2] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32476</span>        }</div>
+<div class="line"><span class="lineno">32477</span>        Main.tile[num6, num + 2].active(active: true);</div>
+<div class="line"><span class="lineno">32478</span>        Main.tile[num6, num + 2].type = 11;</div>
+<div class="line"><span class="lineno">32479</span>        Main.tile[num6, num + 2].frameY = (short)(num8 + 36);</div>
+<div class="line"><span class="lineno">32480</span>        Main.tile[num6, num + 2].frameX = num2;</div>
+<div class="line"><span class="lineno">32481</span>        Main.tile[num6, num + 2].UseBlockColors(cache3);</div>
+<div class="line"><span class="lineno">32482</span>        <span class="keywordflow">if</span> (Main.tile[num6 + 1, num + 2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">32483</span>        {</div>
+<div class="line"><span class="lineno">32484</span>            Main.tile[num6 + 1, num + 2] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">32485</span>        }</div>
+<div class="line"><span class="lineno">32486</span>        Main.tile[num6 + 1, num + 2].active(active: true);</div>
+<div class="line"><span class="lineno">32487</span>        Main.tile[num6 + 1, num + 2].type = 11;</div>
+<div class="line"><span class="lineno">32488</span>        Main.tile[num6 + 1, num + 2].frameY = (short)(num8 + 36);</div>
+<div class="line"><span class="lineno">32489</span>        Main.tile[num6 + 1, num + 2].frameX = (short)(num2 + 18);</div>
+<div class="line"><span class="lineno">32490</span>        Main.tile[num6 + 1, num + 2].UseBlockColors(cache3);</div>
+<div class="line"><span class="lineno">32491</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = num6 - 1; l &lt;= num6 + 2; l++)</div>
+<div class="line"><span class="lineno">32492</span>        {</div>
+<div class="line"><span class="lineno">32493</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = num - 1; m &lt;= num + 2; m++)</div>
+<div class="line"><span class="lineno">32494</span>            {</div>
+<div class="line"><span class="lineno">32495</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(l, m);</div>
+<div class="line"><span class="lineno">32496</span>            }</div>
+<div class="line"><span class="lineno">32497</span>        }</div>
+<div class="line"><span class="lineno">32498</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">32499</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4931423356e90d7dd5e6198b4c29eabf_html_a4931423356e90d7dd5e6198b4c29eabf"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4931423356e90d7dd5e6198b4c29eabf.html#a4931423356e90d7dd5e6198b4c29eabf">Terraria.WorldGen.IsLockedDoor</a></div><div class="ttdeci">static bool IsLockedDoor(int x, int y)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:59724</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b_html_a8ed63c06b5939701ff73c08394ab8e7b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">Terraria.WorldGen.TileFrame</a></div><div class="ttdeci">static void TileFrame(int i, int j, bool resetFrame=false, bool noBreak=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:71431</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485a441b65c8a62ed7904574ee78c84b0963">Terraria.DataStructures.TileDataType.Wiring</a></div><div class="ttdeci">@ Wiring</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae69e469bb4bb076c4f5bea9348ea3a2f.html#ae69e469bb4bb076c4f5bea9348ea3a2f">Terraria.Tile.BlockColorAndCoating()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a4b851e7741ed5e25cfe2621f44e8bd64.html#a4b851e7741ed5e25cfe2621f44e8bd64">Terraria.Wiring.running</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_aaca74303fbf3f52eafb7e52ce7d8e27b.html#aaca74303fbf3f52eafb7e52ce7d8e27b">Terraria.Wiring.SkipWire()</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a2bada5711f957a5370bfe3a550812ff5.html#a2bada5711f957a5370bfe3a550812ff5">Terraria.Main.tileCut</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afa3821bbdc4ec82dbf74f74c112e3aa6.html#afa3821bbdc4ec82dbf74f74c112e3aa6">Terraria.Tile.UseBlockColors()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a115bdd24332de2127f031719e77458b2.html#a115bdd24332de2127f031719e77458b2">Terraria.NPC.AI_003_Fighters()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a79f2070799ef3105848968d9312f4017.html#a79f2070799ef3105848968d9312f4017">Terraria.NPC.AI_007_TownEntities()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a21549a1872eba86b4b0435188f58080c.html#a21549a1872eba86b4b0435188f58080c">Terraria.NPC.AI_107_ImprovedWalkers()</a>, <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae920fead53d67935735061efbeb09563.html#ae920fead53d67935735061efbeb09563">Terraria.Wiring.HitWireSingle()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8b27a9ab46a3bd51b25499cdf7417694.html#a8b27a9ab46a3bd51b25499cdf7417694">Terraria.Player.TileInteractionsUse()</a>, and <a class="el" href="../../de/d3a/classTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1CommonDoorOpeningInfoProvider_accbaa0d1c12d8db9d55a2eb467cd099f.html#accbaa0d1c12d8db9d55a2eb467cd099f">Terraria.GameContent.DoorOpeningHelper.CommonDoorOpeningInfoProvider.TryOpenDoor()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

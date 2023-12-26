@@ -117,6 +117,220 @@ $(function(){initNavTree('da/dd5/classTerraria_1_1Main_a6ec1d17c942005b6de9ad715
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4561</span>    {</div>
+<div class="line"><span class="lineno"> 4562</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">File</a>.Exists(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">configPath</a>))</div>
+<div class="line"><span class="lineno"> 4563</span>        {</div>
+<div class="line"><span class="lineno"> 4564</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 4565</span>        }</div>
+<div class="line"><span class="lineno"> 4566</span>        <span class="keyword">using </span><a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">StreamReader</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">streamReader</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">StreamReader</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">configPath</a>);</div>
+<div class="line"><span class="lineno"> 4567</span>        <span class="keywordtype">string</span> text;</div>
+<div class="line"><span class="lineno"> 4568</span>        <span class="keywordflow">while</span> ((text = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">streamReader</a>.ReadLine()) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 4569</span>        {</div>
+<div class="line"><span class="lineno"> 4570</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4571</span>            {</div>
+<div class="line"><span class="lineno"> 4572</span>                <span class="keywordflow">if</span> (text.Length &gt; 6 &amp;&amp; text.Substring(0, 6).ToLower() == <span class="stringliteral">&quot;world=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4573</span>                {</div>
+<div class="line"><span class="lineno"> 4574</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text2</a> = text.Substring(6);</div>
+<div class="line"><span class="lineno"> 4575</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4576</span>                    {</div>
+<div class="line"><span class="lineno"> 4577</span>                        <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text3</a> = <a class="code hl_class" href="../../d4/df9/classReLogic_1_1OS_1_1Platform.html">Platform</a>.Get&lt;<a class="code hl_interface" href="../../dd/de7/interfaceReLogic_1_1OS_1_1IPathService.html">IPathService</a>&gt;().ExpandPathVariables(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text2</a>);</div>
+<div class="line"><span class="lineno"> 4578</span>                        <span class="keyword">new</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">FileInfo</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text3</a>);</div>
+<div class="line"><span class="lineno"> 4579</span>                        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_addf198e4cb0c9a50159680967b434bf3.html#addf198e4cb0c9a50159680967b434bf3">autoGenFileLocation</a> = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text3</a>;</div>
+<div class="line"><span class="lineno"> 4580</span>                        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a284698a8ab8dc0735f6c7b11225e4d21.html#a284698a8ab8dc0735f6c7b11225e4d21">ActiveWorldFileData</a> = <a class="code hl_class" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile.html">WorldFile</a>.<a class="code hl_function" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ac5b0f068a1648832a68ea1f973e75acb.html#ac5b0f068a1648832a68ea1f973e75acb">GetAllMetadata</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text3</a>, <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">cloudSave</a>: <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">false</a>);</div>
+<div class="line"><span class="lineno"> 4581</span>                    }</div>
+<div class="line"><span class="lineno"> 4582</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4583</span>                    {</div>
+<div class="line"><span class="lineno"> 4584</span>                    }</div>
+<div class="line"><span class="lineno"> 4585</span>                }</div>
+<div class="line"><span class="lineno"> 4586</span>                <span class="keywordflow">if</span> (text.Length &gt; 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;port=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4587</span>                {</div>
+<div class="line"><span class="lineno"> 4588</span>                    <span class="keywordtype">string</span> value = text.Substring(5);</div>
+<div class="line"><span class="lineno"> 4589</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4590</span>                    {</div>
+<div class="line"><span class="lineno"> 4591</span>                        Netplay.ListenPort = Convert.ToInt32(value);</div>
+<div class="line"><span class="lineno"> 4592</span>                    }</div>
+<div class="line"><span class="lineno"> 4593</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4594</span>                    {</div>
+<div class="line"><span class="lineno"> 4595</span>                    }</div>
+<div class="line"><span class="lineno"> 4596</span>                }</div>
+<div class="line"><span class="lineno"> 4597</span>                <span class="keywordflow">if</span> (text.Length &gt; 21 &amp;&amp; text.Substring(0, 21).ToLower() == <span class="stringliteral">&quot;worldrollbackstokeep=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4598</span>                {</div>
+<div class="line"><span class="lineno"> 4599</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value2</a> = text.Substring(21);</div>
+<div class="line"><span class="lineno"> 4600</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4601</span>                    {</div>
+<div class="line"><span class="lineno"> 4602</span>                        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a8f26d7cf6b3de585f4ac63dc3a58dbfb.html#a8f26d7cf6b3de585f4ac63dc3a58dbfb">WorldRollingBackupsCountToKeep</a> = Convert.ToInt32(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value2</a>);</div>
+<div class="line"><span class="lineno"> 4603</span>                    }</div>
+<div class="line"><span class="lineno"> 4604</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4605</span>                    {</div>
+<div class="line"><span class="lineno"> 4606</span>                    }</div>
+<div class="line"><span class="lineno"> 4607</span>                }</div>
+<div class="line"><span class="lineno"> 4608</span>                <span class="keywordflow">if</span> (text.Length &gt; 11 &amp;&amp; text.Substring(0, 11).ToLower() == <span class="stringliteral">&quot;maxplayers=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4609</span>                {</div>
+<div class="line"><span class="lineno"> 4610</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value3</a> = text.Substring(11);</div>
+<div class="line"><span class="lineno"> 4611</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4612</span>                    {</div>
+<div class="line"><span class="lineno"> 4613</span>                        <span class="keywordtype">int</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num</a> = Convert.ToInt32(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value3</a>);</div>
+<div class="line"><span class="lineno"> 4614</span>                        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num &lt;= 255 &amp;&amp; num &gt;</a>= 1)</div>
+<div class="line"><span class="lineno"> 4615</span>                        {</div>
+<div class="line"><span class="lineno"> 4616</span>                            <a class="code hl_function" href="../../da/dd5/classTerraria_1_1Main_a7ed13943d9ec66f7babda8dd049711f7.html#a7ed13943d9ec66f7babda8dd049711f7">SetNetPlayers</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num</a>);</div>
+<div class="line"><span class="lineno"> 4617</span>                        }</div>
+<div class="line"><span class="lineno"> 4618</span>                    }</div>
+<div class="line"><span class="lineno"> 4619</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4620</span>                    {</div>
+<div class="line"><span class="lineno"> 4621</span>                    }</div>
+<div class="line"><span class="lineno"> 4622</span>                }</div>
+<div class="line"><span class="lineno"> 4623</span>                <span class="keywordflow">if</span> (text.Length &gt; 11 &amp;&amp; text.Substring(0, 9).ToLower() == <span class="stringliteral">&quot;priority=&quot;</span> &amp;&amp; !Program.LaunchParameters.ContainsKey(<span class="stringliteral">&quot;-forcepriority&quot;</span>))</div>
+<div class="line"><span class="lineno"> 4624</span>                {</div>
+<div class="line"><span class="lineno"> 4625</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value4</a> = text.Substring(9);</div>
+<div class="line"><span class="lineno"> 4626</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4627</span>                    {</div>
+<div class="line"><span class="lineno"> 4628</span>                        <span class="keywordtype">int</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num2</a> = Convert.ToInt32(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value4</a>);</div>
+<div class="line"><span class="lineno"> 4629</span>                        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num2</a> &gt;= 0 &amp;&amp; <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num2</a> &lt;= 5)</div>
+<div class="line"><span class="lineno"> 4630</span>                        {</div>
+<div class="line"><span class="lineno"> 4631</span>                            Process <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">currentProcess</a> = Process.GetCurrentProcess();</div>
+<div class="line"><span class="lineno"> 4632</span>                            <span class="keywordflow">switch</span> (<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">num2</a>)</div>
+<div class="line"><span class="lineno"> 4633</span>                            {</div>
+<div class="line"><span class="lineno"> 4634</span>                            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 4635</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.RealTime;</div>
+<div class="line"><span class="lineno"> 4636</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4637</span>                            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 4638</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.High;</div>
+<div class="line"><span class="lineno"> 4639</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4640</span>                            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 4641</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.AboveNormal;</div>
+<div class="line"><span class="lineno"> 4642</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4643</span>                            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 4644</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.Normal;</div>
+<div class="line"><span class="lineno"> 4645</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4646</span>                            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 4647</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.BelowNormal;</div>
+<div class="line"><span class="lineno"> 4648</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4649</span>                            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 4650</span>                                currentProcess.PriorityClass = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ProcessPriorityClass</a>.Idle;</div>
+<div class="line"><span class="lineno"> 4651</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4652</span>                            }</div>
+<div class="line"><span class="lineno"> 4653</span>                        }</div>
+<div class="line"><span class="lineno"> 4654</span>                    }</div>
+<div class="line"><span class="lineno"> 4655</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4656</span>                    {</div>
+<div class="line"><span class="lineno"> 4657</span>                    }</div>
+<div class="line"><span class="lineno"> 4658</span>                }</div>
+<div class="line"><span class="lineno"> 4659</span>                <span class="keywordflow">if</span> (text.Length &gt; 9 &amp;&amp; text.Substring(0, 9).ToLower() == <span class="stringliteral">&quot;password=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4660</span>                {</div>
+<div class="line"><span class="lineno"> 4661</span>                    Netplay.ServerPassword = <a class="code hl_function" href="../../da/dd5/classTerraria_1_1Main_aa6757628d97ffd1c06e6e2305550ffc5.html#aa6757628d97ffd1c06e6e2305550ffc5">ConvertFromSafeArgument</a>(text.Substring(9));</div>
+<div class="line"><span class="lineno"> 4662</span>                }</div>
+<div class="line"><span class="lineno"> 4663</span>                <span class="keywordflow">if</span> (text.Length &gt; 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;motd=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4664</span>                {</div>
+<div class="line"><span class="lineno"> 4665</span>                    <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a2adb53fb8f0ff317728f3346636cc8eb.html#a2adb53fb8f0ff317728f3346636cc8eb">motd</a> = text.Substring(5);</div>
+<div class="line"><span class="lineno"> 4666</span>                }</div>
+<div class="line"><span class="lineno"> 4667</span>                <span class="keywordflow">if</span> (text.Length &gt; 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;lang=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4668</span>                {</div>
+<div class="line"><span class="lineno"> 4669</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value5</a> = text.Substring(5);</div>
+<div class="line"><span class="lineno"> 4670</span>                    <a class="code hl_class" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">LanguageManager</a>.<a class="code hl_variable" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Instance</a>.SetLanguage(Convert.ToInt32(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value5</a>));</div>
+<div class="line"><span class="lineno"> 4671</span>                }</div>
+<div class="line"><span class="lineno"> 4672</span>                <span class="keywordflow">if</span> (text.Length &gt; 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;language=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4673</span>                {</div>
+<div class="line"><span class="lineno"> 4674</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">language</a> = text.Substring(9);</div>
+<div class="line"><span class="lineno"> 4675</span>                    <a class="code hl_class" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">LanguageManager</a>.<a class="code hl_variable" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Instance</a>.SetLanguage(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">language</a>);</div>
+<div class="line"><span class="lineno"> 4676</span>                }</div>
+<div class="line"><span class="lineno"> 4677</span>                <span class="keywordflow">if</span> (text.Length &gt;= 10 &amp;&amp; text.Substring(0, 10).ToLower() == <span class="stringliteral">&quot;worldpath=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4678</span>                {</div>
+<div class="line"><span class="lineno"> 4679</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text4</a> = text.Substring(10);</div>
+<div class="line"><span class="lineno"> 4680</span>                    <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_ac88a51d22d8de4ece4bfaba8fdcbebbe.html#ac88a51d22d8de4ece4bfaba8fdcbebbe">WorldPath</a> = <a class="code hl_class" href="../../d4/df9/classReLogic_1_1OS_1_1Platform.html">Platform</a>.Get&lt;<a class="code hl_interface" href="../../dd/de7/interfaceReLogic_1_1OS_1_1IPathService.html">IPathService</a>&gt;().ExpandPathVariables(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text4</a>);</div>
+<div class="line"><span class="lineno"> 4681</span>                }</div>
+<div class="line"><span class="lineno"> 4682</span>                <span class="keywordflow">if</span> (text.Length &gt;= 10 &amp;&amp; text.Substring(0, 10).ToLower() == <span class="stringliteral">&quot;worldname=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4683</span>                {</div>
+<div class="line"><span class="lineno"> 4684</span>                    <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">worldName</a> = text.Substring(10);</div>
+<div class="line"><span class="lineno"> 4685</span>                }</div>
+<div class="line"><span class="lineno"> 4686</span>                <span class="keywordflow">if</span> (text.Length &gt;= 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;seed=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4687</span>                {</div>
+<div class="line"><span class="lineno"> 4688</span>                    <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_aa475639dce6b1a12f5b9bd749b793131.html#aa475639dce6b1a12f5b9bd749b793131">AutogenSeedName</a> = text.Substring(5);</div>
+<div class="line"><span class="lineno"> 4689</span>                }</div>
+<div class="line"><span class="lineno"> 4690</span>                <span class="keywordflow">if</span> (text.Length &gt; 8 &amp;&amp; text.Substring(0, 8).ToLower() == <span class="stringliteral">&quot;banlist=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4691</span>                {</div>
+<div class="line"><span class="lineno"> 4692</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text5</a> = text.Substring(8);</div>
+<div class="line"><span class="lineno"> 4693</span>                    Netplay.BanFilePath = <a class="code hl_class" href="../../d4/df9/classReLogic_1_1OS_1_1Platform.html">Platform</a>.Get&lt;<a class="code hl_interface" href="../../dd/de7/interfaceReLogic_1_1OS_1_1IPathService.html">IPathService</a>&gt;().ExpandPathVariables(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text5</a>);</div>
+<div class="line"><span class="lineno"> 4694</span>                }</div>
+<div class="line"><span class="lineno"> 4695</span>                <span class="keywordflow">if</span> (text.Length &gt; 11 &amp;&amp; text.Substring(0, 11).ToLower() == <span class="stringliteral">&quot;difficulty=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4696</span>                {</div>
+<div class="line"><span class="lineno"> 4697</span>                    <span class="keywordflow">switch</span> (text.Substring(11))</div>
+<div class="line"><span class="lineno"> 4698</span>                    {</div>
+<div class="line"><span class="lineno"> 4699</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;0&quot;</span>:</div>
+<div class="line"><span class="lineno"> 4700</span>                        <a class="code hl_property" href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">GameMode</a> = 0;</div>
+<div class="line"><span class="lineno"> 4701</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4702</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;1&quot;</span>:</div>
+<div class="line"><span class="lineno"> 4703</span>                        <a class="code hl_property" href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">GameMode</a> = 1;</div>
+<div class="line"><span class="lineno"> 4704</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4705</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;2&quot;</span>:</div>
+<div class="line"><span class="lineno"> 4706</span>                        <a class="code hl_property" href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">GameMode</a> = 2;</div>
+<div class="line"><span class="lineno"> 4707</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4708</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;3&quot;</span>:</div>
+<div class="line"><span class="lineno"> 4709</span>                        <a class="code hl_property" href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">GameMode</a> = 3;</div>
+<div class="line"><span class="lineno"> 4710</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4711</span>                    }</div>
+<div class="line"><span class="lineno"> 4712</span>                }</div>
+<div class="line"><span class="lineno"> 4713</span>                <span class="keywordflow">if</span> (text.Length &gt; 11 &amp;&amp; text.Substring(0, 11).ToLower() == <span class="stringliteral">&quot;autocreate=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4714</span>                {</div>
+<div class="line"><span class="lineno"> 4715</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">worldSize</a> = text.Substring(11);</div>
+<div class="line"><span class="lineno"> 4716</span>                    <a class="code hl_function" href="../../da/dd5/classTerraria_1_1Main_a66325d83940787471d9ae9aa3b14760c.html#a66325d83940787471d9ae9aa3b14760c">autoCreate</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">worldSize</a>);</div>
+<div class="line"><span class="lineno"> 4717</span>                }</div>
+<div class="line"><span class="lineno"> 4718</span>                <span class="keywordflow">if</span> (text.Length &gt; 7 &amp;&amp; text.Substring(0, 7).ToLower() == <span class="stringliteral">&quot;secure=&quot;</span> &amp;&amp; text.Substring(7) == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4719</span>                {</div>
+<div class="line"><span class="lineno"> 4720</span>                    Netplay.SpamCheck = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 4721</span>                }</div>
+<div class="line"><span class="lineno"> 4722</span>                <span class="keywordflow">if</span> (text.Length &gt; 5 &amp;&amp; text.Substring(0, 5).ToLower() == <span class="stringliteral">&quot;upnp=&quot;</span> &amp;&amp; text.Substring(5) != <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4723</span>                {</div>
+<div class="line"><span class="lineno"> 4724</span>                    Netplay.UseUPNP = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4725</span>                }</div>
+<div class="line"><span class="lineno"> 4726</span>                <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text6</a> = <span class="stringliteral">&quot;slowliquids=&quot;</span>;</div>
+<div class="line"><span class="lineno"> 4727</span>                <span class="keywordflow">if</span> (text.Length &gt; <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text6</a>.Length &amp;&amp; text.Substring(0, <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text6</a>.Length).ToLower() == <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text6</a> &amp;&amp; text.Substring(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">text6</a>.Length) == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4728</span>                {</div>
+<div class="line"><span class="lineno"> 4729</span>                    <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a2d6a6e54d30940821039eaa660f791f4.html#a2d6a6e54d30940821039eaa660f791f4">Setting_UseReducedMaxLiquids</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 4730</span>                }</div>
+<div class="line"><span class="lineno"> 4731</span>                <span class="keywordflow">if</span> (text.Length &gt; 10 &amp;&amp; text.Substring(0, 10).ToLower() == <span class="stringliteral">&quot;npcstream=&quot;</span>)</div>
+<div class="line"><span class="lineno"> 4732</span>                {</div>
+<div class="line"><span class="lineno"> 4733</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value6</a> = text.Substring(10);</div>
+<div class="line"><span class="lineno"> 4734</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 4735</span>                    {</div>
+<div class="line"><span class="lineno"> 4736</span>                        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a09b20ad7375fe9a56aec770b83a288e6.html#a09b20ad7375fe9a56aec770b83a288e6">npcStreamSpeed</a> = Convert.ToInt32(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">value6</a>);</div>
+<div class="line"><span class="lineno"> 4737</span>                    }</div>
+<div class="line"><span class="lineno"> 4738</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4739</span>                    {</div>
+<div class="line"><span class="lineno"> 4740</span>                    }</div>
+<div class="line"><span class="lineno"> 4741</span>                }</div>
+<div class="line"><span class="lineno"> 4742</span>                <a class="code hl_class" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager.html">CreativePowerManager</a>.<a class="code hl_function" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_acd9ebf451f9d0eadde4e740d0e8560d9.html#acd9ebf451f9d0eadde4e740d0e8560d9">TryListingPermissionsFrom</a>(text);</div>
+<div class="line"><span class="lineno"> 4743</span>            }</div>
+<div class="line"><span class="lineno"> 4744</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 4745</span>            {</div>
+<div class="line"><span class="lineno"> 4746</span>            }</div>
+<div class="line"><span class="lineno"> 4747</span>        }</div>
+<div class="line"><span class="lineno"> 4748</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_html"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ReLogic.Content.Asset</a></div><div class="ttdef"><b>Definition</b> Asset.cs:8</div></div>
+<div class="ttc" id="aclassReLogic_1_1OS_1_1Platform_html"><div class="ttname"><a href="../../d4/df9/classReLogic_1_1OS_1_1Platform.html">ReLogic.OS.Platform</a></div><div class="ttdef"><b>Definition</b> Platform.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_acd9ebf451f9d0eadde4e740d0e8560d9_html_acd9ebf451f9d0eadde4e740d0e8560d9"><div class="ttname"><a href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_acd9ebf451f9d0eadde4e740d0e8560d9.html#acd9ebf451f9d0eadde4e740d0e8560d9">Terraria.GameContent.Creative.CreativePowerManager.TryListingPermissionsFrom</a></div><div class="ttdeci">static void TryListingPermissionsFrom(string line)</div><div class="ttdef"><b>Definition</b> CreativePowerManager.cs:64</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_html"><div class="ttname"><a href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager.html">Terraria.GameContent.Creative.CreativePowerManager</a></div><div class="ttdef"><b>Definition</b> CreativePowerManager.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_ac5b0f068a1648832a68ea1f973e75acb_html_ac5b0f068a1648832a68ea1f973e75acb"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ac5b0f068a1648832a68ea1f973e75acb.html#ac5b0f068a1648832a68ea1f973e75acb">Terraria.IO.WorldFile.GetAllMetadata</a></div><div class="ttdeci">static WorldFileData GetAllMetadata(string file, bool cloudSave)</div><div class="ttdef"><b>Definition</b> WorldFile.cs:243</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_html"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile.html">Terraria.IO.WorldFile</a></div><div class="ttdef"><b>Definition</b> WorldFile.cs:23</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69_html_aed75b828ce37c6b9b0bae5bc847d5b69"><div class="ttname"><a href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Terraria.Localization.LanguageManager.Instance</a></div><div class="ttdeci">static LanguageManager Instance</div><div class="ttdef"><b>Definition</b> LanguageManager.cs:21</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LanguageManager_html"><div class="ttname"><a href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager.html">Terraria.Localization.LanguageManager</a></div><div class="ttdef"><b>Definition</b> LanguageManager.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a09b20ad7375fe9a56aec770b83a288e6_html_a09b20ad7375fe9a56aec770b83a288e6"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a09b20ad7375fe9a56aec770b83a288e6.html#a09b20ad7375fe9a56aec770b83a288e6">Terraria.Main.npcStreamSpeed</a></div><div class="ttdeci">static int npcStreamSpeed</div><div class="ttdef"><b>Definition</b> Main.cs:433</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a284698a8ab8dc0735f6c7b11225e4d21_html_a284698a8ab8dc0735f6c7b11225e4d21"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a284698a8ab8dc0735f6c7b11225e4d21.html#a284698a8ab8dc0735f6c7b11225e4d21">Terraria.Main.ActiveWorldFileData</a></div><div class="ttdeci">static WorldFileData ActiveWorldFileData</div><div class="ttdef"><b>Definition</b> Main.cs:1946</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a2adb53fb8f0ff317728f3346636cc8eb_html_a2adb53fb8f0ff317728f3346636cc8eb"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a2adb53fb8f0ff317728f3346636cc8eb.html#a2adb53fb8f0ff317728f3346636cc8eb">Terraria.Main.motd</a></div><div class="ttdeci">static string motd</div><div class="ttdef"><b>Definition</b> Main.cs:1916</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a2d6a6e54d30940821039eaa660f791f4_html_a2d6a6e54d30940821039eaa660f791f4"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a2d6a6e54d30940821039eaa660f791f4.html#a2d6a6e54d30940821039eaa660f791f4">Terraria.Main.Setting_UseReducedMaxLiquids</a></div><div class="ttdeci">static bool Setting_UseReducedMaxLiquids</div><div class="ttdef"><b>Definition</b> Main.cs:1733</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a66325d83940787471d9ae9aa3b14760c_html_a66325d83940787471d9ae9aa3b14760c"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a66325d83940787471d9ae9aa3b14760c.html#a66325d83940787471d9ae9aa3b14760c">Terraria.Main.autoCreate</a></div><div class="ttdeci">void autoCreate(string worldSize)</div><div class="ttdef"><b>Definition</b> Main.cs:4520</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15_html_a73b67bd30108fe6af9d5b8c202809b15"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">Terraria.Main.worldName</a></div><div class="ttdeci">static string worldName</div><div class="ttdef"><b>Definition</b> Main.cs:1260</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a7ed13943d9ec66f7babda8dd049711f7_html_a7ed13943d9ec66f7babda8dd049711f7"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a7ed13943d9ec66f7babda8dd049711f7.html#a7ed13943d9ec66f7babda8dd049711f7">Terraria.Main.SetNetPlayers</a></div><div class="ttdeci">void SetNetPlayers(int mPlayers)</div><div class="ttdef"><b>Definition</b> Main.cs:4750</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec_html_a7f4917a4dc99fa2c418e44eb5304a8ec"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">Terraria.Main.GameMode</a></div><div class="ttdeci">static int GameMode</div><div class="ttdef"><b>Definition</b> Main.cs:2685</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a8f26d7cf6b3de585f4ac63dc3a58dbfb_html_a8f26d7cf6b3de585f4ac63dc3a58dbfb"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a8f26d7cf6b3de585f4ac63dc3a58dbfb.html#a8f26d7cf6b3de585f4ac63dc3a58dbfb">Terraria.Main.WorldRollingBackupsCountToKeep</a></div><div class="ttdeci">static int WorldRollingBackupsCountToKeep</div><div class="ttdef"><b>Definition</b> Main.cs:1210</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_aa475639dce6b1a12f5b9bd749b793131_html_aa475639dce6b1a12f5b9bd749b793131"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_aa475639dce6b1a12f5b9bd749b793131.html#aa475639dce6b1a12f5b9bd749b793131">Terraria.Main.AutogenSeedName</a></div><div class="ttdeci">static string AutogenSeedName</div><div class="ttdef"><b>Definition</b> Main.cs:311</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_aa6757628d97ffd1c06e6e2305550ffc5_html_aa6757628d97ffd1c06e6e2305550ffc5"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_aa6757628d97ffd1c06e6e2305550ffc5.html#aa6757628d97ffd1c06e6e2305550ffc5">Terraria.Main.ConvertFromSafeArgument</a></div><div class="ttdeci">static string ConvertFromSafeArgument(string arg)</div><div class="ttdef"><b>Definition</b> Main.cs:4555</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_ac88a51d22d8de4ece4bfaba8fdcbebbe_html_ac88a51d22d8de4ece4bfaba8fdcbebbe"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_ac88a51d22d8de4ece4bfaba8fdcbebbe.html#ac88a51d22d8de4ece4bfaba8fdcbebbe">Terraria.Main.WorldPath</a></div><div class="ttdeci">static string WorldPath</div><div class="ttdef"><b>Definition</b> Main.cs:1948</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_addf198e4cb0c9a50159680967b434bf3_html_addf198e4cb0c9a50159680967b434bf3"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_addf198e4cb0c9a50159680967b434bf3.html#addf198e4cb0c9a50159680967b434bf3">Terraria.Main.autoGenFileLocation</a></div><div class="ttdeci">static string autoGenFileLocation</div><div class="ttdef"><b>Definition</b> Main.cs:2275</div></div>
+<div class="ttc" id="ainterfaceReLogic_1_1OS_1_1IPathService_html"><div class="ttname"><a href="../../dd/de7/interfaceReLogic_1_1OS_1_1IPathService.html">ReLogic.OS.IPathService</a></div><div class="ttdef"><b>Definition</b> IPathService.cs:4</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a284698a8ab8dc0735f6c7b11225e4d21.html#a284698a8ab8dc0735f6c7b11225e4d21">Terraria.Main.ActiveWorldFileData</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a66325d83940787471d9ae9aa3b14760c.html#a66325d83940787471d9ae9aa3b14760c">Terraria.Main.autoCreate()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_addf198e4cb0c9a50159680967b434bf3.html#addf198e4cb0c9a50159680967b434bf3">Terraria.Main.autoGenFileLocation</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa475639dce6b1a12f5b9bd749b793131.html#aa475639dce6b1a12f5b9bd749b793131">Terraria.Main.AutogenSeedName</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa6757628d97ffd1c06e6e2305550ffc5.html#aa6757628d97ffd1c06e6e2305550ffc5">Terraria.Main.ConvertFromSafeArgument()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7f4917a4dc99fa2c418e44eb5304a8ec.html#a7f4917a4dc99fa2c418e44eb5304a8ec">Terraria.Main.GameMode</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ac5b0f068a1648832a68ea1f973e75acb.html#ac5b0f068a1648832a68ea1f973e75acb">Terraria.IO.WorldFile.GetAllMetadata()</a>, <a class="el" href="../../d8/d74/classTerraria_1_1Localization_1_1LanguageManager_aed75b828ce37c6b9b0bae5bc847d5b69.html#aed75b828ce37c6b9b0bae5bc847d5b69">Terraria.Localization.LanguageManager.Instance</a>, <a class="el" href="../../d9/daf/classTerraria_1_1Program_aeb611f3f6ff2ff69f95bce3f56cc2282.html#aeb611f3f6ff2ff69f95bce3f56cc2282">Terraria.Program.LaunchParameters</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a2adb53fb8f0ff317728f3346636cc8eb.html#a2adb53fb8f0ff317728f3346636cc8eb">Terraria.Main.motd</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a09b20ad7375fe9a56aec770b83a288e6.html#a09b20ad7375fe9a56aec770b83a288e6">Terraria.Main.npcStreamSpeed</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7ed13943d9ec66f7babda8dd049711f7.html#a7ed13943d9ec66f7babda8dd049711f7">Terraria.Main.SetNetPlayers()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a2d6a6e54d30940821039eaa660f791f4.html#a2d6a6e54d30940821039eaa660f791f4">Terraria.Main.Setting_UseReducedMaxLiquids</a>, <a class="el" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_acd9ebf451f9d0eadde4e740d0e8560d9.html#acd9ebf451f9d0eadde4e740d0e8560d9">Terraria.GameContent.Creative.CreativePowerManager.TryListingPermissionsFrom()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">Terraria.Main.worldName</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac88a51d22d8de4ece4bfaba8fdcbebbe.html#ac88a51d22d8de4ece4bfaba8fdcbebbe">Terraria.Main.WorldPath</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8f26d7cf6b3de585f4ac63dc3a58dbfb.html#a8f26d7cf6b3de585f4ac63dc3a58dbfb">Terraria.Main.WorldRollingBackupsCountToKeep</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d13/classTerraria_1_1Initializers_1_1LaunchInitializer_a4051b5b466ac9bf894a312d279d0d6e3.html#a4051b5b466ac9bf894a312d279d0d6e3">Terraria.Initializers.LaunchInitializer.LoadServerParameters()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

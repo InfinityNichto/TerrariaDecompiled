@@ -117,6 +117,29 @@ $(function(){initNavTree('d8/d4b/structReLogic_1_1Text_1_1WrappedTextBuilder_1_1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">float</span> num = 0f;</div>
+<div class="line"><span class="lineno">   52</span>            StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder(Text.Length);</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Text.Length; i++)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                GlyphMetrics characterMetrics = <a class="code hl_variable" href="../../d8/d4b/structReLogic_1_1Text_1_1WrappedTextBuilder_1_1NonBreakingText_adcd4e28c00c0d7fa31eb12daa529a722.html#adcd4e28c00c0d7fa31eb12daa529a722">_font</a>.<a class="code hl_function" href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a94ecf066931e82773587cf7198da146d.html#a94ecf066931e82773587cf7198da146d">GetCharacterMetrics</a>(Text[i]);</div>
+<div class="line"><span class="lineno">   56</span>                num = ((i != 0) ? (num + (<a class="code hl_variable" href="../../d8/d4b/structReLogic_1_1Text_1_1WrappedTextBuilder_1_1NonBreakingText_adcd4e28c00c0d7fa31eb12daa529a722.html#adcd4e28c00c0d7fa31eb12daa529a722">_font</a>.<a class="code hl_property" href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a1a270a52be43306024395dc8e522d7e0.html#a1a270a52be43306024395dc8e522d7e0">CharacterSpacing</a> + characterMetrics.KernedWidth)) : (num + characterMetrics.KernedWidthOnNewLine));</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (num &gt; maxWidth)</div>
+<div class="line"><span class="lineno">   58</span>                {</div>
+<div class="line"><span class="lineno">   59</span>                    num = characterMetrics.KernedWidthOnNewLine;</div>
+<div class="line"><span class="lineno">   60</span>                    stringBuilder.Append(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno">   61</span>                }</div>
+<div class="line"><span class="lineno">   62</span>                stringBuilder.Append(Text[i]);</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="ttc" id="ainterfaceReLogic_1_1Text_1_1IFontMetrics_a1a270a52be43306024395dc8e522d7e0_html_a1a270a52be43306024395dc8e522d7e0"><div class="ttname"><a href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a1a270a52be43306024395dc8e522d7e0.html#a1a270a52be43306024395dc8e522d7e0">ReLogic.Text.IFontMetrics.CharacterSpacing</a></div><div class="ttdeci">float CharacterSpacing</div><div class="ttdef"><b>Definition</b> IFontMetrics.cs:7</div></div>
+<div class="ttc" id="ainterfaceReLogic_1_1Text_1_1IFontMetrics_a94ecf066931e82773587cf7198da146d_html_a94ecf066931e82773587cf7198da146d"><div class="ttname"><a href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a94ecf066931e82773587cf7198da146d.html#a94ecf066931e82773587cf7198da146d">ReLogic.Text.IFontMetrics.GetCharacterMetrics</a></div><div class="ttdeci">GlyphMetrics GetCharacterMetrics(char character)</div></div>
+<div class="ttc" id="astructReLogic_1_1Text_1_1WrappedTextBuilder_1_1NonBreakingText_adcd4e28c00c0d7fa31eb12daa529a722_html_adcd4e28c00c0d7fa31eb12daa529a722"><div class="ttname"><a href="../../d8/d4b/structReLogic_1_1Text_1_1WrappedTextBuilder_1_1NonBreakingText_adcd4e28c00c0d7fa31eb12daa529a722.html#adcd4e28c00c0d7fa31eb12daa529a722">ReLogic.Text.WrappedTextBuilder.NonBreakingText._font</a></div><div class="ttdeci">IFontMetrics _font</div><div class="ttdef"><b>Definition</b> WrappedTextBuilder.cs:19</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d4b/structReLogic_1_1Text_1_1WrappedTextBuilder_1_1NonBreakingText_adcd4e28c00c0d7fa31eb12daa529a722.html#adcd4e28c00c0d7fa31eb12daa529a722">ReLogic.Text.WrappedTextBuilder.NonBreakingText._font</a>, <a class="el" href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a1a270a52be43306024395dc8e522d7e0.html#a1a270a52be43306024395dc8e522d7e0">ReLogic.Text.IFontMetrics.CharacterSpacing</a>, <a class="el" href="../../d5/d81/interfaceReLogic_1_1Text_1_1IFontMetrics_a94ecf066931e82773587cf7198da146d.html#a94ecf066931e82773587cf7198da146d">ReLogic.Text.IFontMetrics.GetCharacterMetrics()</a>, <a class="el" href="../../dd/db7/structReLogic_1_1Text_1_1GlyphMetrics_a43790e48e929337ab35954c07f9a370a.html#a43790e48e929337ab35954c07f9a370a">ReLogic.Text.GlyphMetrics.KernedWidth</a>, and <a class="el" href="../../dd/db7/structReLogic_1_1Text_1_1GlyphMetrics_af5dbf7979aa29f194de66b63e68ed35a.html#af5dbf7979aa29f194de66b63e68ed35a">ReLogic.Text.GlyphMetrics.KernedWidthOnNewLine</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d15/classReLogic_1_1Text_1_1WrappedTextBuilder_a6eed28bca7977d44bde75e085832ccb3.html#a6eed28bca7977d44bde75e085832ccb3">ReLogic.Text.WrappedTextBuilder.Append()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

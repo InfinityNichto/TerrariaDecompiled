@@ -121,6 +121,55 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a577a780a9c6566533d95
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49192</span>    {</div>
+<div class="line"><span class="lineno">49193</span>        <span class="keywordtype">int</span> num = 45;</div>
+<div class="line"><span class="lineno">49194</span>        <span class="keywordtype">int</span> num2 = 20;</div>
+<div class="line"><span class="lineno">49195</span>        <span class="keywordtype">int</span> num3 = 20;</div>
+<div class="line"><span class="lineno">49196</span>        <span class="keywordtype">int</span> num4 = -1;</div>
+<div class="line"><span class="lineno">49197</span>        <span class="keywordtype">int</span> num5 = num + 1;</div>
+<div class="line"><span class="lineno">49198</span>        <span class="keywordtype">int</span> num6 = 0;</div>
+<div class="line"><span class="lineno">49199</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49200</span>        <span class="keywordflow">if</span> (x &lt;= beachDistance || x &gt;= Main.maxTilesX - <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a7e5b4314598e8a59bcf8d2cbdd9c4fe3.html#a7e5b4314598e8a59bcf8d2cbdd9c4fe3">beachDistance</a>)</div>
+<div class="line"><span class="lineno">49201</span>        {</div>
+<div class="line"><span class="lineno">49202</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49203</span>            num4 = 40;</div>
+<div class="line"><span class="lineno">49204</span>            num = 65;</div>
+<div class="line"><span class="lineno">49205</span>            num2 += 5;</div>
+<div class="line"><span class="lineno">49206</span>        }</div>
+<div class="line"><span class="lineno">49207</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x - num; i &lt;= x + num; i++)</div>
+<div class="line"><span class="lineno">49208</span>        {</div>
+<div class="line"><span class="lineno">49209</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y - num2; j &lt;= y + num2; j++)</div>
+<div class="line"><span class="lineno">49210</span>            {</div>
+<div class="line"><span class="lineno">49211</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(i, j) &amp;&amp; !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(i, j) &amp;&amp; Main.tile[i, j].liquid &gt; 0)</div>
+<div class="line"><span class="lineno">49212</span>                {</div>
+<div class="line"><span class="lineno">49213</span>                    num6 += Main.tile[i, j].liquid;</div>
+<div class="line"><span class="lineno">49214</span>                    <span class="keywordtype">int</span> num7 = Math.Abs(i - x);</div>
+<div class="line"><span class="lineno">49215</span>                    <span class="keywordflow">if</span> (num7 &lt; num5)</div>
+<div class="line"><span class="lineno">49216</span>                    {</div>
+<div class="line"><span class="lineno">49217</span>                        num5 = num7;</div>
+<div class="line"><span class="lineno">49218</span>                    }</div>
+<div class="line"><span class="lineno">49219</span>                }</div>
+<div class="line"><span class="lineno">49220</span>            }</div>
+<div class="line"><span class="lineno">49221</span>        }</div>
+<div class="line"><span class="lineno">49222</span>        <span class="keywordflow">if</span> (num6 / 255 &gt;= num3)</div>
+<div class="line"><span class="lineno">49223</span>        {</div>
+<div class="line"><span class="lineno">49224</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">49225</span>            {</div>
+<div class="line"><span class="lineno">49226</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49227</span>            }</div>
+<div class="line"><span class="lineno">49228</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49229</span>        }</div>
+<div class="line"><span class="lineno">49230</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">49231</span>        {</div>
+<div class="line"><span class="lineno">49232</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49233</span>        }</div>
+<div class="line"><span class="lineno">49234</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49235</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a7e5b4314598e8a59bcf8d2cbdd9c4fe3_html_a7e5b4314598e8a59bcf8d2cbdd9c4fe3"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a7e5b4314598e8a59bcf8d2cbdd9c4fe3.html#a7e5b4314598e8a59bcf8d2cbdd9c4fe3">Terraria.WorldGen.beachDistance</a></div><div class="ttdeci">static readonly int beachDistance</div><div class="ttdef"><b>Definition</b> WorldGen.cs:928</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
 
 </div>
 </div>

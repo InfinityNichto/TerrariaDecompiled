@@ -117,6 +117,25 @@ $(function(){initNavTree('d6/d46/classTerraria_1_1GameContent_1_1Drawing_1_1Wind
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[i];</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (!player.active || player.dead || (player.velocity.X == 0f &amp;&amp; player.velocity.Y == 0f) || !Utils.CenteredRectangle(Main.Camera.Center, Main.Camera.UnscaledSize).Intersects(player.Hitbox) || player.velocity.HasNaNs())</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> directionX = Math.Sign(player.velocity.X);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">int</span> directionY = Math.Sign(player.velocity.Y);</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">foreach</span> (Point item <span class="keywordflow">in</span> Collision.GetTilesIn(player.TopLeft, player.BottomRight))</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_function" href="../../d6/d46/classTerraria_1_1GameContent_1_1Drawing_1_1WindGrid_a684e8d08e1e52dc0d725f7d3ce787581.html#a684e8d08e1e52dc0d725f7d3ce787581">SetWindTime</a>(item.X, item.Y, directionX, directionY);</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1WindGrid_a684e8d08e1e52dc0d725f7d3ce787581_html_a684e8d08e1e52dc0d725f7d3ce787581"><div class="ttname"><a href="../../d6/d46/classTerraria_1_1GameContent_1_1Drawing_1_1WindGrid_a684e8d08e1e52dc0d725f7d3ce787581.html#a684e8d08e1e52dc0d725f7d3ce787581">Terraria.GameContent.Drawing.WindGrid.SetWindTime</a></div><div class="ttdeci">void SetWindTime(int tileX, int tileY, int directionX, int directionY)</div><div class="ttdef"><b>Definition</b> WindGrid.cs:64</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7a1651da7dd4354d18c9c1a64de10789.html#a7a1651da7dd4354d18c9c1a64de10789">Terraria.Main.Camera</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_af1719e7aa7cb20441b26320d7eef901c.html#af1719e7aa7cb20441b26320d7eef901c">Terraria.Utils.CenteredRectangle()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_aa35b8d0d2db803f158a5589dd2b615e6.html#aa35b8d0d2db803f158a5589dd2b615e6">Terraria.Collision.GetTilesIn()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d6/d46/classTerraria_1_1GameContent_1_1Drawing_1_1WindGrid_a684e8d08e1e52dc0d725f7d3ce787581.html#a684e8d08e1e52dc0d725f7d3ce787581">Terraria.GameContent.Drawing.WindGrid.SetWindTime()</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d46/classTerraria_1_1GameContent_1_1Drawing_1_1WindGrid_a6a393e3e672cc1144606ec7ef381f4cc.html#a6a393e3e672cc1144606ec7ef381f4cc">Terraria.GameContent.Drawing.WindGrid.ScanPlayers()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

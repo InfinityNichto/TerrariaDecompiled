@@ -126,6 +126,52 @@ $(function(){initNavTree('d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        on = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(x, y))</div>
+<div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">return</span> LogicCheckType.None;</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  194</span>        {</div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">return</span> LogicCheckType.None;</div>
+<div class="line"><span class="lineno">  196</span>        }</div>
+<div class="line"><span class="lineno">  197</span>        LogicCheckType result = LogicCheckType.None;</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">switch</span> (tile.frameY / 18)</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  201</span>            result = LogicCheckType.Day;</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  204</span>            result = LogicCheckType.Night;</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  207</span>            result = LogicCheckType.PlayerAbove;</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  210</span>            result = LogicCheckType.Water;</div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  213</span>            result = LogicCheckType.Lava;</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  216</span>            result = LogicCheckType.Honey;</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">  219</span>            result = LogicCheckType.Liquid;</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span>        on = <a class="code hl_function" href="../../d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_ab36eb6b0b50a221d2a3c217980b33456.html#ab36eb6b0b50a221d2a3c217980b33456">GetState</a>(x, y, result);</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_ab36eb6b0b50a221d2a3c217980b33456_html_ab36eb6b0b50a221d2a3c217980b33456"><div class="ttname"><a href="../../d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_ab36eb6b0b50a221d2a3c217980b33456.html#ab36eb6b0b50a221d2a3c217980b33456">Terraria.GameContent.Tile_Entities.TELogicSensor.GetState</a></div><div class="ttdeci">static bool GetState(int x, int y, LogicCheckType type, TELogicSensor instance=null)</div><div class="ttdef"><b>Definition</b> TELogicSensor.cs:226</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_ab36eb6b0b50a221d2a3c217980b33456.html#ab36eb6b0b50a221d2a3c217980b33456">Terraria.GameContent.Tile_Entities.TELogicSensor.GetState()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_a68bd6b8296d92d12f63c90cb58b01317.html#a68bd6b8296d92d12f63c90cb58b01317">Terraria.GameContent.Tile_Entities.TELogicSensor.FigureCheckState()</a>, and <a class="el" href="../../d0/de7/classTerraria_1_1GameContent_1_1Tile__Entities_1_1TELogicSensor_a60a5f8918cbbbc501a34735f9fd272da.html#a60a5f8918cbbbc501a34735f9fd272da">Terraria.GameContent.Tile_Entities.TELogicSensor.Hook_AfterPlacement()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

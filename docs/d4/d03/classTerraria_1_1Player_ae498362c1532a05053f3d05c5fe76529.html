@@ -117,6 +117,69 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ae498362c1532a05053f3d0
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">46732</span>    {</div>
+<div class="line"><span class="lineno">46733</span>        Point point = targetSpot.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">46734</span>        Vector2 center = base.Center;</div>
+<div class="line"><span class="lineno">46735</span>        Vector2 endPoint = targetSpot;</div>
+<div class="line"><span class="lineno">46736</span>        <span class="keywordtype">int</span> samplesToTake = 3;</div>
+<div class="line"><span class="lineno">46737</span>        <span class="keywordtype">float</span> samplingWidth = 4f;</div>
+<div class="line"><span class="lineno">46738</span>        Collision.AimingLaserScan(center, endPoint, samplingWidth, samplesToTake, out var vectorTowardsTarget, out var samples);</div>
+<div class="line"><span class="lineno">46739</span>        <span class="keywordtype">float</span> num = <span class="keywordtype">float</span>.PositiveInfinity;</div>
+<div class="line"><span class="lineno">46740</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; samples.Length; i++)</div>
+<div class="line"><span class="lineno">46741</span>        {</div>
+<div class="line"><span class="lineno">46742</span>            <span class="keywordflow">if</span> (samples[i] &lt; num)</div>
+<div class="line"><span class="lineno">46743</span>            {</div>
+<div class="line"><span class="lineno">46744</span>                num = samples[i];</div>
+<div class="line"><span class="lineno">46745</span>            }</div>
+<div class="line"><span class="lineno">46746</span>        }</div>
+<div class="line"><span class="lineno">46747</span>        targetSpot = center + vectorTowardsTarget.SafeNormalize(Vector2.Zero) * num;</div>
+<div class="line"><span class="lineno">46748</span>        point = targetSpot.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">46749</span>        Rectangle value = <span class="keyword">new</span> Rectangle(point.X, point.Y, 1, 1);</div>
+<div class="line"><span class="lineno">46750</span>        value.Inflate(6, 16);</div>
+<div class="line"><span class="lineno">46751</span>        Rectangle value2 = <span class="keyword">new</span> Rectangle(0, 0, Main.maxTilesX, Main.maxTilesY);</div>
+<div class="line"><span class="lineno">46752</span>        value2.Inflate(-40, -40);</div>
+<div class="line"><span class="lineno">46753</span>        value = Rectangle.Intersect(value, value2);</div>
+<div class="line"><span class="lineno">46754</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">46755</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">46756</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = value.Left; j &lt;= value.Right; j++)</div>
+<div class="line"><span class="lineno">46757</span>        {</div>
+<div class="line"><span class="lineno">46758</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = value.Top; k &lt;= value.Bottom; k++)</div>
+<div class="line"><span class="lineno">46759</span>            {</div>
+<div class="line"><span class="lineno">46760</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile2(j, k))</div>
+<div class="line"><span class="lineno">46761</span>                {</div>
+<div class="line"><span class="lineno">46762</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">46763</span>                }</div>
+<div class="line"><span class="lineno">46764</span>                Vector2 value3 = <span class="keyword">new</span> Vector2(j * 16 + 8, k * 16 + 8);</div>
+<div class="line"><span class="lineno">46765</span>                <span class="keywordflow">if</span> (!(Vector2.Distance(targetSpot, value3) &gt; 200f))</div>
+<div class="line"><span class="lineno">46766</span>                {</div>
+<div class="line"><span class="lineno">46767</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a328c119ea6cf99f6cfe5519d033bcddd.html#a328c119ea6cf99f6cfe5519d033bcddd">FindSharpTearsOpening</a>(j, k, j &gt; point.X, j &lt; point.X, k &gt; point.Y, k &lt; point.Y))</div>
+<div class="line"><span class="lineno">46768</span>                    {</div>
+<div class="line"><span class="lineno">46769</span>                        list.Add(<span class="keyword">new</span> Point(j, k));</div>
+<div class="line"><span class="lineno">46770</span>                    }</div>
+<div class="line"><span class="lineno">46771</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">46772</span>                    {</div>
+<div class="line"><span class="lineno">46773</span>                        list2.Add(<span class="keyword">new</span> Point(j, k));</div>
+<div class="line"><span class="lineno">46774</span>                    }</div>
+<div class="line"><span class="lineno">46775</span>                }</div>
+<div class="line"><span class="lineno">46776</span>            }</div>
+<div class="line"><span class="lineno">46777</span>        }</div>
+<div class="line"><span class="lineno">46778</span>        <span class="keywordflow">if</span> (list.Count == 0 &amp;&amp; list2.Count == 0)</div>
+<div class="line"><span class="lineno">46779</span>        {</div>
+<div class="line"><span class="lineno">46780</span>            list.Add((base.Center.ToTileCoordinates().ToVector2() + Main.rand.NextVector2Square(-2f, 2f)).ToPoint());</div>
+<div class="line"><span class="lineno">46781</span>        }</div>
+<div class="line"><span class="lineno">46782</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list3 = list;</div>
+<div class="line"><span class="lineno">46783</span>        <span class="keywordflow">if</span> (list3.Count == 0)</div>
+<div class="line"><span class="lineno">46784</span>        {</div>
+<div class="line"><span class="lineno">46785</span>            list3 = list2;</div>
+<div class="line"><span class="lineno">46786</span>        }</div>
+<div class="line"><span class="lineno">46787</span>        <span class="keywordtype">int</span> index = Main.rand.Next(list3.Count);</div>
+<div class="line"><span class="lineno">46788</span>        <span class="keywordflow">return</span> list3[index];</div>
+<div class="line"><span class="lineno">46789</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a328c119ea6cf99f6cfe5519d033bcddd_html_a328c119ea6cf99f6cfe5519d033bcddd"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a328c119ea6cf99f6cfe5519d033bcddd.html#a328c119ea6cf99f6cfe5519d033bcddd">Terraria.Player.FindSharpTearsOpening</a></div><div class="ttdeci">bool FindSharpTearsOpening(int x, int y, bool acceptLeft, bool acceptRight, bool acceptUp, bool acceptDown)</div><div class="ttdef"><b>Definition</b> Player.cs:46791</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4004b31abf5dd1a5d42e15c6d4512a94.html#a4004b31abf5dd1a5d42e15c6d4512a94">Terraria.Collision.AimingLaserScan()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a622da04861d766a27cf7b48216e3aa00.html#a622da04861d766a27cf7b48216e3aa00">Terraria.WorldGen.SolidTile2()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

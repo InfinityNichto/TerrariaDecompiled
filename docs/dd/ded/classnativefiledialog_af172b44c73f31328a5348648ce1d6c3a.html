@@ -117,6 +117,24 @@ $(function(){initNavTree('dd/ded/classnativefiledialog_af172b44c73f31328a5348648
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (str == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> num = <a class="code hl_function" href="../../dd/ded/classnativefiledialog_af2926cc49f21cccecd70c04f9e5b61b2.html#af2926cc49f21cccecd70c04f9e5b61b2">Utf8Size</a>(str);</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">byte</span>* ptr = (<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)Marshal.AllocHGlobal(num);</div>
+<div class="line"><span class="lineno">   38</span>        fixed (<span class="keywordtype">char</span>* chars = str)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            Encoding.UTF8.GetBytes(chars, (str != <span class="keyword">null</span>) ? (str.Length + 1) : 0, ptr, num);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassnativefiledialog_af2926cc49f21cccecd70c04f9e5b61b2_html_af2926cc49f21cccecd70c04f9e5b61b2"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_af2926cc49f21cccecd70c04f9e5b61b2.html#af2926cc49f21cccecd70c04f9e5b61b2">nativefiledialog.Utf8Size</a></div><div class="ttdeci">static int Utf8Size(string str)</div><div class="ttdef"><b>Definition</b> nativefiledialog.cs:25</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/ded/classnativefiledialog_af2926cc49f21cccecd70c04f9e5b61b2.html#af2926cc49f21cccecd70c04f9e5b61b2">Utf8Size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/ded/classnativefiledialog_aeadaef3670dc3de9281eb92c4df871e7.html#aeadaef3670dc3de9281eb92c4df871e7">NFD_OpenDialog()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_a4da207d14b2288c6aa96f1e627d8a190.html#a4da207d14b2288c6aa96f1e627d8a190">NFD_OpenDialogMultiple()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_ac6566d4b3f5f2c251dee9ae2588ba05a.html#ac6566d4b3f5f2c251dee9ae2588ba05a">NFD_PickFolder()</a>, and <a class="el" href="../../dd/ded/classnativefiledialog_ad015f810ae97b11cebc345376a7dc842.html#ad015f810ae97b11cebc345376a7dc842">NFD_SaveDialog()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

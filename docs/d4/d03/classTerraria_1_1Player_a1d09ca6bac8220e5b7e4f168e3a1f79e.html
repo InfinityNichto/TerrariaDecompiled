@@ -121,6 +121,63 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a1d09ca6bac8220e5b7e4f1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">39123</span>    {</div>
+<div class="line"><span class="lineno">39124</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">39125</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">39126</span>        <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><span class="lineno">39127</span>        <span class="keywordtype">int</span> y = 0;</div>
+<div class="line"><span class="lineno">39128</span>        <span class="keywordflow">switch</span> (data.type)</div>
+<div class="line"><span class="lineno">39129</span>        {</div>
+<div class="line"><span class="lineno">39130</span>        <span class="keywordflow">case</span> 138:</div>
+<div class="line"><span class="lineno">39131</span>        <span class="keywordflow">case</span> 664:</div>
+<div class="line"><span class="lineno">39132</span>            num = 32;</div>
+<div class="line"><span class="lineno">39133</span>            num2 = 32;</div>
+<div class="line"><span class="lineno">39134</span>            x = data.xCoord * 16;</div>
+<div class="line"><span class="lineno">39135</span>            y = data.yCoord * 16;</div>
+<div class="line"><span class="lineno">39136</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39137</span>        <span class="keywordflow">case</span> 484:</div>
+<div class="line"><span class="lineno">39138</span>            num = 32;</div>
+<div class="line"><span class="lineno">39139</span>            num2 = 32;</div>
+<div class="line"><span class="lineno">39140</span>            x = data.xCoord * 16;</div>
+<div class="line"><span class="lineno">39141</span>            y = data.yCoord * 16;</div>
+<div class="line"><span class="lineno">39142</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39143</span>        <span class="keywordflow">case</span> 235:</div>
+<div class="line"><span class="lineno">39144</span>            num = 48;</div>
+<div class="line"><span class="lineno">39145</span>            num2 = 16;</div>
+<div class="line"><span class="lineno">39146</span>            x = data.xCoord * 16;</div>
+<div class="line"><span class="lineno">39147</span>            y = data.yCoord * 16;</div>
+<div class="line"><span class="lineno">39148</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39149</span>        <span class="keywordflow">case</span> 476:</div>
+<div class="line"><span class="lineno">39150</span>            num = 16;</div>
+<div class="line"><span class="lineno">39151</span>            num2 = 16;</div>
+<div class="line"><span class="lineno">39152</span>            x = data.xCoord * 16;</div>
+<div class="line"><span class="lineno">39153</span>            y = data.yCoord * 16;</div>
+<div class="line"><span class="lineno">39154</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39155</span>        <span class="keywordflow">case</span> 387:</div>
+<div class="line"><span class="lineno">39156</span>            num = 32;</div>
+<div class="line"><span class="lineno">39157</span>            num2 = 16;</div>
+<div class="line"><span class="lineno">39158</span>            x = data.xCoord * 16;</div>
+<div class="line"><span class="lineno">39159</span>            y = data.yCoord * 16;</div>
+<div class="line"><span class="lineno">39160</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39161</span>        }</div>
+<div class="line"><span class="lineno">39162</span>        <span class="keywordflow">if</span> (num == 0 || num2 == 0)</div>
+<div class="line"><span class="lineno">39163</span>        {</div>
+<div class="line"><span class="lineno">39164</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">39165</span>        }</div>
+<div class="line"><span class="lineno">39166</span>        Rectangle value = <span class="keyword">new</span> Rectangle(x, y, num, num2);</div>
+<div class="line"><span class="lineno">39167</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 255; i++)</div>
+<div class="line"><span class="lineno">39168</span>        {</div>
+<div class="line"><span class="lineno">39169</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a63318171c3da60bbd687bb265595a2f9.html#a63318171c3da60bbd687bb265595a2f9">Player</a> player = Main.player[i];</div>
+<div class="line"><span class="lineno">39170</span>            <span class="keywordflow">if</span> (player.active &amp;&amp; !player.dead &amp;&amp; !player.ghost &amp;&amp; player.Hitbox.Intersects(value))</div>
+<div class="line"><span class="lineno">39171</span>            {</div>
+<div class="line"><span class="lineno">39172</span>                canPlace = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">39173</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">39174</span>            }</div>
+<div class="line"><span class="lineno">39175</span>        }</div>
+<div class="line"><span class="lineno">39176</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a63318171c3da60bbd687bb265595a2f9_html_a63318171c3da60bbd687bb265595a2f9"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a63318171c3da60bbd687bb265595a2f9.html#a63318171c3da60bbd687bb265595a2f9">Terraria.Player.Player</a></div><div class="ttdeci">Player()</div><div class="ttdef"><b>Definition</b> Player.cs:52447</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afcb21ea4241f14068f70913ced534ed9.html#afcb21ea4241f14068f70913ced534ed9">Terraria.Player.dead</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a03c09983ea0317e6e042d92da4d8c1c8.html#a03c09983ea0317e6e042d92da4d8c1c8">Terraria.Player.ghost</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>.</p>
 
 </div>
 </div>

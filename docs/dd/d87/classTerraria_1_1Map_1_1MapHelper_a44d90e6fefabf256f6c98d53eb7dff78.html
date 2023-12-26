@@ -126,6 +126,189 @@ $(function(){initNavTree('dd/d87/classTerraria_1_1Map_1_1MapHelper_a44d90e6fefab
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1781</span>    {</div>
+<div class="line"><span class="lineno"> 1782</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 1783</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1784</span>        {</div>
+<div class="line"><span class="lineno"> 1785</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(MapTile);</div>
+<div class="line"><span class="lineno"> 1786</span>        }</div>
+<div class="line"><span class="lineno"> 1787</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 1788</span>        <span class="keywordtype">int</span> num2 = Light;</div>
+<div class="line"><span class="lineno"> 1789</span>        _ = Main.Map[i, j];</div>
+<div class="line"><span class="lineno"> 1790</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno"> 1791</span>        <span class="keywordtype">int</span> baseOption = 0;</div>
+<div class="line"><span class="lineno"> 1792</span>        <span class="keywordflow">if</span> (tile.active())</div>
+<div class="line"><span class="lineno"> 1793</span>        {</div>
+<div class="line"><span class="lineno"> 1794</span>            <span class="keywordtype">int</span> num4 = tile.type;</div>
+<div class="line"><span class="lineno"> 1795</span>            num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ab1abb1c88044636b148ec66cdc59b864.html#ab1abb1c88044636b148ec66cdc59b864">tileLookup</a>[num4];</div>
+<div class="line"><span class="lineno"> 1796</span>            <span class="keywordtype">bool</span> flag = tile.invisibleBlock();</div>
+<div class="line"><span class="lineno"> 1797</span>            <span class="keywordflow">if</span> (tile.fullbrightBlock() &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno"> 1798</span>            {</div>
+<div class="line"><span class="lineno"> 1799</span>                num2 = 255;</div>
+<div class="line"><span class="lineno"> 1800</span>            }</div>
+<div class="line"><span class="lineno"> 1801</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 1802</span>            {</div>
+<div class="line"><span class="lineno"> 1803</span>                num3 = 0;</div>
+<div class="line"><span class="lineno"> 1804</span>            }</div>
+<div class="line"><span class="lineno"> 1805</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num4 == 5)</div>
+<div class="line"><span class="lineno"> 1806</span>            {</div>
+<div class="line"><span class="lineno"> 1807</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.IsThisAMushroomTree(i, j))</div>
+<div class="line"><span class="lineno"> 1808</span>                {</div>
+<div class="line"><span class="lineno"> 1809</span>                    baseOption = 1;</div>
+<div class="line"><span class="lineno"> 1810</span>                }</div>
+<div class="line"><span class="lineno"> 1811</span>                num = tile.color();</div>
+<div class="line"><span class="lineno"> 1812</span>            }</div>
+<div class="line"><span class="lineno"> 1813</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1814</span>            {</div>
+<div class="line"><span class="lineno"> 1815</span>                <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno"> 1816</span>                {</div>
+<div class="line"><span class="lineno"> 1817</span>                <span class="keywordflow">case</span> 51:</div>
+<div class="line"><span class="lineno"> 1818</span>                    <span class="keywordflow">if</span> ((i + j) % 2 == 0)</div>
+<div class="line"><span class="lineno"> 1819</span>                    {</div>
+<div class="line"><span class="lineno"> 1820</span>                        num3 = 0;</div>
+<div class="line"><span class="lineno"> 1821</span>                    }</div>
+<div class="line"><span class="lineno"> 1822</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1823</span>                <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno"> 1824</span>                    <span class="keywordflow">if</span> (tile.frameY == 864)</div>
+<div class="line"><span class="lineno"> 1825</span>                    {</div>
+<div class="line"><span class="lineno"> 1826</span>                        num3 = 0;</div>
+<div class="line"><span class="lineno"> 1827</span>                    }</div>
+<div class="line"><span class="lineno"> 1828</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1829</span>                <span class="keywordflow">case</span> 184:</div>
+<div class="line"><span class="lineno"> 1830</span>                    <span class="keywordflow">if</span> (tile.frameX / 22 == 10)</div>
+<div class="line"><span class="lineno"> 1831</span>                    {</div>
+<div class="line"><span class="lineno"> 1832</span>                        num4 = 627;</div>
+<div class="line"><span class="lineno"> 1833</span>                        num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ab1abb1c88044636b148ec66cdc59b864.html#ab1abb1c88044636b148ec66cdc59b864">tileLookup</a>[num4];</div>
+<div class="line"><span class="lineno"> 1834</span>                    }</div>
+<div class="line"><span class="lineno"> 1835</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1836</span>                }</div>
+<div class="line"><span class="lineno"> 1837</span>                <span class="keywordflow">if</span> (num3 != 0)</div>
+<div class="line"><span class="lineno"> 1838</span>                {</div>
+<div class="line"><span class="lineno"> 1839</span>                    <a class="code hl_function" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a98300ca1ce0faa835057a44d13029124.html#a98300ca1ce0faa835057a44d13029124">GetTileBaseOption</a>(i, j, num4, tile, ref baseOption);</div>
+<div class="line"><span class="lineno"> 1840</span>                    num = ((num4 != 160) ? tile.color() : 0);</div>
+<div class="line"><span class="lineno"> 1841</span>                }</div>
+<div class="line"><span class="lineno"> 1842</span>            }</div>
+<div class="line"><span class="lineno"> 1843</span>        }</div>
+<div class="line"><span class="lineno"> 1844</span>        <span class="keywordflow">if</span> (num3 == 0)</div>
+<div class="line"><span class="lineno"> 1845</span>        {</div>
+<div class="line"><span class="lineno"> 1846</span>            <span class="keywordtype">bool</span> flag2 = tile.invisibleWall();</div>
+<div class="line"><span class="lineno"> 1847</span>            <span class="keywordflow">if</span> (tile.wall &gt; 0 &amp;&amp; tile.fullbrightWall() &amp;&amp; !flag2)</div>
+<div class="line"><span class="lineno"> 1848</span>            {</div>
+<div class="line"><span class="lineno"> 1849</span>                num2 = 255;</div>
+<div class="line"><span class="lineno"> 1850</span>            }</div>
+<div class="line"><span class="lineno"> 1851</span>            <span class="keywordflow">if</span> (tile.liquid &gt; 32)</div>
+<div class="line"><span class="lineno"> 1852</span>            {</div>
+<div class="line"><span class="lineno"> 1853</span>                <span class="keywordtype">int</span> num5 = tile.liquidType();</div>
+<div class="line"><span class="lineno"> 1854</span>                num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ad2daa4ff7e776c1fa2feba62dbdf3553.html#ad2daa4ff7e776c1fa2feba62dbdf3553">liquidPosition</a> + num5;</div>
+<div class="line"><span class="lineno"> 1855</span>            }</div>
+<div class="line"><span class="lineno"> 1856</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!tile.invisibleWall() &amp;&amp; tile.wall &gt; 0 &amp;&amp; tile.wall &lt; <a class="code hl_class" href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">WallID</a>.<a class="code hl_variable" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Count</a>)</div>
+<div class="line"><span class="lineno"> 1857</span>            {</div>
+<div class="line"><span class="lineno"> 1858</span>                <span class="keywordtype">int</span> wall = tile.wall;</div>
+<div class="line"><span class="lineno"> 1859</span>                num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a9437a430c6e6ee8c3e3ddd9a65e1865c.html#a9437a430c6e6ee8c3e3ddd9a65e1865c">wallLookup</a>[wall];</div>
+<div class="line"><span class="lineno"> 1860</span>                num = tile.wallColor();</div>
+<div class="line"><span class="lineno"> 1861</span>                <span class="keywordflow">switch</span> (wall)</div>
+<div class="line"><span class="lineno"> 1862</span>                {</div>
+<div class="line"><span class="lineno"> 1863</span>                <span class="keywordflow">case</span> 21:</div>
+<div class="line"><span class="lineno"> 1864</span>                <span class="keywordflow">case</span> 88:</div>
+<div class="line"><span class="lineno"> 1865</span>                <span class="keywordflow">case</span> 89:</div>
+<div class="line"><span class="lineno"> 1866</span>                <span class="keywordflow">case</span> 90:</div>
+<div class="line"><span class="lineno"> 1867</span>                <span class="keywordflow">case</span> 91:</div>
+<div class="line"><span class="lineno"> 1868</span>                <span class="keywordflow">case</span> 92:</div>
+<div class="line"><span class="lineno"> 1869</span>                <span class="keywordflow">case</span> 93:</div>
+<div class="line"><span class="lineno"> 1870</span>                <span class="keywordflow">case</span> 168:</div>
+<div class="line"><span class="lineno"> 1871</span>                <span class="keywordflow">case</span> 241:</div>
+<div class="line"><span class="lineno"> 1872</span>                    num = 0;</div>
+<div class="line"><span class="lineno"> 1873</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1874</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 1875</span>                    baseOption = i % 2;</div>
+<div class="line"><span class="lineno"> 1876</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1877</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1878</span>                    baseOption = 0;</div>
+<div class="line"><span class="lineno"> 1879</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1880</span>                }</div>
+<div class="line"><span class="lineno"> 1881</span>            }</div>
+<div class="line"><span class="lineno"> 1882</span>        }</div>
+<div class="line"><span class="lineno"> 1883</span>        <span class="keywordflow">if</span> (num3 == 0)</div>
+<div class="line"><span class="lineno"> 1884</span>        {</div>
+<div class="line"><span class="lineno"> 1885</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)j &lt; Main.worldSurface)</div>
+<div class="line"><span class="lineno"> 1886</span>            {</div>
+<div class="line"><span class="lineno"> 1887</span>                <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno"> 1888</span>                {</div>
+<div class="line"><span class="lineno"> 1889</span>                    num2 = 5;</div>
+<div class="line"><span class="lineno"> 1890</span>                    num3 = 100;</div>
+<div class="line"><span class="lineno"> 1891</span>                }</div>
+<div class="line"><span class="lineno"> 1892</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1893</span>                {</div>
+<div class="line"><span class="lineno"> 1894</span>                    <span class="keywordtype">int</span> num6 = (byte)(255.0 * ((<span class="keywordtype">double</span>)j / Main.worldSurface));</div>
+<div class="line"><span class="lineno"> 1895</span>                    num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac9db5dc525801427834032ac37b71607.html#ac9db5dc525801427834032ac37b71607">skyPosition</a> + num6;</div>
+<div class="line"><span class="lineno"> 1896</span>                    num2 = 255;</div>
+<div class="line"><span class="lineno"> 1897</span>                    num = 0;</div>
+<div class="line"><span class="lineno"> 1898</span>                }</div>
+<div class="line"><span class="lineno"> 1899</span>            }</div>
+<div class="line"><span class="lineno"> 1900</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j &lt; Main.UnderworldLayer)</div>
+<div class="line"><span class="lineno"> 1901</span>            {</div>
+<div class="line"><span class="lineno"> 1902</span>                num = 0;</div>
+<div class="line"><span class="lineno"> 1903</span>                <span class="keywordtype">byte</span> b = 0;</div>
+<div class="line"><span class="lineno"> 1904</span>                <span class="keywordtype">float</span> num7 = Main.screenPosition.X / 16f - 5f;</div>
+<div class="line"><span class="lineno"> 1905</span>                <span class="keywordtype">float</span> num8 = (Main.screenPosition.X + (float)Main.screenWidth) / 16f + 5f;</div>
+<div class="line"><span class="lineno"> 1906</span>                <span class="keywordtype">float</span> num9 = Main.screenPosition.Y / 16f - 5f;</div>
+<div class="line"><span class="lineno"> 1907</span>                <span class="keywordtype">float</span> num10 = (Main.screenPosition.Y + (float)Main.screenHeight) / 16f + 5f;</div>
+<div class="line"><span class="lineno"> 1908</span>                <span class="keywordflow">if</span> (((<span class="keywordtype">float</span>)i &lt; num7 || (float)i &gt; num8 || (<span class="keywordtype">float</span>)j &lt; num9 || (float)j &gt; num10) &amp;&amp; i &gt; 40 &amp;&amp; i &lt; Main.maxTilesX - 40 &amp;&amp; j &gt; 40 &amp;&amp; j &lt; Main.maxTilesY - 40)</div>
+<div class="line"><span class="lineno"> 1909</span>                {</div>
+<div class="line"><span class="lineno"> 1910</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = i - 36; k &lt;= i + 30; k += 10)</div>
+<div class="line"><span class="lineno"> 1911</span>                    {</div>
+<div class="line"><span class="lineno"> 1912</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = j - 36; l &lt;= j + 30; l += 10)</div>
+<div class="line"><span class="lineno"> 1913</span>                        {</div>
+<div class="line"><span class="lineno"> 1914</span>                            <span class="keywordtype">int</span> type = Main.Map[k, l].Type;</div>
+<div class="line"><span class="lineno"> 1915</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a005bda34eee509eeb37b5f23eb1b88dd.html#a005bda34eee509eeb37b5f23eb1b88dd">snowTypes</a>.Length; m++)</div>
+<div class="line"><span class="lineno"> 1916</span>                            {</div>
+<div class="line"><span class="lineno"> 1917</span>                                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a005bda34eee509eeb37b5f23eb1b88dd.html#a005bda34eee509eeb37b5f23eb1b88dd">snowTypes</a>[m] == type)</div>
+<div class="line"><span class="lineno"> 1918</span>                                {</div>
+<div class="line"><span class="lineno"> 1919</span>                                    b = <span class="keywordtype">byte</span>.MaxValue;</div>
+<div class="line"><span class="lineno"> 1920</span>                                    k = i + 31;</div>
+<div class="line"><span class="lineno"> 1921</span>                                    l = j + 31;</div>
+<div class="line"><span class="lineno"> 1922</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1923</span>                                }</div>
+<div class="line"><span class="lineno"> 1924</span>                            }</div>
+<div class="line"><span class="lineno"> 1925</span>                        }</div>
+<div class="line"><span class="lineno"> 1926</span>                    }</div>
+<div class="line"><span class="lineno"> 1927</span>                }</div>
+<div class="line"><span class="lineno"> 1928</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1929</span>                {</div>
+<div class="line"><span class="lineno"> 1930</span>                    <span class="keywordtype">float</span> num11 = (float)Main.SceneMetrics.SnowTileCount / (<span class="keywordtype">float</span>)SceneMetrics.SnowTileMax;</div>
+<div class="line"><span class="lineno"> 1931</span>                    num11 *= 255f;</div>
+<div class="line"><span class="lineno"> 1932</span>                    <span class="keywordflow">if</span> (num11 &gt; 255f)</div>
+<div class="line"><span class="lineno"> 1933</span>                    {</div>
+<div class="line"><span class="lineno"> 1934</span>                        num11 = 255f;</div>
+<div class="line"><span class="lineno"> 1935</span>                    }</div>
+<div class="line"><span class="lineno"> 1936</span>                    b = (byte)num11;</div>
+<div class="line"><span class="lineno"> 1937</span>                }</div>
+<div class="line"><span class="lineno"> 1938</span>                num3 = ((!((double)j &lt; Main.rockLayer)) ? (<a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a07f0087468c78cb7a68df1f92ec99ce0.html#a07f0087468c78cb7a68df1f92ec99ce0">rockPosition</a> + b) : (<a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a239a3bdfc9cca676365ad74467df53d3.html#a239a3bdfc9cca676365ad74467df53d3">dirtPosition</a> + b));</div>
+<div class="line"><span class="lineno"> 1939</span>            }</div>
+<div class="line"><span class="lineno"> 1940</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1941</span>            {</div>
+<div class="line"><span class="lineno"> 1942</span>                num3 = <a class="code hl_variable" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac2f02150f6e9cc1c1152bf5efd068114.html#ac2f02150f6e9cc1c1152bf5efd068114">hellPosition</a>;</div>
+<div class="line"><span class="lineno"> 1943</span>            }</div>
+<div class="line"><span class="lineno"> 1944</span>        }</div>
+<div class="line"><span class="lineno"> 1945</span>        <span class="keywordflow">return</span> MapTile.Create((ushort)(num3 + baseOption), (<span class="keywordtype">byte</span>)num2, (byte)num);</div>
+<div class="line"><span class="lineno"> 1946</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9_html_a3072f148cf2c586360b0704a7f2c36d9"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a></div><div class="ttdeci">static readonly ushort Count</div><div class="ttdef"><b>Definition</b> WallID.cs:753</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_html"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">Terraria.ID.WallID</a></div><div class="ttdef"><b>Definition</b> WallID.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_a005bda34eee509eeb37b5f23eb1b88dd_html_a005bda34eee509eeb37b5f23eb1b88dd"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a005bda34eee509eeb37b5f23eb1b88dd.html#a005bda34eee509eeb37b5f23eb1b88dd">Terraria.Map.MapHelper.snowTypes</a></div><div class="ttdeci">static ushort[] snowTypes</div><div class="ttdef"><b>Definition</b> MapHelper.cs:200</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_a07f0087468c78cb7a68df1f92ec99ce0_html_a07f0087468c78cb7a68df1f92ec99ce0"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a07f0087468c78cb7a68df1f92ec99ce0.html#a07f0087468c78cb7a68df1f92ec99ce0">Terraria.Map.MapHelper.rockPosition</a></div><div class="ttdeci">static ushort rockPosition</div><div class="ttdef"><b>Definition</b> MapHelper.cs:194</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_a239a3bdfc9cca676365ad74467df53d3_html_a239a3bdfc9cca676365ad74467df53d3"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a239a3bdfc9cca676365ad74467df53d3.html#a239a3bdfc9cca676365ad74467df53d3">Terraria.Map.MapHelper.dirtPosition</a></div><div class="ttdeci">static ushort dirtPosition</div><div class="ttdef"><b>Definition</b> MapHelper.cs:192</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_a9437a430c6e6ee8c3e3ddd9a65e1865c_html_a9437a430c6e6ee8c3e3ddd9a65e1865c"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a9437a430c6e6ee8c3e3ddd9a65e1865c.html#a9437a430c6e6ee8c3e3ddd9a65e1865c">Terraria.Map.MapHelper.wallLookup</a></div><div class="ttdeci">static ushort[] wallLookup</div><div class="ttdef"><b>Definition</b> MapHelper.cs:182</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_a98300ca1ce0faa835057a44d13029124_html_a98300ca1ce0faa835057a44d13029124"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a98300ca1ce0faa835057a44d13029124.html#a98300ca1ce0faa835057a44d13029124">Terraria.Map.MapHelper.GetTileBaseOption</a></div><div class="ttdeci">static void GetTileBaseOption(int x, int y, int tileType, Tile tileCache, ref int baseOption)</div><div class="ttdef"><b>Definition</b> MapHelper.cs:1948</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_ab1abb1c88044636b148ec66cdc59b864_html_ab1abb1c88044636b148ec66cdc59b864"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ab1abb1c88044636b148ec66cdc59b864.html#ab1abb1c88044636b148ec66cdc59b864">Terraria.Map.MapHelper.tileLookup</a></div><div class="ttdeci">static ushort[] tileLookup</div><div class="ttdef"><b>Definition</b> MapHelper.cs:180</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_ac2f02150f6e9cc1c1152bf5efd068114_html_ac2f02150f6e9cc1c1152bf5efd068114"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac2f02150f6e9cc1c1152bf5efd068114.html#ac2f02150f6e9cc1c1152bf5efd068114">Terraria.Map.MapHelper.hellPosition</a></div><div class="ttdeci">static ushort hellPosition</div><div class="ttdef"><b>Definition</b> MapHelper.cs:196</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_ac9db5dc525801427834032ac37b71607_html_ac9db5dc525801427834032ac37b71607"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac9db5dc525801427834032ac37b71607.html#ac9db5dc525801427834032ac37b71607">Terraria.Map.MapHelper.skyPosition</a></div><div class="ttdeci">static ushort skyPosition</div><div class="ttdef"><b>Definition</b> MapHelper.cs:190</div></div>
+<div class="ttc" id="aclassTerraria_1_1Map_1_1MapHelper_ad2daa4ff7e776c1fa2feba62dbdf3553_html_ad2daa4ff7e776c1fa2feba62dbdf3553"><div class="ttname"><a href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ad2daa4ff7e776c1fa2feba62dbdf3553.html#ad2daa4ff7e776c1fa2feba62dbdf3553">Terraria.Map.MapHelper.liquidPosition</a></div><div class="ttdeci">static ushort liquidPosition</div><div class="ttdef"><b>Definition</b> MapHelper.cs:188</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a083f90a80ef987726fd28c52ffc4787e.html#a083f90a80ef987726fd28c52ffc4787e">Terraria.Tile.color()</a>, <a class="el" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a>, <a class="el" href="../../d3/d33/structTerraria_1_1Map_1_1MapTile_ac3498cbc6a422ff0e84c7f630bc38b15.html#ac3498cbc6a422ff0e84c7f630bc38b15">Terraria.Map.MapTile.Create()</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a239a3bdfc9cca676365ad74467df53d3.html#a239a3bdfc9cca676365ad74467df53d3">Terraria.Map.MapHelper.dirtPosition</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a7069a642e4d55277c18a0aceef49a635.html#a7069a642e4d55277c18a0aceef49a635">Terraria.Tile.fullbrightBlock()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a3b7bd5420f76606332e38630dd2d406f.html#a3b7bd5420f76606332e38630dd2d406f">Terraria.Tile.fullbrightWall()</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a98300ca1ce0faa835057a44d13029124.html#a98300ca1ce0faa835057a44d13029124">Terraria.Map.MapHelper.GetTileBaseOption()</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac2f02150f6e9cc1c1152bf5efd068114.html#ac2f02150f6e9cc1c1152bf5efd068114">Terraria.Map.MapHelper.hellPosition</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a994ba3606f0c15d01f258fc7baf06338.html#a994ba3606f0c15d01f258fc7baf06338">Terraria.Tile.invisibleBlock()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a57ac1450e9330144134ae00a73e5afc6.html#a57ac1450e9330144134ae00a73e5afc6">Terraria.Tile.invisibleWall()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a80427dcf1c36b3a0e0e4a47604aa832a.html#a80427dcf1c36b3a0e0e4a47604aa832a">Terraria.WorldGen.IsThisAMushroomTree()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ad2daa4ff7e776c1fa2feba62dbdf3553.html#ad2daa4ff7e776c1fa2feba62dbdf3553">Terraria.Map.MapHelper.liquidPosition</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a923bda87e60b6b5959aa5489d236d560.html#a923bda87e60b6b5959aa5489d236d560">Terraria.Main.Map</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a07f0087468c78cb7a68df1f92ec99ce0.html#a07f0087468c78cb7a68df1f92ec99ce0">Terraria.Map.MapHelper.rockPosition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0372d39122b586f7476147e3797e8b45.html#a0372d39122b586f7476147e3797e8b45">Terraria.Main.SceneMetrics</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d02013f8d3b3236b9c18fed7f98274c.html#a6d02013f8d3b3236b9c18fed7f98274c">Terraria.Main.screenHeight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad1faaf9a13eee5a95e0f8690feb12e91.html#ad1faaf9a13eee5a95e0f8690feb12e91">Terraria.Main.screenWidth</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ac9db5dc525801427834032ac37b71607.html#ac9db5dc525801427834032ac37b71607">Terraria.Map.MapHelper.skyPosition</a>, <a class="el" href="../../d0/d62/classTerraria_1_1SceneMetrics_acab34066d982830efb88890011ce5b13.html#acab34066d982830efb88890011ce5b13">Terraria.SceneMetrics.SnowTileCount</a>, <a class="el" href="../../d0/d62/classTerraria_1_1SceneMetrics_a038ea75a4e783c5f34e7be1bb867db44.html#a038ea75a4e783c5f34e7be1bb867db44">Terraria.SceneMetrics.SnowTileMax</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a005bda34eee509eeb37b5f23eb1b88dd.html#a005bda34eee509eeb37b5f23eb1b88dd">Terraria.Map.MapHelper.snowTypes</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_ab1abb1c88044636b148ec66cdc59b864.html#ab1abb1c88044636b148ec66cdc59b864">Terraria.Map.MapHelper.tileLookup</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad86ae341f5af3e866c85060559af7957.html#ad86ae341f5af3e866c85060559af7957">Terraria.Main.UnderworldLayer</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae29f1e935710d0c9f5e325f873709719.html#ae29f1e935710d0c9f5e325f873709719">Terraria.Tile.wallColor()</a>, <a class="el" href="../../dd/d87/classTerraria_1_1Map_1_1MapHelper_a9437a430c6e6ee8c3e3ddd9a65e1865c.html#a9437a430c6e6ee8c3e3ddd9a65e1865c">Terraria.Map.MapHelper.wallLookup</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/de6/classTerraria_1_1Map_1_1WorldMap_ac1a8fc26470a93bface48e95a0714701.html#ac1a8fc26470a93bface48e95a0714701">Terraria.Map.WorldMap.Update()</a>, <a class="el" href="../../d6/de6/classTerraria_1_1Map_1_1WorldMap_a68bdc8514399e9455a025773de290d54.html#a68bdc8514399e9455a025773de290d54">Terraria.Map.WorldMap.UpdateLighting()</a>, and <a class="el" href="../../d6/de6/classTerraria_1_1Map_1_1WorldMap_a67a5ac3eae54bd2c7efa7121fa8686cf.html#a67a5ac3eae54bd2c7efa7121fa8686cf">Terraria.Map.WorldMap.UpdateType()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

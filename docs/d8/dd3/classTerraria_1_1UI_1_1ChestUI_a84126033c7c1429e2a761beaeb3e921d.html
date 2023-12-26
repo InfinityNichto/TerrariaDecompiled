@@ -126,6 +126,221 @@ $(function(){initNavTree('d8/dd3/classTerraria_1_1UI_1_1ChestUI_a84126033c7c1429
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1067</span>    {</div>
+<div class="line"><span class="lineno"> 1068</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1069</span>        <span class="keywordtype">int</span>[] array = <span class="keyword">new</span> <span class="keywordtype">int</span>[4];</div>
+<div class="line"><span class="lineno"> 1070</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno"> 1071</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno"> 1072</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1073</span>        <span class="keywordtype">int</span>[] array2 = <span class="keyword">new</span> <span class="keywordtype">int</span>[40];</div>
+<div class="line"><span class="lineno"> 1074</span>        <span class="keywordtype">bool</span> overFlowing;</div>
+<div class="line"><span class="lineno"> 1075</span>        <span class="keywordtype">long</span> num = Utils.CoinsCount(out overFlowing, pInv);</div>
+<div class="line"><span class="lineno"> 1076</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cInv.Length; i++)</div>
+<div class="line"><span class="lineno"> 1077</span>        {</div>
+<div class="line"><span class="lineno"> 1078</span>            array2[i] = -1;</div>
+<div class="line"><span class="lineno"> 1079</span>            <span class="keywordflow">if</span> (cInv[i].stack &lt; 1 || cInv[i].type &lt; 1)</div>
+<div class="line"><span class="lineno"> 1080</span>            {</div>
+<div class="line"><span class="lineno"> 1081</span>                list2.Add(i);</div>
+<div class="line"><span class="lineno"> 1082</span>                cInv[i] = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno"> 1083</span>            }</div>
+<div class="line"><span class="lineno"> 1084</span>            <span class="keywordflow">if</span> (cInv[i] != <span class="keyword">null</span> &amp;&amp; cInv[i].stack &gt; 0)</div>
+<div class="line"><span class="lineno"> 1085</span>            {</div>
+<div class="line"><span class="lineno"> 1086</span>                <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno"> 1087</span>                <span class="keywordflow">if</span> (cInv[i].type == 71)</div>
+<div class="line"><span class="lineno"> 1088</span>                {</div>
+<div class="line"><span class="lineno"> 1089</span>                    num2 = 1;</div>
+<div class="line"><span class="lineno"> 1090</span>                }</div>
+<div class="line"><span class="lineno"> 1091</span>                <span class="keywordflow">if</span> (cInv[i].type == 72)</div>
+<div class="line"><span class="lineno"> 1092</span>                {</div>
+<div class="line"><span class="lineno"> 1093</span>                    num2 = 2;</div>
+<div class="line"><span class="lineno"> 1094</span>                }</div>
+<div class="line"><span class="lineno"> 1095</span>                <span class="keywordflow">if</span> (cInv[i].type == 73)</div>
+<div class="line"><span class="lineno"> 1096</span>                {</div>
+<div class="line"><span class="lineno"> 1097</span>                    num2 = 3;</div>
+<div class="line"><span class="lineno"> 1098</span>                }</div>
+<div class="line"><span class="lineno"> 1099</span>                <span class="keywordflow">if</span> (cInv[i].type == 74)</div>
+<div class="line"><span class="lineno"> 1100</span>                {</div>
+<div class="line"><span class="lineno"> 1101</span>                    num2 = 4;</div>
+<div class="line"><span class="lineno"> 1102</span>                }</div>
+<div class="line"><span class="lineno"> 1103</span>                array2[i] = num2 - 1;</div>
+<div class="line"><span class="lineno"> 1104</span>                <span class="keywordflow">if</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno"> 1105</span>                {</div>
+<div class="line"><span class="lineno"> 1106</span>                    array[num2 - 1] += cInv[i].stack;</div>
+<div class="line"><span class="lineno"> 1107</span>                    list2.Add(i);</div>
+<div class="line"><span class="lineno"> 1108</span>                    cInv[i] = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno"> 1109</span>                    flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1110</span>                }</div>
+<div class="line"><span class="lineno"> 1111</span>            }</div>
+<div class="line"><span class="lineno"> 1112</span>        }</div>
+<div class="line"><span class="lineno"> 1113</span>        <span class="keywordflow">if</span> (!flag2)</div>
+<div class="line"><span class="lineno"> 1114</span>        {</div>
+<div class="line"><span class="lineno"> 1115</span>            <span class="keywordflow">return</span> 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno"> 1116</span>        }</div>
+<div class="line"><span class="lineno"> 1117</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; pInv.Length; j++)</div>
+<div class="line"><span class="lineno"> 1118</span>        {</div>
+<div class="line"><span class="lineno"> 1119</span>            <span class="keywordflow">if</span> (j != 58 &amp;&amp; pInv[j] != <span class="keyword">null</span> &amp;&amp; pInv[j].stack &gt; 0 &amp;&amp; !pInv[j].favorited)</div>
+<div class="line"><span class="lineno"> 1120</span>            {</div>
+<div class="line"><span class="lineno"> 1121</span>                <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno"> 1122</span>                <span class="keywordflow">if</span> (pInv[j].type == 71)</div>
+<div class="line"><span class="lineno"> 1123</span>                {</div>
+<div class="line"><span class="lineno"> 1124</span>                    num3 = 1;</div>
+<div class="line"><span class="lineno"> 1125</span>                }</div>
+<div class="line"><span class="lineno"> 1126</span>                <span class="keywordflow">if</span> (pInv[j].type == 72)</div>
+<div class="line"><span class="lineno"> 1127</span>                {</div>
+<div class="line"><span class="lineno"> 1128</span>                    num3 = 2;</div>
+<div class="line"><span class="lineno"> 1129</span>                }</div>
+<div class="line"><span class="lineno"> 1130</span>                <span class="keywordflow">if</span> (pInv[j].type == 73)</div>
+<div class="line"><span class="lineno"> 1131</span>                {</div>
+<div class="line"><span class="lineno"> 1132</span>                    num3 = 3;</div>
+<div class="line"><span class="lineno"> 1133</span>                }</div>
+<div class="line"><span class="lineno"> 1134</span>                <span class="keywordflow">if</span> (pInv[j].type == 74)</div>
+<div class="line"><span class="lineno"> 1135</span>                {</div>
+<div class="line"><span class="lineno"> 1136</span>                    num3 = 4;</div>
+<div class="line"><span class="lineno"> 1137</span>                }</div>
+<div class="line"><span class="lineno"> 1138</span>                <span class="keywordflow">if</span> (num3 &gt; 0)</div>
+<div class="line"><span class="lineno"> 1139</span>                {</div>
+<div class="line"><span class="lineno"> 1140</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1141</span>                    array[num3 - 1] += pInv[j].stack;</div>
+<div class="line"><span class="lineno"> 1142</span>                    list.Add(j);</div>
+<div class="line"><span class="lineno"> 1143</span>                    pInv[j] = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno"> 1144</span>                }</div>
+<div class="line"><span class="lineno"> 1145</span>            }</div>
+<div class="line"><span class="lineno"> 1146</span>        }</div>
+<div class="line"><span class="lineno"> 1147</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 3; k++)</div>
+<div class="line"><span class="lineno"> 1148</span>        {</div>
+<div class="line"><span class="lineno"> 1149</span>            <span class="keywordflow">while</span> (array[k] &gt;= 100)</div>
+<div class="line"><span class="lineno"> 1150</span>            {</div>
+<div class="line"><span class="lineno"> 1151</span>                array[k] -= 100;</div>
+<div class="line"><span class="lineno"> 1152</span>                array[k + 1]++;</div>
+<div class="line"><span class="lineno"> 1153</span>            }</div>
+<div class="line"><span class="lineno"> 1154</span>        }</div>
+<div class="line"><span class="lineno"> 1155</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 40; l++)</div>
+<div class="line"><span class="lineno"> 1156</span>        {</div>
+<div class="line"><span class="lineno"> 1157</span>            <span class="keywordflow">if</span> (array2[l] &lt; 0 || cInv[l].type != 0)</div>
+<div class="line"><span class="lineno"> 1158</span>            {</div>
+<div class="line"><span class="lineno"> 1159</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1160</span>            }</div>
+<div class="line"><span class="lineno"> 1161</span>            <span class="keywordtype">int</span> num4 = l;</div>
+<div class="line"><span class="lineno"> 1162</span>            <span class="keywordtype">int</span> num5 = array2[l];</div>
+<div class="line"><span class="lineno"> 1163</span>            <span class="keywordflow">if</span> (array[num5] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1164</span>            {</div>
+<div class="line"><span class="lineno"> 1165</span>                cInv[num4].SetDefaults(71 + num5);</div>
+<div class="line"><span class="lineno"> 1166</span>                cInv[num4].stack = array[num5];</div>
+<div class="line"><span class="lineno"> 1167</span>                <span class="keywordflow">if</span> (cInv[num4].stack &gt; cInv[num4].maxStack)</div>
+<div class="line"><span class="lineno"> 1168</span>                {</div>
+<div class="line"><span class="lineno"> 1169</span>                    cInv[num4].stack = cInv[num4].maxStack;</div>
+<div class="line"><span class="lineno"> 1170</span>                }</div>
+<div class="line"><span class="lineno"> 1171</span>                array[num5] -= cInv[num4].stack;</div>
+<div class="line"><span class="lineno"> 1172</span>                array2[l] = -1;</div>
+<div class="line"><span class="lineno"> 1173</span>            }</div>
+<div class="line"><span class="lineno"> 1174</span>            <span class="keywordflow">if</span> (Main.netMode == 1 &amp;&amp; Main.player[Main.myPlayer].chest &gt; -1)</div>
+<div class="line"><span class="lineno"> 1175</span>            {</div>
+<div class="line"><span class="lineno"> 1176</span>                NetMessage.SendData(32, -1, -1, <span class="keyword">null</span>, Main.player[Main.myPlayer].chest, num4);</div>
+<div class="line"><span class="lineno"> 1177</span>            }</div>
+<div class="line"><span class="lineno"> 1178</span>            list2.Remove(num4);</div>
+<div class="line"><span class="lineno"> 1179</span>        }</div>
+<div class="line"><span class="lineno"> 1180</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; 40; m++)</div>
+<div class="line"><span class="lineno"> 1181</span>        {</div>
+<div class="line"><span class="lineno"> 1182</span>            <span class="keywordflow">if</span> (array2[m] &lt; 0 || cInv[m].type != 0)</div>
+<div class="line"><span class="lineno"> 1183</span>            {</div>
+<div class="line"><span class="lineno"> 1184</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1185</span>            }</div>
+<div class="line"><span class="lineno"> 1186</span>            <span class="keywordtype">int</span> num6 = m;</div>
+<div class="line"><span class="lineno"> 1187</span>            <span class="keywordtype">int</span> num7 = 3;</div>
+<div class="line"><span class="lineno"> 1188</span>            <span class="keywordflow">while</span> (num7 &gt;= 0)</div>
+<div class="line"><span class="lineno"> 1189</span>            {</div>
+<div class="line"><span class="lineno"> 1190</span>                <span class="keywordflow">if</span> (array[num7] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1191</span>                {</div>
+<div class="line"><span class="lineno"> 1192</span>                    cInv[num6].SetDefaults(71 + num7);</div>
+<div class="line"><span class="lineno"> 1193</span>                    cInv[num6].stack = array[num7];</div>
+<div class="line"><span class="lineno"> 1194</span>                    <span class="keywordflow">if</span> (cInv[num6].stack &gt; cInv[num6].maxStack)</div>
+<div class="line"><span class="lineno"> 1195</span>                    {</div>
+<div class="line"><span class="lineno"> 1196</span>                        cInv[num6].stack = cInv[num6].maxStack;</div>
+<div class="line"><span class="lineno"> 1197</span>                    }</div>
+<div class="line"><span class="lineno"> 1198</span>                    array[num7] -= cInv[num6].stack;</div>
+<div class="line"><span class="lineno"> 1199</span>                    array2[m] = -1;</div>
+<div class="line"><span class="lineno"> 1200</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1201</span>                }</div>
+<div class="line"><span class="lineno"> 1202</span>                <span class="keywordflow">if</span> (array[num7] == 0)</div>
+<div class="line"><span class="lineno"> 1203</span>                {</div>
+<div class="line"><span class="lineno"> 1204</span>                    num7--;</div>
+<div class="line"><span class="lineno"> 1205</span>                }</div>
+<div class="line"><span class="lineno"> 1206</span>            }</div>
+<div class="line"><span class="lineno"> 1207</span>            <span class="keywordflow">if</span> (Main.netMode == 1 &amp;&amp; Main.player[Main.myPlayer].chest &gt; -1)</div>
+<div class="line"><span class="lineno"> 1208</span>            {</div>
+<div class="line"><span class="lineno"> 1209</span>                NetMessage.SendData(32, -1, -1, <span class="keyword">null</span>, Main.player[Main.myPlayer].chest, num6);</div>
+<div class="line"><span class="lineno"> 1210</span>            }</div>
+<div class="line"><span class="lineno"> 1211</span>            list2.Remove(num6);</div>
+<div class="line"><span class="lineno"> 1212</span>        }</div>
+<div class="line"><span class="lineno"> 1213</span>        <span class="keywordflow">while</span> (list2.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 1214</span>        {</div>
+<div class="line"><span class="lineno"> 1215</span>            <span class="keywordtype">int</span> num8 = list2[0];</div>
+<div class="line"><span class="lineno"> 1216</span>            <span class="keywordtype">int</span> num9 = 3;</div>
+<div class="line"><span class="lineno"> 1217</span>            <span class="keywordflow">while</span> (num9 &gt;= 0)</div>
+<div class="line"><span class="lineno"> 1218</span>            {</div>
+<div class="line"><span class="lineno"> 1219</span>                <span class="keywordflow">if</span> (array[num9] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1220</span>                {</div>
+<div class="line"><span class="lineno"> 1221</span>                    cInv[num8].SetDefaults(71 + num9);</div>
+<div class="line"><span class="lineno"> 1222</span>                    cInv[num8].stack = array[num9];</div>
+<div class="line"><span class="lineno"> 1223</span>                    <span class="keywordflow">if</span> (cInv[num8].stack &gt; cInv[num8].maxStack)</div>
+<div class="line"><span class="lineno"> 1224</span>                    {</div>
+<div class="line"><span class="lineno"> 1225</span>                        cInv[num8].stack = cInv[num8].maxStack;</div>
+<div class="line"><span class="lineno"> 1226</span>                    }</div>
+<div class="line"><span class="lineno"> 1227</span>                    array[num9] -= cInv[num8].stack;</div>
+<div class="line"><span class="lineno"> 1228</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1229</span>                }</div>
+<div class="line"><span class="lineno"> 1230</span>                <span class="keywordflow">if</span> (array[num9] == 0)</div>
+<div class="line"><span class="lineno"> 1231</span>                {</div>
+<div class="line"><span class="lineno"> 1232</span>                    num9--;</div>
+<div class="line"><span class="lineno"> 1233</span>                }</div>
+<div class="line"><span class="lineno"> 1234</span>            }</div>
+<div class="line"><span class="lineno"> 1235</span>            <span class="keywordflow">if</span> (Main.netMode == 1 &amp;&amp; Main.player[Main.myPlayer].chest &gt; -1)</div>
+<div class="line"><span class="lineno"> 1236</span>            {</div>
+<div class="line"><span class="lineno"> 1237</span>                NetMessage.SendData(32, -1, -1, <span class="keyword">null</span>, Main.player[Main.myPlayer].chest, list2[0]);</div>
+<div class="line"><span class="lineno"> 1238</span>            }</div>
+<div class="line"><span class="lineno"> 1239</span>            list2.RemoveAt(0);</div>
+<div class="line"><span class="lineno"> 1240</span>        }</div>
+<div class="line"><span class="lineno"> 1241</span>        <span class="keywordtype">int</span> num10 = 3;</div>
+<div class="line"><span class="lineno"> 1242</span>        <span class="keywordflow">while</span> (num10 &gt;= 0 &amp;&amp; list.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 1243</span>        {</div>
+<div class="line"><span class="lineno"> 1244</span>            <span class="keywordtype">int</span> num11 = list[0];</div>
+<div class="line"><span class="lineno"> 1245</span>            <span class="keywordflow">if</span> (array[num10] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1246</span>            {</div>
+<div class="line"><span class="lineno"> 1247</span>                pInv[num11].SetDefaults(71 + num10);</div>
+<div class="line"><span class="lineno"> 1248</span>                pInv[num11].stack = array[num10];</div>
+<div class="line"><span class="lineno"> 1249</span>                <span class="keywordflow">if</span> (pInv[num11].stack &gt; pInv[num11].maxStack)</div>
+<div class="line"><span class="lineno"> 1250</span>                {</div>
+<div class="line"><span class="lineno"> 1251</span>                    pInv[num11].stack = pInv[num11].maxStack;</div>
+<div class="line"><span class="lineno"> 1252</span>                }</div>
+<div class="line"><span class="lineno"> 1253</span>                array[num10] -= pInv[num11].stack;</div>
+<div class="line"><span class="lineno"> 1254</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1255</span>                list.RemoveAt(0);</div>
+<div class="line"><span class="lineno"> 1256</span>            }</div>
+<div class="line"><span class="lineno"> 1257</span>            <span class="keywordflow">if</span> (array[num10] == 0)</div>
+<div class="line"><span class="lineno"> 1258</span>            {</div>
+<div class="line"><span class="lineno"> 1259</span>                num10--;</div>
+<div class="line"><span class="lineno"> 1260</span>            }</div>
+<div class="line"><span class="lineno"> 1261</span>        }</div>
+<div class="line"><span class="lineno"> 1262</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 1263</span>        {</div>
+<div class="line"><span class="lineno"> 1264</span>            <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(7);</div>
+<div class="line"><span class="lineno"> 1265</span>        }</div>
+<div class="line"><span class="lineno"> 1266</span>        <span class="keywordtype">bool</span> overFlowing2;</div>
+<div class="line"><span class="lineno"> 1267</span>        <span class="keywordtype">long</span> num12 = Utils.CoinsCount(out overFlowing2, pInv);</div>
+<div class="line"><span class="lineno"> 1268</span>        <span class="keywordflow">if</span> (overFlowing || overFlowing2)</div>
+<div class="line"><span class="lineno"> 1269</span>        {</div>
+<div class="line"><span class="lineno"> 1270</span>            <span class="keywordflow">return</span> 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno"> 1271</span>        }</div>
+<div class="line"><span class="lineno"> 1272</span>        <span class="keywordflow">return</span> num - num12;</div>
+<div class="line"><span class="lineno"> 1273</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">ReLogic.Peripherals.RGB.Logitech.KeyName.L</a></div><div class="ttdeci">@ L</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_add188169a6ab06c901b905adbd214beb.html#add188169a6ab06c901b905adbd214beb">Terraria.Utils.CoinsCount()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a43f51e33be93f066916198e4804b5008.html#a43f51e33be93f066916198e4804b5008">Terraria.Item.maxStack</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/dd3/classTerraria_1_1UI_1_1ChestUI_a207f17ddb705954f4a4c4cb1fa1a6ce8.html#a207f17ddb705954f4a4c4cb1fa1a6ce8">Terraria.UI.ChestUI.DepositAll()</a>, and <a class="el" href="../../d8/dd3/classTerraria_1_1UI_1_1ChestUI_a9ab8b33bac5d69a0ccf0add16c75e134.html#a9ab8b33bac5d69a0ccf0add16c75e134">Terraria.UI.ChestUI.QuickStack()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

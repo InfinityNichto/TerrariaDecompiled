@@ -117,6 +117,120 @@ $(function(){initNavTree('db/dec/classTerraria_1_1UI_1_1ItemSorting_a7b88dc7c388
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1310</span>    {</div>
+<div class="line"><span class="lineno"> 1311</span>        Item[] inventory = Main.LocalPlayer.inventory;</div>
+<div class="line"><span class="lineno"> 1312</span>        <span class="keywordtype">bool</span> overFlowing;</div>
+<div class="line"><span class="lineno"> 1313</span>        <span class="keywordtype">long</span> count = Utils.CoinsCount(out overFlowing, inventory, 58);</div>
+<div class="line"><span class="lineno"> 1314</span>        <span class="keywordtype">int</span> commonMaxStack = Item.CommonMaxStack;</div>
+<div class="line"><span class="lineno"> 1315</span>        <span class="keywordflow">if</span> (overFlowing)</div>
+<div class="line"><span class="lineno"> 1316</span>        {</div>
+<div class="line"><span class="lineno"> 1317</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1318</span>        }</div>
+<div class="line"><span class="lineno"> 1319</span>        <span class="keywordtype">int</span>[] array = Utils.CoinsSplit(count);</div>
+<div class="line"><span class="lineno"> 1320</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 1321</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><span class="lineno"> 1322</span>        {</div>
+<div class="line"><span class="lineno"> 1323</span>            <span class="keywordtype">int</span> num2 = array[i];</div>
+<div class="line"><span class="lineno"> 1324</span>            <span class="keywordflow">while</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno"> 1325</span>            {</div>
+<div class="line"><span class="lineno"> 1326</span>                num2 -= 99;</div>
+<div class="line"><span class="lineno"> 1327</span>                num++;</div>
+<div class="line"><span class="lineno"> 1328</span>            }</div>
+<div class="line"><span class="lineno"> 1329</span>        }</div>
+<div class="line"><span class="lineno"> 1330</span>        <span class="keywordtype">int</span> num3 = array[3];</div>
+<div class="line"><span class="lineno"> 1331</span>        <span class="keywordflow">while</span> (num3 &gt; commonMaxStack)</div>
+<div class="line"><span class="lineno"> 1332</span>        {</div>
+<div class="line"><span class="lineno"> 1333</span>            num3 -= commonMaxStack;</div>
+<div class="line"><span class="lineno"> 1334</span>            num++;</div>
+<div class="line"><span class="lineno"> 1335</span>        }</div>
+<div class="line"><span class="lineno"> 1336</span>        <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno"> 1337</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 58; j++)</div>
+<div class="line"><span class="lineno"> 1338</span>        {</div>
+<div class="line"><span class="lineno"> 1339</span>            <span class="keywordflow">if</span> (inventory[j].type &gt;= 71 &amp;&amp; inventory[j].type &lt;= 74 &amp;&amp; inventory[j].stack &gt; 0)</div>
+<div class="line"><span class="lineno"> 1340</span>            {</div>
+<div class="line"><span class="lineno"> 1341</span>                num4++;</div>
+<div class="line"><span class="lineno"> 1342</span>            }</div>
+<div class="line"><span class="lineno"> 1343</span>        }</div>
+<div class="line"><span class="lineno"> 1344</span>        <span class="keywordflow">if</span> (num4 &lt; num)</div>
+<div class="line"><span class="lineno"> 1345</span>        {</div>
+<div class="line"><span class="lineno"> 1346</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1347</span>        }</div>
+<div class="line"><span class="lineno"> 1348</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 58; k++)</div>
+<div class="line"><span class="lineno"> 1349</span>        {</div>
+<div class="line"><span class="lineno"> 1350</span>            <span class="keywordflow">if</span> (inventory[k].type &gt;= 71 &amp;&amp; inventory[k].type &lt;= 74 &amp;&amp; inventory[k].stack &gt; 0)</div>
+<div class="line"><span class="lineno"> 1351</span>            {</div>
+<div class="line"><span class="lineno"> 1352</span>                inventory[k].TurnToAir();</div>
+<div class="line"><span class="lineno"> 1353</span>            }</div>
+<div class="line"><span class="lineno"> 1354</span>        }</div>
+<div class="line"><span class="lineno"> 1355</span>        <span class="keywordtype">int</span> num5 = 100;</div>
+<div class="line"><span class="lineno"> 1356</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno"> 1357</span>        {</div>
+<div class="line"><span class="lineno"> 1358</span>            <span class="keywordtype">int</span> num6 = -1;</div>
+<div class="line"><span class="lineno"> 1359</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num7 = 3; num7 &gt;= 0; num7--)</div>
+<div class="line"><span class="lineno"> 1360</span>            {</div>
+<div class="line"><span class="lineno"> 1361</span>                <span class="keywordflow">if</span> (array[num7] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1362</span>                {</div>
+<div class="line"><span class="lineno"> 1363</span>                    num6 = num7;</div>
+<div class="line"><span class="lineno"> 1364</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1365</span>                }</div>
+<div class="line"><span class="lineno"> 1366</span>            }</div>
+<div class="line"><span class="lineno"> 1367</span>            <span class="keywordflow">if</span> (num6 == -1)</div>
+<div class="line"><span class="lineno"> 1368</span>            {</div>
+<div class="line"><span class="lineno"> 1369</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1370</span>            }</div>
+<div class="line"><span class="lineno"> 1371</span>            <span class="keywordtype">int</span> num8 = array[num6];</div>
+<div class="line"><span class="lineno"> 1372</span>            <span class="keywordflow">if</span> (num6 == 3 &amp;&amp; num8 &gt; commonMaxStack)</div>
+<div class="line"><span class="lineno"> 1373</span>            {</div>
+<div class="line"><span class="lineno"> 1374</span>                num8 = commonMaxStack;</div>
+<div class="line"><span class="lineno"> 1375</span>            }</div>
+<div class="line"><span class="lineno"> 1376</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1377</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1378</span>            {</div>
+<div class="line"><span class="lineno"> 1379</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 50; l &lt; 54; l++)</div>
+<div class="line"><span class="lineno"> 1380</span>                {</div>
+<div class="line"><span class="lineno"> 1381</span>                    <span class="keywordflow">if</span> (inventory[l].IsAir)</div>
+<div class="line"><span class="lineno"> 1382</span>                    {</div>
+<div class="line"><span class="lineno"> 1383</span>                        inventory[l].SetDefaults(71 + num6);</div>
+<div class="line"><span class="lineno"> 1384</span>                        inventory[l].stack = num8;</div>
+<div class="line"><span class="lineno"> 1385</span>                        array[num6] -= num8;</div>
+<div class="line"><span class="lineno"> 1386</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1387</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1388</span>                    }</div>
+<div class="line"><span class="lineno"> 1389</span>                }</div>
+<div class="line"><span class="lineno"> 1390</span>            }</div>
+<div class="line"><span class="lineno"> 1391</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1392</span>            {</div>
+<div class="line"><span class="lineno"> 1393</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; 50; m++)</div>
+<div class="line"><span class="lineno"> 1394</span>                {</div>
+<div class="line"><span class="lineno"> 1395</span>                    <span class="keywordflow">if</span> (inventory[m].IsAir)</div>
+<div class="line"><span class="lineno"> 1396</span>                    {</div>
+<div class="line"><span class="lineno"> 1397</span>                        inventory[m].SetDefaults(71 + num6);</div>
+<div class="line"><span class="lineno"> 1398</span>                        inventory[m].stack = num8;</div>
+<div class="line"><span class="lineno"> 1399</span>                        array[num6] -= num8;</div>
+<div class="line"><span class="lineno"> 1400</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1401</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1402</span>                    }</div>
+<div class="line"><span class="lineno"> 1403</span>                }</div>
+<div class="line"><span class="lineno"> 1404</span>            }</div>
+<div class="line"><span class="lineno"> 1405</span>            num5--;</div>
+<div class="line"><span class="lineno"> 1406</span>            <span class="keywordflow">if</span> (num5 &gt; 0)</div>
+<div class="line"><span class="lineno"> 1407</span>            {</div>
+<div class="line"><span class="lineno"> 1408</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1409</span>            }</div>
+<div class="line"><span class="lineno"> 1410</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num9 = 3; num9 &gt;= 0; num9--)</div>
+<div class="line"><span class="lineno"> 1411</span>            {</div>
+<div class="line"><span class="lineno"> 1412</span>                <span class="keywordflow">if</span> (array[num9] &gt; 0)</div>
+<div class="line"><span class="lineno"> 1413</span>                {</div>
+<div class="line"><span class="lineno"> 1414</span>                    Main.LocalPlayer.QuickSpawnItem(Main.LocalPlayer.GetItemSource_Misc(7), 71 + num9, array[num9]);</div>
+<div class="line"><span class="lineno"> 1415</span>                }</div>
+<div class="line"><span class="lineno"> 1416</span>            }</div>
+<div class="line"><span class="lineno"> 1417</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1418</span>        }</div>
+<div class="line"><span class="lineno"> 1419</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_add188169a6ab06c901b905adbd214beb.html#add188169a6ab06c901b905adbd214beb">Terraria.Utils.CoinsCount()</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a1a66a191ff5d5e45d181c864ad404acb.html#a1a66a191ff5d5e45d181c864ad404acb">Terraria.Utils.CoinsSplit()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6f1b7a7aad8a21c284a3ff2a0f9ca092.html#a6f1b7a7aad8a21c284a3ff2a0f9ca092">Terraria.Item.CommonMaxStack</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa8b7f184ff012e2abdff285e168caf1a.html#aa8b7f184ff012e2abdff285e168caf1a">Terraria.Player.GetItemSource_Misc()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae9af3d8626cfbb1c8bf7568b6810f9bc.html#ae9af3d8626cfbb1c8bf7568b6810f9bc">Terraria.Main.LocalPlayer</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_acd6e1f09cf5e16a1da9f098cfde7f119.html#acd6e1f09cf5e16a1da9f098cfde7f119">Terraria.Player.QuickSpawnItem()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_ace3f30b7386560df4055302fd96292f1.html#ace3f30b7386560df4055302fd96292f1">Terraria.Item.TurnToAir()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_ab4e6ef00314a565adb86bd65b1368bc5.html#ab4e6ef00314a565adb86bd65b1368bc5">Terraria.UI.ItemSorting.SortInventory()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

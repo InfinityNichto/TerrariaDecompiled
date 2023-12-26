@@ -126,6 +126,515 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_ae7feeadf2951bb70f782
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 5156</span>    {</div>
+<div class="line"><span class="lineno"> 5157</span>        <span class="comment">//IL_0008: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno"> 5158</span>        <span class="comment">//IL_000d: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno"> 5159</span>        <span class="keywordtype">int</span> num = y2;</div>
+<div class="line"><span class="lineno"> 5160</span>        <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html">Vector2D</a>.<a class="code hl_function" href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D_aa2f097108143e0677506bb0c06d5dfba.html#aa2f097108143e0677506bb0c06d5dfba">Distance</a>(<span class="keyword">new</span> <a class="code hl_struct" href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html">Vector2D</a>((<span class="keywordtype">double</span>)x2, (<span class="keywordtype">double</span>)y2), <a class="code hl_class" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">GenVars</a>.<a class="code hl_variable" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a8e906a97fbeff02607c7b8b49b32bd6f.html#a8e906a97fbeff02607c7b8b49b32bd6f">shimmerPosition</a>) &lt; 100.0)</div>
+<div class="line"><span class="lineno"> 5161</span>        {</div>
+<div class="line"><span class="lineno"> 5162</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5163</span>        }</div>
+<div class="line"><span class="lineno"> 5164</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5165</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5166</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5167</span>        {</div>
+<div class="line"><span class="lineno"> 5168</span>            Main.tileSolid[138] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5169</span>        }</div>
+<div class="line"><span class="lineno"> 5170</span>        <span class="keywordflow">while</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(x2, num))</div>
+<div class="line"><span class="lineno"> 5171</span>        {</div>
+<div class="line"><span class="lineno"> 5172</span>            num++;</div>
+<div class="line"><span class="lineno"> 5173</span>            <span class="keywordflow">if</span> (num &gt; Main.maxTilesY - 10)</div>
+<div class="line"><span class="lineno"> 5174</span>            {</div>
+<div class="line"><span class="lineno"> 5175</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5176</span>            }</div>
+<div class="line"><span class="lineno"> 5177</span>            <span class="keywordflow">if</span> (num &gt;= Main.maxTilesY - 300)</div>
+<div class="line"><span class="lineno"> 5178</span>            {</div>
+<div class="line"><span class="lineno"> 5179</span>                flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5180</span>            }</div>
+<div class="line"><span class="lineno"> 5181</span>        }</div>
+<div class="line"><span class="lineno"> 5182</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5183</span>        {</div>
+<div class="line"><span class="lineno"> 5184</span>            Main.tileSolid[138] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5185</span>        }</div>
+<div class="line"><span class="lineno"> 5186</span>        num--;</div>
+<div class="line"><span class="lineno"> 5187</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a> &amp;&amp; <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(x2, num, 70, 20))</div>
+<div class="line"><span class="lineno"> 5188</span>        {</div>
+<div class="line"><span class="lineno"> 5189</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5190</span>        }</div>
+<div class="line"><span class="lineno"> 5191</span>        <span class="keywordflow">if</span> (Main.tile[x2, num].wall == 87)</div>
+<div class="line"><span class="lineno"> 5192</span>        {</div>
+<div class="line"><span class="lineno"> 5193</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5194</span>        }</div>
+<div class="line"><span class="lineno"> 5195</span>        <span class="keywordflow">if</span> (Main.tile[x2, num].liquid &gt; 0 &amp;&amp; Main.tile[x2, num].lava())</div>
+<div class="line"><span class="lineno"> 5196</span>        {</div>
+<div class="line"><span class="lineno"> 5197</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5198</span>        }</div>
+<div class="line"><span class="lineno"> 5199</span>        <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno"> 5200</span>        {</div>
+<div class="line"><span class="lineno"> 5201</span>            <span class="keywordflow">if</span> (type == -1 &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(20) == 0)</div>
+<div class="line"><span class="lineno"> 5202</span>            {</div>
+<div class="line"><span class="lineno"> 5203</span>                type = 2;</div>
+<div class="line"><span class="lineno"> 5204</span>            }</div>
+<div class="line"><span class="lineno"> 5205</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == -1 &amp;&amp; (<span class="keywordtype">double</span>)num &lt; Main.rockLayer - 30.0 &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(3) != 0)</div>
+<div class="line"><span class="lineno"> 5206</span>            {</div>
+<div class="line"><span class="lineno"> 5207</span>                type = 3;</div>
+<div class="line"><span class="lineno"> 5208</span>            }</div>
+<div class="line"><span class="lineno"> 5209</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == -1)</div>
+<div class="line"><span class="lineno"> 5210</span>            {</div>
+<div class="line"><span class="lineno"> 5211</span>                type = <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2);</div>
+<div class="line"><span class="lineno"> 5212</span>            }</div>
+<div class="line"><span class="lineno"> 5213</span>        }</div>
+<div class="line"><span class="lineno"> 5214</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == -1 &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(20) == 0)</div>
+<div class="line"><span class="lineno"> 5215</span>        {</div>
+<div class="line"><span class="lineno"> 5216</span>            type = 2;</div>
+<div class="line"><span class="lineno"> 5217</span>        }</div>
+<div class="line"><span class="lineno"> 5218</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == -1 &amp;&amp; num &gt; <a class="code hl_class" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">GenVars</a>.<a class="code hl_variable" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a71c8b0570b590c7c02064ddf487184aa.html#a71c8b0570b590c7c02064ddf487184aa">lavaLine</a> + 30 &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(6) != 0)</div>
+<div class="line"><span class="lineno"> 5219</span>        {</div>
+<div class="line"><span class="lineno"> 5220</span>            type = 3;</div>
+<div class="line"><span class="lineno"> 5221</span>        }</div>
+<div class="line"><span class="lineno"> 5222</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == -1)</div>
+<div class="line"><span class="lineno"> 5223</span>        {</div>
+<div class="line"><span class="lineno"> 5224</span>            type = <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2);</div>
+<div class="line"><span class="lineno"> 5225</span>        }</div>
+<div class="line"><span class="lineno"> 5226</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(x2, num, 3))</div>
+<div class="line"><span class="lineno"> 5227</span>        {</div>
+<div class="line"><span class="lineno"> 5228</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5229</span>        }</div>
+<div class="line"><span class="lineno"> 5230</span>        <span class="keywordflow">if</span> (flag &amp;&amp; type != 3)</div>
+<div class="line"><span class="lineno"> 5231</span>        {</div>
+<div class="line"><span class="lineno"> 5232</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5233</span>        }</div>
+<div class="line"><span class="lineno"> 5234</span>        <span class="keywordflow">if</span> (flag2 &amp;&amp; type != 3)</div>
+<div class="line"><span class="lineno"> 5235</span>        {</div>
+<div class="line"><span class="lineno"> 5236</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5237</span>        }</div>
+<div class="line"><span class="lineno"> 5238</span>        <span class="keywordflow">if</span> (Main.tile[x2, num].nactive() || Main.tile[x2 - 1, num].nactive() || Main.tile[x2 + 1, num].nactive() || Main.tile[x2, num - 1].nactive() || Main.tile[x2 - 1, num - 1].nactive() || Main.tile[x2 + 1, num - 1].nactive() || Main.tile[x2, num - 2].nactive() || Main.tile[x2 - 1, num - 2].nactive() || Main.tile[x2 + 1, num - 2].nactive())</div>
+<div class="line"><span class="lineno"> 5239</span>        {</div>
+<div class="line"><span class="lineno"> 5240</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5241</span>        }</div>
+<div class="line"><span class="lineno"> 5242</span>        <span class="keywordflow">if</span> (Main.tile[x2, num + 1].type == 48)</div>
+<div class="line"><span class="lineno"> 5243</span>        {</div>
+<div class="line"><span class="lineno"> 5244</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5245</span>        }</div>
+<div class="line"><span class="lineno"> 5246</span>        <span class="keywordflow">if</span> (Main.tile[x2, num + 1].type == 232)</div>
+<div class="line"><span class="lineno"> 5247</span>        {</div>
+<div class="line"><span class="lineno"> 5248</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5249</span>        }</div>
+<div class="line"><span class="lineno"> 5250</span>        <span class="keywordflow">if</span> (type == 1)</div>
+<div class="line"><span class="lineno"> 5251</span>        {</div>
+<div class="line"><span class="lineno"> 5252</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x2 - 3; i &lt;= x2 + 3; i++)</div>
+<div class="line"><span class="lineno"> 5253</span>            {</div>
+<div class="line"><span class="lineno"> 5254</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num - 3; j &lt;= num + 3; j++)</div>
+<div class="line"><span class="lineno"> 5255</span>                {</div>
+<div class="line"><span class="lineno"> 5256</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].type == 147 || Main.tile[i, j].type == 161)</div>
+<div class="line"><span class="lineno"> 5257</span>                    {</div>
+<div class="line"><span class="lineno"> 5258</span>                        type = 0;</div>
+<div class="line"><span class="lineno"> 5259</span>                    }</div>
+<div class="line"><span class="lineno"> 5260</span>                }</div>
+<div class="line"><span class="lineno"> 5261</span>            }</div>
+<div class="line"><span class="lineno"> 5262</span>        }</div>
+<div class="line"><span class="lineno"> 5263</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5264</span>        {</div>
+<div class="line"><span class="lineno"> 5265</span>            Main.tileSolid[138] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5266</span>        }</div>
+<div class="line"><span class="lineno"> 5267</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno"> 5268</span>        {</div>
+<div class="line"><span class="lineno"> 5269</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 5270</span>        {</div>
+<div class="line"><span class="lineno"> 5271</span>            <span class="keywordtype">int</span> num20 = x2;</div>
+<div class="line"><span class="lineno"> 5272</span>            <span class="keywordtype">int</span> num21 = num;</div>
+<div class="line"><span class="lineno"> 5273</span>            num21 -= <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(3);</div>
+<div class="line"><span class="lineno"> 5274</span>            <span class="keywordflow">while</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num20, num21) &amp;&amp; !Main.tileCracked[Main.tile[num20, num21].type])</div>
+<div class="line"><span class="lineno"> 5275</span>            {</div>
+<div class="line"><span class="lineno"> 5276</span>                num20--;</div>
+<div class="line"><span class="lineno"> 5277</span>                <span class="keywordflow">if</span> (num20 &lt; 0)</div>
+<div class="line"><span class="lineno"> 5278</span>                {</div>
+<div class="line"><span class="lineno"> 5279</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5280</span>                }</div>
+<div class="line"><span class="lineno"> 5281</span>            }</div>
+<div class="line"><span class="lineno"> 5282</span>            <span class="keywordtype">int</span> num22 = num20;</div>
+<div class="line"><span class="lineno"> 5283</span>            num20 = x2;</div>
+<div class="line"><span class="lineno"> 5284</span>            <span class="keywordflow">while</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num20, num21) &amp;&amp; !Main.tileCracked[Main.tile[num20, num21].type])</div>
+<div class="line"><span class="lineno"> 5285</span>            {</div>
+<div class="line"><span class="lineno"> 5286</span>                num20++;</div>
+<div class="line"><span class="lineno"> 5287</span>                <span class="keywordflow">if</span> (num20 &gt; Main.maxTilesX)</div>
+<div class="line"><span class="lineno"> 5288</span>                {</div>
+<div class="line"><span class="lineno"> 5289</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5290</span>                }</div>
+<div class="line"><span class="lineno"> 5291</span>            }</div>
+<div class="line"><span class="lineno"> 5292</span>            <span class="keywordtype">int</span> num23 = num20;</div>
+<div class="line"><span class="lineno"> 5293</span>            <span class="keywordtype">int</span> num24 = x2 - num22;</div>
+<div class="line"><span class="lineno"> 5294</span>            <span class="keywordtype">int</span> num25 = num23 - x2;</div>
+<div class="line"><span class="lineno"> 5295</span>            <span class="keywordtype">bool</span> flag5 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5296</span>            <span class="keywordtype">bool</span> flag6 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5297</span>            <span class="keywordflow">if</span> (num24 &gt; 5 &amp;&amp; num24 &lt; 50)</div>
+<div class="line"><span class="lineno"> 5298</span>            {</div>
+<div class="line"><span class="lineno"> 5299</span>                flag5 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5300</span>            }</div>
+<div class="line"><span class="lineno"> 5301</span>            <span class="keywordflow">if</span> (num25 &gt; 5 &amp;&amp; num25 &lt; 50)</div>
+<div class="line"><span class="lineno"> 5302</span>            {</div>
+<div class="line"><span class="lineno"> 5303</span>                flag6 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5304</span>            }</div>
+<div class="line"><span class="lineno"> 5305</span>            <span class="keywordflow">if</span> (flag5 &amp;&amp; !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num22, num21 + 1))</div>
+<div class="line"><span class="lineno"> 5306</span>            {</div>
+<div class="line"><span class="lineno"> 5307</span>                flag5 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5308</span>            }</div>
+<div class="line"><span class="lineno"> 5309</span>            <span class="keywordflow">if</span> (flag6 &amp;&amp; !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num23, num21 + 1))</div>
+<div class="line"><span class="lineno"> 5310</span>            {</div>
+<div class="line"><span class="lineno"> 5311</span>                flag6 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5312</span>            }</div>
+<div class="line"><span class="lineno"> 5313</span>            <span class="keywordflow">if</span> (flag5 &amp;&amp; (Main.tile[num22, num21].type == 10 || Main.tile[num22, num21].type == 48 || Main.tile[num22, num21 + 1].type == 10 || Main.tile[num22, num21 + 1].type == 48))</div>
+<div class="line"><span class="lineno"> 5314</span>            {</div>
+<div class="line"><span class="lineno"> 5315</span>                flag5 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5316</span>            }</div>
+<div class="line"><span class="lineno"> 5317</span>            <span class="keywordflow">if</span> (flag6 &amp;&amp; (Main.tile[num23, num21].type == 10 || Main.tile[num23, num21].type == 48 || Main.tile[num23, num21 + 1].type == 10 || Main.tile[num23, num21 + 1].type == 48))</div>
+<div class="line"><span class="lineno"> 5318</span>            {</div>
+<div class="line"><span class="lineno"> 5319</span>                flag6 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5320</span>            }</div>
+<div class="line"><span class="lineno"> 5321</span>            <span class="keywordtype">int</span> num26 = 0;</div>
+<div class="line"><span class="lineno"> 5322</span>            <span class="keywordflow">if</span> (flag5 &amp;&amp; flag6)</div>
+<div class="line"><span class="lineno"> 5323</span>            {</div>
+<div class="line"><span class="lineno"> 5324</span>                num26 = 1;</div>
+<div class="line"><span class="lineno"> 5325</span>                num20 = num22;</div>
+<div class="line"><span class="lineno"> 5326</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2) == 0)</div>
+<div class="line"><span class="lineno"> 5327</span>                {</div>
+<div class="line"><span class="lineno"> 5328</span>                    num20 = num23;</div>
+<div class="line"><span class="lineno"> 5329</span>                    num26 = -1;</div>
+<div class="line"><span class="lineno"> 5330</span>                }</div>
+<div class="line"><span class="lineno"> 5331</span>            }</div>
+<div class="line"><span class="lineno"> 5332</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag6)</div>
+<div class="line"><span class="lineno"> 5333</span>            {</div>
+<div class="line"><span class="lineno"> 5334</span>                num20 = num23;</div>
+<div class="line"><span class="lineno"> 5335</span>                num26 = -1;</div>
+<div class="line"><span class="lineno"> 5336</span>            }</div>
+<div class="line"><span class="lineno"> 5337</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5338</span>            {</div>
+<div class="line"><span class="lineno"> 5339</span>                <span class="keywordflow">if</span> (!flag5)</div>
+<div class="line"><span class="lineno"> 5340</span>                {</div>
+<div class="line"><span class="lineno"> 5341</span>                    <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5342</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5343</span>                }</div>
+<div class="line"><span class="lineno"> 5344</span>                num20 = num22;</div>
+<div class="line"><span class="lineno"> 5345</span>                num26 = 1;</div>
+<div class="line"><span class="lineno"> 5346</span>            }</div>
+<div class="line"><span class="lineno"> 5347</span>            <span class="keywordflow">if</span> (Main.tile[num20, num21].type == 190)</div>
+<div class="line"><span class="lineno"> 5348</span>            {</div>
+<div class="line"><span class="lineno"> 5349</span>                <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5350</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5351</span>            }</div>
+<div class="line"><span class="lineno"> 5352</span>            <span class="keywordflow">if</span> (Main.tile[x2, num].wall &gt; 0)</div>
+<div class="line"><span class="lineno"> 5353</span>            {</div>
+<div class="line"><span class="lineno"> 5354</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(x2, num, 135, mute: true, forced: true, -1, 2);</div>
+<div class="line"><span class="lineno"> 5355</span>            }</div>
+<div class="line"><span class="lineno"> 5356</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5357</span>            {</div>
+<div class="line"><span class="lineno"> 5358</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(x2, num, 135, mute: true, forced: true, -1, <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.Next(2, 4));</div>
+<div class="line"><span class="lineno"> 5359</span>            }</div>
+<div class="line"><span class="lineno"> 5360</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(num20, num21);</div>
+<div class="line"><span class="lineno"> 5361</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num20, num21, 137, mute: true, forced: true);</div>
+<div class="line"><span class="lineno"> 5362</span>            <span class="keywordflow">if</span> (num26 == 1)</div>
+<div class="line"><span class="lineno"> 5363</span>            {</div>
+<div class="line"><span class="lineno"> 5364</span>                Main.tile[num20, num21].frameX += 18;</div>
+<div class="line"><span class="lineno"> 5365</span>            }</div>
+<div class="line"><span class="lineno"> 5366</span>            <span class="keywordtype">int</span> num27 = x2;</div>
+<div class="line"><span class="lineno"> 5367</span>            <span class="keywordtype">int</span> num28 = num;</div>
+<div class="line"><span class="lineno"> 5368</span>            <span class="keywordflow">while</span> (num27 != num20 || num28 != num21)</div>
+<div class="line"><span class="lineno"> 5369</span>            {</div>
+<div class="line"><span class="lineno"> 5370</span>                Main.tile[num27, num28].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5371</span>                <span class="keywordflow">if</span> (num27 &gt; num20)</div>
+<div class="line"><span class="lineno"> 5372</span>                {</div>
+<div class="line"><span class="lineno"> 5373</span>                    num27--;</div>
+<div class="line"><span class="lineno"> 5374</span>                }</div>
+<div class="line"><span class="lineno"> 5375</span>                <span class="keywordflow">if</span> (num27 &lt; num20)</div>
+<div class="line"><span class="lineno"> 5376</span>                {</div>
+<div class="line"><span class="lineno"> 5377</span>                    num27++;</div>
+<div class="line"><span class="lineno"> 5378</span>                }</div>
+<div class="line"><span class="lineno"> 5379</span>                Main.tile[num27, num28].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5380</span>                <span class="keywordflow">if</span> (num28 &gt; num21)</div>
+<div class="line"><span class="lineno"> 5381</span>                {</div>
+<div class="line"><span class="lineno"> 5382</span>                    num28--;</div>
+<div class="line"><span class="lineno"> 5383</span>                }</div>
+<div class="line"><span class="lineno"> 5384</span>                <span class="keywordflow">if</span> (num28 &lt; num21)</div>
+<div class="line"><span class="lineno"> 5385</span>                {</div>
+<div class="line"><span class="lineno"> 5386</span>                    num28++;</div>
+<div class="line"><span class="lineno"> 5387</span>                }</div>
+<div class="line"><span class="lineno"> 5388</span>                Main.tile[num27, num28].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5389</span>            }</div>
+<div class="line"><span class="lineno"> 5390</span>            <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 1]++;</div>
+<div class="line"><span class="lineno"> 5391</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5392</span>        }</div>
+<div class="line"><span class="lineno"> 5393</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 5394</span>        {</div>
+<div class="line"><span class="lineno"> 5395</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5396</span>            {</div>
+<div class="line"><span class="lineno"> 5397</span>                Main.tileSolid[138] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5398</span>            }</div>
+<div class="line"><span class="lineno"> 5399</span>            <span class="keywordtype">int</span> num3 = x2;</div>
+<div class="line"><span class="lineno"> 5400</span>            <span class="keywordtype">int</span> num4 = num - 8;</div>
+<div class="line"><span class="lineno"> 5401</span>            num3 += <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-1, 2);</div>
+<div class="line"><span class="lineno"> 5402</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5403</span>            {</div>
+<div class="line"><span class="lineno"> 5404</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 138, 6))</div>
+<div class="line"><span class="lineno"> 5405</span>                {</div>
+<div class="line"><span class="lineno"> 5406</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5407</span>                }</div>
+<div class="line"><span class="lineno"> 5408</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 664, 6))</div>
+<div class="line"><span class="lineno"> 5409</span>                {</div>
+<div class="line"><span class="lineno"> 5410</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5411</span>                }</div>
+<div class="line"><span class="lineno"> 5412</span>            }</div>
+<div class="line"><span class="lineno"> 5413</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5414</span>            {</div>
+<div class="line"><span class="lineno"> 5415</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 138, 10))</div>
+<div class="line"><span class="lineno"> 5416</span>                {</div>
+<div class="line"><span class="lineno"> 5417</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5418</span>                }</div>
+<div class="line"><span class="lineno"> 5419</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 664, 10))</div>
+<div class="line"><span class="lineno"> 5420</span>                {</div>
+<div class="line"><span class="lineno"> 5421</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5422</span>                }</div>
+<div class="line"><span class="lineno"> 5423</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 665, 10))</div>
+<div class="line"><span class="lineno"> 5424</span>                {</div>
+<div class="line"><span class="lineno"> 5425</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5426</span>                }</div>
+<div class="line"><span class="lineno"> 5427</span>            }</div>
+<div class="line"><span class="lineno"> 5428</span>            <span class="keywordtype">bool</span> flag3 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5429</span>            <span class="keywordflow">while</span> (flag3)</div>
+<div class="line"><span class="lineno"> 5430</span>            {</div>
+<div class="line"><span class="lineno"> 5431</span>                <span class="keywordtype">bool</span> flag4 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5432</span>                <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno"> 5433</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = num3 - 2; m &lt;= num3 + 3; m++)</div>
+<div class="line"><span class="lineno"> 5434</span>                {</div>
+<div class="line"><span class="lineno"> 5435</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = num4; n &lt;= num4 + 3; n++)</div>
+<div class="line"><span class="lineno"> 5436</span>                    {</div>
+<div class="line"><span class="lineno"> 5437</span>                        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(m, n))</div>
+<div class="line"><span class="lineno"> 5438</span>                        {</div>
+<div class="line"><span class="lineno"> 5439</span>                            flag4 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5440</span>                        }</div>
+<div class="line"><span class="lineno"> 5441</span>                        <span class="keywordflow">if</span> (Main.tile[m, n].active())</div>
+<div class="line"><span class="lineno"> 5442</span>                        {</div>
+<div class="line"><span class="lineno"> 5443</span>                            <span class="keywordflow">if</span> (Main.tile[m, n].type == 226)</div>
+<div class="line"><span class="lineno"> 5444</span>                            {</div>
+<div class="line"><span class="lineno"> 5445</span>                                <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5446</span>                                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5447</span>                            }</div>
+<div class="line"><span class="lineno"> 5448</span>                            <span class="keywordflow">if</span> (Main.tile[m, n].type == 0 || Main.tile[m, n].type == 1 || Main.tile[m, n].type == 59)</div>
+<div class="line"><span class="lineno"> 5449</span>                            {</div>
+<div class="line"><span class="lineno"> 5450</span>                                num5++;</div>
+<div class="line"><span class="lineno"> 5451</span>                            }</div>
+<div class="line"><span class="lineno"> 5452</span>                        }</div>
+<div class="line"><span class="lineno"> 5453</span>                    }</div>
+<div class="line"><span class="lineno"> 5454</span>                }</div>
+<div class="line"><span class="lineno"> 5455</span>                num4--;</div>
+<div class="line"><span class="lineno"> 5456</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)num4 &lt; Main.worldSurface)</div>
+<div class="line"><span class="lineno"> 5457</span>                {</div>
+<div class="line"><span class="lineno"> 5458</span>                    <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5459</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5460</span>                }</div>
+<div class="line"><span class="lineno"> 5461</span>                <span class="keywordflow">if</span> (flag4 &amp;&amp; num5 &gt; 2)</div>
+<div class="line"><span class="lineno"> 5462</span>                {</div>
+<div class="line"><span class="lineno"> 5463</span>                    flag3 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5464</span>                }</div>
+<div class="line"><span class="lineno"> 5465</span>            }</div>
+<div class="line"><span class="lineno"> 5466</span>            <span class="keywordflow">if</span> (num - num4 &lt;= 5 || num - num4 &gt;= 40)</div>
+<div class="line"><span class="lineno"> 5467</span>            {</div>
+<div class="line"><span class="lineno"> 5468</span>                <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5469</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5470</span>            }</div>
+<div class="line"><span class="lineno"> 5471</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num6 = num3; num6 &lt;= num3 + 1; num6++)</div>
+<div class="line"><span class="lineno"> 5472</span>            {</div>
+<div class="line"><span class="lineno"> 5473</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num7 = num4; num7 &lt;= num; num7++)</div>
+<div class="line"><span class="lineno"> 5474</span>                {</div>
+<div class="line"><span class="lineno"> 5475</span>                    <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(num6, num7);</div>
+<div class="line"><span class="lineno"> 5476</span>                }</div>
+<div class="line"><span class="lineno"> 5477</span>            }</div>
+<div class="line"><span class="lineno"> 5478</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num8 = num3 - 2; num8 &lt;= num3 + 3; num8++)</div>
+<div class="line"><span class="lineno"> 5479</span>            {</div>
+<div class="line"><span class="lineno"> 5480</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num9 = num4 - 2; num9 &lt;= num4 + 3; num9++)</div>
+<div class="line"><span class="lineno"> 5481</span>                {</div>
+<div class="line"><span class="lineno"> 5482</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num8, num9))</div>
+<div class="line"><span class="lineno"> 5483</span>                    {</div>
+<div class="line"><span class="lineno"> 5484</span>                        Main.tile[num8, num9].type = 1;</div>
+<div class="line"><span class="lineno"> 5485</span>                    }</div>
+<div class="line"><span class="lineno"> 5486</span>                }</div>
+<div class="line"><span class="lineno"> 5487</span>            }</div>
+<div class="line"><span class="lineno"> 5488</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 21, 4) || <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(num3, num4, 467, 4))</div>
+<div class="line"><span class="lineno"> 5489</span>            {</div>
+<div class="line"><span class="lineno"> 5490</span>                <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5491</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5492</span>            }</div>
+<div class="line"><span class="lineno"> 5493</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(x2, num, 135, mute: true, forced: true, -1, 7);</div>
+<div class="line"><span class="lineno"> 5494</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3, num4 + 2, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5495</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3 + 1, num4 + 2, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5496</span>            <span class="keywordflow">if</span> ((<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a47dc99f3e06c2b166a96766282348fc7.html#a47dc99f3e06c2b166a96766282348fc7">tenthAnniversaryWorldGen</a> || <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>) &amp;&amp; <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(3) == 0)</div>
+<div class="line"><span class="lineno"> 5497</span>            {</div>
+<div class="line"><span class="lineno"> 5498</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3 + 1, num4 + 1, 664, mute: true);</div>
+<div class="line"><span class="lineno"> 5499</span>            }</div>
+<div class="line"><span class="lineno"> 5500</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5501</span>            {</div>
+<div class="line"><span class="lineno"> 5502</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3 + 1, num4 + 1, 138, mute: true);</div>
+<div class="line"><span class="lineno"> 5503</span>            }</div>
+<div class="line"><span class="lineno"> 5504</span>            num4 += 2;</div>
+<div class="line"><span class="lineno"> 5505</span>            Main.tile[num3, num4].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5506</span>            Main.tile[num3 + 1, num4].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5507</span>            num4++;</div>
+<div class="line"><span class="lineno"> 5508</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3, num4, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5509</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3 + 1, num4, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5510</span>            Main.tile[num3, num4].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5511</span>            Main.tile[num3 + 1, num4].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5512</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3, num4 + 1, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5513</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3 + 1, num4 + 1, 130, mute: true);</div>
+<div class="line"><span class="lineno"> 5514</span>            Main.tile[num3, num4 + 1].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5515</span>            Main.tile[num3 + 1, num4 + 1].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5516</span>            <span class="keywordtype">int</span> num10 = x2;</div>
+<div class="line"><span class="lineno"> 5517</span>            <span class="keywordtype">int</span> num11 = num;</div>
+<div class="line"><span class="lineno"> 5518</span>            <span class="keywordflow">while</span> (num10 != num3 || num11 != num4)</div>
+<div class="line"><span class="lineno"> 5519</span>            {</div>
+<div class="line"><span class="lineno"> 5520</span>                Main.tile[num10, num11].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5521</span>                <span class="keywordflow">if</span> (num10 &gt; num3)</div>
+<div class="line"><span class="lineno"> 5522</span>                {</div>
+<div class="line"><span class="lineno"> 5523</span>                    num10--;</div>
+<div class="line"><span class="lineno"> 5524</span>                }</div>
+<div class="line"><span class="lineno"> 5525</span>                <span class="keywordflow">if</span> (num10 &lt; num3)</div>
+<div class="line"><span class="lineno"> 5526</span>                {</div>
+<div class="line"><span class="lineno"> 5527</span>                    num10++;</div>
+<div class="line"><span class="lineno"> 5528</span>                }</div>
+<div class="line"><span class="lineno"> 5529</span>                Main.tile[num10, num11].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5530</span>                <span class="keywordflow">if</span> (num11 &gt; num4)</div>
+<div class="line"><span class="lineno"> 5531</span>                {</div>
+<div class="line"><span class="lineno"> 5532</span>                    num11--;</div>
+<div class="line"><span class="lineno"> 5533</span>                }</div>
+<div class="line"><span class="lineno"> 5534</span>                <span class="keywordflow">if</span> (num11 &lt; num4)</div>
+<div class="line"><span class="lineno"> 5535</span>                {</div>
+<div class="line"><span class="lineno"> 5536</span>                    num11++;</div>
+<div class="line"><span class="lineno"> 5537</span>                }</div>
+<div class="line"><span class="lineno"> 5538</span>                Main.tile[num10, num11].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5539</span>            }</div>
+<div class="line"><span class="lineno"> 5540</span>            <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 1]++;</div>
+<div class="line"><span class="lineno"> 5541</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5542</span>        }</div>
+<div class="line"><span class="lineno"> 5543</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 5544</span>        {</div>
+<div class="line"><span class="lineno"> 5545</span>            <span class="keywordtype">int</span> num12 = <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(4, 7);</div>
+<div class="line"><span class="lineno"> 5546</span>            <span class="keywordtype">int</span> num13 = x2;</div>
+<div class="line"><span class="lineno"> 5547</span>            num13 += <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-1, 2);</div>
+<div class="line"><span class="lineno"> 5548</span>            <span class="keywordtype">int</span> num14 = num;</div>
+<div class="line"><span class="lineno"> 5549</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num15 = 0; num15 &lt; num12; num15++)</div>
+<div class="line"><span class="lineno"> 5550</span>            {</div>
+<div class="line"><span class="lineno"> 5551</span>                num14++;</div>
+<div class="line"><span class="lineno"> 5552</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num13, num14))</div>
+<div class="line"><span class="lineno"> 5553</span>                {</div>
+<div class="line"><span class="lineno"> 5554</span>                    <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 0]++;</div>
+<div class="line"><span class="lineno"> 5555</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5556</span>                }</div>
+<div class="line"><span class="lineno"> 5557</span>            }</div>
+<div class="line"><span class="lineno"> 5558</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num16 = num13 - 2; num16 &lt;= num13 + 2; num16++)</div>
+<div class="line"><span class="lineno"> 5559</span>            {</div>
+<div class="line"><span class="lineno"> 5560</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num17 = num14 - 2; num17 &lt;= num14 + 2; num17++)</div>
+<div class="line"><span class="lineno"> 5561</span>                {</div>
+<div class="line"><span class="lineno"> 5562</span>                    <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(num16, num17))</div>
+<div class="line"><span class="lineno"> 5563</span>                    {</div>
+<div class="line"><span class="lineno"> 5564</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5565</span>                    }</div>
+<div class="line"><span class="lineno"> 5566</span>                }</div>
+<div class="line"><span class="lineno"> 5567</span>            }</div>
+<div class="line"><span class="lineno"> 5568</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(num13, num14);</div>
+<div class="line"><span class="lineno"> 5569</span>            Main.tile[num13, num14].active(active: true);</div>
+<div class="line"><span class="lineno"> 5570</span>            Main.tile[num13, num14].type = 141;</div>
+<div class="line"><span class="lineno"> 5571</span>            Main.tile[num13, num14].frameX = 0;</div>
+<div class="line"><span class="lineno"> 5572</span>            Main.tile[num13, num14].frameY = (short)(18 * <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2));</div>
+<div class="line"><span class="lineno"> 5573</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(x2, num, 135, mute: true, forced: true, -1, <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.Next(2, 4));</div>
+<div class="line"><span class="lineno"> 5574</span>            <span class="keywordtype">int</span> num18 = x2;</div>
+<div class="line"><span class="lineno"> 5575</span>            <span class="keywordtype">int</span> num19 = num;</div>
+<div class="line"><span class="lineno"> 5576</span>            <span class="keywordflow">while</span> (num18 != num13 || num19 != num14)</div>
+<div class="line"><span class="lineno"> 5577</span>            {</div>
+<div class="line"><span class="lineno"> 5578</span>                Main.tile[num18, num19].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5579</span>                <span class="keywordflow">if</span> (num18 &gt; num13)</div>
+<div class="line"><span class="lineno"> 5580</span>                {</div>
+<div class="line"><span class="lineno"> 5581</span>                    num18--;</div>
+<div class="line"><span class="lineno"> 5582</span>                }</div>
+<div class="line"><span class="lineno"> 5583</span>                <span class="keywordflow">if</span> (num18 &lt; num13)</div>
+<div class="line"><span class="lineno"> 5584</span>                {</div>
+<div class="line"><span class="lineno"> 5585</span>                    num18++;</div>
+<div class="line"><span class="lineno"> 5586</span>                }</div>
+<div class="line"><span class="lineno"> 5587</span>                Main.tile[num18, num19].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5588</span>                <span class="keywordflow">if</span> (num19 &gt; num14)</div>
+<div class="line"><span class="lineno"> 5589</span>                {</div>
+<div class="line"><span class="lineno"> 5590</span>                    num19--;</div>
+<div class="line"><span class="lineno"> 5591</span>                }</div>
+<div class="line"><span class="lineno"> 5592</span>                <span class="keywordflow">if</span> (num19 &lt; num14)</div>
+<div class="line"><span class="lineno"> 5593</span>                {</div>
+<div class="line"><span class="lineno"> 5594</span>                    num19++;</div>
+<div class="line"><span class="lineno"> 5595</span>                }</div>
+<div class="line"><span class="lineno"> 5596</span>                Main.tile[num18, num19].wire(wire: true);</div>
+<div class="line"><span class="lineno"> 5597</span>            }</div>
+<div class="line"><span class="lineno"> 5598</span>            <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">trapDiag</a>[type, 1]++;</div>
+<div class="line"><span class="lineno"> 5599</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5600</span>        }</div>
+<div class="line"><span class="lineno"> 5601</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 5602</span>        {</div>
+<div class="line"><span class="lineno"> 5603</span>            <span class="keywordflow">if</span> (Main.tile[x2 + 1, num].active())</div>
+<div class="line"><span class="lineno"> 5604</span>            {</div>
+<div class="line"><span class="lineno"> 5605</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5606</span>            }</div>
+<div class="line"><span class="lineno"> 5607</span>            <span class="keywordflow">if</span> (Main.tile[x2, num].liquid &gt; 0 &amp;&amp; !Main.tile[x2, num].lava())</div>
+<div class="line"><span class="lineno"> 5608</span>            {</div>
+<div class="line"><span class="lineno"> 5609</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5610</span>            }</div>
+<div class="line"><span class="lineno"> 5611</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a> &amp;&amp; (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a47dc99f3e06c2b166a96766282348fc7.html#a47dc99f3e06c2b166a96766282348fc7">tenthAnniversaryWorldGen</a> || <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_aeee170619a4451b28a8f00697ebc06d0.html#aeee170619a4451b28a8f00697ebc06d0">notTheBees</a>))</div>
+<div class="line"><span class="lineno"> 5612</span>            {</div>
+<div class="line"><span class="lineno"> 5613</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(3) != 0)</div>
+<div class="line"><span class="lineno"> 5614</span>                {</div>
+<div class="line"><span class="lineno"> 5615</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5616</span>                }</div>
+<div class="line"><span class="lineno"> 5617</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">IsTileNearby</a>(x2, num, 443, 30))</div>
+<div class="line"><span class="lineno"> 5618</span>                {</div>
+<div class="line"><span class="lineno"> 5619</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5620</span>                }</div>
+<div class="line"><span class="lineno"> 5621</span>            }</div>
+<div class="line"><span class="lineno"> 5622</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = x2; k &lt;= x2 + 1; k++)</div>
+<div class="line"><span class="lineno"> 5623</span>            {</div>
+<div class="line"><span class="lineno"> 5624</span>                <span class="keywordtype">int</span> j2 = num + 1;</div>
+<div class="line"><span class="lineno"> 5625</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(k, j2))</div>
+<div class="line"><span class="lineno"> 5626</span>                {</div>
+<div class="line"><span class="lineno"> 5627</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5628</span>                }</div>
+<div class="line"><span class="lineno"> 5629</span>            }</div>
+<div class="line"><span class="lineno"> 5630</span>            <span class="keywordtype">int</span> num2 = <a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(2);</div>
+<div class="line"><span class="lineno"> 5631</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 2; l++)</div>
+<div class="line"><span class="lineno"> 5632</span>            {</div>
+<div class="line"><span class="lineno"> 5633</span>                Main.tile[x2 + l, num].active(active: true);</div>
+<div class="line"><span class="lineno"> 5634</span>                Main.tile[x2 + l, num].type = 443;</div>
+<div class="line"><span class="lineno"> 5635</span>                Main.tile[x2 + l, num].frameX = (short)(18 * l + 36 * num2);</div>
+<div class="line"><span class="lineno"> 5636</span>                Main.tile[x2 + l, num].frameY = 0;</div>
+<div class="line"><span class="lineno"> 5637</span>            }</div>
+<div class="line"><span class="lineno"> 5638</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5639</span>        }</div>
+<div class="line"><span class="lineno"> 5640</span>        }</div>
+<div class="line"><span class="lineno"> 5641</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">noTrapsWorldGen</a>)</div>
+<div class="line"><span class="lineno"> 5642</span>        {</div>
+<div class="line"><span class="lineno"> 5643</span>            Main.tileSolid[138] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 5644</span>        }</div>
+<div class="line"><span class="lineno"> 5645</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5646</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_a71c8b0570b590c7c02064ddf487184aa_html_a71c8b0570b590c7c02064ddf487184aa"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a71c8b0570b590c7c02064ddf487184aa.html#a71c8b0570b590c7c02064ddf487184aa">Terraria.WorldBuilding.GenVars.lavaLine</a></div><div class="ttdeci">static int lavaLine</div><div class="ttdef"><b>Definition</b> GenVars.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_a8e906a97fbeff02607c7b8b49b32bd6f_html_a8e906a97fbeff02607c7b8b49b32bd6f"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a8e906a97fbeff02607c7b8b49b32bd6f.html#a8e906a97fbeff02607c7b8b49b32bd6f">Terraria.WorldBuilding.GenVars.shimmerPosition</a></div><div class="ttdeci">static Vector2D shimmerPosition</div><div class="ttdef"><b>Definition</b> GenVars.cs:310</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldBuilding_1_1GenVars_html"><div class="ttname"><a href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars.html">Terraria.WorldBuilding.GenVars</a></div><div class="ttdef"><b>Definition</b> GenVars.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3_html_a00f09317ef9235786db681e8a69b49d3"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">Terraria.WorldGen.trapDiag</a></div><div class="ttdeci">static int[,] trapDiag</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1124</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241_html_a423aca98af12640f029896286a5b3241"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">Terraria.WorldGen.noTrapsWorldGen</a></div><div class="ttdeci">static bool noTrapsWorldGen</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1152</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c_html_a44be8e88cfbc0e27b42eea0f79c37c3c"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile</a></div><div class="ttdeci">static bool PlaceTile(int i, int j, int Type, bool mute=false, bool forced=false, int plr=-1, int style=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:50270</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a47dc99f3e06c2b166a96766282348fc7_html_a47dc99f3e06c2b166a96766282348fc7"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a47dc99f3e06c2b166a96766282348fc7.html#a47dc99f3e06c2b166a96766282348fc7">Terraria.WorldGen.tenthAnniversaryWorldGen</a></div><div class="ttdeci">static bool tenthAnniversaryWorldGen</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1160</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_aeee170619a4451b28a8f00697ebc06d0_html_aeee170619a4451b28a8f00697ebc06d0"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_aeee170619a4451b28a8f00697ebc06d0.html#aeee170619a4451b28a8f00697ebc06d0">Terraria.WorldGen.notTheBees</a></div><div class="ttdeci">static bool notTheBees</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1164</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8_html_afb31d653d24d0f4a9e3e9988273fa4e8"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">Terraria.WorldGen.IsTileNearby</a></div><div class="ttdeci">static bool IsTileNearby(int x, int y, int type, int distance)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5117</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1Vector2D_aa2f097108143e0677506bb0c06d5dfba_html_aa2f097108143e0677506bb0c06d5dfba"><div class="ttname"><a href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D_aa2f097108143e0677506bb0c06d5dfba.html#aa2f097108143e0677506bb0c06d5dfba">ReLogic.Utilities.Vector2D.Distance</a></div><div class="ttdeci">static double Distance(Vector2D value1, Vector2D value2)</div><div class="ttdef"><b>Definition</b> Vector2D.cs:137</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1Vector2D_html"><div class="ttname"><a href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html">ReLogic.Utilities.Vector2D</a></div><div class="ttdef"><b>Definition</b> Vector2D.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D_aa2f097108143e0677506bb0c06d5dfba.html#aa2f097108143e0677506bb0c06d5dfba">ReLogic.Utilities.Vector2D.Distance()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_afb31d653d24d0f4a9e3e9988273fa4e8.html#afb31d653d24d0f4a9e3e9988273fa4e8">Terraria.WorldGen.IsTileNearby()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac5e7a45a98f6e9037975c4c7e043a7a9.html#ac5e7a45a98f6e9037975c4c7e043a7a9">Terraria.Tile.lava()</a>, <a class="el" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a71c8b0570b590c7c02064ddf487184aa.html#a71c8b0570b590c7c02064ddf487184aa">Terraria.WorldBuilding.GenVars.lavaLine</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a423aca98af12640f029896286a5b3241.html#a423aca98af12640f029896286a5b3241">Terraria.WorldGen.noTrapsWorldGen</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aeee170619a4451b28a8f00697ebc06d0.html#aeee170619a4451b28a8f00697ebc06d0">Terraria.WorldGen.notTheBees</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../d4/dd3/classTerraria_1_1WorldBuilding_1_1GenVars_a8e906a97fbeff02607c7b8b49b32bd6f.html#a8e906a97fbeff02607c7b8b49b32bd6f">Terraria.WorldBuilding.GenVars.shimmerPosition</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a47dc99f3e06c2b166a96766282348fc7.html#a47dc99f3e06c2b166a96766282348fc7">Terraria.WorldGen.tenthAnniversaryWorldGen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a091dfcc5b969edb3e152bca5760ebf9c.html#a091dfcc5b969edb3e152bca5760ebf9c">Terraria.Main.tileCracked</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a00f09317ef9235786db681e8a69b49d3.html#a00f09317ef9235786db681e8a69b49d3">Terraria.WorldGen.trapDiag</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afa6c2317752f526f7aa78d40ff06a386.html#afa6c2317752f526f7aa78d40ff06a386">Terraria.Tile.wire()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

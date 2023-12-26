@@ -117,6 +117,86 @@ $(function(){initNavTree('d4/d72/classTerraria_1_1GameContent_1_1Biomes_1_1Deser
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  407</span>    {</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -20; i &lt; description.Hive.Width + 20; i++)</div>
+<div class="line"><span class="lineno">  409</span>        {</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = -20; j &lt; description.Hive.Height + 20; j++)</div>
+<div class="line"><span class="lineno">  411</span>            {</div>
+<div class="line"><span class="lineno">  412</span>                <span class="keywordtype">int</span> num = i + description.Hive.X;</div>
+<div class="line"><span class="lineno">  413</span>                <span class="keywordtype">int</span> num2 = j + description.Hive.Y;</div>
+<div class="line"><span class="lineno">  414</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(num, num2, 1))</div>
+<div class="line"><span class="lineno">  415</span>                {</div>
+<div class="line"><span class="lineno">  416</span>                    <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[num, num2];</div>
+<div class="line"><span class="lineno">  417</span>                    <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> testTile = Main.tile[num, num2 + 1];</div>
+<div class="line"><span class="lineno">  418</span>                    <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> testTile2 = Main.tile[num, num2 + 2];</div>
+<div class="line"><span class="lineno">  419</span>                    <span class="keywordflow">if</span> (tile.type == 53 &amp;&amp; (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(testTile) || !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(testTile2)))</div>
+<div class="line"><span class="lineno">  420</span>                    {</div>
+<div class="line"><span class="lineno">  421</span>                        tile.type = 397;</div>
+<div class="line"><span class="lineno">  422</span>                    }</div>
+<div class="line"><span class="lineno">  423</span>                }</div>
+<div class="line"><span class="lineno">  424</span>            }</div>
+<div class="line"><span class="lineno">  425</span>        }</div>
+<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = -20; k &lt; description.Hive.Width + 20; k++)</div>
+<div class="line"><span class="lineno">  427</span>        {</div>
+<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = -20; l &lt; description.Hive.Height + 20; l++)</div>
+<div class="line"><span class="lineno">  429</span>            {</div>
+<div class="line"><span class="lineno">  430</span>                <span class="keywordtype">int</span> num3 = k + description.Hive.X;</div>
+<div class="line"><span class="lineno">  431</span>                <span class="keywordtype">int</span> num4 = l + description.Hive.Y;</div>
+<div class="line"><span class="lineno">  432</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(num3, num4, 1))</div>
+<div class="line"><span class="lineno">  433</span>                {</div>
+<div class="line"><span class="lineno">  434</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  435</span>                }</div>
+<div class="line"><span class="lineno">  436</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[num3, num4];</div>
+<div class="line"><span class="lineno">  437</span>                <span class="keywordflow">if</span> (!tile2.active() || tile2.type != 396)</div>
+<div class="line"><span class="lineno">  438</span>                {</div>
+<div class="line"><span class="lineno">  439</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  440</span>                }</div>
+<div class="line"><span class="lineno">  441</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num5 = -1; num5 &gt;= -3; num5--)</div>
+<div class="line"><span class="lineno">  443</span>                {</div>
+<div class="line"><span class="lineno">  444</span>                    <span class="keywordflow">if</span> (Main.tile[num3, num4 + num5].active())</div>
+<div class="line"><span class="lineno">  445</span>                    {</div>
+<div class="line"><span class="lineno">  446</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  447</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  448</span>                    }</div>
+<div class="line"><span class="lineno">  449</span>                }</div>
+<div class="line"><span class="lineno">  450</span>                <span class="keywordtype">bool</span> flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  451</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 1; m &lt;= 3; m++)</div>
+<div class="line"><span class="lineno">  452</span>                {</div>
+<div class="line"><span class="lineno">  453</span>                    <span class="keywordflow">if</span> (Main.tile[num3, num4 + m].active())</div>
+<div class="line"><span class="lineno">  454</span>                    {</div>
+<div class="line"><span class="lineno">  455</span>                        flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  456</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  457</span>                    }</div>
+<div class="line"><span class="lineno">  458</span>                }</div>
+<div class="line"><span class="lineno">  459</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.remixWorldGen || !((<span class="keywordtype">double</span>)num4 &gt; Main.rockLayer + (<span class="keywordtype">double</span>)<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(-1, 2)))</div>
+<div class="line"><span class="lineno">  460</span>                {</div>
+<div class="line"><span class="lineno">  461</span>                    <span class="keywordflow">if</span> (flag &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(20) == 0)</div>
+<div class="line"><span class="lineno">  462</span>                    {</div>
+<div class="line"><span class="lineno">  463</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.PlaceTile(num3, num4 - 1, 485, mute: true, forced: true, -1, <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(4));</div>
+<div class="line"><span class="lineno">  464</span>                    }</div>
+<div class="line"><span class="lineno">  465</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">  466</span>                    {</div>
+<div class="line"><span class="lineno">  467</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.PlaceTile(num3, num4 - 1, 484, mute: true, forced: true);</div>
+<div class="line"><span class="lineno">  468</span>                    }</div>
+<div class="line"><span class="lineno">  469</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((flag ^ flag2) &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">  470</span>                    {</div>
+<div class="line"><span class="lineno">  471</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.PlaceTile(num3, num4 + ((!flag) ? 1 : (-1)), 165, mute: true, forced: true);</div>
+<div class="line"><span class="lineno">  472</span>                    }</div>
+<div class="line"><span class="lineno">  473</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">  474</span>                    {</div>
+<div class="line"><span class="lineno">  475</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.PlaceTile(num3, num4 - 1, 187, mute: true, forced: true, -1, 29 + <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(6));</div>
+<div class="line"><span class="lineno">  476</span>                    }</div>
+<div class="line"><span class="lineno">  477</span>                }</div>
+<div class="line"><span class="lineno">  478</span>            }</div>
+<div class="line"><span class="lineno">  479</span>        }</div>
+<div class="line"><span class="lineno">  480</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a234633921201fb41c39415c1d6726670.html#a234633921201fb41c39415c1d6726670">Terraria.GameContent.Biomes.Desert.DesertDescription.Hive</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1af1906e7b940914158eafdb3abc62e5.html#a1af1906e7b940914158eafdb3abc62e5">Terraria.WorldGen.remixWorldGen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d72/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertHive_a5183ec082b87d892c2f9bd69c829b1e3.html#a5183ec082b87d892c2f9bd69c829b1e3">Terraria.GameContent.Biomes.Desert.DesertHive.Place()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

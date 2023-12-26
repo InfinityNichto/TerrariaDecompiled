@@ -117,6 +117,31 @@ $(function(){initNavTree('db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsD
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">double</span> time = Main.gameTimeCache.TotalGameTime.TotalSeconds;</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8.html#ac62496119dd34da76b944b0285b92fa8">_currentTips</a>.RemoveAll((GameTip x) =&gt; x.IsExpired(time));</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">foreach</span> (GameTip currentTip <span class="keywordflow">in</span> <a class="code hl_variable" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8.html#ac62496119dd34da76b944b0285b92fa8">_currentTips</a>)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (!currentTip.IsExpiring(time))</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>            }</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_a3848f149942fb53c7af64568194f32eb.html#a3848f149942fb53c7af64568194f32eb">AddNewTip</a>(time);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">foreach</span> (GameTip currentTip2 <span class="keywordflow">in</span> <a class="code hl_variable" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8.html#ac62496119dd34da76b944b0285b92fa8">_currentTips</a>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            currentTip2.Update(time);</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_a3848f149942fb53c7af64568194f32eb_html_a3848f149942fb53c7af64568194f32eb"><div class="ttname"><a href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_a3848f149942fb53c7af64568194f32eb.html#a3848f149942fb53c7af64568194f32eb">Terraria.GameContent.UI.GameTipsDisplay.AddNewTip</a></div><div class="ttdeci">void AddNewTip(double currentTime)</div><div class="ttdef"><b>Definition</b> GameTipsDisplay.cs:192</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8_html_ac62496119dd34da76b944b0285b92fa8"><div class="ttname"><a href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8.html#ac62496119dd34da76b944b0285b92fa8">Terraria.GameContent.UI.GameTipsDisplay._currentTips</a></div><div class="ttdeci">readonly List&lt; GameTip &gt; _currentTips</div><div class="ttdef"><b>Definition</b> GameTipsDisplay.cs:94</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_ac62496119dd34da76b944b0285b92fa8.html#ac62496119dd34da76b944b0285b92fa8">Terraria.GameContent.UI.GameTipsDisplay._currentTips</a>, <a class="el" href="../../db/d67/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_a3848f149942fb53c7af64568194f32eb.html#a3848f149942fb53c7af64568194f32eb">Terraria.GameContent.UI.GameTipsDisplay.AddNewTip()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a1d17a8d1e889c24cfe4a4888867e4abb.html#a1d17a8d1e889c24cfe4a4888867e4abb">Terraria.Main.gameTimeCache</a>, <a class="el" href="../../d3/d1f/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_1_1GameTip_aab433b6debc29f2e1f549a827ee2207d.html#aab433b6debc29f2e1f549a827ee2207d">Terraria.GameContent.UI.GameTipsDisplay.GameTip.IsExpired()</a>, <a class="el" href="../../d3/d1f/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_1_1GameTip_ad5837de97ad4e97b0c7ae7a1ebae2397.html#ad5837de97ad4e97b0c7ae7a1ebae2397">Terraria.GameContent.UI.GameTipsDisplay.GameTip.IsExpiring()</a>, and <a class="el" href="../../d3/d1f/classTerraria_1_1GameContent_1_1UI_1_1GameTipsDisplay_1_1GameTip_a819eabe484308a3a708db0101879c839.html#a819eabe484308a3a708db0101879c839">Terraria.GameContent.UI.GameTipsDisplay.GameTip.Update()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

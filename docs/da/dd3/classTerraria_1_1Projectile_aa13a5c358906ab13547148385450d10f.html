@@ -121,6 +121,50 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_aa13a5c358906ab1354
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">36152</span>    {</div>
+<div class="line"><span class="lineno">36153</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">36154</span>        <span class="keywordflow">if</span> (lastVelocity.X != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X)</div>
+<div class="line"><span class="lineno">36155</span>        {</div>
+<div class="line"><span class="lineno">36156</span>            <span class="keywordflow">if</span> (Math.Abs(lastVelocity.X) &gt; 4f)</div>
+<div class="line"><span class="lineno">36157</span>            {</div>
+<div class="line"><span class="lineno">36158</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36159</span>            }</div>
+<div class="line"><span class="lineno">36160</span>            position.X += <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X;</div>
+<div class="line"><span class="lineno">36161</span>            velocity.X = (0f - lastVelocity.X) * 0.2f;</div>
+<div class="line"><span class="lineno">36162</span>        }</div>
+<div class="line"><span class="lineno">36163</span>        <span class="keywordflow">if</span> (lastVelocity.Y != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y)</div>
+<div class="line"><span class="lineno">36164</span>        {</div>
+<div class="line"><span class="lineno">36165</span>            <span class="keywordflow">if</span> (Math.Abs(lastVelocity.Y) &gt; 4f)</div>
+<div class="line"><span class="lineno">36166</span>            {</div>
+<div class="line"><span class="lineno">36167</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36168</span>            }</div>
+<div class="line"><span class="lineno">36169</span>            position.Y += <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y;</div>
+<div class="line"><span class="lineno">36170</span>            velocity.Y = (0f - lastVelocity.Y) * 0.2f;</div>
+<div class="line"><span class="lineno">36171</span>        }</div>
+<div class="line"><span class="lineno">36172</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] = 1f;</div>
+<div class="line"><span class="lineno">36173</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">36174</span>        {</div>
+<div class="line"><span class="lineno">36175</span>            <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2b1d2fb2710c2497a5f4765bb018d569.html#a2b1d2fb2710c2497a5f4765bb018d569">netUpdate</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36176</span>            Collision.HitTiles(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>);</div>
+<div class="line"><span class="lineno">36177</span>            <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(0, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y);</div>
+<div class="line"><span class="lineno">36178</span>        }</div>
+<div class="line"><span class="lineno">36179</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a0fa66d2f08102e2d76955a6f50633989.html#a0fa66d2f08102e2d76955a6f50633989">wet</a>)</div>
+<div class="line"><span class="lineno">36180</span>        {</div>
+<div class="line"><span class="lineno">36181</span>            wetVelocity = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>;</div>
+<div class="line"><span class="lineno">36182</span>        }</div>
+<div class="line"><span class="lineno">36183</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a0fa66d2f08102e2d76955a6f50633989_html_a0fa66d2f08102e2d76955a6f50633989"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a0fa66d2f08102e2d76955a6f50633989.html#a0fa66d2f08102e2d76955a6f50633989">Terraria.Entity.wet</a></div><div class="ttdeci">bool wet</div><div class="ttdef"><b>Definition</b> Entity.cs:30</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2b1d2fb2710c2497a5f4765bb018d569_html_a2b1d2fb2710c2497a5f4765bb018d569"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2b1d2fb2710c2497a5f4765bb018d569.html#a2b1d2fb2710c2497a5f4765bb018d569">Terraria.Projectile.netUpdate</a></div><div class="ttdeci">bool netUpdate</div><div class="ttdef"><b>Definition</b> Projectile.cs:162</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a365e6e4cc7f126d04c5674d2e6d8b285.html#a365e6e4cc7f126d04c5674d2e6d8b285">Terraria.Collision.HitTiles()</a>, and <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

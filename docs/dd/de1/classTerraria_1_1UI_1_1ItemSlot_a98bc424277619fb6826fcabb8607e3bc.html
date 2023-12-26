@@ -126,6 +126,125 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_a98bc424277619f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1321</span>    {</div>
+<div class="line"><span class="lineno"> 1322</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[Main.myPlayer];</div>
+<div class="line"><span class="lineno"> 1323</span>        inv[slot].newAndShiny = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1324</span>        <span class="keywordflow">if</span> (player.itemAnimation &gt; 0)</div>
+<div class="line"><span class="lineno"> 1325</span>        {</div>
+<div class="line"><span class="lineno"> 1326</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1327</span>        }</div>
+<div class="line"><span class="lineno"> 1328</span>        <span class="keywordflow">if</span> (context == 15)</div>
+<div class="line"><span class="lineno"> 1329</span>        {</div>
+<div class="line"><span class="lineno"> 1330</span>            <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a255ed97d8ebc66478b8f5cad8f35d5e2.html#a255ed97d8ebc66478b8f5cad8f35d5e2">HandleShopSlot</a>(inv, slot, rightClickIsValid: true, leftClickIsValid: false);</div>
+<div class="line"><span class="lineno"> 1331</span>        }</div>
+<div class="line"><span class="lineno"> 1332</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1333</span>        {</div>
+<div class="line"><span class="lineno"> 1334</span>            <span class="keywordflow">if</span> (!Main.mouseRight)</div>
+<div class="line"><span class="lineno"> 1335</span>            {</div>
+<div class="line"><span class="lineno"> 1336</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1337</span>            }</div>
+<div class="line"><span class="lineno"> 1338</span>            <span class="keywordflow">if</span> (context == 0 &amp;&amp; Main.mouseRightRelease)</div>
+<div class="line"><span class="lineno"> 1339</span>            {</div>
+<div class="line"><span class="lineno"> 1340</span>                <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ad5f64d3feca6e9f5749ffe9d7771942e.html#ad5f64d3feca6e9f5749ffe9d7771942e">TryItemSwap</a>(inv[slot]);</div>
+<div class="line"><span class="lineno"> 1341</span>            }</div>
+<div class="line"><span class="lineno"> 1342</span>            <span class="keywordflow">if</span> (context == 0 &amp;&amp; <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_a517198d3d95ce744a8479b688793c8b6.html#a517198d3d95ce744a8479b688793c8b6">OpenableBag</a>[inv[slot].type])</div>
+<div class="line"><span class="lineno"> 1343</span>            {</div>
+<div class="line"><span class="lineno"> 1344</span>                <span class="keywordflow">if</span> (Main.mouseRightRelease)</div>
+<div class="line"><span class="lineno"> 1345</span>                {</div>
+<div class="line"><span class="lineno"> 1346</span>                    <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_addd7a431a7de0e1b579ecab0be769594.html#addd7a431a7de0e1b579ecab0be769594">TryOpenContainer</a>(inv[slot], player);</div>
+<div class="line"><span class="lineno"> 1347</span>                }</div>
+<div class="line"><span class="lineno"> 1348</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1349</span>            }</div>
+<div class="line"><span class="lineno"> 1350</span>            <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno"> 1351</span>            {</div>
+<div class="line"><span class="lineno"> 1352</span>            <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1353</span>            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 1354</span>                <span class="keywordflow">if</span> (Main.mouseRightRelease)</div>
+<div class="line"><span class="lineno"> 1355</span>                {</div>
+<div class="line"><span class="lineno"> 1356</span>                    <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34b47fb521ce6c4c85bc.html#a5e3a22d7c08b34b47fb521ce6c4c85bc">SwapVanityEquip</a>(inv, context, slot, player);</div>
+<div class="line"><span class="lineno"> 1357</span>                }</div>
+<div class="line"><span class="lineno"> 1358</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1359</span>            <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno"> 1360</span>            <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno"> 1361</span>            <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 1362</span>            <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno"> 1363</span>                <span class="keywordflow">if</span> (Main.mouseRightRelease)</div>
+<div class="line"><span class="lineno"> 1364</span>                {</div>
+<div class="line"><span class="lineno"> 1365</span>                    <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a7197e9ed9d6590564dbbad26da2664ad.html#a7197e9ed9d6590564dbbad26da2664ad">TryPickupDyeToCursor</a>(context, inv, slot, player);</div>
+<div class="line"><span class="lineno"> 1366</span>                }</div>
+<div class="line"><span class="lineno"> 1367</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1368</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 1369</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1370</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1371</span>            <span class="keywordflow">case</span> 32:</div>
+<div class="line"><span class="lineno"> 1372</span>                <span class="keywordflow">if</span> (inv[slot].maxStack == 1)</div>
+<div class="line"><span class="lineno"> 1373</span>                {</div>
+<div class="line"><span class="lineno"> 1374</span>                    <span class="keywordflow">if</span> (Main.mouseRightRelease)</div>
+<div class="line"><span class="lineno"> 1375</span>                    {</div>
+<div class="line"><span class="lineno"> 1376</span>                        <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4714e5fa7fbf49a7b222a99bb0291b5b.html#a4714e5fa7fbf49a7b222a99bb0291b5b">SwapEquip</a>(inv, context, slot);</div>
+<div class="line"><span class="lineno"> 1377</span>                    }</div>
+<div class="line"><span class="lineno"> 1378</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1379</span>                }</div>
+<div class="line"><span class="lineno"> 1380</span>                <span class="keywordflow">goto</span> <span class="keywordflow">default</span>;</div>
+<div class="line"><span class="lineno"> 1381</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1382</span>            {</div>
+<div class="line"><span class="lineno"> 1383</span>                <span class="keywordflow">if</span> (Main.stackSplit &gt; 1)</div>
+<div class="line"><span class="lineno"> 1384</span>                {</div>
+<div class="line"><span class="lineno"> 1385</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1386</span>                }</div>
+<div class="line"><span class="lineno"> 1387</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1388</span>                <span class="keywordtype">bool</span> flag2 = inv[slot].maxStack &lt;= 1 &amp;&amp; inv[slot].stack &lt;= 1;</div>
+<div class="line"><span class="lineno"> 1389</span>                <span class="keywordflow">if</span> (context == 0 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno"> 1390</span>                {</div>
+<div class="line"><span class="lineno"> 1391</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1392</span>                }</div>
+<div class="line"><span class="lineno"> 1393</span>                <span class="keywordflow">if</span> (context == 3 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno"> 1394</span>                {</div>
+<div class="line"><span class="lineno"> 1395</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1396</span>                }</div>
+<div class="line"><span class="lineno"> 1397</span>                <span class="keywordflow">if</span> (context == 4 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno"> 1398</span>                {</div>
+<div class="line"><span class="lineno"> 1399</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1400</span>                }</div>
+<div class="line"><span class="lineno"> 1401</span>                <span class="keywordflow">if</span> (context == 32 &amp;&amp; flag2)</div>
+<div class="line"><span class="lineno"> 1402</span>                {</div>
+<div class="line"><span class="lineno"> 1403</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1404</span>                }</div>
+<div class="line"><span class="lineno"> 1405</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1406</span>                {</div>
+<div class="line"><span class="lineno"> 1407</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1408</span>                }</div>
+<div class="line"><span class="lineno"> 1409</span>                <span class="keywordtype">int</span> num = Main.superFastStack + 1;</div>
+<div class="line"><span class="lineno"> 1410</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno"> 1411</span>                {</div>
+<div class="line"><span class="lineno"> 1412</span>                    <span class="keywordflow">if</span> ((Main.mouseItem.IsTheSameAs(inv[slot]) || Main.mouseItem.type == 0) &amp;&amp; (Main.mouseItem.stack &lt; Main.mouseItem.maxStack || Main.mouseItem.type == 0))</div>
+<div class="line"><span class="lineno"> 1413</span>                    {</div>
+<div class="line"><span class="lineno"> 1414</span>                        <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5c85c7b71dcf038a5cd9ab9250b0cf3e.html#a5c85c7b71dcf038a5cd9ab9250b0cf3e">PickupItemIntoMouse</a>(inv, context, slot, player);</div>
+<div class="line"><span class="lineno"> 1415</span>                        <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(12);</div>
+<div class="line"><span class="lineno"> 1416</span>                        <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa120ce5968eb920d41beba3c3c6b9308.html#aa120ce5968eb920d41beba3c3c6b9308">RefreshStackSplitCooldown</a>();</div>
+<div class="line"><span class="lineno"> 1417</span>                    }</div>
+<div class="line"><span class="lineno"> 1418</span>                }</div>
+<div class="line"><span class="lineno"> 1419</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1420</span>            }</div>
+<div class="line"><span class="lineno"> 1421</span>            }</div>
+<div class="line"><span class="lineno"> 1422</span>        }</div>
+<div class="line"><span class="lineno"> 1423</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_a517198d3d95ce744a8479b688793c8b6_html_a517198d3d95ce744a8479b688793c8b6"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_a517198d3d95ce744a8479b688793c8b6.html#a517198d3d95ce744a8479b688793c8b6">Terraria.ID.ItemID.Sets.OpenableBag</a></div><div class="ttdeci">static bool[] OpenableBag</div><div class="ttdef"><b>Definition</b> ItemID.cs:1125</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_html"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Terraria.ID.ItemID.Sets</a></div><div class="ttdef"><b>Definition</b> ItemID.cs:46</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_html"><div class="ttname"><a href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">Terraria.ID.ItemID</a></div><div class="ttdef"><b>Definition</b> ItemID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a255ed97d8ebc66478b8f5cad8f35d5e2_html_a255ed97d8ebc66478b8f5cad8f35d5e2"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a255ed97d8ebc66478b8f5cad8f35d5e2.html#a255ed97d8ebc66478b8f5cad8f35d5e2">Terraria.UI.ItemSlot.HandleShopSlot</a></div><div class="ttdeci">static void HandleShopSlot(Item[] inv, int slot, bool rightClickIsValid, bool leftClickIsValid)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1718</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a4714e5fa7fbf49a7b222a99bb0291b5b_html_a4714e5fa7fbf49a7b222a99bb0291b5b"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4714e5fa7fbf49a7b222a99bb0291b5b.html#a4714e5fa7fbf49a7b222a99bb0291b5b">Terraria.UI.ItemSlot.SwapEquip</a></div><div class="ttdeci">static void SwapEquip(ref Item inv, int context=0)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:2544</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a5c85c7b71dcf038a5cd9ab9250b0cf3e_html_a5c85c7b71dcf038a5cd9ab9250b0cf3e"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5c85c7b71dcf038a5cd9ab9250b0cf3e.html#a5c85c7b71dcf038a5cd9ab9250b0cf3e">Terraria.UI.ItemSlot.PickupItemIntoMouse</a></div><div class="ttdeci">static void PickupItemIntoMouse(Item[] inv, int context, int slot, Player player)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1425</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34b47fb521ce6c4c85bc_html_a5e3a22d7c08b34b47fb521ce6c4c85bc"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34b47fb521ce6c4c85bc.html#a5e3a22d7c08b34b47fb521ce6c4c85bc">Terraria.UI.ItemSlot.SwapVanityEquip</a></div><div class="ttdeci">static void SwapVanityEquip(Item[] inv, int context, int slot, Player player)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1555</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a7197e9ed9d6590564dbbad26da2664ad_html_a7197e9ed9d6590564dbbad26da2664ad"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a7197e9ed9d6590564dbbad26da2664ad.html#a7197e9ed9d6590564dbbad26da2664ad">Terraria.UI.ItemSlot.TryPickupDyeToCursor</a></div><div class="ttdeci">static void TryPickupDyeToCursor(int context, Item[] inv, int slot, Player player)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1603</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_aa120ce5968eb920d41beba3c3c6b9308_html_aa120ce5968eb920d41beba3c3c6b9308"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa120ce5968eb920d41beba3c3c6b9308.html#aa120ce5968eb920d41beba3c3c6b9308">Terraria.UI.ItemSlot.RefreshStackSplitCooldown</a></div><div class="ttdeci">static void RefreshStackSplitCooldown()</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1478</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_ad5f64d3feca6e9f5749ffe9d7771942e_html_ad5f64d3feca6e9f5749ffe9d7771942e"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ad5f64d3feca6e9f5749ffe9d7771942e.html#ad5f64d3feca6e9f5749ffe9d7771942e">Terraria.UI.ItemSlot.TryItemSwap</a></div><div class="ttdeci">static void TryItemSwap(Item item)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1633</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_addd7a431a7de0e1b579ecab0be769594_html_addd7a431a7de0e1b579ecab0be769594"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_addd7a431a7de0e1b579ecab0be769594.html#addd7a431a7de0e1b579ecab0be769594">Terraria.UI.ItemSlot.TryOpenContainer</a></div><div class="ttdeci">static void TryOpenContainer(Item item, Player player)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1490</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a255ed97d8ebc66478b8f5cad8f35d5e2.html#a255ed97d8ebc66478b8f5cad8f35d5e2">Terraria.UI.ItemSlot.HandleShopSlot()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4cbdcbd7e1256eee0e1a3c7b9fd2541f.html#a4cbdcbd7e1256eee0e1a3c7b9fd2541f">Terraria.Item.IsTheSameAs()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3675a3b394737c4a9b94014587f53d24.html#a3675a3b394737c4a9b94014587f53d24">Terraria.Player.itemAnimation</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a43f51e33be93f066916198e4804b5008.html#a43f51e33be93f066916198e4804b5008">Terraria.Item.maxStack</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a74da1e6b6adf7145197f787534ad268a.html#a74da1e6b6adf7145197f787534ad268a">Terraria.Main.mouseItem</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4f34c8f8f4b26b0ba79bdf606888298a.html#a4f34c8f8f4b26b0ba79bdf606888298a">Terraria.Main.mouseRight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a99c384641a5ffbd9abe5473f94265a6d.html#a99c384641a5ffbd9abe5473f94265a6d">Terraria.Main.mouseRightRelease</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_afb2e411e2b941fa1860696e3d2d93ed0.html#afb2e411e2b941fa1860696e3d2d93ed0">Terraria.Item.newAndShiny</a>, <a class="el" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_a517198d3d95ce744a8479b688793c8b6.html#a517198d3d95ce744a8479b688793c8b6">Terraria.ID.ItemID.Sets.OpenableBag</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5c85c7b71dcf038a5cd9ab9250b0cf3e.html#a5c85c7b71dcf038a5cd9ab9250b0cf3e">Terraria.UI.ItemSlot.PickupItemIntoMouse()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa120ce5968eb920d41beba3c3c6b9308.html#aa120ce5968eb920d41beba3c3c6b9308">Terraria.UI.ItemSlot.RefreshStackSplitCooldown()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac64809c998d5e021c267255bd55d09bf.html#ac64809c998d5e021c267255bd55d09bf">Terraria.Main.stackSplit</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a4714e5fa7fbf49a7b222a99bb0291b5b.html#a4714e5fa7fbf49a7b222a99bb0291b5b">Terraria.UI.ItemSlot.SwapEquip()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34b47fb521ce6c4c85bc.html#a5e3a22d7c08b34b47fb521ce6c4c85bc">Terraria.UI.ItemSlot.SwapVanityEquip()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_ad5f64d3feca6e9f5749ffe9d7771942e.html#ad5f64d3feca6e9f5749ffe9d7771942e">Terraria.UI.ItemSlot.TryItemSwap()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_addd7a431a7de0e1b579ecab0be769594.html#addd7a431a7de0e1b579ecab0be769594">Terraria.UI.ItemSlot.TryOpenContainer()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a7197e9ed9d6590564dbbad26da2664ad.html#a7197e9ed9d6590564dbbad26da2664ad">Terraria.UI.ItemSlot.TryPickupDyeToCursor()</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

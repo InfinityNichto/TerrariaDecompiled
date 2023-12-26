@@ -126,6 +126,34 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a131abf382433ba5b250fb7
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49521</span>    {</div>
+<div class="line"><span class="lineno">49522</span>        Point value = <span class="keyword">new</span> Point(worldX, worldY - 8);</div>
+<div class="line"><span class="lineno">49523</span>        Point value2 = <span class="keyword">new</span> Point(worldX + 16, worldY - 8);</div>
+<div class="line"><span class="lineno">49524</span>        Point value3 = <span class="keyword">new</span> Point(worldX - 16, worldY - 8);</div>
+<div class="line"><span class="lineno">49525</span>        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49526</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">49527</span>        {</div>
+<div class="line"><span class="lineno">49528</span>            Projectile projectile = Main.projectile[i];</div>
+<div class="line"><span class="lineno">49529</span>            <span class="keywordflow">if</span> (projectile.active &amp;&amp; projectile.sentry)</div>
+<div class="line"><span class="lineno">49530</span>            {</div>
+<div class="line"><span class="lineno">49531</span>                Rectangle hitbox = projectile.Hitbox;</div>
+<div class="line"><span class="lineno">49532</span>                <span class="keywordflow">if</span> (!lightningAura &amp;&amp; hitbox.X &gt; 30)</div>
+<div class="line"><span class="lineno">49533</span>                {</div>
+<div class="line"><span class="lineno">49534</span>                    hitbox.X += hitbox.Width / 2;</div>
+<div class="line"><span class="lineno">49535</span>                    hitbox.Width = 30;</div>
+<div class="line"><span class="lineno">49536</span>                    hitbox.X -= hitbox.Width / 2;</div>
+<div class="line"><span class="lineno">49537</span>                }</div>
+<div class="line"><span class="lineno">49538</span>                <span class="keywordflow">if</span> (hitbox.Contains(value) || hitbox.Contains(value2) || hitbox.Contains(value3))</div>
+<div class="line"><span class="lineno">49539</span>                {</div>
+<div class="line"><span class="lineno">49540</span>                    result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49541</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">49542</span>                }</div>
+<div class="line"><span class="lineno">49543</span>            }</div>
+<div class="line"><span class="lineno">49544</span>        }</div>
+<div class="line"><span class="lineno">49545</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">49546</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a0024e81f603e49376c63fcc7b43c42e7.html#a0024e81f603e49376c63fcc7b43c42e7">Terraria.Projectile.sentry</a>.</p>
 
 </div>
 </div>

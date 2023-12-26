@@ -121,6 +121,36 @@ $(function(){initNavTree('d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsS
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>        Rectangle rectangle = <span class="keyword">new</span> Rectangle(centerPoint.<a class="code hl_variable" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_ae018aa89f151554672a0436717ec5a39.html#ae018aa89f151554672a0436717ec5a39">X</a> - Main.buffScanAreaWidth / 2, centerPoint.<a class="code hl_variable" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_a9e9f8ce96e1199b4c54131e70238c755.html#a9e9f8ce96e1199b4c54131e70238c755">Y</a> - Main.buffScanAreaHeight / 2, Main.buffScanAreaWidth, Main.buffScanAreaHeight);</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordtype">int</span> num = necessaryNPCCount;</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[i];</div>
+<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span> (!nPC.active || !nPC.isLikeATownNPC || nPC.homeless || !rectangle.Contains(nPC.homeTileX, nPC.homeTileY))</div>
+<div class="line"><span class="lineno">  243</span>            {</div>
+<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>            Vector2 value = <span class="keyword">new</span> Vector2(nPC.homeTileX, nPC.homeTileY);</div>
+<div class="line"><span class="lineno">  247</span>            Vector2 value2 = <span class="keyword">new</span> Vector2(nPC.Center.X / 16f, nPC.Center.Y / 16f);</div>
+<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">if</span> (Vector2.Distance(value, value2) &lt; 100f)</div>
+<div class="line"><span class="lineno">  249</span>            {</div>
+<div class="line"><span class="lineno">  250</span>                num--;</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  252</span>                {</div>
+<div class="line"><span class="lineno">  253</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  254</span>                }</div>
+<div class="line"><span class="lineno">  255</span>            }</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  258</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_a9e9f8ce96e1199b4c54131e70238c755_html_a9e9f8ce96e1199b4c54131e70238c755"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_a9e9f8ce96e1199b4c54131e70238c755.html#a9e9f8ce96e1199b4c54131e70238c755">Terraria.DataStructures.Point16.Y</a></div><div class="ttdeci">readonly short Y</div><div class="ttdef"><b>Definition</b> Point16.cs:9</div></div>
+<div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_ae018aa89f151554672a0436717ec5a39_html_ae018aa89f151554672a0436717ec5a39"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_ae018aa89f151554672a0436717ec5a39.html#ae018aa89f151554672a0436717ec5a39">Terraria.DataStructures.Point16.X</a></div><div class="ttdeci">readonly short X</div><div class="ttdef"><b>Definition</b> Point16.cs:7</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af0037388ef0e1e3e5ae36ad35974db27.html#af0037388ef0e1e3e5ae36ad35974db27">Terraria.Main.buffScanAreaHeight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a37389d1e9b287f3706f74959990d9ced.html#a37389d1e9b287f3706f74959990d9ced">Terraria.Main.buffScanAreaWidth</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_acacb38a8cca2cd4b5f07186e532f06df.html#acacb38a8cca2cd4b5f07186e532f06df">Terraria.NPC.homeless</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a707a46d1de85d1ace60dc76a36477e2b.html#a707a46d1de85d1ace60dc76a36477e2b">Terraria.NPC.homeTileX</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_afacdc5dddcb7a8ea399198751ee18584.html#afacdc5dddcb7a8ea399198751ee18584">Terraria.NPC.homeTileY</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a42cdb9f3b89a2830f98120e65670e6b8.html#a42cdb9f3b89a2830f98120e65670e6b8">Terraria.NPC.isLikeATownNPC</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, <a class="el" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_ae018aa89f151554672a0436717ec5a39.html#ae018aa89f151554672a0436717ec5a39">Terraria.DataStructures.Point16.X</a>, and <a class="el" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16_a9e9f8ce96e1199b4c54131e70238c755.html#a9e9f8ce96e1199b4c54131e70238c755">Terraria.DataStructures.Point16.Y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d15/classTerraria_1_1GameContent_1_1TeleportPylonsSystem_abd3626f487034cfe24ce05c0672832a2.html#abd3626f487034cfe24ce05c0672832a2">Terraria.GameContent.TeleportPylonsSystem.DoesPylonHaveEnoughNPCsAroundIt()</a>, and <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a4f124e6d896b88c0c69af8128c6cdcdb.html#a4f124e6d896b88c0c69af8128c6cdcdb">Terraria.Chest.SetupShop()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,37 @@ $(function(){initNavTree('d8/da3/classTerraria_1_1WorldBuilding_1_1TileFont_a14f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  311</span>    {</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (mode.HasBackground)</div>
+<div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -1; i &lt; charData.Length + 1; i++)</div>
+<div class="line"><span class="lineno">  315</span>            {</div>
+<div class="line"><span class="lineno">  316</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = -1; j &lt; 6; j++)</div>
+<div class="line"><span class="lineno">  317</span>                {</div>
+<div class="line"><span class="lineno">  318</span>                    Main.tile[position.X + j, position.Y + i].ResetToType(mode.BackgroundTile);</div>
+<div class="line"><span class="lineno">  319</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.TileFrame(position.X + j, position.Y + i);</div>
+<div class="line"><span class="lineno">  320</span>                }</div>
+<div class="line"><span class="lineno">  321</span>            }</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; charData.Length; k++)</div>
+<div class="line"><span class="lineno">  324</span>        {</div>
+<div class="line"><span class="lineno">  325</span>            <span class="keywordtype">int</span> num = charData[k] &lt;&lt; 1;</div>
+<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 5; l++)</div>
+<div class="line"><span class="lineno">  327</span>            {</div>
+<div class="line"><span class="lineno">  328</span>                <span class="keywordflow">if</span> ((num &amp; 0x80) == 128)</div>
+<div class="line"><span class="lineno">  329</span>                {</div>
+<div class="line"><span class="lineno">  330</span>                    Main.tile[position.X + l, position.Y + k].ResetToType(mode.ForegroundTile);</div>
+<div class="line"><span class="lineno">  331</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.TileFrame(position.X + l, position.Y + k);</div>
+<div class="line"><span class="lineno">  332</span>                }</div>
+<div class="line"><span class="lineno">  333</span>                num &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  334</span>            }</div>
+<div class="line"><span class="lineno">  335</span>        }</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/d6e/structTerraria_1_1WorldBuilding_1_1TileFont_1_1DrawMode_a1da714dc024676b4585afbca7befbb94.html#a1da714dc024676b4585afbca7befbb94">Terraria.WorldBuilding.TileFont.DrawMode.BackgroundTile</a>, <a class="el" href="../../d3/d6e/structTerraria_1_1WorldBuilding_1_1TileFont_1_1DrawMode_a922e4d491ac0f7c5f62d5c9f6bc0b3b7.html#a922e4d491ac0f7c5f62d5c9f6bc0b3b7">Terraria.WorldBuilding.TileFont.DrawMode.ForegroundTile</a>, <a class="el" href="../../d3/d6e/structTerraria_1_1WorldBuilding_1_1TileFont_1_1DrawMode_a35bf379104318f6fdb58620195287f07.html#a35bf379104318f6fdb58620195287f07">Terraria.WorldBuilding.TileFont.DrawMode.HasBackground</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a6af28eec581f25407736f7ae6ad16aa1.html#a6af28eec581f25407736f7ae6ad16aa1">Terraria.Tile.ResetToType()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">Terraria.WorldGen.TileFrame()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/da3/classTerraria_1_1WorldBuilding_1_1TileFont_a532035a0c1b1d730f6b5ba401263a7f4.html#a532035a0c1b1d730f6b5ba401263a7f4">Terraria.WorldBuilding.TileFont.DrawString()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

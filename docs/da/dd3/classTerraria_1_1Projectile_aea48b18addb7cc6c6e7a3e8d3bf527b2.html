@@ -117,6 +117,39 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_aea48b18addb7cc6c6e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">59303</span>    {</div>
+<div class="line"><span class="lineno">59304</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile((<span class="keywordtype">int</span>)targetPosition.X / 16, (<span class="keywordtype">int</span>)targetPosition.Y / 16))</div>
+<div class="line"><span class="lineno">59305</span>        {</div>
+<div class="line"><span class="lineno">59306</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">59307</span>        }</div>
+<div class="line"><span class="lineno">59308</span>        Vector2 vector = base.Top + Vector2.UnitY * 20f;</div>
+<div class="line"><span class="lineno">59309</span>        <span class="keywordtype">bool</span> flag = Collision.CanHitLine(vector, 0, 0, targetPosition, 0, 0);</div>
+<div class="line"><span class="lineno">59310</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">59311</span>        {</div>
+<div class="line"><span class="lineno">59312</span>            Vector2 v = targetPosition - vector;</div>
+<div class="line"><span class="lineno">59313</span>            Vector2 spinningpoint = v.SafeNormalize(Vector2.UnitY);</div>
+<div class="line"><span class="lineno">59314</span>            Vector2 vector2 = Vector2.Lerp(vector, targetPosition, 0.5f);</div>
+<div class="line"><span class="lineno">59315</span>            Vector2 vector3 = vector2 + spinningpoint.RotatedBy(1.5707963705062866) * v.Length() * 0.2f;</div>
+<div class="line"><span class="lineno">59316</span>            <span class="keywordflow">if</span> (Collision.CanHitLine(vector, 0, 0, vector3, 0, 0) &amp;&amp; Collision.CanHitLine(vector3, 0, 0, targetPosition, 0, 0))</div>
+<div class="line"><span class="lineno">59317</span>            {</div>
+<div class="line"><span class="lineno">59318</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">59319</span>            }</div>
+<div class="line"><span class="lineno">59320</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">59321</span>            {</div>
+<div class="line"><span class="lineno">59322</span>                Vector2 vector4 = vector2 + spinningpoint.RotatedBy(-1.5707963705062866) * v.Length() * 0.2f;</div>
+<div class="line"><span class="lineno">59323</span>                <span class="keywordflow">if</span> (Collision.CanHitLine(vector, 0, 0, vector4, 0, 0) &amp;&amp; Collision.CanHitLine(vector4, 0, 0, targetPosition, 0, 0))</div>
+<div class="line"><span class="lineno">59324</span>                {</div>
+<div class="line"><span class="lineno">59325</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">59326</span>                }</div>
+<div class="line"><span class="lineno">59327</span>            }</div>
+<div class="line"><span class="lineno">59328</span>        }</div>
+<div class="line"><span class="lineno">59329</span>        <span class="keywordflow">return</span> flag;</div>
+<div class="line"><span class="lineno">59330</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4dec276f8d2858ee4dd91c23f5bffa52.html#a4dec276f8d2858ee4dd91c23f5bffa52">Terraria.Collision.CanHitLine()</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_abec648b609286fc4b2e8b04acc15a1ca.html#abec648b609286fc4b2e8b04acc15a1ca">Terraria.Projectile.Colliding()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

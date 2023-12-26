@@ -126,6 +126,45 @@ $(function(){initNavTree('da/d8a/classTerraria_1_1Wiring_a85a11f7c4eca6083bdc4ad
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  394</span>    {</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordtype">int</span> wireCount = 0;</div>
+<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">int</span> actuatorCount = 0;</div>
+<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 58; i++)</div>
+<div class="line"><span class="lineno">  398</span>        {</div>
+<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">if</span> (master.inventory[i].type == 530)</div>
+<div class="line"><span class="lineno">  400</span>            {</div>
+<div class="line"><span class="lineno">  401</span>                wireCount += master.inventory[i].stack;</div>
+<div class="line"><span class="lineno">  402</span>            }</div>
+<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">if</span> (master.inventory[i].type == 849)</div>
+<div class="line"><span class="lineno">  404</span>            {</div>
+<div class="line"><span class="lineno">  405</span>                actuatorCount += master.inventory[i].stack;</div>
+<div class="line"><span class="lineno">  406</span>            }</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordtype">int</span> num = wireCount;</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordtype">int</span> num2 = actuatorCount;</div>
+<div class="line"><span class="lineno">  410</span>        <a class="code hl_function" href="../../da/d8a/classTerraria_1_1Wiring_a42e7df87e1541d18fab2c39ec4abe337.html#a42e7df87e1541d18fab2c39ec4abe337">MassWireOperationInner</a>(master, ps, pe, master.Center, master.direction == 1, ref wireCount, ref actuatorCount);</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordtype">int</span> num3 = num - wireCount;</div>
+<div class="line"><span class="lineno">  412</span>        <span class="keywordtype">int</span> num4 = num2 - actuatorCount;</div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">  414</span>        {</div>
+<div class="line"><span class="lineno">  415</span>            NetMessage.SendData(110, master.whoAmI, -1, <span class="keyword">null</span>, 530, num3, master.whoAmI);</div>
+<div class="line"><span class="lineno">  416</span>            NetMessage.SendData(110, master.whoAmI, -1, <span class="keyword">null</span>, 849, num4, master.whoAmI);</div>
+<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  418</span>        }</div>
+<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num3; j++)</div>
+<div class="line"><span class="lineno">  420</span>        {</div>
+<div class="line"><span class="lineno">  421</span>            master.ConsumeItem(530);</div>
+<div class="line"><span class="lineno">  422</span>        }</div>
+<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num4; k++)</div>
+<div class="line"><span class="lineno">  424</span>        {</div>
+<div class="line"><span class="lineno">  425</span>            master.ConsumeItem(849);</div>
+<div class="line"><span class="lineno">  426</span>        }</div>
+<div class="line"><span class="lineno">  427</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_a42e7df87e1541d18fab2c39ec4abe337_html_a42e7df87e1541d18fab2c39ec4abe337"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_a42e7df87e1541d18fab2c39ec4abe337.html#a42e7df87e1541d18fab2c39ec4abe337">Terraria.Wiring.MassWireOperationInner</a></div><div class="ttdeci">static void MassWireOperationInner(Player user, Point ps, Point pe, Vector2 dropPoint, bool dir, ref int wireCount, ref int actuatorCount)</div><div class="ttdef"><b>Definition</b> Wiring.cs:2884</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a4f7f370abf3c31824a041156d834b354.html#a4f7f370abf3c31824a041156d834b354">Terraria.Player.ConsumeItem()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_a42e7df87e1541d18fab2c39ec4abe337.html#a42e7df87e1541d18fab2c39ec4abe337">Terraria.Wiring.MassWireOperationInner()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a1bcbabf72f454b4cc591de32eba53a0e.html#a1bcbabf72f454b4cc591de32eba53a0e">Terraria.Player.ItemCheck_UseWiringTools()</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

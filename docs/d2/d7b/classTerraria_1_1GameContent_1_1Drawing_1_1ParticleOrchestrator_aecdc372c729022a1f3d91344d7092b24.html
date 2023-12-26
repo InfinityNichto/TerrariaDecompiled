@@ -117,6 +117,40 @@ $(function(){initNavTree('d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Part
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  359</span>    {</div>
+<div class="line"><span class="lineno">  360</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[settings.IndexOfPlayerWhoInvokedThis];</div>
+<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">if</span> (player.active)</div>
+<div class="line"><span class="lineno">  362</span>        {</div>
+<div class="line"><span class="lineno">  363</span>            Rectangle hitbox = player.Hitbox;</div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordtype">int</span> num = 6;</div>
+<div class="line"><span class="lineno">  365</span>            hitbox.Height -= num;</div>
+<div class="line"><span class="lineno">  366</span>            <span class="keywordflow">if</span> (player.gravDir == 1f)</div>
+<div class="line"><span class="lineno">  367</span>            {</div>
+<div class="line"><span class="lineno">  368</span>                hitbox.Y += num;</div>
+<div class="line"><span class="lineno">  369</span>            }</div>
+<div class="line"><span class="lineno">  370</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 40; i++)</div>
+<div class="line"><span class="lineno">  371</span>            {</div>
+<div class="line"><span class="lineno">  372</span>                Dust dust = Dust.NewDustPerfect(Main.rand.NextVector2FromRectangle(hitbox), 16, <span class="keyword">null</span>, 120, <span class="keywordflow">default</span>(Color), Main.rand.NextFloat() * 0.8f + 0.8f);</div>
+<div class="line"><span class="lineno">  373</span>                dust.velocity = <span class="keyword">new</span> Vector2(0f, (<span class="keywordtype">float</span>)(-hitbox.Height) * Main.rand.NextFloat() * 0.04f).RotatedBy(Main.rand.NextFloatDirection() * ((<span class="keywordtype">float</span>)Math.PI * 2f) * 0.1f);</div>
+<div class="line"><span class="lineno">  374</span>                dust.velocity += player.velocity * 2f * Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">  375</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  376</span>                dust.noLight = (dust.noLightEmittence = <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  377</span>            }</div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 5; j++)</div>
+<div class="line"><span class="lineno">  379</span>            {</div>
+<div class="line"><span class="lineno">  380</span>                Dust dust2 = Dust.NewDustPerfect(Main.rand.NextVector2FromRectangle(hitbox), 43, <span class="keyword">null</span>, 254, Main.hslToRgb(Main.rand.NextFloat(), 0.3f, 0.8f), Main.rand.NextFloat() * 0.8f + 0.8f);</div>
+<div class="line"><span class="lineno">  381</span>                dust2.velocity = <span class="keyword">new</span> Vector2(0f, (<span class="keywordtype">float</span>)(-hitbox.Height) * Main.rand.NextFloat() * 0.04f).RotatedBy(Main.rand.NextFloatDirection() * ((<span class="keywordtype">float</span>)Math.PI * 2f) * 0.1f);</div>
+<div class="line"><span class="lineno">  382</span>                dust2.velocity += player.velocity * 2f * Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">  383</span>                dust2.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  384</span>                dust2.noLight = (dust2.noLightEmittence = <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  385</span>            }</div>
+<div class="line"><span class="lineno">  386</span>        }</div>
+<div class="line"><span class="lineno">  387</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, <a class="el" href="../../d5/dfa/structTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestraSettings_a0d800484df581b23b27775854d37667a.html#a0d800484df581b23b27775854d37667a">Terraria.GameContent.Drawing.ParticleOrchestraSettings.IndexOfPlayerWhoInvokedThis</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_ac85a67b8ea46324cf328fbf3b3e227a2.html#ac85a67b8ea46324cf328fbf3b3e227a2">Terraria.Dust.NewDustPerfect()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_a67fdbd42f419b929cf4f2442be01f2f3.html#a67fdbd42f419b929cf4f2442be01f2f3">Terraria.GameContent.Drawing.ParticleOrchestrator.SpawnParticlesDirect()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

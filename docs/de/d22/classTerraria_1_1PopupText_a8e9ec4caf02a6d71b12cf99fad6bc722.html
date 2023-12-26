@@ -117,6 +117,66 @@ $(function(){initNavTree('de/d22/classTerraria_1_1PopupText_a8e9ec4caf02a6d71b12
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  461</span>    {</div>
+<div class="line"><span class="lineno">  462</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  463</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  465</span>        <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">  466</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  467</span>        <span class="keywordtype">long</span> num5 = <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a690010f93700737a5f533f8c9507f94b.html#a690010f93700737a5f533f8c9507f94b">coinValue</a>;</div>
+<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">while</span> (num5 &gt; 0)</div>
+<div class="line"><span class="lineno">  469</span>        {</div>
+<div class="line"><span class="lineno">  470</span>            <span class="keywordflow">if</span> (num5 &gt;= 1000000)</div>
+<div class="line"><span class="lineno">  471</span>            {</div>
+<div class="line"><span class="lineno">  472</span>                num5 -= 1000000;</div>
+<div class="line"><span class="lineno">  473</span>                num++;</div>
+<div class="line"><span class="lineno">  474</span>            }</div>
+<div class="line"><span class="lineno">  475</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &gt;= 10000)</div>
+<div class="line"><span class="lineno">  476</span>            {</div>
+<div class="line"><span class="lineno">  477</span>                num5 -= 10000;</div>
+<div class="line"><span class="lineno">  478</span>                num2++;</div>
+<div class="line"><span class="lineno">  479</span>            }</div>
+<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &gt;= 100)</div>
+<div class="line"><span class="lineno">  481</span>            {</div>
+<div class="line"><span class="lineno">  482</span>                num5 -= 100;</div>
+<div class="line"><span class="lineno">  483</span>                num3++;</div>
+<div class="line"><span class="lineno">  484</span>            }</div>
+<div class="line"><span class="lineno">  485</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &gt;= 1)</div>
+<div class="line"><span class="lineno">  486</span>            {</div>
+<div class="line"><span class="lineno">  487</span>                num5--;</div>
+<div class="line"><span class="lineno">  488</span>                num4++;</div>
+<div class="line"><span class="lineno">  489</span>            }</div>
+<div class="line"><span class="lineno">  490</span>        }</div>
+<div class="line"><span class="lineno">  491</span>        text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  493</span>        {</div>
+<div class="line"><span class="lineno">  494</span>            text = text + num + <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot; {0} &quot;</span>, <a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Currency.Platinum&quot;</span>));</div>
+<div class="line"><span class="lineno">  495</span>        }</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">if</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno">  497</span>        {</div>
+<div class="line"><span class="lineno">  498</span>            text = text + num2 + <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot; {0} &quot;</span>, <a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Currency.Gold&quot;</span>));</div>
+<div class="line"><span class="lineno">  499</span>        }</div>
+<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">if</span> (num3 &gt; 0)</div>
+<div class="line"><span class="lineno">  501</span>        {</div>
+<div class="line"><span class="lineno">  502</span>            text = text + num3 + <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot; {0} &quot;</span>, <a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Currency.Silver&quot;</span>));</div>
+<div class="line"><span class="lineno">  503</span>        }</div>
+<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">if</span> (num4 &gt; 0)</div>
+<div class="line"><span class="lineno">  505</span>        {</div>
+<div class="line"><span class="lineno">  506</span>            text = text + num4 + <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot; {0} &quot;</span>, <a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Currency.Copper&quot;</span>));</div>
+<div class="line"><span class="lineno">  507</span>        }</div>
+<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">if</span> (text.Length &gt; 1)</div>
+<div class="line"><span class="lineno">  509</span>        {</div>
+<div class="line"><span class="lineno">  510</span>            text = text.Substring(0, text.Length - 1);</div>
+<div class="line"><span class="lineno">  511</span>        }</div>
+<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78_html_ae4636a4800b9ecbaa498954520462f78"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue</a></div><div class="ttdeci">static string GetTextValue(string key)</div><div class="ttdef"><b>Definition</b> Language.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_html"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Terraria.Localization.Language</a></div><div class="ttdef"><b>Definition</b> Language.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_a690010f93700737a5f533f8c9507f94b_html_a690010f93700737a5f533f8c9507f94b"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_a690010f93700737a5f533f8c9507f94b.html#a690010f93700737a5f533f8c9507f94b">Terraria.PopupText.coinValue</a></div><div class="ttdeci">long coinValue</div><div class="ttdef"><b>Definition</b> PopupText.cs:40</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a690010f93700737a5f533f8c9507f94b.html#a690010f93700737a5f533f8c9507f94b">Terraria.PopupText.coinValue</a>, and <a class="el" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a4ed0555f51735430404120cf4da36be6.html#a4ed0555f51735430404120cf4da36be6">Terraria.PopupText.NewText()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

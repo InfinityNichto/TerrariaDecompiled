@@ -136,6 +136,211 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a9eb151059eb49360652eb1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">52804</span>    {</div>
+<div class="line"><span class="lineno">52805</span>        Item item = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">52806</span>        item.type = 0;</div>
+<div class="line"><span class="lineno">52807</span>        <span class="keywordflow">switch</span> (questsDone)</div>
+<div class="line"><span class="lineno">52808</span>        {</div>
+<div class="line"><span class="lineno">52809</span>        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">52810</span>            item.SetDefaults(2428);</div>
+<div class="line"><span class="lineno">52811</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52812</span>        <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno">52813</span>            item.SetDefaults(2367);</div>
+<div class="line"><span class="lineno">52814</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52815</span>        <span class="keywordflow">case</span> 15:</div>
+<div class="line"><span class="lineno">52816</span>            item.SetDefaults(2368);</div>
+<div class="line"><span class="lineno">52817</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52818</span>        <span class="keywordflow">case</span> 20:</div>
+<div class="line"><span class="lineno">52819</span>            item.SetDefaults(2369);</div>
+<div class="line"><span class="lineno">52820</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52821</span>        <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno">52822</span>            item.SetDefaults(3031);</div>
+<div class="line"><span class="lineno">52823</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52824</span>        <span class="keywordflow">case</span> 30:</div>
+<div class="line"><span class="lineno">52825</span>            item.SetDefaults(2294);</div>
+<div class="line"><span class="lineno">52826</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52827</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">52828</span>        {</div>
+<div class="line"><span class="lineno">52829</span>            <span class="keywordflow">if</span> (questItemType == 2451 &amp;&amp; Main.hardMode)</div>
+<div class="line"><span class="lineno">52830</span>            {</div>
+<div class="line"><span class="lineno">52831</span>                item.SetDefaults((Main.rand.Next(2) == 0) ? 5303 : 5302);</div>
+<div class="line"><span class="lineno">52832</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52833</span>            }</div>
+<div class="line"><span class="lineno">52834</span>            <span class="keywordflow">if</span> (questItemType == 2451 &amp;&amp; !Main.hardMode &amp;&amp; Main.rand.Next(2) == 0)</div>
+<div class="line"><span class="lineno">52835</span>            {</div>
+<div class="line"><span class="lineno">52836</span>                item.SetDefaults((Main.rand.Next(2) == 0) ? 5303 : 5302);</div>
+<div class="line"><span class="lineno">52837</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52838</span>            }</div>
+<div class="line"><span class="lineno">52839</span>            <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> { 2373, 2374, 2375, 3120, 3037, 3096, 5139 };</div>
+<div class="line"><span class="lineno">52840</span>            <span class="keywordtype">float</span> num = 1f;</div>
+<div class="line"><span class="lineno">52841</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><span class="lineno">52842</span>            {</div>
+<div class="line"><span class="lineno">52843</span>                num *= 1f - 1f / (float)(<span class="keywordtype">int</span>)(40f * rarityReduction);</div>
+<div class="line"><span class="lineno">52844</span>            }</div>
+<div class="line"><span class="lineno">52845</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++)</div>
+<div class="line"><span class="lineno">52846</span>            {</div>
+<div class="line"><span class="lineno">52847</span>                num *= 1f - 1f / (float)(<span class="keywordtype">int</span>)(30f * rarityReduction);</div>
+<div class="line"><span class="lineno">52848</span>            }</div>
+<div class="line"><span class="lineno">52849</span>            num *= 1f - 1f / (float)(<span class="keywordtype">int</span>)(25f * rarityReduction);</div>
+<div class="line"><span class="lineno">52850</span>            <span class="keywordtype">float</span> num2 = 1f - num;</div>
+<div class="line"><span class="lineno">52851</span>            num2 *= 0.8f;</div>
+<div class="line"><span class="lineno">52852</span>            <span class="keywordflow">if</span> (questsDone &gt; 75 &amp;&amp; Main.rand.Next((<span class="keywordtype">int</span>)(250f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52853</span>            {</div>
+<div class="line"><span class="lineno">52854</span>                item.SetDefaults(2294);</div>
+<div class="line"><span class="lineno">52855</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52856</span>            }</div>
+<div class="line"><span class="lineno">52857</span>            <span class="keywordflow">if</span> (Main.hardMode &amp;&amp; questsDone &gt; 25 &amp;&amp; Main.rand.Next((<span class="keywordtype">int</span>)(100f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52858</span>            {</div>
+<div class="line"><span class="lineno">52859</span>                item.SetDefaults(2422);</div>
+<div class="line"><span class="lineno">52860</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52861</span>            }</div>
+<div class="line"><span class="lineno">52862</span>            <span class="keywordflow">if</span> (Main.hardMode &amp;&amp; questsDone &gt; 10 &amp;&amp; Main.rand.Next((<span class="keywordtype">int</span>)(70f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52863</span>            {</div>
+<div class="line"><span class="lineno">52864</span>                item.SetDefaults(2494);</div>
+<div class="line"><span class="lineno">52865</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52866</span>            }</div>
+<div class="line"><span class="lineno">52867</span>            <span class="keywordflow">if</span> (questsDone &gt; 10 &amp;&amp; Main.rand.Next((<span class="keywordtype">int</span>)(70f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52868</span>            {</div>
+<div class="line"><span class="lineno">52869</span>                item.SetDefaults(3031);</div>
+<div class="line"><span class="lineno">52870</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52871</span>            }</div>
+<div class="line"><span class="lineno">52872</span>            <span class="keywordflow">if</span> (questsDone &gt; 10 &amp;&amp; Main.rand.Next((<span class="keywordtype">int</span>)(70f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52873</span>            {</div>
+<div class="line"><span class="lineno">52874</span>                item.SetDefaults(3032);</div>
+<div class="line"><span class="lineno">52875</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52876</span>            }</div>
+<div class="line"><span class="lineno">52877</span>            <span class="keywordflow">if</span> (Main.rand.Next((<span class="keywordtype">int</span>)(80f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52878</span>            {</div>
+<div class="line"><span class="lineno">52879</span>                item.SetDefaults(3183);</div>
+<div class="line"><span class="lineno">52880</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52881</span>            }</div>
+<div class="line"><span class="lineno">52882</span>            <span class="keywordflow">if</span> (Main.rand.Next((<span class="keywordtype">int</span>)(60f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52883</span>            {</div>
+<div class="line"><span class="lineno">52884</span>                item.SetDefaults(2360);</div>
+<div class="line"><span class="lineno">52885</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52886</span>            }</div>
+<div class="line"><span class="lineno">52887</span>            <span class="keywordflow">if</span> (Main.rand.Next((<span class="keywordtype">int</span>)(60f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52888</span>            {</div>
+<div class="line"><span class="lineno">52889</span>                item.SetDefaults(4067);</div>
+<div class="line"><span class="lineno">52890</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52891</span>            }</div>
+<div class="line"><span class="lineno">52892</span>            <span class="keywordflow">if</span> (Main.rand.Next((<span class="keywordtype">int</span>)(80f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52893</span>            {</div>
+<div class="line"><span class="lineno">52894</span>                item.SetDefaults(2417);</div>
+<div class="line"><span class="lineno">52895</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52896</span>            }</div>
+<div class="line"><span class="lineno">52897</span>            <span class="keywordflow">if</span> (Main.rand.Next((<span class="keywordtype">int</span>)(80f * rarityReduction)) == 0)</div>
+<div class="line"><span class="lineno">52898</span>            {</div>
+<div class="line"><span class="lineno">52899</span>                item.SetDefaults(2498);</div>
+<div class="line"><span class="lineno">52900</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52901</span>            }</div>
+<div class="line"><span class="lineno">52902</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_ad8010cf45a0109d929708699297b65a5.html#ad8010cf45a0109d929708699297b65a5">DropAnglerAccByMissing</a>(list, num2, out var botheredRollingForADrop, out var itemIdToDrop))</div>
+<div class="line"><span class="lineno">52903</span>            {</div>
+<div class="line"><span class="lineno">52904</span>                item.SetDefaults(itemIdToDrop);</div>
+<div class="line"><span class="lineno">52905</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52906</span>            }</div>
+<div class="line"><span class="lineno">52907</span>            <span class="keywordflow">if</span> (!botheredRollingForADrop &amp;&amp; Main.rand.NextDouble() &lt; (double)num2)</div>
+<div class="line"><span class="lineno">52908</span>            {</div>
+<div class="line"><span class="lineno">52909</span>                <span class="keywordtype">int</span> defaults = Utils.SelectRandom(Main.rand, list.ToArray());</div>
+<div class="line"><span class="lineno">52910</span>                item.SetDefaults(defaults);</div>
+<div class="line"><span class="lineno">52911</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52912</span>            }</div>
+<div class="line"><span class="lineno">52913</span>            <span class="keywordflow">switch</span> (Main.rand.Next(3))</div>
+<div class="line"><span class="lineno">52914</span>            {</div>
+<div class="line"><span class="lineno">52915</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">52916</span>                item.SetDefaults(2354);</div>
+<div class="line"><span class="lineno">52917</span>                item.stack = Main.rand.Next(2, 6);</div>
+<div class="line"><span class="lineno">52918</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52919</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">52920</span>                item.SetDefaults(2355);</div>
+<div class="line"><span class="lineno">52921</span>                item.stack = Main.rand.Next(2, 6);</div>
+<div class="line"><span class="lineno">52922</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52923</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">52924</span>                item.SetDefaults(2356);</div>
+<div class="line"><span class="lineno">52925</span>                item.stack = Main.rand.Next(2, 6);</div>
+<div class="line"><span class="lineno">52926</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52927</span>            }</div>
+<div class="line"><span class="lineno">52928</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">52929</span>        }</div>
+<div class="line"><span class="lineno">52930</span>        }</div>
+<div class="line"><span class="lineno">52931</span>        item.position = base.Center;</div>
+<div class="line"><span class="lineno">52932</span>        Item item2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">GetItem</a>(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>, item, anglerRewardSettings);</div>
+<div class="line"><span class="lineno">52933</span>        <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">52934</span>        {</div>
+<div class="line"><span class="lineno">52935</span>            <span class="keywordtype">int</span> number = Item.NewItem(source, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, item2.type, item2.stack, noBroadcast: false, 0, noGrabDelay: true);</div>
+<div class="line"><span class="lineno">52936</span>            <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">52937</span>            {</div>
+<div class="line"><span class="lineno">52938</span>                NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number, 1f);</div>
+<div class="line"><span class="lineno">52939</span>            }</div>
+<div class="line"><span class="lineno">52940</span>        }</div>
+<div class="line"><span class="lineno">52941</span>        <span class="keywordflow">if</span> (item.type == 2417)</div>
+<div class="line"><span class="lineno">52942</span>        {</div>
+<div class="line"><span class="lineno">52943</span>            Item item3 = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">52944</span>            Item item4 = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">52945</span>            item3.SetDefaults(2418);</div>
+<div class="line"><span class="lineno">52946</span>            item3.position = base.Center;</div>
+<div class="line"><span class="lineno">52947</span>            item2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">GetItem</a>(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>, item3, anglerRewardSettings);</div>
+<div class="line"><span class="lineno">52948</span>            <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">52949</span>            {</div>
+<div class="line"><span class="lineno">52950</span>                <span class="keywordtype">int</span> number2 = Item.NewItem(source, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, item2.type, item2.stack, noBroadcast: false, 0, noGrabDelay: true);</div>
+<div class="line"><span class="lineno">52951</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">52952</span>                {</div>
+<div class="line"><span class="lineno">52953</span>                    NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number2, 1f);</div>
+<div class="line"><span class="lineno">52954</span>                }</div>
+<div class="line"><span class="lineno">52955</span>            }</div>
+<div class="line"><span class="lineno">52956</span>            item4.SetDefaults(2419);</div>
+<div class="line"><span class="lineno">52957</span>            item4.position = base.Center;</div>
+<div class="line"><span class="lineno">52958</span>            item2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">GetItem</a>(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>, item4, anglerRewardSettings);</div>
+<div class="line"><span class="lineno">52959</span>            <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">52960</span>            {</div>
+<div class="line"><span class="lineno">52961</span>                <span class="keywordtype">int</span> number3 = Item.NewItem(source, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, item2.type, item2.stack, noBroadcast: false, 0, noGrabDelay: true);</div>
+<div class="line"><span class="lineno">52962</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">52963</span>                {</div>
+<div class="line"><span class="lineno">52964</span>                    NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number3, 1f);</div>
+<div class="line"><span class="lineno">52965</span>                }</div>
+<div class="line"><span class="lineno">52966</span>            }</div>
+<div class="line"><span class="lineno">52967</span>        }</div>
+<div class="line"><span class="lineno">52968</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">52969</span>        {</div>
+<div class="line"><span class="lineno">52970</span>            <span class="keywordflow">if</span> (item.type != 2498)</div>
+<div class="line"><span class="lineno">52971</span>            {</div>
+<div class="line"><span class="lineno">52972</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">52973</span>            }</div>
+<div class="line"><span class="lineno">52974</span>            Item item5 = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">52975</span>            Item item6 = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">52976</span>            item5.SetDefaults(2499);</div>
+<div class="line"><span class="lineno">52977</span>            item5.position = base.Center;</div>
+<div class="line"><span class="lineno">52978</span>            item2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">GetItem</a>(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>, item5, anglerRewardSettings);</div>
+<div class="line"><span class="lineno">52979</span>            <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">52980</span>            {</div>
+<div class="line"><span class="lineno">52981</span>                <span class="keywordtype">int</span> number4 = Item.NewItem(source, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, item2.type, item2.stack, noBroadcast: false, 0, noGrabDelay: true);</div>
+<div class="line"><span class="lineno">52982</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">52983</span>                {</div>
+<div class="line"><span class="lineno">52984</span>                    NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number4, 1f);</div>
+<div class="line"><span class="lineno">52985</span>                }</div>
+<div class="line"><span class="lineno">52986</span>            }</div>
+<div class="line"><span class="lineno">52987</span>            item6.SetDefaults(2500);</div>
+<div class="line"><span class="lineno">52988</span>            item6.position = base.Center;</div>
+<div class="line"><span class="lineno">52989</span>            item2 = <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">GetItem</a>(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>, item6, anglerRewardSettings);</div>
+<div class="line"><span class="lineno">52990</span>            <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">52991</span>            {</div>
+<div class="line"><span class="lineno">52992</span>                <span class="keywordtype">int</span> number5 = Item.NewItem(source, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, item2.type, item2.stack, noBroadcast: false, 0, noGrabDelay: true);</div>
+<div class="line"><span class="lineno">52993</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">52994</span>                {</div>
+<div class="line"><span class="lineno">52995</span>                    NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number5, 1f);</div>
+<div class="line"><span class="lineno">52996</span>                }</div>
+<div class="line"><span class="lineno">52997</span>            }</div>
+<div class="line"><span class="lineno">52998</span>        }</div>
+<div class="line"><span class="lineno">52999</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0_html_a3a7ebeb86e906703ff9dbc377db773b0"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">Terraria.Player.GetItem</a></div><div class="ttdeci">Item GetItem(int plr, Item newItem, GetItemSettings settings)</div><div class="ttdef"><b>Definition</b> Player.cs:37130</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ad8010cf45a0109d929708699297b65a5_html_ad8010cf45a0109d929708699297b65a5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ad8010cf45a0109d929708699297b65a5.html#ad8010cf45a0109d929708699297b65a5">Terraria.Player.DropAnglerAccByMissing</a></div><div class="ttdeci">bool DropAnglerAccByMissing(List&lt; int &gt; itemIdsOfAccsWeWant, float totalChance, out bool botheredRollingForADrop, out int itemIdToDrop)</div><div class="ttdef"><b>Definition</b> Player.cs:53154</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_aed4094d6ca8c22a6e28257fc52a9972f.html#aed4094d6ca8c22a6e28257fc52a9972f">Terraria.Main.hardMode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac305c60065e38f1ae87d49fb1a56dae4.html#ac305c60065e38f1ae87d49fb1a56dae4">Terraria.Utilities.UnifiedRandom.NextDouble()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

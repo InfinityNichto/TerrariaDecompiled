@@ -121,6 +121,60 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_abb5fee6de1c62fe46982a2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">33179</span>    {</div>
+<div class="line"><span class="lineno">33180</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X + (<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a> * 0.5 &gt; (<span class="keywordtype">double</span>)itemToPickUp.position.X + (<span class="keywordtype">double</span>)itemToPickUp.width * 0.5)</div>
+<div class="line"><span class="lineno">33181</span>        {</div>
+<div class="line"><span class="lineno">33182</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.X &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007.html#a204fd07677dc3635f22ecf8db16ea007">itemGrabSpeedMax</a> + <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X)</div>
+<div class="line"><span class="lineno">33183</span>            {</div>
+<div class="line"><span class="lineno">33184</span>                itemToPickUp.velocity.X += <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a>;</div>
+<div class="line"><span class="lineno">33185</span>            }</div>
+<div class="line"><span class="lineno">33186</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.X &lt; 0f)</div>
+<div class="line"><span class="lineno">33187</span>            {</div>
+<div class="line"><span class="lineno">33188</span>                itemToPickUp.velocity.X += <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a> * xPullSpeed;</div>
+<div class="line"><span class="lineno">33189</span>            }</div>
+<div class="line"><span class="lineno">33190</span>        }</div>
+<div class="line"><span class="lineno">33191</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">33192</span>        {</div>
+<div class="line"><span class="lineno">33193</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.X &gt; 0f - <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007.html#a204fd07677dc3635f22ecf8db16ea007">itemGrabSpeedMax</a> + <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X)</div>
+<div class="line"><span class="lineno">33194</span>            {</div>
+<div class="line"><span class="lineno">33195</span>                itemToPickUp.velocity.X -= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a>;</div>
+<div class="line"><span class="lineno">33196</span>            }</div>
+<div class="line"><span class="lineno">33197</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.X &gt; 0f)</div>
+<div class="line"><span class="lineno">33198</span>            {</div>
+<div class="line"><span class="lineno">33199</span>                itemToPickUp.velocity.X -= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a> * xPullSpeed;</div>
+<div class="line"><span class="lineno">33200</span>            }</div>
+<div class="line"><span class="lineno">33201</span>        }</div>
+<div class="line"><span class="lineno">33202</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y + (<span class="keywordtype">double</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a> * 0.5 &gt; (<span class="keywordtype">double</span>)itemToPickUp.position.Y + (<span class="keywordtype">double</span>)itemToPickUp.height * 0.5)</div>
+<div class="line"><span class="lineno">33203</span>        {</div>
+<div class="line"><span class="lineno">33204</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.Y &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007.html#a204fd07677dc3635f22ecf8db16ea007">itemGrabSpeedMax</a>)</div>
+<div class="line"><span class="lineno">33205</span>            {</div>
+<div class="line"><span class="lineno">33206</span>                itemToPickUp.velocity.Y += <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a>;</div>
+<div class="line"><span class="lineno">33207</span>            }</div>
+<div class="line"><span class="lineno">33208</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.Y &lt; 0f)</div>
+<div class="line"><span class="lineno">33209</span>            {</div>
+<div class="line"><span class="lineno">33210</span>                itemToPickUp.velocity.Y += <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a> * xPullSpeed;</div>
+<div class="line"><span class="lineno">33211</span>            }</div>
+<div class="line"><span class="lineno">33212</span>        }</div>
+<div class="line"><span class="lineno">33213</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">33214</span>        {</div>
+<div class="line"><span class="lineno">33215</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.Y &gt; 0f - <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007.html#a204fd07677dc3635f22ecf8db16ea007">itemGrabSpeedMax</a>)</div>
+<div class="line"><span class="lineno">33216</span>            {</div>
+<div class="line"><span class="lineno">33217</span>                itemToPickUp.velocity.Y -= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a>;</div>
+<div class="line"><span class="lineno">33218</span>            }</div>
+<div class="line"><span class="lineno">33219</span>            <span class="keywordflow">if</span> (itemToPickUp.velocity.Y &gt; 0f)</div>
+<div class="line"><span class="lineno">33220</span>            {</div>
+<div class="line"><span class="lineno">33221</span>                itemToPickUp.velocity.Y -= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">itemGrabSpeed</a> * xPullSpeed;</div>
+<div class="line"><span class="lineno">33222</span>            }</div>
+<div class="line"><span class="lineno">33223</span>        }</div>
+<div class="line"><span class="lineno">33224</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007_html_a204fd07677dc3635f22ecf8db16ea007"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a204fd07677dc3635f22ecf8db16ea007.html#a204fd07677dc3635f22ecf8db16ea007">Terraria.Player.itemGrabSpeedMax</a></div><div class="ttdeci">static float itemGrabSpeedMax</div><div class="ttdef"><b>Definition</b> Player.cs:2123</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c_html_a4952b852c3ebc65c61bb4f358fdf952c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a4952b852c3ebc65c61bb4f358fdf952c.html#a4952b852c3ebc65c61bb4f358fdf952c">Terraria.Player.itemGrabSpeed</a></div><div class="ttdeci">static float itemGrabSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2121</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
 
 </div>
 </div>

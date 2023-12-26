@@ -126,6 +126,62 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a711c3aa51e239d45d9
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">38571</span>    {</div>
+<div class="line"><span class="lineno">38572</span>        <span class="keywordtype">int</span> num = master.bodyFrame.Height;</div>
+<div class="line"><span class="lineno">38573</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">38574</span>        {</div>
+<div class="line"><span class="lineno">38575</span>            num = 1;</div>
+<div class="line"><span class="lineno">38576</span>        }</div>
+<div class="line"><span class="lineno">38577</span>        Vector2 vector = Main.OffsetsPlayerHeadgear[master.bodyFrame.Y / num];</div>
+<div class="line"><span class="lineno">38578</span>        vector.Y -= 2f;</div>
+<div class="line"><span class="lineno">38579</span>        <span class="keywordtype">float</span> num2 = master.miscCounterNormalized * 2f;</div>
+<div class="line"><span class="lineno">38580</span>        <span class="keywordtype">int</span> num3 = stackedIndex / 4;</div>
+<div class="line"><span class="lineno">38581</span>        <span class="keywordtype">int</span> num4 = totalIndexes / 4;</div>
+<div class="line"><span class="lineno">38582</span>        <span class="keywordflow">if</span> (totalIndexes % 4 &gt; 0)</div>
+<div class="line"><span class="lineno">38583</span>        {</div>
+<div class="line"><span class="lineno">38584</span>            num4++;</div>
+<div class="line"><span class="lineno">38585</span>        }</div>
+<div class="line"><span class="lineno">38586</span>        <span class="keywordtype">int</span> num5 = (totalIndexes - num3 * 4) % 4;</div>
+<div class="line"><span class="lineno">38587</span>        <span class="keywordflow">if</span> (num5 == 0)</div>
+<div class="line"><span class="lineno">38588</span>        {</div>
+<div class="line"><span class="lineno">38589</span>            num5 = 4;</div>
+<div class="line"><span class="lineno">38590</span>        }</div>
+<div class="line"><span class="lineno">38591</span>        <span class="keywordflow">if</span> (num4 - 1 != num3)</div>
+<div class="line"><span class="lineno">38592</span>        {</div>
+<div class="line"><span class="lineno">38593</span>            num5 = 4;</div>
+<div class="line"><span class="lineno">38594</span>        }</div>
+<div class="line"><span class="lineno">38595</span>        <span class="keywordtype">int</span> num6 = stackedIndex % num5;</div>
+<div class="line"><span class="lineno">38596</span>        <span class="keywordtype">float</span> num7 = (float)num6 / (<span class="keywordtype">float</span>)num5;</div>
+<div class="line"><span class="lineno">38597</span>        num2 += (float)num3 / 8f;</div>
+<div class="line"><span class="lineno">38598</span>        <span class="keywordflow">if</span> (stackedIndex &gt;= (num4 - 1) * 4 &amp;&amp; num3 &gt; 0)</div>
+<div class="line"><span class="lineno">38599</span>        {</div>
+<div class="line"><span class="lineno">38600</span>            num2 = 0f;</div>
+<div class="line"><span class="lineno">38601</span>            <span class="keywordflow">switch</span> (num5)</div>
+<div class="line"><span class="lineno">38602</span>            {</div>
+<div class="line"><span class="lineno">38603</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">38604</span>                num7 = 0f;</div>
+<div class="line"><span class="lineno">38605</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">38606</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">38607</span>                num7 = 0.25f + (float)num6 * 0.5f;</div>
+<div class="line"><span class="lineno">38608</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">38609</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">38610</span>                num7 = (float)(num6 - 1) / 6f;</div>
+<div class="line"><span class="lineno">38611</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">38612</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">38613</span>                num7 = ((float)num6 - 1.5f) / 6f;</div>
+<div class="line"><span class="lineno">38614</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">38615</span>            }</div>
+<div class="line"><span class="lineno">38616</span>        }</div>
+<div class="line"><span class="lineno">38617</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(0f, -8 - 12 * num3).RotatedBy((num2 + num7) * ((<span class="keywordtype">float</span>)Math.PI * 2f));</div>
+<div class="line"><span class="lineno">38618</span>        vector += vector2 + <span class="keyword">new</span> Vector2(0f, master.gravDir * -40f);</div>
+<div class="line"><span class="lineno">38619</span>        Vector2 mountedCenter = master.MountedCenter;</div>
+<div class="line"><span class="lineno">38620</span>        _ = master.direction;</div>
+<div class="line"><span class="lineno">38621</span>        Vector2 vec = mountedCenter + <span class="keyword">new</span> Vector2(0f, master.gravDir * -21f) + vector;</div>
+<div class="line"><span class="lineno">38622</span>        vec.Y += master.gfxOffY;</div>
+<div class="line"><span class="lineno">38623</span>        <span class="keywordflow">return</span> vec.Floor();</div>
+<div class="line"><span class="lineno">38624</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_aacc80d29ae947e7d0b276bae01d1eaab.html#aacc80d29ae947e7d0b276bae01d1eaab">Terraria.Player.bodyFrame</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab92102c8caf3df3854d6bb70b179c10e.html#ab92102c8caf3df3854d6bb70b179c10e">Terraria.Player.gfxOffY</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a6334845df797462c030f12272454ed5c.html#a6334845df797462c030f12272454ed5c">Terraria.Player.MountedCenter</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47da456446753a521a0dcbdb5750254c.html#a47da456446753a521a0dcbdb5750254c">Terraria.Main.OffsetsPlayerHeadgear</a>.</p>
 
 </div>
 </div>

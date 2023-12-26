@@ -117,6 +117,51 @@ $(function(){initNavTree('d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_a8735e6
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_ad5ff344ef73b6aa60fa6ed2986f66976.html#ad5ff344ef73b6aa60fa6ed2986f66976">_stream</a> = stream;</div>
+<div class="line"><span class="lineno">   19</span>        BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(stream);</div>
+<div class="line"><span class="lineno">   20</span>        binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   21</span>        binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   22</span>        binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   23</span>        AudioChannels channels = AudioChannels.Mono;</div>
+<div class="line"><span class="lineno">   24</span>        uint sampleRate = 0u;</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">while</span> (!flag &amp;&amp; num &lt; 10)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            uint num2 = binaryReader.ReadUInt32();</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">int</span> chunkSize = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">switch</span> (num2)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">case</span> 1263424842u:</div>
+<div class="line"><span class="lineno">   34</span>                <a class="code hl_function" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_aabe44baf6083e7970aeefd00cab2fca7.html#aabe44baf6083e7970aeefd00cab2fca7">SkipJunk</a>(binaryReader, chunkSize);</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">case</span> 544501094u:</div>
+<div class="line"><span class="lineno">   37</span>                binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">   38</span>                channels = (AudioChannels)binaryReader.ReadUInt16();</div>
+<div class="line"><span class="lineno">   39</span>                sampleRate = binaryReader.ReadUInt32();</div>
+<div class="line"><span class="lineno">   40</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   41</span>                binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">   42</span>                binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">   43</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                num++;</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   52</span>        binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_a8f88330927ae952847159de2f0a9044e.html#a8f88330927ae952847159de2f0a9044e">_streamContentStartIndex</a> = stream.Position;</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="../../db/d4c/classTerraria_1_1Audio_1_1ASoundEffectBasedAudioTrack_a6cff874bd8969a5a018bf3108e1366b8.html#a6cff874bd8969a5a018bf3108e1366b8">CreateSoundEffect</a>((<span class="keywordtype">int</span>)sampleRate, channels);</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1ASoundEffectBasedAudioTrack_a6cff874bd8969a5a018bf3108e1366b8_html_a6cff874bd8969a5a018bf3108e1366b8"><div class="ttname"><a href="../../db/d4c/classTerraria_1_1Audio_1_1ASoundEffectBasedAudioTrack_a6cff874bd8969a5a018bf3108e1366b8.html#a6cff874bd8969a5a018bf3108e1366b8">Terraria.Audio.ASoundEffectBasedAudioTrack.CreateSoundEffect</a></div><div class="ttdeci">void CreateSoundEffect(int sampleRate, AudioChannels channels)</div><div class="ttdef"><b>Definition</b> ASoundEffectBasedAudioTrack.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1WAVAudioTrack_a8f88330927ae952847159de2f0a9044e_html_a8f88330927ae952847159de2f0a9044e"><div class="ttname"><a href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_a8f88330927ae952847159de2f0a9044e.html#a8f88330927ae952847159de2f0a9044e">Terraria.Audio.WAVAudioTrack._streamContentStartIndex</a></div><div class="ttdeci">long _streamContentStartIndex</div><div class="ttdef"><b>Definition</b> WAVAudioTrack.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1WAVAudioTrack_aabe44baf6083e7970aeefd00cab2fca7_html_aabe44baf6083e7970aeefd00cab2fca7"><div class="ttname"><a href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_aabe44baf6083e7970aeefd00cab2fca7.html#aabe44baf6083e7970aeefd00cab2fca7">Terraria.Audio.WAVAudioTrack.SkipJunk</a></div><div class="ttdeci">static void SkipJunk(BinaryReader reader, int chunkSize)</div><div class="ttdef"><b>Definition</b> WAVAudioTrack.cs:57</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1WAVAudioTrack_ad5ff344ef73b6aa60fa6ed2986f66976_html_ad5ff344ef73b6aa60fa6ed2986f66976"><div class="ttname"><a href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_ad5ff344ef73b6aa60fa6ed2986f66976.html#ad5ff344ef73b6aa60fa6ed2986f66976">Terraria.Audio.WAVAudioTrack._stream</a></div><div class="ttdeci">Stream _stream</div><div class="ttdef"><b>Definition</b> WAVAudioTrack.cs:10</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_ad5ff344ef73b6aa60fa6ed2986f66976.html#ad5ff344ef73b6aa60fa6ed2986f66976">Terraria.Audio.WAVAudioTrack._stream</a>, <a class="el" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_a8f88330927ae952847159de2f0a9044e.html#a8f88330927ae952847159de2f0a9044e">Terraria.Audio.WAVAudioTrack._streamContentStartIndex</a>, <a class="el" href="../../db/d4c/classTerraria_1_1Audio_1_1ASoundEffectBasedAudioTrack_a6cff874bd8969a5a018bf3108e1366b8.html#a6cff874bd8969a5a018bf3108e1366b8">Terraria.Audio.ASoundEffectBasedAudioTrack.CreateSoundEffect()</a>, and <a class="el" href="../../d6/dbe/classTerraria_1_1Audio_1_1WAVAudioTrack_aabe44baf6083e7970aeefd00cab2fca7.html#aabe44baf6083e7970aeefd00cab2fca7">Terraria.Audio.WAVAudioTrack.SkipJunk()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

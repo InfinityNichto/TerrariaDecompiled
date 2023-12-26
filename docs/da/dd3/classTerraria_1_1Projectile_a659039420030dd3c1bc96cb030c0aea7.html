@@ -117,6 +117,49 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a659039420030dd3c1b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">59398</span>    {</div>
+<div class="line"><span class="lineno">59399</span>        <span class="keywordtype">int</span> num = 6;</div>
+<div class="line"><span class="lineno">59400</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(base.Center.X / 16f);</div>
+<div class="line"><span class="lineno">59401</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(base.Center.Y / 16f);</div>
+<div class="line"><span class="lineno">59402</span>        <span class="keywordtype">int</span> num4 = num2 - num;</div>
+<div class="line"><span class="lineno">59403</span>        <span class="keywordtype">int</span> num5 = num2 + num;</div>
+<div class="line"><span class="lineno">59404</span>        <span class="keywordtype">int</span> num6 = num3 - num;</div>
+<div class="line"><span class="lineno">59405</span>        <span class="keywordtype">int</span> num7 = num3 + num;</div>
+<div class="line"><span class="lineno">59406</span>        <span class="keywordflow">if</span> (num4 &lt; 1)</div>
+<div class="line"><span class="lineno">59407</span>        {</div>
+<div class="line"><span class="lineno">59408</span>            num4 = 1;</div>
+<div class="line"><span class="lineno">59409</span>        }</div>
+<div class="line"><span class="lineno">59410</span>        <span class="keywordflow">if</span> (num5 &gt; Main.maxTilesX - 1)</div>
+<div class="line"><span class="lineno">59411</span>        {</div>
+<div class="line"><span class="lineno">59412</span>            num5 = Main.maxTilesX - 1;</div>
+<div class="line"><span class="lineno">59413</span>        }</div>
+<div class="line"><span class="lineno">59414</span>        <span class="keywordflow">if</span> (num6 &lt; 1)</div>
+<div class="line"><span class="lineno">59415</span>        {</div>
+<div class="line"><span class="lineno">59416</span>            num6 = 1;</div>
+<div class="line"><span class="lineno">59417</span>        }</div>
+<div class="line"><span class="lineno">59418</span>        <span class="keywordflow">if</span> (num7 &gt; Main.maxTilesY - 1)</div>
+<div class="line"><span class="lineno">59419</span>        {</div>
+<div class="line"><span class="lineno">59420</span>            num7 = Main.maxTilesY - 1;</div>
+<div class="line"><span class="lineno">59421</span>        }</div>
+<div class="line"><span class="lineno">59422</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num4; i &lt; num5; i++)</div>
+<div class="line"><span class="lineno">59423</span>        {</div>
+<div class="line"><span class="lineno">59424</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num6; j &lt; num7; j++)</div>
+<div class="line"><span class="lineno">59425</span>            {</div>
+<div class="line"><span class="lineno">59426</span>                <span class="keywordflow">if</span> (!Main.tile[i, j].active() &amp;&amp; Main.rand.Next(5) != 0 &amp;&amp; Math.Abs(i - num2) * Math.Abs(i - num2) + Math.Abs(j - num3) * Math.Abs(j - num3) &lt; num * num)</div>
+<div class="line"><span class="lineno">59427</span>                {</div>
+<div class="line"><span class="lineno">59428</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.PlaceTile(i, j, 51);</div>
+<div class="line"><span class="lineno">59429</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].active() &amp;&amp; Main.netMode == 2)</div>
+<div class="line"><span class="lineno">59430</span>                    {</div>
+<div class="line"><span class="lineno">59431</span>                        NetMessage.SendTileSquare(-1, i, j);</div>
+<div class="line"><span class="lineno">59432</span>                    }</div>
+<div class="line"><span class="lineno">59433</span>                }</div>
+<div class="line"><span class="lineno">59434</span>            }</div>
+<div class="line"><span class="lineno">59435</span>        }</div>
+<div class="line"><span class="lineno">59436</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

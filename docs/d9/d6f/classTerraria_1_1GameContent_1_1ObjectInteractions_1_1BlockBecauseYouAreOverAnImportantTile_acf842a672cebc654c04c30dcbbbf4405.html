@@ -119,6 +119,44 @@ $(function(){initNavTree('d9/d6f/classTerraria_1_1GameContent_1_1ObjectInteracti
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../db/d2c/interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractBlockReasonProvider_a6c30b567a8104550069e97844f8516f0.html#a6c30b567a8104550069e97844f8516f0">Terraria.GameContent.ObjectInteractions.ISmartInteractBlockReasonProvider</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">int</span> tileTargetX = <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a>.tileTargetX;</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">int</span> tileTargetY = <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a>.tileTargetY;</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(tileTargetX, tileTargetY, 10))</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[tileTargetX, tileTargetY];</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (tile.active())</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">switch</span> (tile.type)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">case</span> 334:</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">case</span> 395:</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">case</span> 410:</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">case</span> 455:</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">case</span> 471:</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">case</span> 480:</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">case</span> 509:</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">case</span> 520:</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">case</span> 657:</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">case</span> 658:</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5.html#ab3a2c85433bbbc43674f1add2165ebc5">Terraria.Player.tileTargetX</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447.html#a7fa0b7efa6d6b502a1349b843733e447">Terraria.Player.tileTargetY</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

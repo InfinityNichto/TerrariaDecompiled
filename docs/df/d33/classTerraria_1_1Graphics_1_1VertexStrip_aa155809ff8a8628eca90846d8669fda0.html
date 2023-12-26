@@ -121,6 +121,41 @@ $(function(){initNavTree('df/d33/classTerraria_1_1Graphics_1_1VertexStrip_aa1558
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">int</span> num = vertexPaidsAdded - 1;</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordtype">int</span> num2 = 6 + includeBacksides.ToInt() * 6;</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a5afd90a8b2ed1d7870f5ca2e9f2255ec.html#a5afd90a8b2ed1d7870f5ca2e9f2255ec">_indicesAmountCurrentlyMaintained</a> = num * num2);</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>.Length &lt; num3)</div>
+<div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            Array.Resize(ref <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>, num3);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keywordtype">short</span> num4 = 0; num4 &lt; num; num4++)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordtype">short</span> num5 = (short)(num4 * num2);</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordtype">int</span> num6 = num4 * 2;</div>
+<div class="line"><span class="lineno">  139</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5] = (short)num6;</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 1] = (short)(num6 + 1);</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 2] = (short)(num6 + 2);</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 3] = (short)(num6 + 2);</div>
+<div class="line"><span class="lineno">  143</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 4] = (short)(num6 + 1);</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 5] = (short)(num6 + 3);</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (includeBacksides)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 6] = (short)(num6 + 2);</div>
+<div class="line"><span class="lineno">  148</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 7] = (short)(num6 + 1);</div>
+<div class="line"><span class="lineno">  149</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 8] = (short)num6;</div>
+<div class="line"><span class="lineno">  150</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 9] = (short)(num6 + 2);</div>
+<div class="line"><span class="lineno">  151</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 10] = (short)(num6 + 3);</div>
+<div class="line"><span class="lineno">  152</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">_indices</a>[num5 + 11] = (short)(num6 + 1);</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_a5afd90a8b2ed1d7870f5ca2e9f2255ec_html_a5afd90a8b2ed1d7870f5ca2e9f2255ec"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a5afd90a8b2ed1d7870f5ca2e9f2255ec.html#a5afd90a8b2ed1d7870f5ca2e9f2255ec">Terraria.Graphics.VertexStrip._indicesAmountCurrentlyMaintained</a></div><div class="ttdeci">int _indicesAmountCurrentlyMaintained</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:40</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6_html_ae8111819734223a360971dd0d82852c6"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">Terraria.Graphics.VertexStrip._indices</a></div><div class="ttdeci">short[] _indices</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:38</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_ae8111819734223a360971dd0d82852c6.html#ae8111819734223a360971dd0d82852c6">Terraria.Graphics.VertexStrip._indices</a>, and <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a5afd90a8b2ed1d7870f5ca2e9f2255ec.html#a5afd90a8b2ed1d7870f5ca2e9f2255ec">Terraria.Graphics.VertexStrip._indicesAmountCurrentlyMaintained</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a8c9f1ab2728280d9e4fe256b25b603e8.html#a8c9f1ab2728280d9e4fe256b25b603e8">Terraria.Graphics.VertexStrip.PrepareStrip()</a>, and <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a2934723f94d7c640996b8971db48b06e.html#a2934723f94d7c640996b8971db48b06e">Terraria.Graphics.VertexStrip.PrepareStripWithProceduralPadding()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

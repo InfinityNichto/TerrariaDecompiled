@@ -117,6 +117,63 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a4f993f2a2702e79cc7
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">43779</span>    {</div>
+<div class="line"><span class="lineno">43780</span>        <span class="keywordtype">int</span> x = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)base.Center.X / 16;</div>
+<div class="line"><span class="lineno">43781</span>        <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)base.Center.Y / 16;</div>
+<div class="line"><span class="lineno">43782</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Tuple&lt;int, Point&gt;</a>&gt; list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Tuple&lt;int, Point&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">43783</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno">43784</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">43785</span>        {</div>
+<div class="line"><span class="lineno">43786</span>            Projectile projectile = Main.projectile[i];</div>
+<div class="line"><span class="lineno">43787</span>            <span class="keywordflow">if</span> (projectile.active &amp;&amp; projectile.owner == Main.myPlayer &amp;&amp; projectile.timeLeft &gt; 60 &amp;&amp; projectile.type == 820)</div>
+<div class="line"><span class="lineno">43788</span>            {</div>
+<div class="line"><span class="lineno">43789</span>                list.Add(<span class="keyword">new</span> Tuple&lt;int, Point&gt;(i, (projectile.Center + Vector2.UnitY * 16f).ToTileCoordinates()));</div>
+<div class="line"><span class="lineno">43790</span>            }</div>
+<div class="line"><span class="lineno">43791</span>        }</div>
+<div class="line"><span class="lineno">43792</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">43793</span>        {</div>
+<div class="line"><span class="lineno">43794</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">43795</span>        }</div>
+<div class="line"><span class="lineno">43796</span>        <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_aff61d79d40c9428fdbf7d291e61915d2.html#aff61d79d40c9428fdbf7d291e61915d2">GetFishingPondWidth</a>(x, num, out var minX, out var maxX);</div>
+<div class="line"><span class="lineno">43797</span>        Point point = <span class="keywordflow">default</span>(Point);</div>
+<div class="line"><span class="lineno">43798</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = minX; j &lt;= maxX; j++)</div>
+<div class="line"><span class="lineno">43799</span>        {</div>
+<div class="line"><span class="lineno">43800</span>            point.X = j;</div>
+<div class="line"><span class="lineno">43801</span>            <span class="keywordtype">int</span> num2 = num;</div>
+<div class="line"><span class="lineno">43802</span>            <span class="keywordflow">while</span> (Main.tile[j, num2].liquid &gt; 0 &amp;&amp; !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(j, num2) &amp;&amp; num2 &lt; Main.maxTilesY - 10)</div>
+<div class="line"><span class="lineno">43803</span>            {</div>
+<div class="line"><span class="lineno">43804</span>                num2 = (point.Y = num2 + 1);</div>
+<div class="line"><span class="lineno">43805</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num3 = list.Count - 1; num3 &gt;= 0; num3--)</div>
+<div class="line"><span class="lineno">43806</span>                {</div>
+<div class="line"><span class="lineno">43807</span>                    <span class="keywordflow">if</span> (list[num3].Item2 == point)</div>
+<div class="line"><span class="lineno">43808</span>                    {</div>
+<div class="line"><span class="lineno">43809</span>                        list2.Add(list[num3].Item1);</div>
+<div class="line"><span class="lineno">43810</span>                        list.RemoveAt(num3);</div>
+<div class="line"><span class="lineno">43811</span>                    }</div>
+<div class="line"><span class="lineno">43812</span>                }</div>
+<div class="line"><span class="lineno">43813</span>                <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">43814</span>                {</div>
+<div class="line"><span class="lineno">43815</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">43816</span>                }</div>
+<div class="line"><span class="lineno">43817</span>            }</div>
+<div class="line"><span class="lineno">43818</span>            <span class="keywordflow">if</span> (list.Count == 0)</div>
+<div class="line"><span class="lineno">43819</span>            {</div>
+<div class="line"><span class="lineno">43820</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">43821</span>            }</div>
+<div class="line"><span class="lineno">43822</span>        }</div>
+<div class="line"><span class="lineno">43823</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; list2.Count; k++)</div>
+<div class="line"><span class="lineno">43824</span>        {</div>
+<div class="line"><span class="lineno">43825</span>            Projectile obj = Main.projectile[list2[k]];</div>
+<div class="line"><span class="lineno">43826</span>            obj.ai[0] += 1f;</div>
+<div class="line"><span class="lineno">43827</span>            obj.netUpdate = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43828</span>        }</div>
+<div class="line"><span class="lineno">43829</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_aff61d79d40c9428fdbf7d291e61915d2_html_aff61d79d40c9428fdbf7d291e61915d2"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_aff61d79d40c9428fdbf7d291e61915d2.html#aff61d79d40c9428fdbf7d291e61915d2">Terraria.Projectile.GetFishingPondWidth</a></div><div class="ttdeci">static void GetFishingPondWidth(int x, int y, out int minX, out int maxX)</div><div class="ttdef"><b>Definition</b> Projectile.cs:18012</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a7f88be42a896409d3414e97f8039450a.html#a7f88be42a896409d3414e97f8039450a">Terraria.Projectile.timeLeft</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

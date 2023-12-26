@@ -121,6 +121,19 @@ $(function(){initNavTree('de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHel
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        position *= 10f;</div>
+<div class="line"><span class="lineno">   64</span>        currentTime %= 1f;</div>
+<div class="line"><span class="lineno">   65</span>        Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Math.Floor(position.X), (<span class="keywordtype">float</span>)Math.Floor(position.Y));</div>
+<div class="line"><span class="lineno">   66</span>        Point point = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>)vector.X, (<span class="keywordtype">int</span>)vector.Y);</div>
+<div class="line"><span class="lineno">   67</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(position.X - vector.X, position.Y - vector.Y);</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> value = MathHelper.Lerp(<a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">GetDynamicNoiseInternal</a>(point.X, point.Y, currentTime), <a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">GetDynamicNoiseInternal</a>(point.X, point.Y + 1, currentTime), vector2.Y);</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">float</span> value2 = MathHelper.Lerp(<a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">GetDynamicNoiseInternal</a>(point.X + 1, point.Y, currentTime), <a class="code hl_function" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">GetDynamicNoiseInternal</a>(point.X + 1, point.Y + 1, currentTime), vector2.Y);</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> MathHelper.Lerp(value, value2, vector2.X);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b_html_ae12e1990a91e08849817a016ea55805b"><div class="ttname"><a href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">Terraria.GameContent.RGB.NoiseHelper.GetDynamicNoiseInternal</a></div><div class="ttdeci">static float GetDynamicNoiseInternal(int x, int y, float wrappedTime)</div><div class="ttdef"><b>Definition</b> NoiseHelper.cs:47</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/dbd/classTerraria_1_1GameContent_1_1RGB_1_1NoiseHelper_ae12e1990a91e08849817a016ea55805b.html#ae12e1990a91e08849817a016ea55805b">Terraria.GameContent.RGB.NoiseHelper.GetDynamicNoiseInternal()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

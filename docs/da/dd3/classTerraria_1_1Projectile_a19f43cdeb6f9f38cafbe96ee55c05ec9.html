@@ -131,6 +131,35 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a19f43cdeb6f9f38caf
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">42214</span>    {</div>
+<div class="line"><span class="lineno">42215</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>];</div>
+<div class="line"><span class="lineno">42216</span>        <span class="keywordtype">bool</span> num = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">type</a> == 755;</div>
+<div class="line"><span class="lineno">42217</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">type</a> == 946;</div>
+<div class="line"><span class="lineno">42218</span>        idleRotation = 0f;</div>
+<div class="line"><span class="lineno">42219</span>        idleSpot = Vector2.Zero;</div>
+<div class="line"><span class="lineno">42220</span>        <span class="keywordflow">if</span> (num)</div>
+<div class="line"><span class="lineno">42221</span>        {</div>
+<div class="line"><span class="lineno">42222</span>            <span class="keywordtype">float</span> num2 = ((float)totalIndexes - 1f) / 2f;</div>
+<div class="line"><span class="lineno">42223</span>            idleSpot = player.Center + -Vector2.UnitY.RotatedBy(4.3982296f / (<span class="keywordtype">float</span>)totalIndexes * ((float)stackedIndex - num2)) * 40f;</div>
+<div class="line"><span class="lineno">42224</span>            idleRotation = 0f;</div>
+<div class="line"><span class="lineno">42225</span>        }</div>
+<div class="line"><span class="lineno">42226</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">42227</span>        {</div>
+<div class="line"><span class="lineno">42228</span>            <span class="keywordtype">int</span> num3 = stackedIndex + 1;</div>
+<div class="line"><span class="lineno">42229</span>            idleRotation = (float)num3 * ((<span class="keywordtype">float</span>)Math.PI * 2f) * (1f / 60f) * (float)player.direction + (<span class="keywordtype">float</span>)Math.PI / 2f;</div>
+<div class="line"><span class="lineno">42230</span>            idleRotation = MathHelper.WrapAngle(idleRotation);</div>
+<div class="line"><span class="lineno">42231</span>            <span class="keywordtype">int</span> num4 = num3 % totalIndexes;</div>
+<div class="line"><span class="lineno">42232</span>            Vector2 vector = <span class="keyword">new</span> Vector2(0f, 0.5f).RotatedBy((player.miscCounterNormalized * (2f + (<span class="keywordtype">float</span>)num4) + (<span class="keywordtype">float</span>)num4 * 0.5f + (<span class="keywordtype">float</span>)player.direction * 1.3f) * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 4f;</div>
+<div class="line"><span class="lineno">42233</span>            idleSpot = idleRotation.ToRotationVector2() * 10f + player.MountedCenter + <span class="keyword">new</span> Vector2(player.direction * (num3 * -6 - 16), player.gravDir * -15f);</div>
+<div class="line"><span class="lineno">42234</span>            idleSpot += vector;</div>
+<div class="line"><span class="lineno">42235</span>            idleRotation += (float)Math.PI / 2f;</div>
+<div class="line"><span class="lineno">42236</span>        }</div>
+<div class="line"><span class="lineno">42237</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50_html_a71cc9e5e6c3b27c751ed856976c4bc50"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition</b> Projectile.cs:108</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_abb42a0a38aeffc95371fa40ddc44183c.html#abb42a0a38aeffc95371fa40ddc44183c">Terraria.Player.miscCounterNormalized</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>.</p>
 
 </div>
 </div>

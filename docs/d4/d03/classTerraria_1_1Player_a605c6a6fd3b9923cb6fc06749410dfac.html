@@ -136,6 +136,44 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a605c6a6fd3b9923cb6fc06
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">39647</span>    {</div>
+<div class="line"><span class="lineno">39648</span>        <span class="keywordtype">byte</span> paint = targetItem.paint;</div>
+<div class="line"><span class="lineno">39649</span>        <span class="keywordflow">if</span> (paintingAWall)</div>
+<div class="line"><span class="lineno">39650</span>        {</div>
+<div class="line"><span class="lineno">39651</span>            <span class="keywordflow">if</span> (Main.tile[x, y].wallColor() != paint &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.paintWall(x, y, paint, broadCast: true))</div>
+<div class="line"><span class="lineno">39652</span>            {</div>
+<div class="line"><span class="lineno">39653</span>                targetItem.stack--;</div>
+<div class="line"><span class="lineno">39654</span>                <span class="keywordflow">if</span> (targetItem.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">39655</span>                {</div>
+<div class="line"><span class="lineno">39656</span>                    targetItem.SetDefaults();</div>
+<div class="line"><span class="lineno">39657</span>                }</div>
+<div class="line"><span class="lineno">39658</span>                <span class="keywordflow">if</span> (applyItemAnimation)</div>
+<div class="line"><span class="lineno">39659</span>                {</div>
+<div class="line"><span class="lineno">39660</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">ApplyItemTime</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>], <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c.html#a2e0f806ec6bd376f2ab7e7ca0b58416c">wallSpeed</a>);</div>
+<div class="line"><span class="lineno">39661</span>                }</div>
+<div class="line"><span class="lineno">39662</span>            }</div>
+<div class="line"><span class="lineno">39663</span>        }</div>
+<div class="line"><span class="lineno">39664</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.tile[x, y].color() != paint &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.paintTile(x, y, paint, broadCast: true))</div>
+<div class="line"><span class="lineno">39665</span>        {</div>
+<div class="line"><span class="lineno">39666</span>            targetItem.stack--;</div>
+<div class="line"><span class="lineno">39667</span>            <span class="keywordflow">if</span> (targetItem.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">39668</span>            {</div>
+<div class="line"><span class="lineno">39669</span>                targetItem.SetDefaults();</div>
+<div class="line"><span class="lineno">39670</span>            }</div>
+<div class="line"><span class="lineno">39671</span>            <span class="keywordflow">if</span> (applyItemAnimation)</div>
+<div class="line"><span class="lineno">39672</span>            {</div>
+<div class="line"><span class="lineno">39673</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">ApplyItemTime</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>], <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790.html#a501039e681c4328e8fba85c803b7f790">tileSpeed</a>);</div>
+<div class="line"><span class="lineno">39674</span>            }</div>
+<div class="line"><span class="lineno">39675</span>        }</div>
+<div class="line"><span class="lineno">39676</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f_html_a0993c28ec8e5b953c332d1254629457f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">Terraria.Player.ApplyItemTime</a></div><div class="ttdeci">void ApplyItemTime(Item sItem)</div><div class="ttdef"><b>Definition</b> Player.cs:3752</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c_html_a2e0f806ec6bd376f2ab7e7ca0b58416c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c.html#a2e0f806ec6bd376f2ab7e7ca0b58416c">Terraria.Player.wallSpeed</a></div><div class="ttdeci">float wallSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2051</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2_html_a358ec34bd7ae567bcaca8799114ea0b2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">Terraria.Player.selectedItem</a></div><div class="ttdeci">int selectedItem</div><div class="ttdef"><b>Definition</b> Player.cs:1145</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790_html_a501039e681c4328e8fba85c803b7f790"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790.html#a501039e681c4328e8fba85c803b7f790">Terraria.Player.tileSpeed</a></div><div class="ttdeci">float tileSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2053</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a083f90a80ef987726fd28c52ffc4787e.html#a083f90a80ef987726fd28c52ffc4787e">Terraria.Tile.color()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a3f1018595ae7d8cab4a9e946bf541a22.html#a3f1018595ae7d8cab4a9e946bf541a22">Terraria.Item.paint</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aa045b029e7a455375c65c4b85b425d1b.html#aa045b029e7a455375c65c4b85b425d1b">Terraria.WorldGen.paintTile()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a62685241b63eb67526be7e025f566dc8.html#a62685241b63eb67526be7e025f566dc8">Terraria.WorldGen.paintWall()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae29f1e935710d0c9f5e325f873709719.html#ae29f1e935710d0c9f5e325f873709719">Terraria.Tile.wallColor()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

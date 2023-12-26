@@ -136,6 +136,44 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ad5b6998a5d6f15f37f8b49
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">39615</span>    {</div>
+<div class="line"><span class="lineno">39616</span>        <span class="keywordtype">byte</span> paintCoating = targetItem.paintCoating;</div>
+<div class="line"><span class="lineno">39617</span>        <span class="keywordflow">if</span> (paintingAWall)</div>
+<div class="line"><span class="lineno">39618</span>        {</div>
+<div class="line"><span class="lineno">39619</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.paintCoatWall(x, y, paintCoating, broadcast: true))</div>
+<div class="line"><span class="lineno">39620</span>            {</div>
+<div class="line"><span class="lineno">39621</span>                targetItem.stack--;</div>
+<div class="line"><span class="lineno">39622</span>                <span class="keywordflow">if</span> (targetItem.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">39623</span>                {</div>
+<div class="line"><span class="lineno">39624</span>                    targetItem.SetDefaults();</div>
+<div class="line"><span class="lineno">39625</span>                }</div>
+<div class="line"><span class="lineno">39626</span>                <span class="keywordflow">if</span> (applyItemAnimation)</div>
+<div class="line"><span class="lineno">39627</span>                {</div>
+<div class="line"><span class="lineno">39628</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">ApplyItemTime</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>], <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c.html#a2e0f806ec6bd376f2ab7e7ca0b58416c">wallSpeed</a>);</div>
+<div class="line"><span class="lineno">39629</span>                }</div>
+<div class="line"><span class="lineno">39630</span>            }</div>
+<div class="line"><span class="lineno">39631</span>        }</div>
+<div class="line"><span class="lineno">39632</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.paintCoatTile(x, y, paintCoating, broadcast: true))</div>
+<div class="line"><span class="lineno">39633</span>        {</div>
+<div class="line"><span class="lineno">39634</span>            targetItem.stack--;</div>
+<div class="line"><span class="lineno">39635</span>            <span class="keywordflow">if</span> (targetItem.stack &lt;= 0)</div>
+<div class="line"><span class="lineno">39636</span>            {</div>
+<div class="line"><span class="lineno">39637</span>                targetItem.SetDefaults();</div>
+<div class="line"><span class="lineno">39638</span>            }</div>
+<div class="line"><span class="lineno">39639</span>            <span class="keywordflow">if</span> (applyItemAnimation)</div>
+<div class="line"><span class="lineno">39640</span>            {</div>
+<div class="line"><span class="lineno">39641</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">ApplyItemTime</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>], <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790.html#a501039e681c4328e8fba85c803b7f790">tileSpeed</a>);</div>
+<div class="line"><span class="lineno">39642</span>            }</div>
+<div class="line"><span class="lineno">39643</span>        }</div>
+<div class="line"><span class="lineno">39644</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f_html_a0993c28ec8e5b953c332d1254629457f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">Terraria.Player.ApplyItemTime</a></div><div class="ttdeci">void ApplyItemTime(Item sItem)</div><div class="ttdef"><b>Definition</b> Player.cs:3752</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c_html_a2e0f806ec6bd376f2ab7e7ca0b58416c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a2e0f806ec6bd376f2ab7e7ca0b58416c.html#a2e0f806ec6bd376f2ab7e7ca0b58416c">Terraria.Player.wallSpeed</a></div><div class="ttdeci">float wallSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2051</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2_html_a358ec34bd7ae567bcaca8799114ea0b2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">Terraria.Player.selectedItem</a></div><div class="ttdeci">int selectedItem</div><div class="ttdef"><b>Definition</b> Player.cs:1145</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790_html_a501039e681c4328e8fba85c803b7f790"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a501039e681c4328e8fba85c803b7f790.html#a501039e681c4328e8fba85c803b7f790">Terraria.Player.tileSpeed</a></div><div class="ttdeci">float tileSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2053</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_ae2cf251acdd327fb4f467d6f57847db5.html#ae2cf251acdd327fb4f467d6f57847db5">Terraria.Item.paintCoating</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aef8a8700caeb3a79027756bb8874c5e8.html#aef8a8700caeb3a79027756bb8874c5e8">Terraria.WorldGen.paintCoatTile()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adc0feb553f9d86299f7ff913bded5667.html#adc0feb553f9d86299f7ff913bded5667">Terraria.WorldGen.paintCoatWall()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,52 @@ $(function(){initNavTree('da/dd5/classTerraria_1_1Main_ac82d6f5849c943265915d021
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">54929</span>    {</div>
+<div class="line"><span class="lineno">54930</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a48a4222639c367f41def6450ddd0cf92.html#a48a4222639c367f41def6450ddd0cf92">drawToScreen</a>)</div>
+<div class="line"><span class="lineno">54931</span>        {</div>
+<div class="line"><span class="lineno">54932</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">54933</span>        }</div>
+<div class="line"><span class="lineno">54934</span>        <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">base</a>.GraphicsDevice.SetRenderTarget(<a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a4a3ee30fc7e2f8d49799b3d15ac46517.html#a4a3ee30fc7e2f8d49799b3d15ac46517">wallTarget</a>);</div>
+<div class="line"><span class="lineno">54935</span>        base.GraphicsDevice.DepthStencilState = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">DepthStencilState</a></div>
+<div class="line"><span class="lineno">54936</span>        {</div>
+<div class="line"><span class="lineno">54937</span>            <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">DepthBufferEnable</a> = <span class="keyword">true</span></div>
+<div class="line"><span class="lineno">54938</span>        };</div>
+<div class="line"><span class="lineno">54939</span>        <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">base</a>.GraphicsDevice.Clear(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">Microsoft</a>.Xna.Framework.Color.Transparent);</div>
+<div class="line"><span class="lineno">54940</span>        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">spriteBatch</a>.Begin(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">SpriteSortMode</a>.Deferred, BlendState.AlphaBlend);</div>
+<div class="line"><span class="lineno">54941</span>        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a98a90ae9f5b6e422f5676ee2f5060e0d.html#a98a90ae9f5b6e422f5676ee2f5060e0d">tileBatch</a>.Begin();</div>
+<div class="line"><span class="lineno">54942</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_aacab2649dd316b08b456f78d18039c10.html#aacab2649dd316b08b456f78d18039c10">ignoreErrors</a>)</div>
+<div class="line"><span class="lineno">54943</span>        {</div>
+<div class="line"><span class="lineno">54944</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">54945</span>            {</div>
+<div class="line"><span class="lineno">54946</span>                <a class="code hl_function" href="../../da/dd5/classTerraria_1_1Main_a4ece4cb879a5da1b9efe7b306bb59f59.html#a4ece4cb879a5da1b9efe7b306bb59f59">DrawWalls</a>();</div>
+<div class="line"><span class="lineno">54947</span>            }</div>
+<div class="line"><span class="lineno">54948</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a> e)</div>
+<div class="line"><span class="lineno">54949</span>            {</div>
+<div class="line"><span class="lineno">54950</span>                TimeLogger.DrawException(e);</div>
+<div class="line"><span class="lineno">54951</span>            }</div>
+<div class="line"><span class="lineno">54952</span>        }</div>
+<div class="line"><span class="lineno">54953</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">54954</span>        {</div>
+<div class="line"><span class="lineno">54955</span>            <a class="code hl_function" href="../../da/dd5/classTerraria_1_1Main_a4ece4cb879a5da1b9efe7b306bb59f59.html#a4ece4cb879a5da1b9efe7b306bb59f59">DrawWalls</a>();</div>
+<div class="line"><span class="lineno">54956</span>        }</div>
+<div class="line"><span class="lineno">54957</span>        TimeLogger.DetailedDrawReset();</div>
+<div class="line"><span class="lineno">54958</span>        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a98a90ae9f5b6e422f5676ee2f5060e0d.html#a98a90ae9f5b6e422f5676ee2f5060e0d">tileBatch</a>.End();</div>
+<div class="line"><span class="lineno">54959</span>        <a class="code hl_variable" href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">spriteBatch</a>.End();</div>
+<div class="line"><span class="lineno">54960</span>        TimeLogger.DetailedDrawTime(32);</div>
+<div class="line"><span class="lineno">54961</span>        <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">base</a>.GraphicsDevice.SetRenderTarget(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">54962</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_html"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ReLogic.Content.Asset</a></div><div class="ttdef"><b>Definition</b> Asset.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060_html_a38548a3abd5efb339f211c40946a1060"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">Terraria.Main.spriteBatch</a></div><div class="ttdeci">static SpriteBatch spriteBatch</div><div class="ttdef"><b>Definition</b> Main.cs:974</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a48a4222639c367f41def6450ddd0cf92_html_a48a4222639c367f41def6450ddd0cf92"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a48a4222639c367f41def6450ddd0cf92.html#a48a4222639c367f41def6450ddd0cf92">Terraria.Main.drawToScreen</a></div><div class="ttdeci">static bool drawToScreen</div><div class="ttdef"><b>Definition</b> Main.cs:600</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a4a3ee30fc7e2f8d49799b3d15ac46517_html_a4a3ee30fc7e2f8d49799b3d15ac46517"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a4a3ee30fc7e2f8d49799b3d15ac46517.html#a4a3ee30fc7e2f8d49799b3d15ac46517">Terraria.Main.wallTarget</a></div><div class="ttdeci">RenderTarget2D wallTarget</div><div class="ttdef"><b>Definition</b> Main.cs:848</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a4ece4cb879a5da1b9efe7b306bb59f59_html_a4ece4cb879a5da1b9efe7b306bb59f59"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a4ece4cb879a5da1b9efe7b306bb59f59.html#a4ece4cb879a5da1b9efe7b306bb59f59">Terraria.Main.DrawWalls</a></div><div class="ttdeci">void DrawWalls()</div><div class="ttdef"><b>Definition</b> Main.cs:54923</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_a98a90ae9f5b6e422f5676ee2f5060e0d_html_a98a90ae9f5b6e422f5676ee2f5060e0d"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_a98a90ae9f5b6e422f5676ee2f5060e0d.html#a98a90ae9f5b6e422f5676ee2f5060e0d">Terraria.Main.tileBatch</a></div><div class="ttdeci">static TileBatch tileBatch</div><div class="ttdef"><b>Definition</b> Main.cs:976</div></div>
+<div class="ttc" id="aclassTerraria_1_1Main_aacab2649dd316b08b456f78d18039c10_html_aacab2649dd316b08b456f78d18039c10"><div class="ttname"><a href="../../da/dd5/classTerraria_1_1Main_aacab2649dd316b08b456f78d18039c10.html#aacab2649dd316b08b456f78d18039c10">Terraria.Main.ignoreErrors</a></div><div class="ttdeci">static bool ignoreErrors</div><div class="ttdef"><b>Definition</b> Main.cs:742</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a3f4aa8fbea7ec2e153171a584b04c4a6.html#a3f4aa8fbea7ec2e153171a584b04c4a6">Terraria.TimeLogger.DetailedDrawReset()</a>, <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a440884cdee8222c886f8d1fddbca6187.html#a440884cdee8222c886f8d1fddbca6187">Terraria.TimeLogger.DetailedDrawTime()</a>, <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_aeee9ee511b2d4c34d5fdf9963d8baf06.html#aeee9ee511b2d4c34d5fdf9963d8baf06">Terraria.TimeLogger.DrawException()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a48a4222639c367f41def6450ddd0cf92.html#a48a4222639c367f41def6450ddd0cf92">Terraria.Main.drawToScreen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4ece4cb879a5da1b9efe7b306bb59f59.html#a4ece4cb879a5da1b9efe7b306bb59f59">Terraria.Main.DrawWalls()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aacab2649dd316b08b456f78d18039c10.html#aacab2649dd316b08b456f78d18039c10">Terraria.Main.ignoreErrors</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">Terraria.Main.spriteBatch</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a98a90ae9f5b6e422f5676ee2f5060e0d.html#a98a90ae9f5b6e422f5676ee2f5060e0d">Terraria.Main.tileBatch</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4a3ee30fc7e2f8d49799b3d15ac46517.html#a4a3ee30fc7e2f8d49799b3d15ac46517">Terraria.Main.wallTarget</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a474beeecaea4d6dd108fba56cd554d46.html#a474beeecaea4d6dd108fba56cd554d46">Terraria.Main.DoDraw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,88 @@ $(function(){initNavTree('d4/d2f/classTerraria_1_1Rain_a67e563714dd9d34bb693981e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (Main.shimmerAlpha &gt; 0f || Main.netMode == 2 || Main.gamePaused)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!((<span class="keywordtype">double</span>)(Main.player[Main.myPlayer].position.Y / 16f) &gt; Main.rockLayer) || !(Main.player[Main.myPlayer].position.Y / 16f &lt; (<span class="keywordtype">float</span>)(Main.maxTilesY - 350)) || Main.player[Main.myPlayer].ZoneDungeon)</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)Main.screenPosition.Y &gt; Main.worldSurface * 16.0)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (Main.gameMenu)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">float</span> num = (float)Main.screenWidth / 1920f;</div>
+<div class="line"><span class="lineno">   53</span>        num *= 25f;</div>
+<div class="line"><span class="lineno">   54</span>        num *= 0.25f + 1f * Main.cloudAlpha;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d8/da2/classTerraria_1_1Graphics_1_1Effects_1_1Filters.html">Filters</a>.<a class="code hl_variable" href="../../d8/da2/classTerraria_1_1Graphics_1_1Effects_1_1Filters_a98df1e94ea9b4affd20da9c5a6af3176.html#a98df1e94ea9b4affd20da9c5a6af3176">Scene</a>[<span class="stringliteral">&quot;Sandstorm&quot;</span>].IsActive())</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        Vector2 vector = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (float)i &lt; num; i++)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">int</span> num2 = 600;</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (Main.player[Main.myPlayer].velocity.Y &lt; 0f)</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                num2 += (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Math.Abs(Main.player[Main.myPlayer].velocity.Y) * 30f);</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            vector.X = Main.rand.Next((<span class="keywordtype">int</span>)Main.screenPosition.X - num2, (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Main.screenPosition.X + Main.screenWidth + num2);</div>
+<div class="line"><span class="lineno">   68</span>            vector.Y = Main.screenPosition.Y - (float)Main.rand.Next(20, 100);</div>
+<div class="line"><span class="lineno">   69</span>            vector.X -= Main.windSpeedCurrent * 15f * 40f;</div>
+<div class="line"><span class="lineno">   70</span>            vector.X += Main.player[Main.myPlayer].velocity.X * 40f;</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (vector.X &lt; 0f)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                vector.X = 0f;</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (vector.X &gt; (<span class="keywordtype">float</span>)((Main.maxTilesX - 1) * 16))</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                vector.X = (Main.maxTilesX - 1) * 16;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)vector.X / 16;</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)vector.Y / 16;</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (num3 &lt; 0)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                num3 = 0;</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (num3 &gt; Main.maxTilesX - 1)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                num3 = Main.maxTilesX - 1;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (num4 &lt; 0)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                num4 = 0;</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (num4 &gt; Main.maxTilesY - 1)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                num4 = Main.maxTilesY - 1;</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (Main.remixWorld || Main.gameMenu || (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(num3, num4) &amp;&amp; Main.tile[num3, num4].wall &lt;= 0))</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                Vector2 rainFallVelocity = <a class="code hl_function" href="../../d4/d2f/classTerraria_1_1Rain_ac7a1a4b6a97157348e9e9bd06a0c495b.html#ac7a1a4b6a97157348e9e9bd06a0c495b">GetRainFallVelocity</a>();</div>
+<div class="line"><span class="lineno">  100</span>                <a class="code hl_function" href="../../d4/d2f/classTerraria_1_1Rain_a08ec410ba234435be58c5ba5d300cee4.html#a08ec410ba234435be58c5ba5d300cee4">NewRain</a>(vector, rainFallVelocity);</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1Filters_a98df1e94ea9b4affd20da9c5a6af3176_html_a98df1e94ea9b4affd20da9c5a6af3176"><div class="ttname"><a href="../../d8/da2/classTerraria_1_1Graphics_1_1Effects_1_1Filters_a98df1e94ea9b4affd20da9c5a6af3176.html#a98df1e94ea9b4affd20da9c5a6af3176">Terraria.Graphics.Effects.Filters.Scene</a></div><div class="ttdeci">static FilterManager Scene</div><div class="ttdef"><b>Definition</b> Filters.cs:5</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1Filters_html"><div class="ttname"><a href="../../d8/da2/classTerraria_1_1Graphics_1_1Effects_1_1Filters.html">Terraria.Graphics.Effects.Filters</a></div><div class="ttdef"><b>Definition</b> Filters.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1Rain_a08ec410ba234435be58c5ba5d300cee4_html_a08ec410ba234435be58c5ba5d300cee4"><div class="ttname"><a href="../../d4/d2f/classTerraria_1_1Rain_a08ec410ba234435be58c5ba5d300cee4.html#a08ec410ba234435be58c5ba5d300cee4">Terraria.Rain.NewRain</a></div><div class="ttdeci">static int NewRain(Vector2 Position, Vector2 Velocity)</div><div class="ttdef"><b>Definition</b> Rain.cs:180</div></div>
+<div class="ttc" id="aclassTerraria_1_1Rain_ac7a1a4b6a97157348e9e9bd06a0c495b_html_ac7a1a4b6a97157348e9e9bd06a0c495b"><div class="ttname"><a href="../../d4/d2f/classTerraria_1_1Rain_ac7a1a4b6a97157348e9e9bd06a0c495b.html#ac7a1a4b6a97157348e9e9bd06a0c495b">Terraria.Rain.GetRainFallVelocity</a></div><div class="ttdeci">static Vector2 GetRainFallVelocity()</div><div class="ttdef"><b>Definition</b> Rain.cs:105</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a1f20d9736bab4a7d5f787ceb505b57ed.html#a1f20d9736bab4a7d5f787ceb505b57ed">Terraria.Main.cloudAlpha</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae6ffea71a619ed421c1e2d22f046193c.html#ae6ffea71a619ed421c1e2d22f046193c">Terraria.Main.gameMenu</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aee73474c7805b1ea345a38caf0124a35.html#aee73474c7805b1ea345a38caf0124a35">Terraria.Main.gamePaused</a>, <a class="el" href="../../d4/d2f/classTerraria_1_1Rain_ac7a1a4b6a97157348e9e9bd06a0c495b.html#ac7a1a4b6a97157348e9e9bd06a0c495b">Terraria.Rain.GetRainFallVelocity()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d4/d2f/classTerraria_1_1Rain_a08ec410ba234435be58c5ba5d300cee4.html#a08ec410ba234435be58c5ba5d300cee4">Terraria.Rain.NewRain()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../d8/da2/classTerraria_1_1Graphics_1_1Effects_1_1Filters_a98df1e94ea9b4affd20da9c5a6af3176.html#a98df1e94ea9b4affd20da9c5a6af3176">Terraria.Graphics.Effects.Filters.Scene</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d6f09a4da6c2e14d081814d33975189.html#a6d6f09a4da6c2e14d081814d33975189">Terraria.Main.screenPosition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad1faaf9a13eee5a95e0f8690feb12e91.html#ad1faaf9a13eee5a95e0f8690feb12e91">Terraria.Main.screenWidth</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae8d90bf09d56818850be1c013f004352.html#ae8d90bf09d56818850be1c013f004352">Terraria.Main.shimmerAlpha</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a1b501f0962f1a432d71e64d7a5366dfc.html#a1b501f0962f1a432d71e64d7a5366dfc">Terraria.Player.ZoneDungeon</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a96341b8439a15bcefc0f119767e24e35.html#a96341b8439a15bcefc0f119767e24e35">Terraria.Main.DoUpdate()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

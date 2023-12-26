@@ -121,6 +121,44 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_a7f8ea1804769b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  794</span>    {</div>
+<div class="line"><span class="lineno">  795</span>        <span class="keywordflow">if</span> (useCloudSaving &amp;&amp; <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  796</span>        {</div>
+<div class="line"><span class="lineno">  797</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  798</span>        }</div>
+<div class="line"><span class="lineno">  799</span>        <span class="keywordflow">if</span> (Main.worldName == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  800</span>        {</div>
+<div class="line"><span class="lineno">  801</span>            Main.worldName = <span class="stringliteral">&quot;World&quot;</span>;</div>
+<div class="line"><span class="lineno">  802</span>        }</div>
+<div class="line"><span class="lineno">  803</span>        <span class="keywordflow">while</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.IsGeneratingHardMode)</div>
+<div class="line"><span class="lineno">  804</span>        {</div>
+<div class="line"><span class="lineno">  805</span>            Main.statusText = Lang.gen[48].Value;</div>
+<div class="line"><span class="lineno">  806</span>        }</div>
+<div class="line"><span class="lineno">  807</span>        <span class="keywordflow">if</span> (!Monitor.TryEnter(<a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a151d81a62536e3c519a42785738a9145.html#a151d81a62536e3c519a42785738a9145">IOLock</a>))</div>
+<div class="line"><span class="lineno">  808</span>        {</div>
+<div class="line"><span class="lineno">  809</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  810</span>        }</div>
+<div class="line"><span class="lineno">  811</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  812</span>        {</div>
+<div class="line"><span class="lineno">  813</span>            <a class="code hl_class" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">FileUtilities</a>.<a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a540ef380dd7fe2b6dfdfa696e9420f81.html#a540ef380dd7fe2b6dfdfa696e9420f81">ProtectedInvoke</a>(delegate</div>
+<div class="line"><span class="lineno">  814</span>            {</div>
+<div class="line"><span class="lineno">  815</span>                <a class="code hl_function" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6.html#a1a9b687a3ecf6612b83b6eced28238f6">InternalSaveWorld</a>(useCloudSaving, resetTime);</div>
+<div class="line"><span class="lineno">  816</span>            });</div>
+<div class="line"><span class="lineno">  817</span>        }</div>
+<div class="line"><span class="lineno">  818</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><span class="lineno">  819</span>        {</div>
+<div class="line"><span class="lineno">  820</span>            Monitor.Exit(<a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a151d81a62536e3c519a42785738a9145.html#a151d81a62536e3c519a42785738a9145">IOLock</a>);</div>
+<div class="line"><span class="lineno">  821</span>        }</div>
+<div class="line"><span class="lineno">  822</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_a151d81a62536e3c519a42785738a9145_html_a151d81a62536e3c519a42785738a9145"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a151d81a62536e3c519a42785738a9145.html#a151d81a62536e3c519a42785738a9145">Terraria.IO.WorldFile.IOLock</a></div><div class="ttdeci">static readonly object IOLock</div><div class="ttdef"><b>Definition</b> WorldFile.cs:97</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6_html_a1a9b687a3ecf6612b83b6eced28238f6"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6.html#a1a9b687a3ecf6612b83b6eced28238f6">Terraria.IO.WorldFile.InternalSaveWorld</a></div><div class="ttdeci">static void InternalSaveWorld(bool useCloudSaving, bool resetTime)</div><div class="ttdef"><b>Definition</b> WorldFile.cs:824</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e_html_a6f4b8d52aae863d79ae6c622f3cf6c5e"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a></div><div class="ttdeci">static Terraria.Social.Base.CloudSocialModule Cloud</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_a540ef380dd7fe2b6dfdfa696e9420f81_html_a540ef380dd7fe2b6dfdfa696e9420f81"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a540ef380dd7fe2b6dfdfa696e9420f81.html#a540ef380dd7fe2b6dfdfa696e9420f81">Terraria.Utilities.FileUtilities.ProtectedInvoke</a></div><div class="ttdeci">static void ProtectedInvoke(Action action)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:223</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_html"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">Terraria.Utilities.FileUtilities</a></div><div class="ttdef"><b>Definition</b> FileUtilities.cs:11</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a095af09f0f067b0f6a2ea31f11e967a5.html#a095af09f0f067b0f6a2ea31f11e967a5">Terraria.Lang.gen</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6.html#a1a9b687a3ecf6612b83b6eced28238f6">Terraria.IO.WorldFile.InternalSaveWorld()</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a151d81a62536e3c519a42785738a9145.html#a151d81a62536e3c519a42785738a9145">Terraria.IO.WorldFile.IOLock</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_affc36b93956aeae376c1766379b33ba6.html#affc36b93956aeae376c1766379b33ba6">Terraria.WorldGen.IsGeneratingHardMode</a>, <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a540ef380dd7fe2b6dfdfa696e9420f81.html#a540ef380dd7fe2b6dfdfa696e9420f81">Terraria.Utilities.FileUtilities.ProtectedInvoke()</a>, <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">Terraria.Main.worldName</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

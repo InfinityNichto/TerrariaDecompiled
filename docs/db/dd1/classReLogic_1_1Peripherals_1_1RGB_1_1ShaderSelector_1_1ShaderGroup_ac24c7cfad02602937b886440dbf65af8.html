@@ -117,6 +117,26 @@ $(function(){initNavTree('db/dd1/classReLogic_1_1Peripherals_1_1RGB_1_1ShaderSel
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            LinkedListNode&lt;ConditionalShader&gt; linkedListNode = Shaders.First;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">while</span> (linkedListNode != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                LinkedListNode&lt;ConditionalShader&gt;? next = linkedListNode.Next;</div>
+<div class="line"><span class="lineno">   70</span>                ConditionalShader value = linkedListNode.Value;</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordtype">bool</span> isVisible = value.IsVisible;</div>
+<div class="line"><span class="lineno">   72</span>                value.UpdateVisibility(timeElapsed);</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (!isVisible &amp;&amp; value.IsVisible)</div>
+<div class="line"><span class="lineno">   74</span>                {</div>
+<div class="line"><span class="lineno">   75</span>                    Shaders.Remove(linkedListNode);</div>
+<div class="line"><span class="lineno">   76</span>                    Shaders.AddFirst(value);</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>                linkedListNode = next;</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/dbb/classReLogic_1_1Peripherals_1_1RGB_1_1ShaderSelector_1_1ConditionalShader_a0dc31d2d6f7c16d6210913a1277178ad.html#a0dc31d2d6f7c16d6210913a1277178ad">ReLogic.Peripherals.RGB.ShaderSelector.ConditionalShader.IsVisible</a>, and <a class="el" href="../../d1/dbb/classReLogic_1_1Peripherals_1_1RGB_1_1ShaderSelector_1_1ConditionalShader_af17ae46c9817fd32c7cedf85d3e6947e.html#af17ae46c9817fd32c7cedf85d3e6947e">ReLogic.Peripherals.RGB.ShaderSelector.ConditionalShader.UpdateVisibility()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/dcb/classReLogic_1_1Peripherals_1_1RGB_1_1ShaderSelector_a9c0373541a2a04e28a15a2f04b9cf797.html#a9c0373541a2a04e28a15a2f04b9cf797">ReLogic.Peripherals.RGB.ShaderSelector.UpdateShaderVisibility()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

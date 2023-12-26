@@ -126,6 +126,60 @@ $(function(){initNavTree('de/d1f/classTerraria_1_1Minecart_a4b47e6904f3f98b58e5a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1551</span>    {</div>
+<div class="line"><span class="lineno"> 1552</span>        <span class="keywordtype">int</span> nearbyTilesSetLookupIndex = <a class="code hl_function" href="../../de/d1f/classTerraria_1_1Minecart_ae285a7bf25895e9989547d3347490883.html#ae285a7bf25895e9989547d3347490883">GetNearbyTilesSetLookupIndex</a>(tileCoords.X, tileCoords.Y);</div>
+<div class="line"><span class="lineno"> 1553</span>        <span class="keywordtype">int</span>[] array = <a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_a35afe050a7428e9908b2bbf15675c37c.html#a35afe050a7428e9908b2bbf15675c37c">_trackSwitchOptions</a>[nearbyTilesSetLookupIndex];</div>
+<div class="line"><span class="lineno"> 1554</span>        <span class="keywordflow">if</span> (array == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1555</span>        {</div>
+<div class="line"><span class="lineno"> 1556</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1557</span>        }</div>
+<div class="line"><span class="lineno"> 1558</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely = Framing.GetTileSafely(tileCoords);</div>
+<div class="line"><span class="lineno"> 1559</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca.html#aade60b29ed06c3dcc25c06532df2feca">_trackType</a>[tileSafely.FrontTrack()];</div>
+<div class="line"><span class="lineno"> 1560</span>        <span class="keywordtype">int</span>? num2 = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1561</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num3 <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno"> 1562</span>        {</div>
+<div class="line"><span class="lineno"> 1563</span>            _ = <a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_a26a073c77f64d800176d3f4b96fb3635.html#a26a073c77f64d800176d3f4b96fb3635">_leftSideConnection</a>[num3];</div>
+<div class="line"><span class="lineno"> 1564</span>            _ = <a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_adcc87b2d346782c08cb00d2bfc872ade.html#adcc87b2d346782c08cb00d2bfc872ade">_rightSideConnection</a>[num3];</div>
+<div class="line"><span class="lineno"> 1565</span>            _ = <a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca.html#aade60b29ed06c3dcc25c06532df2feca">_trackType</a>[num3];</div>
+<div class="line"><span class="lineno"> 1566</span>            <span class="keywordflow">if</span> (expectedYOffsetForLeft.HasValue)</div>
+<div class="line"><span class="lineno"> 1567</span>            {</div>
+<div class="line"><span class="lineno"> 1568</span>                <span class="keywordtype">int</span> num4 = <a class="code hl_function" href="../../de/d1f/classTerraria_1_1Minecart_a45322214cc004b7cd6980c0936f520e9.html#a45322214cc004b7cd6980c0936f520e9">ConvertOffsetYToTrackConnectionValue</a>(expectedYOffsetForLeft.Value);</div>
+<div class="line"><span class="lineno"> 1569</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_a26a073c77f64d800176d3f4b96fb3635.html#a26a073c77f64d800176d3f4b96fb3635">_leftSideConnection</a>[num3] != num4)</div>
+<div class="line"><span class="lineno"> 1570</span>                {</div>
+<div class="line"><span class="lineno"> 1571</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1572</span>                }</div>
+<div class="line"><span class="lineno"> 1573</span>            }</div>
+<div class="line"><span class="lineno"> 1574</span>            <span class="keywordflow">if</span> (expectedYOffsetForRight.HasValue)</div>
+<div class="line"><span class="lineno"> 1575</span>            {</div>
+<div class="line"><span class="lineno"> 1576</span>                <span class="keywordtype">int</span> num5 = <a class="code hl_function" href="../../de/d1f/classTerraria_1_1Minecart_a45322214cc004b7cd6980c0936f520e9.html#a45322214cc004b7cd6980c0936f520e9">ConvertOffsetYToTrackConnectionValue</a>(expectedYOffsetForRight.Value);</div>
+<div class="line"><span class="lineno"> 1577</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_adcc87b2d346782c08cb00d2bfc872ade.html#adcc87b2d346782c08cb00d2bfc872ade">_rightSideConnection</a>[num3] != num5)</div>
+<div class="line"><span class="lineno"> 1578</span>                {</div>
+<div class="line"><span class="lineno"> 1579</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1580</span>                }</div>
+<div class="line"><span class="lineno"> 1581</span>            }</div>
+<div class="line"><span class="lineno"> 1582</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d1f/classTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca.html#aade60b29ed06c3dcc25c06532df2feca">_trackType</a>[num3] == num)</div>
+<div class="line"><span class="lineno"> 1583</span>            {</div>
+<div class="line"><span class="lineno"> 1584</span>                num2 = num3;</div>
+<div class="line"><span class="lineno"> 1585</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1586</span>            }</div>
+<div class="line"><span class="lineno"> 1587</span>        }</div>
+<div class="line"><span class="lineno"> 1588</span>        <span class="keywordflow">if</span> (num2.HasValue)</div>
+<div class="line"><span class="lineno"> 1589</span>        {</div>
+<div class="line"><span class="lineno"> 1590</span>            tileSafely.FrontTrack((<span class="keywordtype">short</span>)num2.Value);</div>
+<div class="line"><span class="lineno"> 1591</span>            NetMessage.SendTileSquare(-1, tileCoords.X, tileCoords.Y);</div>
+<div class="line"><span class="lineno"> 1592</span>        }</div>
+<div class="line"><span class="lineno"> 1593</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_a26a073c77f64d800176d3f4b96fb3635_html_a26a073c77f64d800176d3f4b96fb3635"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_a26a073c77f64d800176d3f4b96fb3635.html#a26a073c77f64d800176d3f4b96fb3635">Terraria.Minecart._leftSideConnection</a></div><div class="ttdeci">static int[] _leftSideConnection</div><div class="ttdef"><b>Definition</b> Minecart.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_a35afe050a7428e9908b2bbf15675c37c_html_a35afe050a7428e9908b2bbf15675c37c"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_a35afe050a7428e9908b2bbf15675c37c.html#a35afe050a7428e9908b2bbf15675c37c">Terraria.Minecart._trackSwitchOptions</a></div><div class="ttdeci">static int[][] _trackSwitchOptions</div><div class="ttdef"><b>Definition</b> Minecart.cs:87</div></div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_a45322214cc004b7cd6980c0936f520e9_html_a45322214cc004b7cd6980c0936f520e9"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_a45322214cc004b7cd6980c0936f520e9.html#a45322214cc004b7cd6980c0936f520e9">Terraria.Minecart.ConvertOffsetYToTrackConnectionValue</a></div><div class="ttdeci">static int ConvertOffsetYToTrackConnectionValue(int offsetY)</div><div class="ttdef"><b>Definition</b> Minecart.cs:1595</div></div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca_html_aade60b29ed06c3dcc25c06532df2feca"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca.html#aade60b29ed06c3dcc25c06532df2feca">Terraria.Minecart._trackType</a></div><div class="ttdeci">static int[] _trackType</div><div class="ttdef"><b>Definition</b> Minecart.cs:75</div></div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_adcc87b2d346782c08cb00d2bfc872ade_html_adcc87b2d346782c08cb00d2bfc872ade"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_adcc87b2d346782c08cb00d2bfc872ade.html#adcc87b2d346782c08cb00d2bfc872ade">Terraria.Minecart._rightSideConnection</a></div><div class="ttdeci">static int[] _rightSideConnection</div><div class="ttdef"><b>Definition</b> Minecart.cs:73</div></div>
+<div class="ttc" id="aclassTerraria_1_1Minecart_ae285a7bf25895e9989547d3347490883_html_ae285a7bf25895e9989547d3347490883"><div class="ttname"><a href="../../de/d1f/classTerraria_1_1Minecart_ae285a7bf25895e9989547d3347490883.html#ae285a7bf25895e9989547d3347490883">Terraria.Minecart.GetNearbyTilesSetLookupIndex</a></div><div class="ttdeci">static int GetNearbyTilesSetLookupIndex(int i, int j)</div><div class="ttdef"><b>Definition</b> Minecart.cs:1161</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_a26a073c77f64d800176d3f4b96fb3635.html#a26a073c77f64d800176d3f4b96fb3635">Terraria.Minecart._leftSideConnection</a>, <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_adcc87b2d346782c08cb00d2bfc872ade.html#adcc87b2d346782c08cb00d2bfc872ade">Terraria.Minecart._rightSideConnection</a>, <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_a35afe050a7428e9908b2bbf15675c37c.html#a35afe050a7428e9908b2bbf15675c37c">Terraria.Minecart._trackSwitchOptions</a>, <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_aade60b29ed06c3dcc25c06532df2feca.html#aade60b29ed06c3dcc25c06532df2feca">Terraria.Minecart._trackType</a>, <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_a45322214cc004b7cd6980c0936f520e9.html#a45322214cc004b7cd6980c0936f520e9">Terraria.Minecart.ConvertOffsetYToTrackConnectionValue()</a>, <a class="el" href="../../de/d1f/classTerraria_1_1Minecart_ae285a7bf25895e9989547d3347490883.html#ae285a7bf25895e9989547d3347490883">Terraria.Minecart.GetNearbyTilesSetLookupIndex()</a>, <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_adf8f859033cd5cb805b13aad59a55236.html#adf8f859033cd5cb805b13aad59a55236">Terraria.Framing.GetTileSafely()</a>, and <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dbf/classTerraria_1_1GameContent_1_1MinecartDiggerHelper_ad0392989945d84baf8248181f0339d1f.html#ad0392989945d84baf8248181f0339d1f">Terraria.GameContent.MinecartDiggerHelper.CorrectTrackConnections()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

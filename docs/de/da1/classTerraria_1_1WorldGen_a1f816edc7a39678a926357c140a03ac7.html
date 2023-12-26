@@ -136,6 +136,46 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a1f816edc7a39678a9263
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">60072</span>    {</div>
+<div class="line"><span class="lineno">60073</span>        <span class="keywordflow">if</span> (tiletypes.Length == 0)</div>
+<div class="line"><span class="lineno">60074</span>        {</div>
+<div class="line"><span class="lineno">60075</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">60076</span>        }</div>
+<div class="line"><span class="lineno">60077</span>        <span class="keywordtype">int</span> value = i - radius;</div>
+<div class="line"><span class="lineno">60078</span>        <span class="keywordtype">int</span> value2 = i + radius;</div>
+<div class="line"><span class="lineno">60079</span>        <span class="keywordtype">int</span> value3 = j - radius;</div>
+<div class="line"><span class="lineno">60080</span>        <span class="keywordtype">int</span> value4 = j + radius;</div>
+<div class="line"><span class="lineno">60081</span>        <span class="keywordtype">int</span> num = Utils.Clamp(value, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno">60082</span>        value2 = Utils.Clamp(value2, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno">60083</span>        value3 = Utils.Clamp(value3, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno">60084</span>        value4 = Utils.Clamp(value4, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno">60085</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">60086</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num; k &lt;= value2; k++)</div>
+<div class="line"><span class="lineno">60087</span>        {</div>
+<div class="line"><span class="lineno">60088</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = value3; l &lt;= value4; l++)</div>
+<div class="line"><span class="lineno">60089</span>            {</div>
+<div class="line"><span class="lineno">60090</span>                <span class="keywordflow">if</span> (!Main.tile[k, l].active())</div>
+<div class="line"><span class="lineno">60091</span>                {</div>
+<div class="line"><span class="lineno">60092</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">60093</span>                }</div>
+<div class="line"><span class="lineno">60094</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; tiletypes.Length; m++)</div>
+<div class="line"><span class="lineno">60095</span>                {</div>
+<div class="line"><span class="lineno">60096</span>                    <span class="keywordflow">if</span> (tiletypes[m] == Main.tile[k, l].type)</div>
+<div class="line"><span class="lineno">60097</span>                    {</div>
+<div class="line"><span class="lineno">60098</span>                        num2++;</div>
+<div class="line"><span class="lineno">60099</span>                        <span class="keywordflow">if</span> (cap &lt;= 0 || num2 &lt; cap)</div>
+<div class="line"><span class="lineno">60100</span>                        {</div>
+<div class="line"><span class="lineno">60101</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">60102</span>                        }</div>
+<div class="line"><span class="lineno">60103</span>                        <span class="keywordflow">return</span> num2;</div>
+<div class="line"><span class="lineno">60104</span>                    }</div>
+<div class="line"><span class="lineno">60105</span>                }</div>
+<div class="line"><span class="lineno">60106</span>            }</div>
+<div class="line"><span class="lineno">60107</span>        }</div>
+<div class="line"><span class="lineno">60108</span>        <span class="keywordflow">return</span> num2;</div>
+<div class="line"><span class="lineno">60109</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

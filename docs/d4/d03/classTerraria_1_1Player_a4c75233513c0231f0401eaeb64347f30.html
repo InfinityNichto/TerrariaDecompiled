@@ -126,6 +126,56 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a4c75233513c0231f0401ea
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">33544</span>    {</div>
+<div class="line"><span class="lineno">33545</span>        <span class="keywordflow">if</span> (item.shopSpecialCurrency != -1)</div>
+<div class="line"><span class="lineno">33546</span>        {</div>
+<div class="line"><span class="lineno">33547</span>            <a class="code hl_class" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager.html">CustomCurrencyManager</a>.<a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a8d9390f3f7b4ef75c9190d5020aaeaae.html#a8d9390f3f7b4ef75c9190d5020aaeaae">GetPrices</a>(item, out calcForSelling, out calcForBuying);</div>
+<div class="line"><span class="lineno">33548</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">33549</span>        }</div>
+<div class="line"><span class="lineno">33550</span>        <span class="keywordtype">int</span> storeValue = item.GetStoreValue();</div>
+<div class="line"><span class="lineno">33551</span>        calcForSelling = storeValue;</div>
+<div class="line"><span class="lineno">33552</span>        calcForBuying = storeValue;</div>
+<div class="line"><span class="lineno">33553</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_afb7688ca42f23ad02e67c68514bc343f.html#afb7688ca42f23ad02e67c68514bc343f">discountAvailable</a>)</div>
+<div class="line"><span class="lineno">33554</span>        {</div>
+<div class="line"><span class="lineno">33555</span>            <span class="keywordflow">if</span> (!item.buyOnce)</div>
+<div class="line"><span class="lineno">33556</span>            {</div>
+<div class="line"><span class="lineno">33557</span>                calcForBuying = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((<span class="keywordtype">float</span>)calcForBuying * 0.8f);</div>
+<div class="line"><span class="lineno">33558</span>            }</div>
+<div class="line"><span class="lineno">33559</span>            <span class="keywordflow">if</span> (item.isAShopItem)</div>
+<div class="line"><span class="lineno">33560</span>            {</div>
+<div class="line"><span class="lineno">33561</span>                calcForSelling = calcForBuying;</div>
+<div class="line"><span class="lineno">33562</span>            }</div>
+<div class="line"><span class="lineno">33563</span>        }</div>
+<div class="line"><span class="lineno">33564</span>        <span class="keywordflow">if</span> (item.buyOnce)</div>
+<div class="line"><span class="lineno">33565</span>        {</div>
+<div class="line"><span class="lineno">33566</span>            calcForBuying = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Round((<span class="keywordtype">double</span>)calcForBuying / <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3.html#adefa892f86d85c5ff76bb03c52a90ef3">currentShoppingSettings</a>.<a class="code hl_variable" href="../../da/dbc/structTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3.html#a0fb03ac9727fcd3edd387ae68639ffa3">PriceAdjustment</a>);</div>
+<div class="line"><span class="lineno">33567</span>            calcForSelling = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Round((<span class="keywordtype">double</span>)calcForSelling / <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3.html#adefa892f86d85c5ff76bb03c52a90ef3">currentShoppingSettings</a>.<a class="code hl_variable" href="../../da/dbc/structTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3.html#a0fb03ac9727fcd3edd387ae68639ffa3">PriceAdjustment</a>);</div>
+<div class="line"><span class="lineno">33568</span>        }</div>
+<div class="line"><span class="lineno">33569</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">33570</span>        {</div>
+<div class="line"><span class="lineno">33571</span>            calcForBuying = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Round((<span class="keywordtype">double</span>)calcForBuying * <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3.html#adefa892f86d85c5ff76bb03c52a90ef3">currentShoppingSettings</a>.<a class="code hl_variable" href="../../da/dbc/structTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3.html#a0fb03ac9727fcd3edd387ae68639ffa3">PriceAdjustment</a>);</div>
+<div class="line"><span class="lineno">33572</span>            calcForSelling = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Round((<span class="keywordtype">double</span>)calcForSelling / <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3.html#adefa892f86d85c5ff76bb03c52a90ef3">currentShoppingSettings</a>.<a class="code hl_variable" href="../../da/dbc/structTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3.html#a0fb03ac9727fcd3edd387ae68639ffa3">PriceAdjustment</a>);</div>
+<div class="line"><span class="lineno">33573</span>        }</div>
+<div class="line"><span class="lineno">33574</span>        <span class="keywordflow">if</span> (item.buyOnce)</div>
+<div class="line"><span class="lineno">33575</span>        {</div>
+<div class="line"><span class="lineno">33576</span>            calcForBuying /= 5<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">33577</span>            <span class="keywordflow">if</span> (storeValue != 0 &amp;&amp; calcForBuying &lt; 1)</div>
+<div class="line"><span class="lineno">33578</span>            {</div>
+<div class="line"><span class="lineno">33579</span>                calcForBuying = 1<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">33580</span>            }</div>
+<div class="line"><span class="lineno">33581</span>        }</div>
+<div class="line"><span class="lineno">33582</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a8d9390f3f7b4ef75c9190d5020aaeaae_html_a8d9390f3f7b4ef75c9190d5020aaeaae"><div class="ttname"><a href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a8d9390f3f7b4ef75c9190d5020aaeaae.html#a8d9390f3f7b4ef75c9190d5020aaeaae">Terraria.GameContent.UI.CustomCurrencyManager.GetPrices</a></div><div class="ttdeci">static void GetPrices(Item item, out long calcForSelling, out long calcForBuying)</div><div class="ttdef"><b>Definition</b> CustomCurrencyManager.cs:146</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_html"><div class="ttname"><a href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager.html">Terraria.GameContent.UI.CustomCurrencyManager</a></div><div class="ttdef"><b>Definition</b> CustomCurrencyManager.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3_html_adefa892f86d85c5ff76bb03c52a90ef3"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_adefa892f86d85c5ff76bb03c52a90ef3.html#adefa892f86d85c5ff76bb03c52a90ef3">Terraria.Player.currentShoppingSettings</a></div><div class="ttdeci">ShoppingSettings currentShoppingSettings</div><div class="ttdef"><b>Definition</b> Player.cs:2473</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_afb7688ca42f23ad02e67c68514bc343f_html_afb7688ca42f23ad02e67c68514bc343f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_afb7688ca42f23ad02e67c68514bc343f.html#afb7688ca42f23ad02e67c68514bc343f">Terraria.Player.discountAvailable</a></div><div class="ttdeci">bool discountAvailable</div><div class="ttdef"><b>Definition</b> Player.cs:2213</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">ReLogic.Peripherals.RGB.Logitech.KeyName.L</a></div><div class="ttdeci">@ L</div></div>
+<div class="ttc" id="astructTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3_html_a0fb03ac9727fcd3edd387ae68639ffa3"><div class="ttname"><a href="../../da/dbc/structTerraria_1_1ShoppingSettings_a0fb03ac9727fcd3edd387ae68639ffa3.html#a0fb03ac9727fcd3edd387ae68639ffa3">Terraria.ShoppingSettings.PriceAdjustment</a></div><div class="ttdeci">double PriceAdjustment</div><div class="ttdef"><b>Definition</b> ShoppingSettings.cs:5</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_aba5a0f2fd5be396735a3e5faac3ab0f2.html#aba5a0f2fd5be396735a3e5faac3ab0f2">Terraria.Item.buyOnce</a>, <a class="el" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a8d9390f3f7b4ef75c9190d5020aaeaae.html#a8d9390f3f7b4ef75c9190d5020aaeaae">Terraria.GameContent.UI.CustomCurrencyManager.GetPrices()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a2f3212be82df432b9e39100ee695e81c.html#a2f3212be82df432b9e39100ee695e81c">Terraria.Item.GetStoreValue()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a0aa14c05e13989949ad892e6b35b71e7.html#a0aa14c05e13989949ad892e6b35b71e7">Terraria.Item.isAShopItem</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_a6c96916cc11ee0c75bab467c0b229222.html#a6c96916cc11ee0c75bab467c0b229222">Terraria.Item.shopSpecialCurrency</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a255ed97d8ebc66478b8f5cad8f35d5e2.html#a255ed97d8ebc66478b8f5cad8f35d5e2">Terraria.UI.ItemSlot.HandleShopSlot()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

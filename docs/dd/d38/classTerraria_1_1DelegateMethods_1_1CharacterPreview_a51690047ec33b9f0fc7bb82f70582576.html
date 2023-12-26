@@ -121,6 +121,40 @@ $(function(){initNavTree('dd/d38/classTerraria_1_1DelegateMethods_1_1CharacterPr
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">float</span> num = -0.3985988f;</div>
+<div class="line"><span class="lineno">   66</span>            Vector2 vector = (Vector2.UnitY * 2f).RotatedBy(num);</div>
+<div class="line"><span class="lineno">   67</span>            Vector2 position = proj.position;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordtype">int</span> num2 = proj.oldPos.Length;</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (proj.type == 893)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                num2 = proj.oldPos.Length - 30;</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; proj.oldPos.Length; i++)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                position -= vector;</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (i &lt; num2)</div>
+<div class="line"><span class="lineno">   77</span>                {</div>
+<div class="line"><span class="lineno">   78</span>                    proj.oldPos[i] = position;</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &gt; 0)</div>
+<div class="line"><span class="lineno">   81</span>                {</div>
+<div class="line"><span class="lineno">   82</span>                    proj.oldPos[i] = proj.oldPos[i - 1];</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>                vector = vector.RotatedBy(-0.05235987901687622);</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            proj.rotation = vector.ToRotation() + (float)Math.PI / 10f + (<span class="keywordtype">float</span>)Math.PI;</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (proj.type == 887)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                proj.rotation += (float)Math.PI / 8f;</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (proj.type == 893)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                proj.rotation += (float)Math.PI / 2f;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a59f49813bc5ae70fc35dfd502d6bb80d.html#a59f49813bc5ae70fc35dfd502d6bb80d">Terraria.Projectile.oldPos</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a>.</p>
 
 </div>
 </div>

@@ -117,6 +117,48 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_af11ee2288f5f8774b4a308
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">40559</span>    {</div>
+<div class="line"><span class="lineno">40560</span>        <span class="keywordflow">if</span> (Main.myPlayer != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">40561</span>        {</div>
+<div class="line"><span class="lineno">40562</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">40563</span>        }</div>
+<div class="line"><span class="lineno">40564</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af59b25b7bbc47ac4e6af6b1154aeb44a.html#af59b25b7bbc47ac4e6af6b1154aeb44a">volatileGelatinCounter</a>++;</div>
+<div class="line"><span class="lineno">40565</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af59b25b7bbc47ac4e6af6b1154aeb44a.html#af59b25b7bbc47ac4e6af6b1154aeb44a">volatileGelatinCounter</a> &lt;= 40)</div>
+<div class="line"><span class="lineno">40566</span>        {</div>
+<div class="line"><span class="lineno">40567</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">40568</span>        }</div>
+<div class="line"><span class="lineno">40569</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af59b25b7bbc47ac4e6af6b1154aeb44a.html#af59b25b7bbc47ac4e6af6b1154aeb44a">volatileGelatinCounter</a> = 0;</div>
+<div class="line"><span class="lineno">40570</span>        <span class="keywordtype">int</span> damage = 65;</div>
+<div class="line"><span class="lineno">40571</span>        <span class="keywordtype">float</span> knockBack = 7f;</div>
+<div class="line"><span class="lineno">40572</span>        <span class="keywordtype">float</span> num = 640f;</div>
+<div class="line"><span class="lineno">40573</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">40574</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">40575</span>        {</div>
+<div class="line"><span class="lineno">40576</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC2 = Main.npc[i];</div>
+<div class="line"><span class="lineno">40577</span>            <span class="keywordflow">if</span> (nPC2 != <span class="keyword">null</span> &amp;&amp; nPC2.active &amp;&amp; nPC2.CanBeChasedBy(<span class="keyword">this</span>) &amp;&amp; Collision.CanHit(<span class="keyword">this</span>, nPC2))</div>
+<div class="line"><span class="lineno">40578</span>            {</div>
+<div class="line"><span class="lineno">40579</span>                <span class="keywordtype">float</span> num2 = Vector2.Distance(nPC2.Center, base.Center);</div>
+<div class="line"><span class="lineno">40580</span>                <span class="keywordflow">if</span> (num2 &lt; num)</div>
+<div class="line"><span class="lineno">40581</span>                {</div>
+<div class="line"><span class="lineno">40582</span>                    num = num2;</div>
+<div class="line"><span class="lineno">40583</span>                    nPC = nPC2;</div>
+<div class="line"><span class="lineno">40584</span>                }</div>
+<div class="line"><span class="lineno">40585</span>            }</div>
+<div class="line"><span class="lineno">40586</span>        }</div>
+<div class="line"><span class="lineno">40587</span>        <span class="keywordflow">if</span> (nPC != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">40588</span>        {</div>
+<div class="line"><span class="lineno">40589</span>            Vector2 v = nPC.Center - base.Center;</div>
+<div class="line"><span class="lineno">40590</span>            v = v.SafeNormalize(Vector2.Zero) * 12f;</div>
+<div class="line"><span class="lineno">40591</span>            v.Y -= 1.3f;</div>
+<div class="line"><span class="lineno">40592</span>            Projectile.NewProjectile(<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd.html#a7c3e517bb9f5b256cb976ee3794b84fd">GetProjectileSource_Accessory</a>(sourceItem), base.Center.X, base.Center.Y, v.X, v.Y, 937, damage, knockBack, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>);</div>
+<div class="line"><span class="lineno">40593</span>        }</div>
+<div class="line"><span class="lineno">40594</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd_html_a7c3e517bb9f5b256cb976ee3794b84fd"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7c3e517bb9f5b256cb976ee3794b84fd.html#a7c3e517bb9f5b256cb976ee3794b84fd">Terraria.Player.GetProjectileSource_Accessory</a></div><div class="ttdeci">IEntitySource GetProjectileSource_Accessory(Item item)</div><div class="ttdef"><b>Definition</b> Player.cs:9312</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_af59b25b7bbc47ac4e6af6b1154aeb44a_html_af59b25b7bbc47ac4e6af6b1154aeb44a"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_af59b25b7bbc47ac4e6af6b1154aeb44a.html#af59b25b7bbc47ac4e6af6b1154aeb44a">Terraria.Player.volatileGelatinCounter</a></div><div class="ttdeci">int volatileGelatinCounter</div><div class="ttdef"><b>Definition</b> Player.cs:1625</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a88fb04cefeb3d121612538889bd56102.html#a88fb04cefeb3d121612538889bd56102">Terraria.NPC.CanBeChasedBy()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a034b07537f9fbe3ac9b208ce884d2d16.html#a034b07537f9fbe3ac9b208ce884d2d16">Terraria.Collision.CanHit()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e.html#a8973f997e12f32690d61b0eeb522134e">Terraria.Entity.Distance()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aff54f2d7e5d69ffa2ec3a069a6266e50.html#aff54f2d7e5d69ffa2ec3a069a6266e50">Terraria.Projectile.NewProjectile()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

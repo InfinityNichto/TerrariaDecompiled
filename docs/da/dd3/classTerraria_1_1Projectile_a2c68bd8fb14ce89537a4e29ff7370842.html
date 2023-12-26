@@ -131,6 +131,57 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a2c68bd8fb14ce89537
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">57655</span>    {</div>
+<div class="line"><span class="lineno">57656</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">57657</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> ownerMinionAttackTargetNPC = <a class="code hl_property" href="../../da/dd3/classTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa.html#ad8de3136ba72e8bed2ce0241d17dbaaa">OwnerMinionAttackTargetNPC</a>;</div>
+<div class="line"><span class="lineno">57658</span>        <span class="keywordflow">if</span> (ownerMinionAttackTargetNPC != <span class="keyword">null</span> &amp;&amp; ownerMinionAttackTargetNPC.CanBeChasedBy(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">57659</span>        {</div>
+<div class="line"><span class="lineno">57660</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)</div>
+<div class="line"><span class="lineno">57661</span>            {</div>
+<div class="line"><span class="lineno">57662</span>                <span class="keywordflow">if</span> (!ownerMinionAttackTargetNPC.CanBeChasedBy(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">57663</span>                {</div>
+<div class="line"><span class="lineno">57664</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">57665</span>                }</div>
+<div class="line"><span class="lineno">57666</span>                <span class="keywordtype">float</span> num2 = Vector2.<a class="code hl_function" href="../../df/df6/classTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e.html#a8973f997e12f32690d61b0eeb522134e">Distance</a>(shootingSpot, ownerMinionAttackTargetNPC.Center);</div>
+<div class="line"><span class="lineno">57667</span>                <span class="keywordflow">if</span> (!(num2 &gt; shot_range))</div>
+<div class="line"><span class="lineno">57668</span>                {</div>
+<div class="line"><span class="lineno">57669</span>                    Vector2 vector = (ownerMinionAttackTargetNPC.Center - shootingSpot).SafeNormalize(Vector2.UnitY);</div>
+<div class="line"><span class="lineno">57670</span>                    <span class="keywordflow">if</span> (!(Math.Abs(vector.X) &lt; Math.Abs(vector.Y) * angleRatioMax) &amp;&amp; (canChangeDirection || !((float)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">direction</a> * vector.X &lt; 0f)) &amp;&amp; (num == -1 || num2 &lt; Vector2.Distance(shootingSpot, Main.npc[num].Center)) &amp;&amp; Collision.CanHitLine(shootingSpot, 0, 0, ownerMinionAttackTargetNPC.Center, 0, 0))</div>
+<div class="line"><span class="lineno">57671</span>                    {</div>
+<div class="line"><span class="lineno">57672</span>                        num = ownerMinionAttackTargetNPC.whoAmI;</div>
+<div class="line"><span class="lineno">57673</span>                    }</div>
+<div class="line"><span class="lineno">57674</span>                }</div>
+<div class="line"><span class="lineno">57675</span>            }</div>
+<div class="line"><span class="lineno">57676</span>            <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">57677</span>            {</div>
+<div class="line"><span class="lineno">57678</span>                <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">57679</span>            }</div>
+<div class="line"><span class="lineno">57680</span>        }</div>
+<div class="line"><span class="lineno">57681</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 200; j++)</div>
+<div class="line"><span class="lineno">57682</span>        {</div>
+<div class="line"><span class="lineno">57683</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[j];</div>
+<div class="line"><span class="lineno">57684</span>            <span class="keywordflow">if</span> (!nPC.CanBeChasedBy(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">57685</span>            {</div>
+<div class="line"><span class="lineno">57686</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">57687</span>            }</div>
+<div class="line"><span class="lineno">57688</span>            <span class="keywordtype">float</span> num3 = Vector2.Distance(shootingSpot, nPC.Center);</div>
+<div class="line"><span class="lineno">57689</span>            <span class="keywordflow">if</span> (!(num3 &gt; shot_range))</div>
+<div class="line"><span class="lineno">57690</span>            {</div>
+<div class="line"><span class="lineno">57691</span>                Vector2 vector2 = (nPC.Center - shootingSpot).SafeNormalize(Vector2.UnitY);</div>
+<div class="line"><span class="lineno">57692</span>                <span class="keywordflow">if</span> (!(Math.Abs(vector2.X) &lt; Math.Abs(vector2.Y) * angleRatioMax) &amp;&amp; (canChangeDirection || !((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">direction</a> * vector2.X &lt; 0f)) &amp;&amp; (num == -1 || num3 &lt; Vector2.Distance(shootingSpot, Main.npc[num].Center)) &amp;&amp; Collision.CanHitLine(shootingSpot, 0, 0, nPC.Center, 0, 0))</div>
+<div class="line"><span class="lineno">57693</span>                {</div>
+<div class="line"><span class="lineno">57694</span>                    num = j;</div>
+<div class="line"><span class="lineno">57695</span>                }</div>
+<div class="line"><span class="lineno">57696</span>            }</div>
+<div class="line"><span class="lineno">57697</span>        }</div>
+<div class="line"><span class="lineno">57698</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">57699</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f_html_a2dc818b6035d9e739592ea0e9a75945f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition</b> Entity.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e_html_a8973f997e12f32690d61b0eeb522134e"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e.html#a8973f997e12f32690d61b0eeb522134e">Terraria.Entity.Distance</a></div><div class="ttdeci">float Distance(Vector2 Other)</div><div class="ttdef"><b>Definition</b> Entity.cs:187</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa_html_ad8de3136ba72e8bed2ce0241d17dbaaa"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa.html#ad8de3136ba72e8bed2ce0241d17dbaaa">Terraria.Projectile.OwnerMinionAttackTargetNPC</a></div><div class="ttdeci">NPC OwnerMinionAttackTargetNPC</div><div class="ttdef"><b>Definition</b> Projectile.cs:305</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a88fb04cefeb3d121612538889bd56102.html#a88fb04cefeb3d121612538889bd56102">Terraria.NPC.CanBeChasedBy()</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4dec276f8d2858ee4dd91c23f5bffa52.html#a4dec276f8d2858ee4dd91c23f5bffa52">Terraria.Collision.CanHitLine()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8973f997e12f32690d61b0eeb522134e.html#a8973f997e12f32690d61b0eeb522134e">Terraria.Entity.Distance()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

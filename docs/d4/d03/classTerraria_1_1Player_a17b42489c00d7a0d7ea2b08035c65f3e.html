@@ -121,6 +121,30 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a17b42489c00d7a0d7ea2b0
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">35959</span>    {</div>
+<div class="line"><span class="lineno">35960</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = floorX - 1; i &lt; floorX + 2; i++)</div>
+<div class="line"><span class="lineno">35961</span>        {</div>
+<div class="line"><span class="lineno">35962</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = floorY - 3; j &lt; floorY; j++)</div>
+<div class="line"><span class="lineno">35963</span>            {</div>
+<div class="line"><span class="lineno">35964</span>                <span class="keywordflow">if</span> (Main.tile[i, j] != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">35965</span>                {</div>
+<div class="line"><span class="lineno">35966</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].nactive() &amp;&amp; Main.tileSolid[Main.tile[i, j].type] &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno">35967</span>                    {</div>
+<div class="line"><span class="lineno">35968</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(i, j);</div>
+<div class="line"><span class="lineno">35969</span>                    }</div>
+<div class="line"><span class="lineno">35970</span>                    <span class="keywordflow">if</span> (Main.tile[i, j].liquid &gt; 0)</div>
+<div class="line"><span class="lineno">35971</span>                    {</div>
+<div class="line"><span class="lineno">35972</span>                        Main.tile[i, j].lava(lava: false);</div>
+<div class="line"><span class="lineno">35973</span>                        Main.tile[i, j].liquid = 0;</div>
+<div class="line"><span class="lineno">35974</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareTileFrame(i, j);</div>
+<div class="line"><span class="lineno">35975</span>                    }</div>
+<div class="line"><span class="lineno">35976</span>                }</div>
+<div class="line"><span class="lineno">35977</span>            }</div>
+<div class="line"><span class="lineno">35978</span>        }</div>
+<div class="line"><span class="lineno">35979</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac5e7a45a98f6e9037975c4c7e043a7a9.html#ac5e7a45a98f6e9037975c4c7e043a7a9">Terraria.Tile.lava()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -131,6 +131,53 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a6c32486e14e7da4ddf6
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2257</span>    {</div>
+<div class="line"><span class="lineno"> 2258</span>        <span class="keywordtype">int</span> value = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.X / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 2259</span>        <span class="keywordtype">int</span> value2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.X + (<span class="keywordtype">float</span>)Width) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 2260</span>        <span class="keywordtype">int</span> value3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.Y / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 2261</span>        <span class="keywordtype">int</span> value4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.Y + (<span class="keywordtype">float</span>)Height) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 2262</span>        <span class="keywordtype">int</span> num = Utils.Clamp(value, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 2263</span>        value2 = Utils.Clamp(value2, 0, Main.maxTilesX - 1);</div>
+<div class="line"><span class="lineno"> 2264</span>        value3 = Utils.Clamp(value3, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno"> 2265</span>        value4 = Utils.Clamp(value4, 0, Main.maxTilesY - 1);</div>
+<div class="line"><span class="lineno"> 2266</span>        Vector2 vector = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 2267</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i &lt; value2; i++)</div>
+<div class="line"><span class="lineno"> 2268</span>        {</div>
+<div class="line"><span class="lineno"> 2269</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = value3; j &lt; value4; j++)</div>
+<div class="line"><span class="lineno"> 2270</span>            {</div>
+<div class="line"><span class="lineno"> 2271</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 2272</span>                <span class="keywordflow">if</span> (tile == <span class="keyword">null</span> || !tile.active() || tile.inActive())</div>
+<div class="line"><span class="lineno"> 2273</span>                {</div>
+<div class="line"><span class="lineno"> 2274</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2275</span>                }</div>
+<div class="line"><span class="lineno"> 2276</span>                <span class="keywordtype">bool</span> flag = Main.tileSolid[tile.type] &amp;&amp; !Main.tileSolidTop[tile.type];</div>
+<div class="line"><span class="lineno"> 2277</span>                <span class="keywordflow">if</span> (acceptTopSurfaces)</div>
+<div class="line"><span class="lineno"> 2278</span>                {</div>
+<div class="line"><span class="lineno"> 2279</span>                    flag |= Main.tileSolidTop[tile.type] &amp;&amp; tile.frameY == 0;</div>
+<div class="line"><span class="lineno"> 2280</span>                }</div>
+<div class="line"><span class="lineno"> 2281</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 2282</span>                {</div>
+<div class="line"><span class="lineno"> 2283</span>                    vector.X = i * 16;</div>
+<div class="line"><span class="lineno"> 2284</span>                    vector.Y = j * 16;</div>
+<div class="line"><span class="lineno"> 2285</span>                    <span class="keywordtype">int</span> num2 = 16;</div>
+<div class="line"><span class="lineno"> 2286</span>                    <span class="keywordflow">if</span> (tile.halfBrick())</div>
+<div class="line"><span class="lineno"> 2287</span>                    {</div>
+<div class="line"><span class="lineno"> 2288</span>                        vector.Y += 8f;</div>
+<div class="line"><span class="lineno"> 2289</span>                        num2 -= 8;</div>
+<div class="line"><span class="lineno"> 2290</span>                    }</div>
+<div class="line"><span class="lineno"> 2291</span>                    <span class="keywordflow">if</span> (Position.X + (<span class="keywordtype">float</span>)Width &gt; vector.X &amp;&amp; Position.X &lt; vector.X + 16f &amp;&amp; Position.Y + (float)Height &gt; vector.Y &amp;&amp; Position.Y &lt; vector.Y + (<span class="keywordtype">float</span>)num2)</div>
+<div class="line"><span class="lineno"> 2292</span>                    {</div>
+<div class="line"><span class="lineno"> 2293</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2294</span>                    }</div>
+<div class="line"><span class="lineno"> 2295</span>                }</div>
+<div class="line"><span class="lineno"> 2296</span>            }</div>
+<div class="line"><span class="lineno"> 2297</span>        }</div>
+<div class="line"><span class="lineno"> 2298</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2299</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,70 @@ $(function(){initNavTree('d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4404</span>    {</div>
+<div class="line"><span class="lineno"> 4405</span>        <span class="keywordflow">if</span> (getTile == <span class="keyword">null</span> || !getTile.active())</div>
+<div class="line"><span class="lineno"> 4406</span>        {</div>
+<div class="line"><span class="lineno"> 4407</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 4408</span>        }</div>
+<div class="line"><span class="lineno"> 4409</span>        <span class="keywordtype">int</span> type = getTile.type;</div>
+<div class="line"><span class="lineno"> 4410</span>        <span class="keywordflow">if</span> (type &lt; 0 || type &gt;= <a class="code hl_variable" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a5ca1d679c3a94267236c3d5ddea699f8.html#a5ca1d679c3a94267236c3d5ddea699f8">_data</a>.Count)</div>
+<div class="line"><span class="lineno"> 4411</span>        {</div>
+<div class="line"><span class="lineno"> 4412</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(<span class="stringliteral">&quot;Function called with a bad tile type&quot;</span>);</div>
+<div class="line"><span class="lineno"> 4413</span>        }</div>
+<div class="line"><span class="lineno"> 4414</span>        <a class="code hl_function" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_ab2a62bd6702a9518c70682a82063e611.html#ab2a62bd6702a9518c70682a82063e611">TileObjectData</a> tileObjectData = <a class="code hl_variable" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a5ca1d679c3a94267236c3d5ddea699f8.html#a5ca1d679c3a94267236c3d5ddea699f8">_data</a>[type];</div>
+<div class="line"><span class="lineno"> 4415</span>        <span class="keywordflow">if</span> (tileObjectData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 4416</span>        {</div>
+<div class="line"><span class="lineno"> 4417</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 4418</span>        }</div>
+<div class="line"><span class="lineno"> 4419</span>        <span class="keywordtype">int</span> num = getTile.frameX / tileObjectData.CoordinateFullWidth;</div>
+<div class="line"><span class="lineno"> 4420</span>        <span class="keywordtype">int</span> num2 = getTile.frameY / tileObjectData.CoordinateFullHeight;</div>
+<div class="line"><span class="lineno"> 4421</span>        <span class="keywordtype">int</span> num3 = tileObjectData.StyleWrapLimit;</div>
+<div class="line"><span class="lineno"> 4422</span>        <span class="keywordflow">if</span> (num3 == 0)</div>
+<div class="line"><span class="lineno"> 4423</span>        {</div>
+<div class="line"><span class="lineno"> 4424</span>            num3 = 1;</div>
+<div class="line"><span class="lineno"> 4425</span>        }</div>
+<div class="line"><span class="lineno"> 4426</span>        <span class="keywordtype">int</span> num4 = ((!tileObjectData.StyleHorizontal) ? (num * num3 + num2) : (num2 * num3 + num));</div>
+<div class="line"><span class="lineno"> 4427</span>        <span class="keywordtype">int</span> num5 = num4 / tileObjectData.StyleMultiplier;</div>
+<div class="line"><span class="lineno"> 4428</span>        <span class="keywordtype">int</span> num6 = num4 % tileObjectData.StyleMultiplier;</div>
+<div class="line"><span class="lineno"> 4429</span>        <span class="keywordtype">int</span> styleLineSkip = tileObjectData.StyleLineSkip;</div>
+<div class="line"><span class="lineno"> 4430</span>        <span class="keywordflow">if</span> (styleLineSkip &gt; 1)</div>
+<div class="line"><span class="lineno"> 4431</span>        {</div>
+<div class="line"><span class="lineno"> 4432</span>            <span class="keywordflow">if</span> (tileObjectData.StyleHorizontal)</div>
+<div class="line"><span class="lineno"> 4433</span>            {</div>
+<div class="line"><span class="lineno"> 4434</span>                num5 = num2 / styleLineSkip * num3 + num;</div>
+<div class="line"><span class="lineno"> 4435</span>                num6 = num2 % styleLineSkip;</div>
+<div class="line"><span class="lineno"> 4436</span>            }</div>
+<div class="line"><span class="lineno"> 4437</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 4438</span>            {</div>
+<div class="line"><span class="lineno"> 4439</span>                num5 = num / styleLineSkip * num3 + num2;</div>
+<div class="line"><span class="lineno"> 4440</span>                num6 = num % styleLineSkip;</div>
+<div class="line"><span class="lineno"> 4441</span>            }</div>
+<div class="line"><span class="lineno"> 4442</span>        }</div>
+<div class="line"><span class="lineno"> 4443</span>        <span class="keywordflow">if</span> (tileObjectData.SubTiles != <span class="keyword">null</span> &amp;&amp; num5 &gt;= 0 &amp;&amp; num5 &lt; tileObjectData.SubTiles.Count)</div>
+<div class="line"><span class="lineno"> 4444</span>        {</div>
+<div class="line"><span class="lineno"> 4445</span>            <a class="code hl_function" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_ab2a62bd6702a9518c70682a82063e611.html#ab2a62bd6702a9518c70682a82063e611">TileObjectData</a> tileObjectData2 = tileObjectData.SubTiles[num5];</div>
+<div class="line"><span class="lineno"> 4446</span>            <span class="keywordflow">if</span> (tileObjectData2 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 4447</span>            {</div>
+<div class="line"><span class="lineno"> 4448</span>                tileObjectData = tileObjectData2;</div>
+<div class="line"><span class="lineno"> 4449</span>            }</div>
+<div class="line"><span class="lineno"> 4450</span>        }</div>
+<div class="line"><span class="lineno"> 4451</span>        <span class="keywordflow">if</span> (tileObjectData._alternates != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 4452</span>        {</div>
+<div class="line"><span class="lineno"> 4453</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tileObjectData.Alternates.Count; i++)</div>
+<div class="line"><span class="lineno"> 4454</span>            {</div>
+<div class="line"><span class="lineno"> 4455</span>                <a class="code hl_function" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_ab2a62bd6702a9518c70682a82063e611.html#ab2a62bd6702a9518c70682a82063e611">TileObjectData</a> tileObjectData3 = tileObjectData.Alternates[i];</div>
+<div class="line"><span class="lineno"> 4456</span>                <span class="keywordflow">if</span> (tileObjectData3 != <span class="keyword">null</span> &amp;&amp; num6 &gt;= tileObjectData3.Style &amp;&amp; num6 &lt;= tileObjectData3.Style + tileObjectData3.RandomStyleRange)</div>
+<div class="line"><span class="lineno"> 4457</span>                {</div>
+<div class="line"><span class="lineno"> 4458</span>                    <span class="keywordflow">return</span> tileObjectData3;</div>
+<div class="line"><span class="lineno"> 4459</span>                }</div>
+<div class="line"><span class="lineno"> 4460</span>            }</div>
+<div class="line"><span class="lineno"> 4461</span>        }</div>
+<div class="line"><span class="lineno"> 4462</span>        <span class="keywordflow">return</span> tileObjectData;</div>
+<div class="line"><span class="lineno"> 4463</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ObjectData_1_1TileObjectData_a5ca1d679c3a94267236c3d5ddea699f8_html_a5ca1d679c3a94267236c3d5ddea699f8"><div class="ttname"><a href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a5ca1d679c3a94267236c3d5ddea699f8.html#a5ca1d679c3a94267236c3d5ddea699f8">Terraria.ObjectData.TileObjectData._data</a></div><div class="ttdeci">static List&lt; TileObjectData &gt; _data</div><div class="ttdef"><b>Definition</b> TileObjectData.cs:63</div></div>
+<div class="ttc" id="aclassTerraria_1_1ObjectData_1_1TileObjectData_ab2a62bd6702a9518c70682a82063e611_html_ab2a62bd6702a9518c70682a82063e611"><div class="ttname"><a href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_ab2a62bd6702a9518c70682a82063e611.html#ab2a62bd6702a9518c70682a82063e611">Terraria.ObjectData.TileObjectData.TileObjectData</a></div><div class="ttdeci">TileObjectData(TileObjectData copyFrom=null)</div><div class="ttdef"><b>Definition</b> TileObjectData.cs:1584</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_ad3a2ce8be779dd927148191a569b0bec.html#ad3a2ce8be779dd927148191a569b0bec">Terraria.ObjectData.TileObjectData._alternates</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a5ca1d679c3a94267236c3d5ddea699f8.html#a5ca1d679c3a94267236c3d5ddea699f8">Terraria.ObjectData.TileObjectData._data</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a04c2e3da942b6b53e81e5c6074a605af.html#a04c2e3da942b6b53e81e5c6074a605af">Terraria.ObjectData.TileObjectData.Alternates</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a2dc1a1ae7d4351fad2702fb5ac7c8a7e.html#a2dc1a1ae7d4351fad2702fb5ac7c8a7e">Terraria.ObjectData.TileObjectData.CoordinateFullHeight</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a9fb146cc70ae3bc6158d58aec21789fd.html#a9fb146cc70ae3bc6158d58aec21789fd">Terraria.ObjectData.TileObjectData.CoordinateFullWidth</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a719b58194c0417577e9cbb5d2089c8ba.html#a719b58194c0417577e9cbb5d2089c8ba">Terraria.ObjectData.TileObjectData.RandomStyleRange</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a996164dba38eb3da8181878c69dc77a7.html#a996164dba38eb3da8181878c69dc77a7">Terraria.ObjectData.TileObjectData.Style</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a377f4964dc18c7a58b71167595a522e8.html#a377f4964dc18c7a58b71167595a522e8">Terraria.ObjectData.TileObjectData.StyleHorizontal</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a9b4a598c8982f87662d50fecfd178da7.html#a9b4a598c8982f87662d50fecfd178da7">Terraria.ObjectData.TileObjectData.StyleLineSkip</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a533ce95d7fecf1a49cc1744a37292d0b.html#a533ce95d7fecf1a49cc1744a37292d0b">Terraria.ObjectData.TileObjectData.StyleMultiplier</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_a78c88e32de2834d8b38658bdb840c605.html#a78c88e32de2834d8b38658bdb840c605">Terraria.ObjectData.TileObjectData.StyleWrapLimit</a>, <a class="el" href="../../d0/d9d/classTerraria_1_1ObjectData_1_1TileObjectData_aff26d4c6f781e393c102ca30de4a7c40.html#aff26d4c6f781e393c102ca30de4a7c40">Terraria.ObjectData.TileObjectData.SubTiles</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

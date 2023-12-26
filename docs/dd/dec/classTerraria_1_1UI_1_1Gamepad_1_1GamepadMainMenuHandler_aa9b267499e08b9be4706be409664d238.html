@@ -117,6 +117,104 @@ $(function(){initNavTree('dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMe
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a103a6b6c44cdb9f733824fe5850376f8.html#a103a6b6c44cdb9f733824fe5850376f8">CanRun</a>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            UILinkPage uILinkPage = UILinkPointNavigator.Pages[1000];</div>
+<div class="line"><span class="lineno">   25</span>            uILinkPage.CurrentPoint = uILinkPage.DefaultPoint;</div>
+<div class="line"><span class="lineno">   26</span>            Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)Math.Cos(Main.GlobalTimeWrappedHourly * ((<span class="keywordtype">float</span>)Math.PI * 2f)), (<span class="keywordtype">float</span>)Math.Sin(Main.GlobalTimeWrappedHourly * ((<span class="keywordtype">float</span>)Math.PI * 2f) * 2f)) * <span class="keyword">new</span> Vector2(30f, 15f) + Vector2.UnitY * 20f;</div>
+<div class="line"><span class="lineno">   27</span>            UILinkPointNavigator.SetPosition(2000, <span class="keyword">new</span> Vector2(Main.screenWidth, Main.screenHeight) / 2f + vector);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Main.gameMenu || Main.MenuUI.IsVisible || <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_ab646f8f2e65991eda0e97b83d873b529.html#ab646f8f2e65991eda0e97b83d873b529">LastDrew</a> != Main.menuMode)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">int</span> lastMainMenu = <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455.html#aea8b5b4398a8b7fbcd8176d584304455">LastMainMenu</a>;</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455.html#aea8b5b4398a8b7fbcd8176d584304455">LastMainMenu</a> = Main.menuMode;</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">switch</span> (Main.menuMode)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">case</span> 17:</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">case</span> 18:</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">case</span> 21:</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">case</span> 22:</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">case</span> 23:</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">case</span> 26:</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Count &gt;= 4)</div>
+<div class="line"><span class="lineno">   48</span>                {</div>
+<div class="line"><span class="lineno">   49</span>                    Vector2 item = <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>[3];</div>
+<div class="line"><span class="lineno">   50</span>                    <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.RemoveAt(3);</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">if</span> (Main.menuMode == 17)</div>
+<div class="line"><span class="lineno">   52</span>                    {</div>
+<div class="line"><span class="lineno">   53</span>                        <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Insert(0, item);</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                }</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">case</span> 28:</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Count &gt;= 3)</div>
+<div class="line"><span class="lineno">   59</span>                {</div>
+<div class="line"><span class="lineno">   60</span>                    <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.RemoveAt(1);</div>
+<div class="line"><span class="lineno">   61</span>                }</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            UILinkPage uILinkPage2 = UILinkPointNavigator.Pages[1000];</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (lastMainMenu != Main.menuMode)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                uILinkPage2.CurrentPoint = uILinkPage2.DefaultPoint;</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Count; i++)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                Vector2 position = <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>[i] * Main.UIScale;</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (i == 0 &amp;&amp; lastMainMenu != <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455.html#aea8b5b4398a8b7fbcd8176d584304455">LastMainMenu</a> &amp;&amp; <a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_property" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">UsingGamepad</a> &amp;&amp; Main.InvisibleCursorForGamepad)</div>
+<div class="line"><span class="lineno">   73</span>                {</div>
+<div class="line"><span class="lineno">   74</span>                    Main.mouseX = (PlayerInput.MouseX = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.X);</div>
+<div class="line"><span class="lineno">   75</span>                    Main.mouseY = (PlayerInput.MouseY = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)position.Y);</div>
+<div class="line"><span class="lineno">   76</span>                    Main.menuFocus = -1;</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>                UILinkPoint uILinkPoint = uILinkPage2.LinkMap[2000 + i];</div>
+<div class="line"><span class="lineno">   79</span>                uILinkPoint.Position = position;</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (i == 0)</div>
+<div class="line"><span class="lineno">   81</span>                {</div>
+<div class="line"><span class="lineno">   82</span>                    uILinkPoint.Up = -1;</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   85</span>                {</div>
+<div class="line"><span class="lineno">   86</span>                    uILinkPoint.Up = 2000 + i - 1;</div>
+<div class="line"><span class="lineno">   87</span>                }</div>
+<div class="line"><span class="lineno">   88</span>                uILinkPoint.Left = -3;</div>
+<div class="line"><span class="lineno">   89</span>                uILinkPoint.Right = -4;</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Count - 1)</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    uILinkPoint.Down = -2;</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    uILinkPoint.Down = 2000 + i + 1;</div>
+<div class="line"><span class="lineno">   97</span>                }</div>
+<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a8a379699ee9da6e12f519520a1f60dd1.html#a8a379699ee9da6e12f519520a1f60dd1">MoveCursorOnNextRun</a>)</div>
+<div class="line"><span class="lineno">   99</span>                {</div>
+<div class="line"><span class="lineno">  100</span>                    <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a8a379699ee9da6e12f519520a1f60dd1.html#a8a379699ee9da6e12f519520a1f60dd1">MoveCursorOnNextRun</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>                    UILinkPointNavigator.ChangePoint(uILinkPoint.ID);</div>
+<div class="line"><span class="lineno">  102</span>                }</div>
+<div class="line"><span class="lineno">  103</span>            }</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">MenuItemPositions</a>.Clear();</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa_html_addc6320b79fba238ede21516480229fa"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a></div><div class="ttdeci">static bool UsingGamepad</div><div class="ttdef"><b>Definition</b> PlayerInput.cs:331</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_html"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">Terraria.GameInput.PlayerInput</a></div><div class="ttdef"><b>Definition</b> PlayerInput.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a103a6b6c44cdb9f733824fe5850376f8_html_a103a6b6c44cdb9f733824fe5850376f8"><div class="ttname"><a href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a103a6b6c44cdb9f733824fe5850376f8.html#a103a6b6c44cdb9f733824fe5850376f8">Terraria.UI.Gamepad.GamepadMainMenuHandler.CanRun</a></div><div class="ttdeci">static bool CanRun</div><div class="ttdef"><b>Definition</b> GamepadMainMenuHandler.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf_html_a4cae3497aee774bfc1faa0ff502598bf"><div class="ttname"><a href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">Terraria.UI.Gamepad.GamepadMainMenuHandler.MenuItemPositions</a></div><div class="ttdeci">static List&lt; Vector2 &gt; MenuItemPositions</div><div class="ttdef"><b>Definition</b> GamepadMainMenuHandler.cs:12</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a8a379699ee9da6e12f519520a1f60dd1_html_a8a379699ee9da6e12f519520a1f60dd1"><div class="ttname"><a href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a8a379699ee9da6e12f519520a1f60dd1.html#a8a379699ee9da6e12f519520a1f60dd1">Terraria.UI.Gamepad.GamepadMainMenuHandler.MoveCursorOnNextRun</a></div><div class="ttdeci">static bool MoveCursorOnNextRun</div><div class="ttdef"><b>Definition</b> GamepadMainMenuHandler.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_ab646f8f2e65991eda0e97b83d873b529_html_ab646f8f2e65991eda0e97b83d873b529"><div class="ttname"><a href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_ab646f8f2e65991eda0e97b83d873b529.html#ab646f8f2e65991eda0e97b83d873b529">Terraria.UI.Gamepad.GamepadMainMenuHandler.LastDrew</a></div><div class="ttdeci">static int LastDrew</div><div class="ttdef"><b>Definition</b> GamepadMainMenuHandler.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455_html_aea8b5b4398a8b7fbcd8176d584304455"><div class="ttname"><a href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455.html#aea8b5b4398a8b7fbcd8176d584304455">Terraria.UI.Gamepad.GamepadMainMenuHandler.LastMainMenu</a></div><div class="ttdeci">static int LastMainMenu</div><div class="ttdef"><b>Definition</b> GamepadMainMenuHandler.cs:10</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a103a6b6c44cdb9f733824fe5850376f8.html#a103a6b6c44cdb9f733824fe5850376f8">Terraria.UI.Gamepad.GamepadMainMenuHandler.CanRun</a>, <a class="el" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_a777aac1c14d559cf80455e2e5e7322b4.html#a777aac1c14d559cf80455e2e5e7322b4">Terraria.UI.Gamepad.UILinkPointNavigator.ChangePoint()</a>, <a class="el" href="../../d0/d91/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPage_a5d3f1657c0b2967ece9eadd9ab119fae.html#a5d3f1657c0b2967ece9eadd9ab119fae">Terraria.UI.Gamepad.UILinkPage.DefaultPoint</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae6ffea71a619ed421c1e2d22f046193c.html#ae6ffea71a619ed421c1e2d22f046193c">Terraria.Main.gameMenu</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af83196cd3257dbb8b510980bbcff03dc.html#af83196cd3257dbb8b510980bbcff03dc">Terraria.Main.GlobalTimeWrappedHourly</a>, <a class="el" href="../../d6/d77/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPoint_a46e6765da92d2fb19b128b8e4ada7a03.html#a46e6765da92d2fb19b128b8e4ada7a03">Terraria.UI.Gamepad.UILinkPoint.ID</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0b2c98a4cbd295c1c9a09a73851992fc.html#a0b2c98a4cbd295c1c9a09a73851992fc">Terraria.Main.InvisibleCursorForGamepad</a>, <a class="el" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_ab646f8f2e65991eda0e97b83d873b529.html#ab646f8f2e65991eda0e97b83d873b529">Terraria.UI.Gamepad.GamepadMainMenuHandler.LastDrew</a>, <a class="el" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_aea8b5b4398a8b7fbcd8176d584304455.html#aea8b5b4398a8b7fbcd8176d584304455">Terraria.UI.Gamepad.GamepadMainMenuHandler.LastMainMenu</a>, <a class="el" href="../../d0/d91/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPage_a4a6c993f6c92e928aca51aa088f54878.html#a4a6c993f6c92e928aca51aa088f54878">Terraria.UI.Gamepad.UILinkPage.LinkMap</a>, <a class="el" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a4cae3497aee774bfc1faa0ff502598bf.html#a4cae3497aee774bfc1faa0ff502598bf">Terraria.UI.Gamepad.GamepadMainMenuHandler.MenuItemPositions</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae535ab001c4acc84323273134f02f00d.html#ae535ab001c4acc84323273134f02f00d">Terraria.Main.menuMode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3abfb4806dc18f2b62315b5ca4e7e1f0.html#a3abfb4806dc18f2b62315b5ca4e7e1f0">Terraria.Main.MenuUI</a>, <a class="el" href="../../dd/dec/classTerraria_1_1UI_1_1Gamepad_1_1GamepadMainMenuHandler_a8a379699ee9da6e12f519520a1f60dd1.html#a8a379699ee9da6e12f519520a1f60dd1">Terraria.UI.Gamepad.GamepadMainMenuHandler.MoveCursorOnNextRun</a>, <a class="el" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_af6a74f8462e56fe62488b63acf09632e.html#af6a74f8462e56fe62488b63acf09632e">Terraria.UI.Gamepad.UILinkPointNavigator.Pages</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d02013f8d3b3236b9c18fed7f98274c.html#a6d02013f8d3b3236b9c18fed7f98274c">Terraria.Main.screenHeight</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad1faaf9a13eee5a95e0f8690feb12e91.html#ad1faaf9a13eee5a95e0f8690feb12e91">Terraria.Main.screenWidth</a>, <a class="el" href="../../d4/dc5/classTerraria_1_1UI_1_1Gamepad_1_1UILinkPointNavigator_ac28776d33a359203c79dd1d72f217981.html#ac28776d33a359203c79dd1d72f217981">Terraria.UI.Gamepad.UILinkPointNavigator.SetPosition()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a5b479e4cb3fb26bf7c93d5c89586b4ab.html#a5b479e4cb3fb26bf7c93d5c89586b4ab">Terraria.Main.UIScale</a>, and <a class="el" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae7acc9fe7fb0914ed02aacdfdc9039c5.html#ae7acc9fe7fb0914ed02aacdfdc9039c5">Terraria.Main.DrawMenu()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

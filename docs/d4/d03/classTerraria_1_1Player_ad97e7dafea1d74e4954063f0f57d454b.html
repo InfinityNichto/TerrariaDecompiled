@@ -117,6 +117,51 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ad97e7dafea1d74e4954063
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">44734</span>    {</div>
+<div class="line"><span class="lineno">44735</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Clear();</div>
+<div class="line"><span class="lineno">44736</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">44737</span>        {</div>
+<div class="line"><span class="lineno">44738</span>            Projectile projectile = Main.projectile[i];</div>
+<div class="line"><span class="lineno">44739</span>            <span class="keywordflow">if</span> (projectile.active &amp;&amp; projectile.owner == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">44740</span>            {</div>
+<div class="line"><span class="lineno">44741</span>                <span class="keywordflow">switch</span> (projectile.type)</div>
+<div class="line"><span class="lineno">44742</span>                {</div>
+<div class="line"><span class="lineno">44743</span>                <span class="keywordflow">case</span> 135:</div>
+<div class="line"><span class="lineno">44744</span>                <span class="keywordflow">case</span> 138:</div>
+<div class="line"><span class="lineno">44745</span>                <span class="keywordflow">case</span> 141:</div>
+<div class="line"><span class="lineno">44746</span>                <span class="keywordflow">case</span> 144:</div>
+<div class="line"><span class="lineno">44747</span>                <span class="keywordflow">case</span> 778:</div>
+<div class="line"><span class="lineno">44748</span>                <span class="keywordflow">case</span> 782:</div>
+<div class="line"><span class="lineno">44749</span>                <span class="keywordflow">case</span> 786:</div>
+<div class="line"><span class="lineno">44750</span>                <span class="keywordflow">case</span> 789:</div>
+<div class="line"><span class="lineno">44751</span>                <span class="keywordflow">case</span> 792:</div>
+<div class="line"><span class="lineno">44752</span>                <span class="keywordflow">case</span> 795:</div>
+<div class="line"><span class="lineno">44753</span>                <span class="keywordflow">case</span> 798:</div>
+<div class="line"><span class="lineno">44754</span>                <span class="keywordflow">case</span> 801:</div>
+<div class="line"><span class="lineno">44755</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Add(projectile);</div>
+<div class="line"><span class="lineno">44756</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">44757</span>                }</div>
+<div class="line"><span class="lineno">44758</span>            }</div>
+<div class="line"><span class="lineno">44759</span>        }</div>
+<div class="line"><span class="lineno">44760</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Count &gt; minesCap)</div>
+<div class="line"><span class="lineno">44761</span>        {</div>
+<div class="line"><span class="lineno">44762</span>            Projectile projectile2 = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>[0];</div>
+<div class="line"><span class="lineno">44763</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Count; j++)</div>
+<div class="line"><span class="lineno">44764</span>            {</div>
+<div class="line"><span class="lineno">44765</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>[j].timeLeft &lt; projectile2.timeLeft)</div>
+<div class="line"><span class="lineno">44766</span>                {</div>
+<div class="line"><span class="lineno">44767</span>                    projectile2 = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>[j];</div>
+<div class="line"><span class="lineno">44768</span>                }</div>
+<div class="line"><span class="lineno">44769</span>            }</div>
+<div class="line"><span class="lineno">44770</span>            projectile2.Kill();</div>
+<div class="line"><span class="lineno">44771</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Remove(projectile2);</div>
+<div class="line"><span class="lineno">44772</span>        }</div>
+<div class="line"><span class="lineno">44773</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">_oldestProjCheckList</a>.Clear();</div>
+<div class="line"><span class="lineno">44774</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5_html_a36ec5a568df77b41c7f5b087922ad1a5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a36ec5a568df77b41c7f5b087922ad1a5.html#a36ec5a568df77b41c7f5b087922ad1a5">Terraria.Player._oldestProjCheckList</a></div><div class="ttdeci">static List&lt; Projectile &gt; _oldestProjCheckList</div><div class="ttdef"><b>Definition</b> Player.cs:2719</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a7f88be42a896409d3414e97f8039450a.html#a7f88be42a896409d3414e97f8039450a">Terraria.Projectile.timeLeft</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

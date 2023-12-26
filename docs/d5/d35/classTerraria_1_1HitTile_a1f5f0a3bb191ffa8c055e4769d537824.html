@@ -117,6 +117,85 @@ $(function(){initNavTree('d5/d35/classTerraria_1_1HitTile_a1f5f0a3bb191ffa8c055e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  250</span>    {</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= 500; i++)</div>
+<div class="line"><span class="lineno">  253</span>        {</div>
+<div class="line"><span class="lineno">  254</span>            HitTileObject hitTileObject = <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42">data</a>[i];</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">if</span> (hitTileObject.type == 0)</div>
+<div class="line"><span class="lineno">  256</span>            {</div>
+<div class="line"><span class="lineno">  257</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  258</span>            }</div>
+<div class="line"><span class="lineno">  259</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[hitTileObject.X, hitTileObject.Y];</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">if</span> (hitTileObject.timeToLive &lt;= 1)</div>
+<div class="line"><span class="lineno">  261</span>            {</div>
+<div class="line"><span class="lineno">  262</span>                hitTileObject.Clear();</div>
+<div class="line"><span class="lineno">  263</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  264</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  265</span>            }</div>
+<div class="line"><span class="lineno">  266</span>            hitTileObject.timeToLive--;</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)hitTileObject.timeToLive &lt; 12.0)</div>
+<div class="line"><span class="lineno">  268</span>            {</div>
+<div class="line"><span class="lineno">  269</span>                hitTileObject.damage -= 10;</div>
+<div class="line"><span class="lineno">  270</span>            }</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)hitTileObject.timeToLive &lt; 24.0)</div>
+<div class="line"><span class="lineno">  272</span>            {</div>
+<div class="line"><span class="lineno">  273</span>                hitTileObject.damage -= 7;</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)hitTileObject.timeToLive &lt; 36.0)</div>
+<div class="line"><span class="lineno">  276</span>            {</div>
+<div class="line"><span class="lineno">  277</span>                hitTileObject.damage -= 5;</div>
+<div class="line"><span class="lineno">  278</span>            }</div>
+<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)hitTileObject.timeToLive &lt; 48.0)</div>
+<div class="line"><span class="lineno">  280</span>            {</div>
+<div class="line"><span class="lineno">  281</span>                hitTileObject.damage -= 2;</div>
+<div class="line"><span class="lineno">  282</span>            }</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (hitTileObject.damage &lt; 0)</div>
+<div class="line"><span class="lineno">  284</span>            {</div>
+<div class="line"><span class="lineno">  285</span>                hitTileObject.Clear();</div>
+<div class="line"><span class="lineno">  286</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  287</span>            }</div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hitTileObject.type == 1)</div>
+<div class="line"><span class="lineno">  289</span>            {</div>
+<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">if</span> (!tile.active())</div>
+<div class="line"><span class="lineno">  291</span>                {</div>
+<div class="line"><span class="lineno">  292</span>                    hitTileObject.Clear();</div>
+<div class="line"><span class="lineno">  293</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  294</span>                }</div>
+<div class="line"><span class="lineno">  295</span>            }</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.wall == 0)</div>
+<div class="line"><span class="lineno">  297</span>            {</div>
+<div class="line"><span class="lineno">  298</span>                hitTileObject.Clear();</div>
+<div class="line"><span class="lineno">  299</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  300</span>            }</div>
+<div class="line"><span class="lineno">  301</span>        }</div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  303</span>        {</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  305</span>        }</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordtype">int</span> num = 1;</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">while</span> (flag)</div>
+<div class="line"><span class="lineno">  308</span>        {</div>
+<div class="line"><span class="lineno">  309</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num; j &lt; 500; j++)</div>
+<div class="line"><span class="lineno">  311</span>            {</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42">data</a>[<a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j]].type == 0 &amp;&amp; <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42">data</a>[<a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j + 1]].type != 0)</div>
+<div class="line"><span class="lineno">  313</span>                {</div>
+<div class="line"><span class="lineno">  314</span>                    <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j];</div>
+<div class="line"><span class="lineno">  315</span>                    <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j] = <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j + 1];</div>
+<div class="line"><span class="lineno">  316</span>                    <a class="code hl_variable" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">order</a>[j + 1] = num2;</div>
+<div class="line"><span class="lineno">  317</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  318</span>                }</div>
+<div class="line"><span class="lineno">  319</span>            }</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e_html_ae5449617a08303a49578932f3b88815e"><div class="ttname"><a href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">Terraria.HitTile.order</a></div><div class="ttdeci">int[] order</div><div class="ttdef"><b>Definition</b> HitTile.cs:68</div></div>
+<div class="ttc" id="aclassTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42_html_afcb6ecddc987bf62569d17cfc6754d42"><div class="ttname"><a href="../../d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42">Terraria.HitTile.data</a></div><div class="ttdeci">HitTileObject[] data</div><div class="ttdef"><b>Definition</b> HitTile.cs:66</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_a57eeec501fb2b7b299252a0c79ccbcb9.html#a57eeec501fb2b7b299252a0c79ccbcb9">Terraria.HitTile.HitTileObject.Clear()</a>, <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_a630622bdc73b96f1c85a8b21e3f8092e.html#a630622bdc73b96f1c85a8b21e3f8092e">Terraria.HitTile.HitTileObject.damage</a>, <a class="el" href="../../d5/d35/classTerraria_1_1HitTile_afcb6ecddc987bf62569d17cfc6754d42.html#afcb6ecddc987bf62569d17cfc6754d42">Terraria.HitTile.data</a>, <a class="el" href="../../d5/d35/classTerraria_1_1HitTile_ae5449617a08303a49578932f3b88815e.html#ae5449617a08303a49578932f3b88815e">Terraria.HitTile.order</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_a08306981f027d2085e3ed7f134320852.html#a08306981f027d2085e3ed7f134320852">Terraria.HitTile.HitTileObject.timeToLive</a>, <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_a428e34b3d324634e1da3bc9580d8550e.html#a428e34b3d324634e1da3bc9580d8550e">Terraria.HitTile.HitTileObject.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_ac42b6bbb8e417647a80fa33e22480201.html#ac42b6bbb8e417647a80fa33e22480201">Terraria.HitTile.HitTileObject.X</a>, and <a class="el" href="../../d0/d54/classTerraria_1_1HitTile_1_1HitTileObject_a6cd583974eccc1be3a1eff76bc544d61.html#a6cd583974eccc1be3a1eff76bc544d61">Terraria.HitTile.HitTileObject.Y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d35/classTerraria_1_1HitTile_af9b7d2eae43c4f1a4dc673e6d17a362b.html#af9b7d2eae43c4f1a4dc673e6d17a362b">Terraria.HitTile.ClearThisTile()</a>, and <a class="el" href="../../d5/d35/classTerraria_1_1HitTile_a664bf48f87197312e2fc98016bca22ac.html#a664bf48f87197312e2fc98016bca22ac">Terraria.HitTile.TryClearingAndPruning()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

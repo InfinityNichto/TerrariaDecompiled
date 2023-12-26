@@ -153,6 +153,60 @@ $(function(){initNavTree('d0/d72/classTerraria_1_1GameContent_1_1UI_1_1CustomCur
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a69fe092e33985b1093e28ef7f93cca95.html#a69fe092e33985b1093e28ef7f93cca95">Terraria.GameContent.UI.CustomCurrencySystem</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Tuple&lt;Point, Item&gt;</a>&gt; cache = <a class="code hl_function" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_afa099ca7606f6db1debf5a48c545029c.html#afa099ca7606f6db1debf5a48c545029c">ItemCacheCreate</a>(inv);</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">long</span> num = price;</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; slotCoins.Count; i++)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            Point item = slotCoins[i];</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordtype">long</span> num2 = num;</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (inv[item.X][item.Y].stack &lt; num2)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                num2 = inv[item.X][item.Y].stack;</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            num -= num2;</div>
+<div class="line"><span class="lineno">   38</span>            inv[item.X][item.Y].stack -= (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num2;</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (inv[item.X][item.Y].stack == 0)</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">switch</span> (item.X)</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   44</span>                    slotsEmpty.Add(item);</div>
+<div class="line"><span class="lineno">   45</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   47</span>                    slotEmptyBank.Add(item);</div>
+<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   50</span>                    slotEmptyBank2.Add(item);</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   53</span>                    slotEmptyBank3.Add(item);</div>
+<div class="line"><span class="lineno">   54</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   56</span>                    slotEmptyBank4.Add(item);</div>
+<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>                slotCoins.Remove(item);</div>
+<div class="line"><span class="lineno">   60</span>                i--;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (num == 0L)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (num != 0L)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_function" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a49c8df7d4e7b9d7f547af7d1428db7db.html#a49c8df7d4e7b9d7f547af7d1428db7db">ItemCacheRestore</a>(cache, inv);</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a49c8df7d4e7b9d7f547af7d1428db7db_html_a49c8df7d4e7b9d7f547af7d1428db7db"><div class="ttname"><a href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a49c8df7d4e7b9d7f547af7d1428db7db.html#a49c8df7d4e7b9d7f547af7d1428db7db">Terraria.GameContent.UI.CustomCurrencySystem.ItemCacheRestore</a></div><div class="ttdeci">void ItemCacheRestore(List&lt; Tuple&lt; Point, Item &gt; &gt; cache, List&lt; Item[]&gt; inventories)</div><div class="ttdef"><b>Definition</b> CustomCurrencySystem.cs:258</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_afa099ca7606f6db1debf5a48c545029c_html_afa099ca7606f6db1debf5a48c545029c"><div class="ttname"><a href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_afa099ca7606f6db1debf5a48c545029c.html#afa099ca7606f6db1debf5a48c545029c">Terraria.GameContent.UI.CustomCurrencySystem.ItemCacheCreate</a></div><div class="ttdeci">List&lt; Tuple&lt; Point, Item &gt; &gt; ItemCacheCreate(List&lt; Item[]&gt; inventories)</div><div class="ttdef"><b>Definition</b> CustomCurrencySystem.cs:244</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_afa099ca7606f6db1debf5a48c545029c.html#afa099ca7606f6db1debf5a48c545029c">Terraria.GameContent.UI.CustomCurrencySystem.ItemCacheCreate()</a>, and <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a49c8df7d4e7b9d7f547af7d1428db7db.html#a49c8df7d4e7b9d7f547af7d1428db7db">Terraria.GameContent.UI.CustomCurrencySystem.ItemCacheRestore()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

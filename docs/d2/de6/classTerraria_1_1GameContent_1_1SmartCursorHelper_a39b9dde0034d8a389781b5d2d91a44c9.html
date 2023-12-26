@@ -126,6 +126,163 @@ $(function(){initNavTree('d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelp
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1825</span>    {</div>
+<div class="line"><span class="lineno"> 1826</span>        <span class="keywordflow">if</span> ((providedInfo.item.type != 509 &amp;&amp; providedInfo.item.type != 850 &amp;&amp; providedInfo.item.type != 851 &amp;&amp; providedInfo.item.type != 3612) || focusedX != -1 || focusedY != -1)</div>
+<div class="line"><span class="lineno"> 1827</span>        {</div>
+<div class="line"><span class="lineno"> 1828</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1829</span>        }</div>
+<div class="line"><span class="lineno"> 1830</span>        <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Clear();</div>
+<div class="line"><span class="lineno"> 1831</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 1832</span>        <span class="keywordflow">if</span> (providedInfo.item.type == 509)</div>
+<div class="line"><span class="lineno"> 1833</span>        {</div>
+<div class="line"><span class="lineno"> 1834</span>            num = 1;</div>
+<div class="line"><span class="lineno"> 1835</span>        }</div>
+<div class="line"><span class="lineno"> 1836</span>        <span class="keywordflow">if</span> (providedInfo.item.type == 850)</div>
+<div class="line"><span class="lineno"> 1837</span>        {</div>
+<div class="line"><span class="lineno"> 1838</span>            num = 2;</div>
+<div class="line"><span class="lineno"> 1839</span>        }</div>
+<div class="line"><span class="lineno"> 1840</span>        <span class="keywordflow">if</span> (providedInfo.item.type == 851)</div>
+<div class="line"><span class="lineno"> 1841</span>        {</div>
+<div class="line"><span class="lineno"> 1842</span>            num = 3;</div>
+<div class="line"><span class="lineno"> 1843</span>        }</div>
+<div class="line"><span class="lineno"> 1844</span>        <span class="keywordflow">if</span> (providedInfo.item.type == 3612)</div>
+<div class="line"><span class="lineno"> 1845</span>        {</div>
+<div class="line"><span class="lineno"> 1846</span>            num = 4;</div>
+<div class="line"><span class="lineno"> 1847</span>        }</div>
+<div class="line"><span class="lineno"> 1848</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1849</span>        <span class="keywordflow">if</span> (Main.tile[providedInfo.screenTargetX, providedInfo.screenTargetY].wire() &amp;&amp; num == 1)</div>
+<div class="line"><span class="lineno"> 1850</span>        {</div>
+<div class="line"><span class="lineno"> 1851</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1852</span>        }</div>
+<div class="line"><span class="lineno"> 1853</span>        <span class="keywordflow">if</span> (Main.tile[providedInfo.screenTargetX, providedInfo.screenTargetY].wire2() &amp;&amp; num == 2)</div>
+<div class="line"><span class="lineno"> 1854</span>        {</div>
+<div class="line"><span class="lineno"> 1855</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1856</span>        }</div>
+<div class="line"><span class="lineno"> 1857</span>        <span class="keywordflow">if</span> (Main.tile[providedInfo.screenTargetX, providedInfo.screenTargetY].wire3() &amp;&amp; num == 3)</div>
+<div class="line"><span class="lineno"> 1858</span>        {</div>
+<div class="line"><span class="lineno"> 1859</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1860</span>        }</div>
+<div class="line"><span class="lineno"> 1861</span>        <span class="keywordflow">if</span> (Main.tile[providedInfo.screenTargetX, providedInfo.screenTargetY].wire4() &amp;&amp; num == 4)</div>
+<div class="line"><span class="lineno"> 1862</span>        {</div>
+<div class="line"><span class="lineno"> 1863</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1864</span>        }</div>
+<div class="line"><span class="lineno"> 1865</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1866</span>        {</div>
+<div class="line"><span class="lineno"> 1867</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = providedInfo.reachableStartX; i &lt;= providedInfo.reachableEndX; i++)</div>
+<div class="line"><span class="lineno"> 1868</span>            {</div>
+<div class="line"><span class="lineno"> 1869</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = providedInfo.reachableStartY; j &lt;= providedInfo.reachableEndY; j++)</div>
+<div class="line"><span class="lineno"> 1870</span>                {</div>
+<div class="line"><span class="lineno"> 1871</span>                    <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 1872</span>                    <span class="keywordflow">if</span> ((!tile.wire() || num != 1) &amp;&amp; (!tile.wire2() || num != 2) &amp;&amp; (!tile.wire3() || num != 3) &amp;&amp; (!tile.wire4() || num != 4))</div>
+<div class="line"><span class="lineno"> 1873</span>                    {</div>
+<div class="line"><span class="lineno"> 1874</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1875</span>                    }</div>
+<div class="line"><span class="lineno"> 1876</span>                    <span class="keywordflow">if</span> (num == 1)</div>
+<div class="line"><span class="lineno"> 1877</span>                    {</div>
+<div class="line"><span class="lineno"> 1878</span>                        <span class="keywordflow">if</span> (!Main.tile[i - 1, j].wire())</div>
+<div class="line"><span class="lineno"> 1879</span>                        {</div>
+<div class="line"><span class="lineno"> 1880</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i - 1, j));</div>
+<div class="line"><span class="lineno"> 1881</span>                        }</div>
+<div class="line"><span class="lineno"> 1882</span>                        <span class="keywordflow">if</span> (!Main.tile[i + 1, j].wire())</div>
+<div class="line"><span class="lineno"> 1883</span>                        {</div>
+<div class="line"><span class="lineno"> 1884</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i + 1, j));</div>
+<div class="line"><span class="lineno"> 1885</span>                        }</div>
+<div class="line"><span class="lineno"> 1886</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j - 1].wire())</div>
+<div class="line"><span class="lineno"> 1887</span>                        {</div>
+<div class="line"><span class="lineno"> 1888</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j - 1));</div>
+<div class="line"><span class="lineno"> 1889</span>                        }</div>
+<div class="line"><span class="lineno"> 1890</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j + 1].wire())</div>
+<div class="line"><span class="lineno"> 1891</span>                        {</div>
+<div class="line"><span class="lineno"> 1892</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j + 1));</div>
+<div class="line"><span class="lineno"> 1893</span>                        }</div>
+<div class="line"><span class="lineno"> 1894</span>                    }</div>
+<div class="line"><span class="lineno"> 1895</span>                    <span class="keywordflow">if</span> (num == 2)</div>
+<div class="line"><span class="lineno"> 1896</span>                    {</div>
+<div class="line"><span class="lineno"> 1897</span>                        <span class="keywordflow">if</span> (!Main.tile[i - 1, j].wire2())</div>
+<div class="line"><span class="lineno"> 1898</span>                        {</div>
+<div class="line"><span class="lineno"> 1899</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i - 1, j));</div>
+<div class="line"><span class="lineno"> 1900</span>                        }</div>
+<div class="line"><span class="lineno"> 1901</span>                        <span class="keywordflow">if</span> (!Main.tile[i + 1, j].wire2())</div>
+<div class="line"><span class="lineno"> 1902</span>                        {</div>
+<div class="line"><span class="lineno"> 1903</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i + 1, j));</div>
+<div class="line"><span class="lineno"> 1904</span>                        }</div>
+<div class="line"><span class="lineno"> 1905</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j - 1].wire2())</div>
+<div class="line"><span class="lineno"> 1906</span>                        {</div>
+<div class="line"><span class="lineno"> 1907</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j - 1));</div>
+<div class="line"><span class="lineno"> 1908</span>                        }</div>
+<div class="line"><span class="lineno"> 1909</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j + 1].wire2())</div>
+<div class="line"><span class="lineno"> 1910</span>                        {</div>
+<div class="line"><span class="lineno"> 1911</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j + 1));</div>
+<div class="line"><span class="lineno"> 1912</span>                        }</div>
+<div class="line"><span class="lineno"> 1913</span>                    }</div>
+<div class="line"><span class="lineno"> 1914</span>                    <span class="keywordflow">if</span> (num == 3)</div>
+<div class="line"><span class="lineno"> 1915</span>                    {</div>
+<div class="line"><span class="lineno"> 1916</span>                        <span class="keywordflow">if</span> (!Main.tile[i - 1, j].wire3())</div>
+<div class="line"><span class="lineno"> 1917</span>                        {</div>
+<div class="line"><span class="lineno"> 1918</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i - 1, j));</div>
+<div class="line"><span class="lineno"> 1919</span>                        }</div>
+<div class="line"><span class="lineno"> 1920</span>                        <span class="keywordflow">if</span> (!Main.tile[i + 1, j].wire3())</div>
+<div class="line"><span class="lineno"> 1921</span>                        {</div>
+<div class="line"><span class="lineno"> 1922</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i + 1, j));</div>
+<div class="line"><span class="lineno"> 1923</span>                        }</div>
+<div class="line"><span class="lineno"> 1924</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j - 1].wire3())</div>
+<div class="line"><span class="lineno"> 1925</span>                        {</div>
+<div class="line"><span class="lineno"> 1926</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j - 1));</div>
+<div class="line"><span class="lineno"> 1927</span>                        }</div>
+<div class="line"><span class="lineno"> 1928</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j + 1].wire3())</div>
+<div class="line"><span class="lineno"> 1929</span>                        {</div>
+<div class="line"><span class="lineno"> 1930</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j + 1));</div>
+<div class="line"><span class="lineno"> 1931</span>                        }</div>
+<div class="line"><span class="lineno"> 1932</span>                    }</div>
+<div class="line"><span class="lineno"> 1933</span>                    <span class="keywordflow">if</span> (num == 4)</div>
+<div class="line"><span class="lineno"> 1934</span>                    {</div>
+<div class="line"><span class="lineno"> 1935</span>                        <span class="keywordflow">if</span> (!Main.tile[i - 1, j].wire4())</div>
+<div class="line"><span class="lineno"> 1936</span>                        {</div>
+<div class="line"><span class="lineno"> 1937</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i - 1, j));</div>
+<div class="line"><span class="lineno"> 1938</span>                        }</div>
+<div class="line"><span class="lineno"> 1939</span>                        <span class="keywordflow">if</span> (!Main.tile[i + 1, j].wire4())</div>
+<div class="line"><span class="lineno"> 1940</span>                        {</div>
+<div class="line"><span class="lineno"> 1941</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i + 1, j));</div>
+<div class="line"><span class="lineno"> 1942</span>                        }</div>
+<div class="line"><span class="lineno"> 1943</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j - 1].wire4())</div>
+<div class="line"><span class="lineno"> 1944</span>                        {</div>
+<div class="line"><span class="lineno"> 1945</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j - 1));</div>
+<div class="line"><span class="lineno"> 1946</span>                        }</div>
+<div class="line"><span class="lineno"> 1947</span>                        <span class="keywordflow">if</span> (!Main.tile[i, j + 1].wire4())</div>
+<div class="line"><span class="lineno"> 1948</span>                        {</div>
+<div class="line"><span class="lineno"> 1949</span>                            <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Add(<span class="keyword">new</span> Tuple&lt;int, int&gt;(i, j + 1));</div>
+<div class="line"><span class="lineno"> 1950</span>                        }</div>
+<div class="line"><span class="lineno"> 1951</span>                    }</div>
+<div class="line"><span class="lineno"> 1952</span>                }</div>
+<div class="line"><span class="lineno"> 1953</span>            }</div>
+<div class="line"><span class="lineno"> 1954</span>        }</div>
+<div class="line"><span class="lineno"> 1955</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno"> 1956</span>        {</div>
+<div class="line"><span class="lineno"> 1957</span>            <span class="keywordtype">float</span> num2 = -1f;</div>
+<div class="line"><span class="lineno"> 1958</span>            Tuple&lt;int, int&gt; tuple = <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[0];</div>
+<div class="line"><span class="lineno"> 1959</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Count; k++)</div>
+<div class="line"><span class="lineno"> 1960</span>            {</div>
+<div class="line"><span class="lineno"> 1961</span>                <span class="keywordtype">float</span> num3 = Vector2.Distance(<span class="keyword">new</span> Vector2(<a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[k].Item1, <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[k].Item2) * 16f + Vector2.One * 8f, providedInfo.mouse);</div>
+<div class="line"><span class="lineno"> 1962</span>                <span class="keywordflow">if</span> (num2 == -1f || num3 &lt; num2)</div>
+<div class="line"><span class="lineno"> 1963</span>                {</div>
+<div class="line"><span class="lineno"> 1964</span>                    num2 = num3;</div>
+<div class="line"><span class="lineno"> 1965</span>                    tuple = <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>[k];</div>
+<div class="line"><span class="lineno"> 1966</span>                }</div>
+<div class="line"><span class="lineno"> 1967</span>            }</div>
+<div class="line"><span class="lineno"> 1968</span>            <span class="keywordflow">if</span> (Collision.InTileBounds(tuple.Item1, tuple.Item2, providedInfo.reachableStartX, providedInfo.reachableStartY, providedInfo.reachableEndX, providedInfo.reachableEndY))</div>
+<div class="line"><span class="lineno"> 1969</span>            {</div>
+<div class="line"><span class="lineno"> 1970</span>                focusedX = tuple.Item1;</div>
+<div class="line"><span class="lineno"> 1971</span>                focusedY = tuple.Item2;</div>
+<div class="line"><span class="lineno"> 1972</span>            }</div>
+<div class="line"><span class="lineno"> 1973</span>        }</div>
+<div class="line"><span class="lineno"> 1974</span>        <a class="code hl_variable" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">_targets</a>.Clear();</div>
+<div class="line"><span class="lineno"> 1975</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44_html_a6a25b83f390a66990ae6a646e30a2b44"><div class="ttname"><a href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">Terraria.GameContent.SmartCursorHelper._targets</a></div><div class="ttdeci">static List&lt; Tuple&lt; int, int &gt; &gt; _targets</div><div class="ttdef"><b>Definition</b> SmartCursorHelper.cs:42</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_a6a25b83f390a66990ae6a646e30a2b44.html#a6a25b83f390a66990ae6a646e30a2b44">Terraria.GameContent.SmartCursorHelper._targets</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1104a0d74088cc50a62ea175d882bafa.html#a1104a0d74088cc50a62ea175d882bafa">Terraria.Collision.InTileBounds()</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a7887e061a314eea279dfefc3380c0f75.html#a7887e061a314eea279dfefc3380c0f75">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.item</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0a6bb9ff662642d9a31733c731afa0de.html#a0a6bb9ff662642d9a31733c731afa0de">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.mouse</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_abd4870ae3312dbe99d3bdb7a4eeec166.html#abd4870ae3312dbe99d3bdb7a4eeec166">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_afa76d5eba796bc1fa0a05a5eb9a51530.html#afa76d5eba796bc1fa0a05a5eb9a51530">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndY</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a65cc27a15ee3096bab2c688b1c04a752.html#a65cc27a15ee3096bab2c688b1c04a752">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0d82d09c6bd5e86d727178a422375ae8.html#a0d82d09c6bd5e86d727178a422375ae8">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartY</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a7e0e3dc112350edcc776df601f1c211b.html#a7e0e3dc112350edcc776df601f1c211b">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.screenTargetX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a69a7da655772208abe5a55e20a7e2494.html#a69a7da655772208abe5a55e20a7e2494">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.screenTargetY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afa6c2317752f526f7aa78d40ff06a386.html#afa6c2317752f526f7aa78d40ff06a386">Terraria.Tile.wire()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ad4ab095f57bcb4816f7c057b4f06843f.html#ad4ab095f57bcb4816f7c057b4f06843f">Terraria.Tile.wire2()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a23882d8ab9e0c0c5539af01871555d33.html#a23882d8ab9e0c0c5539af01871555d33">Terraria.Tile.wire3()</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a08c9b60588f0c66579dd1c64e8a6d976.html#a08c9b60588f0c66579dd1c64e8a6d976">Terraria.Tile.wire4()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_abf97830c4eacd4da49a905008c7a5757.html#abf97830c4eacd4da49a905008c7a5757">Terraria.GameContent.SmartCursorHelper.SmartCursorLookup()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

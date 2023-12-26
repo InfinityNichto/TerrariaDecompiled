@@ -117,6 +117,37 @@ $(function(){initNavTree('d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeri
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="comment">//IL_001b: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  107</span>        <span class="comment">//IL_0021: Expected O, but got Unknown</span></div>
+<div class="line"><span class="lineno">  108</span>        <span class="comment">//IL_003b: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  109</span>        <span class="comment">//IL_0040: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">//IL_004a: Expected O, but got Unknown</span></div>
+<div class="line"><span class="lineno">  111</span>        <span class="comment">//IL_0058: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  112</span>        <span class="comment">//IL_005e: Expected O, but got Unknown</span></div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">foreach</span> (Bind_Event bind_Event <span class="keywordflow">in</span> theEvents)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            QueueMsg queueMsg;</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (bind_Event.handlers == <span class="keyword">null</span> || bind_Event.handlers.Length == 0)</div>
+<div class="line"><span class="lineno">  117</span>            {</div>
+<div class="line"><span class="lineno">  118</span>                queueMsg = (QueueMsg)<span class="keyword">new</span> QueueMsgRegisterEvent();</div>
+<div class="line"><span class="lineno">  119</span>                queueMsg.data = (object)<span class="keyword">new</span> Register_Event(<a class="code hl_variable" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a89412cb9698b08835ca15f47720ab4cd.html#a89412cb9698b08835ca15f47720ab4cd">GameName</a>, bind_Event.eventName, bind_Event.minValue, bind_Event.maxValue, bind_Event.iconId);</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                bind_Event.game = <a class="code hl_variable" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a89412cb9698b08835ca15f47720ab4cd.html#a89412cb9698b08835ca15f47720ab4cd">GameName</a>;</div>
+<div class="line"><span class="lineno">  124</span>                queueMsg = (QueueMsg)<span class="keyword">new</span> QueueMsgBindEvent();</div>
+<div class="line"><span class="lineno">  125</span>                queueMsg.data = bind_Event;</div>
+<div class="line"><span class="lineno">  126</span>            }</div>
+<div class="line"><span class="lineno">  127</span>            <a class="code hl_variable" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ad62e02ba9b01077ba2539e760cb28188.html#ad62e02ba9b01077ba2539e760cb28188">_mMsgQueue</a>.PEnqueue(queueMsg);</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a89412cb9698b08835ca15f47720ab4cd_html_a89412cb9698b08835ca15f47720ab4cd"><div class="ttname"><a href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a89412cb9698b08835ca15f47720ab4cd.html#a89412cb9698b08835ca15f47720ab4cd">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection.GameName</a></div><div class="ttdeci">string GameName</div><div class="ttdef"><b>Definition</b> GameSenseConnection.cs:18</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ad62e02ba9b01077ba2539e760cb28188_html_ad62e02ba9b01077ba2539e760cb28188"><div class="ttname"><a href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ad62e02ba9b01077ba2539e760cb28188.html#ad62e02ba9b01077ba2539e760cb28188">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._mMsgQueue</a></div><div class="ttdeci">LocklessQueue&lt; QueueMsg &gt; _mMsgQueue</div><div class="ttdef"><b>Definition</b> GameSenseConnection.cs:44</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ad62e02ba9b01077ba2539e760cb28188.html#ad62e02ba9b01077ba2539e760cb28188">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._mMsgQueue</a>, and <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_a89412cb9698b08835ca15f47720ab4cd.html#a89412cb9698b08835ca15f47720ab4cd">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection.GameName</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ab5ff9abbd9de825e88dbc02bbee725b5.html#ab5ff9abbd9de825e88dbc02bbee725b5">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection._addGUIDefinedEvents()</a>, and <a class="el" href="../../d9/d05/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1GameSenseConnection_ad26133c1f91ac28478b76a0a8d7f7122.html#ad26133c1f91ac28478b76a0a8d7f7122">ReLogic.Peripherals.RGB.SteelSeries.GameSenseConnection.TryRegisteringEvents()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

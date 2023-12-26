@@ -117,6 +117,29 @@ $(function(){initNavTree('db/d80/classTerraria_1_1GameContent_1_1VanillaContentV
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">string</span>[] <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array</a> = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">Regex</a>.Split(Utils.ReadEmbeddedResource(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">infoFilePath</a>), <span class="stringliteral">&quot;\r\n|\r|\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array</a>)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (!text.StartsWith(<span class="stringliteral">&quot;//&quot;</span>))</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordtype">string</span>[] <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array2</a> = text.Split(<span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array2</a>.Length &gt;= 3 &amp;&amp; <span class="keywordtype">int</span>.TryParse(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array2</a>[1], <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">out</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">var</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">result</a>) &amp;&amp; <span class="keywordtype">int</span>.TryParse(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array2</a>[2], <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">out</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">var</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">result2</a>))</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    <span class="keywordtype">string</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">key</a> = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">array2</a>[0].Replace(<span class="charliteral">&#39;/&#39;</span>, <span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><span class="lineno">   44</span>                    <a class="code hl_variable" href="../../db/d80/classTerraria_1_1GameContent_1_1VanillaContentValidator_a45e9549bc882c2e4dde684340523fac0.html#a45e9549bc882c2e4dde684340523fac0">_info</a>[<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">key</a>] = <span class="keyword">new</span> TextureMetaData</div>
+<div class="line"><span class="lineno">   45</span>                    {</div>
+<div class="line"><span class="lineno">   46</span>                        Width = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">result</a>,</div>
+<div class="line"><span class="lineno">   47</span>                        Height = <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">result2</a></div>
+<div class="line"><span class="lineno">   48</span>                    };</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_html"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ReLogic.Content.Asset</a></div><div class="ttdef"><b>Definition</b> Asset.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1VanillaContentValidator_a45e9549bc882c2e4dde684340523fac0_html_a45e9549bc882c2e4dde684340523fac0"><div class="ttname"><a href="../../db/d80/classTerraria_1_1GameContent_1_1VanillaContentValidator_a45e9549bc882c2e4dde684340523fac0.html#a45e9549bc882c2e4dde684340523fac0">Terraria.GameContent.VanillaContentValidator._info</a></div><div class="ttdeci">Dictionary&lt; string, TextureMetaData &gt; _info</div><div class="ttdef"><b>Definition</b> VanillaContentValidator.cs:31</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d80/classTerraria_1_1GameContent_1_1VanillaContentValidator_a45e9549bc882c2e4dde684340523fac0.html#a45e9549bc882c2e4dde684340523fac0">Terraria.GameContent.VanillaContentValidator._info</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a2bc48127617f342997b5f6812cf546c2.html#a2bc48127617f342997b5f6812cf546c2">Terraria.Utils.ReadEmbeddedResource()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

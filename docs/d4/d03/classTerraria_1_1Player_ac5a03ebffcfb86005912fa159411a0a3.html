@@ -117,6 +117,892 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ac5a03ebffcfb86005912fa
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">12429</span>    {</div>
+<div class="line"><span class="lineno">12430</span>        <span class="keywordtype">int</span> type = armorPiece.type;</div>
+<div class="line"><span class="lineno">12431</span>        <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a1098f4ebfbd1fb75685a38e0087a148f.html#a1098f4ebfbd1fb75685a38e0087a148f">RefreshInfoAccsFromItemType</a>(type);</div>
+<div class="line"><span class="lineno">12432</span>        <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aa9fe5e48ce2b512562ad37964e0c034a.html#aa9fe5e48ce2b512562ad37964e0c034a">RefreshMechanicalAccsFromItemType</a>(type);</div>
+<div class="line"><span class="lineno">12433</span>        <span class="keywordflow">if</span> (armorPiece.type == 3017 || armorPiece.type == 3993)</div>
+<div class="line"><span class="lineno">12434</span>        {</div>
+<div class="line"><span class="lineno">12435</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aad03731a6de577aaadaed68e953d75aa.html#aad03731a6de577aaadaed68e953d75aa">flowerBoots</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12436</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> == Main.myPlayer)</div>
+<div class="line"><span class="lineno">12437</span>            {</div>
+<div class="line"><span class="lineno">12438</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_adcb22c36673735a072da1169c62345d5.html#adcb22c36673735a072da1169c62345d5">DoBootsEffect</a>(<a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_ab6a2d5bb8eb417a595e48f9acf86e0f8.html#ab6a2d5bb8eb417a595e48f9acf86e0f8">DoBootsEffect_PlaceFlowersOnTile</a>);</div>
+<div class="line"><span class="lineno">12439</span>            }</div>
+<div class="line"><span class="lineno">12440</span>        }</div>
+<div class="line"><span class="lineno">12441</span>        <span class="keywordflow">if</span> (armorPiece.type == 5001)</div>
+<div class="line"><span class="lineno">12442</span>        {</div>
+<div class="line"><span class="lineno">12443</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.25f;</div>
+<div class="line"><span class="lineno">12444</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0b84a0a9df693a362f09cf49830818ef.html#a0b84a0a9df693a362f09cf49830818ef">moonLordLegs</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12445</span>        }</div>
+<div class="line"><span class="lineno">12446</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_adfeab649d741b0771d9cc3bd55775019.html#adfeab649d741b0771d9cc3bd55775019">statDefense</a> += armorPiece.defense;</div>
+<div class="line"><span class="lineno">12447</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += armorPiece.lifeRegen;</div>
+<div class="line"><span class="lineno">12448</span>        <span class="keywordflow">if</span> (armorPiece.shieldSlot &gt; 0)</div>
+<div class="line"><span class="lineno">12449</span>        {</div>
+<div class="line"><span class="lineno">12450</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa36effe634a88fba9051cf070450f7d1.html#aa36effe634a88fba9051cf070450f7d1">hasRaisableShield</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12451</span>        }</div>
+<div class="line"><span class="lineno">12452</span>        <span class="keywordflow">switch</span> (armorPiece.type)</div>
+<div class="line"><span class="lineno">12453</span>        {</div>
+<div class="line"><span class="lineno">12454</span>        <span class="keywordflow">case</span> 3797:</div>
+<div class="line"><span class="lineno">12455</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a>++;</div>
+<div class="line"><span class="lineno">12456</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.1f;</div>
+<div class="line"><span class="lineno">12457</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12458</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12459</span>        <span class="keywordflow">case</span> 3798:</div>
+<div class="line"><span class="lineno">12460</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12461</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12462</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12463</span>        <span class="keywordflow">case</span> 3799:</div>
+<div class="line"><span class="lineno">12464</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12465</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 20;</div>
+<div class="line"><span class="lineno">12466</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12467</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12468</span>        <span class="keywordflow">case</span> 3800:</div>
+<div class="line"><span class="lineno">12469</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a>++;</div>
+<div class="line"><span class="lineno">12470</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += 4;</div>
+<div class="line"><span class="lineno">12471</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12472</span>        <span class="keywordflow">case</span> 3801:</div>
+<div class="line"><span class="lineno">12473</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12474</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12475</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12476</span>        <span class="keywordflow">case</span> 3802:</div>
+<div class="line"><span class="lineno">12477</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12478</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 15;</div>
+<div class="line"><span class="lineno">12479</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12480</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12481</span>        <span class="keywordflow">case</span> 3806:</div>
+<div class="line"><span class="lineno">12482</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a>++;</div>
+<div class="line"><span class="lineno">12483</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12484</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12485</span>        <span class="keywordflow">case</span> 3807:</div>
+<div class="line"><span class="lineno">12486</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12487</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12488</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12489</span>        <span class="keywordflow">case</span> 3808:</div>
+<div class="line"><span class="lineno">12490</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12491</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 15;</div>
+<div class="line"><span class="lineno">12492</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12493</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12494</span>        <span class="keywordflow">case</span> 3803:</div>
+<div class="line"><span class="lineno">12495</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a>++;</div>
+<div class="line"><span class="lineno">12496</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12497</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12498</span>        <span class="keywordflow">case</span> 3804:</div>
+<div class="line"><span class="lineno">12499</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12500</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12501</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ad072da643779806b04a3fde2675401ab.html#ad072da643779806b04a3fde2675401ab">huntressAmmoCost90</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12502</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12503</span>        <span class="keywordflow">case</span> 3805:</div>
+<div class="line"><span class="lineno">12504</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12505</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12506</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12507</span>        <span class="keywordflow">case</span> 3871:</div>
+<div class="line"><span class="lineno">12508</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a> += 2;</div>
+<div class="line"><span class="lineno">12509</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12510</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12511</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12512</span>        <span class="keywordflow">case</span> 3872:</div>
+<div class="line"><span class="lineno">12513</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.3f;</div>
+<div class="line"><span class="lineno">12514</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += 8;</div>
+<div class="line"><span class="lineno">12515</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12516</span>        <span class="keywordflow">case</span> 3873:</div>
+<div class="line"><span class="lineno">12517</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12518</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 20;</div>
+<div class="line"><span class="lineno">12519</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12520</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12521</span>        <span class="keywordflow">case</span> 3874:</div>
+<div class="line"><span class="lineno">12522</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a> += 2;</div>
+<div class="line"><span class="lineno">12523</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12524</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12525</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12526</span>        <span class="keywordflow">case</span> 3875:</div>
+<div class="line"><span class="lineno">12527</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.25f;</div>
+<div class="line"><span class="lineno">12528</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12529</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.15f;</div>
+<div class="line"><span class="lineno">12530</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12531</span>        <span class="keywordflow">case</span> 3876:</div>
+<div class="line"><span class="lineno">12532</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12533</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 25;</div>
+<div class="line"><span class="lineno">12534</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12535</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12536</span>        <span class="keywordflow">case</span> 3877:</div>
+<div class="line"><span class="lineno">12537</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a> += 2;</div>
+<div class="line"><span class="lineno">12538</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12539</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12540</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12541</span>        <span class="keywordflow">case</span> 3878:</div>
+<div class="line"><span class="lineno">12542</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.25f;</div>
+<div class="line"><span class="lineno">12543</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.25f;</div>
+<div class="line"><span class="lineno">12544</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a53735d24c1e9741a1d5d1a32331651d4.html#a53735d24c1e9741a1d5d1a32331651d4">ammoCost80</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12545</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12546</span>        <span class="keywordflow">case</span> 3879:</div>
+<div class="line"><span class="lineno">12547</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.25f;</div>
+<div class="line"><span class="lineno">12548</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12549</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12550</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12551</span>        <span class="keywordflow">case</span> 3880:</div>
+<div class="line"><span class="lineno">12552</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a> += 2;</div>
+<div class="line"><span class="lineno">12553</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12554</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12555</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12556</span>        <span class="keywordflow">case</span> 3881:</div>
+<div class="line"><span class="lineno">12557</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12558</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12559</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12560</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12561</span>        <span class="keywordflow">case</span> 3882:</div>
+<div class="line"><span class="lineno">12562</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12563</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 20;</div>
+<div class="line"><span class="lineno">12564</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.3f;</div>
+<div class="line"><span class="lineno">12565</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">12566</span>        }</div>
+<div class="line"><span class="lineno">12567</span>        <span class="keywordflow">if</span> (armorPiece.type == 5100)</div>
+<div class="line"><span class="lineno">12568</span>        {</div>
+<div class="line"><span class="lineno">12569</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_afd67a870271f79f733ea9bc91ed01f42.html#afd67a870271f79f733ea9bc91ed01f42">SpawnHallucination</a>(armorPiece);</div>
+<div class="line"><span class="lineno">12570</span>        }</div>
+<div class="line"><span class="lineno">12571</span>        <span class="keywordflow">if</span> (armorPiece.type == 268)</div>
+<div class="line"><span class="lineno">12572</span>        {</div>
+<div class="line"><span class="lineno">12573</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0df0042403d61a749a46b5fcbed3bfa3.html#a0df0042403d61a749a46b5fcbed3bfa3">accDivingHelm</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12574</span>        }</div>
+<div class="line"><span class="lineno">12575</span>        <span class="keywordflow">if</span> (armorPiece.type == 238)</div>
+<div class="line"><span class="lineno">12576</span>        {</div>
+<div class="line"><span class="lineno">12577</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12578</span>            <span class="keywordflow">if</span> (Main.tenthAnniversaryWorld)</div>
+<div class="line"><span class="lineno">12579</span>            {</div>
+<div class="line"><span class="lineno">12580</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">12581</span>            }</div>
+<div class="line"><span class="lineno">12582</span>        }</div>
+<div class="line"><span class="lineno">12583</span>        <span class="keywordflow">if</span> (armorPiece.type == 3770)</div>
+<div class="line"><span class="lineno">12584</span>        {</div>
+<div class="line"><span class="lineno">12585</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_abe62d012145b7f1d634b2db6467f7ad2.html#abe62d012145b7f1d634b2db6467f7ad2">slowFall</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12586</span>        }</div>
+<div class="line"><span class="lineno">12587</span>        <span class="keywordflow">if</span> (armorPiece.type == 4404)</div>
+<div class="line"><span class="lineno">12588</span>        {</div>
+<div class="line"><span class="lineno">12589</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_afe24710203725f2324eb9a9c28e23e60.html#afe24710203725f2324eb9a9c28e23e60">canFloatInWater</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12590</span>        }</div>
+<div class="line"><span class="lineno">12591</span>        <span class="keywordflow">if</span> (armorPiece.type == 3776)</div>
+<div class="line"><span class="lineno">12592</span>        {</div>
+<div class="line"><span class="lineno">12593</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12594</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12595</span>        }</div>
+<div class="line"><span class="lineno">12596</span>        <span class="keywordflow">if</span> (armorPiece.type == 3777)</div>
+<div class="line"><span class="lineno">12597</span>        {</div>
+<div class="line"><span class="lineno">12598</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">12599</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12600</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">12601</span>        }</div>
+<div class="line"><span class="lineno">12602</span>        <span class="keywordflow">if</span> (armorPiece.type == 3778)</div>
+<div class="line"><span class="lineno">12603</span>        {</div>
+<div class="line"><span class="lineno">12604</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">12605</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12606</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">12607</span>        }</div>
+<div class="line"><span class="lineno">12608</span>        <span class="keywordflow">if</span> (armorPiece.type == 3212)</div>
+<div class="line"><span class="lineno">12609</span>        {</div>
+<div class="line"><span class="lineno">12610</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae0f845b073be239afce6428df78e5e59.html#ae0f845b073be239afce6428df78e5e59">armorPenetration</a> += 5;</div>
+<div class="line"><span class="lineno">12611</span>        }</div>
+<div class="line"><span class="lineno">12612</span>        <span class="keywordflow">if</span> (armorPiece.type == 2277)</div>
+<div class="line"><span class="lineno">12613</span>        {</div>
+<div class="line"><span class="lineno">12614</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12615</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12616</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12617</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12618</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12619</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12620</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12621</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12622</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12623</span>        }</div>
+<div class="line"><span class="lineno">12624</span>        <span class="keywordflow">if</span> (armorPiece.type == 2279)</div>
+<div class="line"><span class="lineno">12625</span>        {</div>
+<div class="line"><span class="lineno">12626</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">12627</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12628</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.1f;</div>
+<div class="line"><span class="lineno">12629</span>        }</div>
+<div class="line"><span class="lineno">12630</span>        <span class="keywordflow">if</span> (armorPiece.type == 3109 || armorPiece.type == 4008)</div>
+<div class="line"><span class="lineno">12631</span>        {</div>
+<div class="line"><span class="lineno">12632</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ad80aa97c7fa68b09a0d7c4d376ca0410.html#ad80aa97c7fa68b09a0d7c4d376ca0410">nightVision</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12633</span>        }</div>
+<div class="line"><span class="lineno">12634</span>        <span class="keywordflow">if</span> (armorPiece.type == 256 || armorPiece.type == 257 || armorPiece.type == 258)</div>
+<div class="line"><span class="lineno">12635</span>        {</div>
+<div class="line"><span class="lineno">12636</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12637</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12638</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12639</span>        }</div>
+<div class="line"><span class="lineno">12640</span>        <span class="keywordflow">if</span> (armorPiece.type == 3374)</div>
+<div class="line"><span class="lineno">12641</span>        {</div>
+<div class="line"><span class="lineno">12642</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 4;</div>
+<div class="line"><span class="lineno">12643</span>        }</div>
+<div class="line"><span class="lineno">12644</span>        <span class="keywordflow">if</span> (armorPiece.type == 3375)</div>
+<div class="line"><span class="lineno">12645</span>        {</div>
+<div class="line"><span class="lineno">12646</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12647</span>        }</div>
+<div class="line"><span class="lineno">12648</span>        <span class="keywordflow">if</span> (armorPiece.type == 3376)</div>
+<div class="line"><span class="lineno">12649</span>        {</div>
+<div class="line"><span class="lineno">12650</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 4;</div>
+<div class="line"><span class="lineno">12651</span>        }</div>
+<div class="line"><span class="lineno">12652</span>        <span class="keywordflow">if</span> (armorPiece.type == 151 || armorPiece.type == 959 || armorPiece.type == 152 || armorPiece.type == 153)</div>
+<div class="line"><span class="lineno">12653</span>        {</div>
+<div class="line"><span class="lineno">12654</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12655</span>        }</div>
+<div class="line"><span class="lineno">12656</span>        <span class="keywordflow">if</span> (armorPiece.type == 2275)</div>
+<div class="line"><span class="lineno">12657</span>        {</div>
+<div class="line"><span class="lineno">12658</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">12659</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12660</span>        }</div>
+<div class="line"><span class="lineno">12661</span>        <span class="keywordflow">if</span> (armorPiece.type == 123 || armorPiece.type == 124 || armorPiece.type == 125)</div>
+<div class="line"><span class="lineno">12662</span>        {</div>
+<div class="line"><span class="lineno">12663</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.09f;</div>
+<div class="line"><span class="lineno">12664</span>        }</div>
+<div class="line"><span class="lineno">12665</span>        <span class="keywordflow">if</span> (armorPiece.type == 228 || armorPiece.type == 960)</div>
+<div class="line"><span class="lineno">12666</span>        {</div>
+<div class="line"><span class="lineno">12667</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">12668</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12669</span>        }</div>
+<div class="line"><span class="lineno">12670</span>        <span class="keywordflow">if</span> (armorPiece.type == 229 || armorPiece.type == 961)</div>
+<div class="line"><span class="lineno">12671</span>        {</div>
+<div class="line"><span class="lineno">12672</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 20;</div>
+<div class="line"><span class="lineno">12673</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">12674</span>        }</div>
+<div class="line"><span class="lineno">12675</span>        <span class="keywordflow">if</span> (armorPiece.type == 230 || armorPiece.type == 962)</div>
+<div class="line"><span class="lineno">12676</span>        {</div>
+<div class="line"><span class="lineno">12677</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 20;</div>
+<div class="line"><span class="lineno">12678</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12679</span>        }</div>
+<div class="line"><span class="lineno">12680</span>        <span class="keywordflow">if</span> (armorPiece.type == 100 || armorPiece.type == 101 || armorPiece.type == 102)</div>
+<div class="line"><span class="lineno">12681</span>        {</div>
+<div class="line"><span class="lineno">12682</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12683</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12684</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12685</span>        }</div>
+<div class="line"><span class="lineno">12686</span>        <span class="keywordflow">if</span> (armorPiece.type == 956 || armorPiece.type == 957 || armorPiece.type == 958)</div>
+<div class="line"><span class="lineno">12687</span>        {</div>
+<div class="line"><span class="lineno">12688</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12689</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12690</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12691</span>        }</div>
+<div class="line"><span class="lineno">12692</span>        <span class="keywordflow">if</span> (armorPiece.type == 792 || armorPiece.type == 793 || armorPiece.type == 794)</div>
+<div class="line"><span class="lineno">12693</span>        {</div>
+<div class="line"><span class="lineno">12694</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12695</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12696</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12697</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12698</span>        }</div>
+<div class="line"><span class="lineno">12699</span>        <span class="keywordflow">if</span> (armorPiece.type == 231)</div>
+<div class="line"><span class="lineno">12700</span>        {</div>
+<div class="line"><span class="lineno">12701</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12702</span>        }</div>
+<div class="line"><span class="lineno">12703</span>        <span class="keywordflow">if</span> (armorPiece.type == 232)</div>
+<div class="line"><span class="lineno">12704</span>        {</div>
+<div class="line"><span class="lineno">12705</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12706</span>        }</div>
+<div class="line"><span class="lineno">12707</span>        <span class="keywordflow">if</span> (armorPiece.type == 233)</div>
+<div class="line"><span class="lineno">12708</span>        {</div>
+<div class="line"><span class="lineno">12709</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12710</span>        }</div>
+<div class="line"><span class="lineno">12711</span>        <span class="keywordflow">if</span> (armorPiece.type == 371)</div>
+<div class="line"><span class="lineno">12712</span>        {</div>
+<div class="line"><span class="lineno">12713</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 9;</div>
+<div class="line"><span class="lineno">12714</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12715</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">12716</span>        }</div>
+<div class="line"><span class="lineno">12717</span>        <span class="keywordflow">if</span> (armorPiece.type == 372)</div>
+<div class="line"><span class="lineno">12718</span>        {</div>
+<div class="line"><span class="lineno">12719</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12720</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12721</span>        }</div>
+<div class="line"><span class="lineno">12722</span>        <span class="keywordflow">if</span> (armorPiece.type == 373)</div>
+<div class="line"><span class="lineno">12723</span>        {</div>
+<div class="line"><span class="lineno">12724</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12725</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12726</span>        }</div>
+<div class="line"><span class="lineno">12727</span>        <span class="keywordflow">if</span> (armorPiece.type == 374)</div>
+<div class="line"><span class="lineno">12728</span>        {</div>
+<div class="line"><span class="lineno">12729</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12730</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12731</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12732</span>        }</div>
+<div class="line"><span class="lineno">12733</span>        <span class="keywordflow">if</span> (armorPiece.type == 375)</div>
+<div class="line"><span class="lineno">12734</span>        {</div>
+<div class="line"><span class="lineno">12735</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12736</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12737</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12738</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12739</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12740</span>        }</div>
+<div class="line"><span class="lineno">12741</span>        <span class="keywordflow">if</span> (armorPiece.type == 376)</div>
+<div class="line"><span class="lineno">12742</span>        {</div>
+<div class="line"><span class="lineno">12743</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12744</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">12745</span>        }</div>
+<div class="line"><span class="lineno">12746</span>        <span class="keywordflow">if</span> (armorPiece.type == 377)</div>
+<div class="line"><span class="lineno">12747</span>        {</div>
+<div class="line"><span class="lineno">12748</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 8;</div>
+<div class="line"><span class="lineno">12749</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12750</span>        }</div>
+<div class="line"><span class="lineno">12751</span>        <span class="keywordflow">if</span> (armorPiece.type == 378)</div>
+<div class="line"><span class="lineno">12752</span>        {</div>
+<div class="line"><span class="lineno">12753</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.12f;</div>
+<div class="line"><span class="lineno">12754</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12755</span>        }</div>
+<div class="line"><span class="lineno">12756</span>        <span class="keywordflow">if</span> (armorPiece.type == 379)</div>
+<div class="line"><span class="lineno">12757</span>        {</div>
+<div class="line"><span class="lineno">12758</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12759</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12760</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12761</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12762</span>        }</div>
+<div class="line"><span class="lineno">12763</span>        <span class="keywordflow">if</span> (armorPiece.type == 380)</div>
+<div class="line"><span class="lineno">12764</span>        {</div>
+<div class="line"><span class="lineno">12765</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12766</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12767</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12768</span>        }</div>
+<div class="line"><span class="lineno">12769</span>        <span class="keywordflow">if</span> (armorPiece.type &gt;= 2367 &amp;&amp; armorPiece.type &lt;= 2369)</div>
+<div class="line"><span class="lineno">12770</span>        {</div>
+<div class="line"><span class="lineno">12771</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a218281a425ad0f1bde15b0e9225ad027.html#a218281a425ad0f1bde15b0e9225ad027">fishingSkill</a> += 5;</div>
+<div class="line"><span class="lineno">12772</span>        }</div>
+<div class="line"><span class="lineno">12773</span>        <span class="keywordflow">if</span> (armorPiece.type == 400)</div>
+<div class="line"><span class="lineno">12774</span>        {</div>
+<div class="line"><span class="lineno">12775</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.12f;</div>
+<div class="line"><span class="lineno">12776</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 12;</div>
+<div class="line"><span class="lineno">12777</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 80;</div>
+<div class="line"><span class="lineno">12778</span>        }</div>
+<div class="line"><span class="lineno">12779</span>        <span class="keywordflow">if</span> (armorPiece.type == 401)</div>
+<div class="line"><span class="lineno">12780</span>        {</div>
+<div class="line"><span class="lineno">12781</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12782</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.14f;</div>
+<div class="line"><span class="lineno">12783</span>        }</div>
+<div class="line"><span class="lineno">12784</span>        <span class="keywordflow">if</span> (armorPiece.type == 402)</div>
+<div class="line"><span class="lineno">12785</span>        {</div>
+<div class="line"><span class="lineno">12786</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.14f;</div>
+<div class="line"><span class="lineno">12787</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12788</span>        }</div>
+<div class="line"><span class="lineno">12789</span>        <span class="keywordflow">if</span> (armorPiece.type == 403)</div>
+<div class="line"><span class="lineno">12790</span>        {</div>
+<div class="line"><span class="lineno">12791</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12792</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12793</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12794</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12795</span>        }</div>
+<div class="line"><span class="lineno">12796</span>        <span class="keywordflow">if</span> (armorPiece.type == 404)</div>
+<div class="line"><span class="lineno">12797</span>        {</div>
+<div class="line"><span class="lineno">12798</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12799</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12800</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12801</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12802</span>        }</div>
+<div class="line"><span class="lineno">12803</span>        <span class="keywordflow">if</span> (armorPiece.type == 1205)</div>
+<div class="line"><span class="lineno">12804</span>        {</div>
+<div class="line"><span class="lineno">12805</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.12f;</div>
+<div class="line"><span class="lineno">12806</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.12f;</div>
+<div class="line"><span class="lineno">12807</span>        }</div>
+<div class="line"><span class="lineno">12808</span>        <span class="keywordflow">if</span> (armorPiece.type == 1206)</div>
+<div class="line"><span class="lineno">12809</span>        {</div>
+<div class="line"><span class="lineno">12810</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.09f;</div>
+<div class="line"><span class="lineno">12811</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 9;</div>
+<div class="line"><span class="lineno">12812</span>        }</div>
+<div class="line"><span class="lineno">12813</span>        <span class="keywordflow">if</span> (armorPiece.type == 1207)</div>
+<div class="line"><span class="lineno">12814</span>        {</div>
+<div class="line"><span class="lineno">12815</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.09f;</div>
+<div class="line"><span class="lineno">12816</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 9;</div>
+<div class="line"><span class="lineno">12817</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">12818</span>        }</div>
+<div class="line"><span class="lineno">12819</span>        <span class="keywordflow">if</span> (armorPiece.type == 1208)</div>
+<div class="line"><span class="lineno">12820</span>        {</div>
+<div class="line"><span class="lineno">12821</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12822</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12823</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12824</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12825</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 2;</div>
+<div class="line"><span class="lineno">12826</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 2;</div>
+<div class="line"><span class="lineno">12827</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 2;</div>
+<div class="line"><span class="lineno">12828</span>        }</div>
+<div class="line"><span class="lineno">12829</span>        <span class="keywordflow">if</span> (armorPiece.type == 1209)</div>
+<div class="line"><span class="lineno">12830</span>        {</div>
+<div class="line"><span class="lineno">12831</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.02f;</div>
+<div class="line"><span class="lineno">12832</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.02f;</div>
+<div class="line"><span class="lineno">12833</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.02f;</div>
+<div class="line"><span class="lineno">12834</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.02f;</div>
+<div class="line"><span class="lineno">12835</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a>++;</div>
+<div class="line"><span class="lineno">12836</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a>++;</div>
+<div class="line"><span class="lineno">12837</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a>++;</div>
+<div class="line"><span class="lineno">12838</span>        }</div>
+<div class="line"><span class="lineno">12839</span>        <span class="keywordflow">if</span> (armorPiece.type == 1210)</div>
+<div class="line"><span class="lineno">12840</span>        {</div>
+<div class="line"><span class="lineno">12841</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.11f;</div>
+<div class="line"><span class="lineno">12842</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.11f;</div>
+<div class="line"><span class="lineno">12843</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12844</span>        }</div>
+<div class="line"><span class="lineno">12845</span>        <span class="keywordflow">if</span> (armorPiece.type == 1211)</div>
+<div class="line"><span class="lineno">12846</span>        {</div>
+<div class="line"><span class="lineno">12847</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 15;</div>
+<div class="line"><span class="lineno">12848</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12849</span>        }</div>
+<div class="line"><span class="lineno">12850</span>        <span class="keywordflow">if</span> (armorPiece.type == 1212)</div>
+<div class="line"><span class="lineno">12851</span>        {</div>
+<div class="line"><span class="lineno">12852</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 18;</div>
+<div class="line"><span class="lineno">12853</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 80;</div>
+<div class="line"><span class="lineno">12854</span>        }</div>
+<div class="line"><span class="lineno">12855</span>        <span class="keywordflow">if</span> (armorPiece.type == 1213)</div>
+<div class="line"><span class="lineno">12856</span>        {</div>
+<div class="line"><span class="lineno">12857</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12858</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12859</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12860</span>        }</div>
+<div class="line"><span class="lineno">12861</span>        <span class="keywordflow">if</span> (armorPiece.type == 1214)</div>
+<div class="line"><span class="lineno">12862</span>        {</div>
+<div class="line"><span class="lineno">12863</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.11f;</div>
+<div class="line"><span class="lineno">12864</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12865</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12866</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12867</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12868</span>        }</div>
+<div class="line"><span class="lineno">12869</span>        <span class="keywordflow">if</span> (armorPiece.type == 1215)</div>
+<div class="line"><span class="lineno">12870</span>        {</div>
+<div class="line"><span class="lineno">12871</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.09f;</div>
+<div class="line"><span class="lineno">12872</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 9;</div>
+<div class="line"><span class="lineno">12873</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.09f;</div>
+<div class="line"><span class="lineno">12874</span>        }</div>
+<div class="line"><span class="lineno">12875</span>        <span class="keywordflow">if</span> (armorPiece.type == 1216)</div>
+<div class="line"><span class="lineno">12876</span>        {</div>
+<div class="line"><span class="lineno">12877</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">12878</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12879</span>        }</div>
+<div class="line"><span class="lineno">12880</span>        <span class="keywordflow">if</span> (armorPiece.type == 1217)</div>
+<div class="line"><span class="lineno">12881</span>        {</div>
+<div class="line"><span class="lineno">12882</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">12883</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12884</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 100;</div>
+<div class="line"><span class="lineno">12885</span>        }</div>
+<div class="line"><span class="lineno">12886</span>        <span class="keywordflow">if</span> (armorPiece.type == 1218)</div>
+<div class="line"><span class="lineno">12887</span>        {</div>
+<div class="line"><span class="lineno">12888</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">12889</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">12890</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">12891</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">12892</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12893</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12894</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12895</span>        }</div>
+<div class="line"><span class="lineno">12896</span>        <span class="keywordflow">if</span> (armorPiece.type == 1219)</div>
+<div class="line"><span class="lineno">12897</span>        {</div>
+<div class="line"><span class="lineno">12898</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12899</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12900</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12901</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.03f;</div>
+<div class="line"><span class="lineno">12902</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12903</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12904</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 3;</div>
+<div class="line"><span class="lineno">12905</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.06f;</div>
+<div class="line"><span class="lineno">12906</span>        }</div>
+<div class="line"><span class="lineno">12907</span>        <span class="keywordflow">if</span> (armorPiece.type == 558 || armorPiece.type == 4898)</div>
+<div class="line"><span class="lineno">12908</span>        {</div>
+<div class="line"><span class="lineno">12909</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.12f;</div>
+<div class="line"><span class="lineno">12910</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 12;</div>
+<div class="line"><span class="lineno">12911</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 100;</div>
+<div class="line"><span class="lineno">12912</span>        }</div>
+<div class="line"><span class="lineno">12913</span>        <span class="keywordflow">if</span> (armorPiece.type == 559 || armorPiece.type == 4896)</div>
+<div class="line"><span class="lineno">12914</span>        {</div>
+<div class="line"><span class="lineno">12915</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 10;</div>
+<div class="line"><span class="lineno">12916</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12917</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12918</span>        }</div>
+<div class="line"><span class="lineno">12919</span>        <span class="keywordflow">if</span> (armorPiece.type == 553 || armorPiece.type == 4897)</div>
+<div class="line"><span class="lineno">12920</span>        {</div>
+<div class="line"><span class="lineno">12921</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.15f;</div>
+<div class="line"><span class="lineno">12922</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 8;</div>
+<div class="line"><span class="lineno">12923</span>        }</div>
+<div class="line"><span class="lineno">12924</span>        <span class="keywordflow">if</span> (armorPiece.type == 4873 || armorPiece.type == 4899)</div>
+<div class="line"><span class="lineno">12925</span>        {</div>
+<div class="line"><span class="lineno">12926</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12927</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">12928</span>        }</div>
+<div class="line"><span class="lineno">12929</span>        <span class="keywordflow">if</span> (armorPiece.type == 551 || armorPiece.type == 4900)</div>
+<div class="line"><span class="lineno">12930</span>        {</div>
+<div class="line"><span class="lineno">12931</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12932</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12933</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12934</span>        }</div>
+<div class="line"><span class="lineno">12935</span>        <span class="keywordflow">if</span> (armorPiece.type == 552 || armorPiece.type == 4901)</div>
+<div class="line"><span class="lineno">12936</span>        {</div>
+<div class="line"><span class="lineno">12937</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12938</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12939</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12940</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">12941</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.08f;</div>
+<div class="line"><span class="lineno">12942</span>        }</div>
+<div class="line"><span class="lineno">12943</span>        <span class="keywordflow">if</span> (armorPiece.type == 4982)</div>
+<div class="line"><span class="lineno">12944</span>        {</div>
+<div class="line"><span class="lineno">12945</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12946</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12947</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 5;</div>
+<div class="line"><span class="lineno">12948</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.1f;</div>
+<div class="line"><span class="lineno">12949</span>        }</div>
+<div class="line"><span class="lineno">12950</span>        <span class="keywordflow">if</span> (armorPiece.type == 4983)</div>
+<div class="line"><span class="lineno">12951</span>        {</div>
+<div class="line"><span class="lineno">12952</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12953</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12954</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12955</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12956</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ad072da643779806b04a3fde2675401ab.html#ad072da643779806b04a3fde2675401ab">huntressAmmoCost90</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12957</span>        }</div>
+<div class="line"><span class="lineno">12958</span>        <span class="keywordflow">if</span> (armorPiece.type == 4984)</div>
+<div class="line"><span class="lineno">12959</span>        {</div>
+<div class="line"><span class="lineno">12960</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">12961</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">12962</span>        }</div>
+<div class="line"><span class="lineno">12963</span>        <span class="keywordflow">if</span> (armorPiece.type == 1001)</div>
+<div class="line"><span class="lineno">12964</span>        {</div>
+<div class="line"><span class="lineno">12965</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">12966</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 6;</div>
+<div class="line"><span class="lineno">12967</span>        }</div>
+<div class="line"><span class="lineno">12968</span>        <span class="keywordflow">if</span> (armorPiece.type == 1002)</div>
+<div class="line"><span class="lineno">12969</span>        {</div>
+<div class="line"><span class="lineno">12970</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">12971</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ad2c65fea25d83b54bfa3a8497f7b03f7.html#ad2c65fea25d83b54bfa3a8497f7b03f7">chloroAmmoCost80</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">12972</span>        }</div>
+<div class="line"><span class="lineno">12973</span>        <span class="keywordflow">if</span> (armorPiece.type == 1003)</div>
+<div class="line"><span class="lineno">12974</span>        {</div>
+<div class="line"><span class="lineno">12975</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 80;</div>
+<div class="line"><span class="lineno">12976</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.17f;</div>
+<div class="line"><span class="lineno">12977</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">12978</span>        }</div>
+<div class="line"><span class="lineno">12979</span>        <span class="keywordflow">if</span> (armorPiece.type == 1004)</div>
+<div class="line"><span class="lineno">12980</span>        {</div>
+<div class="line"><span class="lineno">12981</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12982</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12983</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12984</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12985</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12986</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12987</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">12988</span>        }</div>
+<div class="line"><span class="lineno">12989</span>        <span class="keywordflow">if</span> (armorPiece.type == 1005)</div>
+<div class="line"><span class="lineno">12990</span>        {</div>
+<div class="line"><span class="lineno">12991</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 8;</div>
+<div class="line"><span class="lineno">12992</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 8;</div>
+<div class="line"><span class="lineno">12993</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 8;</div>
+<div class="line"><span class="lineno">12994</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.05f;</div>
+<div class="line"><span class="lineno">12995</span>        }</div>
+<div class="line"><span class="lineno">12996</span>        <span class="keywordflow">if</span> (armorPiece.type == 2189)</div>
+<div class="line"><span class="lineno">12997</span>        {</div>
+<div class="line"><span class="lineno">12998</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">12999</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.13f;</div>
+<div class="line"><span class="lineno">13000</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13001</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 10;</div>
+<div class="line"><span class="lineno">13002</span>        }</div>
+<div class="line"><span class="lineno">13003</span>        <span class="keywordflow">if</span> (armorPiece.type == 1504)</div>
+<div class="line"><span class="lineno">13004</span>        {</div>
+<div class="line"><span class="lineno">13005</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">13006</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">13007</span>        }</div>
+<div class="line"><span class="lineno">13008</span>        <span class="keywordflow">if</span> (armorPiece.type == 1505)</div>
+<div class="line"><span class="lineno">13009</span>        {</div>
+<div class="line"><span class="lineno">13010</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13011</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13012</span>        }</div>
+<div class="line"><span class="lineno">13013</span>        <span class="keywordflow">if</span> (armorPiece.type == 1546)</div>
+<div class="line"><span class="lineno">13014</span>        {</div>
+<div class="line"><span class="lineno">13015</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">13016</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a938578a962768c86612f985cec2aec71.html#a938578a962768c86612f985cec2aec71">arrowDamage</a> *= 1.15f;</div>
+<div class="line"><span class="lineno">13017</span>        }</div>
+<div class="line"><span class="lineno">13018</span>        <span class="keywordflow">if</span> (armorPiece.type == 1547)</div>
+<div class="line"><span class="lineno">13019</span>        {</div>
+<div class="line"><span class="lineno">13020</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">13021</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a46a90a24367bdf9ce6c15963d326178f.html#a46a90a24367bdf9ce6c15963d326178f">bulletDamage</a> *= 1.15f;</div>
+<div class="line"><span class="lineno">13022</span>        }</div>
+<div class="line"><span class="lineno">13023</span>        <span class="keywordflow">if</span> (armorPiece.type == 1548)</div>
+<div class="line"><span class="lineno">13024</span>        {</div>
+<div class="line"><span class="lineno">13025</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 5;</div>
+<div class="line"><span class="lineno">13026</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ac5522d960353e4e4682717dcb6190223.html#ac5522d960353e4e4682717dcb6190223">rocketDamage</a> *= 1.15f;</div>
+<div class="line"><span class="lineno">13027</span>        }</div>
+<div class="line"><span class="lineno">13028</span>        <span class="keywordflow">if</span> (armorPiece.type == 1549)</div>
+<div class="line"><span class="lineno">13029</span>        {</div>
+<div class="line"><span class="lineno">13030</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 13;</div>
+<div class="line"><span class="lineno">13031</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.13f;</div>
+<div class="line"><span class="lineno">13032</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a53735d24c1e9741a1d5d1a32331651d4.html#a53735d24c1e9741a1d5d1a32331651d4">ammoCost80</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13033</span>        }</div>
+<div class="line"><span class="lineno">13034</span>        <span class="keywordflow">if</span> (armorPiece.type == 1550)</div>
+<div class="line"><span class="lineno">13035</span>        {</div>
+<div class="line"><span class="lineno">13036</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">13037</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.12f;</div>
+<div class="line"><span class="lineno">13038</span>        }</div>
+<div class="line"><span class="lineno">13039</span>        <span class="keywordflow">if</span> (armorPiece.type == 1282)</div>
+<div class="line"><span class="lineno">13040</span>        {</div>
+<div class="line"><span class="lineno">13041</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 20;</div>
+<div class="line"><span class="lineno">13042</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.05f;</div>
+<div class="line"><span class="lineno">13043</span>        }</div>
+<div class="line"><span class="lineno">13044</span>        <span class="keywordflow">if</span> (armorPiece.type == 1283)</div>
+<div class="line"><span class="lineno">13045</span>        {</div>
+<div class="line"><span class="lineno">13046</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">13047</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.07f;</div>
+<div class="line"><span class="lineno">13048</span>        }</div>
+<div class="line"><span class="lineno">13049</span>        <span class="keywordflow">if</span> (armorPiece.type == 1284)</div>
+<div class="line"><span class="lineno">13050</span>        {</div>
+<div class="line"><span class="lineno">13051</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 40;</div>
+<div class="line"><span class="lineno">13052</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.09f;</div>
+<div class="line"><span class="lineno">13053</span>        }</div>
+<div class="line"><span class="lineno">13054</span>        <span class="keywordflow">if</span> (armorPiece.type == 1285)</div>
+<div class="line"><span class="lineno">13055</span>        {</div>
+<div class="line"><span class="lineno">13056</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">13057</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.11f;</div>
+<div class="line"><span class="lineno">13058</span>        }</div>
+<div class="line"><span class="lineno">13059</span>        <span class="keywordflow">if</span> (armorPiece.type == 1286 || armorPiece.type == 4256)</div>
+<div class="line"><span class="lineno">13060</span>        {</div>
+<div class="line"><span class="lineno">13061</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">13062</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.13f;</div>
+<div class="line"><span class="lineno">13063</span>        }</div>
+<div class="line"><span class="lineno">13064</span>        <span class="keywordflow">if</span> (armorPiece.type == 1287)</div>
+<div class="line"><span class="lineno">13065</span>        {</div>
+<div class="line"><span class="lineno">13066</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 80;</div>
+<div class="line"><span class="lineno">13067</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.15f;</div>
+<div class="line"><span class="lineno">13068</span>        }</div>
+<div class="line"><span class="lineno">13069</span>        <span class="keywordflow">if</span> (armorPiece.type == 1316 || armorPiece.type == 1317 || armorPiece.type == 1318)</div>
+<div class="line"><span class="lineno">13070</span>        {</div>
+<div class="line"><span class="lineno">13071</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 250;</div>
+<div class="line"><span class="lineno">13072</span>        }</div>
+<div class="line"><span class="lineno">13073</span>        <span class="keywordflow">if</span> (armorPiece.type == 1316)</div>
+<div class="line"><span class="lineno">13074</span>        {</div>
+<div class="line"><span class="lineno">13075</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13076</span>        }</div>
+<div class="line"><span class="lineno">13077</span>        <span class="keywordflow">if</span> (armorPiece.type == 1317)</div>
+<div class="line"><span class="lineno">13078</span>        {</div>
+<div class="line"><span class="lineno">13079</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13080</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 8;</div>
+<div class="line"><span class="lineno">13081</span>        }</div>
+<div class="line"><span class="lineno">13082</span>        <span class="keywordflow">if</span> (armorPiece.type == 1318)</div>
+<div class="line"><span class="lineno">13083</span>        {</div>
+<div class="line"><span class="lineno">13084</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 4;</div>
+<div class="line"><span class="lineno">13085</span>        }</div>
+<div class="line"><span class="lineno">13086</span>        <span class="keywordflow">if</span> (armorPiece.type == 2199 || armorPiece.type == 2202)</div>
+<div class="line"><span class="lineno">13087</span>        {</div>
+<div class="line"><span class="lineno">13088</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 250;</div>
+<div class="line"><span class="lineno">13089</span>        }</div>
+<div class="line"><span class="lineno">13090</span>        <span class="keywordflow">if</span> (armorPiece.type == 2201)</div>
+<div class="line"><span class="lineno">13091</span>        {</div>
+<div class="line"><span class="lineno">13092</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 400;</div>
+<div class="line"><span class="lineno">13093</span>        }</div>
+<div class="line"><span class="lineno">13094</span>        <span class="keywordflow">if</span> (armorPiece.type == 2199)</div>
+<div class="line"><span class="lineno">13095</span>        {</div>
+<div class="line"><span class="lineno">13096</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13097</span>        }</div>
+<div class="line"><span class="lineno">13098</span>        <span class="keywordflow">if</span> (armorPiece.type == 2200)</div>
+<div class="line"><span class="lineno">13099</span>        {</div>
+<div class="line"><span class="lineno">13100</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13101</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 8;</div>
+<div class="line"><span class="lineno">13102</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13103</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13104</span>        }</div>
+<div class="line"><span class="lineno">13105</span>        <span class="keywordflow">if</span> (armorPiece.type == 2201)</div>
+<div class="line"><span class="lineno">13106</span>        {</div>
+<div class="line"><span class="lineno">13107</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">13108</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 5;</div>
+<div class="line"><span class="lineno">13109</span>        }</div>
+<div class="line"><span class="lineno">13110</span>        <span class="keywordflow">if</span> (armorPiece.type == 2202)</div>
+<div class="line"><span class="lineno">13111</span>        {</div>
+<div class="line"><span class="lineno">13112</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13113</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13114</span>        }</div>
+<div class="line"><span class="lineno">13115</span>        <span class="keywordflow">if</span> (armorPiece.type == 684)</div>
+<div class="line"><span class="lineno">13116</span>        {</div>
+<div class="line"><span class="lineno">13117</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">13118</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">13119</span>        }</div>
+<div class="line"><span class="lineno">13120</span>        <span class="keywordflow">if</span> (armorPiece.type == 685)</div>
+<div class="line"><span class="lineno">13121</span>        {</div>
+<div class="line"><span class="lineno">13122</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 11;</div>
+<div class="line"><span class="lineno">13123</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 11;</div>
+<div class="line"><span class="lineno">13124</span>        }</div>
+<div class="line"><span class="lineno">13125</span>        <span class="keywordflow">if</span> (armorPiece.type == 686)</div>
+<div class="line"><span class="lineno">13126</span>        {</div>
+<div class="line"><span class="lineno">13127</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13128</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13129</span>        }</div>
+<div class="line"><span class="lineno">13130</span>        <span class="keywordflow">if</span> (armorPiece.type == 5068)</div>
+<div class="line"><span class="lineno">13131</span>        {</div>
+<div class="line"><span class="lineno">13132</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13133</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">13134</span>        }</div>
+<div class="line"><span class="lineno">13135</span>        <span class="keywordflow">if</span> (armorPiece.type == 2361)</div>
+<div class="line"><span class="lineno">13136</span>        {</div>
+<div class="line"><span class="lineno">13137</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13138</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">13139</span>        }</div>
+<div class="line"><span class="lineno">13140</span>        <span class="keywordflow">if</span> (armorPiece.type == 2362)</div>
+<div class="line"><span class="lineno">13141</span>        {</div>
+<div class="line"><span class="lineno">13142</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13143</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.04f;</div>
+<div class="line"><span class="lineno">13144</span>        }</div>
+<div class="line"><span class="lineno">13145</span>        <span class="keywordflow">if</span> (armorPiece.type == 2363)</div>
+<div class="line"><span class="lineno">13146</span>        {</div>
+<div class="line"><span class="lineno">13147</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">13148</span>        }</div>
+<div class="line"><span class="lineno">13149</span>        <span class="keywordflow">if</span> (armorPiece.type == 3266)</div>
+<div class="line"><span class="lineno">13150</span>        {</div>
+<div class="line"><span class="lineno">13151</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13152</span>        }</div>
+<div class="line"><span class="lineno">13153</span>        <span class="keywordflow">if</span> (armorPiece.type == 3267)</div>
+<div class="line"><span class="lineno">13154</span>        {</div>
+<div class="line"><span class="lineno">13155</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13156</span>        }</div>
+<div class="line"><span class="lineno">13157</span>        <span class="keywordflow">if</span> (armorPiece.type == 3268)</div>
+<div class="line"><span class="lineno">13158</span>        {</div>
+<div class="line"><span class="lineno">13159</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13160</span>        }</div>
+<div class="line"><span class="lineno">13161</span>        <span class="keywordflow">if</span> (armorPiece.type == 410)</div>
+<div class="line"><span class="lineno">13162</span>        {</div>
+<div class="line"><span class="lineno">13163</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2f8493ad8b2d93515be8b84b581cc68d.html#a2f8493ad8b2d93515be8b84b581cc68d">pickSpeed</a> -= 0.1f;</div>
+<div class="line"><span class="lineno">13164</span>        }</div>
+<div class="line"><span class="lineno">13165</span>        <span class="keywordflow">if</span> (armorPiece.type == 411)</div>
+<div class="line"><span class="lineno">13166</span>        {</div>
+<div class="line"><span class="lineno">13167</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a2f8493ad8b2d93515be8b84b581cc68d.html#a2f8493ad8b2d93515be8b84b581cc68d">pickSpeed</a> -= 0.1f;</div>
+<div class="line"><span class="lineno">13168</span>        }</div>
+<div class="line"><span class="lineno">13169</span>        <span class="keywordflow">if</span> (armorPiece.type &gt;= 1158 &amp;&amp; armorPiece.type &lt;= 1161)</div>
+<div class="line"><span class="lineno">13170</span>        {</div>
+<div class="line"><span class="lineno">13171</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13172</span>        }</div>
+<div class="line"><span class="lineno">13173</span>        <span class="keywordflow">if</span> (armorPiece.type == 1159)</div>
+<div class="line"><span class="lineno">13174</span>        {</div>
+<div class="line"><span class="lineno">13175</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a18b6a27f3d0602b4f0e2bec6edf838ef.html#a18b6a27f3d0602b4f0e2bec6edf838ef">whipRangeMultiplier</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13176</span>        }</div>
+<div class="line"><span class="lineno">13177</span>        <span class="keywordflow">if</span> (armorPiece.type &gt;= 1159 &amp;&amp; armorPiece.type &lt;= 1161)</div>
+<div class="line"><span class="lineno">13178</span>        {</div>
+<div class="line"><span class="lineno">13179</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13180</span>        }</div>
+<div class="line"><span class="lineno">13181</span>        <span class="keywordflow">if</span> (armorPiece.type &gt;= 2370 &amp;&amp; armorPiece.type &lt;= 2371)</div>
+<div class="line"><span class="lineno">13182</span>        {</div>
+<div class="line"><span class="lineno">13183</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.05f;</div>
+<div class="line"><span class="lineno">13184</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13185</span>        }</div>
+<div class="line"><span class="lineno">13186</span>        <span class="keywordflow">if</span> (armorPiece.type == 2372)</div>
+<div class="line"><span class="lineno">13187</span>        {</div>
+<div class="line"><span class="lineno">13188</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.06f;</div>
+<div class="line"><span class="lineno">13189</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13190</span>        }</div>
+<div class="line"><span class="lineno">13191</span>        <span class="keywordflow">if</span> (armorPiece.type == 3381)</div>
+<div class="line"><span class="lineno">13192</span>        {</div>
+<div class="line"><span class="lineno">13193</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13194</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a>++;</div>
+<div class="line"><span class="lineno">13195</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.22f;</div>
+<div class="line"><span class="lineno">13196</span>        }</div>
+<div class="line"><span class="lineno">13197</span>        <span class="keywordflow">if</span> (armorPiece.type == 3382 || armorPiece.type == 3383)</div>
+<div class="line"><span class="lineno">13198</span>        {</div>
+<div class="line"><span class="lineno">13199</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a> += 2;</div>
+<div class="line"><span class="lineno">13200</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a18b6a27f3d0602b4f0e2bec6edf838ef.html#a18b6a27f3d0602b4f0e2bec6edf838ef">whipRangeMultiplier</a> += 0.15f;</div>
+<div class="line"><span class="lineno">13201</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.22f;</div>
+<div class="line"><span class="lineno">13202</span>        }</div>
+<div class="line"><span class="lineno">13203</span>        <span class="keywordflow">if</span> (armorPiece.type == 2763)</div>
+<div class="line"><span class="lineno">13204</span>        {</div>
+<div class="line"><span class="lineno">13205</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 300;</div>
+<div class="line"><span class="lineno">13206</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">meleeCrit</a> += 26;</div>
+<div class="line"><span class="lineno">13207</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += 2;</div>
+<div class="line"><span class="lineno">13208</span>        }</div>
+<div class="line"><span class="lineno">13209</span>        <span class="keywordflow">if</span> (armorPiece.type == 2764)</div>
+<div class="line"><span class="lineno">13210</span>        {</div>
+<div class="line"><span class="lineno">13211</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 300;</div>
+<div class="line"><span class="lineno">13212</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">meleeDamage</a> += 0.29f;</div>
+<div class="line"><span class="lineno">13213</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += 2;</div>
+<div class="line"><span class="lineno">13214</span>        }</div>
+<div class="line"><span class="lineno">13215</span>        <span class="keywordflow">if</span> (armorPiece.type == 2765)</div>
+<div class="line"><span class="lineno">13216</span>        {</div>
+<div class="line"><span class="lineno">13217</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">aggro</a> += 300;</div>
+<div class="line"><span class="lineno">13218</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">meleeSpeed</a> += 0.15f;</div>
+<div class="line"><span class="lineno">13219</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.15f;</div>
+<div class="line"><span class="lineno">13220</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">lifeRegen</a> += 2;</div>
+<div class="line"><span class="lineno">13221</span>        }</div>
+<div class="line"><span class="lineno">13222</span>        <span class="keywordflow">if</span> (armorPiece.type == 2757)</div>
+<div class="line"><span class="lineno">13223</span>        {</div>
+<div class="line"><span class="lineno">13224</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 7;</div>
+<div class="line"><span class="lineno">13225</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.16f;</div>
+<div class="line"><span class="lineno">13226</span>        }</div>
+<div class="line"><span class="lineno">13227</span>        <span class="keywordflow">if</span> (armorPiece.type == 2758)</div>
+<div class="line"><span class="lineno">13228</span>        {</div>
+<div class="line"><span class="lineno">13229</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3bc263968b35b9a687cf2048691db224.html#a3bc263968b35b9a687cf2048691db224">ammoCost75</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13230</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 12;</div>
+<div class="line"><span class="lineno">13231</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.12f;</div>
+<div class="line"><span class="lineno">13232</span>        }</div>
+<div class="line"><span class="lineno">13233</span>        <span class="keywordflow">if</span> (armorPiece.type == 2759)</div>
+<div class="line"><span class="lineno">13234</span>        {</div>
+<div class="line"><span class="lineno">13235</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">rangedCrit</a> += 8;</div>
+<div class="line"><span class="lineno">13236</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">rangedDamage</a> += 0.08f;</div>
+<div class="line"><span class="lineno">13237</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13238</span>        }</div>
+<div class="line"><span class="lineno">13239</span>        <span class="keywordflow">if</span> (armorPiece.type == 2760)</div>
+<div class="line"><span class="lineno">13240</span>        {</div>
+<div class="line"><span class="lineno">13241</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a> += 60;</div>
+<div class="line"><span class="lineno">13242</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">manaCost</a> -= 0.15f;</div>
+<div class="line"><span class="lineno">13243</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 7;</div>
+<div class="line"><span class="lineno">13244</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.07f;</div>
+<div class="line"><span class="lineno">13245</span>        }</div>
+<div class="line"><span class="lineno">13246</span>        <span class="keywordflow">if</span> (armorPiece.type == 2761)</div>
+<div class="line"><span class="lineno">13247</span>        {</div>
+<div class="line"><span class="lineno">13248</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.09f;</div>
+<div class="line"><span class="lineno">13249</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">magicCrit</a> += 9;</div>
+<div class="line"><span class="lineno">13250</span>        }</div>
+<div class="line"><span class="lineno">13251</span>        <span class="keywordflow">if</span> (armorPiece.type == 2762)</div>
+<div class="line"><span class="lineno">13252</span>        {</div>
+<div class="line"><span class="lineno">13253</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13254</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">magicDamage</a> += 0.1f;</div>
+<div class="line"><span class="lineno">13255</span>        }</div>
+<div class="line"><span class="lineno">13256</span>        <span class="keywordflow">if</span> (armorPiece.type == 1832)</div>
+<div class="line"><span class="lineno">13257</span>        {</div>
+<div class="line"><span class="lineno">13258</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13259</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.11f;</div>
+<div class="line"><span class="lineno">13260</span>        }</div>
+<div class="line"><span class="lineno">13261</span>        <span class="keywordflow">if</span> (armorPiece.type == 1833)</div>
+<div class="line"><span class="lineno">13262</span>        {</div>
+<div class="line"><span class="lineno">13263</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a> += 2;</div>
+<div class="line"><span class="lineno">13264</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.11f;</div>
+<div class="line"><span class="lineno">13265</span>        }</div>
+<div class="line"><span class="lineno">13266</span>        <span class="keywordflow">if</span> (armorPiece.type == 1834)</div>
+<div class="line"><span class="lineno">13267</span>        {</div>
+<div class="line"><span class="lineno">13268</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">moveSpeed</a> += 0.2f;</div>
+<div class="line"><span class="lineno">13269</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">maxMinions</a>++;</div>
+<div class="line"><span class="lineno">13270</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">minionDamage</a> += 0.11f;</div>
+<div class="line"><span class="lineno">13271</span>        }</div>
+<div class="line"><span class="lineno">13272</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7_html_a0051dae1c77c3e288adfbca659f436f7"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0051dae1c77c3e288adfbca659f436f7.html#a0051dae1c77c3e288adfbca659f436f7">Terraria.Player.moveSpeed</a></div><div class="ttdeci">float moveSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2047</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0b84a0a9df693a362f09cf49830818ef_html_a0b84a0a9df693a362f09cf49830818ef"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0b84a0a9df693a362f09cf49830818ef.html#a0b84a0a9df693a362f09cf49830818ef">Terraria.Player.moonLordLegs</a></div><div class="ttdeci">bool moonLordLegs</div><div class="ttdef"><b>Definition</b> Player.cs:1713</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0df0042403d61a749a46b5fcbed3bfa3_html_a0df0042403d61a749a46b5fcbed3bfa3"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0df0042403d61a749a46b5fcbed3bfa3.html#a0df0042403d61a749a46b5fcbed3bfa3">Terraria.Player.accDivingHelm</a></div><div class="ttdeci">bool accDivingHelm</div><div class="ttdef"><b>Definition</b> Player.cs:2221</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1098f4ebfbd1fb75685a38e0087a148f_html_a1098f4ebfbd1fb75685a38e0087a148f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1098f4ebfbd1fb75685a38e0087a148f.html#a1098f4ebfbd1fb75685a38e0087a148f">Terraria.Player.RefreshInfoAccsFromItemType</a></div><div class="ttdeci">void RefreshInfoAccsFromItemType(int accType)</div><div class="ttdef"><b>Definition</b> Player.cs:12115</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a18b6a27f3d0602b4f0e2bec6edf838ef_html_a18b6a27f3d0602b4f0e2bec6edf838ef"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a18b6a27f3d0602b4f0e2bec6edf838ef.html#a18b6a27f3d0602b4f0e2bec6edf838ef">Terraria.Player.whipRangeMultiplier</a></div><div class="ttdeci">float whipRangeMultiplier</div><div class="ttdef"><b>Definition</b> Player.cs:901</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78_html_a1b91a400fde37be861d0c73ffaeeaf78"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1b91a400fde37be861d0c73ffaeeaf78.html#a1b91a400fde37be861d0c73ffaeeaf78">Terraria.Player.rangedDamage</a></div><div class="ttdeci">float rangedDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2027</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a218281a425ad0f1bde15b0e9225ad027_html_a218281a425ad0f1bde15b0e9225ad027"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a218281a425ad0f1bde15b0e9225ad027.html#a218281a425ad0f1bde15b0e9225ad027">Terraria.Player.fishingSkill</a></div><div class="ttdeci">int fishingSkill</div><div class="ttdef"><b>Definition</b> Player.cs:951</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98_html_a233a5c0db849bf5bee077cfc8bb91a98"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">Terraria.Player.statManaMax2</a></div><div class="ttdeci">int statManaMax2</div><div class="ttdef"><b>Definition</b> Player.cs:1565</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a2f8493ad8b2d93515be8b84b581cc68d_html_a2f8493ad8b2d93515be8b84b581cc68d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a2f8493ad8b2d93515be8b84b581cc68d.html#a2f8493ad8b2d93515be8b84b581cc68d">Terraria.Player.pickSpeed</a></div><div class="ttdeci">float pickSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2049</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3bc263968b35b9a687cf2048691db224_html_a3bc263968b35b9a687cf2048691db224"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3bc263968b35b9a687cf2048691db224.html#a3bc263968b35b9a687cf2048691db224">Terraria.Player.ammoCost75</a></div><div class="ttdeci">bool ammoCost75</div><div class="ttdef"><b>Definition</b> Player.cs:1595</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58_html_a3fb3fd189c30fbd8c484ada3b9dadf58"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3fb3fd189c30fbd8c484ada3b9dadf58.html#a3fb3fd189c30fbd8c484ada3b9dadf58">Terraria.Player.magicCrit</a></div><div class="ttdeci">int magicCrit</div><div class="ttdef"><b>Definition</b> Player.cs:2019</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66_html_a4649a25184b01b40df9bb16ea1cfcf66"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a4649a25184b01b40df9bb16ea1cfcf66.html#a4649a25184b01b40df9bb16ea1cfcf66">Terraria.Player.meleeSpeed</a></div><div class="ttdeci">float meleeSpeed</div><div class="ttdef"><b>Definition</b> Player.cs:2043</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a46a90a24367bdf9ce6c15963d326178f_html_a46a90a24367bdf9ce6c15963d326178f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a46a90a24367bdf9ce6c15963d326178f.html#a46a90a24367bdf9ce6c15963d326178f">Terraria.Player.bulletDamage</a></div><div class="ttdeci">float bulletDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2035</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a53735d24c1e9741a1d5d1a32331651d4_html_a53735d24c1e9741a1d5d1a32331651d4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a53735d24c1e9741a1d5d1a32331651d4.html#a53735d24c1e9741a1d5d1a32331651d4">Terraria.Player.ammoCost80</a></div><div class="ttdeci">bool ammoCost80</div><div class="ttdef"><b>Definition</b> Player.cs:1593</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779_html_a75d3add9b88c478119cb141cc4b99779"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a75d3add9b88c478119cb141cc4b99779.html#a75d3add9b88c478119cb141cc4b99779">Terraria.Player.meleeDamage</a></div><div class="ttdeci">float meleeDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2023</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4_html_a77176e4c3af14c3ebc36ad7a87e5d8c4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">Terraria.Player.aggro</a></div><div class="ttdeci">int aggro</div><div class="ttdef"><b>Definition</b> Player.cs:1131</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc_html_a7db32d471260eab1d86dfc1706bb3cbc"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">Terraria.Player.maxTurrets</a></div><div class="ttdeci">int maxTurrets</div><div class="ttdef"><b>Definition</b> Player.cs:2407</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d_html_a8b15f72c2f41ce94f997d272e2a6a55d"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a8b15f72c2f41ce94f997d272e2a6a55d.html#a8b15f72c2f41ce94f997d272e2a6a55d">Terraria.Player.maxMinions</a></div><div class="ttdeci">int maxMinions</div><div class="ttdef"><b>Definition</b> Player.cs:965</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a938578a962768c86612f985cec2aec71_html_a938578a962768c86612f985cec2aec71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a938578a962768c86612f985cec2aec71.html#a938578a962768c86612f985cec2aec71">Terraria.Player.arrowDamage</a></div><div class="ttdeci">float arrowDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2033</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a_html_a9695005b92d3da83548091ec8cc8347a"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a9695005b92d3da83548091ec8cc8347a.html#a9695005b92d3da83548091ec8cc8347a">Terraria.Player.rangedCrit</a></div><div class="ttdeci">int rangedCrit</div><div class="ttdef"><b>Definition</b> Player.cs:2021</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975_html_aa0f2bd0f0d0f1f7159e66b4f78e6b975"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aa0f2bd0f0d0f1f7159e66b4f78e6b975.html#aa0f2bd0f0d0f1f7159e66b4f78e6b975">Terraria.Player.minionDamage</a></div><div class="ttdeci">float minionDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2039</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aa36effe634a88fba9051cf070450f7d1_html_aa36effe634a88fba9051cf070450f7d1"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aa36effe634a88fba9051cf070450f7d1.html#aa36effe634a88fba9051cf070450f7d1">Terraria.Player.hasRaisableShield</a></div><div class="ttdeci">bool hasRaisableShield</div><div class="ttdef"><b>Definition</b> Player.cs:2671</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aa9fe5e48ce2b512562ad37964e0c034a_html_aa9fe5e48ce2b512562ad37964e0c034a"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aa9fe5e48ce2b512562ad37964e0c034a.html#aa9fe5e48ce2b512562ad37964e0c034a">Terraria.Player.RefreshMechanicalAccsFromItemType</a></div><div class="ttdeci">void RefreshMechanicalAccsFromItemType(int accType)</div><div class="ttdef"><b>Definition</b> Player.cs:12181</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aad03731a6de577aaadaed68e953d75aa_html_aad03731a6de577aaadaed68e953d75aa"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aad03731a6de577aaadaed68e953d75aa.html#aad03731a6de577aaadaed68e953d75aa">Terraria.Player.flowerBoots</a></div><div class="ttdeci">bool flowerBoots</div><div class="ttdef"><b>Definition</b> Player.cs:1707</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ab6a2d5bb8eb417a595e48f9acf86e0f8_html_ab6a2d5bb8eb417a595e48f9acf86e0f8"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ab6a2d5bb8eb417a595e48f9acf86e0f8.html#ab6a2d5bb8eb417a595e48f9acf86e0f8">Terraria.Player.DoBootsEffect_PlaceFlowersOnTile</a></div><div class="ttdeci">bool DoBootsEffect_PlaceFlowersOnTile(int X, int Y)</div><div class="ttdef"><b>Definition</b> Player.cs:13424</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_abe62d012145b7f1d634b2db6467f7ad2_html_abe62d012145b7f1d634b2db6467f7ad2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_abe62d012145b7f1d634b2db6467f7ad2.html#abe62d012145b7f1d634b2db6467f7ad2">Terraria.Player.slowFall</a></div><div class="ttdeci">bool slowFall</div><div class="ttdef"><b>Definition</b> Player.cs:2349</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ac5522d960353e4e4682717dcb6190223_html_ac5522d960353e4e4682717dcb6190223"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ac5522d960353e4e4682717dcb6190223.html#ac5522d960353e4e4682717dcb6190223">Terraria.Player.rocketDamage</a></div><div class="ttdeci">float rocketDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2037</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0_html_aca631dcd2dd98649368c74ef63d824a0"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aca631dcd2dd98649368c74ef63d824a0.html#aca631dcd2dd98649368c74ef63d824a0">Terraria.Player.magicDamage</a></div><div class="ttdeci">float magicDamage</div><div class="ttdef"><b>Definition</b> Player.cs:2025</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ad072da643779806b04a3fde2675401ab_html_ad072da643779806b04a3fde2675401ab"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ad072da643779806b04a3fde2675401ab.html#ad072da643779806b04a3fde2675401ab">Terraria.Player.huntressAmmoCost90</a></div><div class="ttdeci">bool huntressAmmoCost90</div><div class="ttdef"><b>Definition</b> Player.cs:1591</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ad2c65fea25d83b54bfa3a8497f7b03f7_html_ad2c65fea25d83b54bfa3a8497f7b03f7"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ad2c65fea25d83b54bfa3a8497f7b03f7.html#ad2c65fea25d83b54bfa3a8497f7b03f7">Terraria.Player.chloroAmmoCost80</a></div><div class="ttdeci">bool chloroAmmoCost80</div><div class="ttdef"><b>Definition</b> Player.cs:1589</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ad80aa97c7fa68b09a0d7c4d376ca0410_html_ad80aa97c7fa68b09a0d7c4d376ca0410"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ad80aa97c7fa68b09a0d7c4d376ca0410.html#ad80aa97c7fa68b09a0d7c4d376ca0410">Terraria.Player.nightVision</a></div><div class="ttdeci">bool nightVision</div><div class="ttdef"><b>Definition</b> Player.cs:2359</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_adcb22c36673735a072da1169c62345d5_html_adcb22c36673735a072da1169c62345d5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_adcb22c36673735a072da1169c62345d5.html#adcb22c36673735a072da1169c62345d5">Terraria.Player.DoBootsEffect</a></div><div class="ttdeci">void DoBootsEffect(Utils.TileActionAttempt theEffectMethod)</div><div class="ttdef"><b>Definition</b> Player.cs:13400</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_adfeab649d741b0771d9cc3bd55775019_html_adfeab649d741b0771d9cc3bd55775019"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_adfeab649d741b0771d9cc3bd55775019.html#adfeab649d741b0771d9cc3bd55775019">Terraria.Player.statDefense</a></div><div class="ttdeci">int statDefense</div><div class="ttdef"><b>Definition</b> Player.cs:1553</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ae0f845b073be239afce6428df78e5e59_html_ae0f845b073be239afce6428df78e5e59"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ae0f845b073be239afce6428df78e5e59.html#ae0f845b073be239afce6428df78e5e59">Terraria.Player.armorPenetration</a></div><div class="ttdeci">int armorPenetration</div><div class="ttdef"><b>Definition</b> Player.cs:1551</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ae64bc2243faef14e21367e037c781214_html_ae64bc2243faef14e21367e037c781214"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ae64bc2243faef14e21367e037c781214.html#ae64bc2243faef14e21367e037c781214">Terraria.Player.manaCost</a></div><div class="ttdeci">float manaCost</div><div class="ttdef"><b>Definition</b> Player.cs:1515</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ae975ac24de415db819408b1352e51596_html_ae975ac24de415db819408b1352e51596"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ae975ac24de415db819408b1352e51596.html#ae975ac24de415db819408b1352e51596">Terraria.Player.lifeRegen</a></div><div class="ttdeci">int lifeRegen</div><div class="ttdef"><b>Definition</b> Player.cs:1567</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3_html_af8f459a8c9a07711a31073c0aa563cb3"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_af8f459a8c9a07711a31073c0aa563cb3.html#af8f459a8c9a07711a31073c0aa563cb3">Terraria.Player.meleeCrit</a></div><div class="ttdeci">int meleeCrit</div><div class="ttdef"><b>Definition</b> Player.cs:2017</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_afd67a870271f79f733ea9bc91ed01f42_html_afd67a870271f79f733ea9bc91ed01f42"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_afd67a870271f79f733ea9bc91ed01f42.html#afd67a870271f79f733ea9bc91ed01f42">Terraria.Player.SpawnHallucination</a></div><div class="ttdeci">void SpawnHallucination(Item item)</div><div class="ttdef"><b>Definition</b> Player.cs:13370</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_afe24710203725f2324eb9a9c28e23e60_html_afe24710203725f2324eb9a9c28e23e60"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_afe24710203725f2324eb9a9c28e23e60.html#afe24710203725f2324eb9a9c28e23e60">Terraria.Player.canFloatInWater</a></div><div class="ttdeci">bool canFloatInWater</div><div class="ttdef"><b>Definition</b> Player.cs:2293</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_aca6ba0af843692263ee72cbd4d5fbb84.html#aca6ba0af843692263ee72cbd4d5fbb84">Terraria.Item.defense</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_aee302d28f21e8f822775888fbff7bbfd.html#aee302d28f21e8f822775888fbff7bbfd">Terraria.Item.lifeRegen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a837550292d560aee0c0999e0df3ca8c9.html#a837550292d560aee0c0999e0df3ca8c9">Terraria.Item.shieldSlot</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac7fa136a7411cb9bd1e6bdf4eb03ff3b.html#ac7fa136a7411cb9bd1e6bdf4eb03ff3b">Terraria.Main.tenthAnniversaryWorld</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
 
 </div>
 </div>

@@ -117,6 +117,44 @@ $(function(){initNavTree('df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        lock (<a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a5961f3c2097a3d0eb17c7ab925e5db1a.html#a5961f3c2097a3d0eb17c7ab925e5db1a">bufferLock</a>)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (size &lt;= 32)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a99ddb5157d9f449b5aca8e6bb0952957.html#a99ddb5157d9f449b5aca8e6bb0952957">SmallBufferQueue</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> CachedBuffer(<span class="keyword">new</span> <span class="keywordtype">byte</span>[32]);</div>
+<div class="line"><span class="lineno">   31</span>                }</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a99ddb5157d9f449b5aca8e6bb0952957.html#a99ddb5157d9f449b5aca8e6bb0952957">SmallBufferQueue</a>.Dequeue().Activate();</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (size &lt;= 256)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_ac8236cf9b6c47d7a3eaddf8506af3e06.html#ac8236cf9b6c47d7a3eaddf8506af3e06">MediumBufferQueue</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   37</span>                {</div>
+<div class="line"><span class="lineno">   38</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> CachedBuffer(<span class="keyword">new</span> <span class="keywordtype">byte</span>[256]);</div>
+<div class="line"><span class="lineno">   39</span>                }</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_ac8236cf9b6c47d7a3eaddf8506af3e06.html#ac8236cf9b6c47d7a3eaddf8506af3e06">MediumBufferQueue</a>.Dequeue().Activate();</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (size &lt;= 16384)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a8459911bda495723a182db1ef35bf5f4.html#a8459911bda495723a182db1ef35bf5f4">LargeBufferQueue</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   45</span>                {</div>
+<div class="line"><span class="lineno">   46</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> CachedBuffer(<span class="keyword">new</span> <span class="keywordtype">byte</span>[16384]);</div>
+<div class="line"><span class="lineno">   47</span>                }</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a8459911bda495723a182db1ef35bf5f4.html#a8459911bda495723a182db1ef35bf5f4">LargeBufferQueue</a>.Dequeue().Activate();</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> CachedBuffer(<span class="keyword">new</span> <span class="keywordtype">byte</span>[size]);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1BufferPool_a5961f3c2097a3d0eb17c7ab925e5db1a_html_a5961f3c2097a3d0eb17c7ab925e5db1a"><div class="ttname"><a href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a5961f3c2097a3d0eb17c7ab925e5db1a.html#a5961f3c2097a3d0eb17c7ab925e5db1a">Terraria.DataStructures.BufferPool.bufferLock</a></div><div class="ttdeci">static object bufferLock</div><div class="ttdef"><b>Definition</b> BufferPool.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1BufferPool_a8459911bda495723a182db1ef35bf5f4_html_a8459911bda495723a182db1ef35bf5f4"><div class="ttname"><a href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a8459911bda495723a182db1ef35bf5f4.html#a8459911bda495723a182db1ef35bf5f4">Terraria.DataStructures.BufferPool.LargeBufferQueue</a></div><div class="ttdeci">static Queue&lt; CachedBuffer &gt; LargeBufferQueue</div><div class="ttdef"><b>Definition</b> BufferPool.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1BufferPool_a99ddb5157d9f449b5aca8e6bb0952957_html_a99ddb5157d9f449b5aca8e6bb0952957"><div class="ttname"><a href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a99ddb5157d9f449b5aca8e6bb0952957.html#a99ddb5157d9f449b5aca8e6bb0952957">Terraria.DataStructures.BufferPool.SmallBufferQueue</a></div><div class="ttdeci">static Queue&lt; CachedBuffer &gt; SmallBufferQueue</div><div class="ttdef"><b>Definition</b> BufferPool.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1BufferPool_ac8236cf9b6c47d7a3eaddf8506af3e06_html_ac8236cf9b6c47d7a3eaddf8506af3e06"><div class="ttname"><a href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_ac8236cf9b6c47d7a3eaddf8506af3e06.html#ac8236cf9b6c47d7a3eaddf8506af3e06">Terraria.DataStructures.BufferPool.MediumBufferQueue</a></div><div class="ttdeci">static Queue&lt; CachedBuffer &gt; MediumBufferQueue</div><div class="ttdef"><b>Definition</b> BufferPool.cs:18</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a5961f3c2097a3d0eb17c7ab925e5db1a.html#a5961f3c2097a3d0eb17c7ab925e5db1a">Terraria.DataStructures.BufferPool.bufferLock</a>, <a class="el" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a8459911bda495723a182db1ef35bf5f4.html#a8459911bda495723a182db1ef35bf5f4">Terraria.DataStructures.BufferPool.LargeBufferQueue</a>, <a class="el" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_ac8236cf9b6c47d7a3eaddf8506af3e06.html#ac8236cf9b6c47d7a3eaddf8506af3e06">Terraria.DataStructures.BufferPool.MediumBufferQueue</a>, and <a class="el" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a99ddb5157d9f449b5aca8e6bb0952957.html#a99ddb5157d9f449b5aca8e6bb0952957">Terraria.DataStructures.BufferPool.SmallBufferQueue</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d84/structTerraria_1_1Net_1_1NetPacket_a23229000d7f7e0ecf4169b01f6743eef.html#a23229000d7f7e0ecf4169b01f6743eef">Terraria.Net.NetPacket.NetPacket()</a>, and <a class="el" href="../../df/dca/classTerraria_1_1DataStructures_1_1BufferPool_a7b99376d1b9fbf078a5038c455780c67.html#a7b99376d1b9fbf078a5038c455780c67">Terraria.DataStructures.BufferPool.Request()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

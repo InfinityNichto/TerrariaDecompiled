@@ -121,6 +121,84 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a70493de309c63899bf8dcf
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">43613</span>    {</div>
+<div class="line"><span class="lineno">43614</span>        wX = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5.html#ab3a2c85433bbbc43674f1add2165ebc5">tileTargetX</a>;</div>
+<div class="line"><span class="lineno">43615</span>        wY = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447.html#a7fa0b7efa6d6b502a1349b843733e447">tileTargetY</a>;</div>
+<div class="line"><span class="lineno">43616</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43617</span>        <span class="keywordflow">if</span> (Main.tile[wX, wY].wall &gt; 0)</div>
+<div class="line"><span class="lineno">43618</span>        {</div>
+<div class="line"><span class="lineno">43619</span>            <span class="keywordflow">if</span> (!Main.wallHouse[Main.tile[wX, wY].wall])</div>
+<div class="line"><span class="lineno">43620</span>            {</div>
+<div class="line"><span class="lineno">43621</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = wX - 1; i &lt; wX + 2; i++)</div>
+<div class="line"><span class="lineno">43622</span>                {</div>
+<div class="line"><span class="lineno">43623</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = wY - 1; j &lt; wY + 2; j++)</div>
+<div class="line"><span class="lineno">43624</span>                    {</div>
+<div class="line"><span class="lineno">43625</span>                        <span class="keywordflow">if</span> (Main.tile[i, j].wall != Main.tile[wX, wY].wall)</div>
+<div class="line"><span class="lineno">43626</span>                        {</div>
+<div class="line"><span class="lineno">43627</span>                            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43628</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">43629</span>                        }</div>
+<div class="line"><span class="lineno">43630</span>                    }</div>
+<div class="line"><span class="lineno">43631</span>                }</div>
+<div class="line"><span class="lineno">43632</span>            }</div>
+<div class="line"><span class="lineno">43633</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">43634</span>            {</div>
+<div class="line"><span class="lineno">43635</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43636</span>            }</div>
+<div class="line"><span class="lineno">43637</span>        }</div>
+<div class="line"><span class="lineno">43638</span>        <span class="keywordflow">if</span> (!flag || Main.tile[wX, wY].active())</div>
+<div class="line"><span class="lineno">43639</span>        {</div>
+<div class="line"><span class="lineno">43640</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">43641</span>        }</div>
+<div class="line"><span class="lineno">43642</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">43643</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)(((<span class="keywordtype">float</span>)Main.mouseX + Main.screenPosition.X) / 16f) &lt; Math.Round(((<span class="keywordtype">float</span>)Main.mouseX + Main.screenPosition.X) / 16f))</div>
+<div class="line"><span class="lineno">43644</span>        {</div>
+<div class="line"><span class="lineno">43645</span>            num = 0;</div>
+<div class="line"><span class="lineno">43646</span>        }</div>
+<div class="line"><span class="lineno">43647</span>        <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno">43648</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)(((<span class="keywordtype">float</span>)Main.mouseY + Main.screenPosition.Y) / 16f) &lt; Math.Round(((<span class="keywordtype">float</span>)Main.mouseY + Main.screenPosition.Y) / 16f))</div>
+<div class="line"><span class="lineno">43649</span>        {</div>
+<div class="line"><span class="lineno">43650</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">43651</span>        }</div>
+<div class="line"><span class="lineno">43652</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5.html#ab3a2c85433bbbc43674f1add2165ebc5">tileTargetX</a> + num; k &lt;= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5.html#ab3a2c85433bbbc43674f1add2165ebc5">tileTargetX</a> + num + 1; k++)</div>
+<div class="line"><span class="lineno">43653</span>        {</div>
+<div class="line"><span class="lineno">43654</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447.html#a7fa0b7efa6d6b502a1349b843733e447">tileTargetY</a> + num2; l &lt;= <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447.html#a7fa0b7efa6d6b502a1349b843733e447">tileTargetY</a> + num2 + 1; l++)</div>
+<div class="line"><span class="lineno">43655</span>            {</div>
+<div class="line"><span class="lineno">43656</span>                <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">43657</span>                {</div>
+<div class="line"><span class="lineno">43658</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">43659</span>                }</div>
+<div class="line"><span class="lineno">43660</span>                wX = k;</div>
+<div class="line"><span class="lineno">43661</span>                wY = l;</div>
+<div class="line"><span class="lineno">43662</span>                <span class="keywordflow">if</span> (Main.tile[wX, wY].wall &lt;= 0)</div>
+<div class="line"><span class="lineno">43663</span>                {</div>
+<div class="line"><span class="lineno">43664</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">43665</span>                }</div>
+<div class="line"><span class="lineno">43666</span>                <span class="keywordflow">if</span> (!Main.wallHouse[Main.tile[wX, wY].wall])</div>
+<div class="line"><span class="lineno">43667</span>                {</div>
+<div class="line"><span class="lineno">43668</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = wX - 1; m &lt; wX + 2; m++)</div>
+<div class="line"><span class="lineno">43669</span>                    {</div>
+<div class="line"><span class="lineno">43670</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = wY - 1; n &lt; wY + 2; n++)</div>
+<div class="line"><span class="lineno">43671</span>                        {</div>
+<div class="line"><span class="lineno">43672</span>                            <span class="keywordflow">if</span> (Main.tile[m, n].wall != Main.tile[wX, wY].wall)</div>
+<div class="line"><span class="lineno">43673</span>                            {</div>
+<div class="line"><span class="lineno">43674</span>                                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43675</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">43676</span>                            }</div>
+<div class="line"><span class="lineno">43677</span>                        }</div>
+<div class="line"><span class="lineno">43678</span>                    }</div>
+<div class="line"><span class="lineno">43679</span>                }</div>
+<div class="line"><span class="lineno">43680</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">43681</span>                {</div>
+<div class="line"><span class="lineno">43682</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43683</span>                }</div>
+<div class="line"><span class="lineno">43684</span>            }</div>
+<div class="line"><span class="lineno">43685</span>        }</div>
+<div class="line"><span class="lineno">43686</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447_html_a7fa0b7efa6d6b502a1349b843733e447"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7fa0b7efa6d6b502a1349b843733e447.html#a7fa0b7efa6d6b502a1349b843733e447">Terraria.Player.tileTargetY</a></div><div class="ttdeci">static int tileTargetY</div><div class="ttdef"><b>Definition</b> Player.cs:2085</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5_html_ab3a2c85433bbbc43674f1add2165ebc5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ab3a2c85433bbbc43674f1add2165ebc5.html#ab3a2c85433bbbc43674f1add2165ebc5">Terraria.Player.tileTargetX</a></div><div class="ttdeci">static int tileTargetX</div><div class="ttdef"><b>Definition</b> Player.cs:2083</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af7e4649b5e960ac19776de9d127d4787.html#af7e4649b5e960ac19776de9d127d4787">Terraria.Main.mouseX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae28b0da8a7a818304f68468bf05f193f.html#ae28b0da8a7a818304f68468bf05f193f">Terraria.Main.mouseY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d6f09a4da6c2e14d081814d33975189.html#a6d6f09a4da6c2e14d081814d33975189">Terraria.Main.screenPosition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4c44f3a02b593ca1505232adb201884a.html#a4c44f3a02b593ca1505232adb201884a">Terraria.Main.wallHouse</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

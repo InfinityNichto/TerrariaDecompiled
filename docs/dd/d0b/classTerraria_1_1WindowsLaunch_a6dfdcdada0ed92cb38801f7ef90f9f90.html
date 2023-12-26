@@ -117,6 +117,24 @@ $(function(){initNavTree('dd/d0b/classTerraria_1_1WindowsLaunch_a6dfdcdada0ed92c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        AppDomain.CurrentDomain.AssemblyResolve += delegate(<span class="keywordtype">object</span> sender, ResolveEventArgs sargs)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordtype">string</span> resourceName = <span class="keyword">new</span> AssemblyName(sargs.Name).Name + <span class="stringliteral">&quot;.dll&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">string</span> text = Array.Find(typeof(Program).Assembly.GetManifestResourceNames(), (<span class="keywordtype">string</span> element) =&gt; element.EndsWith(resourceName));</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (text == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">return</span> (Assembly)<span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keyword">using </span>Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(text);</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordtype">byte</span>[] array = <span class="keyword">new</span> <span class="keywordtype">byte</span>[stream.Length];</div>
+<div class="line"><span class="lineno">   66</span>            stream.Read(array, 0, array.Length);</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> Assembly.Load(array);</div>
+<div class="line"><span class="lineno">   68</span>        };</div>
+<div class="line"><span class="lineno">   69</span>        Program.LaunchGame(args);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/daf/classTerraria_1_1Program_ac7cb5c95fd3efd53cdfb49df17b19967.html#ac7cb5c95fd3efd53cdfb49df17b19967">Terraria.Program.LaunchGame()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

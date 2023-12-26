@@ -121,6 +121,26 @@ $(function(){initNavTree('d9/daf/classTerraria_1_1Program_a9d30b60c76a39f2b1853e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        Assembly assembly = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  124</span>        Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; assemblies.Length; i++)</div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (assemblies[i].GetName().Name.Equals(name))</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                assembly = assemblies[i];</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (assembly == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            assembly = Assembly.Load(name);</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_function" href="../../d9/daf/classTerraria_1_1Program_a1aefc12b0c587eaf571769eeac16310e.html#a1aefc12b0c587eaf571769eeac16310e">ForceLoadAssembly</a>(assembly, initializeStaticMembers);</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Program_a1aefc12b0c587eaf571769eeac16310e_html_a1aefc12b0c587eaf571769eeac16310e"><div class="ttname"><a href="../../d9/daf/classTerraria_1_1Program_a1aefc12b0c587eaf571769eeac16310e.html#a1aefc12b0c587eaf571769eeac16310e">Terraria.Program.ForceLoadAssembly</a></div><div class="ttdeci">static void ForceLoadAssembly(Assembly assembly, bool initializeStaticMembers)</div><div class="ttdef"><b>Definition</b> Program.cs:111</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/daf/classTerraria_1_1Program_a1aefc12b0c587eaf571769eeac16310e.html#a1aefc12b0c587eaf571769eeac16310e">Terraria.Program.ForceLoadAssembly()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

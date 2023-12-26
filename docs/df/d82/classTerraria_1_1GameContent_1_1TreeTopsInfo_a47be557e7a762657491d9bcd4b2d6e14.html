@@ -121,6 +121,65 @@ $(function(){initNavTree('df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_a4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        Point pt = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>)(worldPosition.X / 16f), (<span class="keywordtype">int</span>)(worldPosition.Y / 16f) + 1);</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely = Framing.GetTileSafely(pt);</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (tileSafely.active())</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (tileSafely.type == 70)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                num = 11;</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 53 &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.oceanDepths(pt.X, pt.Y))</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                num = 10;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 23)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                num = 4;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 199)</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                num = 8;</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 109 || tileSafely.type == 492)</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                num = 7;</div>
+<div class="line"><span class="lineno">  117</span>            }</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 53)</div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                num = 9;</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 147)</div>
+<div class="line"><span class="lineno">  123</span>            {</div>
+<div class="line"><span class="lineno">  124</span>                num = 6;</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 60)</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                num = 5;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 633)</div>
+<div class="line"><span class="lineno">  131</span>            {</div>
+<div class="line"><span class="lineno">  132</span>                num = 12;</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tileSafely.type == 2 || tileSafely.type == 477)</div>
+<div class="line"><span class="lineno">  135</span>            {</div>
+<div class="line"><span class="lineno">  136</span>                num = ((pt.X &gt;= Main.treeX[0]) ? ((pt.X &lt; Main.treeX[1]) ? 1 : ((pt.X &gt;= Main.treeX[2]) ? 3 : 2)) : 0);</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (num &gt; -1)</div>
+<div class="line"><span class="lineno">  139</span>            {</div>
+<div class="line"><span class="lineno">  140</span>                <a class="code hl_function" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_a8fbef6ae42140cb36e1da8a70bfdeb3a.html#a8fbef6ae42140cb36e1da8a70bfdeb3a">RandomizeTreeStyle</a>(rand, num);</div>
+<div class="line"><span class="lineno">  141</span>            }</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1TreeTopsInfo_a8fbef6ae42140cb36e1da8a70bfdeb3a_html_a8fbef6ae42140cb36e1da8a70bfdeb3a"><div class="ttname"><a href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_a8fbef6ae42140cb36e1da8a70bfdeb3a.html#a8fbef6ae42140cb36e1da8a70bfdeb3a">Terraria.GameContent.TreeTopsInfo.RandomizeTreeStyle</a></div><div class="ttdeci">void RandomizeTreeStyle(UnifiedRandom rand, int areaId)</div><div class="ttdef"><b>Definition</b> TreeTopsInfo.cs:145</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_adf8f859033cd5cb805b13aad59a55236.html#adf8f859033cd5cb805b13aad59a55236">Terraria.Framing.GetTileSafely()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a78bf7054a60a560ab14394fb2cc88f03.html#a78bf7054a60a560ab14394fb2cc88f03">Terraria.WorldGen.oceanDepths()</a>, <a class="el" href="../../df/d82/classTerraria_1_1GameContent_1_1TreeTopsInfo_a8fbef6ae42140cb36e1da8a70bfdeb3a.html#a8fbef6ae42140cb36e1da8a70bfdeb3a">Terraria.GameContent.TreeTopsInfo.RandomizeTreeStyle()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a42562f5fb23da20caf88269400373347.html#a42562f5fb23da20caf88269400373347">Terraria.Main.treeX</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,22 @@ $(function(){initNavTree('dd/df7/classExtensions_1_1EnumerationExtensions_a0f3aa
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        Type type = value.GetType();</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">object</span> obj = value;</div>
+<div class="line"><span class="lineno">   55</span>        _Value value2 = <span class="keyword">new</span> _Value(<span class="keyword">remove</span>, type);</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (value2.Signed is <span class="keywordtype">long</span>)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            obj = Convert.ToInt64(value) &amp; ~value2.Signed.Value;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value2.Unsigned is ulong)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            obj = Convert.ToUInt64(value) &amp; ~value2.Unsigned.Value;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> (T)Enum.Parse(type, obj.ToString());</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/d3a/classExtensions_1_1EnumerationExtensions_1_1__Value_aebf827a14419747f86f395b69cc6a13e.html#aebf827a14419747f86f395b69cc6a13e">Extensions.EnumerationExtensions._Value.Signed</a>, and <a class="el" href="../../d6/d3a/classExtensions_1_1EnumerationExtensions_1_1__Value_ade9273b67467bbfb136585bdf8feab0b.html#ade9273b67467bbfb136585bdf8feab0b">Extensions.EnumerationExtensions._Value.Unsigned</a>.</p>
 
 </div>
 </div>

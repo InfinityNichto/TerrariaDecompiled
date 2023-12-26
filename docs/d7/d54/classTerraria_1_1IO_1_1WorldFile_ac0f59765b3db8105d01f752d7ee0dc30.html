@@ -117,6 +117,33 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_ac0f59765b3db8
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1606</span>    {</div>
+<div class="line"><span class="lineno"> 1607</span>        <span class="keywordtype">short</span> num = 0;</div>
+<div class="line"><span class="lineno"> 1608</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno"> 1609</span>        {</div>
+<div class="line"><span class="lineno"> 1610</span>            Sign sign = Main.sign[i];</div>
+<div class="line"><span class="lineno"> 1611</span>            <span class="keywordflow">if</span> (sign != <span class="keyword">null</span> &amp;&amp; sign.text != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1612</span>            {</div>
+<div class="line"><span class="lineno"> 1613</span>                num++;</div>
+<div class="line"><span class="lineno"> 1614</span>            }</div>
+<div class="line"><span class="lineno"> 1615</span>        }</div>
+<div class="line"><span class="lineno"> 1616</span>        writer.Write(num);</div>
+<div class="line"><span class="lineno"> 1617</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 1000; j++)</div>
+<div class="line"><span class="lineno"> 1618</span>        {</div>
+<div class="line"><span class="lineno"> 1619</span>            Sign sign = Main.sign[j];</div>
+<div class="line"><span class="lineno"> 1620</span>            <span class="keywordflow">if</span> (sign != <span class="keyword">null</span> &amp;&amp; sign.text != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 1621</span>            {</div>
+<div class="line"><span class="lineno"> 1622</span>                writer.Write(sign.text);</div>
+<div class="line"><span class="lineno"> 1623</span>                writer.Write(sign.x);</div>
+<div class="line"><span class="lineno"> 1624</span>                writer.Write(sign.y);</div>
+<div class="line"><span class="lineno"> 1625</span>            }</div>
+<div class="line"><span class="lineno"> 1626</span>        }</div>
+<div class="line"><span class="lineno"> 1627</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)writer.BaseStream.Position;</div>
+<div class="line"><span class="lineno"> 1628</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_aeef7a240c63c4e7b67fd3a526739d803.html#aeef7a240c63c4e7b67fd3a526739d803">Terraria.Main.sign</a>, <a class="el" href="../../dd/d21/classTerraria_1_1Sign_a131f9c37e32667c96d8e31248faa8151.html#a131f9c37e32667c96d8e31248faa8151">Terraria.Sign.text</a>, <a class="el" href="../../dd/d21/classTerraria_1_1Sign_af7bbb8bd25ac2247b84dea168780b2fe.html#af7bbb8bd25ac2247b84dea168780b2fe">Terraria.Sign.x</a>, and <a class="el" href="../../dd/d21/classTerraria_1_1Sign_a05b588de56baa5b7f1845132ab220bec.html#a05b588de56baa5b7f1845132ab220bec">Terraria.Sign.y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a74808b6768d0ec2193ed60b2d12da572.html#a74808b6768d0ec2193ed60b2d12da572">Terraria.IO.WorldFile.SaveWorld_Version2()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

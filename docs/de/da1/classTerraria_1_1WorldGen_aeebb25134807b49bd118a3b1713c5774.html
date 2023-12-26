@@ -121,6 +121,43 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aeebb25134807b49bd118
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">43803</span>    {</div>
+<div class="line"><span class="lineno">43804</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">43805</span>        {</div>
+<div class="line"><span class="lineno">43806</span>            <span class="keywordflow">if</span> (x &lt; 2 || x &gt;= Main.maxTilesX - 2 || y &lt; 2 || y &gt;= Main.maxTilesY - 2)</div>
+<div class="line"><span class="lineno">43807</span>            {</div>
+<div class="line"><span class="lineno">43808</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43809</span>            }</div>
+<div class="line"><span class="lineno">43810</span>            <span class="keywordflow">if</span> (Main.tile[x, y].wall == 0 || Main.wallHouse[Main.tile[x, y].wall])</div>
+<div class="line"><span class="lineno">43811</span>            {</div>
+<div class="line"><span class="lineno">43812</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43813</span>            }</div>
+<div class="line"><span class="lineno">43814</span>            <span class="keywordflow">if</span> (Main.tile[x - 1, y].wall == 0 || Main.wallHouse[Main.tile[x - 1, y].wall])</div>
+<div class="line"><span class="lineno">43815</span>            {</div>
+<div class="line"><span class="lineno">43816</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43817</span>            }</div>
+<div class="line"><span class="lineno">43818</span>            <span class="keywordflow">if</span> (Main.tile[x + 1, y].wall == 0 || Main.wallHouse[Main.tile[x + 1, y].wall])</div>
+<div class="line"><span class="lineno">43819</span>            {</div>
+<div class="line"><span class="lineno">43820</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43821</span>            }</div>
+<div class="line"><span class="lineno">43822</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].wall == 0 || Main.wallHouse[Main.tile[x, y - 1].wall])</div>
+<div class="line"><span class="lineno">43823</span>            {</div>
+<div class="line"><span class="lineno">43824</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43825</span>            }</div>
+<div class="line"><span class="lineno">43826</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].wall == 0 || Main.wallHouse[Main.tile[x, y + 1].wall])</div>
+<div class="line"><span class="lineno">43827</span>            {</div>
+<div class="line"><span class="lineno">43828</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43829</span>            }</div>
+<div class="line"><span class="lineno">43830</span>        }</div>
+<div class="line"><span class="lineno">43831</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">43832</span>        {</div>
+<div class="line"><span class="lineno">43833</span>        }</div>
+<div class="line"><span class="lineno">43834</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43835</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4c44f3a02b593ca1505232adb201884a.html#a4c44f3a02b593ca1505232adb201884a">Terraria.Main.wallHouse</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_af000c36764e2ed95019c3203fbff564f.html#af000c36764e2ed95019c3203fbff564f">Terraria.Player.PlaceThing_TryReplacingWalls()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

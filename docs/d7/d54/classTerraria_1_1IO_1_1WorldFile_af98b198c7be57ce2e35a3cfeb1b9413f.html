@@ -117,6 +117,51 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_af98b198c7be57
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  891</span>    {</div>
+<div class="line"><span class="lineno">  892</span>        <span class="keywordflow">if</span> (Main.WorldRollingBackupsCountToKeep &lt;= 1)</div>
+<div class="line"><span class="lineno">  893</span>        {</div>
+<div class="line"><span class="lineno">  894</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  895</span>        }</div>
+<div class="line"><span class="lineno">  896</span>        <span class="keywordtype">int</span> num = Main.WorldRollingBackupsCountToKeep;</div>
+<div class="line"><span class="lineno">  897</span>        <span class="keywordflow">if</span> (num &gt; 9)</div>
+<div class="line"><span class="lineno">  898</span>        {</div>
+<div class="line"><span class="lineno">  899</span>            num = 9;</div>
+<div class="line"><span class="lineno">  900</span>        }</div>
+<div class="line"><span class="lineno">  901</span>        <span class="keywordtype">int</span> num2 = 1;</div>
+<div class="line"><span class="lineno">  902</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">  903</span>        {</div>
+<div class="line"><span class="lineno">  904</span>            <span class="keywordtype">string</span> path = backupWorldWritePath + i;</div>
+<div class="line"><span class="lineno">  905</span>            <span class="keywordflow">if</span> (i == 1)</div>
+<div class="line"><span class="lineno">  906</span>            {</div>
+<div class="line"><span class="lineno">  907</span>                path = backupWorldWritePath;</div>
+<div class="line"><span class="lineno">  908</span>            }</div>
+<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">FileUtilities</a>.<a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Exists</a>(path, cloud: false))</div>
+<div class="line"><span class="lineno">  910</span>            {</div>
+<div class="line"><span class="lineno">  911</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  912</span>            }</div>
+<div class="line"><span class="lineno">  913</span>            num2 = i + 1;</div>
+<div class="line"><span class="lineno">  914</span>        }</div>
+<div class="line"><span class="lineno">  915</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num3 = num2 - 1; num3 &gt; 0; num3--)</div>
+<div class="line"><span class="lineno">  916</span>        {</div>
+<div class="line"><span class="lineno">  917</span>            <span class="keywordtype">string</span> text = backupWorldWritePath + num3;</div>
+<div class="line"><span class="lineno">  918</span>            <span class="keywordflow">if</span> (num3 == 1)</div>
+<div class="line"><span class="lineno">  919</span>            {</div>
+<div class="line"><span class="lineno">  920</span>                text = backupWorldWritePath;</div>
+<div class="line"><span class="lineno">  921</span>            }</div>
+<div class="line"><span class="lineno">  922</span>            <span class="keywordtype">string</span> destination = backupWorldWritePath + (num3 + 1);</div>
+<div class="line"><span class="lineno">  923</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">FileUtilities</a>.<a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Exists</a>(text, cloud: false))</div>
+<div class="line"><span class="lineno">  924</span>            {</div>
+<div class="line"><span class="lineno">  925</span>                <a class="code hl_class" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">FileUtilities</a>.<a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a72d3962a26719fd5dc6d4a4a612098b4.html#a72d3962a26719fd5dc6d4a4a612098b4">Move</a>(text, destination, cloud: false, overwrite: true, forceDeleteSourceFile: true);</div>
+<div class="line"><span class="lineno">  926</span>            }</div>
+<div class="line"><span class="lineno">  927</span>        }</div>
+<div class="line"><span class="lineno">  928</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde_html_a1318d2df19d01621c5c09d6ba2201cde"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Terraria.Utilities.FileUtilities.Exists</a></div><div class="ttdeci">static bool Exists(string path, bool cloud)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_a72d3962a26719fd5dc6d4a4a612098b4_html_a72d3962a26719fd5dc6d4a4a612098b4"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a72d3962a26719fd5dc6d4a4a612098b4.html#a72d3962a26719fd5dc6d4a4a612098b4">Terraria.Utilities.FileUtilities.Move</a></div><div class="ttdeci">static void Move(string source, string destination, bool cloud, bool overwrite=true, bool forceDeleteSourceFile=false)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:75</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_html"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">Terraria.Utilities.FileUtilities</a></div><div class="ttdef"><b>Definition</b> FileUtilities.cs:11</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Terraria.Utilities.FileUtilities.Exists()</a>, <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a72d3962a26719fd5dc6d4a4a612098b4.html#a72d3962a26719fd5dc6d4a4a612098b4">Terraria.Utilities.FileUtilities.Move()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8f26d7cf6b3de585f4ac63dc3a58dbfb.html#a8f26d7cf6b3de585f4ac63dc3a58dbfb">Terraria.Main.WorldRollingBackupsCountToKeep</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6.html#a1a9b687a3ecf6612b83b6eced28238f6">Terraria.IO.WorldFile.InternalSaveWorld()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

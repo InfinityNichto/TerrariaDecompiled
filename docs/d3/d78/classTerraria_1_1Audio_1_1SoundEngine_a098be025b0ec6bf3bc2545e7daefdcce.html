@@ -117,6 +117,45 @@ $(function(){initNavTree('d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a098be025
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordtype">byte</span>[] buffer = <span class="keyword">new</span> <span class="keywordtype">byte</span>[166]</div>
+<div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            82, 73, 70, 70, 158, 0, 0, 0, 87, 65,</div>
+<div class="line"><span class="lineno">  181</span>            86, 69, 102, 109, 116, 32, 16, 0, 0, 0,</div>
+<div class="line"><span class="lineno">  182</span>            1, 0, 1, 0, 68, 172, 0, 0, 136, 88,</div>
+<div class="line"><span class="lineno">  183</span>            1, 0, 2, 0, 16, 0, 76, 73, 83, 84,</div>
+<div class="line"><span class="lineno">  184</span>            26, 0, 0, 0, 73, 78, 70, 79, 73, 83,</div>
+<div class="line"><span class="lineno">  185</span>            70, 84, 14, 0, 0, 0, 76, 97, 118, 102,</div>
+<div class="line"><span class="lineno">  186</span>            53, 54, 46, 52, 48, 46, 49, 48, 49, 0,</div>
+<div class="line"><span class="lineno">  187</span>            100, 97, 116, 97, 88, 0, 0, 0, 0, 0,</div>
+<div class="line"><span class="lineno">  188</span>            126, 4, 240, 8, 64, 13, 95, 17, 67, 21,</div>
+<div class="line"><span class="lineno">  189</span>            217, 24, 23, 28, 240, 30, 94, 33, 84, 35,</div>
+<div class="line"><span class="lineno">  190</span>            208, 36, 204, 37, 71, 38, 64, 38, 183, 37,</div>
+<div class="line"><span class="lineno">  191</span>            180, 36, 58, 35, 79, 33, 1, 31, 86, 28,</div>
+<div class="line"><span class="lineno">  192</span>            92, 25, 37, 22, 185, 18, 42, 15, 134, 11,</div>
+<div class="line"><span class="lineno">  193</span>            222, 7, 68, 4, 196, 0, 112, 253, 86, 250,</div>
+<div class="line"><span class="lineno">  194</span>            132, 247, 6, 245, 230, 242, 47, 241, 232, 239,</div>
+<div class="line"><span class="lineno">  195</span>            25, 239, 194, 238, 231, 238, 139, 239, 169, 240,</div>
+<div class="line"><span class="lineno">  196</span>            61, 242, 67, 244, 180, 246</div>
+<div class="line"><span class="lineno">  197</span>        };</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keyword">using </span>MemoryStream stream = <span class="keyword">new</span> MemoryStream(buffer);</div>
+<div class="line"><span class="lineno">  201</span>            SoundEffect.FromStream(stream);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">catch</span> (NoAudioHardwareException)</div>
+<div class="line"><span class="lineno">  204</span>        {</div>
+<div class="line"><span class="lineno">  205</span>            Console.WriteLine(<span class="stringliteral">&quot;No audio hardware found. Disabling all audio.&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  209</span>        {</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a20e71ac13e78865f7d66bbd66d47af3a.html#a20e71ac13e78865f7d66bbd66d47af3a">Terraria.Audio.SoundEngine.Initialize()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

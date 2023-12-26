@@ -119,6 +119,38 @@ $(function(){initNavTree('df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_aa34c08
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d4/ddf/interfaceTerraria_1_1UI_1_1INetDiagnosticsUI_ab580bcfc7dc62058566647ed0755a094.html#ab580bcfc7dc62058566647ed0755a094">Terraria.UI.INetDiagnosticsUI</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordtype">int</span> num = _counterByMessageId.Length + <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a5e2804dd912227a25ce986f81a168f9b.html#a5e2804dd912227a25ce986f81a168f9b">_counterByModuleId</a>.Count;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= num / 51; i++)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            Utils.DrawInvBG(spriteBatch, 190 + 400 * i, 110, 390, 683);</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        Vector2 position = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_adf41cf9615634a4af4ab3bef22ef9a37.html#adf41cf9615634a4af4ab3bef22ef9a37">_counterByMessageId</a>.Length; j++)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">int</span> num2 = j / 51;</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordtype">int</span> num3 = j - num2 * 51;</div>
+<div class="line"><span class="lineno">  100</span>            position.X = 200 + num2 * 400;</div>
+<div class="line"><span class="lineno">  101</span>            position.Y = 120 + num3 * 13;</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d1c0db6e470679737048bfb8312.html#a6e6a7d1c0db6e470679737048bfb8312">DrawCounter</a>(spriteBatch, ref <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_adf41cf9615634a4af4ab3bef22ef9a37.html#adf41cf9615634a4af4ab3bef22ef9a37">_counterByMessageId</a>[j], j.ToString(), position);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">int</span> num4 = _counterByMessageId.Length + 1;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;int, CounterForMessage&gt; item <span class="keywordflow">in</span> <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a5e2804dd912227a25ce986f81a168f9b.html#a5e2804dd912227a25ce986f81a168f9b">_counterByModuleId</a>)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordtype">int</span> num5 = num4 / 51;</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">int</span> num6 = num4 - num5 * 51;</div>
+<div class="line"><span class="lineno">  109</span>            position.X = 200 + num5 * 400;</div>
+<div class="line"><span class="lineno">  110</span>            position.Y = 120 + num6 * 13;</div>
+<div class="line"><span class="lineno">  111</span>            CounterForMessage counter = item.Value;</div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d1c0db6e470679737048bfb8312.html#a6e6a7d1c0db6e470679737048bfb8312">DrawCounter</a>(spriteBatch, ref counter, <span class="stringliteral">&quot;..&quot;</span> + item.Key, position);</div>
+<div class="line"><span class="lineno">  113</span>            num4++;</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_a5e2804dd912227a25ce986f81a168f9b_html_a5e2804dd912227a25ce986f81a168f9b"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a5e2804dd912227a25ce986f81a168f9b.html#a5e2804dd912227a25ce986f81a168f9b">Terraria.UI.NetDiagnosticsUI._counterByModuleId</a></div><div class="ttdeci">Dictionary&lt; int, CounterForMessage &gt; _counterByModuleId</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:47</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d1c0db6e470679737048bfb8312_html_a6e6a7d1c0db6e470679737048bfb8312"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d1c0db6e470679737048bfb8312.html#a6e6a7d1c0db6e470679737048bfb8312">Terraria.UI.NetDiagnosticsUI.DrawCounter</a></div><div class="ttdeci">void DrawCounter(SpriteBatch spriteBatch, ref CounterForMessage counter, string title, Vector2 position)</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:117</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_adf41cf9615634a4af4ab3bef22ef9a37_html_adf41cf9615634a4af4ab3bef22ef9a37"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_adf41cf9615634a4af4ab3bef22ef9a37.html#adf41cf9615634a4af4ab3bef22ef9a37">Terraria.UI.NetDiagnosticsUI._counterByMessageId</a></div><div class="ttdeci">CounterForMessage[] _counterByMessageId</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:45</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_adf41cf9615634a4af4ab3bef22ef9a37.html#adf41cf9615634a4af4ab3bef22ef9a37">Terraria.UI.NetDiagnosticsUI._counterByMessageId</a>, <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a5e2804dd912227a25ce986f81a168f9b.html#a5e2804dd912227a25ce986f81a168f9b">Terraria.UI.NetDiagnosticsUI._counterByModuleId</a>, <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d1c0db6e470679737048bfb8312.html#a6e6a7d1c0db6e470679737048bfb8312">Terraria.UI.NetDiagnosticsUI.DrawCounter()</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a372f6b5953108fbefa822b7e927344b9.html#a372f6b5953108fbefa822b7e927344b9">Terraria.Utils.DrawInvBG()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

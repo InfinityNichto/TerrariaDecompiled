@@ -117,6 +117,57 @@ $(function(){initNavTree('db/dec/classTerraria_1_1UI_1_1ItemSorting_a33b32cf9ff2
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1174</span>    {</div>
+<div class="line"><span class="lineno"> 1175</span>        <span class="keywordtype">int</span> chest = Main.player[Main.myPlayer].chest;</div>
+<div class="line"><span class="lineno"> 1176</span>        <span class="keywordflow">if</span> (chest == -1)</div>
+<div class="line"><span class="lineno"> 1177</span>        {</div>
+<div class="line"><span class="lineno"> 1178</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1179</span>        }</div>
+<div class="line"><span class="lineno"> 1180</span>        Item[] item = Main.player[Main.myPlayer].bank.item;</div>
+<div class="line"><span class="lineno"> 1181</span>        <span class="keywordflow">if</span> (chest == -3)</div>
+<div class="line"><span class="lineno"> 1182</span>        {</div>
+<div class="line"><span class="lineno"> 1183</span>            item = Main.player[Main.myPlayer].bank2.item;</div>
+<div class="line"><span class="lineno"> 1184</span>        }</div>
+<div class="line"><span class="lineno"> 1185</span>        <span class="keywordflow">if</span> (chest == -4)</div>
+<div class="line"><span class="lineno"> 1186</span>        {</div>
+<div class="line"><span class="lineno"> 1187</span>            item = Main.player[Main.myPlayer].bank3.item;</div>
+<div class="line"><span class="lineno"> 1188</span>        }</div>
+<div class="line"><span class="lineno"> 1189</span>        <span class="keywordflow">if</span> (chest == -5)</div>
+<div class="line"><span class="lineno"> 1190</span>        {</div>
+<div class="line"><span class="lineno"> 1191</span>            item = Main.player[Main.myPlayer].bank4.item;</div>
+<div class="line"><span class="lineno"> 1192</span>        }</div>
+<div class="line"><span class="lineno"> 1193</span>        <span class="keywordflow">if</span> (chest &gt; -1)</div>
+<div class="line"><span class="lineno"> 1194</span>        {</div>
+<div class="line"><span class="lineno"> 1195</span>            item = Main.chest[chest].item;</div>
+<div class="line"><span class="lineno"> 1196</span>        }</div>
+<div class="line"><span class="lineno"> 1197</span>        Tuple&lt;int, int, int&gt;[] array = <span class="keyword">new</span> Tuple&lt;int, int, int&gt;[40];</div>
+<div class="line"><span class="lineno"> 1198</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 40; i++)</div>
+<div class="line"><span class="lineno"> 1199</span>        {</div>
+<div class="line"><span class="lineno"> 1200</span>            array[i] = Tuple.Create(item[i].netID, item[i].stack, (<span class="keywordtype">int</span>)item[i].prefix);</div>
+<div class="line"><span class="lineno"> 1201</span>        }</div>
+<div class="line"><span class="lineno"> 1202</span>        <a class="code hl_function" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_a5eedefb070049a8f5a78de41f1d34403.html#a5eedefb070049a8f5a78de41f1d34403">Sort</a>(item);</div>
+<div class="line"><span class="lineno"> 1203</span>        Tuple&lt;int, int, int&gt;[] array2 = <span class="keyword">new</span> Tuple&lt;int, int, int&gt;[40];</div>
+<div class="line"><span class="lineno"> 1204</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 40; j++)</div>
+<div class="line"><span class="lineno"> 1205</span>        {</div>
+<div class="line"><span class="lineno"> 1206</span>            array2[j] = Tuple.Create(item[j].netID, item[j].stack, (<span class="keywordtype">int</span>)item[j].prefix);</div>
+<div class="line"><span class="lineno"> 1207</span>        }</div>
+<div class="line"><span class="lineno"> 1208</span>        <span class="keywordflow">if</span> (Main.netMode != 1 || Main.player[Main.myPlayer].chest &lt;= -1)</div>
+<div class="line"><span class="lineno"> 1209</span>        {</div>
+<div class="line"><span class="lineno"> 1210</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1211</span>        }</div>
+<div class="line"><span class="lineno"> 1212</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 40; k++)</div>
+<div class="line"><span class="lineno"> 1213</span>        {</div>
+<div class="line"><span class="lineno"> 1214</span>            <span class="keywordflow">if</span> (array2[k] != array[k])</div>
+<div class="line"><span class="lineno"> 1215</span>            {</div>
+<div class="line"><span class="lineno"> 1216</span>                NetMessage.SendData(32, -1, -1, <span class="keyword">null</span>, Main.player[Main.myPlayer].chest, k);</div>
+<div class="line"><span class="lineno"> 1217</span>            }</div>
+<div class="line"><span class="lineno"> 1218</span>        }</div>
+<div class="line"><span class="lineno"> 1219</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSorting_a5eedefb070049a8f5a78de41f1d34403_html_a5eedefb070049a8f5a78de41f1d34403"><div class="ttname"><a href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_a5eedefb070049a8f5a78de41f1d34403.html#a5eedefb070049a8f5a78de41f1d34403">Terraria.UI.ItemSorting.Sort</a></div><div class="ttdeci">static void Sort(Item[] inv, params int[] ignoreSlots)</div><div class="ttdef"><b>Definition</b> ItemSorting.cs:1060</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac53471b8b8122770b7cebb10630b8c46.html#ac53471b8b8122770b7cebb10630b8c46">Terraria.Player.bank</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3533c2a2ae559dcad993dbf2c74d820e.html#a3533c2a2ae559dcad993dbf2c74d820e">Terraria.Player.bank2</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af02c4a2c5eb8a42636534b0b412d12e5.html#af02c4a2c5eb8a42636534b0b412d12e5">Terraria.Player.bank3</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">Terraria.Player.bank4</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, and <a class="el" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_a5eedefb070049a8f5a78de41f1d34403.html#a5eedefb070049a8f5a78de41f1d34403">Terraria.UI.ItemSorting.Sort()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/dd3/classTerraria_1_1UI_1_1ChestUI_a8bf2eff440d946a95977889b34ff8b91.html#a8bf2eff440d946a95977889b34ff8b91">Terraria.UI.ChestUI.DrawButton()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

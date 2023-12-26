@@ -136,6 +136,47 @@ $(function(){initNavTree('d5/de1/classTerraria_1_1StrayMethods_ae859881ff7cd6115
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(i, j, 2))</div>
+<div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">int</span> num3 = i - 1;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">while</span> (num &lt; spreadInEachAxis &amp;&amp; num3 &gt; 0)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[num3, j];</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (tile.active() &amp;&amp; fittingTypes[tile.type] &amp;&amp; !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTileAllowBottomSlope(num3, j - 1))</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                num++;</div>
+<div class="line"><span class="lineno">   23</span>            }</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!tile.active())</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            num3--;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        num3 = i + 1;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">while</span> (num2 &lt; spreadInEachAxis &amp;&amp; num3 &lt; Main.maxTilesX - 1)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[num3, j];</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (tile2.active() &amp;&amp; fittingTypes[tile2.type] &amp;&amp; !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTileAllowBottomSlope(num3, j - 1))</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                num2++;</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!tile2.active())</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            num3++;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> num + num2 + 1 &gt;= requiredTotalSpread;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ad1c2f353c07cf0e04047d4cc8df68d09.html#ad1c2f353c07cf0e04047d4cc8df68d09">Terraria.WorldGen.SolidTileAllowBottomSlope()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

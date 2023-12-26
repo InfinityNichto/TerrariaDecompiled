@@ -117,6 +117,39 @@ $(function(){initNavTree('d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1Bes
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  675</span>    {</div>
+<div class="line"><span class="lineno">  676</span>        <span class="keywordflow">if</span> (entry.Info.Any((IBestiaryInfoElement x) =&gt; x is FlavorTextBestiaryInfoElement))</div>
+<div class="line"><span class="lineno">  677</span>        {</div>
+<div class="line"><span class="lineno">  678</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  679</span>        }</div>
+<div class="line"><span class="lineno">  680</span>        SpawnConditionBestiaryInfoElement spawnConditionBestiaryInfoElement = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  681</span>        <span class="keywordtype">int</span>? num = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">foreach</span> (IBestiaryInfoElement item <span class="keywordflow">in</span> entry.Info)</div>
+<div class="line"><span class="lineno">  683</span>        {</div>
+<div class="line"><span class="lineno">  684</span>            <span class="keywordflow">if</span> (item is BestiaryPortraitBackgroundProviderPreferenceInfoElement bestiaryPortraitBackgroundProviderPreferenceInfoElement &amp;&amp; bestiaryPortraitBackgroundProviderPreferenceInfoElement.GetPreferredProvider() is SpawnConditionBestiaryInfoElement spawnConditionBestiaryInfoElement2)</div>
+<div class="line"><span class="lineno">  685</span>            {</div>
+<div class="line"><span class="lineno">  686</span>                spawnConditionBestiaryInfoElement = spawnConditionBestiaryInfoElement2;</div>
+<div class="line"><span class="lineno">  687</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  688</span>            }</div>
+<div class="line"><span class="lineno">  689</span>            <span class="keywordflow">if</span> (item is SpawnConditionBestiaryInfoElement { DisplayTextPriority: var displayTextPriority } spawnConditionBestiaryInfoElement3 &amp;&amp; (!num.HasValue || displayTextPriority &gt;= num))</div>
+<div class="line"><span class="lineno">  690</span>            {</div>
+<div class="line"><span class="lineno">  691</span>                spawnConditionBestiaryInfoElement = spawnConditionBestiaryInfoElement3;</div>
+<div class="line"><span class="lineno">  692</span>                num = displayTextPriority;</div>
+<div class="line"><span class="lineno">  693</span>            }</div>
+<div class="line"><span class="lineno">  694</span>        }</div>
+<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">if</span> (spawnConditionBestiaryInfoElement != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  696</span>        {</div>
+<div class="line"><span class="lineno">  697</span>            <span class="keywordtype">string</span> displayNameKey = spawnConditionBestiaryInfoElement.GetDisplayNameKey();</div>
+<div class="line"><span class="lineno">  698</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;Bestiary_BiomeText.biome_&quot;</span>;</div>
+<div class="line"><span class="lineno">  699</span>            <span class="keywordtype">string</span> text2 = displayNameKey.Substring(displayNameKey.IndexOf(<span class="charliteral">&#39;.&#39;</span>) + 1);</div>
+<div class="line"><span class="lineno">  700</span>            text += text2;</div>
+<div class="line"><span class="lineno">  701</span>            entry.Info.Add(<span class="keyword">new</span> FlavorTextBestiaryInfoElement(text));</div>
+<div class="line"><span class="lineno">  702</span>        }</div>
+<div class="line"><span class="lineno">  703</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/daa/classTerraria_1_1GameContent_1_1Bestiary_1_1FilterProviderInfoElement_a0faf5712e7c004072ba60b955ce39738.html#a0faf5712e7c004072ba60b955ce39738">Terraria.GameContent.Bestiary.FilterProviderInfoElement.GetDisplayNameKey()</a>, <a class="el" href="../../dd/d73/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryPortraitBackgroundProviderPreferenceInfoElement_a4465b0412ddc89663f139207e96ab112.html#a4465b0412ddc89663f139207e96ab112">Terraria.GameContent.Bestiary.BestiaryPortraitBackgroundProviderPreferenceInfoElement.GetPreferredProvider()</a>, and <a class="el" href="../../d4/d9f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryEntry_ad047506b8dd19f554f9bf29ce255c191.html#ad047506b8dd19f554f9bf29ce255c191">Terraria.GameContent.Bestiary.BestiaryEntry.Info</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d1f/classTerraria_1_1GameContent_1_1Bestiary_1_1BestiaryDatabaseNPCsPopulator_ab16b78d8cb52df9c1811237900cef100.html#ab16b78d8cb52df9c1811237900cef100">Terraria.GameContent.Bestiary.BestiaryDatabaseNPCsPopulator.ModifyEntriesThatNeedIt()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -114,6 +114,61 @@ $(function(){initNavTree('d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a381
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> aimedTarget = <a class="code hl_property" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a69f38e63dd81c0a05c92adbbab2d6346.html#a69f38e63dd81c0a05c92adbbab2d6346">AimedTarget</a>;</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (aimedTarget == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            Vector2 vector = aimedTarget.<a class="code hl_property" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Center</a>;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.GetNPCLocation(<a class="code hl_variable" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a9bfbb4d8e207967ef5c78f4c2dddfa92.html#a9bfbb4d8e207967ef5c78f4c2dddfa92">_targets</a>[<a class="code hl_variable" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a38db46dadc5901876a5558ff01868ec3.html#a38db46dadc5901876a5558ff01868ec3">_pickedTarget</a>], seekHead: true, averageDirection: false, out var index, out var pos))</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                vector = pos;</div>
+<div class="line"><span class="lineno">   70</span>                vector += Main.npc[index].Distance(Main.player[Main.myPlayer].Center) / 2000f * Main.npc[index].velocity * 45f;</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[Main.myPlayer];</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">int</span> num = <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_ab879953b8e25efa03afe0b70b7bd2f24.html#ab879953b8e25efa03afe0b70b7bd2f24">LockOnAimAbove</a>[player.inventory[player.selectedItem].type];</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">while</span> (num &gt; 0 &amp;&amp; vector.Y &gt; 100f)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                Point point = vector.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">   77</span>                point.Y -= 4;</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(point.X, point.Y, 10) || <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(point.X, point.Y))</div>
+<div class="line"><span class="lineno">   79</span>                {</div>
+<div class="line"><span class="lineno">   80</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   81</span>                }</div>
+<div class="line"><span class="lineno">   82</span>                vector.Y -= 16f;</div>
+<div class="line"><span class="lineno">   83</span>                num--;</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordtype">float</span>? num2 = <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_a2db801eb800cb5d823b3312c7eda98b6.html#a2db801eb800cb5d823b3312c7eda98b6">LockOnAimCompensation</a>[player.inventory[player.selectedItem].type];</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (num2.HasValue)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                vector.Y -= aimedTarget.height / 2;</div>
+<div class="line"><span class="lineno">   89</span>                Vector2 v = vector - player.Center;</div>
+<div class="line"><span class="lineno">   90</span>                Vector2 vector2 = v.SafeNormalize(Vector2.Zero);</div>
+<div class="line"><span class="lineno">   91</span>                vector2.Y -= 1f;</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordtype">float</span> num3 = v.Length();</div>
+<div class="line"><span class="lineno">   93</span>                num3 = (float)Math.Pow(num3 / 700f, 2.0) * 700f;</div>
+<div class="line"><span class="lineno">   94</span>                vector.Y += vector2.Y * num3 * num2.Value * 1f;</div>
+<div class="line"><span class="lineno">   95</span>                vector.X += (0f - vector2.X) * num3 * num2.Value * 1f;</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> vector;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee_html_a5a1abea808fad014ce7ec4b8a9f566ee"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a></div><div class="ttdeci">Vector2 Center</div><div class="ttdef"><b>Definition</b> Entity.cs:43</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1LockOnHelper_a38db46dadc5901876a5558ff01868ec3_html_a38db46dadc5901876a5558ff01868ec3"><div class="ttname"><a href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a38db46dadc5901876a5558ff01868ec3.html#a38db46dadc5901876a5558ff01868ec3">Terraria.GameInput.LockOnHelper._pickedTarget</a></div><div class="ttdeci">static int _pickedTarget</div><div class="ttdef"><b>Definition</b> LockOnHelper.cs:31</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1LockOnHelper_a69f38e63dd81c0a05c92adbbab2d6346_html_a69f38e63dd81c0a05c92adbbab2d6346"><div class="ttname"><a href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a69f38e63dd81c0a05c92adbbab2d6346.html#a69f38e63dd81c0a05c92adbbab2d6346">Terraria.GameInput.LockOnHelper.AimedTarget</a></div><div class="ttdeci">static NPC AimedTarget</div><div class="ttdef"><b>Definition</b> LockOnHelper.cs:46</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1LockOnHelper_a9bfbb4d8e207967ef5c78f4c2dddfa92_html_a9bfbb4d8e207967ef5c78f4c2dddfa92"><div class="ttname"><a href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a9bfbb4d8e207967ef5c78f4c2dddfa92.html#a9bfbb4d8e207967ef5c78f4c2dddfa92">Terraria.GameInput.LockOnHelper._targets</a></div><div class="ttdeci">static List&lt; int &gt; _targets</div><div class="ttdef"><b>Definition</b> LockOnHelper.cs:29</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_a2db801eb800cb5d823b3312c7eda98b6_html_a2db801eb800cb5d823b3312c7eda98b6"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_a2db801eb800cb5d823b3312c7eda98b6.html#a2db801eb800cb5d823b3312c7eda98b6">Terraria.ID.ItemID.Sets.LockOnAimCompensation</a></div><div class="ttdeci">static ? float[] LockOnAimCompensation</div><div class="ttdef"><b>Definition</b> ItemID.cs:1094</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_ab879953b8e25efa03afe0b70b7bd2f24_html_ab879953b8e25efa03afe0b70b7bd2f24"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_ab879953b8e25efa03afe0b70b7bd2f24.html#ab879953b8e25efa03afe0b70b7bd2f24">Terraria.ID.ItemID.Sets.LockOnAimAbove</a></div><div class="ttdeci">static int[] LockOnAimAbove</div><div class="ttdef"><b>Definition</b> ItemID.cs:1092</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_html"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Terraria.ID.ItemID.Sets</a></div><div class="ttdef"><b>Definition</b> ItemID.cs:46</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_html"><div class="ttname"><a href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">Terraria.ID.ItemID</a></div><div class="ttdef"><b>Definition</b> ItemID.cs:9</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_a7ecdae1126a2063997713632b7cb6f0e.html#a7ecdae1126a2063997713632b7cb6f0e">Terraria.GameInput.LockOnHelper.SetUP()</a>, and <a class="el" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_ab9ededd65313964f5095e9fd851c429f.html#ab9ededd65313964f5095e9fd851c429f">Terraria.GameInput.LockOnHelper.Update()</a>.</p>
 
 </div>
 </div>

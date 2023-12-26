@@ -121,6 +121,59 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ab305a3343da1fae841c15f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">39679</span>    {</div>
+<div class="line"><span class="lineno">39680</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">39681</span>        <span class="keywordtype">int</span> num2 = Main.tile[x, y].frameX / 72;</div>
+<div class="line"><span class="lineno">39682</span>        <span class="keywordtype">int</span> type = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">type</a>;</div>
+<div class="line"><span class="lineno">39683</span>        <span class="keywordflow">if</span> (num2 == 0 &amp;&amp; type == 929)</div>
+<div class="line"><span class="lineno">39684</span>        {</div>
+<div class="line"><span class="lineno">39685</span>            num = 1;</div>
+<div class="line"><span class="lineno">39686</span>        }</div>
+<div class="line"><span class="lineno">39687</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 == 1 &amp;&amp; type == 1338)</div>
+<div class="line"><span class="lineno">39688</span>        {</div>
+<div class="line"><span class="lineno">39689</span>            num = 2;</div>
+<div class="line"><span class="lineno">39690</span>        }</div>
+<div class="line"><span class="lineno">39691</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 == 2 &amp;&amp; type == 1345)</div>
+<div class="line"><span class="lineno">39692</span>        {</div>
+<div class="line"><span class="lineno">39693</span>            num = 3;</div>
+<div class="line"><span class="lineno">39694</span>        }</div>
+<div class="line"><span class="lineno">39695</span>        <span class="keywordflow">if</span> (num &lt;= 0 || (num == 2 &amp;&amp; !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.BunnyCannonCanFire()))</div>
+<div class="line"><span class="lineno">39696</span>        {</div>
+<div class="line"><span class="lineno">39697</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">39698</span>        }</div>
+<div class="line"><span class="lineno">39699</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9.html#a1b65e86d9d18f3aa495dc133477eeab9">cursorItemIconEnabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">39700</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d4/d03/classTerraria_1_1Player_a3b65cb6b932668ee46f1469daf084706.html#a3b65cb6b932668ee46f1469daf084706">ItemTimeIsZero</a> &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a3675a3b394737c4a9b94014587f53d24.html#a3675a3b394737c4a9b94014587f53d24">itemAnimation</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_af19266ba3eef2bfd29b1b07856af4a5b.html#af19266ba3eef2bfd29b1b07856af4a5b">controlUseItem</a>)</div>
+<div class="line"><span class="lineno">39701</span>        {</div>
+<div class="line"><span class="lineno">39702</span>            <span class="keywordtype">int</span> num3 = Main.tile[x, y].frameX / 18;</div>
+<div class="line"><span class="lineno">39703</span>            <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">39704</span>            <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno">39705</span>            <span class="keywordflow">while</span> (num3 &gt;= 4)</div>
+<div class="line"><span class="lineno">39706</span>            {</div>
+<div class="line"><span class="lineno">39707</span>                num4++;</div>
+<div class="line"><span class="lineno">39708</span>                num3 -= 4;</div>
+<div class="line"><span class="lineno">39709</span>            }</div>
+<div class="line"><span class="lineno">39710</span>            num3 = x - num3;</div>
+<div class="line"><span class="lineno">39711</span>            <span class="keywordtype">int</span> num6;</div>
+<div class="line"><span class="lineno">39712</span>            <span class="keywordflow">for</span> (num6 = Main.tile[x, y].frameY / 18; num6 &gt;= 3; num6 -= 3)</div>
+<div class="line"><span class="lineno">39713</span>            {</div>
+<div class="line"><span class="lineno">39714</span>                num5++;</div>
+<div class="line"><span class="lineno">39715</span>            }</div>
+<div class="line"><span class="lineno">39716</span>            num6 = y - num6;</div>
+<div class="line"><span class="lineno">39717</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">ApplyItemTime</a>(<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>]);</div>
+<div class="line"><span class="lineno">39718</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.ShootFromCannon(num3, num6, num5, num, <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">selectedItem</a>].damage, 8f, Main.myPlayer, fromWire: false);</div>
+<div class="line"><span class="lineno">39719</span>        }</div>
+<div class="line"><span class="lineno">39720</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a_html_af899f98d7e57032a26aada65e7e0168a"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition</b> Item.cs:133</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f_html_a0993c28ec8e5b953c332d1254629457f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a0993c28ec8e5b953c332d1254629457f.html#a0993c28ec8e5b953c332d1254629457f">Terraria.Player.ApplyItemTime</a></div><div class="ttdeci">void ApplyItemTime(Item sItem)</div><div class="ttdef"><b>Definition</b> Player.cs:3752</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9_html_a1b65e86d9d18f3aa495dc133477eeab9"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9.html#a1b65e86d9d18f3aa495dc133477eeab9">Terraria.Player.cursorItemIconEnabled</a></div><div class="ttdeci">bool cursorItemIconEnabled</div><div class="ttdef"><b>Definition</b> Player.cs:1489</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2_html_a358ec34bd7ae567bcaca8799114ea0b2"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">Terraria.Player.selectedItem</a></div><div class="ttdeci">int selectedItem</div><div class="ttdef"><b>Definition</b> Player.cs:1145</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3675a3b394737c4a9b94014587f53d24_html_a3675a3b394737c4a9b94014587f53d24"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3675a3b394737c4a9b94014587f53d24.html#a3675a3b394737c4a9b94014587f53d24">Terraria.Player.itemAnimation</a></div><div class="ttdeci">int itemAnimation</div><div class="ttdef"><b>Definition</b> Player.cs:2565</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a3b65cb6b932668ee46f1469daf084706_html_a3b65cb6b932668ee46f1469daf084706"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a3b65cb6b932668ee46f1469daf084706.html#a3b65cb6b932668ee46f1469daf084706">Terraria.Player.ItemTimeIsZero</a></div><div class="ttdeci">bool ItemTimeIsZero</div><div class="ttdef"><b>Definition</b> Player.cs:3525</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_af19266ba3eef2bfd29b1b07856af4a5b_html_af19266ba3eef2bfd29b1b07856af4a5b"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_af19266ba3eef2bfd29b1b07856af4a5b.html#af19266ba3eef2bfd29b1b07856af4a5b">Terraria.Player.controlUseItem</a></div><div class="ttdeci">bool controlUseItem</div><div class="ttdef"><b>Definition</b> Player.cs:1391</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aba1c1584d4fb857e16f27519b0c32eee.html#aba1c1584d4fb857e16f27519b0c32eee">Terraria.WorldGen.BunnyCannonCanFire()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adff9cc855619f84c8f7a321037220f13.html#adff9cc855619f84c8f7a321037220f13">Terraria.WorldGen.ShootFromCannon()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

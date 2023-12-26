@@ -123,6 +123,38 @@ $(function(){initNavTree('db/d4d/classTerraria_1_1GameContent_1_1DoorOpeningHelp
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../da/d30/interfaceTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1DoorAutoHandler_a614cef516426155a93122246318f5746.html#a614cef516426155a93122246318f5746">Terraria.GameContent.DoorOpeningHelper.DoorAutoHandler</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>        {</div>
+<div class="line"><span class="lineno">  158</span>            Point tileCoordsForToggling = doorInfo.tileCoordsForToggling;</div>
+<div class="line"><span class="lineno">  159</span>            Rectangle rectangle = <span class="keyword">new</span> Rectangle(doorInfo.tileCoordsForToggling.X * 16, doorInfo.tileCoordsForToggling.Y * 16, 16, 80);</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">switch</span> (playerInfo.playerGravityDirection)</div>
+<div class="line"><span class="lineno">  161</span>            {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  163</span>                rectangle.Height += 16;</div>
+<div class="line"><span class="lineno">  164</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">case</span> -1:</div>
+<div class="line"><span class="lineno">  166</span>                rectangle.Y -= 16;</div>
+<div class="line"><span class="lineno">  167</span>                rectangle.Height += 16;</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (!rectangle.Intersects(playerInfo.hitboxToOpenDoor))</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  173</span>            }</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (playerInfo.hitboxToOpenDoor.Top &lt; rectangle.Top || playerInfo.hitboxToOpenDoor.Bottom &gt; rectangle.Bottom)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.ShiftTallGate(tileCoordsForToggling.X, tileCoordsForToggling.Y, flag))</div>
+<div class="line"><span class="lineno">  180</span>            {</div>
+<div class="line"><span class="lineno">  181</span>                NetMessage.SendData(19, -1, -1, <span class="keyword">null</span>, 4 + flag.ToInt(), tileCoordsForToggling.X, tileCoordsForToggling.Y);</div>
+<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/deb/structTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1PlayerInfoForOpeningDoors_a3822a9e6497ae253685e0cc58131d124.html#a3822a9e6497ae253685e0cc58131d124">Terraria.GameContent.DoorOpeningHelper.PlayerInfoForOpeningDoors.hitboxToOpenDoor</a>, <a class="el" href="../../d1/deb/structTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1PlayerInfoForOpeningDoors_aa45d50ab72239e55bb45a4d7d404bc78.html#aa45d50ab72239e55bb45a4d7d404bc78">Terraria.GameContent.DoorOpeningHelper.PlayerInfoForOpeningDoors.playerGravityDirection</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a5ab070cf275c25950543397ae9e0576c.html#a5ab070cf275c25950543397ae9e0576c">Terraria.WorldGen.ShiftTallGate()</a>, and <a class="el" href="../../d2/d3c/structTerraria_1_1GameContent_1_1DoorOpeningHelper_1_1DoorOpenCloseTogglingInfo_a1792a046d46922c7ba73e450d5f0923b.html#a1792a046d46922c7ba73e450d5f0923b">Terraria.GameContent.DoorOpeningHelper.DoorOpenCloseTogglingInfo.tileCoordsForToggling</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,33 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ae7c0adfd3c6e53e7abea3e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">44434</span>    {</div>
+<div class="line"><span class="lineno">44435</span>        npcTargetIndex = 0;</div>
+<div class="line"><span class="lineno">44436</span>        <span class="keywordtype">int</span>? num = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">44437</span>        <span class="keywordtype">float</span> num2 = maxDistance;</div>
+<div class="line"><span class="lineno">44438</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">44439</span>        {</div>
+<div class="line"><span class="lineno">44440</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[i];</div>
+<div class="line"><span class="lineno">44441</span>            <span class="keywordflow">if</span> (nPC.CanBeChasedBy(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">44442</span>            {</div>
+<div class="line"><span class="lineno">44443</span>                <span class="keywordtype">float</span> num3 = searchCenter.Distance(nPC.Center);</div>
+<div class="line"><span class="lineno">44444</span>                <span class="keywordflow">if</span> (!(num2 &lt;= num3))</div>
+<div class="line"><span class="lineno">44445</span>                {</div>
+<div class="line"><span class="lineno">44446</span>                    num = i;</div>
+<div class="line"><span class="lineno">44447</span>                    num2 = num3;</div>
+<div class="line"><span class="lineno">44448</span>                }</div>
+<div class="line"><span class="lineno">44449</span>            }</div>
+<div class="line"><span class="lineno">44450</span>        }</div>
+<div class="line"><span class="lineno">44451</span>        <span class="keywordflow">if</span> (!num.HasValue)</div>
+<div class="line"><span class="lineno">44452</span>        {</div>
+<div class="line"><span class="lineno">44453</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">44454</span>        }</div>
+<div class="line"><span class="lineno">44455</span>        npcTargetIndex = num.Value;</div>
+<div class="line"><span class="lineno">44456</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">44457</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a88fb04cefeb3d121612538889bd56102.html#a88fb04cefeb3d121612538889bd56102">Terraria.NPC.CanBeChasedBy()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

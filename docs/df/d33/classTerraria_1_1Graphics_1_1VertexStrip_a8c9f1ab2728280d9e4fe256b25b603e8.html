@@ -146,6 +146,42 @@ $(function(){initNavTree('df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a8c9f1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">int</span> num = positions.Length;</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_accb8e092d781cacc6eb962fce7a78be1.html#accb8e092d781cacc6eb962fce7a78be1">_vertexAmountCurrentlyMaintained</a> = num * 2);</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_af9e1cea8f76235396c52efb5a5eb0a4a.html#af9e1cea8f76235396c52efb5a5eb0a4a">_vertices</a>.Length &lt; num2)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            Array.Resize(ref <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_af9e1cea8f76235396c52efb5a5eb0a4a.html#af9e1cea8f76235396c52efb5a5eb0a4a">_vertices</a>, num2);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> num3 = num;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (expectedVertexPairsAmount.HasValue)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            num3 = expectedVertexPairsAmount.Value;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (positions[i] == Vector2.Zero)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                num = i - 1;</div>
+<div class="line"><span class="lineno">   64</span>                <a class="code hl_variable" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_accb8e092d781cacc6eb962fce7a78be1.html#accb8e092d781cacc6eb962fce7a78be1">_vertexAmountCurrentlyMaintained</a> = num * 2;</div>
+<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            Vector2 pos = positions[i] + offsetForAllPositions;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordtype">float</span> rot = MathHelper.WrapAngle(rotations[i]);</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordtype">int</span> indexOnVertexArray = i * 2;</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">float</span> progressOnStrip = (float)i / (<span class="keywordtype">float</span>)(num3 - 1);</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_function" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a57d8f20821152ef49fcf6d5474375a9b.html#a57d8f20821152ef49fcf6d5474375a9b">AddVertex</a>(colorFunction, widthFunction, pos, rot, indexOnVertexArray, progressOnStrip);</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_aa155809ff8a8628eca90846d8669fda0.html#aa155809ff8a8628eca90846d8669fda0">PrepareIndices</a>(num, includeBacksides);</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_a57d8f20821152ef49fcf6d5474375a9b_html_a57d8f20821152ef49fcf6d5474375a9b"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a57d8f20821152ef49fcf6d5474375a9b.html#a57d8f20821152ef49fcf6d5474375a9b">Terraria.Graphics.VertexStrip.AddVertex</a></div><div class="ttdeci">void AddVertex(StripColorFunction colorFunction, StripHalfWidthFunction widthFunction, Vector2 pos, float rot, int indexOnVertexArray, float progressOnStrip)</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:157</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_aa155809ff8a8628eca90846d8669fda0_html_aa155809ff8a8628eca90846d8669fda0"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_aa155809ff8a8628eca90846d8669fda0.html#aa155809ff8a8628eca90846d8669fda0">Terraria.Graphics.VertexStrip.PrepareIndices</a></div><div class="ttdeci">void PrepareIndices(int vertexPaidsAdded, bool includeBacksides)</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:126</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_accb8e092d781cacc6eb962fce7a78be1_html_accb8e092d781cacc6eb962fce7a78be1"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_accb8e092d781cacc6eb962fce7a78be1.html#accb8e092d781cacc6eb962fce7a78be1">Terraria.Graphics.VertexStrip._vertexAmountCurrentlyMaintained</a></div><div class="ttdeci">int _vertexAmountCurrentlyMaintained</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:36</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1VertexStrip_af9e1cea8f76235396c52efb5a5eb0a4a_html_af9e1cea8f76235396c52efb5a5eb0a4a"><div class="ttname"><a href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_af9e1cea8f76235396c52efb5a5eb0a4a.html#af9e1cea8f76235396c52efb5a5eb0a4a">Terraria.Graphics.VertexStrip._vertices</a></div><div class="ttdeci">CustomVertexInfo[] _vertices</div><div class="ttdef"><b>Definition</b> VertexStrip.cs:34</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_accb8e092d781cacc6eb962fce7a78be1.html#accb8e092d781cacc6eb962fce7a78be1">Terraria.Graphics.VertexStrip._vertexAmountCurrentlyMaintained</a>, <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_af9e1cea8f76235396c52efb5a5eb0a4a.html#af9e1cea8f76235396c52efb5a5eb0a4a">Terraria.Graphics.VertexStrip._vertices</a>, <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_a57d8f20821152ef49fcf6d5474375a9b.html#a57d8f20821152ef49fcf6d5474375a9b">Terraria.Graphics.VertexStrip.AddVertex()</a>, and <a class="el" href="../../df/d33/classTerraria_1_1Graphics_1_1VertexStrip_aa155809ff8a8628eca90846d8669fda0.html#aa155809ff8a8628eca90846d8669fda0">Terraria.Graphics.VertexStrip.PrepareIndices()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d52/structTerraria_1_1Graphics_1_1EmpressBladeDrawer_afd30f6a6c03cf05c5898af03ab884c6b.html#afd30f6a6c03cf05c5898af03ab884c6b">Terraria.Graphics.EmpressBladeDrawer.Draw()</a>, and <a class="el" href="../../de/d15/structTerraria_1_1Graphics_1_1FinalFractalHelper_a9329d0e19a2df813c1beb67e54e93b55.html#a9329d0e19a2df813c1beb67e54e93b55">Terraria.Graphics.FinalFractalHelper.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,29 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a5665234e62f31e7ebb
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">42434</span>    {</div>
+<div class="line"><span class="lineno">42435</span>        Vector2 vector = <span class="keyword">new</span> Vector2(x * 16 + 8, y * 16 + 8);</div>
+<div class="line"><span class="lineno">42436</span>        <span class="keywordflow">if</span> (Main.rand.Next(4) != 0)</div>
+<div class="line"><span class="lineno">42437</span>        {</div>
+<div class="line"><span class="lineno">42438</span>            Gore gore = Gore.NewGoreDirect(vector, Vector2.Zero, Main.rand.Next(61, 64));</div>
+<div class="line"><span class="lineno">42439</span>            gore.velocity = Main.rand.NextVector2Circular(1.5f, 0.8f);</div>
+<div class="line"><span class="lineno">42440</span>            gore.velocity.X += 0.1f * (float)((gore.velocity.X &gt; 0f) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">42441</span>            gore.position = vector - <span class="keyword">new</span> Vector2(16f, 16f);</div>
+<div class="line"><span class="lineno">42442</span>            gore.alpha = 170;</div>
+<div class="line"><span class="lineno">42443</span>        }</div>
+<div class="line"><span class="lineno">42444</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><span class="lineno">42445</span>        {</div>
+<div class="line"><span class="lineno">42446</span>            <span class="keywordflow">if</span> (Main.rand.Next(8) == 0)</div>
+<div class="line"><span class="lineno">42447</span>            {</div>
+<div class="line"><span class="lineno">42448</span>                Dust.NewDustDirect(vector + <span class="keyword">new</span> Vector2(-8f), 16, 16, 31, 0f, 0f, 100, Color.Transparent).velocity *= 0.4f;</div>
+<div class="line"><span class="lineno">42449</span>            }</div>
+<div class="line"><span class="lineno">42450</span>            Dust dust = Dust.NewDustDirect(vector + <span class="keyword">new</span> Vector2(-8f), 16, 16, 27, 0f, 0f, 100, Color.Transparent, 1.7f);</div>
+<div class="line"><span class="lineno">42451</span>            dust.velocity *= 2f;</div>
+<div class="line"><span class="lineno">42452</span>            dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">42453</span>        }</div>
+<div class="line"><span class="lineno">42454</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a6f50d9725660d35b1ff1d942ebb75ce3.html#a6f50d9725660d35b1ff1d942ebb75ce3">Terraria.Gore.NewGoreDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_aed5c553a5864298010d0dfd099cd3f6d.html#aed5c553a5864298010d0dfd099cd3f6d">Terraria.Dust.velocity</a>, and <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a13d25f1e469cede1897f9f77cb3ffd13.html#a13d25f1e469cede1897f9f77cb3ffd13">Terraria.Gore.velocity</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

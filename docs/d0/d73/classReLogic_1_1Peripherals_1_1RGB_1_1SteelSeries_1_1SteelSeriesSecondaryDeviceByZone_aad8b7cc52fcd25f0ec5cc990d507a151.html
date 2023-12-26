@@ -123,6 +123,32 @@ $(function(){initNavTree('d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeri
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d8/d60/interfaceReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1IGameSenseDevice_aafbb520f194187b9254f14e698b77665.html#aafbb520f194187b9254f14e698b77665">ReLogic.Peripherals.RGB.SteelSeries.IGameSenseDevice</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">foreach</span> (Bind_Event bind_Event <span class="keywordflow">in</span> bindEvents)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            AbstractHandler obj = bind_Event.handlers[0];</div>
+<div class="line"><span class="lineno">   59</span>            ContextColorEventHandlerType contextColorEventHandlerType = (ContextColorEventHandlerType)(<span class="keywordtype">object</span>)((obj is ContextColorEventHandlerType) ? obj : null);</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (contextColorEventHandlerType != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                AbstractIlluminationDevice_Zone deviceZone = contextColorEventHandlerType.DeviceZone;</div>
+<div class="line"><span class="lineno">   63</span>                RGBZonedDevice rGBZonedDevice = (RGBZonedDevice)(<span class="keywordtype">object</span>)((deviceZone is RGBZonedDevice) ? deviceZone : null);</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (rGBZonedDevice != <span class="keyword">null</span> &amp;&amp; !(((AbstractIlluminationDevice_StandardZone)rGBZonedDevice).zone != <a class="code hl_variable" href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aa9fc7cfabf1a7081c490134154db534c.html#aa9fc7cfabf1a7081c490134154db534c">_zoneTarget</a>))</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    ColorKey colorKey = <span class="keyword">new</span> ColorKey</div>
+<div class="line"><span class="lineno">   67</span>                    {</div>
+<div class="line"><span class="lineno">   68</span>                        EventName = bind_Event.eventName,</div>
+<div class="line"><span class="lineno">   69</span>                        TriggerName = contextColorEventHandlerType.ContextFrameKey</div>
+<div class="line"><span class="lineno">   70</span>                    };</div>
+<div class="line"><span class="lineno">   71</span>                    <a class="code hl_variable" href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_acd021247777cd6e436c0c4094cf0f6a9.html#acd021247777cd6e436c0c4094cf0f6a9">_colorKey</a> = colorKey;</div>
+<div class="line"><span class="lineno">   72</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   73</span>                }</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aa9fc7cfabf1a7081c490134154db534c_html_aa9fc7cfabf1a7081c490134154db534c"><div class="ttname"><a href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aa9fc7cfabf1a7081c490134154db534c.html#aa9fc7cfabf1a7081c490134154db534c">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesSecondaryDeviceByZone._zoneTarget</a></div><div class="ttdeci">string _zoneTarget</div><div class="ttdef"><b>Definition</b> SteelSeriesSecondaryDeviceByZone.cs:11</div></div>
+<div class="ttc" id="aclassReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_acd021247777cd6e436c0c4094cf0f6a9_html_acd021247777cd6e436c0c4094cf0f6a9"><div class="ttname"><a href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_acd021247777cd6e436c0c4094cf0f6a9.html#acd021247777cd6e436c0c4094cf0f6a9">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesSecondaryDeviceByZone._colorKey</a></div><div class="ttdeci">ColorKey _colorKey</div><div class="ttdef"><b>Definition</b> SteelSeriesSecondaryDeviceByZone.cs:17</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_acd021247777cd6e436c0c4094cf0f6a9.html#acd021247777cd6e436c0c4094cf0f6a9">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesSecondaryDeviceByZone._colorKey</a>, and <a class="el" href="../../d0/d73/classReLogic_1_1Peripherals_1_1RGB_1_1SteelSeries_1_1SteelSeriesSecondaryDeviceByZone_aa9fc7cfabf1a7081c490134154db534c.html#aa9fc7cfabf1a7081c490134154db534c">ReLogic.Peripherals.RGB.SteelSeries.SteelSeriesSecondaryDeviceByZone._zoneTarget</a>.</p>
 
 </div>
 </div>

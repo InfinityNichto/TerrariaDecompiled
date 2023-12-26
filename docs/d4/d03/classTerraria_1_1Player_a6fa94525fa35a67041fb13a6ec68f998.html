@@ -126,6 +126,74 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a6fa94525fa35a67041fb13
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">42453</span>    {</div>
+<div class="line"><span class="lineno">42454</span>        <span class="keywordtype">int</span> minX = itemRectangle.X / 16;</div>
+<div class="line"><span class="lineno">42455</span>        <span class="keywordtype">int</span> maxX = (itemRectangle.X + itemRectangle.Width) / 16 + 1;</div>
+<div class="line"><span class="lineno">42456</span>        <span class="keywordtype">int</span> minY = itemRectangle.Y / 16;</div>
+<div class="line"><span class="lineno">42457</span>        <span class="keywordtype">int</span> maxY = (itemRectangle.Y + itemRectangle.Height) / 16 + 1;</div>
+<div class="line"><span class="lineno">42458</span>        Utils.ClampWithinWorld(ref minX, ref minY, ref maxX, ref maxY);</div>
+<div class="line"><span class="lineno">42459</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = minX; i &lt; maxX; i++)</div>
+<div class="line"><span class="lineno">42460</span>        {</div>
+<div class="line"><span class="lineno">42461</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = minY; j &lt; maxY; j++)</div>
+<div class="line"><span class="lineno">42462</span>            {</div>
+<div class="line"><span class="lineno">42463</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span> || !Main.tileCut[Main.tile[i, j].type] || shouldIgnore[Main.tile[i, j].type] || !<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.CanCutTile(i, j, <a class="code hl_enumeration" href="../../da/d0b/namespaceTerraria_1_1Enums_acf4ebf1de631a8d16383d2d408ae3a09.html#acf4ebf1de631a8d16383d2d408ae3a09">TileCuttingContext</a>.AttackMelee))</div>
+<div class="line"><span class="lineno">42464</span>                {</div>
+<div class="line"><span class="lineno">42465</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">42466</span>                }</div>
+<div class="line"><span class="lineno">42467</span>                <span class="keywordflow">if</span> (sItem.type == 1786)</div>
+<div class="line"><span class="lineno">42468</span>                {</div>
+<div class="line"><span class="lineno">42469</span>                    ushort type = Main.tile[i, j].type;</div>
+<div class="line"><span class="lineno">42470</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(i, j);</div>
+<div class="line"><span class="lineno">42471</span>                    <span class="keywordflow">if</span> (!Main.tile[i, j].active())</div>
+<div class="line"><span class="lineno">42472</span>                    {</div>
+<div class="line"><span class="lineno">42473</span>                        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">42474</span>                        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">42475</span>                        {</div>
+<div class="line"><span class="lineno">42476</span>                        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">42477</span>                        <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">42478</span>                        <span class="keywordflow">case</span> 61:</div>
+<div class="line"><span class="lineno">42479</span>                        <span class="keywordflow">case</span> 110:</div>
+<div class="line"><span class="lineno">42480</span>                        <span class="keywordflow">case</span> 201:</div>
+<div class="line"><span class="lineno">42481</span>                        <span class="keywordflow">case</span> 529:</div>
+<div class="line"><span class="lineno">42482</span>                        <span class="keywordflow">case</span> 637:</div>
+<div class="line"><span class="lineno">42483</span>                            num = Main.rand.Next(1, 3);</div>
+<div class="line"><span class="lineno">42484</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">42485</span>                        <span class="keywordflow">case</span> 73:</div>
+<div class="line"><span class="lineno">42486</span>                        <span class="keywordflow">case</span> 74:</div>
+<div class="line"><span class="lineno">42487</span>                        <span class="keywordflow">case</span> 113:</div>
+<div class="line"><span class="lineno">42488</span>                            num = Main.rand.Next(2, 5);</div>
+<div class="line"><span class="lineno">42489</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">42490</span>                        }</div>
+<div class="line"><span class="lineno">42491</span>                        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">42492</span>                        {</div>
+<div class="line"><span class="lineno">42493</span>                            <span class="keywordtype">int</span> number = Item.NewItem(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d29/classTerraria_1_1DataStructures_1_1EntitySource__ItemUse.html">EntitySource_ItemUse</a>(<span class="keyword">this</span>, sItem), i * 16, j * 16, 16, 16, 1727, num);</div>
+<div class="line"><span class="lineno">42494</span>                            <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">42495</span>                            {</div>
+<div class="line"><span class="lineno">42496</span>                                NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number, 1f);</div>
+<div class="line"><span class="lineno">42497</span>                            }</div>
+<div class="line"><span class="lineno">42498</span>                        }</div>
+<div class="line"><span class="lineno">42499</span>                    }</div>
+<div class="line"><span class="lineno">42500</span>                    <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">42501</span>                    {</div>
+<div class="line"><span class="lineno">42502</span>                        NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, i, j);</div>
+<div class="line"><span class="lineno">42503</span>                    }</div>
+<div class="line"><span class="lineno">42504</span>                }</div>
+<div class="line"><span class="lineno">42505</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42506</span>                {</div>
+<div class="line"><span class="lineno">42507</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.KillTile(i, j);</div>
+<div class="line"><span class="lineno">42508</span>                    <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">42509</span>                    {</div>
+<div class="line"><span class="lineno">42510</span>                        NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, i, j);</div>
+<div class="line"><span class="lineno">42511</span>                    }</div>
+<div class="line"><span class="lineno">42512</span>                }</div>
+<div class="line"><span class="lineno">42513</span>            }</div>
+<div class="line"><span class="lineno">42514</span>        }</div>
+<div class="line"><span class="lineno">42515</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1EntitySource__ItemUse_html"><div class="ttname"><a href="../../d0/d29/classTerraria_1_1DataStructures_1_1EntitySource__ItemUse.html">Terraria.DataStructures.EntitySource_ItemUse</a></div><div class="ttdef"><b>Definition</b> EntitySource_ItemUse.cs:4</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_acf4ebf1de631a8d16383d2d408ae3a09_html_acf4ebf1de631a8d16383d2d408ae3a09"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_acf4ebf1de631a8d16383d2d408ae3a09.html#acf4ebf1de631a8d16383d2d408ae3a09">Terraria.Enums.TileCuttingContext</a></div><div class="ttdeci">TileCuttingContext</div><div class="ttdef"><b>Definition</b> TileCuttingContext.cs:4</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ae66dfcaf2e071e3604db758cfe9fb9c7.html#ae66dfcaf2e071e3604db758cfe9fb9c7">Terraria.WorldGen.CanCutTile()</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_ad623cb216555c5664c00ecb8945add76.html#ad623cb216555c5664c00ecb8945add76">Terraria.Utils.ClampWithinWorld()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a2bada5711f957a5370bfe3a550812ff5.html#a2bada5711f957a5370bfe3a550812ff5">Terraria.Main.tileCut</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

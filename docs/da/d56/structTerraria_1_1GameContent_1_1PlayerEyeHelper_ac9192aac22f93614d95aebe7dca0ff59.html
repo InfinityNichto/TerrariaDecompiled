@@ -117,6 +117,61 @@ $(function(){initNavTree('da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelpe
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (player.blackout || player.blind)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.IsBlind);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2b737475bfac5b32d7e2c5d870abcc74.html#a2b737475bfac5b32d7e2c5d870abcc74">_state</a> == EyeState.JustTookDamage &amp;&amp; <a class="code hl_variable" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2cbb87735e69a0d99182a0c46ea6f347.html#a2cbb87735e69a0d99182a0c46ea6f347">_timeInState</a> &lt; 20)</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (player.sleeping.isSleeping)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordtype">bool</span> resetStateTimerEvenIfAlreadyInState = player.itemAnimation &gt; 0;</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.InBed, resetStateTimerEvenIfAlreadyInState);</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a5c63324167c4697e0d20080d8cfe3a8e.html#a5c63324167c4697e0d20080d8cfe3a8e">DoesPlayerCountAsModeratelyDamaged</a>(player))</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.IsModeratelyDamaged);</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (player.tipsy)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.IsTipsy);</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (player.poisoned || player.venom || player.starving)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.IsPoisoned);</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">bool</span> flag = player.ZoneSandstorm || (player.ZoneSnow &amp;&amp; Main.IsItRaining);</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (player.behindBackWall)</div>
+<div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.InStorm);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <a class="code hl_function" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">SwitchToState</a>(EyeState.NormalBlinking);</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="astructTerraria_1_1GameContent_1_1PlayerEyeHelper_a2b737475bfac5b32d7e2c5d870abcc74_html_a2b737475bfac5b32d7e2c5d870abcc74"><div class="ttname"><a href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2b737475bfac5b32d7e2c5d870abcc74.html#a2b737475bfac5b32d7e2c5d870abcc74">Terraria.GameContent.PlayerEyeHelper._state</a></div><div class="ttdeci">EyeState _state</div><div class="ttdef"><b>Definition</b> PlayerEyeHelper.cs:24</div></div>
+<div class="ttc" id="astructTerraria_1_1GameContent_1_1PlayerEyeHelper_a2cbb87735e69a0d99182a0c46ea6f347_html_a2cbb87735e69a0d99182a0c46ea6f347"><div class="ttname"><a href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2cbb87735e69a0d99182a0c46ea6f347.html#a2cbb87735e69a0d99182a0c46ea6f347">Terraria.GameContent.PlayerEyeHelper._timeInState</a></div><div class="ttdeci">int _timeInState</div><div class="ttdef"><b>Definition</b> PlayerEyeHelper.cs:26</div></div>
+<div class="ttc" id="astructTerraria_1_1GameContent_1_1PlayerEyeHelper_a5c63324167c4697e0d20080d8cfe3a8e_html_a5c63324167c4697e0d20080d8cfe3a8e"><div class="ttname"><a href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a5c63324167c4697e0d20080d8cfe3a8e.html#a5c63324167c4697e0d20080d8cfe3a8e">Terraria.GameContent.PlayerEyeHelper.DoesPlayerCountAsModeratelyDamaged</a></div><div class="ttdeci">bool DoesPlayerCountAsModeratelyDamaged(Player player)</div><div class="ttdef"><b>Definition</b> PlayerEyeHelper.cs:133</div></div>
+<div class="ttc" id="astructTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046_html_a702800e6e92883e63115ff3518a41046"><div class="ttname"><a href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">Terraria.GameContent.PlayerEyeHelper.SwitchToState</a></div><div class="ttdeci">void SwitchToState(EyeState newState, bool resetStateTimerEvenIfAlreadyInState=false)</div><div class="ttdef"><b>Definition</b> PlayerEyeHelper.cs:124</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2b737475bfac5b32d7e2c5d870abcc74.html#a2b737475bfac5b32d7e2c5d870abcc74">Terraria.GameContent.PlayerEyeHelper._state</a>, <a class="el" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a2cbb87735e69a0d99182a0c46ea6f347.html#a2cbb87735e69a0d99182a0c46ea6f347">Terraria.GameContent.PlayerEyeHelper._timeInState</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ae2338671cf8d0c847ba14ffbbd5f895b.html#ae2338671cf8d0c847ba14ffbbd5f895b">Terraria.Player.behindBackWall</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af14a4db7dde26b9d037d39ebe10d5de3.html#af14a4db7dde26b9d037d39ebe10d5de3">Terraria.Player.blackout</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a03d99ff812da2d4623c221df558d6697.html#a03d99ff812da2d4623c221df558d6697">Terraria.Player.blind</a>, <a class="el" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a5c63324167c4697e0d20080d8cfe3a8e.html#a5c63324167c4697e0d20080d8cfe3a8e">Terraria.GameContent.PlayerEyeHelper.DoesPlayerCountAsModeratelyDamaged()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0f4da4b40756ba59fbdced8f29440125.html#a0f4da4b40756ba59fbdced8f29440125">Terraria.Main.IsItRaining</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab8e74fd1e81236555ad5d05ee87f9c0b.html#ab8e74fd1e81236555ad5d05ee87f9c0b">Terraria.Player.poisoned</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a1b282920daff24289613671310917ce5.html#a1b282920daff24289613671310917ce5">Terraria.Player.sleeping</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac563a7cef68983f965e912e65fc994e8.html#ac563a7cef68983f965e912e65fc994e8">Terraria.Player.starving</a>, <a class="el" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a702800e6e92883e63115ff3518a41046.html#a702800e6e92883e63115ff3518a41046">Terraria.GameContent.PlayerEyeHelper.SwitchToState()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac7c2ef586a706bbcfbe0373f4f87636b.html#ac7c2ef586a706bbcfbe0373f4f87636b">Terraria.Player.tipsy</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a208ef31f1a05a3c571c34cdb46efbab4.html#a208ef31f1a05a3c571c34cdb46efbab4">Terraria.Player.venom</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d56/structTerraria_1_1GameContent_1_1PlayerEyeHelper_a06d87c8d4d07f75c4b7b0ab9f7662926.html#a06d87c8d4d07f75c4b7b0ab9f7662926">Terraria.GameContent.PlayerEyeHelper.Update()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,40 @@ $(function(){initNavTree('d0/d12/classTerraria_1_1Lighting_aea1fc6e0950803d459a9
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  221</span>    {</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (Main.gameMenu)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">return</span> Color.White;</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        Color result = <span class="keywordflow">default</span>(Color);</div>
+<div class="line"><span class="lineno">  227</span>        Vector3 color = <a class="code hl_variable" href="../../d0/d12/classTerraria_1_1Lighting_a258f44689809d56ee54de6549950072c.html#a258f44689809d56ee54de6549950072c">_activeEngine</a>.<a class="code hl_function" href="../../d4/dae/interfaceTerraria_1_1Graphics_1_1Light_1_1ILightingEngine_a35efeb11434abc5ba5e7ce0aa03eac9a.html#a35efeb11434abc5ba5e7ce0aa03eac9a">GetColor</a>(x, y);</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">float</span> num = <a class="code hl_property" href="../../d0/d12/classTerraria_1_1Lighting_aa67ab02944c2e966ca480b8f6cbb37d4.html#aa67ab02944c2e966ca480b8f6cbb37d4">GlobalBrightness</a> * 255f;</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(color.X * num);</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(color.Y * num);</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(color.Z * num);</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (num2 &gt; 255)</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            num2 = 255;</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (num3 &gt; 255)</div>
+<div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            num3 = 255;</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (num4 &gt; 255)</div>
+<div class="line"><span class="lineno">  241</span>        {</div>
+<div class="line"><span class="lineno">  242</span>            num4 = 255;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>        num4 &lt;&lt;= 16;</div>
+<div class="line"><span class="lineno">  245</span>        num3 &lt;&lt;= 8;</div>
+<div class="line"><span class="lineno">  246</span>        result.PackedValue = (uint)(num2 | num3 | num4) | 0xFF000000u;</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Lighting_a258f44689809d56ee54de6549950072c_html_a258f44689809d56ee54de6549950072c"><div class="ttname"><a href="../../d0/d12/classTerraria_1_1Lighting_a258f44689809d56ee54de6549950072c.html#a258f44689809d56ee54de6549950072c">Terraria.Lighting._activeEngine</a></div><div class="ttdeci">static ILightingEngine _activeEngine</div><div class="ttdef"><b>Definition</b> Lighting.cs:25</div></div>
+<div class="ttc" id="aclassTerraria_1_1Lighting_aa67ab02944c2e966ca480b8f6cbb37d4_html_aa67ab02944c2e966ca480b8f6cbb37d4"><div class="ttname"><a href="../../d0/d12/classTerraria_1_1Lighting_aa67ab02944c2e966ca480b8f6cbb37d4.html#aa67ab02944c2e966ca480b8f6cbb37d4">Terraria.Lighting.GlobalBrightness</a></div><div class="ttdeci">static float GlobalBrightness</div><div class="ttdef"><b>Definition</b> Lighting.cs:27</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="ainterfaceTerraria_1_1Graphics_1_1Light_1_1ILightingEngine_a35efeb11434abc5ba5e7ce0aa03eac9a_html_a35efeb11434abc5ba5e7ce0aa03eac9a"><div class="ttname"><a href="../../d4/dae/interfaceTerraria_1_1Graphics_1_1Light_1_1ILightingEngine_a35efeb11434abc5ba5e7ce0aa03eac9a.html#a35efeb11434abc5ba5e7ce0aa03eac9a">Terraria.Graphics.Light.ILightingEngine.GetColor</a></div><div class="ttdeci">Vector3 GetColor(int x, int y)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/d12/classTerraria_1_1Lighting_a258f44689809d56ee54de6549950072c.html#a258f44689809d56ee54de6549950072c">Terraria.Lighting._activeEngine</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae6ffea71a619ed421c1e2d22f046193c.html#ae6ffea71a619ed421c1e2d22f046193c">Terraria.Main.gameMenu</a>, <a class="el" href="../../d4/dae/interfaceTerraria_1_1Graphics_1_1Light_1_1ILightingEngine_a35efeb11434abc5ba5e7ce0aa03eac9a.html#a35efeb11434abc5ba5e7ce0aa03eac9a">Terraria.Graphics.Light.ILightingEngine.GetColor()</a>, and <a class="el" href="../../d0/d12/classTerraria_1_1Lighting_aa67ab02944c2e966ca480b8f6cbb37d4.html#aa67ab02944c2e966ca480b8f6cbb37d4">Terraria.Lighting.GlobalBrightness</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -123,6 +123,56 @@ $(function(){initNavTree('db/db3/classTerraria_1_1GameContent_1_1Dyes_1_1Reflect
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d8/d29/classTerraria_1_1Graphics_1_1Shaders_1_1ArmorShaderData_af8f21d12add0fa0204d42f45826fbd66.html#af8f21d12add0fa0204d42f45826fbd66">Terraria.Graphics.Shaders.ArmorShaderData</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            base.Shader.Parameters[<span class="stringliteral">&quot;uLightSource&quot;</span>].SetValue(Vector3.Zero);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordtype">float</span> num = 0f;</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (drawData.HasValue)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                num = drawData.Value.rotation;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>            Vector2 position = entity.position;</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">float</span> num2 = entity.width;</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">float</span> num3 = entity.height;</div>
+<div class="line"><span class="lineno">   31</span>            Vector2 vector = position + <span class="keyword">new</span> Vector2(num2, num3) * 0.1f;</div>
+<div class="line"><span class="lineno">   32</span>            num2 *= 0.8f;</div>
+<div class="line"><span class="lineno">   33</span>            num3 *= 0.8f;</div>
+<div class="line"><span class="lineno">   34</span>            Vector3 subLight = Lighting.GetSubLight(vector + <span class="keyword">new</span> Vector2(num2 * 0.5f, 0f));</div>
+<div class="line"><span class="lineno">   35</span>            Vector3 subLight2 = Lighting.GetSubLight(vector + <span class="keyword">new</span> Vector2(0f, num3 * 0.5f));</div>
+<div class="line"><span class="lineno">   36</span>            Vector3 subLight3 = Lighting.GetSubLight(vector + <span class="keyword">new</span> Vector2(num2, num3 * 0.5f));</div>
+<div class="line"><span class="lineno">   37</span>            Vector3 subLight4 = Lighting.GetSubLight(vector + <span class="keyword">new</span> Vector2(num2 * 0.5f, num3));</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordtype">float</span> num4 = subLight.X + subLight.Y + subLight.Z;</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">float</span> num5 = subLight2.X + subLight2.Y + subLight2.Z;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordtype">float</span> num6 = subLight3.X + subLight3.Y + subLight3.Z;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordtype">float</span> num7 = subLight4.X + subLight4.Y + subLight4.Z;</div>
+<div class="line"><span class="lineno">   42</span>            Vector2 spinningpoint = <span class="keyword">new</span> Vector2(num6 - num5, num7 - num4);</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordtype">float</span> num8 = spinningpoint.Length();</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (num8 &gt; 1f)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                num8 = 1f;</div>
+<div class="line"><span class="lineno">   47</span>                spinningpoint /= num8;</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (entity.direction == -1)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                spinningpoint.X *= -1f;</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>            spinningpoint = spinningpoint.RotatedBy(0f - num);</div>
+<div class="line"><span class="lineno">   54</span>            Vector3 value = <span class="keyword">new</span> Vector3(spinningpoint, 1f - (spinningpoint.X * spinningpoint.X + spinningpoint.Y * spinningpoint.Y));</div>
+<div class="line"><span class="lineno">   55</span>            value.X *= 2f;</div>
+<div class="line"><span class="lineno">   56</span>            value.Y -= 0.15f;</div>
+<div class="line"><span class="lineno">   57</span>            value.Y *= 2f;</div>
+<div class="line"><span class="lineno">   58</span>            value.Normalize();</div>
+<div class="line"><span class="lineno">   59</span>            value.Z *= 0.6f;</div>
+<div class="line"><span class="lineno">   60</span>            base.Shader.Parameters[<span class="stringliteral">&quot;uLightSource&quot;</span>].SetValue(value);</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        base.Apply(entity, drawData);</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a>, <a class="el" href="../../d0/d12/classTerraria_1_1Lighting_a89315c6b9038211c378ef8fb4bc70a56.html#a89315c6b9038211c378ef8fb4bc70a56">Terraria.Lighting.GetSubLight()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../d7/d89/structTerraria_1_1DataStructures_1_1DrawData_a384079c9424b849e324fa4cbd476c816.html#a384079c9424b849e324fa4cbd476c816">Terraria.DataStructures.DrawData.rotation</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

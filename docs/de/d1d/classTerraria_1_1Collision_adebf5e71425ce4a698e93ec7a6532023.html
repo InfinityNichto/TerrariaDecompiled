@@ -156,6 +156,65 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_adebf5e71425ce4a698e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2056</span>    {</div>
+<div class="line"><span class="lineno"> 2057</span>        <span class="keywordflow">if</span> (checkCardinals)</div>
+<div class="line"><span class="lineno"> 2058</span>        {</div>
+<div class="line"><span class="lineno"> 2059</span>            Vector2 vector = Vector2.UnitX * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2060</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, Width, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2061</span>            {</div>
+<div class="line"><span class="lineno"> 2062</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2063</span>            }</div>
+<div class="line"><span class="lineno"> 2064</span>            vector = -Vector2.UnitX * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2065</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, Width, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2066</span>            {</div>
+<div class="line"><span class="lineno"> 2067</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2068</span>            }</div>
+<div class="line"><span class="lineno"> 2069</span>            vector = Vector2.UnitY * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2070</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, Width, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2071</span>            {</div>
+<div class="line"><span class="lineno"> 2072</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2073</span>            }</div>
+<div class="line"><span class="lineno"> 2074</span>            vector = -Vector2.UnitY * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2075</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(position - vector, vector, Width, Height, fallThrough, fall2, gravDir) != vector)</div>
+<div class="line"><span class="lineno"> 2076</span>            {</div>
+<div class="line"><span class="lineno"> 2077</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2078</span>            }</div>
+<div class="line"><span class="lineno"> 2079</span>        }</div>
+<div class="line"><span class="lineno"> 2080</span>        <span class="keywordflow">if</span> (checkSlopes)</div>
+<div class="line"><span class="lineno"> 2081</span>        {</div>
+<div class="line"><span class="lineno"> 2082</span>            Vector2 vector = Vector2.UnitX * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2083</span>            Vector4 vector2 = <span class="keyword">new</span> Vector4(position, testMagnitude, 0f);</div>
+<div class="line"><span class="lineno"> 2084</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, Width, Height, gravDir, fallThrough) != vector2)</div>
+<div class="line"><span class="lineno"> 2085</span>            {</div>
+<div class="line"><span class="lineno"> 2086</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2087</span>            }</div>
+<div class="line"><span class="lineno"> 2088</span>            vector = -Vector2.UnitX * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2089</span>            vector2 = <span class="keyword">new</span> Vector4(position, 0f - testMagnitude, 0f);</div>
+<div class="line"><span class="lineno"> 2090</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, Width, Height, gravDir, fallThrough) != vector2)</div>
+<div class="line"><span class="lineno"> 2091</span>            {</div>
+<div class="line"><span class="lineno"> 2092</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2093</span>            }</div>
+<div class="line"><span class="lineno"> 2094</span>            vector = Vector2.UnitY * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2095</span>            vector2 = <span class="keyword">new</span> Vector4(position, 0f, testMagnitude);</div>
+<div class="line"><span class="lineno"> 2096</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, Width, Height, gravDir, fallThrough) != vector2)</div>
+<div class="line"><span class="lineno"> 2097</span>            {</div>
+<div class="line"><span class="lineno"> 2098</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2099</span>            }</div>
+<div class="line"><span class="lineno"> 2100</span>            vector = -Vector2.UnitY * testMagnitude;</div>
+<div class="line"><span class="lineno"> 2101</span>            vector2 = <span class="keyword">new</span> Vector4(position, 0f, 0f - testMagnitude);</div>
+<div class="line"><span class="lineno"> 2102</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">SlopeCollision</a>(position, vector, Width, Height, gravDir, fallThrough) != vector2)</div>
+<div class="line"><span class="lineno"> 2103</span>            {</div>
+<div class="line"><span class="lineno"> 2104</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2105</span>            }</div>
+<div class="line"><span class="lineno"> 2106</span>        }</div>
+<div class="line"><span class="lineno"> 2107</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2108</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8_html_a5e225736f6e3c509b9915a06cf908dd8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision</a></div><div class="ttdeci">static Vector2 TileCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, bool fallThrough=false, bool fall2=false, int gravDir=1)</div><div class="ttdef"><b>Definition</b> Collision.cs:1910</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642_html_a725c5d327800d1e48a2adf0fb7b41642"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">Terraria.Collision.SlopeCollision</a></div><div class="ttdeci">static Vector4 SlopeCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, float gravity=0f, bool fall=false)</div><div class="ttdef"><b>Definition</b> Collision.cs:1580</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a725c5d327800d1e48a2adf0fb7b41642.html#a725c5d327800d1e48a2adf0fb7b41642">Terraria.Collision.SlopeCollision()</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac75a4e29ca134f40044353e04d84f696.html#ac75a4e29ca134f40044353e04d84f696">Terraria.Player.CanFitSpace()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab5c7c58f0a1b673531847232c4345332.html#ab5c7c58f0a1b673531847232c4345332">Terraria.Player.UpdateTouchingTiles()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

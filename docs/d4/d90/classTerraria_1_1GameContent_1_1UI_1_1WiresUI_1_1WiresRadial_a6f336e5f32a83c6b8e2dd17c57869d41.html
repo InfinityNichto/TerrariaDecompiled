@@ -117,6 +117,194 @@ $(function(){initNavTree('d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  494</span>        {</div>
+<div class="line"><span class="lineno">  495</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_ae5caf0a772f992258c1bb3788c43bdf4.html#ae5caf0a772f992258c1bb3788c43bdf4">active</a> || <a class="code hl_variable" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2acae11b4199bbd0a0cab2a4246b6e6e.html#a2acae11b4199bbd0a0cab2a4246b6e6e">_lineOpacity</a> == 0f)</div>
+<div class="line"><span class="lineno">  496</span>            {</div>
+<div class="line"><span class="lineno">  497</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  498</span>            }</div>
+<div class="line"><span class="lineno">  499</span>            Vector2 vector = Main.MouseScreen + <span class="keyword">new</span> Vector2(10 - 9 * <a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_property" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">UsingGamepad</a>.ToInt(), 25f);</div>
+<div class="line"><span class="lineno">  500</span>            Color color = <span class="keyword">new</span> Color(50, 50, 50);</div>
+<div class="line"><span class="lineno">  501</span>            <span class="keywordtype">bool</span> drawToolAllowActuators = Settings.DrawToolAllowActuators;</div>
+<div class="line"><span class="lineno">  502</span>            <span class="keywordflow">if</span> (!drawToolAllowActuators)</div>
+<div class="line"><span class="lineno">  503</span>            {</div>
+<div class="line"><span class="lineno">  504</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_property" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">UsingGamepad</a>)</div>
+<div class="line"><span class="lineno">  505</span>                {</div>
+<div class="line"><span class="lineno">  506</span>                    vector += <span class="keyword">new</span> Vector2(-20f, 10f);</div>
+<div class="line"><span class="lineno">  507</span>                }</div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  509</span>                {</div>
+<div class="line"><span class="lineno">  510</span>                    vector += <span class="keyword">new</span> Vector2(0f, 10f);</div>
+<div class="line"><span class="lineno">  511</span>                }</div>
+<div class="line"><span class="lineno">  512</span>            }</div>
+<div class="line"><span class="lineno">  513</span>            Texture2D value = TextureAssets.BuilderAcc.Value;</div>
+<div class="line"><span class="lineno">  514</span>            Texture2D texture = value;</div>
+<div class="line"><span class="lineno">  515</span>            Rectangle rectangle = <span class="keyword">new</span> Rectangle(140, 2, 6, 6);</div>
+<div class="line"><span class="lineno">  516</span>            Rectangle rectangle2 = <span class="keyword">new</span> Rectangle(148, 2, 6, 6);</div>
+<div class="line"><span class="lineno">  517</span>            Rectangle rectangle3 = <span class="keyword">new</span> Rectangle(128, 0, 10, 10);</div>
+<div class="line"><span class="lineno">  518</span>            <span class="keywordtype">float</span> num = 1f;</div>
+<div class="line"><span class="lineno">  519</span>            <span class="keywordtype">float</span> scale = 1f;</div>
+<div class="line"><span class="lineno">  520</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  521</span>            <span class="keywordflow">if</span> (flag &amp;&amp; !drawToolAllowActuators)</div>
+<div class="line"><span class="lineno">  522</span>            {</div>
+<div class="line"><span class="lineno">  523</span>                num *= Main.cursorScale;</div>
+<div class="line"><span class="lineno">  524</span>            }</div>
+<div class="line"><span class="lineno">  525</span>            <span class="keywordtype">float</span> num2 = <a class="code hl_variable" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2acae11b4199bbd0a0cab2a4246b6e6e.html#a2acae11b4199bbd0a0cab2a4246b6e6e">_lineOpacity</a>;</div>
+<div class="line"><span class="lineno">  526</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_property" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">UsingGamepad</a>)</div>
+<div class="line"><span class="lineno">  527</span>            {</div>
+<div class="line"><span class="lineno">  528</span>                num2 *= Main.GamepadCursorAlpha;</div>
+<div class="line"><span class="lineno">  529</span>            }</div>
+<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><span class="lineno">  531</span>            {</div>
+<div class="line"><span class="lineno">  532</span>                <span class="keywordflow">if</span> (!drawToolAllowActuators &amp;&amp; i == 4)</div>
+<div class="line"><span class="lineno">  533</span>                {</div>
+<div class="line"><span class="lineno">  534</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  535</span>                }</div>
+<div class="line"><span class="lineno">  536</span>                <span class="keywordtype">float</span> num3 = num2;</div>
+<div class="line"><span class="lineno">  537</span>                Vector2 vec = vector + Vector2.UnitX * (45f * ((float)i - 1.5f));</div>
+<div class="line"><span class="lineno">  538</span>                <span class="keywordtype">int</span> num4 = i;</div>
+<div class="line"><span class="lineno">  539</span>                <span class="keywordflow">if</span> (i == 0)</div>
+<div class="line"><span class="lineno">  540</span>                {</div>
+<div class="line"><span class="lineno">  541</span>                    num4 = 3;</div>
+<div class="line"><span class="lineno">  542</span>                }</div>
+<div class="line"><span class="lineno">  543</span>                <span class="keywordflow">if</span> (i == 1)</div>
+<div class="line"><span class="lineno">  544</span>                {</div>
+<div class="line"><span class="lineno">  545</span>                    num4 = 2;</div>
+<div class="line"><span class="lineno">  546</span>                }</div>
+<div class="line"><span class="lineno">  547</span>                <span class="keywordflow">if</span> (i == 2)</div>
+<div class="line"><span class="lineno">  548</span>                {</div>
+<div class="line"><span class="lineno">  549</span>                    num4 = 1;</div>
+<div class="line"><span class="lineno">  550</span>                }</div>
+<div class="line"><span class="lineno">  551</span>                <span class="keywordflow">if</span> (i == 3)</div>
+<div class="line"><span class="lineno">  552</span>                {</div>
+<div class="line"><span class="lineno">  553</span>                    num4 = 0;</div>
+<div class="line"><span class="lineno">  554</span>                }</div>
+<div class="line"><span class="lineno">  555</span>                <span class="keywordflow">if</span> (i == 4)</div>
+<div class="line"><span class="lineno">  556</span>                {</div>
+<div class="line"><span class="lineno">  557</span>                    num4 = 5;</div>
+<div class="line"><span class="lineno">  558</span>                }</div>
+<div class="line"><span class="lineno">  559</span>                <span class="keywordtype">int</span> num5 = num4;</div>
+<div class="line"><span class="lineno">  560</span>                <span class="keywordflow">switch</span> (num5)</div>
+<div class="line"><span class="lineno">  561</span>                {</div>
+<div class="line"><span class="lineno">  562</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  563</span>                    num5 = 1;</div>
+<div class="line"><span class="lineno">  564</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  565</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  566</span>                    num5 = 2;</div>
+<div class="line"><span class="lineno">  567</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  568</span>                }</div>
+<div class="line"><span class="lineno">  569</span>                <span class="keywordtype">bool</span> flag2 = Settings.ToolMode.HasFlag((Settings.MultiToolMode)(1 &lt;&lt; num5));</div>
+<div class="line"><span class="lineno">  570</span>                <span class="keywordflow">if</span> (num5 == 5)</div>
+<div class="line"><span class="lineno">  571</span>                {</div>
+<div class="line"><span class="lineno">  572</span>                    flag2 = Settings.ToolMode.HasFlag(Settings.MultiToolMode.Actuator);</div>
+<div class="line"><span class="lineno">  573</span>                }</div>
+<div class="line"><span class="lineno">  574</span>                Color color2 = Color.HotPink;</div>
+<div class="line"><span class="lineno">  575</span>                <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno">  576</span>                {</div>
+<div class="line"><span class="lineno">  577</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  578</span>                    color2 = <span class="keyword">new</span> Color(253, 58, 61);</div>
+<div class="line"><span class="lineno">  579</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  580</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  581</span>                    color2 = <span class="keyword">new</span> Color(83, 180, 253);</div>
+<div class="line"><span class="lineno">  582</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  583</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  584</span>                    color2 = <span class="keyword">new</span> Color(83, 253, 153);</div>
+<div class="line"><span class="lineno">  585</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  586</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  587</span>                    color2 = <span class="keyword">new</span> Color(253, 254, 83);</div>
+<div class="line"><span class="lineno">  588</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  589</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  590</span>                    color2 = Color.WhiteSmoke;</div>
+<div class="line"><span class="lineno">  591</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  592</span>                }</div>
+<div class="line"><span class="lineno">  593</span>                <span class="keywordflow">if</span> (!flag2)</div>
+<div class="line"><span class="lineno">  594</span>                {</div>
+<div class="line"><span class="lineno">  595</span>                    color2 = Color.Lerp(color2, Color.Black, 0.65f);</div>
+<div class="line"><span class="lineno">  596</span>                }</div>
+<div class="line"><span class="lineno">  597</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  598</span>                {</div>
+<div class="line"><span class="lineno">  599</span>                    <span class="keywordflow">if</span> (drawToolAllowActuators)</div>
+<div class="line"><span class="lineno">  600</span>                    {</div>
+<div class="line"><span class="lineno">  601</span>                        <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno">  602</span>                        {</div>
+<div class="line"><span class="lineno">  603</span>                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  604</span>                            vec = vector + <span class="keyword">new</span> Vector2(-12f, 0f) * num;</div>
+<div class="line"><span class="lineno">  605</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  606</span>                        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  607</span>                            vec = vector + <span class="keyword">new</span> Vector2(12f, 0f) * num;</div>
+<div class="line"><span class="lineno">  608</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  609</span>                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  610</span>                            vec = vector + <span class="keyword">new</span> Vector2(-6f, 12f) * num;</div>
+<div class="line"><span class="lineno">  611</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  612</span>                        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  613</span>                            vec = vector + <span class="keyword">new</span> Vector2(6f, 12f) * num;</div>
+<div class="line"><span class="lineno">  614</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  615</span>                        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  616</span>                            vec = vector + <span class="keyword">new</span> Vector2(0f, 0f) * num;</div>
+<div class="line"><span class="lineno">  617</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  618</span>                        }</div>
+<div class="line"><span class="lineno">  619</span>                    }</div>
+<div class="line"><span class="lineno">  620</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  621</span>                    {</div>
+<div class="line"><span class="lineno">  622</span>                        vec = vector + <span class="keyword">new</span> Vector2(12 * (num4 + 1), 12 * (3 - num4)) * num;</div>
+<div class="line"><span class="lineno">  623</span>                    }</div>
+<div class="line"><span class="lineno">  624</span>                }</div>
+<div class="line"><span class="lineno">  625</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (drawToolAllowActuators)</div>
+<div class="line"><span class="lineno">  626</span>                {</div>
+<div class="line"><span class="lineno">  627</span>                    <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno">  628</span>                    {</div>
+<div class="line"><span class="lineno">  629</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  630</span>                        vec = vector + <span class="keyword">new</span> Vector2(-12f, 0f) * num;</div>
+<div class="line"><span class="lineno">  631</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  632</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  633</span>                        vec = vector + <span class="keyword">new</span> Vector2(12f, 0f) * num;</div>
+<div class="line"><span class="lineno">  634</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  635</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  636</span>                        vec = vector + <span class="keyword">new</span> Vector2(-6f, 12f) * num;</div>
+<div class="line"><span class="lineno">  637</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  638</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  639</span>                        vec = vector + <span class="keyword">new</span> Vector2(6f, 12f) * num;</div>
+<div class="line"><span class="lineno">  640</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  641</span>                    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  642</span>                        vec = vector + <span class="keyword">new</span> Vector2(0f, 0f) * num;</div>
+<div class="line"><span class="lineno">  643</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  644</span>                    }</div>
+<div class="line"><span class="lineno">  645</span>                }</div>
+<div class="line"><span class="lineno">  646</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  647</span>                {</div>
+<div class="line"><span class="lineno">  648</span>                    <span class="keywordtype">float</span> num6 = 0.7f;</div>
+<div class="line"><span class="lineno">  649</span>                    <span class="keywordflow">switch</span> (num4)</div>
+<div class="line"><span class="lineno">  650</span>                    {</div>
+<div class="line"><span class="lineno">  651</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  652</span>                        vec = vector + <span class="keyword">new</span> Vector2(0f, -12f) * num * num6;</div>
+<div class="line"><span class="lineno">  653</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  654</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  655</span>                        vec = vector + <span class="keyword">new</span> Vector2(12f, 0f) * num * num6;</div>
+<div class="line"><span class="lineno">  656</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  657</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  658</span>                        vec = vector + <span class="keyword">new</span> Vector2(-12f, 0f) * num * num6;</div>
+<div class="line"><span class="lineno">  659</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  660</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  661</span>                        vec = vector + <span class="keyword">new</span> Vector2(0f, 12f) * num * num6;</div>
+<div class="line"><span class="lineno">  662</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  663</span>                    }</div>
+<div class="line"><span class="lineno">  664</span>                }</div>
+<div class="line"><span class="lineno">  665</span>                vec = vec.Floor();</div>
+<div class="line"><span class="lineno">  666</span>                spriteBatch.Draw(texture, vec, rectangle3, color * num3, 0f, rectangle3.Size() / 2f, scale, SpriteEffects.None, 0f);</div>
+<div class="line"><span class="lineno">  667</span>                spriteBatch.Draw(value, vec, rectangle, color2 * num3, 0f, rectangle.Size() / 2f, scale, SpriteEffects.None, 0f);</div>
+<div class="line"><span class="lineno">  668</span>                <span class="keywordflow">if</span> (Settings.ToolMode.HasFlag(Settings.MultiToolMode.Cutter))</div>
+<div class="line"><span class="lineno">  669</span>                {</div>
+<div class="line"><span class="lineno">  670</span>                    spriteBatch.Draw(value, vec, rectangle2, color * num3, 0f, rectangle2.Size() / 2f, scale, SpriteEffects.None, 0f);</div>
+<div class="line"><span class="lineno">  671</span>                }</div>
+<div class="line"><span class="lineno">  672</span>            }</div>
+<div class="line"><span class="lineno">  673</span>        }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2acae11b4199bbd0a0cab2a4246b6e6e_html_a2acae11b4199bbd0a0cab2a4246b6e6e"><div class="ttname"><a href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2acae11b4199bbd0a0cab2a4246b6e6e.html#a2acae11b4199bbd0a0cab2a4246b6e6e">Terraria.GameContent.UI.WiresUI.WiresRadial._lineOpacity</a></div><div class="ttdeci">float _lineOpacity</div><div class="ttdef"><b>Definition</b> WiresUI.cs:88</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_ae5caf0a772f992258c1bb3788c43bdf4_html_ae5caf0a772f992258c1bb3788c43bdf4"><div class="ttname"><a href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_ae5caf0a772f992258c1bb3788c43bdf4.html#ae5caf0a772f992258c1bb3788c43bdf4">Terraria.GameContent.UI.WiresUI.WiresRadial.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition</b> WiresUI.cs:84</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa_html_addc6320b79fba238ede21516480229fa"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a></div><div class="ttdeci">static bool UsingGamepad</div><div class="ttdef"><b>Definition</b> PlayerInput.cs:331</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_html"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">Terraria.GameInput.PlayerInput</a></div><div class="ttdef"><b>Definition</b> PlayerInput.cs:18</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2acae11b4199bbd0a0cab2a4246b6e6e.html#a2acae11b4199bbd0a0cab2a4246b6e6e">Terraria.GameContent.UI.WiresUI.WiresRadial._lineOpacity</a>, <a class="el" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_ae5caf0a772f992258c1bb3788c43bdf4.html#ae5caf0a772f992258c1bb3788c43bdf4">Terraria.GameContent.UI.WiresUI.WiresRadial.active</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a806099431fb2cda7af67c724a59b5562.html#a806099431fb2cda7af67c724a59b5562">Terraria.GameContent.TextureAssets.BuilderAcc</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aae17a30091328446bf6f0b8a7cd0e75d.html#aae17a30091328446bf6f0b8a7cd0e75d">Terraria.Main.cursorScale</a>, <a class="el" href="../../d2/d4b/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1Settings_a387f2c21e461f99c0c17986ca1f0edcd.html#a387f2c21e461f99c0c17986ca1f0edcd">Terraria.GameContent.UI.WiresUI.Settings.DrawToolAllowActuators</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_abb90a012fb4306e838a36ca864a3cba9.html#abb90a012fb4306e838a36ca864a3cba9">Terraria.Main.GamepadCursorAlpha</a>, <a class="el" href="../../d2/d4b/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1Settings_a1658982ad224c071d851031b80f7673a.html#a1658982ad224c071d851031b80f7673a">Terraria.GameContent.UI.WiresUI.Settings.ToolMode</a>, <a class="el" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_addc6320b79fba238ede21516480229fa.html#addc6320b79fba238ede21516480229fa">Terraria.GameInput.PlayerInput.UsingGamepad</a>, and <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d90/classTerraria_1_1GameContent_1_1UI_1_1WiresUI_1_1WiresRadial_a2519b17d781bc860583a0157f64f28d7.html#a2519b17d781bc860583a0157f64f28d7">Terraria.GameContent.UI.WiresUI.WiresRadial.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,180 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a09b2685d8731ede50d1dd8
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">33353</span>    {</div>
+<div class="line"><span class="lineno">33354</span>        <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a4c75233513c0231f0401eaeb64347f30.html#a4c75233513c0231f0401eaeb64347f30">GetItemExpectedPrice</a>(item, out var calcForSelling, out var calcForBuying);</div>
+<div class="line"><span class="lineno">33355</span>        <span class="keywordflow">if</span> (calcForSelling &lt;= 0)</div>
+<div class="line"><span class="lineno">33356</span>        {</div>
+<div class="line"><span class="lineno">33357</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">33358</span>        }</div>
+<div class="line"><span class="lineno">33359</span>        <span class="keywordflow">if</span> (stack == -1)</div>
+<div class="line"><span class="lineno">33360</span>        {</div>
+<div class="line"><span class="lineno">33361</span>            stack = item.stack;</div>
+<div class="line"><span class="lineno">33362</span>        }</div>
+<div class="line"><span class="lineno">33363</span>        Item[] array = <span class="keyword">new</span> Item[58];</div>
+<div class="line"><span class="lineno">33364</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 58; i++)</div>
+<div class="line"><span class="lineno">33365</span>        {</div>
+<div class="line"><span class="lineno">33366</span>            array[i] = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">33367</span>            array[i] = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[i].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Clone</a>();</div>
+<div class="line"><span class="lineno">33368</span>        }</div>
+<div class="line"><span class="lineno">33369</span>        <span class="keywordtype">long</span> num = calcForSelling / 5;</div>
+<div class="line"><span class="lineno">33370</span>        <span class="keywordflow">if</span> (num &lt; 1)</div>
+<div class="line"><span class="lineno">33371</span>        {</div>
+<div class="line"><span class="lineno">33372</span>            num = 1<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">33373</span>        }</div>
+<div class="line"><span class="lineno">33374</span>        <span class="keywordtype">long</span> num2 = num;</div>
+<div class="line"><span class="lineno">33375</span>        num *= stack;</div>
+<div class="line"><span class="lineno">33376</span>        <span class="keywordtype">int</span> amount = Main.shopSellbackHelper.GetAmount(item);</div>
+<div class="line"><span class="lineno">33377</span>        <span class="keywordflow">if</span> (amount &gt; 0)</div>
+<div class="line"><span class="lineno">33378</span>        {</div>
+<div class="line"><span class="lineno">33379</span>            num += (-num2 + calcForBuying) * Math.Min(amount, item.stack);</div>
+<div class="line"><span class="lineno">33380</span>        }</div>
+<div class="line"><span class="lineno">33381</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">33382</span>        <span class="keywordflow">while</span> (num &gt;= 1000000 &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">33383</span>        {</div>
+<div class="line"><span class="lineno">33384</span>            <span class="keywordtype">int</span> num3 = -1;</div>
+<div class="line"><span class="lineno">33385</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num4 = 53; num4 &gt;= 0; num4--)</div>
+<div class="line"><span class="lineno">33386</span>            {</div>
+<div class="line"><span class="lineno">33387</span>                <span class="keywordflow">if</span> (num3 == -1 &amp;&amp; (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].type == 0 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].stack == 0))</div>
+<div class="line"><span class="lineno">33388</span>                {</div>
+<div class="line"><span class="lineno">33389</span>                    num3 = num4;</div>
+<div class="line"><span class="lineno">33390</span>                }</div>
+<div class="line"><span class="lineno">33391</span>                <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].type == 74 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].stack &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].maxStack &amp;&amp; num &gt;= 1000000)</div>
+<div class="line"><span class="lineno">33392</span>                {</div>
+<div class="line"><span class="lineno">33393</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>++;</div>
+<div class="line"><span class="lineno">33394</span>                    num -= 1000000;</div>
+<div class="line"><span class="lineno">33395</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a.html#aa13179c78e5380f9f0985ecdd734d67a">DoCoins</a>(num4);</div>
+<div class="line"><span class="lineno">33396</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num4].stack == 0 &amp;&amp; num3 == -1)</div>
+<div class="line"><span class="lineno">33397</span>                    {</div>
+<div class="line"><span class="lineno">33398</span>                        num3 = num4;</div>
+<div class="line"><span class="lineno">33399</span>                    }</div>
+<div class="line"><span class="lineno">33400</span>                }</div>
+<div class="line"><span class="lineno">33401</span>            }</div>
+<div class="line"><span class="lineno">33402</span>            <span class="keywordflow">if</span> (num &gt;= 1000000)</div>
+<div class="line"><span class="lineno">33403</span>            {</div>
+<div class="line"><span class="lineno">33404</span>                <span class="keywordflow">if</span> (num3 == -1)</div>
+<div class="line"><span class="lineno">33405</span>                {</div>
+<div class="line"><span class="lineno">33406</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33407</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">33408</span>                }</div>
+<div class="line"><span class="lineno">33409</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num3].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">SetDefaults</a>(74);</div>
+<div class="line"><span class="lineno">33410</span>                num -= 1000000;</div>
+<div class="line"><span class="lineno">33411</span>            }</div>
+<div class="line"><span class="lineno">33412</span>        }</div>
+<div class="line"><span class="lineno">33413</span>        <span class="keywordflow">while</span> (num &gt;= 10000 &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">33414</span>        {</div>
+<div class="line"><span class="lineno">33415</span>            <span class="keywordtype">int</span> num5 = -1;</div>
+<div class="line"><span class="lineno">33416</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num6 = 53; num6 &gt;= 0; num6--)</div>
+<div class="line"><span class="lineno">33417</span>            {</div>
+<div class="line"><span class="lineno">33418</span>                <span class="keywordflow">if</span> (num5 == -1 &amp;&amp; (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].type == 0 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].stack == 0))</div>
+<div class="line"><span class="lineno">33419</span>                {</div>
+<div class="line"><span class="lineno">33420</span>                    num5 = num6;</div>
+<div class="line"><span class="lineno">33421</span>                }</div>
+<div class="line"><span class="lineno">33422</span>                <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].type == 73 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].stack &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].maxStack &amp;&amp; num &gt;= 10000)</div>
+<div class="line"><span class="lineno">33423</span>                {</div>
+<div class="line"><span class="lineno">33424</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>++;</div>
+<div class="line"><span class="lineno">33425</span>                    num -= 10000;</div>
+<div class="line"><span class="lineno">33426</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a.html#aa13179c78e5380f9f0985ecdd734d67a">DoCoins</a>(num6);</div>
+<div class="line"><span class="lineno">33427</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num6].stack == 0 &amp;&amp; num5 == -1)</div>
+<div class="line"><span class="lineno">33428</span>                    {</div>
+<div class="line"><span class="lineno">33429</span>                        num5 = num6;</div>
+<div class="line"><span class="lineno">33430</span>                    }</div>
+<div class="line"><span class="lineno">33431</span>                }</div>
+<div class="line"><span class="lineno">33432</span>            }</div>
+<div class="line"><span class="lineno">33433</span>            <span class="keywordflow">if</span> (num &gt;= 10000)</div>
+<div class="line"><span class="lineno">33434</span>            {</div>
+<div class="line"><span class="lineno">33435</span>                <span class="keywordflow">if</span> (num5 == -1)</div>
+<div class="line"><span class="lineno">33436</span>                {</div>
+<div class="line"><span class="lineno">33437</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33438</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">33439</span>                }</div>
+<div class="line"><span class="lineno">33440</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num5].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">SetDefaults</a>(73);</div>
+<div class="line"><span class="lineno">33441</span>                num -= 10000;</div>
+<div class="line"><span class="lineno">33442</span>            }</div>
+<div class="line"><span class="lineno">33443</span>        }</div>
+<div class="line"><span class="lineno">33444</span>        <span class="keywordflow">while</span> (num &gt;= 100 &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">33445</span>        {</div>
+<div class="line"><span class="lineno">33446</span>            <span class="keywordtype">int</span> num7 = -1;</div>
+<div class="line"><span class="lineno">33447</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num8 = 53; num8 &gt;= 0; num8--)</div>
+<div class="line"><span class="lineno">33448</span>            {</div>
+<div class="line"><span class="lineno">33449</span>                <span class="keywordflow">if</span> (num7 == -1 &amp;&amp; (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].type == 0 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].stack == 0))</div>
+<div class="line"><span class="lineno">33450</span>                {</div>
+<div class="line"><span class="lineno">33451</span>                    num7 = num8;</div>
+<div class="line"><span class="lineno">33452</span>                }</div>
+<div class="line"><span class="lineno">33453</span>                <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].type == 72 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].stack &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].maxStack &amp;&amp; num &gt;= 100)</div>
+<div class="line"><span class="lineno">33454</span>                {</div>
+<div class="line"><span class="lineno">33455</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>++;</div>
+<div class="line"><span class="lineno">33456</span>                    num -= 100;</div>
+<div class="line"><span class="lineno">33457</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a.html#aa13179c78e5380f9f0985ecdd734d67a">DoCoins</a>(num8);</div>
+<div class="line"><span class="lineno">33458</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num8].stack == 0 &amp;&amp; num7 == -1)</div>
+<div class="line"><span class="lineno">33459</span>                    {</div>
+<div class="line"><span class="lineno">33460</span>                        num7 = num8;</div>
+<div class="line"><span class="lineno">33461</span>                    }</div>
+<div class="line"><span class="lineno">33462</span>                }</div>
+<div class="line"><span class="lineno">33463</span>            }</div>
+<div class="line"><span class="lineno">33464</span>            <span class="keywordflow">if</span> (num &gt;= 100)</div>
+<div class="line"><span class="lineno">33465</span>            {</div>
+<div class="line"><span class="lineno">33466</span>                <span class="keywordflow">if</span> (num7 == -1)</div>
+<div class="line"><span class="lineno">33467</span>                {</div>
+<div class="line"><span class="lineno">33468</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33469</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">33470</span>                }</div>
+<div class="line"><span class="lineno">33471</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num7].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">SetDefaults</a>(72);</div>
+<div class="line"><span class="lineno">33472</span>                num -= 100;</div>
+<div class="line"><span class="lineno">33473</span>            }</div>
+<div class="line"><span class="lineno">33474</span>        }</div>
+<div class="line"><span class="lineno">33475</span>        <span class="keywordflow">while</span> (num &gt;= 1 &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">33476</span>        {</div>
+<div class="line"><span class="lineno">33477</span>            <span class="keywordtype">int</span> num9 = -1;</div>
+<div class="line"><span class="lineno">33478</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num10 = 53; num10 &gt;= 0; num10--)</div>
+<div class="line"><span class="lineno">33479</span>            {</div>
+<div class="line"><span class="lineno">33480</span>                <span class="keywordflow">if</span> (num9 == -1 &amp;&amp; (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].type == 0 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].stack == 0))</div>
+<div class="line"><span class="lineno">33481</span>                {</div>
+<div class="line"><span class="lineno">33482</span>                    num9 = num10;</div>
+<div class="line"><span class="lineno">33483</span>                }</div>
+<div class="line"><span class="lineno">33484</span>                <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].type == 71 &amp;&amp; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].stack &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].maxStack &amp;&amp; num &gt;= 1)</div>
+<div class="line"><span class="lineno">33485</span>                {</div>
+<div class="line"><span class="lineno">33486</span>                    <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].<a class="code hl_variable" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">stack</a>++;</div>
+<div class="line"><span class="lineno">33487</span>                    num--;</div>
+<div class="line"><span class="lineno">33488</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a.html#aa13179c78e5380f9f0985ecdd734d67a">DoCoins</a>(num10);</div>
+<div class="line"><span class="lineno">33489</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num10].stack == 0 &amp;&amp; num9 == -1)</div>
+<div class="line"><span class="lineno">33490</span>                    {</div>
+<div class="line"><span class="lineno">33491</span>                        num9 = num10;</div>
+<div class="line"><span class="lineno">33492</span>                    }</div>
+<div class="line"><span class="lineno">33493</span>                }</div>
+<div class="line"><span class="lineno">33494</span>            }</div>
+<div class="line"><span class="lineno">33495</span>            <span class="keywordflow">if</span> (num &gt;= 1)</div>
+<div class="line"><span class="lineno">33496</span>            {</div>
+<div class="line"><span class="lineno">33497</span>                <span class="keywordflow">if</span> (num9 == -1)</div>
+<div class="line"><span class="lineno">33498</span>                {</div>
+<div class="line"><span class="lineno">33499</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33500</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">33501</span>                }</div>
+<div class="line"><span class="lineno">33502</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[num9].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">SetDefaults</a>(71);</div>
+<div class="line"><span class="lineno">33503</span>                num--;</div>
+<div class="line"><span class="lineno">33504</span>            }</div>
+<div class="line"><span class="lineno">33505</span>        }</div>
+<div class="line"><span class="lineno">33506</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">33507</span>        {</div>
+<div class="line"><span class="lineno">33508</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 58; j++)</div>
+<div class="line"><span class="lineno">33509</span>            {</div>
+<div class="line"><span class="lineno">33510</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">inventory</a>[j] = array[j].<a class="code hl_function" href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Clone</a>();</div>
+<div class="line"><span class="lineno">33511</span>            }</div>
+<div class="line"><span class="lineno">33512</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">33513</span>        }</div>
+<div class="line"><span class="lineno">33514</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33515</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b_html_a081e14dafe216c14bf115f75a341431b"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Terraria.Item.Clone</a></div><div class="ttdeci">Item Clone()</div><div class="ttdef"><b>Definition</b> Item.cs:49916</div></div>
+<div class="ttc" id="aclassTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74_html_a383996c95e68950a46d631d21abd7b74"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a></div><div class="ttdeci">int stack</div><div class="ttdef"><b>Definition</b> Item.cs:149</div></div>
+<div class="ttc" id="aclassTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9_html_adb2554f9d394eca69180ff503efd10d9"><div class="ttname"><a href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults</a></div><div class="ttdeci">void SetDefaults(int Type=0)</div><div class="ttdef"><b>Definition</b> Item.cs:47332</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a4c75233513c0231f0401eaeb64347f30_html_a4c75233513c0231f0401eaeb64347f30"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a4c75233513c0231f0401eaeb64347f30.html#a4c75233513c0231f0401eaeb64347f30">Terraria.Player.GetItemExpectedPrice</a></div><div class="ttdeci">void GetItemExpectedPrice(Item item, out long calcForSelling, out long calcForBuying)</div><div class="ttdef"><b>Definition</b> Player.cs:33543</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a_html_aa13179c78e5380f9f0985ecdd734d67a"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aa13179c78e5380f9f0985ecdd734d67a.html#aa13179c78e5380f9f0985ecdd734d67a">Terraria.Player.DoCoins</a></div><div class="ttdeci">void DoCoins(int i)</div><div class="ttdef"><b>Definition</b> Player.cs:37047</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71_html_aef3ab0267fa904e9347e897a71d45f71"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a></div><div class="ttdeci">Item[] inventory</div><div class="ttdef"><b>Definition</b> Player.cs:1257</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">ReLogic.Peripherals.RGB.Logitech.KeyName.L</a></div><div class="ttdeci">@ L</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Terraria.Item.Clone()</a>, <a class="el" href="../../d7/dbd/classTerraria_1_1GameContent_1_1ItemShopSellbackHelper_a19822a1b37981d2affa5a3c3096c170a.html#a19822a1b37981d2affa5a3c3096c170a">Terraria.GameContent.ItemShopSellbackHelper.GetAmount()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3fb960adb54be14dccdcaa8fd6b5aab3.html#a3fb960adb54be14dccdcaa8fd6b5aab3">Terraria.Main.shopSellbackHelper</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a50cea2a4a8e7505857fa97ecd8b4b06c.html#a50cea2a4a8e7505857fa97ecd8b4b06c">Terraria.UI.ItemSlot.LeftClick()</a>, and <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5.html#a2473f9c285a8090cde9266695364b5a5">Terraria.UI.ItemSlot.SellOrTrash()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

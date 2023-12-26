@@ -121,6 +121,48 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_a5d3ab75909f1e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 3065</span>    {</div>
+<div class="line"><span class="lineno"> 3066</span>        <span class="keywordflow">if</span> (file == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 3067</span>        {</div>
+<div class="line"><span class="lineno"> 3068</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 3069</span>        }</div>
+<div class="line"><span class="lineno"> 3070</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno"> 3071</span>        {</div>
+<div class="line"><span class="lineno"> 3072</span>            <span class="keywordtype">byte</span>[] buffer = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 3073</span>            <span class="keywordtype">int</span> num;</div>
+<div class="line"><span class="lineno"> 3074</span>            <span class="keywordflow">if</span> (cloudSave)</div>
+<div class="line"><span class="lineno"> 3075</span>            {</div>
+<div class="line"><span class="lineno"> 3076</span>                num = ((SocialAPI.Cloud != <span class="keyword">null</span>) ? 1 : 0);</div>
+<div class="line"><span class="lineno"> 3077</span>                <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno"> 3078</span>                {</div>
+<div class="line"><span class="lineno"> 3079</span>                    <span class="keywordtype">int</span> num2 = 24;</div>
+<div class="line"><span class="lineno"> 3080</span>                    buffer = <span class="keyword">new</span> <span class="keywordtype">byte</span>[num2];</div>
+<div class="line"><span class="lineno"> 3081</span>                    <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a>.Read(file, buffer, num2);</div>
+<div class="line"><span class="lineno"> 3082</span>                }</div>
+<div class="line"><span class="lineno"> 3083</span>            }</div>
+<div class="line"><span class="lineno"> 3084</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3085</span>            {</div>
+<div class="line"><span class="lineno"> 3086</span>                num = 0;</div>
+<div class="line"><span class="lineno"> 3087</span>            }</div>
+<div class="line"><span class="lineno"> 3088</span>            <span class="keyword">using </span>Stream input = ((num != 0) ? ((Stream)<span class="keyword">new</span> MemoryStream(buffer)) : ((Stream)new FileStream(file, FileMode.Open)));</div>
+<div class="line"><span class="lineno"> 3089</span>            <span class="keyword">using </span>BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(input);</div>
+<div class="line"><span class="lineno"> 3090</span>            <span class="keywordflow">if</span> (binaryReader.ReadInt32() &gt;= 135)</div>
+<div class="line"><span class="lineno"> 3091</span>            {</div>
+<div class="line"><span class="lineno"> 3092</span>                <span class="keywordflow">return</span> FileMetadata.Read(binaryReader, FileType.World);</div>
+<div class="line"><span class="lineno"> 3093</span>            }</div>
+<div class="line"><span class="lineno"> 3094</span>            <span class="keywordflow">return</span> FileMetadata.FromCurrentSettings(FileType.World);</div>
+<div class="line"><span class="lineno"> 3095</span>        }</div>
+<div class="line"><span class="lineno"> 3096</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno"> 3097</span>        {</div>
+<div class="line"><span class="lineno"> 3098</span>        }</div>
+<div class="line"><span class="lineno"> 3099</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 3100</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e_html_a6f4b8d52aae863d79ae6c622f3cf6c5e"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a></div><div class="ttdeci">static Terraria.Social.Base.CloudSocialModule Cloud</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a>, <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_ae463bcf339fec8c9ba5305cf3546fc2e.html#ae463bcf339fec8c9ba5305cf3546fc2e">Terraria.IO.FileMetadata.FromCurrentSettings()</a>, and <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_a9984595acf2b9ed3a8fea4819823e1dd.html#a9984595acf2b9ed3a8fea4819823e1dd">Terraria.IO.FileMetadata.Read()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a9992db2306a73ea5bdfdd605a3b00ebd.html#a9992db2306a73ea5bdfdd605a3b00ebd">Terraria.IO.WorldFile.IsValidWorld()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

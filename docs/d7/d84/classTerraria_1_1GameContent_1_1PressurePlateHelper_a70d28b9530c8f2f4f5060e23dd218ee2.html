@@ -121,6 +121,37 @@ $(function(){initNavTree('d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHe
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a736e7f0d758c5481cf32ca061005482a.html#a736e7f0d758c5481cf32ca061005482a">PressurePlatesPressed</a>.TryGetValue(location, out var value))</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        value[player] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; value.Length; i++)</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (value[i])</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            lock (<a class="code hl_variable" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_aa7ed19a9acb5322260b215f24086f6ac.html#aa7ed19a9acb5322260b215f24086f6ac">EntityCreationLock</a>)</div>
+<div class="line"><span class="lineno">  149</span>            {</div>
+<div class="line"><span class="lineno">  150</span>                <a class="code hl_variable" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a736e7f0d758c5481cf32ca061005482a.html#a736e7f0d758c5481cf32ca061005482a">PressurePlatesPressed</a>.Remove(location);</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>            <a class="code hl_function" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a49ca7802287ba0583ddf0c43203bb1ee.html#a49ca7802287ba0583ddf0c43203bb1ee">PokeLocation</a>(location);</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1PressurePlateHelper_a49ca7802287ba0583ddf0c43203bb1ee_html_a49ca7802287ba0583ddf0c43203bb1ee"><div class="ttname"><a href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a49ca7802287ba0583ddf0c43203bb1ee.html#a49ca7802287ba0583ddf0c43203bb1ee">Terraria.GameContent.PressurePlateHelper.PokeLocation</a></div><div class="ttdeci">static void PokeLocation(Point location)</div><div class="ttdef"><b>Definition</b> PressurePlateHelper.cs:156</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1PressurePlateHelper_a736e7f0d758c5481cf32ca061005482a_html_a736e7f0d758c5481cf32ca061005482a"><div class="ttname"><a href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a736e7f0d758c5481cf32ca061005482a.html#a736e7f0d758c5481cf32ca061005482a">Terraria.GameContent.PressurePlateHelper.PressurePlatesPressed</a></div><div class="ttdeci">static Dictionary&lt; Point, bool[]&gt; PressurePlatesPressed</div><div class="ttdef"><b>Definition</b> PressurePlateHelper.cs:11</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1PressurePlateHelper_aa7ed19a9acb5322260b215f24086f6ac_html_aa7ed19a9acb5322260b215f24086f6ac"><div class="ttname"><a href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_aa7ed19a9acb5322260b215f24086f6ac.html#aa7ed19a9acb5322260b215f24086f6ac">Terraria.GameContent.PressurePlateHelper.EntityCreationLock</a></div><div class="ttdeci">static object EntityCreationLock</div><div class="ttdef"><b>Definition</b> PressurePlateHelper.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_aa7ed19a9acb5322260b215f24086f6ac.html#aa7ed19a9acb5322260b215f24086f6ac">Terraria.GameContent.PressurePlateHelper.EntityCreationLock</a>, <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a49ca7802287ba0583ddf0c43203bb1ee.html#a49ca7802287ba0583ddf0c43203bb1ee">Terraria.GameContent.PressurePlateHelper.PokeLocation()</a>, and <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a736e7f0d758c5481cf32ca061005482a.html#a736e7f0d758c5481cf32ca061005482a">Terraria.GameContent.PressurePlateHelper.PressurePlatesPressed</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_a1bc02b547e7f2f960615937835f2be0c.html#a1bc02b547e7f2f960615937835f2be0c">Terraria.GameContent.PressurePlateHelper.ResetPlayer()</a>, <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_adbe2da5a55024047342a641c1111b477.html#adbe2da5a55024047342a641c1111b477">Terraria.GameContent.PressurePlateHelper.UpdatePlatePosition()</a>, and <a class="el" href="../../d7/d84/classTerraria_1_1GameContent_1_1PressurePlateHelper_acec5c9e6e7d34fcee9436c6bfecd0931.html#acec5c9e6e7d34fcee9436c6bfecd0931">Terraria.GameContent.PressurePlateHelper.UpdatePlayerPosition()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

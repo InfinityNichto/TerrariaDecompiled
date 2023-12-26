@@ -136,6 +136,33 @@ $(function(){initNavTree('da/d8a/classTerraria_1_1Wiring_a0d9bcf0cc0cdf7abd38d9c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2564</span>    {</div>
+<div class="line"><span class="lineno"> 2565</span>        <span class="keywordtype">int</span> num = j - tileCache.frameY / 18;</div>
+<div class="line"><span class="lineno"> 2566</span>        <span class="keywordtype">short</span> num2 = 18;</div>
+<div class="line"><span class="lineno"> 2567</span>        <span class="keywordflow">if</span> (tileCache.frameX &gt; 0)</div>
+<div class="line"><span class="lineno"> 2568</span>        {</div>
+<div class="line"><span class="lineno"> 2569</span>            num2 = -18;</div>
+<div class="line"><span class="lineno"> 2570</span>        }</div>
+<div class="line"><span class="lineno"> 2571</span>        <span class="keywordtype">bool</span> flag = tileCache.frameX &gt; 0;</div>
+<div class="line"><span class="lineno"> 2572</span>        <span class="keywordflow">if</span> (forcedStateWhereTrueIsOn.HasValue &amp;&amp; !forcedStateWhereTrueIsOn.Value == flag)</div>
+<div class="line"><span class="lineno"> 2573</span>        {</div>
+<div class="line"><span class="lineno"> 2574</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2575</span>        }</div>
+<div class="line"><span class="lineno"> 2576</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = num; k &lt; num + 6; k++)</div>
+<div class="line"><span class="lineno"> 2577</span>        {</div>
+<div class="line"><span class="lineno"> 2578</span>            Main.tile[i, k].frameX += num2;</div>
+<div class="line"><span class="lineno"> 2579</span>            <span class="keywordflow">if</span> (doSkipWires)</div>
+<div class="line"><span class="lineno"> 2580</span>            {</div>
+<div class="line"><span class="lineno"> 2581</span>                <a class="code hl_function" href="../../da/d8a/classTerraria_1_1Wiring_aaca74303fbf3f52eafb7e52ce7d8e27b.html#aaca74303fbf3f52eafb7e52ce7d8e27b">SkipWire</a>(i, k);</div>
+<div class="line"><span class="lineno"> 2582</span>            }</div>
+<div class="line"><span class="lineno"> 2583</span>        }</div>
+<div class="line"><span class="lineno"> 2584</span>        NetMessage.SendTileSquare(-1, i, num, 1, 6);</div>
+<div class="line"><span class="lineno"> 2585</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Wiring_aaca74303fbf3f52eafb7e52ce7d8e27b_html_aaca74303fbf3f52eafb7e52ce7d8e27b"><div class="ttname"><a href="../../da/d8a/classTerraria_1_1Wiring_aaca74303fbf3f52eafb7e52ce7d8e27b.html#aaca74303fbf3f52eafb7e52ce7d8e27b">Terraria.Wiring.SkipWire</a></div><div class="ttdeci">static void SkipWire(int x, int y)</div><div class="ttdef"><b>Definition</b> Wiring.cs:105</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae920fead53d67935735061efbeb09563.html#ae920fead53d67935735061efbeb09563">Terraria.Wiring.HitWireSingle()</a>, and <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a16e0f3b97f836adb7bdf666be0084852.html#a16e0f3b97f836adb7bdf666be0084852">Terraria.WorldGen.TryToggleLight()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

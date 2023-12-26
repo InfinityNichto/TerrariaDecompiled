@@ -131,6 +131,32 @@ $(function(){initNavTree('d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a55
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (cloud &amp;&amp; <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a>.Write(path, data, length);</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">string</span> parentFolderPath = <a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_aa13f61e1f53c6376d993847528d4b07f.html#aa13f61e1f53c6376d993847528d4b07f">GetParentFolderPath</a>(path);</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (parentFolderPath != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            Utils.TryCreatingDirectory(parentFolderPath);</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a4bad98794f0a9f69ecee01bd53403345.html#a4bad98794f0a9f69ecee01bd53403345">RemoveReadOnlyAttribute</a>(path);</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keyword">using </span>FileStream fileStream = File.Open(path, FileMode.Create);</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">while</span> (fileStream.Position &lt; length)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            fileStream.Write(data, (<span class="keywordtype">int</span>)fileStream.Position, Math.Min(length - (<span class="keywordtype">int</span>)fileStream.Position, 2048));</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e_html_a6f4b8d52aae863d79ae6c622f3cf6c5e"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a></div><div class="ttdeci">static Terraria.Social.Base.CloudSocialModule Cloud</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_a4bad98794f0a9f69ecee01bd53403345_html_a4bad98794f0a9f69ecee01bd53403345"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a4bad98794f0a9f69ecee01bd53403345.html#a4bad98794f0a9f69ecee01bd53403345">Terraria.Utilities.FileUtilities.RemoveReadOnlyAttribute</a></div><div class="ttdeci">static void RemoveReadOnlyAttribute(string path)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:135</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_aa13f61e1f53c6376d993847528d4b07f_html_aa13f61e1f53c6376d993847528d4b07f"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_aa13f61e1f53c6376d993847528d4b07f.html#aa13f61e1f53c6376d993847528d4b07f">Terraria.Utilities.FileUtilities.GetParentFolderPath</a></div><div class="ttdeci">static string GetParentFolderPath(string path, bool includeExtension=true)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:198</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a>, <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_aa13f61e1f53c6376d993847528d4b07f.html#aa13f61e1f53c6376d993847528d4b07f">Terraria.Utilities.FileUtilities.GetParentFolderPath()</a>, <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a4bad98794f0a9f69ecee01bd53403345.html#a4bad98794f0a9f69ecee01bd53403345">Terraria.Utilities.FileUtilities.RemoveReadOnlyAttribute()</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a20ff544f864fec62df413e995a9ca414.html#a20ff544f864fec62df413e995a9ca414">Terraria.Utils.TryCreatingDirectory()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1a9b687a3ecf6612b83b6eced28238f6.html#a1a9b687a3ecf6612b83b6eced28238f6">Terraria.IO.WorldFile.InternalSaveWorld()</a>, and <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_af31c17837a4a65f857fa548ce10b76ea.html#af31c17837a4a65f857fa548ce10b76ea">Terraria.Utilities.FileUtilities.WriteAllBytes()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

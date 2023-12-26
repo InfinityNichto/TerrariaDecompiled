@@ -126,6 +126,34 @@ $(function(){initNavTree('df/d0d/classTerraria_1_1NPC_ae683de6ebb13ddd68e87d9bcd
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">72569</span>    {</div>
+<div class="line"><span class="lineno">72570</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(x, y, 2))</div>
+<div class="line"><span class="lineno">72571</span>        {</div>
+<div class="line"><span class="lineno">72572</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">72573</span>        }</div>
+<div class="line"><span class="lineno">72574</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[x, y];</div>
+<div class="line"><span class="lineno">72575</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">tile2</a> = Main.tile[x, y - 1];</div>
+<div class="line"><span class="lineno">72576</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span> || <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">tile2</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">72577</span>        {</div>
+<div class="line"><span class="lineno">72578</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">72579</span>        }</div>
+<div class="line"><span class="lineno">72580</span>        <span class="keywordflow">if</span> (tile.wall &lt; 0 || tile.wall &gt;= <a class="code hl_class" href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">WallID</a>.<a class="code hl_variable" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Count</a> || !<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">wallTypes</a>[tile.wall])</div>
+<div class="line"><span class="lineno">72581</span>        {</div>
+<div class="line"><span class="lineno">72582</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">tile2</a>.wall &gt;= 0 &amp;&amp; <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">tile2</a>.wall &lt; <a class="code hl_class" href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">WallID</a>.<a class="code hl_variable" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Count</a>)</div>
+<div class="line"><span class="lineno">72583</span>            {</div>
+<div class="line"><span class="lineno">72584</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">wallTypes</a>[<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">tile2</a>.wall];</div>
+<div class="line"><span class="lineno">72585</span>            }</div>
+<div class="line"><span class="lineno">72586</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">72587</span>        }</div>
+<div class="line"><span class="lineno">72588</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">72589</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_html"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ReLogic.Content.Asset</a></div><div class="ttdef"><b>Definition</b> Asset.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9_html_a3072f148cf2c586360b0704a7f2c36d9"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a></div><div class="ttdeci">static readonly ushort Count</div><div class="ttdef"><b>Definition</b> WallID.cs:753</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_html"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">Terraria.ID.WallID</a></div><div class="ttdef"><b>Definition</b> WallID.cs:4</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

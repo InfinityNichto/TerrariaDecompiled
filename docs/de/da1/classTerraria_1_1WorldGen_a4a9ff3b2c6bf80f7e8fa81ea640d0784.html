@@ -126,6 +126,37 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a4a9ff3b2c6bf80f7e8fa
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 6029</span>    {</div>
+<div class="line"><span class="lineno"> 6030</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 6031</span>        x = Utils.Clamp(x, 2, Main.maxTilesX - 1 - 2);</div>
+<div class="line"><span class="lineno"> 6032</span>        startY = Math.Max(startY, 2);</div>
+<div class="line"><span class="lineno"> 6033</span>        endY = Math.Min(endY, Main.maxTilesY - 2);</div>
+<div class="line"><span class="lineno"> 6034</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6035</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startY; i &lt; endY; i++)</div>
+<div class="line"><span class="lineno"> 6036</span>        {</div>
+<div class="line"><span class="lineno"> 6037</span>            <span class="keywordflow">if</span> (Main.tile[x, i].wall == 0)</div>
+<div class="line"><span class="lineno"> 6038</span>            {</div>
+<div class="line"><span class="lineno"> 6039</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno"> 6040</span>                {</div>
+<div class="line"><span class="lineno"> 6041</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 6042</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_aa15ca40d760e57dec8b6fae25b3d484c.html#aa15ca40d760e57dec8b6fae25b3d484c">FillWallHolesInSpot</a>(x, i, 150))</div>
+<div class="line"><span class="lineno"> 6043</span>                    {</div>
+<div class="line"><span class="lineno"> 6044</span>                        num++;</div>
+<div class="line"><span class="lineno"> 6045</span>                    }</div>
+<div class="line"><span class="lineno"> 6046</span>                }</div>
+<div class="line"><span class="lineno"> 6047</span>            }</div>
+<div class="line"><span class="lineno"> 6048</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 6049</span>            {</div>
+<div class="line"><span class="lineno"> 6050</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 6051</span>            }</div>
+<div class="line"><span class="lineno"> 6052</span>        }</div>
+<div class="line"><span class="lineno"> 6053</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno"> 6054</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_aa15ca40d760e57dec8b6fae25b3d484c_html_aa15ca40d760e57dec8b6fae25b3d484c"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_aa15ca40d760e57dec8b6fae25b3d484c.html#aa15ca40d760e57dec8b6fae25b3d484c">Terraria.WorldGen.FillWallHolesInSpot</a></div><div class="ttdeci">static bool FillWallHolesInSpot(int originX, int originY, int maxWallsThreshold)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:6056</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_aa15ca40d760e57dec8b6fae25b3d484c.html#aa15ca40d760e57dec8b6fae25b3d484c">Terraria.WorldGen.FillWallHolesInSpot()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_afd339fe4167677be0629b96871e4d195.html#afd339fe4167677be0629b96871e4d195">Terraria.WorldGen.FillWallHolesInArea()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

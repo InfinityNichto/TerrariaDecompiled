@@ -123,6 +123,56 @@ $(function(){initNavTree('d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteracti
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../da/ddc/interfaceTerraria_1_1GameContent_1_1ObjectInteractions_1_1ISmartInteractCandidateProvider_a38508ae27905aaacbba1ff9ea64dea1e.html#a38508ae27905aaacbba1ff9ea64dea1e">Terraria.GameContent.ObjectInteractions.ISmartInteractCandidateProvider</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        candidate = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (!settings.FullInteraction)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> listOfProjectilesToInteractWithHack = settings.player.GetListOfProjectilesToInteractWithHack();</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   43</span>        Vector2 mousevec = settings.mousevec;</div>
+<div class="line"><span class="lineno">   44</span>        mousevec.ToPoint();</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">float</span> projectileDistanceFromCursor = -1f;</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; listOfProjectilesToInteractWithHack.Count; i++)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">int</span> num2 = listOfProjectilesToInteractWithHack[i];</div>
+<div class="line"><span class="lineno">   50</span>            Projectile projectile = Main.projectile[num2];</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (projectile.active)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordtype">float</span> num3 = projectile.Hitbox.Distance(mousevec);</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">if</span> (num == -1 || Main.projectile[num].Hitbox.Distance(mousevec) &gt; num3)</div>
+<div class="line"><span class="lineno">   55</span>                {</div>
+<div class="line"><span class="lineno">   56</span>                    num = num2;</div>
+<div class="line"><span class="lineno">   57</span>                    projectileDistanceFromCursor = num3;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (num3 == 0f)</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   62</span>                    num = num2;</div>
+<div class="line"><span class="lineno">   63</span>                    projectileDistanceFromCursor = num3;</div>
+<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   65</span>                }</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (settings.DemandOnlyZeroDistanceTargets &amp;&amp; !flag)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (num != -1)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="../../d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675.html#aedbc9f957f0b270c2fe913723ab19675">_candidate</a>.<a class="code hl_function" href="../../d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate_a72a0cc211e27d2ca98930c8903b88383.html#a72a0cc211e27d2ca98930c8903b88383">Reuse</a>(num, projectileDistanceFromCursor);</div>
+<div class="line"><span class="lineno">   75</span>            candidate = <a class="code hl_variable" href="../../d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675.html#aedbc9f957f0b270c2fe913723ab19675">_candidate</a>;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate_a72a0cc211e27d2ca98930c8903b88383_html_a72a0cc211e27d2ca98930c8903b88383"><div class="ttname"><a href="../../d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate_a72a0cc211e27d2ca98930c8903b88383.html#a72a0cc211e27d2ca98930c8903b88383">Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider.ReusableCandidate.Reuse</a></div><div class="ttdeci">void Reuse(int projectileIndex, float projectileDistanceFromCursor)</div><div class="ttdef"><b>Definition</b> ProjectileSmartInteractCandidateProvider.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675_html_aedbc9f957f0b270c2fe913723ab19675"><div class="ttname"><a href="../../d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675.html#aedbc9f957f0b270c2fe913723ab19675">Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider._candidate</a></div><div class="ttdeci">ReusableCandidate _candidate</div><div class="ttdef"><b>Definition</b> ProjectileSmartInteractCandidateProvider.cs:27</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d6c/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_aedbc9f957f0b270c2fe913723ab19675.html#aedbc9f957f0b270c2fe913723ab19675">Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider._candidate</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../d0/dde/structTerraria_1_1GameContent_1_1ObjectInteractions_1_1SmartInteractScanSettings_a05f020c6c8814637827b03f9d7e07e97.html#a05f020c6c8814637827b03f9d7e07e97">Terraria.GameContent.ObjectInteractions.SmartInteractScanSettings.DemandOnlyZeroDistanceTargets</a>, <a class="el" href="../../d0/dde/structTerraria_1_1GameContent_1_1ObjectInteractions_1_1SmartInteractScanSettings_a81938d4ff9b1346073d75dd301aab130.html#a81938d4ff9b1346073d75dd301aab130">Terraria.GameContent.ObjectInteractions.SmartInteractScanSettings.FullInteraction</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a62876f54c6e782df989ab7773166f5e1.html#a62876f54c6e782df989ab7773166f5e1">Terraria.Player.GetListOfProjectilesToInteractWithHack()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, <a class="el" href="../../d0/dde/structTerraria_1_1GameContent_1_1ObjectInteractions_1_1SmartInteractScanSettings_a6951f25c1dea4879eb81ba8e7ac7f862.html#a6951f25c1dea4879eb81ba8e7ac7f862">Terraria.GameContent.ObjectInteractions.SmartInteractScanSettings.mousevec</a>, <a class="el" href="../../d0/dde/structTerraria_1_1GameContent_1_1ObjectInteractions_1_1SmartInteractScanSettings_a27b623d018764babcde7066f51e6a4a1.html#a27b623d018764babcde7066f51e6a4a1">Terraria.GameContent.ObjectInteractions.SmartInteractScanSettings.player</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, and <a class="el" href="../../d3/dd2/classTerraria_1_1GameContent_1_1ObjectInteractions_1_1ProjectileSmartInteractCandidateProvider_1_1ReusableCandidate_a72a0cc211e27d2ca98930c8903b88383.html#a72a0cc211e27d2ca98930c8903b88383">Terraria.GameContent.ObjectInteractions.ProjectileSmartInteractCandidateProvider.ReusableCandidate.Reuse()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

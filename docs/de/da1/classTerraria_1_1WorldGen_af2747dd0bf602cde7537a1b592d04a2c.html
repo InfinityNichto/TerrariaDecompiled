@@ -131,6 +131,37 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_af2747dd0bf602cde7537
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">43432</span>    {</div>
+<div class="line"><span class="lineno">43433</span>        <span class="keywordflow">if</span> (x &lt; 5 || x &gt; Main.maxTilesX - 5 || y &lt; 5 || y &gt; Main.maxTilesY - 5)</div>
+<div class="line"><span class="lineno">43434</span>        {</div>
+<div class="line"><span class="lineno">43435</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43436</span>        }</div>
+<div class="line"><span class="lineno">43437</span>        <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">43438</span>        x--;</div>
+<div class="line"><span class="lineno">43439</span>        y--;</div>
+<div class="line"><span class="lineno">43440</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><span class="lineno">43441</span>        {</div>
+<div class="line"><span class="lineno">43442</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely;</div>
+<div class="line"><span class="lineno">43443</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><span class="lineno">43444</span>            {</div>
+<div class="line"><span class="lineno">43445</span>                tileSafely = Framing.GetTileSafely(x + i, y + j);</div>
+<div class="line"><span class="lineno">43446</span>                <span class="keywordflow">if</span> (tileSafely.active())</div>
+<div class="line"><span class="lineno">43447</span>                {</div>
+<div class="line"><span class="lineno">43448</span>                    result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43449</span>                }</div>
+<div class="line"><span class="lineno">43450</span>            }</div>
+<div class="line"><span class="lineno">43451</span>            tileSafely = Framing.GetTileSafely(x + i, y + 2);</div>
+<div class="line"><span class="lineno">43452</span>            <span class="keywordflow">if</span> (!tileSafely.nactive() || !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(tileSafely))</div>
+<div class="line"><span class="lineno">43453</span>            {</div>
+<div class="line"><span class="lineno">43454</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">43455</span>            }</div>
+<div class="line"><span class="lineno">43456</span>        }</div>
+<div class="line"><span class="lineno">43457</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">43458</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_adf8f859033cd5cb805b13aad59a55236.html#adf8f859033cd5cb805b13aad59a55236">Terraria.Framing.GetTileSafely()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, and <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

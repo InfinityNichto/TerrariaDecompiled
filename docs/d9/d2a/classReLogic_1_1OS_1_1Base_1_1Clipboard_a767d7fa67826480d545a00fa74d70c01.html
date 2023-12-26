@@ -121,7 +121,18 @@ $(function(){initNavTree('d9/d2a/classReLogic_1_1OS_1_1Base_1_1Clipboard_a767d7f
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder(clipboardText.Length);</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; clipboardText.Length; i++)</div>
+<div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> ((clipboardText[i] &gt;= <span class="charliteral">&#39; &#39;</span> &amp;&amp; clipboardText[i] != <span class="stringliteral">&#39;\u007f&#39;</span>) || (allowNewLine &amp;&amp; clipboardText[i] == <span class="charliteral">&#39;\n&#39;</span>))</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                stringBuilder.Append(clipboardText[i]);</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -126,6 +126,46 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_aaabadb7f7e95df
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  990</span>    {</div>
+<div class="line"><span class="lineno">  991</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  992</span>        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  993</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">NotUsingGamepad</a> &amp;&amp; Options.DisableLeftShiftTrashCan)</div>
+<div class="line"><span class="lineno">  994</span>        {</div>
+<div class="line"><span class="lineno">  995</span>            <span class="keywordflow">if</span> (!Options.DisableQuickTrash)</div>
+<div class="line"><span class="lineno">  996</span>            {</div>
+<div class="line"><span class="lineno">  997</span>                <span class="keywordflow">if</span> ((uint)context &lt;= 4u || context == 7 || context == 32)</div>
+<div class="line"><span class="lineno">  998</span>                {</div>
+<div class="line"><span class="lineno">  999</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1000</span>                }</div>
+<div class="line"><span class="lineno"> 1001</span>                <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">ControlInUse</a> &amp;&amp; flag)</div>
+<div class="line"><span class="lineno"> 1002</span>                {</div>
+<div class="line"><span class="lineno"> 1003</span>                    <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5.html#a2473f9c285a8090cde9266695364b5a5">SellOrTrash</a>(inv, context, slot);</div>
+<div class="line"><span class="lineno"> 1004</span>                    result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1005</span>                }</div>
+<div class="line"><span class="lineno"> 1006</span>            }</div>
+<div class="line"><span class="lineno"> 1007</span>        }</div>
+<div class="line"><span class="lineno"> 1008</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1009</span>        {</div>
+<div class="line"><span class="lineno"> 1010</span>            <span class="keywordflow">if</span> ((uint)context &lt;= 4u || context == 32)</div>
+<div class="line"><span class="lineno"> 1011</span>            {</div>
+<div class="line"><span class="lineno"> 1012</span>                flag = Main.player[Main.myPlayer].chest == -1;</div>
+<div class="line"><span class="lineno"> 1013</span>            }</div>
+<div class="line"><span class="lineno"> 1014</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">ShiftInUse</a> &amp;&amp; flag &amp;&amp; (!<a class="code hl_property" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">NotUsingGamepad</a> || !Options.DisableQuickTrash))</div>
+<div class="line"><span class="lineno"> 1015</span>            {</div>
+<div class="line"><span class="lineno"> 1016</span>                <a class="code hl_function" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5.html#a2473f9c285a8090cde9266695364b5a5">SellOrTrash</a>(inv, context, slot);</div>
+<div class="line"><span class="lineno"> 1017</span>                result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1018</span>            }</div>
+<div class="line"><span class="lineno"> 1019</span>        }</div>
+<div class="line"><span class="lineno"> 1020</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1021</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5_html_a2473f9c285a8090cde9266695364b5a5"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5.html#a2473f9c285a8090cde9266695364b5a5">Terraria.UI.ItemSlot.SellOrTrash</a></div><div class="ttdeci">static void SellOrTrash(Item[] inv, int context, int slot)</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:1023</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b_html_a5b454684e9628e7c82a86ac410eea67b"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">Terraria.UI.ItemSlot.NotUsingGamepad</a></div><div class="ttdeci">static bool NotUsingGamepad</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:175</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7_html_a8bfd4bd045c7860b3770bdcb5a75f0c7"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">Terraria.UI.ItemSlot.ShiftInUse</a></div><div class="ttdeci">static bool ShiftInUse</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:162</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910_html_aa7033809cb6ff3bb0deff5633c6af910"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">Terraria.UI.ItemSlot.ControlInUse</a></div><div class="ttdeci">static bool ControlInUse</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:173</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_aa7033809cb6ff3bb0deff5633c6af910.html#aa7033809cb6ff3bb0deff5633c6af910">Terraria.UI.ItemSlot.ControlInUse</a>, <a class="el" href="../../dd/dbb/classTerraria_1_1UI_1_1ItemSlot_1_1Options_aa3d7b1cd735c1f24ab8025bdb6ce940f.html#aa3d7b1cd735c1f24ab8025bdb6ce940f">Terraria.UI.ItemSlot.Options.DisableLeftShiftTrashCan</a>, <a class="el" href="../../dd/dbb/classTerraria_1_1UI_1_1ItemSlot_1_1Options_ac3910545a323cd670eb6ab99b3cf4b67.html#ac3910545a323cd670eb6ab99b3cf4b67">Terraria.UI.ItemSlot.Options.DisableQuickTrash</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5b454684e9628e7c82a86ac410eea67b.html#a5b454684e9628e7c82a86ac410eea67b">Terraria.UI.ItemSlot.NotUsingGamepad</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a2473f9c285a8090cde9266695364b5a5.html#a2473f9c285a8090cde9266695364b5a5">Terraria.UI.ItemSlot.SellOrTrash()</a>, and <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a8bfd4bd045c7860b3770bdcb5a75f0c7.html#a8bfd4bd045c7860b3770bdcb5a75f0c7">Terraria.UI.ItemSlot.ShiftInUse</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a50cea2a4a8e7505857fa97ecd8b4b06c.html#a50cea2a4a8e7505857fa97ecd8b4b06c">Terraria.UI.ItemSlot.LeftClick()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

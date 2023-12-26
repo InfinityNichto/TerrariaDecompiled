@@ -126,6 +126,163 @@ $(function(){initNavTree('d9/d9b/classTerraria_1_1WorldSections_a0a0d9a8d8d96cdc
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_a8fd4a966dae2d8d3d2031eafde454ba0.html#a8fd4a966dae2d8d3d2031eafde454ba0">mapSectionsLeft</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            x = -1;</div>
+<div class="line"><span class="lineno">  227</span>            y = -1;</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>        Stopwatch stopwatch = <span class="keyword">new</span> Stopwatch();</div>
+<div class="line"><span class="lineno">  231</span>        stopwatch.Start();</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  234</span>        Vector2 vector = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_aa676a60bd3e2d1069ccbd3ed492282bb.html#aa676a60bd3e2d1069ccbd3ed492282bb">centerPos</a>;</div>
+<div class="line"><span class="lineno">  235</span>        playerPos *= 0.0625f;</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordtype">int</span> sectionX = Netplay.GetSectionX((<span class="keywordtype">int</span>)playerPos.X);</div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">int</span> sectionY = Netplay.GetSectionY((<span class="keywordtype">int</span>)playerPos.Y);</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordtype">int</span> num3 = Netplay.GetSectionX((<span class="keywordtype">int</span>)vector.X);</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordtype">int</span> num4 = Netplay.GetSectionY((<span class="keywordtype">int</span>)vector.Y);</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordtype">int</span> num5;</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (num3 != sectionX || num4 != sectionY)</div>
+<div class="line"><span class="lineno">  242</span>        {</div>
+<div class="line"><span class="lineno">  243</span>            vector = playerPos;</div>
+<div class="line"><span class="lineno">  244</span>            num3 = sectionX;</div>
+<div class="line"><span class="lineno">  245</span>            num4 = sectionY;</div>
+<div class="line"><span class="lineno">  246</span>            num5 = 4;</div>
+<div class="line"><span class="lineno">  247</span>            x = sectionX;</div>
+<div class="line"><span class="lineno">  248</span>            y = sectionY;</div>
+<div class="line"><span class="lineno">  249</span>        }</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            num5 = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ac8066c68464d3fb51b05100b1a35e5b2.html#ac8066c68464d3fb51b05100b1a35e5b2">leg</a>;</div>
+<div class="line"><span class="lineno">  253</span>            x = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_abc7eead4e1363cc958a6b950de3d609a.html#abc7eead4e1363cc958a6b950de3d609a">X</a>;</div>
+<div class="line"><span class="lineno">  254</span>            y = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ab2e7fec65cc65b53db5858c4e5cf1340.html#ab2e7fec65cc65b53db5858c4e5cf1340">Y</a>;</div>
+<div class="line"><span class="lineno">  255</span>            num = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_a1286e198b57ab50652617fcbf3216c89.html#a1286e198b57ab50652617fcbf3216c89">xDir</a>;</div>
+<div class="line"><span class="lineno">  256</span>            num2 = <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">prevMap</a>.<a class="code hl_variable" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_acb82f194745d23fe8a1fe195a38d23c6.html#acb82f194745d23fe8a1fe195a38d23c6">yDir</a>;</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">int</span> num6 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(playerPos.X - ((<span class="keywordtype">float</span>)num3 + 0.5f) * 200f);</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordtype">int</span> num7 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(playerPos.Y - ((<span class="keywordtype">float</span>)num4 + 0.5f) * 150f);</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  261</span>        {</div>
+<div class="line"><span class="lineno">  262</span>            num = ((num6 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  263</span>            num2 = ((num7 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">int</span> num8 = 0;</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  269</span>        {</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">if</span> (num8 == 4)</div>
+<div class="line"><span class="lineno">  271</span>            {</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d4/d67/classException.html">Exception</a>(<span class="stringliteral">&quot;Infinite loop in WorldSections.GetNextMapDraw&quot;</span>);</div>
+<div class="line"><span class="lineno">  275</span>                }</div>
+<div class="line"><span class="lineno">  276</span>                flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  277</span>                x = num3;</div>
+<div class="line"><span class="lineno">  278</span>                y = num4;</div>
+<div class="line"><span class="lineno">  279</span>                num6 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(vector.X - ((<span class="keywordtype">float</span>)num3 + 0.5f) * 200f);</div>
+<div class="line"><span class="lineno">  280</span>                num7 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(vector.Y - ((<span class="keywordtype">float</span>)num4 + 0.5f) * 150f);</div>
+<div class="line"><span class="lineno">  281</span>                num = ((num6 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  282</span>                num2 = ((num7 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  283</span>                num5 = 4;</div>
+<div class="line"><span class="lineno">  284</span>                num8 = 0;</div>
+<div class="line"><span class="lineno">  285</span>            }</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span> (y &gt;= 0 &amp;&amp; y &lt; height &amp;&amp; x &gt;= 0 &amp;&amp; x &lt; <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5.html#a70ae22a8163324b1acf8fb11880912a5">width</a>)</div>
+<div class="line"><span class="lineno">  287</span>            {</div>
+<div class="line"><span class="lineno">  288</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ac4ff1cb903c76e11f756756e851d44ec.html#ac4ff1cb903c76e11f756756e851d44ec">data</a>[y * <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5.html#a70ae22a8163324b1acf8fb11880912a5">width</a> + x][2])</div>
+<div class="line"><span class="lineno">  290</span>                {</div>
+<div class="line"><span class="lineno">  291</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  292</span>                }</div>
+<div class="line"><span class="lineno">  293</span>            }</div>
+<div class="line"><span class="lineno">  294</span>            <span class="keywordtype">int</span> num9 = x - num3;</div>
+<div class="line"><span class="lineno">  295</span>            <span class="keywordtype">int</span> num10 = y - num4;</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">if</span> (num9 == 0 || num10 == 0)</div>
+<div class="line"><span class="lineno">  297</span>            {</div>
+<div class="line"><span class="lineno">  298</span>                <span class="keywordflow">if</span> (num5 == 4)</div>
+<div class="line"><span class="lineno">  299</span>                {</div>
+<div class="line"><span class="lineno">  300</span>                    <span class="keywordflow">if</span> (num9 == 0 &amp;&amp; num10 == 0)</div>
+<div class="line"><span class="lineno">  301</span>                    {</div>
+<div class="line"><span class="lineno">  302</span>                        <span class="keywordflow">if</span> (Math.Abs(num6) &gt; Math.Abs(num7))</div>
+<div class="line"><span class="lineno">  303</span>                        {</div>
+<div class="line"><span class="lineno">  304</span>                            y -= num2;</div>
+<div class="line"><span class="lineno">  305</span>                        }</div>
+<div class="line"><span class="lineno">  306</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  307</span>                        {</div>
+<div class="line"><span class="lineno">  308</span>                            x -= num;</div>
+<div class="line"><span class="lineno">  309</span>                        }</div>
+<div class="line"><span class="lineno">  310</span>                    }</div>
+<div class="line"><span class="lineno">  311</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  312</span>                    {</div>
+<div class="line"><span class="lineno">  313</span>                        <span class="keywordflow">if</span> (num9 != 0)</div>
+<div class="line"><span class="lineno">  314</span>                        {</div>
+<div class="line"><span class="lineno">  315</span>                            x += num9 / Math.Abs(num9);</div>
+<div class="line"><span class="lineno">  316</span>                        }</div>
+<div class="line"><span class="lineno">  317</span>                        <span class="keywordflow">if</span> (num10 != 0)</div>
+<div class="line"><span class="lineno">  318</span>                        {</div>
+<div class="line"><span class="lineno">  319</span>                            y += num10 / Math.Abs(num10);</div>
+<div class="line"><span class="lineno">  320</span>                        }</div>
+<div class="line"><span class="lineno">  321</span>                    }</div>
+<div class="line"><span class="lineno">  322</span>                    num5 = 0;</div>
+<div class="line"><span class="lineno">  323</span>                    num8 = -2;</div>
+<div class="line"><span class="lineno">  324</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  325</span>                }</div>
+<div class="line"><span class="lineno">  326</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  327</span>                {</div>
+<div class="line"><span class="lineno">  328</span>                    <span class="keywordflow">if</span> (num9 != 0)</div>
+<div class="line"><span class="lineno">  329</span>                    {</div>
+<div class="line"><span class="lineno">  330</span>                        num = ((num9 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  331</span>                    }</div>
+<div class="line"><span class="lineno">  332</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  333</span>                    {</div>
+<div class="line"><span class="lineno">  334</span>                        num2 = ((num10 &lt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  335</span>                    }</div>
+<div class="line"><span class="lineno">  336</span>                    x += num;</div>
+<div class="line"><span class="lineno">  337</span>                    y += num2;</div>
+<div class="line"><span class="lineno">  338</span>                    num5++;</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  341</span>                {</div>
+<div class="line"><span class="lineno">  342</span>                    num8++;</div>
+<div class="line"><span class="lineno">  343</span>                }</div>
+<div class="line"><span class="lineno">  344</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  345</span>                {</div>
+<div class="line"><span class="lineno">  346</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  347</span>                }</div>
+<div class="line"><span class="lineno">  348</span>            }</div>
+<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  350</span>            {</div>
+<div class="line"><span class="lineno">  351</span>                x += num;</div>
+<div class="line"><span class="lineno">  352</span>                y += num2;</div>
+<div class="line"><span class="lineno">  353</span>            }</div>
+<div class="line"><span class="lineno">  354</span>        }</div>
+<div class="line"><span class="lineno">  355</span>        <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_ac4ff1cb903c76e11f756756e851d44ec.html#ac4ff1cb903c76e11f756756e851d44ec">data</a>[y * <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5.html#a70ae22a8163324b1acf8fb11880912a5">width</a> + x][2] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  356</span>        <a class="code hl_variable" href="../../d9/d9b/classTerraria_1_1WorldSections_a8fd4a966dae2d8d3d2031eafde454ba0.html#a8fd4a966dae2d8d3d2031eafde454ba0">mapSectionsLeft</a>--;</div>
+<div class="line"><span class="lineno">  357</span>        prevMap.centerPos = playerPos;</div>
+<div class="line"><span class="lineno">  358</span>        prevMap.X = x;</div>
+<div class="line"><span class="lineno">  359</span>        prevMap.Y = y;</div>
+<div class="line"><span class="lineno">  360</span>        prevMap.leg = num5;</div>
+<div class="line"><span class="lineno">  361</span>        prevMap.xDir = num;</div>
+<div class="line"><span class="lineno">  362</span>        prevMap.yDir = num2;</div>
+<div class="line"><span class="lineno">  363</span>        stopwatch.Stop();</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  365</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5_html_a70ae22a8163324b1acf8fb11880912a5"><div class="ttname"><a href="../../d9/d9b/classTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5.html#a70ae22a8163324b1acf8fb11880912a5">Terraria.WorldSections.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> WorldSections.cs:42</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldSections_a8fd4a966dae2d8d3d2031eafde454ba0_html_a8fd4a966dae2d8d3d2031eafde454ba0"><div class="ttname"><a href="../../d9/d9b/classTerraria_1_1WorldSections_a8fd4a966dae2d8d3d2031eafde454ba0.html#a8fd4a966dae2d8d3d2031eafde454ba0">Terraria.WorldSections.mapSectionsLeft</a></div><div class="ttdeci">int mapSectionsLeft</div><div class="ttdef"><b>Definition</b> WorldSections.cs:48</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldSections_ac4ff1cb903c76e11f756756e851d44ec_html_ac4ff1cb903c76e11f756756e851d44ec"><div class="ttname"><a href="../../d9/d9b/classTerraria_1_1WorldSections_ac4ff1cb903c76e11f756756e851d44ec.html#ac4ff1cb903c76e11f756756e851d44ec">Terraria.WorldSections.data</a></div><div class="ttdeci">BitsByte[] data</div><div class="ttdef"><b>Definition</b> WorldSections.cs:46</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424_html_ad3726258a5f9f3f2d8e3ab5d5ca8c424"><div class="ttname"><a href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">Terraria.WorldSections.prevMap</a></div><div class="ttdeci">IterationState prevMap</div><div class="ttdef"><b>Definition</b> WorldSections.cs:56</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_a1286e198b57ab50652617fcbf3216c89_html_a1286e198b57ab50652617fcbf3216c89"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_a1286e198b57ab50652617fcbf3216c89.html#a1286e198b57ab50652617fcbf3216c89">Terraria.WorldSections.IterationState.xDir</a></div><div class="ttdeci">int xDir</div><div class="ttdef"><b>Definition</b> WorldSections.cs:19</div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_aa676a60bd3e2d1069ccbd3ed492282bb_html_aa676a60bd3e2d1069ccbd3ed492282bb"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_aa676a60bd3e2d1069ccbd3ed492282bb.html#aa676a60bd3e2d1069ccbd3ed492282bb">Terraria.WorldSections.IterationState.centerPos</a></div><div class="ttdeci">Vector2 centerPos</div><div class="ttdef"><b>Definition</b> WorldSections.cs:11</div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_ab2e7fec65cc65b53db5858c4e5cf1340_html_ab2e7fec65cc65b53db5858c4e5cf1340"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ab2e7fec65cc65b53db5858c4e5cf1340.html#ab2e7fec65cc65b53db5858c4e5cf1340">Terraria.WorldSections.IterationState.Y</a></div><div class="ttdeci">int Y</div><div class="ttdef"><b>Definition</b> WorldSections.cs:15</div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_abc7eead4e1363cc958a6b950de3d609a_html_abc7eead4e1363cc958a6b950de3d609a"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_abc7eead4e1363cc958a6b950de3d609a.html#abc7eead4e1363cc958a6b950de3d609a">Terraria.WorldSections.IterationState.X</a></div><div class="ttdeci">int X</div><div class="ttdef"><b>Definition</b> WorldSections.cs:13</div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_ac8066c68464d3fb51b05100b1a35e5b2_html_ac8066c68464d3fb51b05100b1a35e5b2"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ac8066c68464d3fb51b05100b1a35e5b2.html#ac8066c68464d3fb51b05100b1a35e5b2">Terraria.WorldSections.IterationState.leg</a></div><div class="ttdeci">int leg</div><div class="ttdef"><b>Definition</b> WorldSections.cs:17</div></div>
+<div class="ttc" id="astructTerraria_1_1WorldSections_1_1IterationState_acb82f194745d23fe8a1fe195a38d23c6_html_acb82f194745d23fe8a1fe195a38d23c6"><div class="ttname"><a href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_acb82f194745d23fe8a1fe195a38d23c6.html#acb82f194745d23fe8a1fe195a38d23c6">Terraria.WorldSections.IterationState.yDir</a></div><div class="ttdeci">int yDir</div><div class="ttdef"><b>Definition</b> WorldSections.cs:21</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_aa676a60bd3e2d1069ccbd3ed492282bb.html#aa676a60bd3e2d1069ccbd3ed492282bb">Terraria.WorldSections.IterationState.centerPos</a>, <a class="el" href="../../d9/d9b/classTerraria_1_1WorldSections_ac4ff1cb903c76e11f756756e851d44ec.html#ac4ff1cb903c76e11f756756e851d44ec">Terraria.WorldSections.data</a>, <a class="el" href="../../db/d90/classTerraria_1_1Netplay_a8a3ee13aeab7ca5a142d52fc6a7c94a8.html#a8a3ee13aeab7ca5a142d52fc6a7c94a8">Terraria.Netplay.GetSectionX()</a>, <a class="el" href="../../db/d90/classTerraria_1_1Netplay_aae951351c7bd7fff569a8f67e4a700a0.html#aae951351c7bd7fff569a8f67e4a700a0">Terraria.Netplay.GetSectionY()</a>, <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ac8066c68464d3fb51b05100b1a35e5b2.html#ac8066c68464d3fb51b05100b1a35e5b2">Terraria.WorldSections.IterationState.leg</a>, <a class="el" href="../../d9/d9b/classTerraria_1_1WorldSections_a8fd4a966dae2d8d3d2031eafde454ba0.html#a8fd4a966dae2d8d3d2031eafde454ba0">Terraria.WorldSections.mapSectionsLeft</a>, <a class="el" href="../../d9/d9b/classTerraria_1_1WorldSections_ad3726258a5f9f3f2d8e3ab5d5ca8c424.html#ad3726258a5f9f3f2d8e3ab5d5ca8c424">Terraria.WorldSections.prevMap</a>, <a class="el" href="../../d9/d9b/classTerraria_1_1WorldSections_a70ae22a8163324b1acf8fb11880912a5.html#a70ae22a8163324b1acf8fb11880912a5">Terraria.WorldSections.width</a>, <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_abc7eead4e1363cc958a6b950de3d609a.html#abc7eead4e1363cc958a6b950de3d609a">Terraria.WorldSections.IterationState.X</a>, <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_a1286e198b57ab50652617fcbf3216c89.html#a1286e198b57ab50652617fcbf3216c89">Terraria.WorldSections.IterationState.xDir</a>, <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_ab2e7fec65cc65b53db5858c4e5cf1340.html#ab2e7fec65cc65b53db5858c4e5cf1340">Terraria.WorldSections.IterationState.Y</a>, and <a class="el" href="../../de/d72/structTerraria_1_1WorldSections_1_1IterationState_acb82f194745d23fe8a1fe195a38d23c6.html#acb82f194745d23fe8a1fe195a38d23c6">Terraria.WorldSections.IterationState.yDir</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

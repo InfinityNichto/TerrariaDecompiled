@@ -126,6 +126,33 @@ $(function(){initNavTree('dc/ddf/classTerraria_1_1Chest_acf9b94880cfeaf5425c2859
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  719</span>    {</div>
+<div class="line"><span class="lineno">  720</span>        <span class="keywordflow">if</span> (id &lt; 0 || id &gt;= Main.chest.Length)</div>
+<div class="line"><span class="lineno">  721</span>        {</div>
+<div class="line"><span class="lineno">  722</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  723</span>        }</div>
+<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  725</span>        {</div>
+<div class="line"><span class="lineno">  726</span>            <a class="code hl_function" href="../../dc/ddf/classTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b.html#a3ea566cb6aef3308dad824429fe9796b">Chest</a> chest = Main.chest[id];</div>
+<div class="line"><span class="lineno">  727</span>            <span class="keywordflow">if</span> (chest != <span class="keyword">null</span> &amp;&amp; chest.x == X &amp;&amp; chest.y == Y)</div>
+<div class="line"><span class="lineno">  728</span>            {</div>
+<div class="line"><span class="lineno">  729</span>                Main.chest[id] = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  730</span>                <span class="keywordflow">if</span> (Main.player[Main.myPlayer].chest == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  731</span>                {</div>
+<div class="line"><span class="lineno">  732</span>                    Main.player[Main.myPlayer].chest = -1;</div>
+<div class="line"><span class="lineno">  733</span>                }</div>
+<div class="line"><span class="lineno">  734</span>                Recipe.FindRecipes();</div>
+<div class="line"><span class="lineno">  735</span>            }</div>
+<div class="line"><span class="lineno">  736</span>        }</div>
+<div class="line"><span class="lineno">  737</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  738</span>        {</div>
+<div class="line"><span class="lineno">  739</span>        }</div>
+<div class="line"><span class="lineno">  740</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b_html_a3ea566cb6aef3308dad824429fe9796b"><div class="ttname"><a href="../../dc/ddf/classTerraria_1_1Chest_a3ea566cb6aef3308dad824429fe9796b.html#a3ea566cb6aef3308dad824429fe9796b">Terraria.Chest.Chest</a></div><div class="ttdeci">Chest(bool bank=false)</div><div class="ttdef"><b>Definition</b> Chest.cs:59</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_ae41569d5e6adbe1a2eff6cfac7391480.html#ae41569d5e6adbe1a2eff6cfac7391480">Terraria.Recipe.FindRecipes()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a05f297dafeb5936070f43e8a49b5ce91.html#a05f297dafeb5936070f43e8a49b5ce91">Terraria.Chest.x</a>, and <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a66024685f339f6bc059218d4857248fc.html#a66024685f339f6bc059218d4857248fc">Terraria.Chest.y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

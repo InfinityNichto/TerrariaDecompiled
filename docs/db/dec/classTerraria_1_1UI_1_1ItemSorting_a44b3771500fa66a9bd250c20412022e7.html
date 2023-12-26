@@ -117,6 +117,74 @@ $(function(){initNavTree('db/dec/classTerraria_1_1UI_1_1ItemSorting_a44b3771500f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1228</span>    {</div>
+<div class="line"><span class="lineno"> 1229</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno"> 1230</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno"> 1231</span>        Item[] inventory = Main.player[Main.myPlayer].inventory;</div>
+<div class="line"><span class="lineno"> 1232</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 54; i &lt; 58; i++)</div>
+<div class="line"><span class="lineno"> 1233</span>        {</div>
+<div class="line"><span class="lineno"> 1234</span>            ItemSlot.SetGlow(i, 0.31f, chest: false);</div>
+<div class="line"><span class="lineno"> 1235</span>            Item item = inventory[i];</div>
+<div class="line"><span class="lineno"> 1236</span>            <span class="keywordflow">if</span> (item.IsAir)</div>
+<div class="line"><span class="lineno"> 1237</span>            {</div>
+<div class="line"><span class="lineno"> 1238</span>                list2.Add(i);</div>
+<div class="line"><span class="lineno"> 1239</span>            }</div>
+<div class="line"><span class="lineno"> 1240</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item.ammo != <a class="code hl_class" href="../../d1/dcd/classTerraria_1_1ID_1_1AmmoID.html">AmmoID</a>.<a class="code hl_variable" href="../../d1/dcd/classTerraria_1_1ID_1_1AmmoID_a8e0024cf3d9e59f1d512f25ca312f1aa.html#a8e0024cf3d9e59f1d512f25ca312f1aa">None</a>)</div>
+<div class="line"><span class="lineno"> 1241</span>            {</div>
+<div class="line"><span class="lineno"> 1242</span>                <span class="keywordflow">if</span> (!list.Contains(item.type))</div>
+<div class="line"><span class="lineno"> 1243</span>                {</div>
+<div class="line"><span class="lineno"> 1244</span>                    list.Add(item.type);</div>
+<div class="line"><span class="lineno"> 1245</span>                }</div>
+<div class="line"><span class="lineno"> 1246</span>                <a class="code hl_function" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5.html#afba04594a80f4338f0f3c540781805a5">RefillItemStack</a>(inventory, inventory[i], 0, 50);</div>
+<div class="line"><span class="lineno"> 1247</span>            }</div>
+<div class="line"><span class="lineno"> 1248</span>        }</div>
+<div class="line"><span class="lineno"> 1249</span>        <span class="keywordflow">if</span> (list2.Count &lt; 1)</div>
+<div class="line"><span class="lineno"> 1250</span>        {</div>
+<div class="line"><span class="lineno"> 1251</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1252</span>        }</div>
+<div class="line"><span class="lineno"> 1253</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 50; j++)</div>
+<div class="line"><span class="lineno"> 1254</span>        {</div>
+<div class="line"><span class="lineno"> 1255</span>            Item item2 = inventory[j];</div>
+<div class="line"><span class="lineno"> 1256</span>            <span class="keywordflow">if</span> (item2.stack &gt;= 1 &amp;&amp; item2.CanFillEmptyAmmoSlot() &amp;&amp; list.Contains(item2.type))</div>
+<div class="line"><span class="lineno"> 1257</span>            {</div>
+<div class="line"><span class="lineno"> 1258</span>                <span class="keywordtype">int</span> num = list2[0];</div>
+<div class="line"><span class="lineno"> 1259</span>                list2.Remove(num);</div>
+<div class="line"><span class="lineno"> 1260</span>                Utils.Swap(ref inventory[j], ref inventory[num]);</div>
+<div class="line"><span class="lineno"> 1261</span>                <a class="code hl_function" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5.html#afba04594a80f4338f0f3c540781805a5">RefillItemStack</a>(inventory, inventory[num], 0, 50);</div>
+<div class="line"><span class="lineno"> 1262</span>                <span class="keywordflow">if</span> (list2.Count == 0)</div>
+<div class="line"><span class="lineno"> 1263</span>                {</div>
+<div class="line"><span class="lineno"> 1264</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1265</span>                }</div>
+<div class="line"><span class="lineno"> 1266</span>            }</div>
+<div class="line"><span class="lineno"> 1267</span>        }</div>
+<div class="line"><span class="lineno"> 1268</span>        <span class="keywordflow">if</span> (list2.Count &lt; 1)</div>
+<div class="line"><span class="lineno"> 1269</span>        {</div>
+<div class="line"><span class="lineno"> 1270</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1271</span>        }</div>
+<div class="line"><span class="lineno"> 1272</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 50; k++)</div>
+<div class="line"><span class="lineno"> 1273</span>        {</div>
+<div class="line"><span class="lineno"> 1274</span>            Item item3 = inventory[k];</div>
+<div class="line"><span class="lineno"> 1275</span>            <span class="keywordflow">if</span> (item3.stack &gt;= 1 &amp;&amp; item3.CanFillEmptyAmmoSlot() &amp;&amp; item3.FitsAmmoSlot())</div>
+<div class="line"><span class="lineno"> 1276</span>            {</div>
+<div class="line"><span class="lineno"> 1277</span>                <span class="keywordtype">int</span> num2 = list2[0];</div>
+<div class="line"><span class="lineno"> 1278</span>                list2.Remove(num2);</div>
+<div class="line"><span class="lineno"> 1279</span>                Utils.Swap(ref inventory[k], ref inventory[num2]);</div>
+<div class="line"><span class="lineno"> 1280</span>                <a class="code hl_function" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5.html#afba04594a80f4338f0f3c540781805a5">RefillItemStack</a>(inventory, inventory[num2], 0, 50);</div>
+<div class="line"><span class="lineno"> 1281</span>                <span class="keywordflow">if</span> (list2.Count == 0)</div>
+<div class="line"><span class="lineno"> 1282</span>                {</div>
+<div class="line"><span class="lineno"> 1283</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1284</span>                }</div>
+<div class="line"><span class="lineno"> 1285</span>            }</div>
+<div class="line"><span class="lineno"> 1286</span>        }</div>
+<div class="line"><span class="lineno"> 1287</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1AmmoID_a8e0024cf3d9e59f1d512f25ca312f1aa_html_a8e0024cf3d9e59f1d512f25ca312f1aa"><div class="ttname"><a href="../../d1/dcd/classTerraria_1_1ID_1_1AmmoID_a8e0024cf3d9e59f1d512f25ca312f1aa.html#a8e0024cf3d9e59f1d512f25ca312f1aa">Terraria.ID.AmmoID.None</a></div><div class="ttdeci">static int None</div><div class="ttdef"><b>Definition</b> AmmoID.cs:104</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1AmmoID_html"><div class="ttname"><a href="../../d1/dcd/classTerraria_1_1ID_1_1AmmoID.html">Terraria.ID.AmmoID</a></div><div class="ttdef"><b>Definition</b> AmmoID.cs:6</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5_html_afba04594a80f4338f0f3c540781805a5"><div class="ttname"><a href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5.html#afba04594a80f4338f0f3c540781805a5">Terraria.UI.ItemSorting.RefillItemStack</a></div><div class="ttdeci">static void RefillItemStack(Item[] inv, Item itemToRefill, int loopStartIndex, int loopEndIndex)</div><div class="ttdef"><b>Definition</b> ItemSorting.cs:1421</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_a00a8adbf6bf125dc60bcae5127dd4f03.html#a00a8adbf6bf125dc60bcae5127dd4f03">Terraria.Item.ammo</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_abc51c9b76d1a290d04e02b7302279c3d.html#abc51c9b76d1a290d04e02b7302279c3d">Terraria.Item.CanFillEmptyAmmoSlot()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a9514ce299bcef4822d9bbb04a9b01fbf.html#a9514ce299bcef4822d9bbb04a9b01fbf">Terraria.Item.FitsAmmoSlot()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6092d6f80443cfc07335ec274665656d.html#a6092d6f80443cfc07335ec274665656d">Terraria.Item.IsAir</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../d1/dcd/classTerraria_1_1ID_1_1AmmoID_a8e0024cf3d9e59f1d512f25ca312f1aa.html#a8e0024cf3d9e59f1d512f25ca312f1aa">Terraria.ID.AmmoID.None</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_afba04594a80f4338f0f3c540781805a5.html#afba04594a80f4338f0f3c540781805a5">Terraria.UI.ItemSorting.RefillItemStack()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a15ad5ba58d85ce17549c8c462b166ee5.html#a15ad5ba58d85ce17549c8c462b166ee5">Terraria.UI.ItemSlot.SetGlow()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/dec/classTerraria_1_1UI_1_1ItemSorting_af8e22f77b9159d5f699ff575c9e8560f.html#af8e22f77b9159d5f699ff575c9e8560f">Terraria.UI.ItemSorting.SortAmmo()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

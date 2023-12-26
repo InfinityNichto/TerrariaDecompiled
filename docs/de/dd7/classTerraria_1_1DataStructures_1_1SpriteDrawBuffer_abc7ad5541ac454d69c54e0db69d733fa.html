@@ -151,6 +151,45 @@ $(function(){initNavTree('de/dd7/classTerraria_1_1DataStructures_1_1SpriteDrawBu
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        Vector4 sourceRectangle2 = <span class="keywordflow">default</span>(Vector4);</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (sourceRectangle.HasValue)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            sourceRectangle2.X = sourceRectangle.Value.X;</div>
+<div class="line"><span class="lineno">  164</span>            sourceRectangle2.Y = sourceRectangle.Value.Y;</div>
+<div class="line"><span class="lineno">  165</span>            sourceRectangle2.Z = sourceRectangle.Value.Width;</div>
+<div class="line"><span class="lineno">  166</span>            sourceRectangle2.W = sourceRectangle.Value.Height;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            sourceRectangle2.X = 0f;</div>
+<div class="line"><span class="lineno">  171</span>            sourceRectangle2.Y = 0f;</div>
+<div class="line"><span class="lineno">  172</span>            sourceRectangle2.Z = texture.Width;</div>
+<div class="line"><span class="lineno">  173</span>            sourceRectangle2.W = texture.Height;</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        Vector2 texCoordTL = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">  176</span>        texCoordTL.X = sourceRectangle2.X / (float)texture.Width;</div>
+<div class="line"><span class="lineno">  177</span>        texCoordTL.Y = sourceRectangle2.Y / (float)texture.Height;</div>
+<div class="line"><span class="lineno">  178</span>        Vector2 texCoordBR = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">  179</span>        texCoordBR.X = (sourceRectangle2.X + sourceRectangle2.Z) / (<span class="keywordtype">float</span>)texture.Width;</div>
+<div class="line"><span class="lineno">  180</span>        texCoordBR.Y = (sourceRectangle2.Y + sourceRectangle2.W) / (<span class="keywordtype">float</span>)texture.Height;</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> ((effect &amp; SpriteEffects.FlipVertically) != 0)</div>
+<div class="line"><span class="lineno">  182</span>        {</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordtype">float</span> y = texCoordBR.Y;</div>
+<div class="line"><span class="lineno">  184</span>            texCoordBR.Y = texCoordTL.Y;</div>
+<div class="line"><span class="lineno">  185</span>            texCoordTL.Y = y;</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> ((effect &amp; SpriteEffects.FlipHorizontally) != 0)</div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">float</span> x = texCoordBR.X;</div>
+<div class="line"><span class="lineno">  190</span>            texCoordBR.X = texCoordTL.X;</div>
+<div class="line"><span class="lineno">  191</span>            texCoordTL.X = x;</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>        <a class="code hl_function" href="../../de/dd7/classTerraria_1_1DataStructures_1_1SpriteDrawBuffer_a38e3b998b78f37c378b5481a0315cb6d.html#a38e3b998b78f37c378b5481a0315cb6d">QueueSprite</a>(destinationRectangle, -origin, colors, sourceRectangle2, texCoordTL, texCoordBR, texture, depth, rotation);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1SpriteDrawBuffer_a38e3b998b78f37c378b5481a0315cb6d_html_a38e3b998b78f37c378b5481a0315cb6d"><div class="ttname"><a href="../../de/dd7/classTerraria_1_1DataStructures_1_1SpriteDrawBuffer_a38e3b998b78f37c378b5481a0315cb6d.html#a38e3b998b78f37c378b5481a0315cb6d">Terraria.DataStructures.SpriteDrawBuffer.QueueSprite</a></div><div class="ttdeci">void QueueSprite(Vector4 destinationRect, Vector2 origin, VertexColors colors, Vector4 sourceRectangle, Vector2 texCoordTL, Vector2 texCoordBR, Texture2D texture, float depth, float rotation)</div><div class="ttdef"><b>Definition</b> SpriteDrawBuffer.cs:196</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/dd7/classTerraria_1_1DataStructures_1_1SpriteDrawBuffer_a38e3b998b78f37c378b5481a0315cb6d.html#a38e3b998b78f37c378b5481a0315cb6d">Terraria.DataStructures.SpriteDrawBuffer.QueueSprite()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

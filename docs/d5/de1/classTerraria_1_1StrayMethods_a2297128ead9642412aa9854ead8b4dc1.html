@@ -126,6 +126,26 @@ $(function(){initNavTree('d5/de1/classTerraria_1_1StrayMethods_a2297128ead964241
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   50</span>        Point point = position.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -1; i &lt;= 1; i++)</div>
+<div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            Collision.ExpandVertically(point.X + i, point.Y, out var topY, out var bottomY, expandUp, expandDown);</div>
+<div class="line"><span class="lineno">   54</span>            topY++;</div>
+<div class="line"><span class="lineno">   55</span>            bottomY--;</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (bottomY - topY &lt; 20)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a3d36193fc4343b52d6d0f3d7149b3e13.html#a3d36193fc4343b52d6d0f3d7149b3e13">Terraria.Collision.ExpandVertically()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_af998ad2acbc8e9008e7d83aad42551f2.html#af998ad2acbc8e9008e7d83aad42551f2">Terraria.NPC.AI()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

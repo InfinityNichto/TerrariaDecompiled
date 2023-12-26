@@ -117,6 +117,73 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a68ae97c979e78cb669b29a
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">48648</span>    {</div>
+<div class="line"><span class="lineno">48649</span>        <span class="keywordtype">int</span> num = item.healLife;</div>
+<div class="line"><span class="lineno">48650</span>        <span class="keywordtype">int</span> healMana = item.healMana;</div>
+<div class="line"><span class="lineno">48651</span>        <span class="keywordflow">if</span> (item.type == 3001)</div>
+<div class="line"><span class="lineno">48652</span>        {</div>
+<div class="line"><span class="lineno">48653</span>            <span class="keywordtype">int</span> healLife = item.healLife;</div>
+<div class="line"><span class="lineno">48654</span>            <span class="keywordtype">int</span> num2 = 120;</div>
+<div class="line"><span class="lineno">48655</span>            num = Main.rand.Next(healLife, num2 + 1);</div>
+<div class="line"><span class="lineno">48656</span>            <span class="keywordflow">if</span> (Main.myPlayer == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">48657</span>            {</div>
+<div class="line"><span class="lineno">48658</span>                <span class="keywordtype">float</span> num3 = Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">48659</span>                <span class="keywordtype">int</span> num4 = 0;</div>
+<div class="line"><span class="lineno">48660</span>                <span class="keywordflow">if</span> (num3 &lt;= 0.1f)</div>
+<div class="line"><span class="lineno">48661</span>                {</div>
+<div class="line"><span class="lineno">48662</span>                    num4 = 240;</div>
+<div class="line"><span class="lineno">48663</span>                }</div>
+<div class="line"><span class="lineno">48664</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num3 &lt;= 0.3f)</div>
+<div class="line"><span class="lineno">48665</span>                {</div>
+<div class="line"><span class="lineno">48666</span>                    num4 = 120;</div>
+<div class="line"><span class="lineno">48667</span>                }</div>
+<div class="line"><span class="lineno">48668</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num3 &lt;= 0.6f)</div>
+<div class="line"><span class="lineno">48669</span>                {</div>
+<div class="line"><span class="lineno">48670</span>                    num4 = 60;</div>
+<div class="line"><span class="lineno">48671</span>                }</div>
+<div class="line"><span class="lineno">48672</span>                <span class="keywordflow">if</span> (num4 &gt; 0)</div>
+<div class="line"><span class="lineno">48673</span>                {</div>
+<div class="line"><span class="lineno">48674</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a58c5359b0187cab053fc1c3e0f2bf7a4.html#a58c5359b0187cab053fc1c3e0f2bf7a4">SetImmuneTimeForAllTypes</a>(num4);</div>
+<div class="line"><span class="lineno">48675</span>                }</div>
+<div class="line"><span class="lineno">48676</span>            }</div>
+<div class="line"><span class="lineno">48677</span>        }</div>
+<div class="line"><span class="lineno">48678</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a45c2a93a2ce5a0f6353f576b76175452.html#a45c2a93a2ce5a0f6353f576b76175452">statLife</a> += num;</div>
+<div class="line"><span class="lineno">48679</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae69bc13a72843b160f9436488114225e.html#ae69bc13a72843b160f9436488114225e">statMana</a> += healMana;</div>
+<div class="line"><span class="lineno">48680</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a45c2a93a2ce5a0f6353f576b76175452.html#a45c2a93a2ce5a0f6353f576b76175452">statLife</a> &gt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a087b855f6245d3bcca1ce074e13fc4e5.html#a087b855f6245d3bcca1ce074e13fc4e5">statLifeMax2</a>)</div>
+<div class="line"><span class="lineno">48681</span>        {</div>
+<div class="line"><span class="lineno">48682</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a45c2a93a2ce5a0f6353f576b76175452.html#a45c2a93a2ce5a0f6353f576b76175452">statLife</a> = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a087b855f6245d3bcca1ce074e13fc4e5.html#a087b855f6245d3bcca1ce074e13fc4e5">statLifeMax2</a>;</div>
+<div class="line"><span class="lineno">48683</span>        }</div>
+<div class="line"><span class="lineno">48684</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae69bc13a72843b160f9436488114225e.html#ae69bc13a72843b160f9436488114225e">statMana</a> &gt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a>)</div>
+<div class="line"><span class="lineno">48685</span>        {</div>
+<div class="line"><span class="lineno">48686</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_ae69bc13a72843b160f9436488114225e.html#ae69bc13a72843b160f9436488114225e">statMana</a> = <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">statManaMax2</a>;</div>
+<div class="line"><span class="lineno">48687</span>        }</div>
+<div class="line"><span class="lineno">48688</span>        <span class="keywordflow">if</span> (num &gt; 0 &amp;&amp; Main.myPlayer == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">48689</span>        {</div>
+<div class="line"><span class="lineno">48690</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a463cb21a9d823fdd122d5a681731b444.html#a463cb21a9d823fdd122d5a681731b444">HealEffect</a>(num);</div>
+<div class="line"><span class="lineno">48691</span>        }</div>
+<div class="line"><span class="lineno">48692</span>        <span class="keywordflow">if</span> (healMana &gt; 0)</div>
+<div class="line"><span class="lineno">48693</span>        {</div>
+<div class="line"><span class="lineno">48694</span>            <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_acb4e91497854fdaf3957abc8098e4f81.html#acb4e91497854fdaf3957abc8098e4f81">AddBuff</a>(94, <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1ab12ae48e98e65e5f7e23f78bddb901.html#a1ab12ae48e98e65e5f7e23f78bddb901">manaSickTime</a>);</div>
+<div class="line"><span class="lineno">48695</span>            <span class="keywordflow">if</span> (Main.myPlayer == <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">48696</span>            {</div>
+<div class="line"><span class="lineno">48697</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a409976007f094281b7fd81503ab8cd3b.html#a409976007f094281b7fd81503ab8cd3b">ManaEffect</a>(healMana);</div>
+<div class="line"><span class="lineno">48698</span>            }</div>
+<div class="line"><span class="lineno">48699</span>        }</div>
+<div class="line"><span class="lineno">48700</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a087b855f6245d3bcca1ce074e13fc4e5_html_a087b855f6245d3bcca1ce074e13fc4e5"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a087b855f6245d3bcca1ce074e13fc4e5.html#a087b855f6245d3bcca1ce074e13fc4e5">Terraria.Player.statLifeMax2</a></div><div class="ttdeci">int statLifeMax2</div><div class="ttdef"><b>Definition</b> Player.cs:1557</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1ab12ae48e98e65e5f7e23f78bddb901_html_a1ab12ae48e98e65e5f7e23f78bddb901"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1ab12ae48e98e65e5f7e23f78bddb901.html#a1ab12ae48e98e65e5f7e23f78bddb901">Terraria.Player.manaSickTime</a></div><div class="ttdeci">static int manaSickTime</div><div class="ttdef"><b>Definition</b> Player.cs:749</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98_html_a233a5c0db849bf5bee077cfc8bb91a98"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a233a5c0db849bf5bee077cfc8bb91a98.html#a233a5c0db849bf5bee077cfc8bb91a98">Terraria.Player.statManaMax2</a></div><div class="ttdeci">int statManaMax2</div><div class="ttdef"><b>Definition</b> Player.cs:1565</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a409976007f094281b7fd81503ab8cd3b_html_a409976007f094281b7fd81503ab8cd3b"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a409976007f094281b7fd81503ab8cd3b.html#a409976007f094281b7fd81503ab8cd3b">Terraria.Player.ManaEffect</a></div><div class="ttdeci">void ManaEffect(int manaAmount)</div><div class="ttdef"><b>Definition</b> Player.cs:3837</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a45c2a93a2ce5a0f6353f576b76175452_html_a45c2a93a2ce5a0f6353f576b76175452"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a45c2a93a2ce5a0f6353f576b76175452.html#a45c2a93a2ce5a0f6353f576b76175452">Terraria.Player.statLife</a></div><div class="ttdeci">int statLife</div><div class="ttdef"><b>Definition</b> Player.cs:1559</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a463cb21a9d823fdd122d5a681731b444_html_a463cb21a9d823fdd122d5a681731b444"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a463cb21a9d823fdd122d5a681731b444.html#a463cb21a9d823fdd122d5a681731b444">Terraria.Player.HealEffect</a></div><div class="ttdeci">void HealEffect(int healAmount, bool broadcast=true)</div><div class="ttdef"><b>Definition</b> Player.cs:3828</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a58c5359b0187cab053fc1c3e0f2bf7a4_html_a58c5359b0187cab053fc1c3e0f2bf7a4"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a58c5359b0187cab053fc1c3e0f2bf7a4.html#a58c5359b0187cab053fc1c3e0f2bf7a4">Terraria.Player.SetImmuneTimeForAllTypes</a></div><div class="ttdeci">void SetImmuneTimeForAllTypes(int time)</div><div class="ttdef"><b>Definition</b> Player.cs:36009</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_acb4e91497854fdaf3957abc8098e4f81_html_acb4e91497854fdaf3957abc8098e4f81"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_acb4e91497854fdaf3957abc8098e4f81.html#acb4e91497854fdaf3957abc8098e4f81">Terraria.Player.AddBuff</a></div><div class="ttdeci">void AddBuff(int type, int timeToAdd, bool quiet=true, bool foodHack=false)</div><div class="ttdef"><b>Definition</b> Player.cs:4441</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ae69bc13a72843b160f9436488114225e_html_ae69bc13a72843b160f9436488114225e"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ae69bc13a72843b160f9436488114225e.html#ae69bc13a72843b160f9436488114225e">Terraria.Player.statMana</a></div><div class="ttdeci">int statMana</div><div class="ttdef"><b>Definition</b> Player.cs:1561</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d79/classTerraria_1_1Item_a6420be001b200a9aa75a1ba49d5ecc43.html#a6420be001b200a9aa75a1ba49d5ecc43">Terraria.Item.healLife</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a423124906d9b8c921d63281b911fb4d0.html#a423124906d9b8c921d63281b911fb4d0">Terraria.Item.healMana</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a73a1d6af46b1f641705f4f248b5c1094.html#a73a1d6af46b1f641705f4f248b5c1094">Terraria.Player.QuickHeal()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_acf8d2268f879f47593e017b7cbfb5157.html#acf8d2268f879f47593e017b7cbfb5157">Terraria.Player.QuickMana()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

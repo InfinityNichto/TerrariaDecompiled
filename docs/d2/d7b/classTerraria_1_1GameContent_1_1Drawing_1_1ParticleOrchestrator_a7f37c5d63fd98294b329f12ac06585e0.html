@@ -117,6 +117,89 @@ $(function(){initNavTree('d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Part
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  447</span>    {</div>
+<div class="line"><span class="lineno">  448</span>        <span class="keywordtype">float</span> num = 20f;</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><span class="lineno">  450</span>        {</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordtype">float</span> num2 = (float)Math.PI * 2f * Main.rand.NextFloatDirection() * 0.05f;</div>
+<div class="line"><span class="lineno">  452</span>            Color color = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.5f);</div>
+<div class="line"><span class="lineno">  453</span>            color.A /= 2;</div>
+<div class="line"><span class="lineno">  454</span>            Color value = color;</div>
+<div class="line"><span class="lineno">  455</span>            value.A = <span class="keywordtype">byte</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  456</span>            value = Color.Lerp(value, Color.White, 0.5f);</div>
+<div class="line"><span class="lineno">  457</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num3 = 0f; num3 &lt; 4f; num3 += 1f)</div>
+<div class="line"><span class="lineno">  458</span>            {</div>
+<div class="line"><span class="lineno">  459</span>                <a class="code hl_class" href="../../da/d12/classTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle.html">PrettySparkleParticle</a> prettySparkleParticle = <a class="code hl_variable" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">_poolPrettySparkle</a>.<a class="code hl_function" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">RequestParticle</a>();</div>
+<div class="line"><span class="lineno">  460</span>                Vector2 vector = ((float)Math.PI / 2f * num3 + num2).ToRotationVector2() * 4f;</div>
+<div class="line"><span class="lineno">  461</span>                prettySparkleParticle.ColorTint = color;</div>
+<div class="line"><span class="lineno">  462</span>                prettySparkleParticle.LocalPosition = settings.PositionInWorld;</div>
+<div class="line"><span class="lineno">  463</span>                prettySparkleParticle.Rotation = vector.ToRotation();</div>
+<div class="line"><span class="lineno">  464</span>                prettySparkleParticle.Scale = <span class="keyword">new</span> Vector2((num3 % 2f == 0f) ? 2f : 4f, 0.5f) * 1.1f;</div>
+<div class="line"><span class="lineno">  465</span>                prettySparkleParticle.FadeInNormalizedTime = 5<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-06f;</div>
+<div class="line"><span class="lineno">  466</span>                prettySparkleParticle.FadeOutNormalizedTime = 0.95f;</div>
+<div class="line"><span class="lineno">  467</span>                prettySparkleParticle.TimeToLive = num;</div>
+<div class="line"><span class="lineno">  468</span>                prettySparkleParticle.FadeOutEnd = num;</div>
+<div class="line"><span class="lineno">  469</span>                prettySparkleParticle.FadeInEnd = num / 2f;</div>
+<div class="line"><span class="lineno">  470</span>                prettySparkleParticle.FadeOutStart = num / 2f;</div>
+<div class="line"><span class="lineno">  471</span>                prettySparkleParticle.AdditiveAmount = 0.35f;</div>
+<div class="line"><span class="lineno">  472</span>                prettySparkleParticle.Velocity = -vector * 0.2f;</div>
+<div class="line"><span class="lineno">  473</span>                prettySparkleParticle.DrawVerticalAxis = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  474</span>                <span class="keywordflow">if</span> (num3 % 2f == 1f)</div>
+<div class="line"><span class="lineno">  475</span>                {</div>
+<div class="line"><span class="lineno">  476</span>                    prettySparkleParticle.Scale *= 0.9f;</div>
+<div class="line"><span class="lineno">  477</span>                    prettySparkleParticle.Velocity *= 0.9f;</div>
+<div class="line"><span class="lineno">  478</span>                }</div>
+<div class="line"><span class="lineno">  479</span>                Main.ParticleSystem_World_OverPlayers.Add(prettySparkleParticle);</div>
+<div class="line"><span class="lineno">  480</span>            }</div>
+<div class="line"><span class="lineno">  481</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num4 = 0f; num4 &lt; 4f; num4 += 1f)</div>
+<div class="line"><span class="lineno">  482</span>            {</div>
+<div class="line"><span class="lineno">  483</span>                <a class="code hl_class" href="../../da/d12/classTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle.html">PrettySparkleParticle</a> prettySparkleParticle2 = <a class="code hl_variable" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">_poolPrettySparkle</a>.<a class="code hl_function" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">RequestParticle</a>();</div>
+<div class="line"><span class="lineno">  484</span>                Vector2 vector2 = ((float)Math.PI / 2f * num4 + num2).ToRotationVector2() * 4f;</div>
+<div class="line"><span class="lineno">  485</span>                prettySparkleParticle2.ColorTint = value;</div>
+<div class="line"><span class="lineno">  486</span>                prettySparkleParticle2.LocalPosition = settings.PositionInWorld;</div>
+<div class="line"><span class="lineno">  487</span>                prettySparkleParticle2.Rotation = vector2.ToRotation();</div>
+<div class="line"><span class="lineno">  488</span>                prettySparkleParticle2.Scale = <span class="keyword">new</span> Vector2((num4 % 2f == 0f) ? 2f : 4f, 0.5f) * 0.7f;</div>
+<div class="line"><span class="lineno">  489</span>                prettySparkleParticle2.FadeInNormalizedTime = 5<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-06f;</div>
+<div class="line"><span class="lineno">  490</span>                prettySparkleParticle2.FadeOutNormalizedTime = 0.95f;</div>
+<div class="line"><span class="lineno">  491</span>                prettySparkleParticle2.TimeToLive = num;</div>
+<div class="line"><span class="lineno">  492</span>                prettySparkleParticle2.FadeOutEnd = num;</div>
+<div class="line"><span class="lineno">  493</span>                prettySparkleParticle2.FadeInEnd = num / 2f;</div>
+<div class="line"><span class="lineno">  494</span>                prettySparkleParticle2.FadeOutStart = num / 2f;</div>
+<div class="line"><span class="lineno">  495</span>                prettySparkleParticle2.Velocity = vector2 * 0.2f;</div>
+<div class="line"><span class="lineno">  496</span>                prettySparkleParticle2.DrawVerticalAxis = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  497</span>                <span class="keywordflow">if</span> (num4 % 2f == 1f)</div>
+<div class="line"><span class="lineno">  498</span>                {</div>
+<div class="line"><span class="lineno">  499</span>                    prettySparkleParticle2.Scale *= 1.2f;</div>
+<div class="line"><span class="lineno">  500</span>                    prettySparkleParticle2.Velocity *= 1.2f;</div>
+<div class="line"><span class="lineno">  501</span>                }</div>
+<div class="line"><span class="lineno">  502</span>                Main.ParticleSystem_World_OverPlayers.Add(prettySparkleParticle2);</div>
+<div class="line"><span class="lineno">  503</span>                <span class="keywordflow">if</span> (i == 0)</div>
+<div class="line"><span class="lineno">  504</span>                {</div>
+<div class="line"><span class="lineno">  505</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 1; j++)</div>
+<div class="line"><span class="lineno">  506</span>                    {</div>
+<div class="line"><span class="lineno">  507</span>                        Dust dust = Dust.NewDustPerfect(settings.PositionInWorld, 306, vector2.RotatedBy(Main.rand.NextFloatDirection() * ((<span class="keywordtype">float</span>)Math.PI * 2f) * 0.025f) * Main.rand.NextFloat());</div>
+<div class="line"><span class="lineno">  508</span>                        dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  509</span>                        dust.scale = 1.4f;</div>
+<div class="line"><span class="lineno">  510</span>                        dust.fadeIn = 1.2f;</div>
+<div class="line"><span class="lineno">  511</span>                        dust.color = color;</div>
+<div class="line"><span class="lineno">  512</span>                        Dust dust2 = Dust.NewDustPerfect(settings.PositionInWorld, 306, -vector2.RotatedBy(Main.rand.NextFloatDirection() * ((<span class="keywordtype">float</span>)Math.PI * 2f) * 0.025f) * Main.rand.NextFloat());</div>
+<div class="line"><span class="lineno">  513</span>                        dust2.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  514</span>                        dust2.scale = 1.4f;</div>
+<div class="line"><span class="lineno">  515</span>                        dust2.fadeIn = 1.2f;</div>
+<div class="line"><span class="lineno">  516</span>                        dust2.color = color;</div>
+<div class="line"><span class="lineno">  517</span>                    }</div>
+<div class="line"><span class="lineno">  518</span>                }</div>
+<div class="line"><span class="lineno">  519</span>            }</div>
+<div class="line"><span class="lineno">  520</span>        }</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8_html_abfef5c2dc81feeec45f95e8179b82ff8"><div class="ttname"><a href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">Terraria.GameContent.Drawing.ParticleOrchestrator._poolPrettySparkle</a></div><div class="ttdeci">static ParticlePool&lt; PrettySparkleParticle &gt; _poolPrettySparkle</div><div class="ttdef"><b>Definition</b> ParticleOrchestrator.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae_html_a1f9a58d4ae85e98ad9ce442bb5c21bae"><div class="ttname"><a href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">Terraria.Graphics.Renderers.ParticlePool.RequestParticle</a></div><div class="ttdeci">T RequestParticle()</div><div class="ttdef"><b>Definition</b> ParticlePool.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle_html"><div class="ttname"><a href="../../da/d12/classTerraria_1_1Graphics_1_1Renderers_1_1PrettySparkleParticle.html">Terraria.Graphics.Renderers.PrettySparkleParticle</a></div><div class="ttdef"><b>Definition</b> PrettySparkleParticle.cs:9</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a3a3ea00cfc35332cedf6e5e9a32e94da"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a3a3ea00cfc35332cedf6e5e9a32e94da">ReLogic.Peripherals.RGB.Logitech.KeyName.E</a></div><div class="ttdeci">@ E</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_abfef5c2dc81feeec45f95e8179b82ff8.html#abfef5c2dc81feeec45f95e8179b82ff8">Terraria.GameContent.Drawing.ParticleOrchestrator._poolPrettySparkle</a>, <a class="el" href="../../dd/d5c/classTerraria_1_1Graphics_1_1Renderers_1_1ParticleRenderer_ac78afb0bc22caa02507b26bcefab2fdc.html#ac78afb0bc22caa02507b26bcefab2fdc">Terraria.Graphics.Renderers.ParticleRenderer.Add()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_ac85a67b8ea46324cf328fbf3b3e227a2.html#ac85a67b8ea46324cf328fbf3b3e227a2">Terraria.Dust.NewDustPerfect()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aae9cfe89dca9ef26a596c56ca439bd97.html#aae9cfe89dca9ef26a596c56ca439bd97">Terraria.Main.ParticleSystem_World_OverPlayers</a>, <a class="el" href="../../d5/dfa/structTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestraSettings_a11c5abcab47bcfeb182756b5c3744ec9.html#a11c5abcab47bcfeb182756b5c3744ec9">Terraria.GameContent.Drawing.ParticleOrchestraSettings.PositionInWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, and <a class="el" href="../../db/dcd/classTerraria_1_1Graphics_1_1Renderers_1_1ParticlePool_a1f9a58d4ae85e98ad9ce442bb5c21bae.html#a1f9a58d4ae85e98ad9ce442bb5c21bae">Terraria.Graphics.Renderers.ParticlePool&lt; T &gt;.RequestParticle()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1ParticleOrchestrator_a67fdbd42f419b929cf4f2442be01f2f3.html#a67fdbd42f419b929cf4f2442be01f2f3">Terraria.GameContent.Drawing.ParticleOrchestrator.SpawnParticlesDirect()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

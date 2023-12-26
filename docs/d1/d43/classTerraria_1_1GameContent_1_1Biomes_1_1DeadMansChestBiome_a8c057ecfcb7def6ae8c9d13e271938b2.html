@@ -121,6 +121,71 @@ $(function(){initNavTree('d1/d43/classTerraria_1_1GameContent_1_1Biomes_1_1DeadM
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordtype">int</span>[] array = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_variable" href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Count</a>];</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = position.X; i &lt; position.X + 2; i++)</div>
+<div class="line"><span class="lineno">  240</span>        {</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = position.Y - 4; j &lt;= position.Y; j++)</div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">if</span> (tile.active() &amp;&amp; !Main.tileFrameImportant[tile.type] &amp;&amp; Main.tileSolid[tile.type])</div>
+<div class="line"><span class="lineno">  245</span>                {</div>
+<div class="line"><span class="lineno">  246</span>                    array[tile.type]++;</div>
+<div class="line"><span class="lineno">  247</span>                }</div>
+<div class="line"><span class="lineno">  248</span>                <span class="keywordflow">if</span> ((tile.active() &amp;&amp; !<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_aba144c56fe67993a5d0f123cb4427b85.html#aba144c56fe67993a5d0f123cb4427b85">CanBeClearedDuringGeneration</a>[tile.type]) || (tile.active() &amp;&amp; <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b.html#a97a493c4a4123016bdd9cfe27cc45a3b">IsAContainer</a>[tile.type]))</div>
+<div class="line"><span class="lineno">  249</span>                {</div>
+<div class="line"><span class="lineno">  250</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  251</span>                }</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = position.X - 1; k &lt; position.X + 2 + 1; k++)</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = position.Y - 4 - 1; l &lt;= position.Y - 4 + 2; l++)</div>
+<div class="line"><span class="lineno">  257</span>            {</div>
+<div class="line"><span class="lineno">  258</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[k, l];</div>
+<div class="line"><span class="lineno">  259</span>                <span class="keywordflow">if</span> (!tile2.active() || <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b.html#a97a493c4a4123016bdd9cfe27cc45a3b">IsAContainer</a>[tile2.type])</div>
+<div class="line"><span class="lineno">  260</span>                {</div>
+<div class="line"><span class="lineno">  261</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  262</span>                }</div>
+<div class="line"><span class="lineno">  263</span>            }</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">int</span> num = 2;</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordtype">int</span> num2 = position.X - num;</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordtype">int</span> num3 = position.Y - 4 - num;</div>
+<div class="line"><span class="lineno">  268</span>        <span class="keywordtype">int</span> num4 = position.X + num + 1;</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordtype">int</span> num5 = position.Y - 4 + num + 1;</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = num2; m &lt;= num4; m++)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = num3; n &lt;= num5; n++)</div>
+<div class="line"><span class="lineno">  273</span>            {</div>
+<div class="line"><span class="lineno">  274</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile3 = Main.tile[m, n];</div>
+<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">if</span> (tile3.active() &amp;&amp; <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b.html#a97a493c4a4123016bdd9cfe27cc45a3b">IsAContainer</a>[tile3.type])</div>
+<div class="line"><span class="lineno">  276</span>                {</div>
+<div class="line"><span class="lineno">  277</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  278</span>                }</div>
+<div class="line"><span class="lineno">  279</span>            }</div>
+<div class="line"><span class="lineno">  280</span>        }</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordtype">int</span> num6 = -1;</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num7 = 0; num7 &lt; array.Length; num7++)</div>
+<div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (num6 == -1 || array[num6] &lt; array[num7])</div>
+<div class="line"><span class="lineno">  285</span>            {</div>
+<div class="line"><span class="lineno">  286</span>                num6 = num7;</div>
+<div class="line"><span class="lineno">  287</span>            }</div>
+<div class="line"><span class="lineno">  288</span>        }</div>
+<div class="line"><span class="lineno">  289</span>        <a class="code hl_variable" href="../../d1/d43/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_a3ec7a33de270b2693ca99698052eb22e.html#a3ec7a33de270b2693ca99698052eb22e">_boulderPlacementSpots</a>.Add(<span class="keyword">new</span> BoulderPlacementAttempt(position, yPush - 1, 4, num6));</div>
+<div class="line"><span class="lineno">  290</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_a3ec7a33de270b2693ca99698052eb22e_html_a3ec7a33de270b2693ca99698052eb22e"><div class="ttname"><a href="../../d1/d43/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_a3ec7a33de270b2693ca99698052eb22e.html#a3ec7a33de270b2693ca99698052eb22e">Terraria.GameContent.Biomes.DeadMansChestBiome._boulderPlacementSpots</a></div><div class="ttdeci">List&lt; BoulderPlacementAttempt &gt; _boulderPlacementSpots</div><div class="ttdef"><b>Definition</b> DeadMansChestBiome.cs:89</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b_html_a97a493c4a4123016bdd9cfe27cc45a3b"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b.html#a97a493c4a4123016bdd9cfe27cc45a3b">Terraria.ID.TileID.Sets.IsAContainer</a></div><div class="ttdeci">static bool[] IsAContainer</div><div class="ttdef"><b>Definition</b> TileID.cs:297</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_aba144c56fe67993a5d0f123cb4427b85_html_aba144c56fe67993a5d0f123cb4427b85"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_aba144c56fe67993a5d0f123cb4427b85.html#aba144c56fe67993a5d0f123cb4427b85">Terraria.ID.TileID.Sets.CanBeClearedDuringGeneration</a></div><div class="ttdeci">static bool[] CanBeClearedDuringGeneration</div><div class="ttdef"><b>Definition</b> TileID.cs:229</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8_html_a026ffec527bba01f7e6902a8e227a5f8"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Terraria.ID.TileID.Count</a></div><div class="ttdeci">static readonly ushort Count</div><div class="ttdef"><b>Definition</b> TileID.cs:1698</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d43/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_a3ec7a33de270b2693ca99698052eb22e.html#a3ec7a33de270b2693ca99698052eb22e">Terraria.GameContent.Biomes.DeadMansChestBiome._boulderPlacementSpots</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_aba144c56fe67993a5d0f123cb4427b85.html#aba144c56fe67993a5d0f123cb4427b85">Terraria.ID.TileID.Sets.CanBeClearedDuringGeneration</a>, <a class="el" href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Terraria.ID.TileID.Count</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a97a493c4a4123016bdd9cfe27cc45a3b.html#a97a493c4a4123016bdd9cfe27cc45a3b">Terraria.ID.TileID.Sets.IsAContainer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae338dce4937a8f86359adf78ce853f21.html#ae338dce4937a8f86359adf78ce853f21">Terraria.Main.tileFrameImportant</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d43/classTerraria_1_1GameContent_1_1Biomes_1_1DeadMansChestBiome_af3f66815a6ecd83c03227ae3890fa486.html#af3f66815a6ecd83c03227ae3890fa486">Terraria.GameContent.Biomes.DeadMansChestBiome.FindBoulderTrapSpot()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

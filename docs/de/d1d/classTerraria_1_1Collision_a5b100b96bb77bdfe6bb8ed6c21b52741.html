@@ -121,6 +121,71 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a5b100b96bb77bdfe6bb
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1226</span>    {</div>
+<div class="line"><span class="lineno"> 1227</span>        Point point = pos.ToTileCoordinates();</div>
+<div class="line"><span class="lineno"> 1228</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(point.X, point.Y, 1))</div>
+<div class="line"><span class="lineno"> 1229</span>        {</div>
+<div class="line"><span class="lineno"> 1230</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1231</span>        }</div>
+<div class="line"><span class="lineno"> 1232</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[point.X, point.Y];</div>
+<div class="line"><span class="lineno"> 1233</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span> || !tile.active() || tile.inActive() || !Main.tileSolid[tile.type])</div>
+<div class="line"><span class="lineno"> 1234</span>        {</div>
+<div class="line"><span class="lineno"> 1235</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1236</span>        }</div>
+<div class="line"><span class="lineno"> 1237</span>        <span class="keywordflow">if</span> (treatPlatformsAsNonSolid &amp;&amp; tile.type &gt; 0 &amp;&amp; tile.type &lt;= <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_variable" href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Count</a> &amp;&amp; (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[tile.type] || tile.type == 380))</div>
+<div class="line"><span class="lineno"> 1238</span>        {</div>
+<div class="line"><span class="lineno"> 1239</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1240</span>        }</div>
+<div class="line"><span class="lineno"> 1241</span>        <span class="keywordtype">int</span> num = tile.blockType();</div>
+<div class="line"><span class="lineno"> 1242</span>        <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno"> 1243</span>        {</div>
+<div class="line"><span class="lineno"> 1244</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 1245</span>            <span class="keywordflow">if</span> (pos.X &gt;= (<span class="keywordtype">float</span>)(point.X * 16) &amp;&amp; pos.X &lt;= (<span class="keywordtype">float</span>)(point.X * 16 + 16) &amp;&amp; pos.Y &gt;= (<span class="keywordtype">float</span>)(point.Y * 16))</div>
+<div class="line"><span class="lineno"> 1246</span>            {</div>
+<div class="line"><span class="lineno"> 1247</span>                <span class="keywordflow">return</span> pos.Y &lt;= (float)(point.Y * 16 + 16);</div>
+<div class="line"><span class="lineno"> 1248</span>            }</div>
+<div class="line"><span class="lineno"> 1249</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1250</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1251</span>            <span class="keywordflow">if</span> (pos.X &gt;= (<span class="keywordtype">float</span>)(point.X * 16) &amp;&amp; pos.X &lt;= (<span class="keywordtype">float</span>)(point.X * 16 + 16) &amp;&amp; pos.Y &gt;= (<span class="keywordtype">float</span>)(point.Y * 16 + 8))</div>
+<div class="line"><span class="lineno"> 1252</span>            {</div>
+<div class="line"><span class="lineno"> 1253</span>                <span class="keywordflow">return</span> pos.Y &lt;= (float)(point.Y * 16 + 16);</div>
+<div class="line"><span class="lineno"> 1254</span>            }</div>
+<div class="line"><span class="lineno"> 1255</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1256</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1257</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1258</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1259</span>        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 1260</span>        {</div>
+<div class="line"><span class="lineno"> 1261</span>            <span class="keywordflow">if</span> (pos.X &lt; (<span class="keywordtype">float</span>)(point.X * 16) &amp;&amp; pos.X &gt; (<span class="keywordtype">float</span>)(point.X * 16 + 16) &amp;&amp; pos.Y &lt; (<span class="keywordtype">float</span>)(point.Y * 16) &amp;&amp; pos.Y &gt; (<span class="keywordtype">float</span>)(point.Y * 16 + 16))</div>
+<div class="line"><span class="lineno"> 1262</span>            {</div>
+<div class="line"><span class="lineno"> 1263</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1264</span>            }</div>
+<div class="line"><span class="lineno"> 1265</span>            <span class="keywordtype">float</span> num2 = pos.X % 16f;</div>
+<div class="line"><span class="lineno"> 1266</span>            <span class="keywordtype">float</span> num3 = pos.Y % 16f;</div>
+<div class="line"><span class="lineno"> 1267</span>            <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno"> 1268</span>            {</div>
+<div class="line"><span class="lineno"> 1269</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1270</span>                <span class="keywordflow">return</span> num2 + num3 &gt;= 16f;</div>
+<div class="line"><span class="lineno"> 1271</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1272</span>                <span class="keywordflow">return</span> num3 &gt;= num2;</div>
+<div class="line"><span class="lineno"> 1273</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 1274</span>                <span class="keywordflow">return</span> num3 &lt;= num2;</div>
+<div class="line"><span class="lineno"> 1275</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1276</span>                <span class="keywordflow">return</span> num2 + num3 &lt;= 16f;</div>
+<div class="line"><span class="lineno"> 1277</span>            }</div>
+<div class="line"><span class="lineno"> 1278</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1279</span>        }</div>
+<div class="line"><span class="lineno"> 1280</span>        }</div>
+<div class="line"><span class="lineno"> 1281</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1282</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b_html_abb51d85dd32dec48d4b04dfb6bc27a5b"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a></div><div class="ttdeci">static bool[] Platforms</div><div class="ttdef"><b>Definition</b> TileID.cs:163</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8_html_a026ffec527bba01f7e6902a8e227a5f8"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Terraria.ID.TileID.Count</a></div><div class="ttdeci">static readonly ushort Count</div><div class="ttdef"><b>Definition</b> TileID.cs:1698</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab70b6707bdcec72a6b5e63ac7a9515eb.html#ab70b6707bdcec72a6b5e63ac7a9515eb">Terraria.Tile.blockType()</a>, <a class="el" href="../../da/d8f/classTerraria_1_1ID_1_1TileID_a026ffec527bba01f7e6902a8e227a5f8.html#a026ffec527bba01f7e6902a8e227a5f8">Terraria.ID.TileID.Count</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

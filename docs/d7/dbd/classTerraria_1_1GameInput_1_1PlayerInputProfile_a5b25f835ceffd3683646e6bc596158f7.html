@@ -131,6 +131,49 @@ $(function(){initNavTree('d7/dbd/classTerraria_1_1GameInput_1_1PlayerInputProfil
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  225</span>    {</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (PlayerInput.OriginalProfiles.ContainsKey(<a class="code hl_variable" href="../../d7/dbd/classTerraria_1_1GameInput_1_1PlayerInputProfile_af44fd9d049cdc53f82014eae7bd1fa28.html#af44fd9d049cdc53f82014eae7bd1fa28">Name</a>))</div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">foreach</span> (KeyValuePair&lt;<span class="keywordtype">string</span>, <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;string&gt;</a>&gt; item <span class="keywordflow">in</span> PlayerInput.OriginalProfiles[<a class="code hl_variable" href="../../d7/dbd/classTerraria_1_1GameInput_1_1PlayerInputProfile_af44fd9d049cdc53f82014eae7bd1fa28.html#af44fd9d049cdc53f82014eae7bd1fa28">Name</a>].InputModes[nm].WritePreferences())</div>
+<div class="line"><span class="lineno">  229</span>            {</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> (dict.TryGetValue(item.Key, out var value))</div>
+<div class="line"><span class="lineno">  232</span>                {</div>
+<div class="line"><span class="lineno">  233</span>                    <span class="keywordflow">if</span> (value.Count != item.Value.Count)</div>
+<div class="line"><span class="lineno">  234</span>                    {</div>
+<div class="line"><span class="lineno">  235</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  236</span>                    }</div>
+<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  238</span>                    {</div>
+<div class="line"><span class="lineno">  239</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; value.Count; i++)</div>
+<div class="line"><span class="lineno">  240</span>                        {</div>
+<div class="line"><span class="lineno">  241</span>                            <span class="keywordflow">if</span> (value[i] != item.Value[i])</div>
+<div class="line"><span class="lineno">  242</span>                            {</div>
+<div class="line"><span class="lineno">  243</span>                                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  244</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  245</span>                            }</div>
+<div class="line"><span class="lineno">  246</span>                        }</div>
+<div class="line"><span class="lineno">  247</span>                    }</div>
+<div class="line"><span class="lineno">  248</span>                }</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  250</span>                {</div>
+<div class="line"><span class="lineno">  251</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  252</span>                }</div>
+<div class="line"><span class="lineno">  253</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  254</span>                {</div>
+<div class="line"><span class="lineno">  255</span>                    dict.Remove(item.Key);</div>
+<div class="line"><span class="lineno">  256</span>                }</div>
+<div class="line"><span class="lineno">  257</span>            }</div>
+<div class="line"><span class="lineno">  258</span>        }</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (dict.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            dicttouse.Add(k, dict);</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInputProfile_af44fd9d049cdc53f82014eae7bd1fa28_html_af44fd9d049cdc53f82014eae7bd1fa28"><div class="ttname"><a href="../../d7/dbd/classTerraria_1_1GameInput_1_1PlayerInputProfile_af44fd9d049cdc53f82014eae7bd1fa28.html#af44fd9d049cdc53f82014eae7bd1fa28">Terraria.GameInput.PlayerInputProfile.Name</a></div><div class="ttdeci">string Name</div><div class="ttdef"><b>Definition</b> PlayerInputProfile.cs:31</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/dbd/classTerraria_1_1GameInput_1_1PlayerInputProfile_af44fd9d049cdc53f82014eae7bd1fa28.html#af44fd9d049cdc53f82014eae7bd1fa28">Terraria.GameInput.PlayerInputProfile.Name</a>, and <a class="el" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput_abf9581fc1bbc306765755a4131d2a2bf.html#abf9581fc1bbc306765755a4131d2a2bf">Terraria.GameInput.PlayerInput.OriginalProfiles</a>.</p>
 
 </div>
 </div>

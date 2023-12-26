@@ -121,6 +121,47 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a0e81dc7d5b996b18f7
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">58624</span>    {</div>
+<div class="line"><span class="lineno">58625</span>        Vector2 spinningpoint = <span class="keyword">new</span> Vector2(7f, 0f);</div>
+<div class="line"><span class="lineno">58626</span>        Vector2 vector = <span class="keyword">new</span> Vector2(1f, 0.7f);</div>
+<div class="line"><span class="lineno">58627</span>        Color color = <span class="keyword">new</span> Color(20, 255, 100, 200);</div>
+<div class="line"><span class="lineno">58628</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num = 0f; num &lt; 25f; num += 1f)</div>
+<div class="line"><span class="lineno">58629</span>        {</div>
+<div class="line"><span class="lineno">58630</span>            Vector2 vector2 = spinningpoint.RotatedBy(num * ((<span class="keywordtype">float</span>)Math.PI * 2f) / 25f) * vector;</div>
+<div class="line"><span class="lineno">58631</span>            Dust dust = Dust.NewDustDirect(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, 55);</div>
+<div class="line"><span class="lineno">58632</span>            dust.alpha = 0;</div>
+<div class="line"><span class="lineno">58633</span>            <span class="keywordflow">if</span> (!causedShockwaves)</div>
+<div class="line"><span class="lineno">58634</span>            {</div>
+<div class="line"><span class="lineno">58635</span>                dust.alpha = 50;</div>
+<div class="line"><span class="lineno">58636</span>            }</div>
+<div class="line"><span class="lineno">58637</span>            dust.color = color;</div>
+<div class="line"><span class="lineno">58638</span>            dust.position = explosionOrigin + vector2;</div>
+<div class="line"><span class="lineno">58639</span>            dust.velocity.Y -= 3f;</div>
+<div class="line"><span class="lineno">58640</span>            dust.velocity.X *= 0.5f;</div>
+<div class="line"><span class="lineno">58641</span>            dust.fadeIn = 0.5f + Main.rand.NextFloat() * 0.5f;</div>
+<div class="line"><span class="lineno">58642</span>            dust.noLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">58643</span>        }</div>
+<div class="line"><span class="lineno">58644</span>        <span class="keywordflow">if</span> (!causedShockwaves)</div>
+<div class="line"><span class="lineno">58645</span>        {</div>
+<div class="line"><span class="lineno">58646</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num2 = 0f; num2 &lt; 25f; num2 += 1f)</div>
+<div class="line"><span class="lineno">58647</span>            {</div>
+<div class="line"><span class="lineno">58648</span>                Vector2 vector3 = spinningpoint.RotatedBy(num2 * ((<span class="keywordtype">float</span>)Math.PI * 2f) / 25f) * vector;</div>
+<div class="line"><span class="lineno">58649</span>                Dust dust2 = Dust.NewDustDirect(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, 55);</div>
+<div class="line"><span class="lineno">58650</span>                dust2.alpha = 100;</div>
+<div class="line"><span class="lineno">58651</span>                dust2.color = color;</div>
+<div class="line"><span class="lineno">58652</span>                dust2.position = explosionOrigin + vector3;</div>
+<div class="line"><span class="lineno">58653</span>                dust2.velocity.Y -= 5f;</div>
+<div class="line"><span class="lineno">58654</span>                dust2.velocity.X *= 0.8f;</div>
+<div class="line"><span class="lineno">58655</span>                dust2.fadeIn = 0.5f + Main.rand.NextFloat() * 0.5f;</div>
+<div class="line"><span class="lineno">58656</span>                dust2.noLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">58657</span>            }</div>
+<div class="line"><span class="lineno">58658</span>        }</div>
+<div class="line"><span class="lineno">58659</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

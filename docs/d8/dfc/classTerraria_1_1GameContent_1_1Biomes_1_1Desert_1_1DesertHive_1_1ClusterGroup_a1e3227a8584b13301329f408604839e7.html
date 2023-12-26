@@ -136,6 +136,35 @@ $(function(){initNavTree('d8/dfc/classTerraria_1_1GameContent_1_1Biomes_1_1Deser
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            pointCluster.Add(<span class="keyword">new</span> Point(x, y));</div>
+<div class="line"><span class="lineno">   48</span>            blockMap[x, y] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   49</span>            level--;</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (level != -1)</div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (x &gt; 0 &amp;&amp; blockMap[x - 1, y])</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    <a class="code hl_function" href="#a1e3227a8584b13301329f408604839e7">SearchForCluster</a>(blockMap, pointCluster, x - 1, y, level);</div>
+<div class="line"><span class="lineno">   55</span>                }</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (x &lt; blockMap.GetLength(0) - 1 &amp;&amp; blockMap[x + 1, y])</div>
+<div class="line"><span class="lineno">   57</span>                {</div>
+<div class="line"><span class="lineno">   58</span>                    <a class="code hl_function" href="#a1e3227a8584b13301329f408604839e7">SearchForCluster</a>(blockMap, pointCluster, x + 1, y, level);</div>
+<div class="line"><span class="lineno">   59</span>                }</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (y &gt; 0 &amp;&amp; blockMap[x, y - 1])</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    <a class="code hl_function" href="#a1e3227a8584b13301329f408604839e7">SearchForCluster</a>(blockMap, pointCluster, x, y - 1, level);</div>
+<div class="line"><span class="lineno">   63</span>                }</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (y &lt; blockMap.GetLength(1) - 1 &amp;&amp; blockMap[x, y + 1])</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    <a class="code hl_function" href="#a1e3227a8584b13301329f408604839e7">SearchForCluster</a>(blockMap, pointCluster, x, y + 1, level);</div>
+<div class="line"><span class="lineno">   67</span>                }</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertHive_1_1ClusterGroup_a1e3227a8584b13301329f408604839e7_html_a1e3227a8584b13301329f408604839e7"><div class="ttname"><a href="#a1e3227a8584b13301329f408604839e7">Terraria.GameContent.Biomes.Desert.DesertHive.ClusterGroup.SearchForCluster</a></div><div class="ttdeci">static void SearchForCluster(bool[,] blockMap, List&lt; Point &gt; pointCluster, int x, int y, int level=2)</div><div class="ttdef"><b>Definition</b> DesertHive.cs:45</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a1e3227a8584b13301329f408604839e7">Terraria.GameContent.Biomes.Desert.DesertHive.ClusterGroup.SearchForCluster()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/dfc/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertHive_1_1ClusterGroup_a4332fea6e71896038247a30d9ceefb5d.html#a4332fea6e71896038247a30d9ceefb5d">Terraria.GameContent.Biomes.Desert.DesertHive.ClusterGroup.Generate()</a>, and <a class="el" href="#a1e3227a8584b13301329f408604839e7">Terraria.GameContent.Biomes.Desert.DesertHive.ClusterGroup.SearchForCluster()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

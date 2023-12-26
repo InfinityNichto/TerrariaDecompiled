@@ -117,6 +117,45 @@ $(function(){initNavTree('d5/dda/classTerraria_1_1Recipe_a24fdae56b768485092eb03
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">14551</span>    {</div>
+<div class="line"><span class="lineno">14552</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_aca1536d9c763364371cdf07184e88d47.html#aca1536d9c763364371cdf07184e88d47">numRecipes</a>; i++)</div>
+<div class="line"><span class="lineno">14553</span>        {</div>
+<div class="line"><span class="lineno">14554</span>            <a class="code hl_function" href="../../d5/dda/classTerraria_1_1Recipe_ade1fefc36e934771721c59cf6e2555ae.html#ade1fefc36e934771721c59cf6e2555ae">Recipe</a> recipe = Main.recipe[i];</div>
+<div class="line"><span class="lineno">14555</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">maxRequirements</a>; j++)</div>
+<div class="line"><span class="lineno">14556</span>            {</div>
+<div class="line"><span class="lineno">14557</span>                Item item = recipe.requiredItem[j];</div>
+<div class="line"><span class="lineno">14558</span>                <span class="keywordflow">if</span> (item.IsAir)</div>
+<div class="line"><span class="lineno">14559</span>                {</div>
+<div class="line"><span class="lineno">14560</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">14561</span>                }</div>
+<div class="line"><span class="lineno">14562</span>                RequiredItemEntry requiredItemEntry = <span class="keywordflow">default</span>(RequiredItemEntry);</div>
+<div class="line"><span class="lineno">14563</span>                requiredItemEntry.itemIdOrRecipeGroup = item.type;</div>
+<div class="line"><span class="lineno">14564</span>                requiredItemEntry.stack = item.stack;</div>
+<div class="line"><span class="lineno">14565</span>                RequiredItemEntry requiredItemEntry2 = requiredItemEntry;</div>
+<div class="line"><span class="lineno">14566</span>                <span class="keywordtype">int</span>[] array = recipe.acceptedGroups;</div>
+<div class="line"><span class="lineno">14567</span>                <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">14568</span>                {</div>
+<div class="line"><span class="lineno">14569</span>                    <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno">14570</span>                    {</div>
+<div class="line"><span class="lineno">14571</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">14572</span>                    }</div>
+<div class="line"><span class="lineno">14573</span>                    RecipeGroup recipeGroup = RecipeGroup.recipeGroups[num];</div>
+<div class="line"><span class="lineno">14574</span>                    <span class="keywordflow">if</span> (recipeGroup.ValidItems.Contains(item.type))</div>
+<div class="line"><span class="lineno">14575</span>                    {</div>
+<div class="line"><span class="lineno">14576</span>                        requiredItemEntry2.itemIdOrRecipeGroup = recipeGroup.GetGroupFakeItemId();</div>
+<div class="line"><span class="lineno">14577</span>                    }</div>
+<div class="line"><span class="lineno">14578</span>                }</div>
+<div class="line"><span class="lineno">14579</span>                recipe.requiredItemQuickLookup[j] = requiredItemEntry2;</div>
+<div class="line"><span class="lineno">14580</span>            }</div>
+<div class="line"><span class="lineno">14581</span>        }</div>
+<div class="line"><span class="lineno">14582</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a_html_a4b5012bfc5a31e389b4a83545259157a"><div class="ttname"><a href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">Terraria.Recipe.maxRequirements</a></div><div class="ttdeci">static int maxRequirements</div><div class="ttdef"><b>Definition</b> Recipe.cs:19</div></div>
+<div class="ttc" id="aclassTerraria_1_1Recipe_aca1536d9c763364371cdf07184e88d47_html_aca1536d9c763364371cdf07184e88d47"><div class="ttname"><a href="../../d5/dda/classTerraria_1_1Recipe_aca1536d9c763364371cdf07184e88d47.html#aca1536d9c763364371cdf07184e88d47">Terraria.Recipe.numRecipes</a></div><div class="ttdeci">static int numRecipes</div><div class="ttdef"><b>Definition</b> Recipe.cs:23</div></div>
+<div class="ttc" id="aclassTerraria_1_1Recipe_ade1fefc36e934771721c59cf6e2555ae_html_ade1fefc36e934771721c59cf6e2555ae"><div class="ttname"><a href="../../d5/dda/classTerraria_1_1Recipe_ade1fefc36e934771721c59cf6e2555ae.html#ade1fefc36e934771721c59cf6e2555ae">Terraria.Recipe.Recipe</a></div><div class="ttdeci">Recipe()</div><div class="ttdef"><b>Definition</b> Recipe.cs:167</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a5d02abd8aac89818498b7c066f488932.html#a5d02abd8aac89818498b7c066f488932">Terraria.Recipe.acceptedGroups</a>, <a class="el" href="../../d7/d5b/classTerraria_1_1RecipeGroup_afb7a64bbbb6c16bc65995a3ed13f950d.html#afb7a64bbbb6c16bc65995a3ed13f950d">Terraria.RecipeGroup.GetGroupFakeItemId()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6092d6f80443cfc07335ec274665656d.html#a6092d6f80443cfc07335ec274665656d">Terraria.Item.IsAir</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">Terraria.Recipe.maxRequirements</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_aca1536d9c763364371cdf07184e88d47.html#aca1536d9c763364371cdf07184e88d47">Terraria.Recipe.numRecipes</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a103da9362dd64fbc52f3a94759183cb9.html#a103da9362dd64fbc52f3a94759183cb9">Terraria.Main.recipe</a>, <a class="el" href="../../d7/d5b/classTerraria_1_1RecipeGroup_a9ed39636f30dc0473197fa386ecf036c.html#a9ed39636f30dc0473197fa386ecf036c">Terraria.RecipeGroup.recipeGroups</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_af22eb0593ef65eaccb70c303df9be04f.html#af22eb0593ef65eaccb70c303df9be04f">Terraria.Recipe.requiredItem</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_aee074140fb70fcb77565cbba519f87f1.html#aee074140fb70fcb77565cbba519f87f1">Terraria.Recipe.requiredItemQuickLookup</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../d7/d5b/classTerraria_1_1RecipeGroup_a8337619685e72018b374b381c92da16a.html#a8337619685e72018b374b381c92da16a">Terraria.RecipeGroup.ValidItems</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a8d29dd73b574c3a36b6152ab3f82311a.html#a8d29dd73b574c3a36b6152ab3f82311a">Terraria.Recipe.SetupRecipes()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

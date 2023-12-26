@@ -121,6 +121,293 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_ac5b0f068a1648
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (file == <span class="keyword">null</span> || (cloudSave &amp;&amp; <a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a> == <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">  246</span>        {</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  248</span>        }</div>
+<div class="line"><span class="lineno">  249</span>        WorldFileData worldFileData = <span class="keyword">new</span> WorldFileData(file, cloudSave);</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">FileUtilities</a>.<a class="code hl_function" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Exists</a>(file, cloudSave))</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span> WorldFileData.FromInvalidWorld(file, cloudSave);</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keyword">using </span>Stream stream = (cloudSave ? ((Stream)<span class="keyword">new</span> MemoryStream(<a class="code hl_class" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">SocialAPI</a>.<a class="code hl_variable" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Cloud</a>.Read(file))) : ((Stream)new FileStream(file, FileMode.Open)));</div>
+<div class="line"><span class="lineno">  257</span>            <span class="keyword">using </span>BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(stream);</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordtype">int</span> num = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (num &gt;= 135)</div>
+<div class="line"><span class="lineno">  260</span>            {</div>
+<div class="line"><span class="lineno">  261</span>                worldFileData.Metadata = FileMetadata.Read(binaryReader, FileType.World);</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  264</span>            {</div>
+<div class="line"><span class="lineno">  265</span>                worldFileData.Metadata = FileMetadata.FromCurrentSettings(FileType.World);</div>
+<div class="line"><span class="lineno">  266</span>            }</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">if</span> (num &lt;= 279)</div>
+<div class="line"><span class="lineno">  268</span>            {</div>
+<div class="line"><span class="lineno">  269</span>                binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">  270</span>                stream.Position = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  271</span>                worldFileData.Name = binaryReader.ReadString();</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">if</span> (num &gt;= 179)</div>
+<div class="line"><span class="lineno">  273</span>                {</div>
+<div class="line"><span class="lineno">  274</span>                    <span class="keywordtype">string</span> seed = ((num != 179) ? binaryReader.ReadString() : binaryReader.ReadInt32().ToString());</div>
+<div class="line"><span class="lineno">  275</span>                    worldFileData.SetSeed(seed);</div>
+<div class="line"><span class="lineno">  276</span>                    worldFileData.WorldGeneratorVersion = binaryReader.ReadUInt64();</div>
+<div class="line"><span class="lineno">  277</span>                }</div>
+<div class="line"><span class="lineno">  278</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  279</span>                {</div>
+<div class="line"><span class="lineno">  280</span>                    worldFileData.SetSeedToEmpty();</div>
+<div class="line"><span class="lineno">  281</span>                    worldFileData.WorldGeneratorVersion = 0uL;</div>
+<div class="line"><span class="lineno">  282</span>                }</div>
+<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">if</span> (num &gt;= 181)</div>
+<div class="line"><span class="lineno">  284</span>                {</div>
+<div class="line"><span class="lineno">  285</span>                    worldFileData.UniqueId = <span class="keyword">new</span> Guid(binaryReader.ReadBytes(16));</div>
+<div class="line"><span class="lineno">  286</span>                }</div>
+<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  288</span>                {</div>
+<div class="line"><span class="lineno">  289</span>                    worldFileData.UniqueId = Guid.Empty;</div>
+<div class="line"><span class="lineno">  290</span>                }</div>
+<div class="line"><span class="lineno">  291</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  292</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  293</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  294</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  295</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  296</span>                <span class="keywordtype">int</span> y = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  297</span>                <span class="keywordtype">int</span> x = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  298</span>                worldFileData.SetWorldSize(x, y);</div>
+<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">if</span> (num &gt;= 209)</div>
+<div class="line"><span class="lineno">  300</span>                {</div>
+<div class="line"><span class="lineno">  301</span>                    worldFileData.GameMode = binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  302</span>                    <span class="keywordflow">if</span> (num &gt;= 222)</div>
+<div class="line"><span class="lineno">  303</span>                    {</div>
+<div class="line"><span class="lineno">  304</span>                        worldFileData.DrunkWorld = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  305</span>                        <span class="keywordflow">if</span> (num &gt;= 227)</div>
+<div class="line"><span class="lineno">  306</span>                        {</div>
+<div class="line"><span class="lineno">  307</span>                            worldFileData.ForTheWorthy = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  308</span>                        }</div>
+<div class="line"><span class="lineno">  309</span>                        <span class="keywordflow">if</span> (num &gt;= 238)</div>
+<div class="line"><span class="lineno">  310</span>                        {</div>
+<div class="line"><span class="lineno">  311</span>                            worldFileData.Anniversary = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  312</span>                        }</div>
+<div class="line"><span class="lineno">  313</span>                        <span class="keywordflow">if</span> (num &gt;= 239)</div>
+<div class="line"><span class="lineno">  314</span>                        {</div>
+<div class="line"><span class="lineno">  315</span>                            worldFileData.DontStarve = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  316</span>                        }</div>
+<div class="line"><span class="lineno">  317</span>                        <span class="keywordflow">if</span> (num &gt;= 241)</div>
+<div class="line"><span class="lineno">  318</span>                        {</div>
+<div class="line"><span class="lineno">  319</span>                            worldFileData.NotTheBees = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  320</span>                        }</div>
+<div class="line"><span class="lineno">  321</span>                        <span class="keywordflow">if</span> (num &gt;= 249)</div>
+<div class="line"><span class="lineno">  322</span>                        {</div>
+<div class="line"><span class="lineno">  323</span>                            worldFileData.RemixWorld = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  324</span>                        }</div>
+<div class="line"><span class="lineno">  325</span>                        <span class="keywordflow">if</span> (num &gt;= 266)</div>
+<div class="line"><span class="lineno">  326</span>                        {</div>
+<div class="line"><span class="lineno">  327</span>                            worldFileData.NoTrapsWorld = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  328</span>                        }</div>
+<div class="line"><span class="lineno">  329</span>                        <span class="keywordflow">if</span> (num &gt;= 267)</div>
+<div class="line"><span class="lineno">  330</span>                        {</div>
+<div class="line"><span class="lineno">  331</span>                            worldFileData.ZenithWorld = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  332</span>                        }</div>
+<div class="line"><span class="lineno">  333</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  334</span>                        {</div>
+<div class="line"><span class="lineno">  335</span>                            worldFileData.ZenithWorld = worldFileData.DrunkWorld &amp;&amp; worldFileData.RemixWorld;</div>
+<div class="line"><span class="lineno">  336</span>                        }</div>
+<div class="line"><span class="lineno">  337</span>                    }</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt;= 112)</div>
+<div class="line"><span class="lineno">  340</span>                {</div>
+<div class="line"><span class="lineno">  341</span>                    <span class="keywordflow">if</span> (binaryReader.ReadBoolean())</div>
+<div class="line"><span class="lineno">  342</span>                    {</div>
+<div class="line"><span class="lineno">  343</span>                        worldFileData.GameMode = 1;</div>
+<div class="line"><span class="lineno">  344</span>                    }</div>
+<div class="line"><span class="lineno">  345</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  346</span>                    {</div>
+<div class="line"><span class="lineno">  347</span>                        worldFileData.GameMode = 0;</div>
+<div class="line"><span class="lineno">  348</span>                    }</div>
+<div class="line"><span class="lineno">  349</span>                }</div>
+<div class="line"><span class="lineno">  350</span>                <span class="keywordflow">if</span> (num &gt;= 141)</div>
+<div class="line"><span class="lineno">  351</span>                {</div>
+<div class="line"><span class="lineno">  352</span>                    worldFileData.CreationTime = DateTime.FromBinary(binaryReader.ReadInt64());</div>
+<div class="line"><span class="lineno">  353</span>                }</div>
+<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!cloudSave)</div>
+<div class="line"><span class="lineno">  355</span>                {</div>
+<div class="line"><span class="lineno">  356</span>                    worldFileData.CreationTime = File.GetCreationTime(file);</div>
+<div class="line"><span class="lineno">  357</span>                }</div>
+<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  359</span>                {</div>
+<div class="line"><span class="lineno">  360</span>                    worldFileData.CreationTime = DateTime.Now;</div>
+<div class="line"><span class="lineno">  361</span>                }</div>
+<div class="line"><span class="lineno">  362</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  363</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  364</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  365</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  366</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  367</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  368</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  369</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  370</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  371</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  372</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  373</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  374</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  375</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  376</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  377</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  378</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  379</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  380</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  381</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  382</span>                binaryReader.ReadDouble();</div>
+<div class="line"><span class="lineno">  383</span>                binaryReader.ReadDouble();</div>
+<div class="line"><span class="lineno">  384</span>                binaryReader.ReadDouble();</div>
+<div class="line"><span class="lineno">  385</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  386</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  387</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  388</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  389</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  390</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  391</span>                worldFileData.HasCrimson = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  392</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  393</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  394</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  395</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  396</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  397</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  398</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  399</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  400</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  401</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  402</span>                <span class="keywordflow">if</span> (num &gt;= 118)</div>
+<div class="line"><span class="lineno">  403</span>                {</div>
+<div class="line"><span class="lineno">  404</span>                    binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  405</span>                }</div>
+<div class="line"><span class="lineno">  406</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  407</span>                    _ = 0;</div>
+<div class="line"><span class="lineno">  408</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  409</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  410</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  411</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  412</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  413</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  414</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  415</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  416</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  417</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  418</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  419</span>                worldFileData.IsHardMode = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  420</span>                <span class="keywordflow">if</span> (num &gt;= 257)</div>
+<div class="line"><span class="lineno">  421</span>                {</div>
+<div class="line"><span class="lineno">  422</span>                    binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  423</span>                }</div>
+<div class="line"><span class="lineno">  424</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  425</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  426</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  427</span>                binaryReader.ReadDouble();</div>
+<div class="line"><span class="lineno">  428</span>                <span class="keywordflow">if</span> (num &gt;= 118)</div>
+<div class="line"><span class="lineno">  429</span>                {</div>
+<div class="line"><span class="lineno">  430</span>                    binaryReader.ReadDouble();</div>
+<div class="line"><span class="lineno">  431</span>                }</div>
+<div class="line"><span class="lineno">  432</span>                <span class="keywordflow">if</span> (num &gt;= 113)</div>
+<div class="line"><span class="lineno">  433</span>                {</div>
+<div class="line"><span class="lineno">  434</span>                    binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  435</span>                }</div>
+<div class="line"><span class="lineno">  436</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  437</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  438</span>                binaryReader.ReadSingle();</div>
+<div class="line"><span class="lineno">  439</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  440</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  441</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  442</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  443</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  444</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  445</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  446</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  447</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  448</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  449</span>                binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  450</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  451</span>                binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">  452</span>                binaryReader.ReadSingle();</div>
+<div class="line"><span class="lineno">  453</span>                <span class="keywordflow">if</span> (num &lt; 95)</div>
+<div class="line"><span class="lineno">  454</span>                {</div>
+<div class="line"><span class="lineno">  455</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  456</span>                }</div>
+<div class="line"><span class="lineno">  457</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num2 = binaryReader.ReadInt32(); num2 &gt; 0; num2--)</div>
+<div class="line"><span class="lineno">  458</span>                {</div>
+<div class="line"><span class="lineno">  459</span>                    binaryReader.ReadString();</div>
+<div class="line"><span class="lineno">  460</span>                }</div>
+<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">if</span> (num &lt; 99)</div>
+<div class="line"><span class="lineno">  462</span>                {</div>
+<div class="line"><span class="lineno">  463</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  464</span>                }</div>
+<div class="line"><span class="lineno">  465</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  466</span>                <span class="keywordflow">if</span> (num &lt; 101)</div>
+<div class="line"><span class="lineno">  467</span>                {</div>
+<div class="line"><span class="lineno">  468</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  469</span>                }</div>
+<div class="line"><span class="lineno">  470</span>                binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  471</span>                <span class="keywordflow">if</span> (num &lt; 104)</div>
+<div class="line"><span class="lineno">  472</span>                {</div>
+<div class="line"><span class="lineno">  473</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  474</span>                }</div>
+<div class="line"><span class="lineno">  475</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  476</span>                <span class="keywordflow">if</span> (num &gt;= 129)</div>
+<div class="line"><span class="lineno">  477</span>                {</div>
+<div class="line"><span class="lineno">  478</span>                    binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  479</span>                }</div>
+<div class="line"><span class="lineno">  480</span>                <span class="keywordflow">if</span> (num &gt;= 201)</div>
+<div class="line"><span class="lineno">  481</span>                {</div>
+<div class="line"><span class="lineno">  482</span>                    binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  483</span>                }</div>
+<div class="line"><span class="lineno">  484</span>                <span class="keywordflow">if</span> (num &gt;= 107)</div>
+<div class="line"><span class="lineno">  485</span>                {</div>
+<div class="line"><span class="lineno">  486</span>                    binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  487</span>                }</div>
+<div class="line"><span class="lineno">  488</span>                <span class="keywordflow">if</span> (num &gt;= 108)</div>
+<div class="line"><span class="lineno">  489</span>                {</div>
+<div class="line"><span class="lineno">  490</span>                    binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  491</span>                }</div>
+<div class="line"><span class="lineno">  492</span>                <span class="keywordflow">if</span> (num &lt; 109)</div>
+<div class="line"><span class="lineno">  493</span>                {</div>
+<div class="line"><span class="lineno">  494</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  495</span>                }</div>
+<div class="line"><span class="lineno">  496</span>                <span class="keywordtype">int</span> num3 = binaryReader.ReadInt16();</div>
+<div class="line"><span class="lineno">  497</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num3; i++)</div>
+<div class="line"><span class="lineno">  498</span>                {</div>
+<div class="line"><span class="lineno">  499</span>                    binaryReader.ReadInt32();</div>
+<div class="line"><span class="lineno">  500</span>                }</div>
+<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">if</span> (num &lt; 128)</div>
+<div class="line"><span class="lineno">  502</span>                {</div>
+<div class="line"><span class="lineno">  503</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  504</span>                }</div>
+<div class="line"><span class="lineno">  505</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  506</span>                <span class="keywordflow">if</span> (num &lt; 131)</div>
+<div class="line"><span class="lineno">  507</span>                {</div>
+<div class="line"><span class="lineno">  508</span>                    <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  509</span>                }</div>
+<div class="line"><span class="lineno">  510</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  511</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  512</span>                binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  513</span>                worldFileData.DefeatedMoonlord = binaryReader.ReadBoolean();</div>
+<div class="line"><span class="lineno">  514</span>                <span class="keywordflow">return</span> worldFileData;</div>
+<div class="line"><span class="lineno">  515</span>            }</div>
+<div class="line"><span class="lineno">  516</span>        }</div>
+<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a>)</div>
+<div class="line"><span class="lineno">  518</span>        {</div>
+<div class="line"><span class="lineno">  519</span>        }</div>
+<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e_html_a6f4b8d52aae863d79ae6c622f3cf6c5e"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a></div><div class="ttdeci">static Terraria.Social.Base.CloudSocialModule Cloud</div><div class="ttdef"><b>Definition</b> SocialAPI.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1SocialAPI_html"><div class="ttname"><a href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI.html">Terraria.Social.SocialAPI</a></div><div class="ttdef"><b>Definition</b> SocialAPI.cs:11</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde_html_a1318d2df19d01621c5c09d6ba2201cde"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Terraria.Utilities.FileUtilities.Exists</a></div><div class="ttdeci">static bool Exists(string path, bool cloud)</div><div class="ttdef"><b>Definition</b> FileUtilities.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1FileUtilities_html"><div class="ttname"><a href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities.html">Terraria.Utilities.FileUtilities</a></div><div class="ttdef"><b>Definition</b> FileUtilities.cs:11</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/da1/classTerraria_1_1Social_1_1SocialAPI_a6f4b8d52aae863d79ae6c622f3cf6c5e.html#a6f4b8d52aae863d79ae6c622f3cf6c5e">Terraria.Social.SocialAPI.Cloud</a>, <a class="el" href="../../d7/de3/classTerraria_1_1Utilities_1_1FileUtilities_a1318d2df19d01621c5c09d6ba2201cde.html#a1318d2df19d01621c5c09d6ba2201cde">Terraria.Utilities.FileUtilities.Exists()</a>, <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_ae463bcf339fec8c9ba5305cf3546fc2e.html#ae463bcf339fec8c9ba5305cf3546fc2e">Terraria.IO.FileMetadata.FromCurrentSettings()</a>, <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_ac9e9c5f2b76bf877cc7ea44170df8daa.html#ac9e9c5f2b76bf877cc7ea44170df8daa">Terraria.IO.WorldFileData.FromInvalidWorld()</a>, <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_a9984595acf2b9ed3a8fea4819823e1dd.html#a9984595acf2b9ed3a8fea4819823e1dd">Terraria.IO.FileMetadata.Read()</a>, <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a7f19aefb93678d20e59f8d966626b761.html#a7f19aefb93678d20e59f8d966626b761">Terraria.IO.WorldFileData.RemixWorld</a>, <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a8118585089ccd90579d0d5b9009cac52.html#a8118585089ccd90579d0d5b9009cac52">Terraria.IO.WorldFileData.SetSeed()</a>, <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a2d6667d38db6095164a43a1c8691e35c.html#a2d6667d38db6095164a43a1c8691e35c">Terraria.IO.WorldFileData.SetSeedToEmpty()</a>, and <a class="el" href="../../d5/d02/classTerraria_1_1IO_1_1WorldFileData_a3f317b1918655591e9a2f71f3898e054.html#a3f317b1918655591e9a2f71f3898e054">Terraria.IO.WorldFileData.SetWorldSize()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6ec1d17c942005b6de9ad71580dc89a4.html#a6ec1d17c942005b6de9ad71580dc89a4">Terraria.Main.LoadDedConfig()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a34fcd8d078ad8d531bfd79306b459ee3.html#a34fcd8d078ad8d531bfd79306b459ee3">Terraria.Main.LoadWorlds()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7453dc6b40a367b25ac5e718e15c36ba.html#a7453dc6b40a367b25ac5e718e15c36ba">Terraria.Main.SetWorld()</a>, and <a class="el" href="../../d7/d77/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorkshopWorldImport_af2925a3325b66998a15656164e2dcf86.html#af2925a3325b66998a15656164e2dcf86">Terraria.GameContent.UI.States.UIWorkshopWorldImport.UpdateWorkshopWorldList()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

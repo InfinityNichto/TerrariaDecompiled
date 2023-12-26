@@ -121,6 +121,44 @@ $(function(){initNavTree('d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtensi
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">char</span> c = (char)reader.Peek();</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_enumeration" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_ac9481a2f73880beb68205a886f4ad181.html#ac9481a2f73880beb68205a886f4ad181">WrapScanMode</a> wrapScanMode = <a class="code hl_enumeration" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_ac9481a2f73880beb68205a886f4ad181.html#ac9481a2f73880beb68205a886f4ad181">WrapScanMode</a>.None;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">while</span> (reader.Peek() &gt; 0)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_abbd0403e59da4ba14109a5099a85c139.html#abbd0403e59da4ba14109a5099a85c139">IsIgnoredCharacter</a>((<span class="keywordtype">char</span>)reader.Peek()))</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                reader.Read();</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordtype">char</span> previousChar = c;</div>
+<div class="line"><span class="lineno">  104</span>            c = (char)reader.Peek();</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_enumeration" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_ac9481a2f73880beb68205a886f4ad181.html#ac9481a2f73880beb68205a886f4ad181">WrapScanMode</a> wrapScanMode2 = wrapScanMode;</div>
+<div class="line"><span class="lineno">  106</span>            wrapScanMode = <a class="code hl_function" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a721783fd58d3e9abe790c7cdc83c88fd.html#a721783fd58d3e9abe790c7cdc83c88fd">GetModeForCharacter</a>(c);</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (!stringBuilder.IsEmpty() &amp;&amp; wrapScanMode2 != wrapScanMode)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (stringBuilder.IsEmpty())</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                stringBuilder.Append((<span class="keywordtype">char</span>)reader.Read());</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a4b1d9ac99a618e7d5b5c5e5d9db426ae.html#a4b1d9ac99a618e7d5b5c5e5d9db426ae">CanBreakBetween</a>(previousChar, c, culture))</div>
+<div class="line"><span class="lineno">  117</span>            {</div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">  119</span>            }</div>
+<div class="line"><span class="lineno">  120</span>            stringBuilder.Append((<span class="keywordtype">char</span>)reader.Read());</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> stringBuilder.ToString();</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Text_1_1StringReaderWrapExtension_a4b1d9ac99a618e7d5b5c5e5d9db426ae_html_a4b1d9ac99a618e7d5b5c5e5d9db426ae"><div class="ttname"><a href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a4b1d9ac99a618e7d5b5c5e5d9db426ae.html#a4b1d9ac99a618e7d5b5c5e5d9db426ae">ReLogic.Text.StringReaderWrapExtension.CanBreakBetween</a></div><div class="ttdeci">static bool CanBreakBetween(char previousChar, char nextChar, CultureInfo culture)</div><div class="ttdef"><b>Definition</b> StringReaderWrapExtension.cs:64</div></div>
+<div class="ttc" id="aclassReLogic_1_1Text_1_1StringReaderWrapExtension_a721783fd58d3e9abe790c7cdc83c88fd_html_a721783fd58d3e9abe790c7cdc83c88fd"><div class="ttname"><a href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a721783fd58d3e9abe790c7cdc83c88fd.html#a721783fd58d3e9abe790c7cdc83c88fd">ReLogic.Text.StringReaderWrapExtension.GetModeForCharacter</a></div><div class="ttdeci">static WrapScanMode GetModeForCharacter(char character)</div><div class="ttdef"><b>Definition</b> StringReaderWrapExtension.cs:77</div></div>
+<div class="ttc" id="aclassReLogic_1_1Text_1_1StringReaderWrapExtension_abbd0403e59da4ba14109a5099a85c139_html_abbd0403e59da4ba14109a5099a85c139"><div class="ttname"><a href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_abbd0403e59da4ba14109a5099a85c139.html#abbd0403e59da4ba14109a5099a85c139">ReLogic.Text.StringReaderWrapExtension.IsIgnoredCharacter</a></div><div class="ttdeci">static bool IsIgnoredCharacter(char character)</div><div class="ttdef"><b>Definition</b> StringReaderWrapExtension.cs:55</div></div>
+<div class="ttc" id="aclassReLogic_1_1Text_1_1StringReaderWrapExtension_ac9481a2f73880beb68205a886f4ad181_html_ac9481a2f73880beb68205a886f4ad181"><div class="ttname"><a href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_ac9481a2f73880beb68205a886f4ad181.html#ac9481a2f73880beb68205a886f4ad181">ReLogic.Text.StringReaderWrapExtension.WrapScanMode</a></div><div class="ttdeci">WrapScanMode</div><div class="ttdef"><b>Definition</b> StringReaderWrapExtension.cs:12</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a4b1d9ac99a618e7d5b5c5e5d9db426ae.html#a4b1d9ac99a618e7d5b5c5e5d9db426ae">ReLogic.Text.StringReaderWrapExtension.CanBreakBetween()</a>, <a class="el" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_a721783fd58d3e9abe790c7cdc83c88fd.html#a721783fd58d3e9abe790c7cdc83c88fd">ReLogic.Text.StringReaderWrapExtension.GetModeForCharacter()</a>, and <a class="el" href="../../d9/d8e/classReLogic_1_1Text_1_1StringReaderWrapExtension_abbd0403e59da4ba14109a5099a85c139.html#abbd0403e59da4ba14109a5099a85c139">ReLogic.Text.StringReaderWrapExtension.IsIgnoredCharacter()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,255 @@ $(function(){initNavTree('d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1Legac
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  261</span>    {</div>
+<div class="line"><span class="lineno">  262</span>        SpriteBatch spriteBatch = camera.SpriteBatch;</div>
+<div class="line"><span class="lineno">  263</span>        SamplerState samplerState = camera.Sampler;</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (drawPlayer.mount.Active &amp;&amp; drawPlayer.fullRotation != 0f)</div>
+<div class="line"><span class="lineno">  265</span>        {</div>
+<div class="line"><span class="lineno">  266</span>            samplerState = <a class="code hl_property" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a39e011ebc373e09e7ddc467f0194d087.html#a39e011ebc373e09e7ddc467f0194d087">MountedSamplerState</a>;</div>
+<div class="line"><span class="lineno">  267</span>        }</div>
+<div class="line"><span class="lineno">  268</span>        spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, samplerState, DepthStencilState.None, camera.Rasterizer, <span class="keyword">null</span>, camera.GameViewMatrix.TransformationMatrix);</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (Main.gamePaused)</div>
+<div class="line"><span class="lineno">  270</span>        {</div>
+<div class="line"><span class="lineno">  271</span>            drawPlayer.PlayerFrame();</div>
+<div class="line"><span class="lineno">  272</span>        }</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (drawPlayer.ghost)</div>
+<div class="line"><span class="lineno">  274</span>        {</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><span class="lineno">  276</span>            {</div>
+<div class="line"><span class="lineno">  277</span>                Vector2 vector = drawPlayer.shadowPos[i];</div>
+<div class="line"><span class="lineno">  278</span>                vector = drawPlayer.position - drawPlayer.velocity * (2 + i * 2);</div>
+<div class="line"><span class="lineno">  279</span>                <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af9b587773620d60bf1d878733772ffe6.html#af9b587773620d60bf1d878733772ffe6">DrawGhost</a>(camera, drawPlayer, vector, 0.5f + 0.2f * (<span class="keywordtype">float</span>)i);</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>            <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af9b587773620d60bf1d878733772ffe6.html#af9b587773620d60bf1d878733772ffe6">DrawGhost</a>(camera, drawPlayer, drawPlayer.position);</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  284</span>        {</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (drawPlayer.inventory[drawPlayer.selectedItem].flame || drawPlayer.head == 137 || drawPlayer.wings == 22)</div>
+<div class="line"><span class="lineno">  286</span>            {</div>
+<div class="line"><span class="lineno">  287</span>                drawPlayer.itemFlameCount--;</div>
+<div class="line"><span class="lineno">  288</span>                <span class="keywordflow">if</span> (drawPlayer.itemFlameCount &lt;= 0)</div>
+<div class="line"><span class="lineno">  289</span>                {</div>
+<div class="line"><span class="lineno">  290</span>                    drawPlayer.itemFlameCount = 5;</div>
+<div class="line"><span class="lineno">  291</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 7; j++)</div>
+<div class="line"><span class="lineno">  292</span>                    {</div>
+<div class="line"><span class="lineno">  293</span>                        drawPlayer.itemFlamePos[j].X = (float)Main.rand.Next(-10, 11) * 0.15f;</div>
+<div class="line"><span class="lineno">  294</span>                        drawPlayer.itemFlamePos[j].Y = (float)Main.rand.Next(-10, 1) * 0.35f;</div>
+<div class="line"><span class="lineno">  295</span>                    }</div>
+<div class="line"><span class="lineno">  296</span>                }</div>
+<div class="line"><span class="lineno">  297</span>            }</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawShadowEOCShield)</div>
+<div class="line"><span class="lineno">  299</span>            {</div>
+<div class="line"><span class="lineno">  300</span>                <span class="keywordtype">int</span> num = drawPlayer.eocDash / 4;</div>
+<div class="line"><span class="lineno">  301</span>                <span class="keywordflow">if</span> (num &gt; 3)</div>
+<div class="line"><span class="lineno">  302</span>                {</div>
+<div class="line"><span class="lineno">  303</span>                    num = 3;</div>
+<div class="line"><span class="lineno">  304</span>                }</div>
+<div class="line"><span class="lineno">  305</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num; k++)</div>
+<div class="line"><span class="lineno">  306</span>                {</div>
+<div class="line"><span class="lineno">  307</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, drawPlayer.shadowPos[k], drawPlayer.shadowRotation[k], drawPlayer.shadowOrigin[k], 0.5f + 0.2f * (<span class="keywordtype">float</span>)k);</div>
+<div class="line"><span class="lineno">  308</span>                }</div>
+<div class="line"><span class="lineno">  309</span>            }</div>
+<div class="line"><span class="lineno">  310</span>            Vector2 position = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">if</span> (drawPlayer.invis)</div>
+<div class="line"><span class="lineno">  312</span>            {</div>
+<div class="line"><span class="lineno">  313</span>                drawPlayer.armorEffectDrawOutlines = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  314</span>                drawPlayer.armorEffectDrawShadow = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  315</span>                drawPlayer.armorEffectDrawShadowSubtle = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  316</span>                position = drawPlayer.position;</div>
+<div class="line"><span class="lineno">  317</span>                <span class="keywordflow">if</span> (drawPlayer.aggro &lt;= -750)</div>
+<div class="line"><span class="lineno">  318</span>                {</div>
+<div class="line"><span class="lineno">  319</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, 1f);</div>
+<div class="line"><span class="lineno">  320</span>                }</div>
+<div class="line"><span class="lineno">  321</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  322</span>                {</div>
+<div class="line"><span class="lineno">  323</span>                    drawPlayer.invis = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  324</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin);</div>
+<div class="line"><span class="lineno">  325</span>                    drawPlayer.invis = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  326</span>                }</div>
+<div class="line"><span class="lineno">  327</span>            }</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawOutlines)</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                _ = drawPlayer.position;</div>
+<div class="line"><span class="lineno">  331</span>                <span class="keywordflow">if</span> (!Main.gamePaused)</div>
+<div class="line"><span class="lineno">  332</span>                {</div>
+<div class="line"><span class="lineno">  333</span>                    drawPlayer.ghostFade += drawPlayer.ghostDir * 0.075f;</div>
+<div class="line"><span class="lineno">  334</span>                }</div>
+<div class="line"><span class="lineno">  335</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)drawPlayer.ghostFade &lt; 0.1)</div>
+<div class="line"><span class="lineno">  336</span>                {</div>
+<div class="line"><span class="lineno">  337</span>                    drawPlayer.ghostDir = 1f;</div>
+<div class="line"><span class="lineno">  338</span>                    drawPlayer.ghostFade = 0.1f;</div>
+<div class="line"><span class="lineno">  339</span>                }</div>
+<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)drawPlayer.ghostFade &gt; 0.9)</div>
+<div class="line"><span class="lineno">  341</span>                {</div>
+<div class="line"><span class="lineno">  342</span>                    drawPlayer.ghostDir = -1f;</div>
+<div class="line"><span class="lineno">  343</span>                    drawPlayer.ghostFade = 0.9f;</div>
+<div class="line"><span class="lineno">  344</span>                }</div>
+<div class="line"><span class="lineno">  345</span>                <span class="keywordtype">float</span> num2 = drawPlayer.ghostFade * 5f;</div>
+<div class="line"><span class="lineno">  346</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 4; l++)</div>
+<div class="line"><span class="lineno">  347</span>                {</div>
+<div class="line"><span class="lineno">  348</span>                    <span class="keywordtype">float</span> num3;</div>
+<div class="line"><span class="lineno">  349</span>                    <span class="keywordtype">float</span> num4;</div>
+<div class="line"><span class="lineno">  350</span>                    <span class="keywordflow">switch</span> (l)</div>
+<div class="line"><span class="lineno">  351</span>                    {</div>
+<div class="line"><span class="lineno">  352</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  353</span>                        num3 = num2;</div>
+<div class="line"><span class="lineno">  354</span>                        num4 = 0f;</div>
+<div class="line"><span class="lineno">  355</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  356</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  357</span>                        num3 = 0f - num2;</div>
+<div class="line"><span class="lineno">  358</span>                        num4 = 0f;</div>
+<div class="line"><span class="lineno">  359</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  360</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  361</span>                        num3 = 0f;</div>
+<div class="line"><span class="lineno">  362</span>                        num4 = num2;</div>
+<div class="line"><span class="lineno">  363</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  364</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  365</span>                        num3 = 0f;</div>
+<div class="line"><span class="lineno">  366</span>                        num4 = 0f - num2;</div>
+<div class="line"><span class="lineno">  367</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  368</span>                    }</div>
+<div class="line"><span class="lineno">  369</span>                    position = <span class="keyword">new</span> Vector2(drawPlayer.position.X + num3, drawPlayer.position.Y + drawPlayer.gfxOffY + num4);</div>
+<div class="line"><span class="lineno">  370</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, drawPlayer.ghostFade);</div>
+<div class="line"><span class="lineno">  371</span>                }</div>
+<div class="line"><span class="lineno">  372</span>            }</div>
+<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawOutlinesForbidden)</div>
+<div class="line"><span class="lineno">  374</span>            {</div>
+<div class="line"><span class="lineno">  375</span>                _ = drawPlayer.position;</div>
+<div class="line"><span class="lineno">  376</span>                <span class="keywordflow">if</span> (!Main.gamePaused)</div>
+<div class="line"><span class="lineno">  377</span>                {</div>
+<div class="line"><span class="lineno">  378</span>                    drawPlayer.ghostFade += drawPlayer.ghostDir * 0.025f;</div>
+<div class="line"><span class="lineno">  379</span>                }</div>
+<div class="line"><span class="lineno">  380</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)drawPlayer.ghostFade &lt; 0.1)</div>
+<div class="line"><span class="lineno">  381</span>                {</div>
+<div class="line"><span class="lineno">  382</span>                    drawPlayer.ghostDir = 1f;</div>
+<div class="line"><span class="lineno">  383</span>                    drawPlayer.ghostFade = 0.1f;</div>
+<div class="line"><span class="lineno">  384</span>                }</div>
+<div class="line"><span class="lineno">  385</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)drawPlayer.ghostFade &gt; 0.9)</div>
+<div class="line"><span class="lineno">  386</span>                {</div>
+<div class="line"><span class="lineno">  387</span>                    drawPlayer.ghostDir = -1f;</div>
+<div class="line"><span class="lineno">  388</span>                    drawPlayer.ghostFade = 0.9f;</div>
+<div class="line"><span class="lineno">  389</span>                }</div>
+<div class="line"><span class="lineno">  390</span>                <span class="keywordtype">float</span> num5 = drawPlayer.ghostFade * 5f;</div>
+<div class="line"><span class="lineno">  391</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; 4; m++)</div>
+<div class="line"><span class="lineno">  392</span>                {</div>
+<div class="line"><span class="lineno">  393</span>                    <span class="keywordtype">float</span> num6;</div>
+<div class="line"><span class="lineno">  394</span>                    <span class="keywordtype">float</span> num7;</div>
+<div class="line"><span class="lineno">  395</span>                    <span class="keywordflow">switch</span> (m)</div>
+<div class="line"><span class="lineno">  396</span>                    {</div>
+<div class="line"><span class="lineno">  397</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  398</span>                        num6 = num5;</div>
+<div class="line"><span class="lineno">  399</span>                        num7 = 0f;</div>
+<div class="line"><span class="lineno">  400</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  401</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  402</span>                        num6 = 0f - num5;</div>
+<div class="line"><span class="lineno">  403</span>                        num7 = 0f;</div>
+<div class="line"><span class="lineno">  404</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  405</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  406</span>                        num6 = 0f;</div>
+<div class="line"><span class="lineno">  407</span>                        num7 = num5;</div>
+<div class="line"><span class="lineno">  408</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  409</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  410</span>                        num6 = 0f;</div>
+<div class="line"><span class="lineno">  411</span>                        num7 = 0f - num5;</div>
+<div class="line"><span class="lineno">  412</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  413</span>                    }</div>
+<div class="line"><span class="lineno">  414</span>                    position = <span class="keyword">new</span> Vector2(drawPlayer.position.X + num6, drawPlayer.position.Y + drawPlayer.gfxOffY + num7);</div>
+<div class="line"><span class="lineno">  415</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, drawPlayer.ghostFade);</div>
+<div class="line"><span class="lineno">  416</span>                }</div>
+<div class="line"><span class="lineno">  417</span>            }</div>
+<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawShadowBasilisk)</div>
+<div class="line"><span class="lineno">  419</span>            {</div>
+<div class="line"><span class="lineno">  420</span>                <span class="keywordtype">int</span> num8 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(drawPlayer.basiliskCharge * 3f);</div>
+<div class="line"><span class="lineno">  421</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; num8; n++)</div>
+<div class="line"><span class="lineno">  422</span>                {</div>
+<div class="line"><span class="lineno">  423</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, drawPlayer.shadowPos[n], drawPlayer.shadowRotation[n], drawPlayer.shadowOrigin[n], 0.5f + 0.2f * (<span class="keywordtype">float</span>)n);</div>
+<div class="line"><span class="lineno">  424</span>                }</div>
+<div class="line"><span class="lineno">  425</span>            }</div>
+<div class="line"><span class="lineno">  426</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawShadow)</div>
+<div class="line"><span class="lineno">  427</span>            {</div>
+<div class="line"><span class="lineno">  428</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num9 = 0; num9 &lt; 3; num9++)</div>
+<div class="line"><span class="lineno">  429</span>                {</div>
+<div class="line"><span class="lineno">  430</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, drawPlayer.shadowPos[num9], drawPlayer.shadowRotation[num9], drawPlayer.shadowOrigin[num9], 0.5f + 0.2f * (<span class="keywordtype">float</span>)num9);</div>
+<div class="line"><span class="lineno">  431</span>                }</div>
+<div class="line"><span class="lineno">  432</span>            }</div>
+<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawShadowLokis)</div>
+<div class="line"><span class="lineno">  434</span>            {</div>
+<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num10 = 0; num10 &lt; 3; num10++)</div>
+<div class="line"><span class="lineno">  436</span>                {</div>
+<div class="line"><span class="lineno">  437</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, Vector2.Lerp(drawPlayer.shadowPos[num10], drawPlayer.position + <span class="keyword">new</span> Vector2(0f, drawPlayer.gfxOffY), 0.5f), drawPlayer.shadowRotation[num10], drawPlayer.shadowOrigin[num10], MathHelper.Lerp(1f, 0.5f + 0.2f * (<span class="keywordtype">float</span>)num10, 0.5f));</div>
+<div class="line"><span class="lineno">  438</span>                }</div>
+<div class="line"><span class="lineno">  439</span>            }</div>
+<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">if</span> (drawPlayer.armorEffectDrawShadowSubtle)</div>
+<div class="line"><span class="lineno">  441</span>            {</div>
+<div class="line"><span class="lineno">  442</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num11 = 0; num11 &lt; 4; num11++)</div>
+<div class="line"><span class="lineno">  443</span>                {</div>
+<div class="line"><span class="lineno">  444</span>                    position.X = drawPlayer.position.X + (float)Main.rand.Next(-20, 21) * 0.1f;</div>
+<div class="line"><span class="lineno">  445</span>                    position.Y = drawPlayer.position.Y + (float)Main.rand.Next(-20, 21) * 0.1f + drawPlayer.gfxOffY;</div>
+<div class="line"><span class="lineno">  446</span>                    <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, 0.9f);</div>
+<div class="line"><span class="lineno">  447</span>                }</div>
+<div class="line"><span class="lineno">  448</span>            }</div>
+<div class="line"><span class="lineno">  449</span>            <span class="keywordflow">if</span> (drawPlayer.shadowDodge)</div>
+<div class="line"><span class="lineno">  450</span>            {</div>
+<div class="line"><span class="lineno">  451</span>                drawPlayer.shadowDodgeCount += 1f;</div>
+<div class="line"><span class="lineno">  452</span>                <span class="keywordflow">if</span> (drawPlayer.shadowDodgeCount &gt; 30f)</div>
+<div class="line"><span class="lineno">  453</span>                {</div>
+<div class="line"><span class="lineno">  454</span>                    drawPlayer.shadowDodgeCount = 30f;</div>
+<div class="line"><span class="lineno">  455</span>                }</div>
+<div class="line"><span class="lineno">  456</span>            }</div>
+<div class="line"><span class="lineno">  457</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  458</span>            {</div>
+<div class="line"><span class="lineno">  459</span>                drawPlayer.shadowDodgeCount -= 1f;</div>
+<div class="line"><span class="lineno">  460</span>                <span class="keywordflow">if</span> (drawPlayer.shadowDodgeCount &lt; 0f)</div>
+<div class="line"><span class="lineno">  461</span>                {</div>
+<div class="line"><span class="lineno">  462</span>                    drawPlayer.shadowDodgeCount = 0f;</div>
+<div class="line"><span class="lineno">  463</span>                }</div>
+<div class="line"><span class="lineno">  464</span>            }</div>
+<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> (drawPlayer.shadowDodgeCount &gt; 0f)</div>
+<div class="line"><span class="lineno">  466</span>            {</div>
+<div class="line"><span class="lineno">  467</span>                _ = drawPlayer.position;</div>
+<div class="line"><span class="lineno">  468</span>                position.X = drawPlayer.position.X + drawPlayer.shadowDodgeCount;</div>
+<div class="line"><span class="lineno">  469</span>                position.Y = drawPlayer.position.Y + drawPlayer.gfxOffY;</div>
+<div class="line"><span class="lineno">  470</span>                <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, 0.5f + (<span class="keywordtype">float</span>)Main.rand.Next(-10, 11) * 0.005f);</div>
+<div class="line"><span class="lineno">  471</span>                position.X = drawPlayer.position.X - drawPlayer.shadowDodgeCount;</div>
+<div class="line"><span class="lineno">  472</span>                <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, 0.5f + (<span class="keywordtype">float</span>)Main.rand.Next(-10, 11) * 0.005f);</div>
+<div class="line"><span class="lineno">  473</span>            }</div>
+<div class="line"><span class="lineno">  474</span>            <span class="keywordflow">if</span> (drawPlayer.brainOfConfusionDodgeAnimationCounter &gt; 0)</div>
+<div class="line"><span class="lineno">  475</span>            {</div>
+<div class="line"><span class="lineno">  476</span>                Vector2 vector2 = drawPlayer.position + <span class="keyword">new</span> Vector2(0f, drawPlayer.gfxOffY);</div>
+<div class="line"><span class="lineno">  477</span>                <span class="keywordtype">float</span> lerpValue = Utils.GetLerpValue(300f, 270f, drawPlayer.brainOfConfusionDodgeAnimationCounter);</div>
+<div class="line"><span class="lineno">  478</span>                <span class="keywordtype">float</span> y = MathHelper.Lerp(2f, 120f, lerpValue);</div>
+<div class="line"><span class="lineno">  479</span>                <span class="keywordflow">if</span> (lerpValue &gt;= 0f &amp;&amp; lerpValue &lt;= 1f)</div>
+<div class="line"><span class="lineno">  480</span>                {</div>
+<div class="line"><span class="lineno">  481</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num12 = 0f; num12 &lt; (float)Math.PI * 2f; num12 += (float)Math.PI / 3f)</div>
+<div class="line"><span class="lineno">  482</span>                    {</div>
+<div class="line"><span class="lineno">  483</span>                        position = vector2 + <span class="keyword">new</span> Vector2(0f, y).RotatedBy((<span class="keywordtype">float</span>)Math.PI * 2f * lerpValue * 0.5f + num12);</div>
+<div class="line"><span class="lineno">  484</span>                        <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin, lerpValue);</div>
+<div class="line"><span class="lineno">  485</span>                    }</div>
+<div class="line"><span class="lineno">  486</span>                }</div>
+<div class="line"><span class="lineno">  487</span>            }</div>
+<div class="line"><span class="lineno">  488</span>            position = drawPlayer.position;</div>
+<div class="line"><span class="lineno">  489</span>            position.Y += drawPlayer.gfxOffY;</div>
+<div class="line"><span class="lineno">  490</span>            <span class="keywordflow">if</span> (drawPlayer.stoned)</div>
+<div class="line"><span class="lineno">  491</span>            {</div>
+<div class="line"><span class="lineno">  492</span>                <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a82121c3151bb0ea48ae7e41d4e683ea2.html#a82121c3151bb0ea48ae7e41d4e683ea2">DrawPlayerStoned</a>(camera, drawPlayer, position);</div>
+<div class="line"><span class="lineno">  493</span>            }</div>
+<div class="line"><span class="lineno">  494</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!drawPlayer.invis)</div>
+<div class="line"><span class="lineno">  495</span>            {</div>
+<div class="line"><span class="lineno">  496</span>                <a class="code hl_function" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">DrawPlayer</a>(camera, drawPlayer, position, drawPlayer.fullRotation, drawPlayer.fullRotationOrigin);</div>
+<div class="line"><span class="lineno">  497</span>            }</div>
+<div class="line"><span class="lineno">  498</span>        }</div>
+<div class="line"><span class="lineno">  499</span>        spriteBatch.End();</div>
+<div class="line"><span class="lineno">  500</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4_html_a079be095611c894d8148919528421da4"><div class="ttname"><a href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayer</a></div><div class="ttdeci">void DrawPlayer(Camera camera, Player drawPlayer, Vector2 position, float rotation, Vector2 rotationOrigin, float shadow=0f, float scale=1f)</div><div class="ttdef"><b>Definition</b> LegacyPlayerRenderer.cs:129</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a39e011ebc373e09e7ddc467f0194d087_html_a39e011ebc373e09e7ddc467f0194d087"><div class="ttname"><a href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a39e011ebc373e09e7ddc467f0194d087.html#a39e011ebc373e09e7ddc467f0194d087">Terraria.Graphics.Renderers.LegacyPlayerRenderer.MountedSamplerState</a></div><div class="ttdeci">static SamplerState MountedSamplerState</div><div class="ttdef"><b>Definition</b> LegacyPlayerRenderer.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a82121c3151bb0ea48ae7e41d4e683ea2_html_a82121c3151bb0ea48ae7e41d4e683ea2"><div class="ttname"><a href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a82121c3151bb0ea48ae7e41d4e683ea2.html#a82121c3151bb0ea48ae7e41d4e683ea2">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayerStoned</a></div><div class="ttdeci">void DrawPlayerStoned(Camera camera, Player drawPlayer, Vector2 position)</div><div class="ttdef"><b>Definition</b> LegacyPlayerRenderer.cs:502</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af9b587773620d60bf1d878733772ffe6_html_af9b587773620d60bf1d878733772ffe6"><div class="ttname"><a href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af9b587773620d60bf1d878733772ffe6.html#af9b587773620d60bf1d878733772ffe6">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawGhost</a></div><div class="ttdeci">void DrawGhost(Camera camera, Player drawPlayer, Vector2 position, float shadow=0f)</div><div class="ttdef"><b>Definition</b> LegacyPlayerRenderer.cs:512</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/d0d/classTerraria_1_1Mount_a76bba8bc2fda5cc0279360b9c3a40492.html#a76bba8bc2fda5cc0279360b9c3a40492">Terraria.Mount.Active</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a77176e4c3af14c3ebc36ad7a87e5d8c4.html#a77176e4c3af14c3ebc36ad7a87e5d8c4">Terraria.Player.aggro</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac2721f03c94ab2143779b4fa1252b262.html#ac2721f03c94ab2143779b4fa1252b262">Terraria.Player.armorEffectDrawOutlines</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0d88488e50b4cf5e9ec06d5f40fbcbba.html#a0d88488e50b4cf5e9ec06d5f40fbcbba">Terraria.Player.armorEffectDrawOutlinesForbidden</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_acc0e6760a2a1ab84cab282f226070cbb.html#acc0e6760a2a1ab84cab282f226070cbb">Terraria.Player.armorEffectDrawShadow</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ae62652eadb5d2355d0b285de4859cc96.html#ae62652eadb5d2355d0b285de4859cc96">Terraria.Player.armorEffectDrawShadowBasilisk</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a43a9c017102beb385446be37f100b107.html#a43a9c017102beb385446be37f100b107">Terraria.Player.armorEffectDrawShadowEOCShield</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ace55b3b8488c3903efa27e4590d5b0bc.html#ace55b3b8488c3903efa27e4590d5b0bc">Terraria.Player.armorEffectDrawShadowLokis</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8d153d7334e25263cf6d7f283bd7fd0e.html#a8d153d7334e25263cf6d7f283bd7fd0e">Terraria.Player.armorEffectDrawShadowSubtle</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_abbd040863e850c1847a3a63312f6d632.html#abbd040863e850c1847a3a63312f6d632">Terraria.Player.basiliskCharge</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a41f47df656d14fe8f4c5571f8be8e931.html#a41f47df656d14fe8f4c5571f8be8e931">Terraria.Player.brainOfConfusionDodgeAnimationCounter</a>, <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_af9b587773620d60bf1d878733772ffe6.html#af9b587773620d60bf1d878733772ffe6">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawGhost()</a>, <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a079be095611c894d8148919528421da4.html#a079be095611c894d8148919528421da4">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayer()</a>, <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a82121c3151bb0ea48ae7e41d4e683ea2.html#a82121c3151bb0ea48ae7e41d4e683ea2">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayerStoned()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ace3c10b8cad75d48e34d6d06c9286f46.html#ace3c10b8cad75d48e34d6d06c9286f46">Terraria.Item.flame</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_add534cd0327c6d869bd49888c1114353.html#add534cd0327c6d869bd49888c1114353">Terraria.Player.fullRotation</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aedc92685553e0977e2b16b93a60beade.html#aedc92685553e0977e2b16b93a60beade">Terraria.Player.fullRotationOrigin</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aee73474c7805b1ea345a38caf0124a35.html#aee73474c7805b1ea345a38caf0124a35">Terraria.Main.gamePaused</a>, <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a7616ce7cd9bea8b186e970d770c313c1.html#a7616ce7cd9bea8b186e970d770c313c1">Terraria.Graphics.Camera.GameViewMatrix</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a7223719277be4afd24a2496351a9a22f.html#a7223719277be4afd24a2496351a9a22f">Terraria.Utils.GetLerpValue()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab92102c8caf3df3854d6bb70b179c10e.html#ab92102c8caf3df3854d6bb70b179c10e">Terraria.Player.gfxOffY</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a03c09983ea0317e6e042d92da4d8c1c8.html#a03c09983ea0317e6e042d92da4d8c1c8">Terraria.Player.ghost</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a89680bc71ccf7dca2cb2805233eb8986.html#a89680bc71ccf7dca2cb2805233eb8986">Terraria.Player.ghostFade</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a20300ab1608b4acefec70cc29a462a94.html#a20300ab1608b4acefec70cc29a462a94">Terraria.Player.head</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0f668ad1ca1281ec6bbacdefffd75017.html#a0f668ad1ca1281ec6bbacdefffd75017">Terraria.Player.invis</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a37300400e27fe2b1e641bc482b8ad71c.html#a37300400e27fe2b1e641bc482b8ad71c">Terraria.Player.itemFlameCount</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afdb1d7e8e7e48108b8f7145e93e34cd5.html#afdb1d7e8e7e48108b8f7145e93e34cd5">Terraria.Player.itemFlamePos</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a91f87cf800a6e04a964043869e2cbb59.html#a91f87cf800a6e04a964043869e2cbb59">Terraria.Player.mount</a>, <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a39e011ebc373e09e7ddc467f0194d087.html#a39e011ebc373e09e7ddc467f0194d087">Terraria.Graphics.Renderers.LegacyPlayerRenderer.MountedSamplerState</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af22662d5109307fccdb5b3d005dfc574.html#af22662d5109307fccdb5b3d005dfc574">Terraria.Player.PlayerFrame()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a04dd180cf811f8381b0f214c847a11bc.html#a04dd180cf811f8381b0f214c847a11bc">Terraria.Graphics.Camera.Rasterizer</a>, <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a3f8bc42815b6c7b5c4ac68d2e24a6519.html#a3f8bc42815b6c7b5c4ac68d2e24a6519">Terraria.Graphics.Camera.Sampler</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a358ec34bd7ae567bcaca8799114ea0b2.html#a358ec34bd7ae567bcaca8799114ea0b2">Terraria.Player.selectedItem</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_abf52f00b7ebe4a2eed8ea395969d5df7.html#abf52f00b7ebe4a2eed8ea395969d5df7">Terraria.Player.shadowDodge</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aeade018fffad387e45b53d311061686f.html#aeade018fffad387e45b53d311061686f">Terraria.Player.shadowDodgeCount</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a910bbc5f746694fe0ad4a0646d8d9152.html#a910bbc5f746694fe0ad4a0646d8d9152">Terraria.Player.shadowOrigin</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa34a7b16d1e7768e886d81765281a3e0.html#aa34a7b16d1e7768e886d81765281a3e0">Terraria.Player.shadowPos</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_abafd39709df44d52d331af0ad70abfe3.html#abafd39709df44d52d331af0ad70abfe3">Terraria.Player.shadowRotation</a>, <a class="el" href="../../d8/dc4/classTerraria_1_1Graphics_1_1Camera_a71f1e8ec7a0677c1dde8b5eecf4ae6fd.html#a71f1e8ec7a0677c1dde8b5eecf4ae6fd">Terraria.Graphics.Camera.SpriteBatch</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a4de3fd5e74afb61b48d47a23b9fe7a4b.html#a4de3fd5e74afb61b48d47a23b9fe7a4b">Terraria.Player.stoned</a>, <a class="el" href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix_a76efa5657332e388e131f725c5dfeda9.html#a76efa5657332e388e131f725c5dfeda9">Terraria.Graphics.SpriteViewMatrix.TransformationMatrix</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_af0c6a28aa5a1aa700b7358e964b43b59.html#af0c6a28aa5a1aa700b7358e964b43b59">Terraria.Player.wings</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d10/classTerraria_1_1Graphics_1_1Renderers_1_1LegacyPlayerRenderer_a589e145d93da157a23d35afea5a17c13.html#a589e145d93da157a23d35afea5a17c13">Terraria.Graphics.Renderers.LegacyPlayerRenderer.DrawPlayers()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

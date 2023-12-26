@@ -136,6 +136,56 @@ $(function(){initNavTree('da/dfc/classTerraria_1_1GameContent_1_1UI_1_1Chat_1_1L
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">while</span> (oldText.Length &gt; maxTextSize)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">int</span> num = maxTextSize;</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordtype">int</span> num2 = num;</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">while</span> (oldText.Substring(num2, 1) != <span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                num2--;</div>
+<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">if</span> (num2 &lt; 1)</div>
+<div class="line"><span class="lineno">  124</span>                {</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  126</span>                }</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">while</span> (oldText.Substring(num, 1) != <span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">  131</span>                {</div>
+<div class="line"><span class="lineno">  132</span>                    num++;</div>
+<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">if</span> (num &gt;= oldText.Length - 1)</div>
+<div class="line"><span class="lineno">  134</span>                    {</div>
+<div class="line"><span class="lineno">  135</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  136</span>                    }</div>
+<div class="line"><span class="lineno">  137</span>                }</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                num = num2;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (num &gt;= oldText.Length - 1)</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                num = oldText.Length;</div>
+<div class="line"><span class="lineno">  146</span>            }</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordtype">string</span> newText = oldText.Substring(0, num);</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_function" href="../../da/dfc/classTerraria_1_1GameContent_1_1UI_1_1Chat_1_1LegacyChatMonitor_a7f2cbe780541155897eabee85b91a13a.html#a7f2cbe780541155897eabee85b91a13a">NewTextInternal</a>(newText, R, G, B, force: true);</div>
+<div class="line"><span class="lineno">  149</span>            oldText = oldText.Substring(num);</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (oldText.Length &gt; 0)</div>
+<div class="line"><span class="lineno">  151</span>            {</div>
+<div class="line"><span class="lineno">  152</span>                <span class="keywordflow">while</span> (oldText.Substring(0, 1) == <span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">  153</span>                {</div>
+<div class="line"><span class="lineno">  154</span>                    oldText = oldText.Substring(1);</div>
+<div class="line"><span class="lineno">  155</span>                }</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> oldText;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1Chat_1_1LegacyChatMonitor_a7f2cbe780541155897eabee85b91a13a_html_a7f2cbe780541155897eabee85b91a13a"><div class="ttname"><a href="../../da/dfc/classTerraria_1_1GameContent_1_1UI_1_1Chat_1_1LegacyChatMonitor_a7f2cbe780541155897eabee85b91a13a.html#a7f2cbe780541155897eabee85b91a13a">Terraria.GameContent.UI.Chat.LegacyChatMonitor.NewTextInternal</a></div><div class="ttdeci">void NewTextInternal(string newText, byte R=byte.MaxValue, byte G=byte.MaxValue, byte B=byte.MaxValue, bool force=false)</div><div class="ttdef"><b>Definition</b> LegacyChatMonitor.cs:90</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dfc/classTerraria_1_1GameContent_1_1UI_1_1Chat_1_1LegacyChatMonitor_a7f2cbe780541155897eabee85b91a13a.html#a7f2cbe780541155897eabee85b91a13a">Terraria.GameContent.UI.Chat.LegacyChatMonitor.NewTextInternal()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dfc/classTerraria_1_1GameContent_1_1UI_1_1Chat_1_1LegacyChatMonitor_a7f2cbe780541155897eabee85b91a13a.html#a7f2cbe780541155897eabee85b91a13a">Terraria.GameContent.UI.Chat.LegacyChatMonitor.NewTextInternal()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

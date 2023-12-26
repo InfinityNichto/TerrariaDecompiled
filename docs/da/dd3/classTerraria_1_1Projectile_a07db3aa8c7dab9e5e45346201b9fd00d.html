@@ -117,6 +117,66 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a07db3aa8c7dab9e5e4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">33735</span>    {</div>
+<div class="line"><span class="lineno">33736</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] += 1f;</div>
+<div class="line"><span class="lineno">33737</span>        <span class="keywordtype">int</span> num = 60;</div>
+<div class="line"><span class="lineno">33738</span>        <span class="keywordtype">int</span> num2 = 12;</div>
+<div class="line"><span class="lineno">33739</span>        <span class="keywordtype">int</span> num3 = num + num2;</div>
+<div class="line"><span class="lineno">33740</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &gt;= (<span class="keywordtype">float</span>)num3)</div>
+<div class="line"><span class="lineno">33741</span>        {</div>
+<div class="line"><span class="lineno">33742</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Kill</a>();</div>
+<div class="line"><span class="lineno">33743</span>        }</div>
+<div class="line"><span class="lineno">33744</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &gt;= (<span class="keywordtype">float</span>)num)</div>
+<div class="line"><span class="lineno">33745</span>        {</div>
+<div class="line"><span class="lineno">33746</span>            <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a> *= 0.95f;</div>
+<div class="line"><span class="lineno">33747</span>        }</div>
+<div class="line"><span class="lineno">33748</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] == 1f;</div>
+<div class="line"><span class="lineno">33749</span>        <span class="keywordtype">int</span> num4 = 50;</div>
+<div class="line"><span class="lineno">33750</span>        <span class="keywordtype">int</span> num5 = num4;</div>
+<div class="line"><span class="lineno">33751</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">33752</span>        {</div>
+<div class="line"><span class="lineno">33753</span>            num4 = 0;</div>
+<div class="line"><span class="lineno">33754</span>            num5 = num;</div>
+<div class="line"><span class="lineno">33755</span>        }</div>
+<div class="line"><span class="lineno">33756</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &lt; (<span class="keywordtype">float</span>)num5 &amp;&amp; Main.rand.NextFloat() &lt; 0.25f)</div>
+<div class="line"><span class="lineno">33757</span>        {</div>
+<div class="line"><span class="lineno">33758</span>            <span class="keywordtype">short</span> num6 = (short)(flag ? 135 : 6);</div>
+<div class="line"><span class="lineno">33759</span>            Dust dust = Dust.NewDustDirect(base.Center + Main.rand.NextVector2Circular(60f, 60f) * Utils.Remap(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0], 0f, 72f, 0.5f, 1f), 4, 4, num6, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.X * 0.2f, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a>.Y * 0.2f, 100);</div>
+<div class="line"><span class="lineno">33760</span>            <span class="keywordflow">if</span> (Main.rand.Next(4) == 0)</div>
+<div class="line"><span class="lineno">33761</span>            {</div>
+<div class="line"><span class="lineno">33762</span>                dust.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33763</span>                dust.scale *= 3f;</div>
+<div class="line"><span class="lineno">33764</span>                dust.velocity.X *= 2f;</div>
+<div class="line"><span class="lineno">33765</span>                dust.velocity.Y *= 2f;</div>
+<div class="line"><span class="lineno">33766</span>            }</div>
+<div class="line"><span class="lineno">33767</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">33768</span>            {</div>
+<div class="line"><span class="lineno">33769</span>                dust.scale *= 1.5f;</div>
+<div class="line"><span class="lineno">33770</span>            }</div>
+<div class="line"><span class="lineno">33771</span>            dust.scale *= 1.5f;</div>
+<div class="line"><span class="lineno">33772</span>            dust.velocity *= 1.2f;</div>
+<div class="line"><span class="lineno">33773</span>            dust.velocity += <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">velocity</a> * 1f * Utils.Remap(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0], 0f, (<span class="keywordtype">float</span>)num * 0.75f, 1f, 0.1f) * Utils.Remap(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0], 0f, (<span class="keywordtype">float</span>)num * 0.1f, 0.1f, 1f);</div>
+<div class="line"><span class="lineno">33774</span>            dust.customData = 1;</div>
+<div class="line"><span class="lineno">33775</span>        }</div>
+<div class="line"><span class="lineno">33776</span>        <span class="keywordflow">if</span> (num4 &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">localAI</a>[0] &gt;= (<span class="keywordtype">float</span>)num4 &amp;&amp; Main.rand.NextFloat() &lt; 0.5f)</div>
+<div class="line"><span class="lineno">33777</span>        {</div>
+<div class="line"><span class="lineno">33778</span>            Vector2 center = Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].Center;</div>
+<div class="line"><span class="lineno">33779</span>            Vector2 vector = (base.Center - center).SafeNormalize(Vector2.Zero).RotatedByRandom(0.19634954631328583) * 7f;</div>
+<div class="line"><span class="lineno">33780</span>            <span class="keywordtype">short</span> num7 = 31;</div>
+<div class="line"><span class="lineno">33781</span>            Dust dust2 = Dust.NewDustDirect(base.Center + Main.rand.NextVector2Circular(50f, 50f) - vector * 2f, 4, 4, num7, 0f, 0f, 150, <span class="keyword">new</span> Color(80, 80, 80));</div>
+<div class="line"><span class="lineno">33782</span>            dust2.noGravity = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33783</span>            dust2.velocity = vector;</div>
+<div class="line"><span class="lineno">33784</span>            dust2.scale *= 1.1f + Main.rand.NextFloat() * 0.2f;</div>
+<div class="line"><span class="lineno">33785</span>            dust2.customData = -0.3f - 0.15f * Main.rand.NextFloat();</div>
+<div class="line"><span class="lineno">33786</span>        }</div>
+<div class="line"><span class="lineno">33787</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f_html_a8663588d4222e4797697d72a68d9566f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a></div><div class="ttdeci">Vector2 velocity</div><div class="ttdef"><b>Definition</b> Entity.cs:16</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6_html_a40dd3cce3595df3e5e6f3ecd2616a6a6"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">Terraria.Projectile.localAI</a></div><div class="ttdeci">float[] localAI</div><div class="ttdef"><b>Definition</b> Projectile.cs:120</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861_html_ad720c809bf9147dbd21e7fa78f88d861"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> Projectile.cs:59438</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a1220a41f9e87f7faa7e5076f088b9167.html#a1220a41f9e87f7faa7e5076f088b9167">Terraria.Utils.Remap()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

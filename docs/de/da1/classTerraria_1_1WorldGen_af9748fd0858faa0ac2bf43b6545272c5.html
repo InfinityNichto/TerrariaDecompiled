@@ -136,6 +136,46 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_af9748fd0858faa0ac2bf
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">48836</span>    {</div>
+<div class="line"><span class="lineno">48837</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno">48838</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a313b49f7cdc4d2b921fa436de3d95a51.html#a313b49f7cdc4d2b921fa436de3d95a51">Boulders</a>[Main.tile[x, y + 1].type] || <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a313b49f7cdc4d2b921fa436de3d95a51.html#a313b49f7cdc4d2b921fa436de3d95a51">Boulders</a>[Main.tile[x + 1, y + 1].type])</div>
+<div class="line"><span class="lineno">48839</span>        {</div>
+<div class="line"><span class="lineno">48840</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">48841</span>        }</div>
+<div class="line"><span class="lineno">48842</span>        <span class="keywordflow">if</span> (TileObject.CanPlace(x, y, type, style, 1, out var objectData))</div>
+<div class="line"><span class="lineno">48843</span>        {</div>
+<div class="line"><span class="lineno">48844</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">48845</span>            <span class="keywordflow">if</span> (notNearOtherChests &amp;&amp; Chest.NearOtherChests(x - 1, y - 1))</div>
+<div class="line"><span class="lineno">48846</span>            {</div>
+<div class="line"><span class="lineno">48847</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">48848</span>            }</div>
+<div class="line"><span class="lineno">48849</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">48850</span>            {</div>
+<div class="line"><span class="lineno">48851</span>                TileObject.Place(objectData);</div>
+<div class="line"><span class="lineno">48852</span>                num = Chest.CreateChest(objectData.xCoord, objectData.yCoord);</div>
+<div class="line"><span class="lineno">48853</span>            }</div>
+<div class="line"><span class="lineno">48854</span>        }</div>
+<div class="line"><span class="lineno">48855</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">48856</span>        {</div>
+<div class="line"><span class="lineno">48857</span>            num = -1;</div>
+<div class="line"><span class="lineno">48858</span>        }</div>
+<div class="line"><span class="lineno">48859</span>        <span class="keywordflow">if</span> (num != -1 &amp;&amp; Main.netMode == 1 &amp;&amp; type == 21)</div>
+<div class="line"><span class="lineno">48860</span>        {</div>
+<div class="line"><span class="lineno">48861</span>            NetMessage.SendData(34, -1, -1, <span class="keyword">null</span>, 0, x, y, style);</div>
+<div class="line"><span class="lineno">48862</span>        }</div>
+<div class="line"><span class="lineno">48863</span>        <span class="keywordflow">if</span> (num != -1 &amp;&amp; Main.netMode == 1 &amp;&amp; type == 467)</div>
+<div class="line"><span class="lineno">48864</span>        {</div>
+<div class="line"><span class="lineno">48865</span>            NetMessage.SendData(34, -1, -1, <span class="keyword">null</span>, 4, x, y, style);</div>
+<div class="line"><span class="lineno">48866</span>        }</div>
+<div class="line"><span class="lineno">48867</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">48868</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_a313b49f7cdc4d2b921fa436de3d95a51_html_a313b49f7cdc4d2b921fa436de3d95a51"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a313b49f7cdc4d2b921fa436de3d95a51.html#a313b49f7cdc4d2b921fa436de3d95a51">Terraria.ID.TileID.Sets.Boulders</a></div><div class="ttdeci">static bool[] Boulders</div><div class="ttdef"><b>Definition</b> TileID.cs:123</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a313b49f7cdc4d2b921fa436de3d95a51.html#a313b49f7cdc4d2b921fa436de3d95a51">Terraria.ID.TileID.Sets.Boulders</a>, <a class="el" href="../../d6/d5e/structTerraria_1_1TileObject_a2f83b2e5cc66ed66add4052c5f215d55.html#a2f83b2e5cc66ed66add4052c5f215d55">Terraria.TileObject.CanPlace()</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7c3927612acb3162626db4bb4e90091f.html#a7c3927612acb3162626db4bb4e90091f">Terraria.Chest.CreateChest()</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_abc99a76c1a64a83aa8ee410e109979bb.html#abc99a76c1a64a83aa8ee410e109979bb">Terraria.Chest.NearOtherChests()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d6/d5e/structTerraria_1_1TileObject_a1eb17e4544ff3dc50458391af5705f21.html#a1eb17e4544ff3dc50458391af5705f21">Terraria.TileObject.Place()</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

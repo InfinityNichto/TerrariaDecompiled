@@ -136,6 +136,29 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a3b3e5b99fe62b3f7e1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">41789</span>    {</div>
+<div class="line"><span class="lineno">41790</span>        myDistance = Vector2.Distance(entity.Center, base.Center);</div>
+<div class="line"><span class="lineno">41791</span>        <span class="keywordflow">if</span> (myDistance &lt; maxDistance &amp;&amp; !<a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4.html#a515dee382fc25157902622c06c9f9fa4">CanHitWithOwnBody</a>(entity))</div>
+<div class="line"><span class="lineno">41792</span>        {</div>
+<div class="line"><span class="lineno">41793</span>            myDistance = <span class="keywordtype">float</span>.PositiveInfinity;</div>
+<div class="line"><span class="lineno">41794</span>        }</div>
+<div class="line"><span class="lineno">41795</span>        playerDistance = Vector2.Distance(entity.Center, Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].Center);</div>
+<div class="line"><span class="lineno">41796</span>        <span class="keywordflow">if</span> (playerDistance &lt; maxDistance &amp;&amp; !<a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_aa18d7e1fa7b65e96565963ef7693799f.html#aa18d7e1fa7b65e96565963ef7693799f">CanHitWithMeleeWeapon</a>(entity))</div>
+<div class="line"><span class="lineno">41797</span>        {</div>
+<div class="line"><span class="lineno">41798</span>            playerDistance = <span class="keywordtype">float</span>.PositiveInfinity;</div>
+<div class="line"><span class="lineno">41799</span>        }</div>
+<div class="line"><span class="lineno">41800</span>        closerIsMe = myDistance &lt; playerDistance;</div>
+<div class="line"><span class="lineno">41801</span>        <span class="keywordflow">if</span> (closerIsMe)</div>
+<div class="line"><span class="lineno">41802</span>        {</div>
+<div class="line"><span class="lineno">41803</span>            <span class="keywordflow">return</span> myDistance &lt;= maxDistance;</div>
+<div class="line"><span class="lineno">41804</span>        }</div>
+<div class="line"><span class="lineno">41805</span>        <span class="keywordflow">return</span> playerDistance &lt;= maxDistance;</div>
+<div class="line"><span class="lineno">41806</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4_html_a515dee382fc25157902622c06c9f9fa4"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4.html#a515dee382fc25157902622c06c9f9fa4">Terraria.Projectile.CanHitWithOwnBody</a></div><div class="ttdeci">bool CanHitWithOwnBody(Entity ent)</div><div class="ttdef"><b>Definition</b> Projectile.cs:11004</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_aa18d7e1fa7b65e96565963ef7693799f_html_aa18d7e1fa7b65e96565963ef7693799f"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_aa18d7e1fa7b65e96565963ef7693799f.html#aa18d7e1fa7b65e96565963ef7693799f">Terraria.Projectile.CanHitWithMeleeWeapon</a></div><div class="ttdeci">bool CanHitWithMeleeWeapon(Entity ent)</div><div class="ttdef"><b>Definition</b> Projectile.cs:10991</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>.</p>
 
 </div>
 </div>

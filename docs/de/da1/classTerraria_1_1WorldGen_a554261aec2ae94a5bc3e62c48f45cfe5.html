@@ -146,6 +146,76 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a554261aec2ae94a5bc3e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">69256</span>    {</div>
+<div class="line"><span class="lineno">69257</span>        <span class="comment">//IL_024e: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">69258</span>        <span class="keywordtype">double</span> num = <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">X</a>;</div>
+<div class="line"><span class="lineno">69259</span>        <span class="keywordtype">double</span> num2 = <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a>;</div>
+<div class="line"><span class="lineno">69260</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">69261</span>        {</div>
+<div class="line"><span class="lineno">69262</span>            <span class="keywordtype">double</span> num3 = 0.0;</div>
+<div class="line"><span class="lineno">69263</span>            <span class="keywordtype">double</span> num4 = 0.0;</div>
+<div class="line"><span class="lineno">69264</span>            <span class="keywordtype">double</span> num5 = Size;</div>
+<div class="line"><span class="lineno">69265</span>            num = Utils.Clamp(num, num5 + 1.0, (<span class="keywordtype">double</span>)Main.maxTilesX - num5 - 1.0);</div>
+<div class="line"><span class="lineno">69266</span>            num2 = Utils.Clamp(num2, num5 + 1.0, (<span class="keywordtype">double</span>)Main.maxTilesY - num5 - 1.0);</div>
+<div class="line"><span class="lineno">69267</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Steps; i++)</div>
+<div class="line"><span class="lineno">69268</span>            {</div>
+<div class="line"><span class="lineno">69269</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = (<span class="keywordtype">int</span>)(num - num5); (double)j &lt;= num + num5; j++)</div>
+<div class="line"><span class="lineno">69270</span>                {</div>
+<div class="line"><span class="lineno">69271</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = (<span class="keywordtype">int</span>)(num2 - num5); (double)k &lt;= num2 + num5; k++)</div>
+<div class="line"><span class="lineno">69272</span>                    {</div>
+<div class="line"><span class="lineno">69273</span>                        <span class="keywordflow">if</span> (Math.Abs((<span class="keywordtype">double</span>)j - num) + Math.Abs((<span class="keywordtype">double</span>)k - num2) &lt; num5 * (1.0 + (<span class="keywordtype">double</span>)<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-10, 11) * 0.005) &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; Main.maxTilesX &amp;&amp; k &gt;= 0 &amp;&amp; k &lt; Main.maxTilesY)</div>
+<div class="line"><span class="lineno">69274</span>                        {</div>
+<div class="line"><span class="lineno">69275</span>                            Main.tile[j, k].active(active: false);</div>
+<div class="line"><span class="lineno">69276</span>                            <span class="keywordflow">if</span> (Wet)</div>
+<div class="line"><span class="lineno">69277</span>                            {</div>
+<div class="line"><span class="lineno">69278</span>                                Main.tile[j, k].liquid = <span class="keywordtype">byte</span>.MaxValue;</div>
+<div class="line"><span class="lineno">69279</span>                            }</div>
+<div class="line"><span class="lineno">69280</span>                        }</div>
+<div class="line"><span class="lineno">69281</span>                    }</div>
+<div class="line"><span class="lineno">69282</span>                }</div>
+<div class="line"><span class="lineno">69283</span>                num5 += (double)<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-50, 51) * 0.03;</div>
+<div class="line"><span class="lineno">69284</span>                <span class="keywordflow">if</span> (num5 &lt; (<span class="keywordtype">double</span>)Size * 0.6)</div>
+<div class="line"><span class="lineno">69285</span>                {</div>
+<div class="line"><span class="lineno">69286</span>                    num5 = (double)Size * 0.6;</div>
+<div class="line"><span class="lineno">69287</span>                }</div>
+<div class="line"><span class="lineno">69288</span>                <span class="keywordflow">if</span> (num5 &gt; (<span class="keywordtype">double</span>)(Size * 2))</div>
+<div class="line"><span class="lineno">69289</span>                {</div>
+<div class="line"><span class="lineno">69290</span>                    num5 = Size * 2;</div>
+<div class="line"><span class="lineno">69291</span>                }</div>
+<div class="line"><span class="lineno">69292</span>                num3 += (double)<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-20, 21) * 0.01;</div>
+<div class="line"><span class="lineno">69293</span>                num4 += (double)<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(-20, 21) * 0.01;</div>
+<div class="line"><span class="lineno">69294</span>                <span class="keywordflow">if</span> (num3 &lt; -1.0)</div>
+<div class="line"><span class="lineno">69295</span>                {</div>
+<div class="line"><span class="lineno">69296</span>                    num3 = -1.0;</div>
+<div class="line"><span class="lineno">69297</span>                }</div>
+<div class="line"><span class="lineno">69298</span>                <span class="keywordflow">if</span> (num3 &gt; 1.0)</div>
+<div class="line"><span class="lineno">69299</span>                {</div>
+<div class="line"><span class="lineno">69300</span>                    num3 = 1.0;</div>
+<div class="line"><span class="lineno">69301</span>                }</div>
+<div class="line"><span class="lineno">69302</span>                <span class="keywordflow">if</span> (num4 &lt; -1.0)</div>
+<div class="line"><span class="lineno">69303</span>                {</div>
+<div class="line"><span class="lineno">69304</span>                    num4 = -1.0;</div>
+<div class="line"><span class="lineno">69305</span>                }</div>
+<div class="line"><span class="lineno">69306</span>                <span class="keywordflow">if</span> (num4 &gt; 1.0)</div>
+<div class="line"><span class="lineno">69307</span>                {</div>
+<div class="line"><span class="lineno">69308</span>                    num4 = 1.0;</div>
+<div class="line"><span class="lineno">69309</span>                }</div>
+<div class="line"><span class="lineno">69310</span>                num += (xDir + num3) * 0.6;</div>
+<div class="line"><span class="lineno">69311</span>                num2 += (yDir + num4) * 0.6;</div>
+<div class="line"><span class="lineno">69312</span>            }</div>
+<div class="line"><span class="lineno">69313</span>        }</div>
+<div class="line"><span class="lineno">69314</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">69315</span>        {</div>
+<div class="line"><span class="lineno">69316</span>        }</div>
+<div class="line"><span class="lineno">69317</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_struct" href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html">Vector2D</a>(num, num2);</div>
+<div class="line"><span class="lineno">69318</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">ReLogic.Peripherals.RGB.Logitech.KeyName.X</a></div><div class="ttdeci">@ X</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">ReLogic.Peripherals.RGB.Logitech.KeyName.Y</a></div><div class="ttdeci">@ Y</div></div>
+<div class="ttc" id="astructReLogic_1_1Utilities_1_1Vector2D_html"><div class="ttname"><a href="../../de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html">ReLogic.Utilities.Vector2D</a></div><div class="ttdef"><b>Definition</b> Vector2D.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,43 @@ $(function(){initNavTree('d9/daf/classTerraria_1_1Program_afcb7f6498f275936d3726
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  248</span>    {</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  250</span>        {</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordtype">string</span> text = e.ToString();</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.gen)</div>
+<div class="line"><span class="lineno">  253</span>            {</div>
+<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  255</span>                {</div>
+<div class="line"><span class="lineno">  256</span>                    text = $<span class="stringliteral">&quot;Creating world - Seed: {Main.ActiveWorldFileData.Seed} Width: {Main.maxTilesX}, Height: {Main.maxTilesY}, Evil: {WorldGen.WorldGenParam_Evil}, IsExpert: {Main.expertMode}\n{text}&quot;</span>;</div>
+<div class="line"><span class="lineno">  257</span>                }</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  259</span>                {</div>
+<div class="line"><span class="lineno">  260</span>                }</div>
+<div class="line"><span class="lineno">  261</span>            }</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keyword">using</span> (StreamWriter streamWriter = <span class="keyword">new</span> StreamWriter(<span class="stringliteral">&quot;client-crashlog.txt&quot;</span>, append: true))</div>
+<div class="line"><span class="lineno">  263</span>            {</div>
+<div class="line"><span class="lineno">  264</span>                streamWriter.WriteLine(DateTime.Now);</div>
+<div class="line"><span class="lineno">  265</span>                streamWriter.WriteLine(text);</div>
+<div class="line"><span class="lineno">  266</span>                streamWriter.WriteLine(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  267</span>            }</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keywordflow">if</span> (Main.dedServ)</div>
+<div class="line"><span class="lineno">  269</span>            {</div>
+<div class="line"><span class="lineno">  270</span>                Console.WriteLine(<a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Error.ServerCrash&quot;</span>), DateTime.Now, text);</div>
+<div class="line"><span class="lineno">  271</span>            }</div>
+<div class="line"><span class="lineno">  272</span>            MessageBox.Show(text, <span class="stringliteral">&quot;Terraria: Error&quot;</span>);</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  275</span>        {</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78_html_ae4636a4800b9ecbaa498954520462f78"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue</a></div><div class="ttdeci">static string GetTextValue(string key)</div><div class="ttdef"><b>Definition</b> Language.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_html"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Terraria.Localization.Language</a></div><div class="ttdef"><b>Definition</b> Language.cs:7</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a51e4289394258b7819811f8b448b1a52.html#a51e4289394258b7819811f8b448b1a52">Terraria.Main.dedServ</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1b67bc67f7997dea502c5082767af05a.html#a1b67bc67f7997dea502c5082767af05a">Terraria.WorldGen.gen</a>, and <a class="el" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/daf/classTerraria_1_1Program_af6c00579600a216e018170de3614fc26.html#af6c00579600a216e018170de3614fc26">Terraria.Program.RunGame()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

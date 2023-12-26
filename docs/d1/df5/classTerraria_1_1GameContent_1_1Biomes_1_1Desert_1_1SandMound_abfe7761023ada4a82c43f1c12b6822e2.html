@@ -117,6 +117,52 @@ $(function(){initNavTree('d1/df5/classTerraria_1_1GameContent_1_1Biomes_1_1Deser
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        Rectangle desert = description.Desert;</div>
+<div class="line"><span class="lineno">   11</span>        desert.Height = Math.Min(description.Desert.Height, description.Hive.Height / 2);</div>
+<div class="line"><span class="lineno">   12</span>        Rectangle desert2 = description.Desert;</div>
+<div class="line"><span class="lineno">   13</span>        desert2.Y = desert.Bottom;</div>
+<div class="line"><span class="lineno">   14</span>        desert2.Height = Math.Max(0, description.Desert.Bottom - desert.Bottom);</div>
+<div class="line"><span class="lineno">   15</span>        SurfaceMap surface = description.Surface;</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -5; i &lt; desert.Width + 5; i++)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordtype">double</span> value = Math.Abs((<span class="keywordtype">double</span>)(i + 5) / (<span class="keywordtype">double</span>)(desert.Width + 10)) * 2.0 - 1.0;</div>
+<div class="line"><span class="lineno">   21</span>            value = Utils.Clamp(value, -1.0, 1.0);</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (i % 3 == 0)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                num += <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(-1, 2);</div>
+<div class="line"><span class="lineno">   25</span>                num = Utils.Clamp(num, -10, 10);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            num2 += <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(-1, 2);</div>
+<div class="line"><span class="lineno">   28</span>            num2 = Utils.Clamp(num2, -10, 10);</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordtype">double</span> num3 = Math.Sqrt(1.0 - value * value * value * value);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordtype">int</span> num4 = desert.Bottom - (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(num3 * (<span class="keywordtype">double</span>)desert.Height) + num;</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (Math.Abs(value) &lt; 1.0)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordtype">double</span> num5 = Utils.UnclampedSmoothStep(0.5, 0.8, Math.Abs(value));</div>
+<div class="line"><span class="lineno">   34</span>                num5 = num5 * num5 * num5;</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordtype">int</span> val = 10 + (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((<span class="keywordtype">double</span>)desert.Top - num5 * 20.0) + num2;</div>
+<div class="line"><span class="lineno">   36</span>                val = Math.Min(val, num4);</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = surface[i + desert.X] - 1; j &lt; val; j++)</div>
+<div class="line"><span class="lineno">   38</span>                {</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="keywordtype">int</span> num6 = i + desert.X;</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordtype">int</span> num7 = j;</div>
+<div class="line"><span class="lineno">   41</span>                    Main.tile[num6, num7].active(active: false);</div>
+<div class="line"><span class="lineno">   42</span>                    Main.tile[num6, num7].wall = 0;</div>
+<div class="line"><span class="lineno">   43</span>                }</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_function" href="../../d1/df5/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SandMound_aad8f28ae239116605d70a6c09e94b22c.html#aad8f28ae239116605d70a6c09e94b22c">PlaceSandColumn</a>(i + desert.X, num4, desert2.Bottom - num4);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SandMound_aad8f28ae239116605d70a6c09e94b22c_html_aad8f28ae239116605d70a6c09e94b22c"><div class="ttname"><a href="../../d1/df5/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SandMound_aad8f28ae239116605d70a6c09e94b22c.html#aad8f28ae239116605d70a6c09e94b22c">Terraria.GameContent.Biomes.Desert.SandMound.PlaceSandColumn</a></div><div class="ttdeci">static void PlaceSandColumn(int startX, int startY, int height)</div><div class="ttdef"><b>Definition</b> SandMound.cs:49</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a243220f796223c7452b678ca9517fd91.html#a243220f796223c7452b678ca9517fd91">Terraria.GameContent.Biomes.Desert.DesertDescription.Desert</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a234633921201fb41c39415c1d6726670.html#a234633921201fb41c39415c1d6726670">Terraria.GameContent.Biomes.Desert.DesertDescription.Hive</a>, <a class="el" href="../../d1/df5/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1SandMound_aad8f28ae239116605d70a6c09e94b22c.html#aad8f28ae239116605d70a6c09e94b22c">Terraria.GameContent.Biomes.Desert.SandMound.PlaceSandColumn()</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a58ee81eb790a6f16d2e5681d81cac6bf.html#a58ee81eb790a6f16d2e5681d81cac6bf">Terraria.GameContent.Biomes.Desert.DesertDescription.Surface</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_af964013bc3e45249bfa699497ee9881a.html#af964013bc3e45249bfa699497ee9881a">Terraria.Utils.UnclampedSmoothStep()</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/da9/classTerraria_1_1GameContent_1_1Biomes_1_1DesertBiome_adf286ec2188bd47c486ce9ab7f42075f.html#adf286ec2188bd47c486ce9ab7f42075f">Terraria.GameContent.Biomes.DesertBiome.Place()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

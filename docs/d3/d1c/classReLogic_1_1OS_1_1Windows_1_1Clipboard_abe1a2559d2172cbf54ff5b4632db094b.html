@@ -117,6 +117,25 @@ $(function(){initNavTree('d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_abe1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_a32b7be5ad1f87bde38a5cd0dced9b812.html#a32b7be5ad1f87bde38a5cd0dced9b812">GetApartmentStateSafely</a>() == ApartmentState.STA)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            callback();</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        Thread thread = <span class="keyword">new</span> Thread((ThreadStart)delegate</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            callback();</div>
+<div class="line"><span class="lineno">   74</span>        });</div>
+<div class="line"><span class="lineno">   75</span>        thread.SetApartmentState(ApartmentState.STA);</div>
+<div class="line"><span class="lineno">   76</span>        thread.Start();</div>
+<div class="line"><span class="lineno">   77</span>        thread.Join();</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1OS_1_1Windows_1_1Clipboard_a32b7be5ad1f87bde38a5cd0dced9b812_html_a32b7be5ad1f87bde38a5cd0dced9b812"><div class="ttname"><a href="../../d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_a32b7be5ad1f87bde38a5cd0dced9b812.html#a32b7be5ad1f87bde38a5cd0dced9b812">ReLogic.OS.Windows.Clipboard.GetApartmentStateSafely</a></div><div class="ttdeci">static ApartmentState GetApartmentStateSafely()</div><div class="ttdef"><b>Definition</b> Clipboard.cs:80</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_a32b7be5ad1f87bde38a5cd0dced9b812.html#a32b7be5ad1f87bde38a5cd0dced9b812">ReLogic.OS.Windows.Clipboard.GetApartmentStateSafely()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_a4bf5661a604f9c3f88991b15659eb28e.html#a4bf5661a604f9c3f88991b15659eb28e">ReLogic.OS.Windows.Clipboard.SetClipboard()</a>, and <a class="el" href="../../d3/d1c/classReLogic_1_1OS_1_1Windows_1_1Clipboard_ac0f3904109d76307962fa1e945e9d0b1.html#ac0f3904109d76307962fa1e945e9d0b1">ReLogic.OS.Windows.Clipboard.TryToGetClipboardText()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

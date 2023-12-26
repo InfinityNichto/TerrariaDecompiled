@@ -126,6 +126,51 @@ $(function(){initNavTree('d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (context == 16)</div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>            Main.Achievements.GetCondition(<span class="stringliteral">&quot;HOLD_ON_TIGHT&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (context == 17)</div>
+<div class="line"><span class="lineno">  235</span>        {</div>
+<div class="line"><span class="lineno">  236</span>            Main.Achievements.GetCondition(<span class="stringliteral">&quot;THE_CAVALRY&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  237</span>        }</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> ((context == 10 || context == 11) &amp;&amp; item.wingSlot &gt; 0)</div>
+<div class="line"><span class="lineno">  239</span>        {</div>
+<div class="line"><span class="lineno">  240</span>            Main.Achievements.GetCondition(<span class="stringliteral">&quot;HEAD_IN_THE_CLOUDS&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (context == 8 &amp;&amp; player.armor[0].stack &gt; 0 &amp;&amp; player.armor[1].stack &gt; 0 &amp;&amp; player.armor[2].stack &gt; 0)</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            Main.Achievements.GetCondition(<span class="stringliteral">&quot;MATCHING_ATTIRE&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (context == 9 &amp;&amp; player.armor[10].stack &gt; 0 &amp;&amp; player.armor[11].stack &gt; 0 &amp;&amp; player.armor[12].stack &gt; 0)</div>
+<div class="line"><span class="lineno">  247</span>        {</div>
+<div class="line"><span class="lineno">  248</span>            Main.Achievements.GetCondition(<span class="stringliteral">&quot;FASHION_STATEMENT&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  249</span>        }</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (context != 12 &amp;&amp; context != 33)</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (player.IsItemSlotUnlockedAndUsable(i) &amp;&amp; (player.dye[i].type &lt; 1 || player.dye[i].stack &lt; 1))</div>
+<div class="line"><span class="lineno">  257</span>            {</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  259</span>            }</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; player.miscDyes.Length; j++)</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">if</span> (player.miscDyes[j].type &lt; 1 || player.miscDyes[j].stack &lt; 1)</div>
+<div class="line"><span class="lineno">  264</span>            {</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  266</span>            }</div>
+<div class="line"><span class="lineno">  267</span>        }</div>
+<div class="line"><span class="lineno">  268</span>        Main.Achievements.GetCondition(<span class="stringliteral">&quot;DYE_HARD&quot;</span>, <span class="stringliteral">&quot;Equip&quot;</span>).Complete();</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a1dd9f4d157a58162e49280de4256d4bb.html#a1dd9f4d157a58162e49280de4256d4bb">Terraria.Main.Achievements</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a40263bc1aa24417c265f18648db5bab3.html#a40263bc1aa24417c265f18648db5bab3">Terraria.Player.armor</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa4b4517461d96138e1a54762e745bd09.html#aa4b4517461d96138e1a54762e745bd09">Terraria.Player.dye</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa250b11a6a3319b75f3693073a80d071.html#aa250b11a6a3319b75f3693073a80d071">Terraria.Player.IsItemSlotUnlockedAndUsable()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab1c22e4241bcb66a925e9a497f19dbf1.html#ab1c22e4241bcb66a925e9a497f19dbf1">Terraria.Player.miscDyes</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_ac2d58bdd5856de732c8c408f0095b298.html#ac2d58bdd5856de732c8c408f0095b298">Terraria.Item.wingSlot</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a50cea2a4a8e7505857fa97ecd8b4b06c.html#a50cea2a4a8e7505857fa97ecd8b4b06c">Terraria.UI.ItemSlot.LeftClick()</a>, <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_acfbcce7e7e8fdee5c69d9e17ffc79c8d.html#acfbcce7e7e8fdee5c69d9e17ffc79c8d">Terraria.UI.ItemSlot.SwapEquip()</a>, and <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34b47fb521ce6c4c85bc.html#a5e3a22d7c08b34b47fb521ce6c4c85bc">Terraria.UI.ItemSlot.SwapVanityEquip()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

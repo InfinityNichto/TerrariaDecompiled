@@ -131,6 +131,529 @@ $(function(){initNavTree('d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Tile
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1516</span>    {</div>
+<div class="line"><span class="lineno"> 1517</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno"> 1518</span>        {</div>
+<div class="line"><span class="lineno"> 1519</span>        <span class="keywordflow">case</span> 270:</div>
+<div class="line"><span class="lineno"> 1520</span>        {</div>
+<div class="line"><span class="lineno"> 1521</span>            TileFlameData tileFlameData = <span class="keywordflow">default</span>(TileFlameData);</div>
+<div class="line"><span class="lineno"> 1522</span>            tileFlameData.flameTexture = TextureAssets.FireflyJar.Value;</div>
+<div class="line"><span class="lineno"> 1523</span>            tileFlameData.flameColor = <span class="keyword">new</span> Color(200, 200, 200, 0);</div>
+<div class="line"><span class="lineno"> 1524</span>            tileFlameData.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1525</span>            <span class="keywordflow">return</span> tileFlameData;</div>
+<div class="line"><span class="lineno"> 1526</span>        }</div>
+<div class="line"><span class="lineno"> 1527</span>        <span class="keywordflow">case</span> 271:</div>
+<div class="line"><span class="lineno"> 1528</span>        {</div>
+<div class="line"><span class="lineno"> 1529</span>            TileFlameData tileFlameData = <span class="keywordflow">default</span>(TileFlameData);</div>
+<div class="line"><span class="lineno"> 1530</span>            tileFlameData.flameTexture = TextureAssets.LightningbugJar.Value;</div>
+<div class="line"><span class="lineno"> 1531</span>            tileFlameData.flameColor = <span class="keyword">new</span> Color(200, 200, 200, 0);</div>
+<div class="line"><span class="lineno"> 1532</span>            tileFlameData.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1533</span>            <span class="keywordflow">return</span> tileFlameData;</div>
+<div class="line"><span class="lineno"> 1534</span>        }</div>
+<div class="line"><span class="lineno"> 1535</span>        <span class="keywordflow">case</span> 581:</div>
+<div class="line"><span class="lineno"> 1536</span>        {</div>
+<div class="line"><span class="lineno"> 1537</span>            TileFlameData tileFlameData = <span class="keywordflow">default</span>(TileFlameData);</div>
+<div class="line"><span class="lineno"> 1538</span>            tileFlameData.flameTexture = TextureAssets.GlowMask[291].Value;</div>
+<div class="line"><span class="lineno"> 1539</span>            tileFlameData.flameColor = <span class="keyword">new</span> Color(200, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1540</span>            tileFlameData.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1541</span>            <span class="keywordflow">return</span> tileFlameData;</div>
+<div class="line"><span class="lineno"> 1542</span>        }</div>
+<div class="line"><span class="lineno"> 1543</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1544</span>        {</div>
+<div class="line"><span class="lineno"> 1545</span>            <span class="keywordflow">if</span> (!Main.tileFlame[type])</div>
+<div class="line"><span class="lineno"> 1546</span>            {</div>
+<div class="line"><span class="lineno"> 1547</span>                <span class="keywordflow">return</span> <span class="keywordflow">default</span>(TileFlameData);</div>
+<div class="line"><span class="lineno"> 1548</span>            }</div>
+<div class="line"><span class="lineno"> 1549</span>            ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((<span class="keywordtype">long</span>)tileX &lt;&lt; 32) | (uint)tileY);</div>
+<div class="line"><span class="lineno"> 1550</span>            <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 1551</span>            <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno"> 1552</span>            {</div>
+<div class="line"><span class="lineno"> 1553</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1554</span>                num = 0;</div>
+<div class="line"><span class="lineno"> 1555</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1556</span>            <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno"> 1557</span>            <span class="keywordflow">case</span> 174:</div>
+<div class="line"><span class="lineno"> 1558</span>                num = 1;</div>
+<div class="line"><span class="lineno"> 1559</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1560</span>            <span class="keywordflow">case</span> 100:</div>
+<div class="line"><span class="lineno"> 1561</span>            <span class="keywordflow">case</span> 173:</div>
+<div class="line"><span class="lineno"> 1562</span>                num = 2;</div>
+<div class="line"><span class="lineno"> 1563</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1564</span>            <span class="keywordflow">case</span> 34:</div>
+<div class="line"><span class="lineno"> 1565</span>                num = 3;</div>
+<div class="line"><span class="lineno"> 1566</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1567</span>            <span class="keywordflow">case</span> 93:</div>
+<div class="line"><span class="lineno"> 1568</span>                num = 4;</div>
+<div class="line"><span class="lineno"> 1569</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1570</span>            <span class="keywordflow">case</span> 49:</div>
+<div class="line"><span class="lineno"> 1571</span>                num = 5;</div>
+<div class="line"><span class="lineno"> 1572</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1573</span>            <span class="keywordflow">case</span> 372:</div>
+<div class="line"><span class="lineno"> 1574</span>                num = 16;</div>
+<div class="line"><span class="lineno"> 1575</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1576</span>            <span class="keywordflow">case</span> 646:</div>
+<div class="line"><span class="lineno"> 1577</span>                num = 17;</div>
+<div class="line"><span class="lineno"> 1578</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1579</span>            <span class="keywordflow">case</span> 98:</div>
+<div class="line"><span class="lineno"> 1580</span>                num = 6;</div>
+<div class="line"><span class="lineno"> 1581</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1582</span>            <span class="keywordflow">case</span> 35:</div>
+<div class="line"><span class="lineno"> 1583</span>                num = 7;</div>
+<div class="line"><span class="lineno"> 1584</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1585</span>            <span class="keywordflow">case</span> 42:</div>
+<div class="line"><span class="lineno"> 1586</span>                num = 13;</div>
+<div class="line"><span class="lineno"> 1587</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1588</span>            }</div>
+<div class="line"><span class="lineno"> 1589</span>            TileFlameData tileFlameData = <span class="keywordflow">default</span>(TileFlameData);</div>
+<div class="line"><span class="lineno"> 1590</span>            tileFlameData.flameTexture = TextureAssets.Flames[num].Value;</div>
+<div class="line"><span class="lineno"> 1591</span>            tileFlameData.flameSeed = flameSeed;</div>
+<div class="line"><span class="lineno"> 1592</span>            TileFlameData result = tileFlameData;</div>
+<div class="line"><span class="lineno"> 1593</span>            <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno"> 1594</span>            {</div>
+<div class="line"><span class="lineno"> 1595</span>            <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno"> 1596</span>                result.flameCount = 4;</div>
+<div class="line"><span class="lineno"> 1597</span>                result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1598</span>                result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1599</span>                result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1600</span>                result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1601</span>                result.flameRangeYMax = 10;</div>
+<div class="line"><span class="lineno"> 1602</span>                result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1603</span>                result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 1604</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1605</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1606</span>                <span class="keywordflow">switch</span> (Main.tile[tileX, tileY].frameY / 22)</div>
+<div class="line"><span class="lineno"> 1607</span>                {</div>
+<div class="line"><span class="lineno"> 1608</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 1609</span>                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno"> 1610</span>                <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno"> 1611</span>                <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno"> 1612</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1613</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1614</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1615</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1616</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1617</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1618</span>                    result.flameRangeMultX = 0.075f;</div>
+<div class="line"><span class="lineno"> 1619</span>                    result.flameRangeMultY = 0.075f;</div>
+<div class="line"><span class="lineno"> 1620</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1621</span>                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno"> 1622</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1623</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1624</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1625</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1626</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1627</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1628</span>                    result.flameRangeMultX = 0.3f;</div>
+<div class="line"><span class="lineno"> 1629</span>                    result.flameRangeMultY = 0.3f;</div>
+<div class="line"><span class="lineno"> 1630</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1631</span>                <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno"> 1632</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1633</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1634</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1635</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1636</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1637</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1638</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1639</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1640</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1641</span>                <span class="keywordflow">case</span> 14:</div>
+<div class="line"><span class="lineno"> 1642</span>                    result.flameCount = 8;</div>
+<div class="line"><span class="lineno"> 1643</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1644</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1645</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1646</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1647</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1648</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1649</span>                    result.flameRangeMultY = 0.1f;</div>
+<div class="line"><span class="lineno"> 1650</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1651</span>                <span class="keywordflow">case</span> 16:</div>
+<div class="line"><span class="lineno"> 1652</span>                    result.flameCount = 4;</div>
+<div class="line"><span class="lineno"> 1653</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1654</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1655</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1656</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1657</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1658</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1659</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1660</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1661</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 1662</span>                <span class="keywordflow">case</span> 28:</div>
+<div class="line"><span class="lineno"> 1663</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1664</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1665</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1666</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1667</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1668</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1669</span>                    result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1670</span>                    result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 1671</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1672</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1673</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1674</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1675</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1676</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1677</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1678</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1679</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1680</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1681</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1682</span>                }</div>
+<div class="line"><span class="lineno"> 1683</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1684</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1685</span>                <span class="keywordflow">switch</span> (Main.tile[tileX, tileY].frameY / 36)</div>
+<div class="line"><span class="lineno"> 1686</span>                {</div>
+<div class="line"><span class="lineno"> 1687</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1688</span>                    result.flameCount = 3;</div>
+<div class="line"><span class="lineno"> 1689</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1690</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1691</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1692</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1693</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1694</span>                    result.flameRangeMultX = 0.05f;</div>
+<div class="line"><span class="lineno"> 1695</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1696</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1697</span>                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno"> 1698</span>                    result.flameCount = 5;</div>
+<div class="line"><span class="lineno"> 1699</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1700</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1701</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1702</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1703</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1704</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1705</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1706</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1707</span>                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1708</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1709</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1710</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1711</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1712</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1713</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1714</span>                    result.flameRangeMultX = 0.3f;</div>
+<div class="line"><span class="lineno"> 1715</span>                    result.flameRangeMultY = 0.3f;</div>
+<div class="line"><span class="lineno"> 1716</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1717</span>                <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 1718</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1719</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1720</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1721</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1722</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1723</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1724</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1725</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1726</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1727</span>                <span class="keywordflow">case</span> 13:</div>
+<div class="line"><span class="lineno"> 1728</span>                    result.flameCount = 8;</div>
+<div class="line"><span class="lineno"> 1729</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1730</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1731</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1732</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1733</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1734</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1735</span>                    result.flameRangeMultY = 0.1f;</div>
+<div class="line"><span class="lineno"> 1736</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1737</span>                <span class="keywordflow">case</span> 28:</div>
+<div class="line"><span class="lineno"> 1738</span>                <span class="keywordflow">case</span> 29:</div>
+<div class="line"><span class="lineno"> 1739</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1740</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1741</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1742</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1743</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1744</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1745</span>                    result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1746</span>                    result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 1747</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1748</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1749</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1750</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1751</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1752</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1753</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1754</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1755</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1756</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1757</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1758</span>                }</div>
+<div class="line"><span class="lineno"> 1759</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1760</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1761</span>                <span class="keywordflow">switch</span> (Main.tile[tileX, tileY].frameY / 54)</div>
+<div class="line"><span class="lineno"> 1762</span>                {</div>
+<div class="line"><span class="lineno"> 1763</span>                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno"> 1764</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1765</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1766</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1767</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1768</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1769</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1770</span>                    result.flameRangeMultX = 0.075f;</div>
+<div class="line"><span class="lineno"> 1771</span>                    result.flameRangeMultY = 0.075f;</div>
+<div class="line"><span class="lineno"> 1772</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1773</span>                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1774</span>                    result.flameCount = 3;</div>
+<div class="line"><span class="lineno"> 1775</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1776</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1777</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1778</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1779</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1780</span>                    result.flameRangeMultX = 0.05f;</div>
+<div class="line"><span class="lineno"> 1781</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1782</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1783</span>                <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 1784</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1785</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1786</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1787</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1788</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1789</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1790</span>                    result.flameRangeMultX = 0.3f;</div>
+<div class="line"><span class="lineno"> 1791</span>                    result.flameRangeMultY = 0.3f;</div>
+<div class="line"><span class="lineno"> 1792</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1793</span>                <span class="keywordflow">case</span> 15:</div>
+<div class="line"><span class="lineno"> 1794</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1795</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1796</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1797</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1798</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1799</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1800</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1801</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1802</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1803</span>                <span class="keywordflow">case</span> 17:</div>
+<div class="line"><span class="lineno"> 1804</span>                <span class="keywordflow">case</span> 20:</div>
+<div class="line"><span class="lineno"> 1805</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1806</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1807</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1808</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1809</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1810</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1811</span>                    result.flameRangeMultX = 0.075f;</div>
+<div class="line"><span class="lineno"> 1812</span>                    result.flameRangeMultY = 0.075f;</div>
+<div class="line"><span class="lineno"> 1813</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1814</span>                <span class="keywordflow">case</span> 18:</div>
+<div class="line"><span class="lineno"> 1815</span>                    result.flameCount = 8;</div>
+<div class="line"><span class="lineno"> 1816</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1817</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1818</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1819</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1820</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1821</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1822</span>                    result.flameRangeMultY = 0.1f;</div>
+<div class="line"><span class="lineno"> 1823</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1824</span>                <span class="keywordflow">case</span> 34:</div>
+<div class="line"><span class="lineno"> 1825</span>                <span class="keywordflow">case</span> 35:</div>
+<div class="line"><span class="lineno"> 1826</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1827</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1828</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1829</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1830</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1831</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1832</span>                    result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1833</span>                    result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 1834</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1835</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1836</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1837</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1838</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1839</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1840</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1841</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1842</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1843</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1844</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1845</span>                }</div>
+<div class="line"><span class="lineno"> 1846</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1847</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1848</span>                <span class="keywordflow">switch</span> (Main.tile[tileX, tileY].frameY / 54)</div>
+<div class="line"><span class="lineno"> 1849</span>                {</div>
+<div class="line"><span class="lineno"> 1850</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1851</span>                    result.flameCount = 3;</div>
+<div class="line"><span class="lineno"> 1852</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1853</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1854</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1855</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1856</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1857</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1858</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1859</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1860</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1861</span>                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1862</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1863</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1864</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1865</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1866</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1867</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1868</span>                    result.flameRangeMultX = 0.075f;</div>
+<div class="line"><span class="lineno"> 1869</span>                    result.flameRangeMultY = 0.075f;</div>
+<div class="line"><span class="lineno"> 1870</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1871</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1872</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1873</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1874</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1875</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1876</span>                    result.flameRangeYMin = -20;</div>
+<div class="line"><span class="lineno"> 1877</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1878</span>                    result.flameRangeMultX = 0.2f;</div>
+<div class="line"><span class="lineno"> 1879</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1880</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1881</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 1882</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1883</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1884</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1885</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1886</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1887</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1888</span>                    result.flameRangeMultX = 0.3f;</div>
+<div class="line"><span class="lineno"> 1889</span>                    result.flameRangeMultY = 0.3f;</div>
+<div class="line"><span class="lineno"> 1890</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1891</span>                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1892</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1893</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1894</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1895</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1896</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1897</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1898</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1899</span>                    result.flameRangeMultY = 0.15f;</div>
+<div class="line"><span class="lineno"> 1900</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1901</span>                <span class="keywordflow">case</span> 13:</div>
+<div class="line"><span class="lineno"> 1902</span>                    result.flameCount = 8;</div>
+<div class="line"><span class="lineno"> 1903</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1904</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1905</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1906</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1907</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1908</span>                    result.flameRangeMultX = 0.1f;</div>
+<div class="line"><span class="lineno"> 1909</span>                    result.flameRangeMultY = 0.1f;</div>
+<div class="line"><span class="lineno"> 1910</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1911</span>                <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno"> 1912</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1913</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1914</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1915</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1916</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1917</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1918</span>                    result.flameRangeMultX = 0.01f;</div>
+<div class="line"><span class="lineno"> 1919</span>                    result.flameRangeMultY = 0.01f;</div>
+<div class="line"><span class="lineno"> 1920</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1921</span>                <span class="keywordflow">case</span> 28:</div>
+<div class="line"><span class="lineno"> 1922</span>                <span class="keywordflow">case</span> 29:</div>
+<div class="line"><span class="lineno"> 1923</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1924</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1925</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1926</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1927</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1928</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1929</span>                    result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1930</span>                    result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 1931</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1932</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1933</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1934</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1935</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1936</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1937</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1938</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1939</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1940</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1941</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1942</span>                }</div>
+<div class="line"><span class="lineno"> 1943</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1944</span>            <span class="keywordflow">case</span> 13:</div>
+<div class="line"><span class="lineno"> 1945</span>                <span class="keywordflow">switch</span> (tileFrameY / 36)</div>
+<div class="line"><span class="lineno"> 1946</span>                {</div>
+<div class="line"><span class="lineno"> 1947</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1948</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1949</span>                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno"> 1950</span>                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno"> 1951</span>                <span class="keywordflow">case</span> 19:</div>
+<div class="line"><span class="lineno"> 1952</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 1953</span>                <span class="keywordflow">case</span> 29:</div>
+<div class="line"><span class="lineno"> 1954</span>                <span class="keywordflow">case</span> 30:</div>
+<div class="line"><span class="lineno"> 1955</span>                <span class="keywordflow">case</span> 31:</div>
+<div class="line"><span class="lineno"> 1956</span>                <span class="keywordflow">case</span> 32:</div>
+<div class="line"><span class="lineno"> 1957</span>                <span class="keywordflow">case</span> 36:</div>
+<div class="line"><span class="lineno"> 1958</span>                <span class="keywordflow">case</span> 39:</div>
+<div class="line"><span class="lineno"> 1959</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1960</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 1961</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1962</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1963</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1964</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1965</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1966</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 1967</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1968</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1969</span>                <span class="keywordflow">case</span> 16:</div>
+<div class="line"><span class="lineno"> 1970</span>                <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno"> 1971</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1972</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1973</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1974</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1975</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1976</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1977</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 1978</span>                    result.flameRangeMultY = 0.1f;</div>
+<div class="line"><span class="lineno"> 1979</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1980</span>                <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 1981</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 1982</span>                    result.flameColor = <span class="keyword">new</span> Color(50, 50, 50, 0);</div>
+<div class="line"><span class="lineno"> 1983</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1984</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1985</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1986</span>                    result.flameRangeYMax = 11;</div>
+<div class="line"><span class="lineno"> 1987</span>                    result.flameRangeMultX = 0.075f;</div>
+<div class="line"><span class="lineno"> 1988</span>                    result.flameRangeMultY = 0.075f;</div>
+<div class="line"><span class="lineno"> 1989</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1990</span>                <span class="keywordflow">case</span> 34:</div>
+<div class="line"><span class="lineno"> 1991</span>                <span class="keywordflow">case</span> 35:</div>
+<div class="line"><span class="lineno"> 1992</span>                    result.flameCount = 1;</div>
+<div class="line"><span class="lineno"> 1993</span>                    result.flameColor = <span class="keyword">new</span> Color(75, 75, 75, 0);</div>
+<div class="line"><span class="lineno"> 1994</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 1995</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 1996</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 1997</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 1998</span>                    result.flameRangeMultX = 0f;</div>
+<div class="line"><span class="lineno"> 1999</span>                    result.flameRangeMultY = 0f;</div>
+<div class="line"><span class="lineno"> 2000</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2001</span>                <span class="keywordflow">case</span> 44:</div>
+<div class="line"><span class="lineno"> 2002</span>                    result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 2003</span>                    result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 2004</span>                    result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 2005</span>                    result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 2006</span>                    result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 2007</span>                    result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 2008</span>                    result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 2009</span>                    result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 2010</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2011</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 2012</span>                    result.flameCount = 0;</div>
+<div class="line"><span class="lineno"> 2013</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2014</span>                }</div>
+<div class="line"><span class="lineno"> 2015</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2016</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 2017</span>                result.flameCount = 7;</div>
+<div class="line"><span class="lineno"> 2018</span>                result.flameColor = <span class="keyword">new</span> Color(100, 100, 100, 0);</div>
+<div class="line"><span class="lineno"> 2019</span>                <span class="keywordflow">if</span> (tileFrameY / 22 == 14)</div>
+<div class="line"><span class="lineno"> 2020</span>                {</div>
+<div class="line"><span class="lineno"> 2021</span>                    result.flameColor = <span class="keyword">new</span> Color((<span class="keywordtype">float</span>)Main.DiscoR / 255f, (<span class="keywordtype">float</span>)Main.DiscoG / 255f, (<span class="keywordtype">float</span>)Main.DiscoB / 255f, 0f);</div>
+<div class="line"><span class="lineno"> 2022</span>                }</div>
+<div class="line"><span class="lineno"> 2023</span>                result.flameRangeXMin = -10;</div>
+<div class="line"><span class="lineno"> 2024</span>                result.flameRangeXMax = 11;</div>
+<div class="line"><span class="lineno"> 2025</span>                result.flameRangeYMin = -10;</div>
+<div class="line"><span class="lineno"> 2026</span>                result.flameRangeYMax = 1;</div>
+<div class="line"><span class="lineno"> 2027</span>                result.flameRangeMultX = 0.15f;</div>
+<div class="line"><span class="lineno"> 2028</span>                result.flameRangeMultY = 0.35f;</div>
+<div class="line"><span class="lineno"> 2029</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2030</span>            }</div>
+<div class="line"><span class="lineno"> 2031</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2032</span>        }</div>
+<div class="line"><span class="lineno"> 2033</span>        }</div>
+<div class="line"><span class="lineno"> 2034</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa7d35c16dd9783a8e8018165ddecb29b.html#aa7d35c16dd9783a8e8018165ddecb29b">Terraria.Main.DiscoB</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a80ed0abe9e5cadde470c20a7a6023efb.html#a80ed0abe9e5cadde470c20a7a6023efb">Terraria.Main.DiscoG</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a432c1c30b326a19ab618aad14f242a0f.html#a432c1c30b326a19ab618aad14f242a0f">Terraria.Main.DiscoR</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a5ed56ea53a95caee91aba5aa3708e52d.html#a5ed56ea53a95caee91aba5aa3708e52d">Terraria.GameContent.TextureAssets.FireflyJar</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a989f1e906f9836754689451cbaf71064.html#a989f1e906f9836754689451cbaf71064">Terraria.GameContent.TextureAssets.Flames</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a45a5388c496f8b563c32532d60b2ae3d.html#a45a5388c496f8b563c32532d60b2ae3d">Terraria.GameContent.TextureAssets.GlowMask</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a7e53e17d3e30c5a890a102cccdc7d155.html#a7e53e17d3e30c5a890a102cccdc7d155">Terraria.GameContent.TextureAssets.LightningbugJar</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af811b0452d7e5c8d46f44947d393b577.html#af811b0452d7e5c8d46f44947d393b577">Terraria.Main.tileFlame</a>, and <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aaf47da80afe5cb1e502ff9eee39719e8.html#aaf47da80afe5cb1e502ff9eee39719e8">Terraria.GameContent.Drawing.TileDrawing.DrawMultiTileVinesInWind()</a>, and <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a5d459c9cdf31ecca223c6c8bec1e11a3.html#a5d459c9cdf31ecca223c6c8bec1e11a3">Terraria.GameContent.Drawing.TileDrawing.DrawSingleTile_Flames()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

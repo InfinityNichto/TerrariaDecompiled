@@ -126,6 +126,30 @@ $(function(){initNavTree('dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1Cre
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">while</span> (reader.ReadBoolean())</div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            ushort key = reader.ReadUInt16();</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a326793a054d5cf3800778d3667529a70.html#a326793a054d5cf3800778d3667529a70">_powersById</a>.TryGetValue(key, out var value))</div>
+<div class="line"><span class="lineno">  202</span>            {</div>
+<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  204</span>            }</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">if</span> (value is IPersistentPerPlayerContent persistentPerPlayerContent)</div>
+<div class="line"><span class="lineno">  206</span>            {</div>
+<div class="line"><span class="lineno">  207</span>                persistentPerPlayerContent.Load(player, reader, versionGameWasLastSavedOn);</div>
+<div class="line"><span class="lineno">  208</span>            }</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (player.difficulty != 3)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            <a class="code hl_function" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a93e1a00c42bd07c9de375d02cac894b3.html#a93e1a00c42bd07c9de375d02cac894b3">ResetPowersForPlayer</a>(player);</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a326793a054d5cf3800778d3667529a70_html_a326793a054d5cf3800778d3667529a70"><div class="ttname"><a href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a326793a054d5cf3800778d3667529a70.html#a326793a054d5cf3800778d3667529a70">Terraria.GameContent.Creative.CreativePowerManager._powersById</a></div><div class="ttdeci">Dictionary&lt; ushort, ICreativePower &gt; _powersById</div><div class="ttdef"><b>Definition</b> CreativePowerManager.cs:21</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a93e1a00c42bd07c9de375d02cac894b3_html_a93e1a00c42bd07c9de375d02cac894b3"><div class="ttname"><a href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a93e1a00c42bd07c9de375d02cac894b3.html#a93e1a00c42bd07c9de375d02cac894b3">Terraria.GameContent.Creative.CreativePowerManager.ResetPowersForPlayer</a></div><div class="ttdeci">void ResetPowersForPlayer(Player player)</div><div class="ttdef"><b>Definition</b> CreativePowerManager.cs:227</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a326793a054d5cf3800778d3667529a70.html#a326793a054d5cf3800778d3667529a70">Terraria.GameContent.Creative.CreativePowerManager._powersById</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a10202ede5979557df9938f91b00a4f12.html#a10202ede5979557df9938f91b00a4f12">Terraria.Player.difficulty</a>, and <a class="el" href="../../dd/d9f/classTerraria_1_1GameContent_1_1Creative_1_1CreativePowerManager_a93e1a00c42bd07c9de375d02cac894b3.html#a93e1a00c42bd07c9de375d02cac894b3">Terraria.GameContent.Creative.CreativePowerManager.ResetPowersForPlayer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0ec54fea21ed99d6fd3f97c86fa9bbed.html#a0ec54fea21ed99d6fd3f97c86fa9bbed">Terraria.Player.Deserialize()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

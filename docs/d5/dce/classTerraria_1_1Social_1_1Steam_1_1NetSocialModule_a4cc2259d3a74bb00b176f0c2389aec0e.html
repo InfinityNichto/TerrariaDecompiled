@@ -117,6 +117,49 @@ $(function(){initNavTree('d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialMo
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="comment">//IL_0000: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   92</span>        <span class="comment">//IL_0019: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   93</span>        <span class="comment">//IL_0023: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   94</span>        <span class="comment">//IL_0042: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   95</span>        <span class="comment">//IL_007b: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   96</span>        <span class="comment">//IL_007d: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   97</span>        <span class="comment">//IL_008f: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (result.m_ulSteamIDLobby != <a class="code hl_variable" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">_lobby</a>.<a class="code hl_variable" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_af4a78422a16c4a99c12fda93c7ef5825.html#af4a78422a16c4a99c12fda93c7ef5825">Id</a>.m_SteamID || result.m_eChatEntryType != 1 || result.m_ulSteamIDUser != <a class="code hl_variable" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">_lobby</a>.<a class="code hl_variable" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a801abb54b982a6e7ff5e78cf94723d3e.html#a801abb54b982a6e7ff5e78cf94723d3e">Owner</a>.m_SteamID)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">byte</span>[] message = <a class="code hl_variable" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">_lobby</a>.<a class="code hl_function" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a157271586b9afd03a624dbb05737fff2.html#a157271586b9afd03a624dbb05737fff2">GetMessage</a>((<span class="keywordtype">int</span>)result.m_iChatID);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (message.Length == 0)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keyword">using </span>MemoryStream memoryStream = <span class="keyword">new</span> MemoryStream(message);</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keyword">using </span>BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(memoryStream);</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordtype">byte</span> b = binaryReader.ReadByte();</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (b != 1)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        CSteamID val = <span class="keywordflow">default</span>(CSteamID);</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">while</span> (message.Length - memoryStream.Position &gt;= 8)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            ((CSteamID)(ref val))._002Ector(binaryReader.ReadUInt64());</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (val != SteamUser.GetSteamID())</div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                <a class="code hl_variable" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">_lobby</a>.<a class="code hl_function" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ad8e8a84e436684d27906b19904c8b702.html#ad8e8a84e436684d27906b19904c8b702">SetPlayedWith</a>(val);</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1Lobby_a157271586b9afd03a624dbb05737fff2_html_a157271586b9afd03a624dbb05737fff2"><div class="ttname"><a href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a157271586b9afd03a624dbb05737fff2.html#a157271586b9afd03a624dbb05737fff2">Terraria.Social.Steam.Lobby.GetMessage</a></div><div class="ttdeci">byte[] GetMessage(int index)</div><div class="ttdef"><b>Definition</b> Lobby.cs:77</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1Lobby_a801abb54b982a6e7ff5e78cf94723d3e_html_a801abb54b982a6e7ff5e78cf94723d3e"><div class="ttname"><a href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a801abb54b982a6e7ff5e78cf94723d3e.html#a801abb54b982a6e7ff5e78cf94723d3e">Terraria.Social.Steam.Lobby.Owner</a></div><div class="ttdeci">CSteamID Owner</div><div class="ttdef"><b>Definition</b> Lobby.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1Lobby_ad8e8a84e436684d27906b19904c8b702_html_ad8e8a84e436684d27906b19904c8b702"><div class="ttname"><a href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ad8e8a84e436684d27906b19904c8b702.html#ad8e8a84e436684d27906b19904c8b702">Terraria.Social.Steam.Lobby.SetPlayedWith</a></div><div class="ttdeci">void SetPlayedWith(CSteamID userId)</div><div class="ttdef"><b>Definition</b> Lobby.cs:128</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1Lobby_af4a78422a16c4a99c12fda93c7ef5825_html_af4a78422a16c4a99c12fda93c7ef5825"><div class="ttname"><a href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_af4a78422a16c4a99c12fda93c7ef5825.html#af4a78422a16c4a99c12fda93c7ef5825">Terraria.Social.Steam.Lobby.Id</a></div><div class="ttdeci">CSteamID Id</div><div class="ttdef"><b>Definition</b> Lobby.cs:13</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4_html_afb6e07583f5291770431cd52d7a4cdb4"><div class="ttname"><a href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">Terraria.Social.Steam.NetSocialModule._lobby</a></div><div class="ttdeci">Lobby _lobby</div><div class="ttdef"><b>Definition</b> NetSocialModule.cs:38</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_afb6e07583f5291770431cd52d7a4cdb4.html#afb6e07583f5291770431cd52d7a4cdb4">Terraria.Social.Steam.NetSocialModule._lobby</a>, <a class="el" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a157271586b9afd03a624dbb05737fff2.html#a157271586b9afd03a624dbb05737fff2">Terraria.Social.Steam.Lobby.GetMessage()</a>, <a class="el" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_af4a78422a16c4a99c12fda93c7ef5825.html#af4a78422a16c4a99c12fda93c7ef5825">Terraria.Social.Steam.Lobby.Id</a>, <a class="el" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_a801abb54b982a6e7ff5e78cf94723d3e.html#a801abb54b982a6e7ff5e78cf94723d3e">Terraria.Social.Steam.Lobby.Owner</a>, and <a class="el" href="../../d3/da6/classTerraria_1_1Social_1_1Steam_1_1Lobby_ad8e8a84e436684d27906b19904c8b702.html#ad8e8a84e436684d27906b19904c8b702">Terraria.Social.Steam.Lobby.SetPlayedWith()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dce/classTerraria_1_1Social_1_1Steam_1_1NetSocialModule_a939f4e76f72ea0cb732daf673d2565c8.html#a939f4e76f72ea0cb732daf673d2565c8">Terraria.Social.Steam.NetSocialModule.Initialize()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

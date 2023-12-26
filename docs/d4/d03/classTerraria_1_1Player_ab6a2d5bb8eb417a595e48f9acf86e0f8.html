@@ -121,6 +121,107 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ab6a2d5bb8eb417a595e48f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">13425</span>    {</div>
+<div class="line"><span class="lineno">13426</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">X</a>, <a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">Y</a>];</div>
+<div class="line"><span class="lineno">13427</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">13428</span>        {</div>
+<div class="line"><span class="lineno">13429</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">13430</span>        }</div>
+<div class="line"><span class="lineno">13431</span>        <span class="keywordflow">if</span> (!tile.active() &amp;&amp; tile.liquid == 0 &amp;&amp; Main.tile[X, Y + 1] != <span class="keyword">null</span> &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SolidTile(X, Y + 1))</div>
+<div class="line"><span class="lineno">13432</span>        {</div>
+<div class="line"><span class="lineno">13433</span>            tile.frameY = 0;</div>
+<div class="line"><span class="lineno">13434</span>            tile.slope(0);</div>
+<div class="line"><span class="lineno">13435</span>            tile.halfBrick(halfBrick: false);</div>
+<div class="line"><span class="lineno">13436</span>            <span class="keywordflow">if</span> (Main.tile[X, Y + 1].type == 2 || Main.tile[X, Y + 1].type == 477)</div>
+<div class="line"><span class="lineno">13437</span>            {</div>
+<div class="line"><span class="lineno">13438</span>                <span class="keywordtype">int</span> num = Main.rand.NextFromList&lt;<span class="keywordtype">int</span>&gt;(6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 27, 30, 33, 36, 39, 42);</div>
+<div class="line"><span class="lineno">13439</span>                <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno">13440</span>                {</div>
+<div class="line"><span class="lineno">13441</span>                <span class="keywordflow">case</span> 21:</div>
+<div class="line"><span class="lineno">13442</span>                <span class="keywordflow">case</span> 24:</div>
+<div class="line"><span class="lineno">13443</span>                <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno">13444</span>                <span class="keywordflow">case</span> 30:</div>
+<div class="line"><span class="lineno">13445</span>                <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno">13446</span>                <span class="keywordflow">case</span> 36:</div>
+<div class="line"><span class="lineno">13447</span>                <span class="keywordflow">case</span> 39:</div>
+<div class="line"><span class="lineno">13448</span>                <span class="keywordflow">case</span> 42:</div>
+<div class="line"><span class="lineno">13449</span>                    num += Main.rand.Next(3);</div>
+<div class="line"><span class="lineno">13450</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">13451</span>                }</div>
+<div class="line"><span class="lineno">13452</span>                tile.active(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">active</a>: true);</div>
+<div class="line"><span class="lineno">13453</span>                tile.type = 3;</div>
+<div class="line"><span class="lineno">13454</span>                tile.frameX = (short)(num * 18);</div>
+<div class="line"><span class="lineno">13455</span>                tile.CopyPaintAndCoating(Main.tile[X, Y + 1]);</div>
+<div class="line"><span class="lineno">13456</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">13457</span>                {</div>
+<div class="line"><span class="lineno">13458</span>                    NetMessage.SendTileSquare(-1, X, Y);</div>
+<div class="line"><span class="lineno">13459</span>                }</div>
+<div class="line"><span class="lineno">13460</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13461</span>            }</div>
+<div class="line"><span class="lineno">13462</span>            <span class="keywordflow">if</span> (Main.tile[X, Y + 1].type == 109 || Main.tile[X, Y + 1].type == 492)</div>
+<div class="line"><span class="lineno">13463</span>            {</div>
+<div class="line"><span class="lineno">13464</span>                <span class="keywordflow">if</span> (Main.rand.Next(2) == 0)</div>
+<div class="line"><span class="lineno">13465</span>                {</div>
+<div class="line"><span class="lineno">13466</span>                    tile.active(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">active</a>: true);</div>
+<div class="line"><span class="lineno">13467</span>                    tile.type = 110;</div>
+<div class="line"><span class="lineno">13468</span>                    tile.frameX = (short)(18 * Main.rand.Next(4, 7));</div>
+<div class="line"><span class="lineno">13469</span>                    tile.CopyPaintAndCoating(Main.tile[X, Y + 1]);</div>
+<div class="line"><span class="lineno">13470</span>                    <span class="keywordflow">while</span> (tile.frameX == 90)</div>
+<div class="line"><span class="lineno">13471</span>                    {</div>
+<div class="line"><span class="lineno">13472</span>                        tile.frameX = (short)(18 * Main.rand.Next(4, 7));</div>
+<div class="line"><span class="lineno">13473</span>                    }</div>
+<div class="line"><span class="lineno">13474</span>                }</div>
+<div class="line"><span class="lineno">13475</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">13476</span>                {</div>
+<div class="line"><span class="lineno">13477</span>                    tile.active(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">active</a>: true);</div>
+<div class="line"><span class="lineno">13478</span>                    tile.type = 113;</div>
+<div class="line"><span class="lineno">13479</span>                    tile.frameX = (short)(18 * Main.rand.Next(2, 8));</div>
+<div class="line"><span class="lineno">13480</span>                    tile.CopyPaintAndCoating(Main.tile[X, Y + 1]);</div>
+<div class="line"><span class="lineno">13481</span>                    <span class="keywordflow">while</span> (tile.frameX == 90)</div>
+<div class="line"><span class="lineno">13482</span>                    {</div>
+<div class="line"><span class="lineno">13483</span>                        tile.frameX = (short)(18 * Main.rand.Next(2, 8));</div>
+<div class="line"><span class="lineno">13484</span>                    }</div>
+<div class="line"><span class="lineno">13485</span>                }</div>
+<div class="line"><span class="lineno">13486</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">13487</span>                {</div>
+<div class="line"><span class="lineno">13488</span>                    NetMessage.SendTileSquare(-1, X, Y);</div>
+<div class="line"><span class="lineno">13489</span>                }</div>
+<div class="line"><span class="lineno">13490</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13491</span>            }</div>
+<div class="line"><span class="lineno">13492</span>            <span class="keywordflow">if</span> (Main.tile[X, Y + 1].type == 60)</div>
+<div class="line"><span class="lineno">13493</span>            {</div>
+<div class="line"><span class="lineno">13494</span>                tile.active(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">active</a>: true);</div>
+<div class="line"><span class="lineno">13495</span>                tile.type = 74;</div>
+<div class="line"><span class="lineno">13496</span>                tile.frameX = (short)(18 * Main.rand.Next(9, 17));</div>
+<div class="line"><span class="lineno">13497</span>                tile.CopyPaintAndCoating(Main.tile[X, Y + 1]);</div>
+<div class="line"><span class="lineno">13498</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">13499</span>                {</div>
+<div class="line"><span class="lineno">13500</span>                    NetMessage.SendTileSquare(-1, X, Y);</div>
+<div class="line"><span class="lineno">13501</span>                }</div>
+<div class="line"><span class="lineno">13502</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13503</span>            }</div>
+<div class="line"><span class="lineno">13504</span>            <span class="keywordflow">if</span> (Main.tile[X, Y + 1].type == 633)</div>
+<div class="line"><span class="lineno">13505</span>            {</div>
+<div class="line"><span class="lineno">13506</span>                tile.active(<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">active</a>: true);</div>
+<div class="line"><span class="lineno">13507</span>                tile.type = 637;</div>
+<div class="line"><span class="lineno">13508</span>                tile.frameX = (short)(18 * Main.rand.Next(6, 11));</div>
+<div class="line"><span class="lineno">13509</span>                tile.CopyPaintAndCoating(Main.tile[X, Y + 1]);</div>
+<div class="line"><span class="lineno">13510</span>                <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">13511</span>                {</div>
+<div class="line"><span class="lineno">13512</span>                    NetMessage.SendTileSquare(-1, X, Y);</div>
+<div class="line"><span class="lineno">13513</span>                }</div>
+<div class="line"><span class="lineno">13514</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">13515</span>            }</div>
+<div class="line"><span class="lineno">13516</span>        }</div>
+<div class="line"><span class="lineno">13517</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">13518</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84_html_afb9077785deba0c2b9de1691369cee84"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition</b> Entity.cs:10</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a02129bb861061d1a052c592e2dc6b383">ReLogic.Peripherals.RGB.Logitech.KeyName.X</a></div><div class="ttdeci">@ X</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4a57cec4137b614c87cb4e24a3d003a3e0">ReLogic.Peripherals.RGB.Logitech.KeyName.Y</a></div><div class="ttdeci">@ Y</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80dc65c19cd20c716bf6785fb9d1fadc.html#a80dc65c19cd20c716bf6785fb9d1fadc">Terraria.Tile.CopyPaintAndCoating()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a1fd0f41d2e75a087307174bc5e47823e.html#a1fd0f41d2e75a087307174bc5e47823e">Terraria.WorldGen.SolidTile()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

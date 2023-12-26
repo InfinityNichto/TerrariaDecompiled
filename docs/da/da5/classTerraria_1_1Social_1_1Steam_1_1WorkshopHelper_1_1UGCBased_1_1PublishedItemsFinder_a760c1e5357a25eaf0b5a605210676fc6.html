@@ -121,6 +121,41 @@ $(function(){initNavTree('da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHel
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  167</span>            {</div>
+<div class="line"><span class="lineno">  168</span>                <span class="comment">//IL_000e: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  169</span>                <span class="comment">//IL_000f: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  170</span>                <span class="comment">//IL_0015: Invalid comparison between Unknown and I4</span></div>
+<div class="line"><span class="lineno">  171</span>                <span class="comment">//IL_0020: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  172</span>                <span class="comment">//IL_0084: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  173</span>                <span class="comment">//IL_0031: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  174</span>                <span class="comment">//IL_003f: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  175</span>                <span class="comment">//IL_0040: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  176</span>                <span class="comment">//IL_008d: Unknown result type (might be due to invalid IL or missing references)</span></div>
+<div class="line"><span class="lineno">  177</span>                <a class="code hl_variable" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a9f5fa432c0cdc9e2cd83a9a186998f7c.html#a9f5fa432c0cdc9e2cd83a9a186998f7c">_items</a>.Clear();</div>
+<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">if</span> (bIOFailure || (<span class="keywordtype">int</span>)pCallback.m_eResult != 1)</div>
+<div class="line"><span class="lineno">  179</span>                {</div>
+<div class="line"><span class="lineno">  180</span>                    SteamUGC.ReleaseQueryUGCRequest(<a class="code hl_variable" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f.html#a45cc31a89daa5faacc3fa20d8913ea4f">m_UGCQueryHandle</a>);</div>
+<div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  182</span>                }</div>
+<div class="line"><span class="lineno">  183</span>                SteamUGCDetails_t val = <span class="keywordflow">default</span>(SteamUGCDetails_t);</div>
+<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">for</span> (uint num = 0u; num &lt; pCallback.m_unNumResultsReturned; num++)</div>
+<div class="line"><span class="lineno">  185</span>                {</div>
+<div class="line"><span class="lineno">  186</span>                    SteamUGC.GetQueryUGCResult(<a class="code hl_variable" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f.html#a45cc31a89daa5faacc3fa20d8913ea4f">m_UGCQueryHandle</a>, num, ref val);</div>
+<div class="line"><span class="lineno">  187</span>                    ulong publishedFileId = val.m_nPublishedFileId.m_PublishedFileId;</div>
+<div class="line"><span class="lineno">  188</span>                    SteamWorkshopItem steamWorkshopItem = <span class="keywordflow">default</span>(SteamWorkshopItem);</div>
+<div class="line"><span class="lineno">  189</span>                    steamWorkshopItem.Title = ((SteamUGCDetails_t)(ref val)).m_rgchTitle;</div>
+<div class="line"><span class="lineno">  190</span>                    steamWorkshopItem.Description = ((SteamUGCDetails_t)(ref val)).m_rgchDescription;</div>
+<div class="line"><span class="lineno">  191</span>                    SteamWorkshopItem value = steamWorkshopItem;</div>
+<div class="line"><span class="lineno">  192</span>                    <a class="code hl_variable" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a9f5fa432c0cdc9e2cd83a9a186998f7c.html#a9f5fa432c0cdc9e2cd83a9a186998f7c">_items</a>.Add(publishedFileId, value);</div>
+<div class="line"><span class="lineno">  193</span>                }</div>
+<div class="line"><span class="lineno">  194</span>                SteamUGC.ReleaseQueryUGCRequest(<a class="code hl_variable" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f.html#a45cc31a89daa5faacc3fa20d8913ea4f">m_UGCQueryHandle</a>);</div>
+<div class="line"><span class="lineno">  195</span>            }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f_html_a45cc31a89daa5faacc3fa20d8913ea4f"><div class="ttname"><a href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f.html#a45cc31a89daa5faacc3fa20d8913ea4f">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder.m_UGCQueryHandle</a></div><div class="ttdeci">UGCQueryHandle_t m_UGCQueryHandle</div><div class="ttdef"><b>Definition</b> WorkshopHelper.cs:116</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a9f5fa432c0cdc9e2cd83a9a186998f7c_html_a9f5fa432c0cdc9e2cd83a9a186998f7c"><div class="ttname"><a href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a9f5fa432c0cdc9e2cd83a9a186998f7c.html#a9f5fa432c0cdc9e2cd83a9a186998f7c">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder._items</a></div><div class="ttdeci">Dictionary&lt; ulong, SteamWorkshopItem &gt; _items</div><div class="ttdef"><b>Definition</b> WorkshopHelper.cs:114</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a9f5fa432c0cdc9e2cd83a9a186998f7c.html#a9f5fa432c0cdc9e2cd83a9a186998f7c">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder._items</a>, and <a class="el" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a45cc31a89daa5faacc3fa20d8913ea4f.html#a45cc31a89daa5faacc3fa20d8913ea4f">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder.m_UGCQueryHandle</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_a5775fadb0851eae2625e48d62f4d027d.html#a5775fadb0851eae2625e48d62f4d027d">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder.LoadHooks()</a>, and <a class="el" href="../../da/da5/classTerraria_1_1Social_1_1Steam_1_1WorkshopHelper_1_1UGCBased_1_1PublishedItemsFinder_aafbba340bbab609d53361499e2a89901.html#aafbba340bbab609d53361499e2a89901">Terraria.Social.Steam.WorkshopHelper.UGCBased.PublishedItemsFinder.Refresh()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

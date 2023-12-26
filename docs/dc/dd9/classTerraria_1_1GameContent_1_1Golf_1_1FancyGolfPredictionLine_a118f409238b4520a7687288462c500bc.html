@@ -117,6 +117,29 @@ $(function(){initNavTree('dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGo
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> num = travelledLength % 200f / 200f;</div>
+<div class="line"><span class="lineno">   92</span>        num *= (float)<a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length;</div>
+<div class="line"><span class="lineno">   93</span>        num -= <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a3c6c3b02060b80498ac6c6b63c2f506e.html#a3c6c3b02060b80498ac6c6b63c2f506e">_time</a> * (float)Math.PI * 1.5f;</div>
+<div class="line"><span class="lineno">   94</span>        num %= (float)<a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length;</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (num &lt; 0f)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            num += (float)<a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)Math.Floor(num);</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">int</span> num3 = num2 + 1;</div>
+<div class="line"><span class="lineno">  101</span>        num2 = Utils.Clamp(num2 % <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length, 0, <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length - 1);</div>
+<div class="line"><span class="lineno">  102</span>        num3 = Utils.Clamp(num3 % <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length, 0, <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>.Length - 1);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordtype">float</span> amount = num - (float)num2;</div>
+<div class="line"><span class="lineno">  104</span>        Color color = Color.Lerp(<a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>[num2], <a class="code hl_variable" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">_colors</a>[num3], amount);</div>
+<div class="line"><span class="lineno">  105</span>        color.A = 64;</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> color * 0.6f;</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a3c6c3b02060b80498ac6c6b63c2f506e_html_a3c6c3b02060b80498ac6c6b63c2f506e"><div class="ttname"><a href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a3c6c3b02060b80498ac6c6b63c2f506e.html#a3c6c3b02060b80498ac6c6b63c2f506e">Terraria.GameContent.Golf.FancyGolfPredictionLine._time</a></div><div class="ttdeci">float _time</div><div class="ttdef"><b>Definition</b> FancyGolfPredictionLine.cs:30</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907_html_a8e20ce2f9141544d3536b1bab35fa907"><div class="ttname"><a href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">Terraria.GameContent.Golf.FancyGolfPredictionLine._colors</a></div><div class="ttdeci">readonly Color[] _colors</div><div class="ttdef"><b>Definition</b> FancyGolfPredictionLine.cs:22</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a8e20ce2f9141544d3536b1bab35fa907.html#a8e20ce2f9141544d3536b1bab35fa907">Terraria.GameContent.Golf.FancyGolfPredictionLine._colors</a>, and <a class="el" href="../../dc/dd9/classTerraria_1_1GameContent_1_1Golf_1_1FancyGolfPredictionLine_a3c6c3b02060b80498ac6c6b63c2f506e.html#a3c6c3b02060b80498ac6c6b63c2f506e">Terraria.GameContent.Golf.FancyGolfPredictionLine._time</a>.</p>
 
 </div>
 </div>

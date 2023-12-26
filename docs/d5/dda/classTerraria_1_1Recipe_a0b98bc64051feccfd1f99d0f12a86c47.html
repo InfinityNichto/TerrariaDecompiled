@@ -117,6 +117,39 @@ $(function(){initNavTree('d5/dda/classTerraria_1_1Recipe_a0b98bc64051feccfd1f99d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  495</span>    {</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">maxRequirements</a>; i++)</div>
+<div class="line"><span class="lineno">  497</span>        {</div>
+<div class="line"><span class="lineno">  498</span>            Item item = tempRec.requiredItem[i];</div>
+<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">if</span> (item.type == 0)</div>
+<div class="line"><span class="lineno">  500</span>            {</div>
+<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  502</span>            }</div>
+<div class="line"><span class="lineno">  503</span>            <span class="keywordtype">int</span> num = item.stack;</div>
+<div class="line"><span class="lineno">  504</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> key <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">_ownedItems</a>.Keys)</div>
+<div class="line"><span class="lineno">  506</span>            {</div>
+<div class="line"><span class="lineno">  507</span>                <span class="keywordflow">if</span> (tempRec.useWood(key, item.type) || tempRec.useSand(key, item.type) || tempRec.useIronBar(key, item.type) || tempRec.useFragment(key, item.type) || tempRec.usePressurePlate(key, item.type) || tempRec.AcceptedByItemGroups(key, item.type))</div>
+<div class="line"><span class="lineno">  508</span>                {</div>
+<div class="line"><span class="lineno">  509</span>                    num -= <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">_ownedItems</a>[key];</div>
+<div class="line"><span class="lineno">  510</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  511</span>                }</div>
+<div class="line"><span class="lineno">  512</span>            }</div>
+<div class="line"><span class="lineno">  513</span>            <span class="keywordflow">if</span> (!flag &amp;&amp; <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">_ownedItems</a>.ContainsKey(item.netID))</div>
+<div class="line"><span class="lineno">  514</span>            {</div>
+<div class="line"><span class="lineno">  515</span>                num -= <a class="code hl_variable" href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">_ownedItems</a>[item.netID];</div>
+<div class="line"><span class="lineno">  516</span>            }</div>
+<div class="line"><span class="lineno">  517</span>            <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  518</span>            {</div>
+<div class="line"><span class="lineno">  519</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  520</span>            }</div>
+<div class="line"><span class="lineno">  521</span>        }</div>
+<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  523</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a_html_a4b5012bfc5a31e389b4a83545259157a"><div class="ttname"><a href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">Terraria.Recipe.maxRequirements</a></div><div class="ttdeci">static int maxRequirements</div><div class="ttdef"><b>Definition</b> Recipe.cs:19</div></div>
+<div class="ttc" id="aclassTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009_html_a518c7a1b287830e242a5371afa320009"><div class="ttname"><a href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">Terraria.Recipe._ownedItems</a></div><div class="ttdeci">static Dictionary&lt; int, int &gt; _ownedItems</div><div class="ttdef"><b>Definition</b> Recipe.cs:71</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a518c7a1b287830e242a5371afa320009.html#a518c7a1b287830e242a5371afa320009">Terraria.Recipe._ownedItems</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a19ee9388f4e74b037b276a3c130497b0.html#a19ee9388f4e74b037b276a3c130497b0">Terraria.Recipe.AcceptedByItemGroups()</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a4b5012bfc5a31e389b4a83545259157a.html#a4b5012bfc5a31e389b4a83545259157a">Terraria.Recipe.maxRequirements</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_af22eb0593ef65eaccb70c303df9be04f.html#af22eb0593ef65eaccb70c303df9be04f">Terraria.Recipe.requiredItem</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_acf75af8f1d1f323086de52a0519d2779.html#acf75af8f1d1f323086de52a0519d2779">Terraria.Recipe.useFragment()</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_aff918162eaa5ece25c554ef1f61c383f.html#aff918162eaa5ece25c554ef1f61c383f">Terraria.Recipe.useIronBar()</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a99a1d01f2be958c50038d4cce4c0c565.html#a99a1d01f2be958c50038d4cce4c0c565">Terraria.Recipe.usePressurePlate()</a>, <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_ae49ed1259a0c060df4703719f75db30b.html#ae49ed1259a0c060df4703719f75db30b">Terraria.Recipe.useSand()</a>, and <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_a46d83e28c846dc512bc86075b521ffab.html#a46d83e28c846dc512bc86075b521ffab">Terraria.Recipe.useWood()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

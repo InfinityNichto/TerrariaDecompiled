@@ -126,6 +126,64 @@ $(function(){initNavTree('db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCur
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        CustomCurrencySystem customCurrencySystem = <a class="code hl_variable" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_aeb5c6d23005a0d6902496600857fbd34.html#aeb5c6d23005a0d6902496600857fbd34">_currencies</a>[currencyIndex];</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">bool</span> overFlowing;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">long</span> num = customCurrencySystem.CountCurrency(out overFlowing, player.inventory, 58, 57, 56, 55, 54);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordtype">long</span> num2 = customCurrencySystem.CountCurrency(out overFlowing, player.bank.item);</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">long</span> num3 = customCurrencySystem.CountCurrency(out overFlowing, player.bank2.item);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">long</span> num4 = customCurrencySystem.CountCurrency(out overFlowing, player.bank3.item);</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">long</span> num5 = customCurrencySystem.CountCurrency(out overFlowing, player.bank4.item);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (customCurrencySystem.CombineStacks(out overFlowing, num, num2, num3, num4, num5) &lt; price)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Item[]&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Item[]&gt;</a>();</div>
+<div class="line"><span class="lineno">   84</span>        Dictionary&lt;int, List&lt;int&gt;&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;int, List&lt;int&gt;&gt;();</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list2 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list3 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list4 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list5 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list6 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> list7 = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a>();</div>
+<div class="line"><span class="lineno">   91</span>        list.Add(player.inventory);</div>
+<div class="line"><span class="lineno">   92</span>        list.Add(player.bank.item);</div>
+<div class="line"><span class="lineno">   93</span>        list.Add(player.bank2.item);</div>
+<div class="line"><span class="lineno">   94</span>        list.Add(player.bank3.item);</div>
+<div class="line"><span class="lineno">   95</span>        list.Add(player.bank4.item);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            dictionary[i] = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        dictionary[0] = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> { 58, 57, 56, 55, 54 };</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; list.Count; j++)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; list[j].Length; k++)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (!dictionary[j].Contains(k) &amp;&amp; customCurrencySystem.Accepts(list[j][k]))</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    list3.Add(<span class="keyword">new</span> Point(j, k));</div>
+<div class="line"><span class="lineno">  108</span>                }</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">FindEmptySlots</a>(list, dictionary, list2, 0);</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">FindEmptySlots</a>(list, dictionary, list4, 1);</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">FindEmptySlots</a>(list, dictionary, list5, 2);</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">FindEmptySlots</a>(list, dictionary, list6, 3);</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_function" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">FindEmptySlots</a>(list, dictionary, list7, 4);</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (!customCurrencySystem.TryPurchasing(price, list, list3, list2, list4, list5, list6, list7))</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f_html_a9fededacef1cd6ee20d854e627e6e89f"><div class="ttname"><a href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">Terraria.GameContent.UI.CustomCurrencyManager.FindEmptySlots</a></div><div class="ttdeci">static void FindEmptySlots(List&lt; Item[]&gt; inventories, Dictionary&lt; int, List&lt; int &gt; &gt; slotsToIgnore, List&lt; Point &gt; emptySlots, int currentInventoryIndex)</div><div class="ttdef"><b>Definition</b> CustomCurrencyManager.cs:123</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_aeb5c6d23005a0d6902496600857fbd34_html_aeb5c6d23005a0d6902496600857fbd34"><div class="ttname"><a href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_aeb5c6d23005a0d6902496600857fbd34.html#aeb5c6d23005a0d6902496600857fbd34">Terraria.GameContent.UI.CustomCurrencyManager._currencies</a></div><div class="ttdeci">static Dictionary&lt; int, CustomCurrencySystem &gt; _currencies</div><div class="ttdef"><b>Definition</b> CustomCurrencyManager.cs:12</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_aeb5c6d23005a0d6902496600857fbd34.html#aeb5c6d23005a0d6902496600857fbd34">Terraria.GameContent.UI.CustomCurrencyManager._currencies</a>, <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a0d684f5cf5cb714b17b87af9fe8e0b8a.html#a0d684f5cf5cb714b17b87af9fe8e0b8a">Terraria.GameContent.UI.CustomCurrencySystem.Accepts()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ac53471b8b8122770b7cebb10630b8c46.html#ac53471b8b8122770b7cebb10630b8c46">Terraria.Player.bank</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3533c2a2ae559dcad993dbf2c74d820e.html#a3533c2a2ae559dcad993dbf2c74d820e">Terraria.Player.bank2</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af02c4a2c5eb8a42636534b0b412d12e5.html#af02c4a2c5eb8a42636534b0b412d12e5">Terraria.Player.bank3</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a73703bba0933f97b337e8c62e7bd8372.html#a73703bba0933f97b337e8c62e7bd8372">Terraria.Player.bank4</a>, <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a2962bc175745a4a8b02d1630d443914f.html#a2962bc175745a4a8b02d1630d443914f">Terraria.GameContent.UI.CustomCurrencySystem.CombineStacks()</a>, <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_aa690e70b6fd1b4110d65d4125306e2f1.html#aa690e70b6fd1b4110d65d4125306e2f1">Terraria.GameContent.UI.CustomCurrencySystem.CountCurrency()</a>, <a class="el" href="../../db/d71/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencyManager_a9fededacef1cd6ee20d854e627e6e89f.html#a9fededacef1cd6ee20d854e627e6e89f">Terraria.GameContent.UI.CustomCurrencyManager.FindEmptySlots()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aef3ab0267fa904e9347e897a71d45f71.html#aef3ab0267fa904e9347e897a71d45f71">Terraria.Player.inventory</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a>, and <a class="el" href="../../d6/dc8/classTerraria_1_1GameContent_1_1UI_1_1CustomCurrencySystem_a69fe092e33985b1093e28ef7f93cca95.html#a69fe092e33985b1093e28ef7f93cca95">Terraria.GameContent.UI.CustomCurrencySystem.TryPurchasing()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a959cb0310d77db434ca96692e50e00f0.html#a959cb0310d77db434ca96692e50e00f0">Terraria.Player.BuyItem()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

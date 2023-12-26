@@ -146,6 +146,73 @@ $(function(){initNavTree('d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        Texture2D value = TextureAssets.ColorBar.Value;</div>
+<div class="line"><span class="lineno">  110</span>        Vector2 vector = <span class="keyword">new</span> Vector2(value.Width, value.Height) * drawScale;</div>
+<div class="line"><span class="lineno">  111</span>        drawPosition.X -= (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)vector.X;</div>
+<div class="line"><span class="lineno">  112</span>        Rectangle rectangle = <span class="keyword">new</span> Rectangle((<span class="keywordtype">int</span>)drawPosition.X, (<span class="keywordtype">int</span>)drawPosition.Y - (<span class="keywordtype">int</span>)vector.Y / 2, (<span class="keywordtype">int</span>)vector.X, (<span class="keywordtype">int</span>)vector.Y);</div>
+<div class="line"><span class="lineno">  113</span>        Rectangle destinationRectangle = rectangle;</div>
+<div class="line"><span class="lineno">  114</span>        sb.Draw(value, rectangle, Color.White);</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">float</span> num = (float)rectangle.X + 5f * drawScale;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">float</span> num2 = (float)rectangle.Y + 4f * drawScale;</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num3 = 0f; num3 &lt; 167f; num3 += 1f)</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordtype">float</span> arg = num3 / 167f;</div>
+<div class="line"><span class="lineno">  120</span>            Color color = blipColorFunc(arg);</div>
+<div class="line"><span class="lineno">  121</span>            sb.Draw(TextureAssets.ColorBlip.Value, <span class="keyword">new</span> Vector2(num + num3 * drawScale, num2), <span class="keyword">null</span>, color, 0f, Vector2.Zero, drawScale, SpriteEffects.None, 0f);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        rectangle.X = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num - 2;</div>
+<div class="line"><span class="lineno">  124</span>        rectangle.Y = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num2;</div>
+<div class="line"><span class="lineno">  125</span>        rectangle.Width -= 4;</div>
+<div class="line"><span class="lineno">  126</span>        rectangle.Height -= 8;</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">bool</span> flag = (<a class="code hl_variable" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_a9ef66f469ee1719e38f688584f8b397a.html#a9ef66f469ee1719e38f688584f8b397a">_isReallyMouseOvered</a> = rectangle.Contains(<span class="keyword">new</span> Point(Main.mouseX, Main.mouseY)));</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d72/classTerraria_1_1UI_1_1UIElement_a025515d341c6c311069a3e2b48c915b7.html#a025515d341c6c311069a3e2b48c915b7">IgnoresMouseInteraction</a>)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (lockMode == 2)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (flag || lockMode == 1)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            sb.Draw(TextureAssets.ColorHighlight.Value, destinationRectangle, Main.OurFavoriteColor);</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f.html#ab169b16a9d77f52052242dabb55b266f">_alreadyHovered</a>)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(12);</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <a class="code hl_variable" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f.html#ab169b16a9d77f52052242dabb55b266f">_alreadyHovered</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  146</span>        {</div>
+<div class="line"><span class="lineno">  147</span>            <a class="code hl_variable" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f.html#ab169b16a9d77f52052242dabb55b266f">_alreadyHovered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>        wasInBar = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d7/d72/classTerraria_1_1UI_1_1UIElement_a025515d341c6c311069a3e2b48c915b7.html#a025515d341c6c311069a3e2b48c915b7">IgnoresMouseInteraction</a>)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            sb.Draw(TextureAssets.ColorSlider.Value, <span class="keyword">new</span> Vector2(num + 167f * drawScale * sliderPosition, num2 + 4f * drawScale), <span class="keyword">null</span>, Color.White, 0f, <span class="keyword">new</span> Vector2(0.5f * (<span class="keywordtype">float</span>)TextureAssets.ColorSlider.Value.Width, 0.5f * (<span class="keywordtype">float</span>)TextureAssets.ColorSlider.Value.Height), drawScale, SpriteEffects.None, 0f);</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (Main.mouseX &gt;= rectangle.X &amp;&amp; Main.mouseX &lt;= rectangle.X + rectangle.Width)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                wasInBar = flag;</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)(Main.mouseX - rectangle.X) / (<span class="keywordtype">float</span>)rectangle.Width;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (rectangle.X &gt;= Main.mouseX)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> 1f;</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_a9ef66f469ee1719e38f688584f8b397a_html_a9ef66f469ee1719e38f688584f8b397a"><div class="ttname"><a href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_a9ef66f469ee1719e38f688584f8b397a.html#a9ef66f469ee1719e38f688584f8b397a">Terraria.GameContent.UI.Elements.UIColoredSlider._isReallyMouseOvered</a></div><div class="ttdeci">bool _isReallyMouseOvered</div><div class="ttdef"><b>Definition</b> UIColoredSlider.cs:27</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f_html_ab169b16a9d77f52052242dabb55b266f"><div class="ttname"><a href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f.html#ab169b16a9d77f52052242dabb55b266f">Terraria.GameContent.UI.Elements.UIColoredSlider._alreadyHovered</a></div><div class="ttdeci">bool _alreadyHovered</div><div class="ttdef"><b>Definition</b> UIColoredSlider.cs:29</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1UIElement_a025515d341c6c311069a3e2b48c915b7_html_a025515d341c6c311069a3e2b48c915b7"><div class="ttname"><a href="../../d7/d72/classTerraria_1_1UI_1_1UIElement_a025515d341c6c311069a3e2b48c915b7.html#a025515d341c6c311069a3e2b48c915b7">Terraria.UI.UIElement.IgnoresMouseInteraction</a></div><div class="ttdeci">bool IgnoresMouseInteraction</div><div class="ttdef"><b>Definition</b> UIElement.cs:41</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ab169b16a9d77f52052242dabb55b266f.html#ab169b16a9d77f52052242dabb55b266f">Terraria.GameContent.UI.Elements.UIColoredSlider._alreadyHovered</a>, <a class="el" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_a9ef66f469ee1719e38f688584f8b397a.html#a9ef66f469ee1719e38f688584f8b397a">Terraria.GameContent.UI.Elements.UIColoredSlider._isReallyMouseOvered</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_af5e2b76925cca5bf0c07b88a06b31946.html#af5e2b76925cca5bf0c07b88a06b31946">Terraria.GameContent.TextureAssets.ColorBar</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_aa895821cec729600066ba14927a30d85.html#aa895821cec729600066ba14927a30d85">Terraria.GameContent.TextureAssets.ColorBlip</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a0a84c1630cbfd535e79e67d0fb9ecf94.html#a0a84c1630cbfd535e79e67d0fb9ecf94">Terraria.GameContent.TextureAssets.ColorHighlight</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a591e3c2ace9faf6c65aa0f57fc5eb492.html#a591e3c2ace9faf6c65aa0f57fc5eb492">Terraria.GameContent.TextureAssets.ColorSlider</a>, <a class="el" href="../../d7/d72/classTerraria_1_1UI_1_1UIElement_a025515d341c6c311069a3e2b48c915b7.html#a025515d341c6c311069a3e2b48c915b7">Terraria.UI.UIElement.IgnoresMouseInteraction</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af7e4649b5e960ac19776de9d127d4787.html#af7e4649b5e960ac19776de9d127d4787">Terraria.Main.mouseX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae28b0da8a7a818304f68468bf05f193f.html#ae28b0da8a7a818304f68468bf05f193f">Terraria.Main.mouseY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7a9fa3849c540b49dc21f7005a2c948a.html#a7a9fa3849c540b49dc21f7005a2c948a">Terraria.Main.OurFavoriteColor</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, and <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/da7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIColoredSlider_ad2dd92b5578ce70bbdd6fee8bed4c21e.html#ad2dd92b5578ce70bbdd6fee8bed4c21e">Terraria.GameContent.UI.Elements.UIColoredSlider.DrawSelf()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

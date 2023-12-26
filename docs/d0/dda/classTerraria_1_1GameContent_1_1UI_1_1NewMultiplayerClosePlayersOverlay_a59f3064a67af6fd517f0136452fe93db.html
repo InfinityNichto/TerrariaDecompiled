@@ -161,6 +161,64 @@ $(function(){initNavTree('d0/dda/classTerraria_1_1GameContent_1_1UI_1_1NewMultip
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordtype">float</span> uIScale = Main.UIScale;</div>
+<div class="line"><span class="lineno">  203</span>        <a class="code hl_class" href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix.html">SpriteViewMatrix</a> gameViewMatrix = Main.GameViewMatrix;</div>
+<div class="line"><span class="lineno">  204</span>        namePlatePos = font.<a class="code hl_function" href="../../d1/df5/classReLogic_1_1Graphics_1_1DynamicSpriteFont_a49e4a12c0f6e26ca73b5c3d95d0197b2.html#a49e4a12c0f6e26ca73b5c3d95d0197b2">MeasureString</a>(nameToShow);</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordtype">float</span> num = 0f;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (player.chatOverhead.timeLeft &gt; 0)</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            num = (0f - namePlatePos.Y) * uIScale;</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.emoteTime &gt; 0)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            num = (0f - namePlatePos.Y) * uIScale;</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        Vector2 vector = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)(testWidth / 2) + testPosition.X, (<span class="keywordtype">float</span>)(testHeight / 2) + testPosition.Y);</div>
+<div class="line"><span class="lineno">  215</span>        Vector2 position = player.position;</div>
+<div class="line"><span class="lineno">  216</span>        position += (position - vector) * (gameViewMatrix.<a class="code hl_property" href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix_a82ef6b10dd7fe07c8d46f92991d303f9.html#a82ef6b10dd7fe07c8d46f92991d303f9">Zoom</a> - Vector2.One);</div>
+<div class="line"><span class="lineno">  217</span>        namePlateDist = 0f;</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordtype">float</span> num2 = position.X + (float)(player.width / 2) - vector.X;</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordtype">float</span> num3 = position.Y - namePlatePos.Y - 2f + num - vector.Y;</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordtype">float</span> num4 = (float)Math.Sqrt(num2 * num2 + num3 * num3);</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">int</span> num5 = testHeight;</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (testHeight &gt; testWidth)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            num5 = testWidth;</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        num5 = num5 / 2 - 50;</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (num5 &lt; 100)</div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            num5 = 100;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (num4 &lt; (<span class="keywordtype">float</span>)num5)</div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            namePlatePos.X = position.X + (float)(player.width / 2) - namePlatePos.X / 2f - testPosition.X;</div>
+<div class="line"><span class="lineno">  234</span>            namePlatePos.Y = position.Y - namePlatePos.Y - 2f + num - testPosition.Y;</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            namePlateDist = num4;</div>
+<div class="line"><span class="lineno">  239</span>            num4 = (float)num5 / num4;</div>
+<div class="line"><span class="lineno">  240</span>            namePlatePos.X = (float)(testWidth / 2) + num2 * num4 - namePlatePos.X / 2f;</div>
+<div class="line"><span class="lineno">  241</span>            namePlatePos.Y = (float)(testHeight / 2) + num3 * num4 + 40f * uIScale;</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>        measurement = font.<a class="code hl_function" href="../../d1/df5/classReLogic_1_1Graphics_1_1DynamicSpriteFont_a49e4a12c0f6e26ca73b5c3d95d0197b2.html#a49e4a12c0f6e26ca73b5c3d95d0197b2">MeasureString</a>(nameToShow);</div>
+<div class="line"><span class="lineno">  244</span>        namePlatePos += measurement / 2f;</div>
+<div class="line"><span class="lineno">  245</span>        namePlatePos *= 1f / uIScale;</div>
+<div class="line"><span class="lineno">  246</span>        namePlatePos -= measurement / 2f;</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (localPlayer.gravDir == -1f)</div>
+<div class="line"><span class="lineno">  248</span>        {</div>
+<div class="line"><span class="lineno">  249</span>            namePlatePos.Y = (float)testHeight - namePlatePos.Y;</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Graphics_1_1DynamicSpriteFont_a49e4a12c0f6e26ca73b5c3d95d0197b2_html_a49e4a12c0f6e26ca73b5c3d95d0197b2"><div class="ttname"><a href="../../d1/df5/classReLogic_1_1Graphics_1_1DynamicSpriteFont_a49e4a12c0f6e26ca73b5c3d95d0197b2.html#a49e4a12c0f6e26ca73b5c3d95d0197b2">ReLogic.Graphics.DynamicSpriteFont.MeasureString</a></div><div class="ttdeci">Vector2 MeasureString(string text)</div><div class="ttdef"><b>Definition</b> DynamicSpriteFont.cs:233</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1SpriteViewMatrix_a82ef6b10dd7fe07c8d46f92991d303f9_html_a82ef6b10dd7fe07c8d46f92991d303f9"><div class="ttname"><a href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix_a82ef6b10dd7fe07c8d46f92991d303f9.html#a82ef6b10dd7fe07c8d46f92991d303f9">Terraria.Graphics.SpriteViewMatrix.Zoom</a></div><div class="ttdeci">Vector2 Zoom</div><div class="ttdef"><b>Definition</b> SpriteViewMatrix.cs:31</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1SpriteViewMatrix_html"><div class="ttname"><a href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix.html">Terraria.Graphics.SpriteViewMatrix</a></div><div class="ttdef"><b>Definition</b> SpriteViewMatrix.cs:7</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0f2664e33cf7aff2aa540979428fe0d0.html#a0f2664e33cf7aff2aa540979428fe0d0">Terraria.Player.chatOverhead</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3cc9e22542fa2ae1f41eaf91aefc7bb3.html#a3cc9e22542fa2ae1f41eaf91aefc7bb3">Terraria.Player.emoteTime</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8029da7926efb3a3c2bbb46ff9a63bc3.html#a8029da7926efb3a3c2bbb46ff9a63bc3">Terraria.Main.GameViewMatrix</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a613d972c327db7fbe5200fd8d4ae8b33.html#a613d972c327db7fbe5200fd8d4ae8b33">Terraria.Player.gravDir</a>, <a class="el" href="../../d1/df5/classReLogic_1_1Graphics_1_1DynamicSpriteFont_a49e4a12c0f6e26ca73b5c3d95d0197b2.html#a49e4a12c0f6e26ca73b5c3d95d0197b2">ReLogic.Graphics.DynamicSpriteFont.MeasureString()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../dc/d67/structTerraria_1_1Player_1_1OverheadMessage_a9d9d158adf1da5bff57e3caf4dbadb6d.html#a9d9d158adf1da5bff57e3caf4dbadb6d">Terraria.Player.OverheadMessage.timeLeft</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a5b479e4cb3fb26bf7c93d5c89586b4ab.html#a5b479e4cb3fb26bf7c93d5c89586b4ab">Terraria.Main.UIScale</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>, and <a class="el" href="../../d9/d68/classTerraria_1_1Graphics_1_1SpriteViewMatrix_a82ef6b10dd7fe07c8d46f92991d303f9.html#a82ef6b10dd7fe07c8d46f92991d303f9">Terraria.Graphics.SpriteViewMatrix.Zoom</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dda/classTerraria_1_1GameContent_1_1UI_1_1NewMultiplayerClosePlayersOverlay_a0d9c3521379010ae6ec1d7140400b926.html#a0d9c3521379010ae6ec1d7140400b926">Terraria.GameContent.UI.NewMultiplayerClosePlayersOverlay.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

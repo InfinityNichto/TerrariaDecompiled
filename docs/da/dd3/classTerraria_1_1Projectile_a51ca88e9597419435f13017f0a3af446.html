@@ -131,6 +131,48 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a51ca88e9597419435f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">40299</span>    {</div>
+<div class="line"><span class="lineno">40300</span>        <span class="keywordtype">float</span> num = startAttackRange;</div>
+<div class="line"><span class="lineno">40301</span>        <span class="keywordtype">float</span> num2 = num;</div>
+<div class="line"><span class="lineno">40302</span>        <span class="keywordtype">float</span> num3 = num;</div>
+<div class="line"><span class="lineno">40303</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> ownerMinionAttackTargetNPC = <a class="code hl_property" href="../../da/dd3/classTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa.html#ad8de3136ba72e8bed2ce0241d17dbaaa">OwnerMinionAttackTargetNPC</a>;</div>
+<div class="line"><span class="lineno">40304</span>        <span class="keywordflow">if</span> (ownerMinionAttackTargetNPC != <span class="keyword">null</span> &amp;&amp; ownerMinionAttackTargetNPC.CanBeChasedBy(<span class="keyword">this</span>) &amp;&amp; <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a3b3e5b99fe62b3f7e1d5406a26bcbfc3.html#a3b3e5b99fe62b3f7e1d5406a26bcbfc3">IsInRangeOfMeOrMyOwner</a>(ownerMinionAttackTargetNPC, num, out var _, out var _, out var _))</div>
+<div class="line"><span class="lineno">40305</span>        {</div>
+<div class="line"><span class="lineno">40306</span>            attackTarget = ownerMinionAttackTargetNPC.<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>;</div>
+<div class="line"><span class="lineno">40307</span>        }</div>
+<div class="line"><span class="lineno">40308</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">40309</span>        {</div>
+<div class="line"><span class="lineno">40310</span>            <span class="keywordflow">if</span> (attackTarget &gt;= 0)</div>
+<div class="line"><span class="lineno">40311</span>            {</div>
+<div class="line"><span class="lineno">40312</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">40313</span>            }</div>
+<div class="line"><span class="lineno">40314</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">40315</span>            {</div>
+<div class="line"><span class="lineno">40316</span>                <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a> nPC = Main.npc[i];</div>
+<div class="line"><span class="lineno">40317</span>                <span class="keywordflow">if</span> (nPC.CanBeChasedBy(<span class="keyword">this</span>) &amp;&amp; <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a3b3e5b99fe62b3f7e1d5406a26bcbfc3.html#a3b3e5b99fe62b3f7e1d5406a26bcbfc3">IsInRangeOfMeOrMyOwner</a>(nPC, num, out var myDistance2, out var playerDistance2, out var closerIsMe2) &amp;&amp; (!skipIfCannotHitWithOwnBody || <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4.html#a515dee382fc25157902622c06c9f9fa4">CanHitWithOwnBody</a>(nPC)) &amp;&amp; (customEliminationCheck == <span class="keyword">null</span> || customEliminationCheck(nPC, attackTarget)))</div>
+<div class="line"><span class="lineno">40318</span>                {</div>
+<div class="line"><span class="lineno">40319</span>                    attackTarget = i;</div>
+<div class="line"><span class="lineno">40320</span>                    num = (closerIsMe2 ? myDistance2 : playerDistance2);</div>
+<div class="line"><span class="lineno">40321</span>                    <span class="keywordflow">if</span> (num2 &gt; myDistance2)</div>
+<div class="line"><span class="lineno">40322</span>                    {</div>
+<div class="line"><span class="lineno">40323</span>                        num2 = myDistance2;</div>
+<div class="line"><span class="lineno">40324</span>                    }</div>
+<div class="line"><span class="lineno">40325</span>                    <span class="keywordflow">if</span> (num3 &gt; playerDistance2)</div>
+<div class="line"><span class="lineno">40326</span>                    {</div>
+<div class="line"><span class="lineno">40327</span>                        num3 = playerDistance2;</div>
+<div class="line"><span class="lineno">40328</span>                    }</div>
+<div class="line"><span class="lineno">40329</span>                    num = Math.Max(num2, num3);</div>
+<div class="line"><span class="lineno">40330</span>                }</div>
+<div class="line"><span class="lineno">40331</span>            }</div>
+<div class="line"><span class="lineno">40332</span>        }</div>
+<div class="line"><span class="lineno">40333</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a3b3e5b99fe62b3f7e1d5406a26bcbfc3_html_a3b3e5b99fe62b3f7e1d5406a26bcbfc3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a3b3e5b99fe62b3f7e1d5406a26bcbfc3.html#a3b3e5b99fe62b3f7e1d5406a26bcbfc3">Terraria.Projectile.IsInRangeOfMeOrMyOwner</a></div><div class="ttdeci">bool IsInRangeOfMeOrMyOwner(Entity entity, float maxDistance, out float myDistance, out float playerDistance, out bool closerIsMe)</div><div class="ttdef"><b>Definition</b> Projectile.cs:41788</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4_html_a515dee382fc25157902622c06c9f9fa4"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4.html#a515dee382fc25157902622c06c9f9fa4">Terraria.Projectile.CanHitWithOwnBody</a></div><div class="ttdeci">bool CanHitWithOwnBody(Entity ent)</div><div class="ttdef"><b>Definition</b> Projectile.cs:11004</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa_html_ad8de3136ba72e8bed2ce0241d17dbaaa"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad8de3136ba72e8bed2ce0241d17dbaaa.html#ad8de3136ba72e8bed2ce0241d17dbaaa">Terraria.Projectile.OwnerMinionAttackTargetNPC</a></div><div class="ttdeci">NPC OwnerMinionAttackTargetNPC</div><div class="ttdef"><b>Definition</b> Projectile.cs:305</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a88fb04cefeb3d121612538889bd56102.html#a88fb04cefeb3d121612538889bd56102">Terraria.NPC.CanBeChasedBy()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

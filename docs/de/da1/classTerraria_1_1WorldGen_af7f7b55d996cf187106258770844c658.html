@@ -117,6 +117,67 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_af7f7b55d996cf1871062
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">66050</span>    {</div>
+<div class="line"><span class="lineno">66051</span>        <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">66052</span>        {</div>
+<div class="line"><span class="lineno">66053</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">66054</span>        }</div>
+<div class="line"><span class="lineno">66055</span>        <span class="keywordtype">int</span> num = Main.rand.Next(3, 6);</div>
+<div class="line"><span class="lineno">66056</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">66057</span>        {</div>
+<div class="line"><span class="lineno">66058</span>            <span class="keywordtype">int</span> num2 = Main.rand.Next(15, 31);</div>
+<div class="line"><span class="lineno">66059</span>            <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(position.X / 16f);</div>
+<div class="line"><span class="lineno">66060</span>            <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(position.Y / 16f);</div>
+<div class="line"><span class="lineno">66061</span>            <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno">66062</span>            <span class="keywordtype">int</span> num6 = 0;</div>
+<div class="line"><span class="lineno">66063</span>            <span class="keywordflow">if</span> (Main.rand.Next(2) != 0)</div>
+<div class="line"><span class="lineno">66064</span>            {</div>
+<div class="line"><span class="lineno">66065</span>                num6 = ((Main.rand.Next(2) == 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">66066</span>            }</div>
+<div class="line"><span class="lineno">66067</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">66068</span>            {</div>
+<div class="line"><span class="lineno">66069</span>                num5 = ((Main.rand.Next(2) == 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">66070</span>            }</div>
+<div class="line"><span class="lineno">66071</span>            <span class="keywordflow">while</span> (num2 &gt; 0)</div>
+<div class="line"><span class="lineno">66072</span>            {</div>
+<div class="line"><span class="lineno">66073</span>                num2--;</div>
+<div class="line"><span class="lineno">66074</span>                <span class="keywordflow">if</span> (!Main.tile[num3, num4].active())</div>
+<div class="line"><span class="lineno">66075</span>                {</div>
+<div class="line"><span class="lineno">66076</span>                    <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">PlaceTile</a>(num3, num4, 655);</div>
+<div class="line"><span class="lineno">66077</span>                    <span class="keywordflow">if</span> (Main.tile[num3, num4].active() &amp;&amp; Main.netMode == 2)</div>
+<div class="line"><span class="lineno">66078</span>                    {</div>
+<div class="line"><span class="lineno">66079</span>                        NetMessage.SendTileSquare(-1, num3, num4);</div>
+<div class="line"><span class="lineno">66080</span>                    }</div>
+<div class="line"><span class="lineno">66081</span>                }</div>
+<div class="line"><span class="lineno">66082</span>                num3 += num5;</div>
+<div class="line"><span class="lineno">66083</span>                num4 += num6;</div>
+<div class="line"><span class="lineno">66084</span>                <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(num3, num4))</div>
+<div class="line"><span class="lineno">66085</span>                {</div>
+<div class="line"><span class="lineno">66086</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">66087</span>                }</div>
+<div class="line"><span class="lineno">66088</span>                <span class="keywordflow">if</span> (Main.rand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">66089</span>                {</div>
+<div class="line"><span class="lineno">66090</span>                    <span class="keywordflow">if</span> (num6 == 0)</div>
+<div class="line"><span class="lineno">66091</span>                    {</div>
+<div class="line"><span class="lineno">66092</span>                        num5 = 0;</div>
+<div class="line"><span class="lineno">66093</span>                        num6 = ((Main.rand.Next(2) == 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">66094</span>                    }</div>
+<div class="line"><span class="lineno">66095</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">66096</span>                    {</div>
+<div class="line"><span class="lineno">66097</span>                        num6 = 0;</div>
+<div class="line"><span class="lineno">66098</span>                        num5 = ((Main.rand.Next(2) == 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">66099</span>                    }</div>
+<div class="line"><span class="lineno">66100</span>                }</div>
+<div class="line"><span class="lineno">66101</span>            }</div>
+<div class="line"><span class="lineno">66102</span>        }</div>
+<div class="line"><span class="lineno">66103</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c_html_a44be8e88cfbc0e27b42eea0f79c37c3c"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a44be8e88cfbc0e27b42eea0f79c37c3c.html#a44be8e88cfbc0e27b42eea0f79c37c3c">Terraria.WorldGen.PlaceTile</a></div><div class="ttdeci">static bool PlaceTile(int i, int j, int Type, bool mute=false, bool forced=false, int plr=-1, int style=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:50270</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_af998ad2acbc8e9008e7d83aad42551f2.html#af998ad2acbc8e9008e7d83aad42551f2">Terraria.NPC.AI()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

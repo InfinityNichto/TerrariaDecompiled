@@ -126,6 +126,33 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_ac0d5b5b1ba52bb8d59e8
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">52851</span>    {</div>
+<div class="line"><span class="lineno">52852</span>        <span class="keywordtype">int</span> num = Main.tile[x, y].frameY;</div>
+<div class="line"><span class="lineno">52853</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">52854</span>        <span class="keywordflow">while</span> (num &gt;= 40)</div>
+<div class="line"><span class="lineno">52855</span>        {</div>
+<div class="line"><span class="lineno">52856</span>            num -= 40;</div>
+<div class="line"><span class="lineno">52857</span>            num2++;</div>
+<div class="line"><span class="lineno">52858</span>        }</div>
+<div class="line"><span class="lineno">52859</span>        <span class="keywordflow">if</span> (num == 18)</div>
+<div class="line"><span class="lineno">52860</span>        {</div>
+<div class="line"><span class="lineno">52861</span>            y--;</div>
+<div class="line"><span class="lineno">52862</span>        }</div>
+<div class="line"><span class="lineno">52863</span>        Vector2 vector = <span class="keyword">new</span> Vector2(x * 16 + 8, y * 16 + 4);</div>
+<div class="line"><span class="lineno">52864</span>        <span class="keywordtype">int</span> type = 167 + num2;</div>
+<div class="line"><span class="lineno">52865</span>        <span class="keywordtype">int</span> damage = 150;</div>
+<div class="line"><span class="lineno">52866</span>        <span class="keywordtype">int</span> num3 = 7;</div>
+<div class="line"><span class="lineno">52867</span>        <span class="keywordtype">int</span> num4 = Projectile.NewProjectile(<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a969320a2667e97b53d67e96b1bb51f24.html#a969320a2667e97b53d67e96b1bb51f24">GetProjectileSource_PlayerOrWires</a>(x, y, fromWiring, Main.LocalPlayer), vector.X, vector.Y + 2f, 0f, -8f, type, damage, num3, Main.myPlayer);</div>
+<div class="line"><span class="lineno">52868</span>        Main.projectile[num4].originatedFromActivableTile = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">52869</span>        Main.tile[x, y].active(active: false);</div>
+<div class="line"><span class="lineno">52870</span>        Main.tile[x, y + 1].active(active: false);</div>
+<div class="line"><span class="lineno">52871</span>        NetMessage.SendTileSquare(-1, x, y, 1, 2);</div>
+<div class="line"><span class="lineno">52872</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a969320a2667e97b53d67e96b1bb51f24_html_a969320a2667e97b53d67e96b1bb51f24"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a969320a2667e97b53d67e96b1bb51f24.html#a969320a2667e97b53d67e96b1bb51f24">Terraria.WorldGen.GetProjectileSource_PlayerOrWires</a></div><div class="ttdeci">static IEntitySource GetProjectileSource_PlayerOrWires(int x, int y, bool fromWiring, Player player)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1333</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae9af3d8626cfbb1c8bf7568b6810f9bc.html#ae9af3d8626cfbb1c8bf7568b6810f9bc">Terraria.Main.LocalPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aff54f2d7e5d69ffa2ec3a069a6266e50.html#aff54f2d7e5d69ffa2ec3a069a6266e50">Terraria.Projectile.NewProjectile()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aed804cf3d912ce777ee7c0c0306f7bb0.html#aed804cf3d912ce777ee7c0c0306f7bb0">Terraria.Projectile.originatedFromActivableTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d8a/classTerraria_1_1Wiring_ae920fead53d67935735061efbeb09563.html#ae920fead53d67935735061efbeb09563">Terraria.Wiring.HitWireSingle()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a8b27a9ab46a3bd51b25499cdf7417694.html#a8b27a9ab46a3bd51b25499cdf7417694">Terraria.Player.TileInteractionsUse()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

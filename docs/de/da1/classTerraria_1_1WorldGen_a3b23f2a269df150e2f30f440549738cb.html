@@ -121,6 +121,132 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a3b23f2a269df150e2f30
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">36899</span>    {</div>
+<div class="line"><span class="lineno">36900</span>        <span class="keywordflow">if</span> (Main.tile[x, y] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">36901</span>        {</div>
+<div class="line"><span class="lineno">36902</span>            Main.tile[x, y] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">36903</span>        }</div>
+<div class="line"><span class="lineno">36904</span>        <span class="keywordflow">if</span> (Main.tile[x, y + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">36905</span>        {</div>
+<div class="line"><span class="lineno">36906</span>            Main.tile[x, y + 1] = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a>();</div>
+<div class="line"><span class="lineno">36907</span>        }</div>
+<div class="line"><span class="lineno">36908</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">36909</span>        <span class="keywordflow">if</span> (!Main.tile[x, y + 1].nactive())</div>
+<div class="line"><span class="lineno">36910</span>        {</div>
+<div class="line"><span class="lineno">36911</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36912</span>        }</div>
+<div class="line"><span class="lineno">36913</span>        <span class="keywordflow">if</span> (Main.tile[x, y + 1].halfBrick())</div>
+<div class="line"><span class="lineno">36914</span>        {</div>
+<div class="line"><span class="lineno">36915</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36916</span>        }</div>
+<div class="line"><span class="lineno">36917</span>        <span class="keywordtype">int</span> num = Main.tile[x, y].frameX / 18;</div>
+<div class="line"><span class="lineno">36918</span>        Main.tile[x, y].frameY = 0;</div>
+<div class="line"><span class="lineno">36919</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">36920</span>        {</div>
+<div class="line"><span class="lineno">36921</span>            <span class="keywordflow">switch</span> (num)</div>
+<div class="line"><span class="lineno">36922</span>            {</div>
+<div class="line"><span class="lineno">36923</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">36924</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 109 &amp;&amp; Main.tile[x, y + 1].type != 2 &amp;&amp; Main.tile[x, y + 1].type != 477 &amp;&amp; Main.tile[x, y + 1].type != 492 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380)</div>
+<div class="line"><span class="lineno">36925</span>                {</div>
+<div class="line"><span class="lineno">36926</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36927</span>                }</div>
+<div class="line"><span class="lineno">36928</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">36929</span>                {</div>
+<div class="line"><span class="lineno">36930</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36931</span>                }</div>
+<div class="line"><span class="lineno">36932</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36933</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">36934</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 60 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380)</div>
+<div class="line"><span class="lineno">36935</span>                {</div>
+<div class="line"><span class="lineno">36936</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36937</span>                }</div>
+<div class="line"><span class="lineno">36938</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">36939</span>                {</div>
+<div class="line"><span class="lineno">36940</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36941</span>                }</div>
+<div class="line"><span class="lineno">36942</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36943</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">36944</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 0 &amp;&amp; Main.tile[x, y + 1].type != 59 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380)</div>
+<div class="line"><span class="lineno">36945</span>                {</div>
+<div class="line"><span class="lineno">36946</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36947</span>                }</div>
+<div class="line"><span class="lineno">36948</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">36949</span>                {</div>
+<div class="line"><span class="lineno">36950</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36951</span>                }</div>
+<div class="line"><span class="lineno">36952</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36953</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">36954</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 661 &amp;&amp; Main.tile[x, y + 1].type != 662 &amp;&amp; Main.tile[x, y + 1].type != 199 &amp;&amp; Main.tile[x, y + 1].type != 203 &amp;&amp; Main.tile[x, y + 1].type != 23 &amp;&amp; Main.tile[x, y + 1].type != 25 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380)</div>
+<div class="line"><span class="lineno">36955</span>                {</div>
+<div class="line"><span class="lineno">36956</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36957</span>                }</div>
+<div class="line"><span class="lineno">36958</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">36959</span>                {</div>
+<div class="line"><span class="lineno">36960</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36961</span>                }</div>
+<div class="line"><span class="lineno">36962</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36963</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">36964</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 53 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380 &amp;&amp; Main.tile[x, y + 1].type != 116)</div>
+<div class="line"><span class="lineno">36965</span>                {</div>
+<div class="line"><span class="lineno">36966</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36967</span>                }</div>
+<div class="line"><span class="lineno">36968</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">36969</span>                {</div>
+<div class="line"><span class="lineno">36970</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36971</span>                }</div>
+<div class="line"><span class="lineno">36972</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36973</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">36974</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 57 &amp;&amp; Main.tile[x, y + 1].type != 633 &amp;&amp; Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380)</div>
+<div class="line"><span class="lineno">36975</span>                {</div>
+<div class="line"><span class="lineno">36976</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">36977</span>                }</div>
+<div class="line"><span class="lineno">36978</span>                <span class="keywordflow">if</span> (Main.tile[x, y].type == 82 || !Main.tile[x, y].lava() || Main.netMode == 1)</div>
+<div class="line"><span class="lineno">36979</span>                {</div>
+<div class="line"><span class="lineno">36980</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">36981</span>                }</div>
+<div class="line"><span class="lineno">36982</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 16)</div>
+<div class="line"><span class="lineno">36983</span>                {</div>
+<div class="line"><span class="lineno">36984</span>                    <span class="keywordflow">if</span> (Main.tile[x, y].type == 83)</div>
+<div class="line"><span class="lineno">36985</span>                    {</div>
+<div class="line"><span class="lineno">36986</span>                        Main.tile[x, y].type = 84;</div>
+<div class="line"><span class="lineno">36987</span>                        <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">36988</span>                        {</div>
+<div class="line"><span class="lineno">36989</span>                            NetMessage.SendTileSquare(-1, x, y);</div>
+<div class="line"><span class="lineno">36990</span>                        }</div>
+<div class="line"><span class="lineno">36991</span>                    }</div>
+<div class="line"><span class="lineno">36992</span>                }</div>
+<div class="line"><span class="lineno">36993</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.tile[x, y].type == 84)</div>
+<div class="line"><span class="lineno">36994</span>                {</div>
+<div class="line"><span class="lineno">36995</span>                    Main.tile[x, y].type = 83;</div>
+<div class="line"><span class="lineno">36996</span>                    <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">36997</span>                    {</div>
+<div class="line"><span class="lineno">36998</span>                        NetMessage.SendTileSquare(-1, x, y);</div>
+<div class="line"><span class="lineno">36999</span>                    }</div>
+<div class="line"><span class="lineno">37000</span>                }</div>
+<div class="line"><span class="lineno">37001</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">37002</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">37003</span>                <span class="keywordflow">if</span> (Main.tile[x, y + 1].type != 78 &amp;&amp; Main.tile[x, y + 1].type != 380 &amp;&amp; Main.tile[x, y + 1].type != 147 &amp;&amp; Main.tile[x, y + 1].type != 161 &amp;&amp; Main.tile[x, y + 1].type != 163 &amp;&amp; Main.tile[x, y + 1].type != 164 &amp;&amp; Main.tile[x, y + 1].type != 200)</div>
+<div class="line"><span class="lineno">37004</span>                {</div>
+<div class="line"><span class="lineno">37005</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">37006</span>                }</div>
+<div class="line"><span class="lineno">37007</span>                <span class="keywordflow">if</span> (Main.tile[x, y].liquid &gt; 0 &amp;&amp; Main.tile[x, y].lava())</div>
+<div class="line"><span class="lineno">37008</span>                {</div>
+<div class="line"><span class="lineno">37009</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">37010</span>                }</div>
+<div class="line"><span class="lineno">37011</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">37012</span>            }</div>
+<div class="line"><span class="lineno">37013</span>        }</div>
+<div class="line"><span class="lineno">37014</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">37015</span>        {</div>
+<div class="line"><span class="lineno">37016</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">37017</span>        }</div>
+<div class="line"><span class="lineno">37018</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac5e7a45a98f6e9037975c4c7e043a7a9.html#ac5e7a45a98f6e9037975c4c7e043a7a9">Terraria.Tile.lava()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>, <a class="el" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.Tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d46/classTerraria_1_1Liquid_acc6b50aaa0e6f6ec8cec61b4de835c92.html#acc6b50aaa0e6f6ec8cec61b4de835c92">Terraria.Liquid.DelWater()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

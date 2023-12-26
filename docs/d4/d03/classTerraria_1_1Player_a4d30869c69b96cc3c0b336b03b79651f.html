@@ -117,6 +117,39 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a4d30869c69b96cc3c0b336
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49595</span>    {</div>
+<div class="line"><span class="lineno">49596</span>        <span class="keywordflow">if</span> (Main.myPlayer != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>)</div>
+<div class="line"><span class="lineno">49597</span>        {</div>
+<div class="line"><span class="lineno">49598</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">49599</span>        }</div>
+<div class="line"><span class="lineno">49600</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Projectile&gt;</a> list = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Projectile&gt;</a>();</div>
+<div class="line"><span class="lineno">49601</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">49602</span>        {</div>
+<div class="line"><span class="lineno">49603</span>            <span class="keywordflow">if</span> (Main.projectile[i].WipableTurret)</div>
+<div class="line"><span class="lineno">49604</span>            {</div>
+<div class="line"><span class="lineno">49605</span>                list.Add(Main.projectile[i]);</div>
+<div class="line"><span class="lineno">49606</span>            }</div>
+<div class="line"><span class="lineno">49607</span>        }</div>
+<div class="line"><span class="lineno">49608</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">49609</span>        <span class="keywordflow">while</span> (list.Count &gt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">maxTurrets</a> &amp;&amp; ++num &lt; 1000)</div>
+<div class="line"><span class="lineno">49610</span>        {</div>
+<div class="line"><span class="lineno">49611</span>            Projectile projectile = list[0];</div>
+<div class="line"><span class="lineno">49612</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; list.Count; j++)</div>
+<div class="line"><span class="lineno">49613</span>            {</div>
+<div class="line"><span class="lineno">49614</span>                <span class="keywordflow">if</span> (list[j].timeLeft &lt; projectile.timeLeft)</div>
+<div class="line"><span class="lineno">49615</span>                {</div>
+<div class="line"><span class="lineno">49616</span>                    projectile = list[j];</div>
+<div class="line"><span class="lineno">49617</span>                }</div>
+<div class="line"><span class="lineno">49618</span>            }</div>
+<div class="line"><span class="lineno">49619</span>            projectile.Kill();</div>
+<div class="line"><span class="lineno">49620</span>            list.Remove(projectile);</div>
+<div class="line"><span class="lineno">49621</span>        }</div>
+<div class="line"><span class="lineno">49622</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc_html_a7db32d471260eab1d86dfc1706bb3cbc"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a7db32d471260eab1d86dfc1706bb3cbc.html#a7db32d471260eab1d86dfc1706bb3cbc">Terraria.Player.maxTurrets</a></div><div class="ttdeci">int maxTurrets</div><div class="ttdef"><b>Definition</b> Player.cs:2407</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a7f88be42a896409d3414e97f8039450a.html#a7f88be42a896409d3414e97f8039450a">Terraria.Projectile.timeLeft</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ae5cac31fe589f23f3ca28d4204b28c84.html#ae5cac31fe589f23f3ca28d4204b28c84">Terraria.Projectile.WipableTurret</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

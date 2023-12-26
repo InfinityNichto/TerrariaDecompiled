@@ -117,6 +117,65 @@ $(function(){initNavTree('d5/deb/classTerraria_1_1Cloud_a70dfbc3dbf3cece622c6c01
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">  249</span>        {</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 200; i++)</div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">if</span> (Main.cloud[i].active)</div>
+<div class="line"><span class="lineno">  256</span>            {</div>
+<div class="line"><span class="lineno">  257</span>                Main.cloud[i].Update();</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">if</span> (!Main.cloud[i].kill)</div>
+<div class="line"><span class="lineno">  259</span>                {</div>
+<div class="line"><span class="lineno">  260</span>                    num++;</div>
+<div class="line"><span class="lineno">  261</span>                }</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 200; j++)</div>
+<div class="line"><span class="lineno">  265</span>        {</div>
+<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (Main.cloud[j].active)</div>
+<div class="line"><span class="lineno">  267</span>            {</div>
+<div class="line"><span class="lineno">  268</span>                <span class="keywordflow">if</span> (j &gt; 1 &amp;&amp; (!Main.cloud[j - 1].active || (<span class="keywordtype">double</span>)Main.cloud[j - 1].scale &gt; (<span class="keywordtype">double</span>)Main.cloud[j].scale + 0.02))</div>
+<div class="line"><span class="lineno">  269</span>                {</div>
+<div class="line"><span class="lineno">  270</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a> cloud = (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a>)Main.cloud[j - 1].Clone();</div>
+<div class="line"><span class="lineno">  271</span>                    Main.cloud[j - 1] = (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a>)Main.cloud[j].Clone();</div>
+<div class="line"><span class="lineno">  272</span>                    Main.cloud[j] = cloud;</div>
+<div class="line"><span class="lineno">  273</span>                }</div>
+<div class="line"><span class="lineno">  274</span>                <span class="keywordflow">if</span> (j &lt; 199 &amp;&amp; (!Main.cloud[j].active || (<span class="keywordtype">double</span>)Main.cloud[j + 1].scale &lt; (double)Main.cloud[j].scale - 0.02))</div>
+<div class="line"><span class="lineno">  275</span>                {</div>
+<div class="line"><span class="lineno">  276</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a> cloud2 = (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a>)Main.cloud[j + 1].Clone();</div>
+<div class="line"><span class="lineno">  277</span>                    Main.cloud[j + 1] = (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Cloud</a>)Main.cloud[j].Clone();</div>
+<div class="line"><span class="lineno">  278</span>                    Main.cloud[j] = cloud2;</div>
+<div class="line"><span class="lineno">  279</span>                }</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>        }</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">if</span> (num &lt; Main.numClouds)</div>
+<div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>            <a class="code hl_function" href="../../d5/deb/classTerraria_1_1Cloud_a4fb20ae1f695f58ce78894a249c531ac.html#a4fb20ae1f695f58ce78894a249c531ac">addCloud</a>();</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num &gt; Main.numClouds)</div>
+<div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="../../d5/deb/classTerraria_1_1Cloud_a6ab215138dbec18e30446ee730a92de5.html#a6ab215138dbec18e30446ee730a92de5">rand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(num);</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">while</span> (Main.cloud[num2].kill &amp;&amp; num3 &lt; 100)</div>
+<div class="line"><span class="lineno">  291</span>            {</div>
+<div class="line"><span class="lineno">  292</span>                num3++;</div>
+<div class="line"><span class="lineno">  293</span>                num2 = <a class="code hl_variable" href="../../d5/deb/classTerraria_1_1Cloud_a6ab215138dbec18e30446ee730a92de5.html#a6ab215138dbec18e30446ee730a92de5">rand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(num);</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>            Main.cloud[num2].kill = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Cloud_a4fb20ae1f695f58ce78894a249c531ac_html_a4fb20ae1f695f58ce78894a249c531ac"><div class="ttname"><a href="../../d5/deb/classTerraria_1_1Cloud_a4fb20ae1f695f58ce78894a249c531ac.html#a4fb20ae1f695f58ce78894a249c531ac">Terraria.Cloud.addCloud</a></div><div class="ttdeci">static void addCloud()</div><div class="ttdef"><b>Definition</b> Cloud.cs:57</div></div>
+<div class="ttc" id="aclassTerraria_1_1Cloud_a6ab215138dbec18e30446ee730a92de5_html_a6ab215138dbec18e30446ee730a92de5"><div class="ttname"><a href="../../d5/deb/classTerraria_1_1Cloud_a6ab215138dbec18e30446ee730a92de5.html#a6ab215138dbec18e30446ee730a92de5">Terraria.Cloud.rand</a></div><div class="ttdeci">static UnifiedRandom rand</div><div class="ttdef"><b>Definition</b> Cloud.cs:34</div></div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a_html_a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a83e06fff16db2736c40efd7adb8e9e0a.html#a83e06fff16db2736c40efd7adb8e9e0aac8e2277ecfb1427838c488c217f99466">Terraria.Enums.TileIDEnum.Cloud</a></div><div class="ttdeci">@ Cloud</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a17f37201aad2ebbfe5a8077265a035af.html#a17f37201aad2ebbfe5a8077265a035af">Terraria.Cloud.active</a>, <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a4fb20ae1f695f58ce78894a249c531ac.html#a4fb20ae1f695f58ce78894a249c531ac">Terraria.Cloud.addCloud()</a>, <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a4d6dda2c439c37043539aade0c507558.html#a4d6dda2c439c37043539aade0c507558">Terraria.Cloud.Clone()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a02735bca56282bf5e5f18fdc0504d4e2.html#a02735bca56282bf5e5f18fdc0504d4e2">Terraria.Main.cloud</a>, <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_aebf8e8953feeffb6f07a341a124b9d56.html#aebf8e8953feeffb6f07a341a124b9d56">Terraria.Cloud.kill</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b97c8d2c9583ff2c92ef488f89c9ab5.html#a3b97c8d2c9583ff2c92ef488f89c9ab5">Terraria.Main.numClouds</a>, <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a6ab215138dbec18e30446ee730a92de5.html#a6ab215138dbec18e30446ee730a92de5">Terraria.Cloud.rand</a>, <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a4b2970b9fa78ffc5a73bcaa2d6e9de0b.html#a4b2970b9fa78ffc5a73bcaa2d6e9de0b">Terraria.Cloud.scale</a>, and <a class="el" href="../../d5/deb/classTerraria_1_1Cloud_a6730254da6e63f184b724fcdf4f85d3c.html#a6730254da6e63f184b724fcdf4f85d3c">Terraria.Cloud.Update()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a96341b8439a15bcefc0f119767e24e35.html#a96341b8439a15bcefc0f119767e24e35">Terraria.Main.DoUpdate()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae7acc9fe7fb0914ed02aacdfdc9039c5.html#ae7acc9fe7fb0914ed02aacdfdc9039c5">Terraria.Main.DrawMenu()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,37 @@ $(function(){initNavTree('d3/d9c/classTerraria_1_1TimeLogger_a48ce9242baf3296219
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  214</span>    {</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (times[type].resetMaxTime &gt; 0)</div>
+<div class="line"><span class="lineno">  217</span>        {</div>
+<div class="line"><span class="lineno">  218</span>            times[type].resetMaxTime--;</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  221</span>        {</div>
+<div class="line"><span class="lineno">  222</span>            times[type].timeMax = 0f;</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+<div class="line"><span class="lineno">  224</span>        times[type].time = (float)time;</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)times[type].timeMax &lt; time)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  228</span>            times[type].timeMax = (float)time;</div>
+<div class="line"><span class="lineno">  229</span>            times[type].resetMaxTime = 100;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        times[type].usedLastDraw = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d3/d9c/classTerraria_1_1TimeLogger_aea55a809c19f5dbe28af14c058c91b18.html#aea55a809c19f5dbe28af14c058c91b18">currentFrame</a> != 0)</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            <a class="code hl_variable" href="../../d3/d9c/classTerraria_1_1TimeLogger_a4fa2dcf1ef73330100464e0613d98473.html#a4fa2dcf1ef73330100464e0613d98473">logBuilder</a>.AppendLine(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;    {0} : {1:F4}ms {2}&quot;</span>, times[type].logText, time, flag ? <span class="stringliteral">&quot; - New Maximum&quot;</span> : <a class="code hl_class" href="../../d5/d92/classstring.html">string</a>.<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a7d6ce75c3feb061cb9ac2c18e1a1a3d6.html#a7d6ce75c3feb061cb9ac2c18e1a1a3d6ace2c8aed9c2fa0cfbed56cbda4d8bf07">Empty</a>));</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1TimeLogger_a4fa2dcf1ef73330100464e0613d98473_html_a4fa2dcf1ef73330100464e0613d98473"><div class="ttname"><a href="../../d3/d9c/classTerraria_1_1TimeLogger_a4fa2dcf1ef73330100464e0613d98473.html#a4fa2dcf1ef73330100464e0613d98473">Terraria.TimeLogger.logBuilder</a></div><div class="ttdeci">static StringBuilder logBuilder</div><div class="ttdef"><b>Definition</b> TimeLogger.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1TimeLogger_aea55a809c19f5dbe28af14c058c91b18_html_aea55a809c19f5dbe28af14c058c91b18"><div class="ttname"><a href="../../d3/d9c/classTerraria_1_1TimeLogger_aea55a809c19f5dbe28af14c058c91b18.html#aea55a809c19f5dbe28af14c058c91b18">Terraria.TimeLogger.currentFrame</a></div><div class="ttdeci">static int currentFrame</div><div class="ttdef"><b>Definition</b> TimeLogger.cs:30</div></div>
+<div class="ttc" id="aclassstring_html"><div class="ttname"><a href="../../d5/d92/classstring.html">string</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_a7d6ce75c3feb061cb9ac2c18e1a1a3d6_html_a7d6ce75c3feb061cb9ac2c18e1a1a3d6ace2c8aed9c2fa0cfbed56cbda4d8bf07"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a7d6ce75c3feb061cb9ac2c18e1a1a3d6.html#a7d6ce75c3feb061cb9ac2c18e1a1a3d6ace2c8aed9c2fa0cfbed56cbda4d8bf07">Terraria.Enums.MoonPhase.Empty</a></div><div class="ttdeci">@ Empty</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_aea55a809c19f5dbe28af14c058c91b18.html#aea55a809c19f5dbe28af14c058c91b18">Terraria.TimeLogger.currentFrame</a>, <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a4fa2dcf1ef73330100464e0613d98473.html#a4fa2dcf1ef73330100464e0613d98473">Terraria.TimeLogger.logBuilder</a>, <a class="el" href="../../d3/d61/structTerraria_1_1TimeLogger_1_1TimeLogData_adec9202e480530ca7181674ac74663b5.html#adec9202e480530ca7181674ac74663b5">Terraria.TimeLogger.TimeLogData.resetMaxTime</a>, <a class="el" href="../../d3/d61/structTerraria_1_1TimeLogger_1_1TimeLogData_aaeb1ed31309376ab65714bb61079b62e.html#aaeb1ed31309376ab65714bb61079b62e">Terraria.TimeLogger.TimeLogData.time</a>, <a class="el" href="../../d3/d61/structTerraria_1_1TimeLogger_1_1TimeLogData_a9daa403e615a0fdd0f23852c2c315301.html#a9daa403e615a0fdd0f23852c2c315301">Terraria.TimeLogger.TimeLogData.timeMax</a>, and <a class="el" href="../../d3/d61/structTerraria_1_1TimeLogger_1_1TimeLogData_aabd8a4a4ebcb68279234e7e184a73db0.html#aabd8a4a4ebcb68279234e7e184a73db0">Terraria.TimeLogger.TimeLogData.usedLastDraw</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a440884cdee8222c886f8d1fddbca6187.html#a440884cdee8222c886f8d1fddbca6187">Terraria.TimeLogger.DetailedDrawTime()</a>, <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_aa50c8973c987fa8b2078c5e91d6ee94a.html#aa50c8973c987fa8b2078c5e91d6ee94a">Terraria.TimeLogger.DrawTime()</a>, <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a6c7d696d8d9fa9d15ad49218b6ae5801.html#a6c7d696d8d9fa9d15ad49218b6ae5801">Terraria.TimeLogger.LightingTime()</a>, and <a class="el" href="../../d3/d9c/classTerraria_1_1TimeLogger_a9ffd38283986ca92b3c835dc0d56144c.html#a9ffd38283986ca92b3c835dc0d56144c">Terraria.TimeLogger.RenderTime()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

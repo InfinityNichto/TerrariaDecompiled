@@ -131,6 +131,52 @@ $(function(){initNavTree('df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a6e6a7d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (!counter.exemptFromBadScoreTest)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a366175fee3f692bf4e2d087f71f54d49.html#a366175fee3f692bf4e2d087f71f54d49">_highestFoundReadCount</a> &lt; counter.timesReceived)</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a366175fee3f692bf4e2d087f71f54d49.html#a366175fee3f692bf4e2d087f71f54d49">_highestFoundReadCount</a> = counter.timesReceived;</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356.html#afc0076445c018c095c0b70bb8eb8a356">_highestFoundReadBytes</a> &lt; counter.bytesReceived)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356.html#afc0076445c018c095c0b70bb8eb8a356">_highestFoundReadBytes</a> = counter.bytesReceived;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        Vector2 pos = position;</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">string</span> text = title + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> num = Utils.Remap(counter.bytesReceived, 0f, <a class="code hl_variable" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356.html#afc0076445c018c095c0b70bb8eb8a356">_highestFoundReadBytes</a>, 0f, 1f);</div>
+<div class="line"><span class="lineno">  133</span>        Color color = Main.hslToRgb(0.3f * (1f - num), 1f, 0.5f);</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (counter.exemptFromBadScoreTest)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            color = Color.White;</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  139</span>        text2 = text;</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  141</span>        pos.X += 30f;</div>
+<div class="line"><span class="lineno">  142</span>        text2 = <span class="stringliteral">&quot;rx:&quot;</span> + $<span class="stringliteral">&quot;{counter.timesReceived}&quot;</span>;</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  144</span>        pos.X += 70f;</div>
+<div class="line"><span class="lineno">  145</span>        text2 = $<span class="stringliteral">&quot;{counter.bytesReceived}&quot;</span>;</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  147</span>        pos.X += 70f;</div>
+<div class="line"><span class="lineno">  148</span>        text2 = text;</div>
+<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  150</span>        pos.X += 30f;</div>
+<div class="line"><span class="lineno">  151</span>        text2 = <span class="stringliteral">&quot;tx:&quot;</span> + $<span class="stringliteral">&quot;{counter.timesSent}&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  153</span>        pos.X += 70f;</div>
+<div class="line"><span class="lineno">  154</span>        text2 = $<span class="stringliteral">&quot;{counter.bytesSent}&quot;</span>;</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">DrawText</a>(spriteBatch, text2, pos, color);</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_a366175fee3f692bf4e2d087f71f54d49_html_a366175fee3f692bf4e2d087f71f54d49"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a366175fee3f692bf4e2d087f71f54d49.html#a366175fee3f692bf4e2d087f71f54d49">Terraria.UI.NetDiagnosticsUI._highestFoundReadCount</a></div><div class="ttdeci">int _highestFoundReadCount</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:51</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9_html_ad8d7243ec5fe4bae6c122cfd977d78f9"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">Terraria.UI.NetDiagnosticsUI.DrawText</a></div><div class="ttdeci">void DrawText(SpriteBatch spriteBatch, string text, Vector2 pos, Color color)</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:158</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356_html_afc0076445c018c095c0b70bb8eb8a356"><div class="ttname"><a href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356.html#afc0076445c018c095c0b70bb8eb8a356">Terraria.UI.NetDiagnosticsUI._highestFoundReadBytes</a></div><div class="ttdeci">int _highestFoundReadBytes</div><div class="ttdef"><b>Definition</b> NetDiagnosticsUI.cs:49</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_afc0076445c018c095c0b70bb8eb8a356.html#afc0076445c018c095c0b70bb8eb8a356">Terraria.UI.NetDiagnosticsUI._highestFoundReadBytes</a>, <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_a366175fee3f692bf4e2d087f71f54d49.html#a366175fee3f692bf4e2d087f71f54d49">Terraria.UI.NetDiagnosticsUI._highestFoundReadCount</a>, <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_ad8d7243ec5fe4bae6c122cfd977d78f9.html#ad8d7243ec5fe4bae6c122cfd977d78f9">Terraria.UI.NetDiagnosticsUI.DrawText()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a1220a41f9e87f7faa7e5076f088b9167.html#a1220a41f9e87f7faa7e5076f088b9167">Terraria.Utils.Remap()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/dbc/classTerraria_1_1UI_1_1NetDiagnosticsUI_aa34c084c78878003dd6f5576a8c8e3d8.html#aa34c084c78878003dd6f5576a8c8e3d8">Terraria.UI.NetDiagnosticsUI.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

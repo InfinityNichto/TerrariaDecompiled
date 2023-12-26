@@ -141,6 +141,81 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_abd3986b94ba63867476f6b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">22652</span>    {</div>
+<div class="line"><span class="lineno">22653</span>        exitNormalX = (exitNormalY = 0);</div>
+<div class="line"><span class="lineno">22654</span>        Vector2 vector = <span class="keyword">new</span> Vector2(x * 16, y * 16);</div>
+<div class="line"><span class="lineno">22655</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(vector.X + 16f, vector.Y);</div>
+<div class="line"><span class="lineno">22656</span>        Vector2 vector3 = <span class="keyword">new</span> Vector2(vector.X, vector.Y + 16f);</div>
+<div class="line"><span class="lineno">22657</span>        Vector2 vector4 = <span class="keyword">new</span> Vector2(vector.X + 16f, vector.Y + 16f);</div>
+<div class="line"><span class="lineno">22658</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">22659</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">22660</span>        <span class="keywordflow">switch</span> (tile.blockType())</div>
+<div class="line"><span class="lineno">22661</span>        {</div>
+<div class="line"><span class="lineno">22662</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">22663</span>            vector.Y += 8f;</div>
+<div class="line"><span class="lineno">22664</span>            vector2.Y += 8f;</div>
+<div class="line"><span class="lineno">22665</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">22666</span>        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">22667</span>            vector.Y += 16f;</div>
+<div class="line"><span class="lineno">22668</span>            num = -1;</div>
+<div class="line"><span class="lineno">22669</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">22670</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">22671</span>            vector2.Y += 16f;</div>
+<div class="line"><span class="lineno">22672</span>            num = 1;</div>
+<div class="line"><span class="lineno">22673</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">22674</span>        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">22675</span>            vector3.Y -= 16f;</div>
+<div class="line"><span class="lineno">22676</span>            num2 = -1;</div>
+<div class="line"><span class="lineno">22677</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">22678</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">22679</span>            vector4.Y -= 16f;</div>
+<div class="line"><span class="lineno">22680</span>            num2 = 1;</div>
+<div class="line"><span class="lineno">22681</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">22682</span>        }</div>
+<div class="line"><span class="lineno">22683</span>        Vector2 vector5 = <span class="keyword">new</span> Vector2(0.0001f);</div>
+<div class="line"><span class="lineno">22684</span>        _ = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a> - vector5;</div>
+<div class="line"><span class="lineno">22685</span>        _ = base.Size + vector5 * 2f;</div>
+<div class="line"><span class="lineno">22686</span>        Rectangle hitbox = base.Hitbox;</div>
+<div class="line"><span class="lineno">22687</span>        surfaceCenter = Vector2.Lerp(vector, vector2, 0.5f);</div>
+<div class="line"><span class="lineno">22688</span>        <span class="keywordtype">float</span> num3 = 4f;</div>
+<div class="line"><span class="lineno">22689</span>        <span class="keywordflow">if</span> (hitbox.Distance(surfaceCenter) &lt;= num3)</div>
+<div class="line"><span class="lineno">22690</span>        {</div>
+<div class="line"><span class="lineno">22691</span>            exitNormalX = num;</div>
+<div class="line"><span class="lineno">22692</span>            exitNormalY = -1;</div>
+<div class="line"><span class="lineno">22693</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">22694</span>        }</div>
+<div class="line"><span class="lineno">22695</span>        surfaceCenter = Vector2.Lerp(vector3, vector4, 0.5f);</div>
+<div class="line"><span class="lineno">22696</span>        <span class="keywordflow">if</span> (hitbox.Distance(surfaceCenter) &lt;= num3)</div>
+<div class="line"><span class="lineno">22697</span>        {</div>
+<div class="line"><span class="lineno">22698</span>            exitNormalX = num2;</div>
+<div class="line"><span class="lineno">22699</span>            exitNormalY = 1;</div>
+<div class="line"><span class="lineno">22700</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">22701</span>        }</div>
+<div class="line"><span class="lineno">22702</span>        <span class="keywordflow">if</span> (vector != vector3)</div>
+<div class="line"><span class="lineno">22703</span>        {</div>
+<div class="line"><span class="lineno">22704</span>            surfaceCenter = Vector2.Lerp(vector, vector3, 0.5f);</div>
+<div class="line"><span class="lineno">22705</span>            <span class="keywordflow">if</span> (hitbox.Distance(surfaceCenter) &lt;= num3)</div>
+<div class="line"><span class="lineno">22706</span>            {</div>
+<div class="line"><span class="lineno">22707</span>                exitNormalX = -1;</div>
+<div class="line"><span class="lineno">22708</span>                exitNormalY = 0;</div>
+<div class="line"><span class="lineno">22709</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">22710</span>            }</div>
+<div class="line"><span class="lineno">22711</span>        }</div>
+<div class="line"><span class="lineno">22712</span>        <span class="keywordflow">if</span> (vector2 != vector4)</div>
+<div class="line"><span class="lineno">22713</span>        {</div>
+<div class="line"><span class="lineno">22714</span>            surfaceCenter = Vector2.Lerp(vector2, vector4, 0.5f);</div>
+<div class="line"><span class="lineno">22715</span>            <span class="keywordflow">if</span> (hitbox.Distance(surfaceCenter) &lt;= num3)</div>
+<div class="line"><span class="lineno">22716</span>            {</div>
+<div class="line"><span class="lineno">22717</span>                exitNormalX = 1;</div>
+<div class="line"><span class="lineno">22718</span>                exitNormalY = 0;</div>
+<div class="line"><span class="lineno">22719</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">22720</span>            }</div>
+<div class="line"><span class="lineno">22721</span>        }</div>
+<div class="line"><span class="lineno">22722</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">22723</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab70b6707bdcec72a6b5e63ac7a9515eb.html#ab70b6707bdcec72a6b5e63ac7a9515eb">Terraria.Tile.blockType()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

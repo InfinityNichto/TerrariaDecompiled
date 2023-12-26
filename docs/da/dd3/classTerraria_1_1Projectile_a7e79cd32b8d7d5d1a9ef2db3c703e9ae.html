@@ -117,6 +117,48 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a7e79cd32b8d7d5d1a9
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">42501</span>    {</div>
+<div class="line"><span class="lineno">42502</span>        Vector2 center = base.Center;</div>
+<div class="line"><span class="lineno">42503</span>        <span class="keywordtype">float</span> speedY = -2f;</div>
+<div class="line"><span class="lineno">42504</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">42505</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">42506</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] == 0f)</div>
+<div class="line"><span class="lineno">42507</span>        {</div>
+<div class="line"><span class="lineno">42508</span>            num = 6;</div>
+<div class="line"><span class="lineno">42509</span>            num2 = 1;</div>
+<div class="line"><span class="lineno">42510</span>        }</div>
+<div class="line"><span class="lineno">42511</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">42512</span>        {</div>
+<div class="line"><span class="lineno">42513</span>            <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &lt;= 10f))</div>
+<div class="line"><span class="lineno">42514</span>            {</div>
+<div class="line"><span class="lineno">42515</span>                <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Kill</a>();</div>
+<div class="line"><span class="lineno">42516</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">42517</span>            }</div>
+<div class="line"><span class="lineno">42518</span>            <span class="keywordflow">if</span> (Main.rand.Next(5) == 0)</div>
+<div class="line"><span class="lineno">42519</span>            {</div>
+<div class="line"><span class="lineno">42520</span>                num2 = 1;</div>
+<div class="line"><span class="lineno">42521</span>            }</div>
+<div class="line"><span class="lineno">42522</span>            num = 2;</div>
+<div class="line"><span class="lineno">42523</span>        }</div>
+<div class="line"><span class="lineno">42524</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] += 1f;</div>
+<div class="line"><span class="lineno">42525</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">42526</span>        {</div>
+<div class="line"><span class="lineno">42527</span>            Dust dust = Dust.NewDustDirect(center, 3, 6, 216, 0f, speedY);</div>
+<div class="line"><span class="lineno">42528</span>            dust.velocity.X *= 0.5f;</div>
+<div class="line"><span class="lineno">42529</span>            dust.velocity.Y = 0f - Math.Abs(dust.velocity.Y);</div>
+<div class="line"><span class="lineno">42530</span>            dust.position -= dust.velocity;</div>
+<div class="line"><span class="lineno">42531</span>            dust.scale = 0.8f;</div>
+<div class="line"><span class="lineno">42532</span>        }</div>
+<div class="line"><span class="lineno">42533</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num2; j++)</div>
+<div class="line"><span class="lineno">42534</span>        {</div>
+<div class="line"><span class="lineno">42535</span>            Gore gore = Gore.NewGoreDirect(center, Vector2.UnitY * -3f + Main.rand.NextVector2Circular(1f, 1f), Main.rand.Next(580, 583));</div>
+<div class="line"><span class="lineno">42536</span>            gore.velocity.Y = 0f - Math.Abs(gore.velocity.Y);</div>
+<div class="line"><span class="lineno">42537</span>        }</div>
+<div class="line"><span class="lineno">42538</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861_html_ad720c809bf9147dbd21e7fa78f88d861"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> Projectile.cs:59438</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de5/classTerraria_1_1Dust_acb51111c9d1ff81d2e7f55da6ff8831f.html#acb51111c9d1ff81d2e7f55da6ff8831f">Terraria.Dust.NewDustDirect()</a>, <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a6f50d9725660d35b1ff1d942ebb75ce3.html#a6f50d9725660d35b1ff1d942ebb75ce3">Terraria.Gore.NewGoreDirect()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../dc/de5/classTerraria_1_1Dust_aed5c553a5864298010d0dfd099cd3f6d.html#aed5c553a5864298010d0dfd099cd3f6d">Terraria.Dust.velocity</a>, and <a class="el" href="../../d1/ddf/classTerraria_1_1Gore_a13d25f1e469cede1897f9f77cb3ffd13.html#a13d25f1e469cede1897f9f77cb3ffd13">Terraria.Gore.velocity</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

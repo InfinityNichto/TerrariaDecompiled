@@ -126,6 +126,93 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_aee05d117bf1cbe
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2459</span>    {</div>
+<div class="line"><span class="lineno"> 2460</span>        <span class="keywordflow">if</span> (context == 6 &amp;&amp; Main.hoverItemName == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno"> 2461</span>        {</div>
+<div class="line"><span class="lineno"> 2462</span>            Main.hoverItemName = Lang.inter[3].Value;</div>
+<div class="line"><span class="lineno"> 2463</span>        }</div>
+<div class="line"><span class="lineno"> 2464</span>        <span class="keywordflow">if</span> (inv[slot].type &gt; 0 &amp;&amp; inv[slot].stack &gt; 0)</div>
+<div class="line"><span class="lineno"> 2465</span>        {</div>
+<div class="line"><span class="lineno"> 2466</span>            <a class="code hl_variable" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_abaa5a811ca484cedad3b729ca1d3cb09.html#abaa5a811ca484cedad3b729ca1d3cb09">_customCurrencyForSavings</a> = inv[slot].shopSpecialCurrency;</div>
+<div class="line"><span class="lineno"> 2467</span>            Main.hoverItemName = inv[slot].Name;</div>
+<div class="line"><span class="lineno"> 2468</span>            <span class="keywordflow">if</span> (inv[slot].stack &gt; 1)</div>
+<div class="line"><span class="lineno"> 2469</span>            {</div>
+<div class="line"><span class="lineno"> 2470</span>                Main.hoverItemName = Main.hoverItemName + <span class="stringliteral">&quot; (&quot;</span> + inv[slot].stack + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2471</span>            }</div>
+<div class="line"><span class="lineno"> 2472</span>            Main.HoverItem = inv[slot].Clone();</div>
+<div class="line"><span class="lineno"> 2473</span>            Main.HoverItem.tooltipContext = context;</div>
+<div class="line"><span class="lineno"> 2474</span>            <span class="keywordflow">if</span> (context == 8 &amp;&amp; slot &lt;= 2)</div>
+<div class="line"><span class="lineno"> 2475</span>            {</div>
+<div class="line"><span class="lineno"> 2476</span>                Main.HoverItem.wornArmor = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2477</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2478</span>            }</div>
+<div class="line"><span class="lineno"> 2479</span>            <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno"> 2480</span>            {</div>
+<div class="line"><span class="lineno"> 2481</span>            <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 2482</span>            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 2483</span>                Main.HoverItem.social = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2484</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2485</span>            <span class="keywordflow">case</span> 15:</div>
+<div class="line"><span class="lineno"> 2486</span>                Main.HoverItem.buy = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2487</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2488</span>            }</div>
+<div class="line"><span class="lineno"> 2489</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2490</span>        }</div>
+<div class="line"><span class="lineno"> 2491</span>        <span class="keywordflow">if</span> (context == 10 || context == 11 || context == 24)</div>
+<div class="line"><span class="lineno"> 2492</span>        {</div>
+<div class="line"><span class="lineno"> 2493</span>            Main.hoverItemName = Lang.inter[9].Value;</div>
+<div class="line"><span class="lineno"> 2494</span>        }</div>
+<div class="line"><span class="lineno"> 2495</span>        <span class="keywordflow">if</span> (context == 11)</div>
+<div class="line"><span class="lineno"> 2496</span>        {</div>
+<div class="line"><span class="lineno"> 2497</span>            Main.hoverItemName = Lang.inter[11].Value + <span class="stringliteral">&quot; &quot;</span> + Main.hoverItemName;</div>
+<div class="line"><span class="lineno"> 2498</span>        }</div>
+<div class="line"><span class="lineno"> 2499</span>        <span class="keywordflow">if</span> (context == 8 || context == 9 || context == 23 || context == 26)</div>
+<div class="line"><span class="lineno"> 2500</span>        {</div>
+<div class="line"><span class="lineno"> 2501</span>            <span class="keywordflow">if</span> (slot == 0 || slot == 10 || context == 26)</div>
+<div class="line"><span class="lineno"> 2502</span>            {</div>
+<div class="line"><span class="lineno"> 2503</span>                Main.hoverItemName = Lang.inter[12].Value;</div>
+<div class="line"><span class="lineno"> 2504</span>            }</div>
+<div class="line"><span class="lineno"> 2505</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slot == 1 || slot == 11)</div>
+<div class="line"><span class="lineno"> 2506</span>            {</div>
+<div class="line"><span class="lineno"> 2507</span>                Main.hoverItemName = Lang.inter[13].Value;</div>
+<div class="line"><span class="lineno"> 2508</span>            }</div>
+<div class="line"><span class="lineno"> 2509</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slot == 2 || slot == 12)</div>
+<div class="line"><span class="lineno"> 2510</span>            {</div>
+<div class="line"><span class="lineno"> 2511</span>                Main.hoverItemName = Lang.inter[14].Value;</div>
+<div class="line"><span class="lineno"> 2512</span>            }</div>
+<div class="line"><span class="lineno"> 2513</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slot &gt;= 10)</div>
+<div class="line"><span class="lineno"> 2514</span>            {</div>
+<div class="line"><span class="lineno"> 2515</span>                Main.hoverItemName = Lang.inter[11].Value + <span class="stringliteral">&quot; &quot;</span> + Main.hoverItemName;</div>
+<div class="line"><span class="lineno"> 2516</span>            }</div>
+<div class="line"><span class="lineno"> 2517</span>        }</div>
+<div class="line"><span class="lineno"> 2518</span>        <span class="keywordflow">if</span> (context == 12 || context == 25 || context == 27 || context == 33)</div>
+<div class="line"><span class="lineno"> 2519</span>        {</div>
+<div class="line"><span class="lineno"> 2520</span>            Main.hoverItemName = Lang.inter[57].Value;</div>
+<div class="line"><span class="lineno"> 2521</span>        }</div>
+<div class="line"><span class="lineno"> 2522</span>        <span class="keywordflow">if</span> (context == 16)</div>
+<div class="line"><span class="lineno"> 2523</span>        {</div>
+<div class="line"><span class="lineno"> 2524</span>            Main.hoverItemName = Lang.inter[90].Value;</div>
+<div class="line"><span class="lineno"> 2525</span>        }</div>
+<div class="line"><span class="lineno"> 2526</span>        <span class="keywordflow">if</span> (context == 17)</div>
+<div class="line"><span class="lineno"> 2527</span>        {</div>
+<div class="line"><span class="lineno"> 2528</span>            Main.hoverItemName = Lang.inter[91].Value;</div>
+<div class="line"><span class="lineno"> 2529</span>        }</div>
+<div class="line"><span class="lineno"> 2530</span>        <span class="keywordflow">if</span> (context == 19)</div>
+<div class="line"><span class="lineno"> 2531</span>        {</div>
+<div class="line"><span class="lineno"> 2532</span>            Main.hoverItemName = Lang.inter[92].Value;</div>
+<div class="line"><span class="lineno"> 2533</span>        }</div>
+<div class="line"><span class="lineno"> 2534</span>        <span class="keywordflow">if</span> (context == 18)</div>
+<div class="line"><span class="lineno"> 2535</span>        {</div>
+<div class="line"><span class="lineno"> 2536</span>            Main.hoverItemName = Lang.inter[93].Value;</div>
+<div class="line"><span class="lineno"> 2537</span>        }</div>
+<div class="line"><span class="lineno"> 2538</span>        <span class="keywordflow">if</span> (context == 20)</div>
+<div class="line"><span class="lineno"> 2539</span>        {</div>
+<div class="line"><span class="lineno"> 2540</span>            Main.hoverItemName = Lang.inter[94].Value;</div>
+<div class="line"><span class="lineno"> 2541</span>        }</div>
+<div class="line"><span class="lineno"> 2542</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1ItemSlot_abaa5a811ca484cedad3b729ca1d3cb09_html_abaa5a811ca484cedad3b729ca1d3cb09"><div class="ttname"><a href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_abaa5a811ca484cedad3b729ca1d3cb09.html#abaa5a811ca484cedad3b729ca1d3cb09">Terraria.UI.ItemSlot._customCurrencyForSavings</a></div><div class="ttdeci">static int _customCurrencyForSavings</div><div class="ttdef"><b>Definition</b> ItemSlot.cs:145</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_abaa5a811ca484cedad3b729ca1d3cb09.html#abaa5a811ca484cedad3b729ca1d3cb09">Terraria.UI.ItemSlot._customCurrencyForSavings</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a081e14dafe216c14bf115f75a341431b.html#a081e14dafe216c14bf115f75a341431b">Terraria.Item.Clone()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aba1f780123067edb7123848b32ccd41d.html#aba1f780123067edb7123848b32ccd41d">Terraria.Main.hoverItemName</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a086bb5957290e175946e3d8b9cbd4563.html#a086bb5957290e175946e3d8b9cbd4563">Terraria.Lang.inter</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a8de3690c18ae5a96c70495d8d7976f41.html#a8de3690c18ae5a96c70495d8d7976f41">Terraria.Item.Name</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6c96916cc11ee0c75bab467c0b229222.html#a6c96916cc11ee0c75bab467c0b229222">Terraria.Item.shopSpecialCurrency</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

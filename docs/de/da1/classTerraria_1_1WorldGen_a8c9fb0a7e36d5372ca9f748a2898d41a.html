@@ -117,6 +117,39 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a8c9fb0a7e36d5372ca9f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">70653</span>    {</div>
+<div class="line"><span class="lineno">70654</span>        Stopwatch stopwatch = <span class="keyword">new</span> Stopwatch();</div>
+<div class="line"><span class="lineno">70655</span>        stopwatch.Start();</div>
+<div class="line"><span class="lineno">70656</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a3196967921030c4e0f40122feb332505.html#a3196967921030c4e0f40122feb332505">noLiquidCheck</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">70657</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a91d16b4fc3d6ff51771b068633e06b13.html#a91d16b4fc3d6ff51771b068633e06b13">noTileActions</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">70658</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Main.maxTilesX; i++)</div>
+<div class="line"><span class="lineno">70659</span>        {</div>
+<div class="line"><span class="lineno">70660</span>            <span class="keywordtype">float</span> num = (float)i / (<span class="keywordtype">float</span>)Main.maxTilesX;</div>
+<div class="line"><span class="lineno">70661</span>            Main.statusText = Lang.gen[55].Value + <span class="stringliteral">&quot; &quot;</span> + (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(num * 100f + 1f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">70662</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; Main.maxTilesY; j++)</div>
+<div class="line"><span class="lineno">70663</span>            {</div>
+<div class="line"><span class="lineno">70664</span>                <span class="keywordflow">if</span> (Main.tile[i, j].active())</div>
+<div class="line"><span class="lineno">70665</span>                {</div>
+<div class="line"><span class="lineno">70666</span>                    <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">TileFrame</a>(i, j, resetFrame: true);</div>
+<div class="line"><span class="lineno">70667</span>                }</div>
+<div class="line"><span class="lineno">70668</span>                <span class="keywordflow">if</span> (Main.tile[i, j].wall &gt; 0)</div>
+<div class="line"><span class="lineno">70669</span>                {</div>
+<div class="line"><span class="lineno">70670</span>                    Framing.WallFrame(i, j, resetFrame: true);</div>
+<div class="line"><span class="lineno">70671</span>                }</div>
+<div class="line"><span class="lineno">70672</span>            }</div>
+<div class="line"><span class="lineno">70673</span>        }</div>
+<div class="line"><span class="lineno">70674</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a3196967921030c4e0f40122feb332505.html#a3196967921030c4e0f40122feb332505">noLiquidCheck</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">70675</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a91d16b4fc3d6ff51771b068633e06b13.html#a91d16b4fc3d6ff51771b068633e06b13">noTileActions</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">70676</span>        _ = stopwatch.ElapsedMilliseconds;</div>
+<div class="line"><span class="lineno">70677</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a3196967921030c4e0f40122feb332505_html_a3196967921030c4e0f40122feb332505"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a3196967921030c4e0f40122feb332505.html#a3196967921030c4e0f40122feb332505">Terraria.WorldGen.noLiquidCheck</a></div><div class="ttdeci">static bool noLiquidCheck</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1006</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b_html_a8ed63c06b5939701ff73c08394ab8e7b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a8ed63c06b5939701ff73c08394ab8e7b.html#a8ed63c06b5939701ff73c08394ab8e7b">Terraria.WorldGen.TileFrame</a></div><div class="ttdeci">static void TileFrame(int i, int j, bool resetFrame=false, bool noBreak=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:71431</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a91d16b4fc3d6ff51771b068633e06b13_html_a91d16b4fc3d6ff51771b068633e06b13"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a91d16b4fc3d6ff51771b068633e06b13.html#a91d16b4fc3d6ff51771b068633e06b13">Terraria.WorldGen.noTileActions</a></div><div class="ttdeci">static bool noTileActions</div><div class="ttdef"><b>Definition</b> WorldGen.cs:966</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a095af09f0f067b0f6a2ea31f11e967a5.html#a095af09f0f067b0f6a2ea31f11e967a5">Terraria.Lang.gen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, and <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_a7bdcbc2599515f563f066744eed76ee6.html#a7bdcbc2599515f563f066744eed76ee6">Terraria.Framing.WallFrame()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8428815a84cf887c2adf13c19aad4caf.html#a8428815a84cf887c2adf13c19aad4caf">Terraria.Main.Initialize_AlmostEverything()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -117,6 +117,46 @@ $(function(){initNavTree('d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1Tile
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 7476</span>    {</div>
+<div class="line"><span class="lineno"> 7477</span>        <span class="keywordtype">int</span> num = 11;</div>
+<div class="line"><span class="lineno"> 7478</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">_specialsCount</a>[num];</div>
+<div class="line"><span class="lineno"> 7479</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno"> 7480</span>        {</div>
+<div class="line"><span class="lineno"> 7481</span>            Point p = <a class="code hl_variable" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">_specialPositions</a>[num][i];</div>
+<div class="line"><span class="lineno"> 7482</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[p.X, p.Y];</div>
+<div class="line"><span class="lineno"> 7483</span>            <span class="keywordflow">if</span> (tile != <span class="keyword">null</span> &amp;&amp; tile.active())</div>
+<div class="line"><span class="lineno"> 7484</span>            {</div>
+<div class="line"><span class="lineno"> 7485</span>                Texture2D value = TextureAssets.Extra[198].Value;</div>
+<div class="line"><span class="lineno"> 7486</span>                <span class="keywordtype">int</span> frameY = tile.frameX / 54;</div>
+<div class="line"><span class="lineno"> 7487</span>                <span class="keywordtype">bool</span> num3 = tile.frameY / 72 != 0;</div>
+<div class="line"><span class="lineno"> 7488</span>                <span class="keywordtype">int</span> horizontalFrames = 1;</div>
+<div class="line"><span class="lineno"> 7489</span>                <span class="keywordtype">int</span> verticalFrames = 28;</div>
+<div class="line"><span class="lineno"> 7490</span>                Rectangle rectangle = value.Frame(horizontalFrames, verticalFrames, 0, frameY);</div>
+<div class="line"><span class="lineno"> 7491</span>                Vector2 origin = rectangle.Size() / 2f;</div>
+<div class="line"><span class="lineno"> 7492</span>                Vector2 vector = p.ToWorldCoordinates(24f, 64f);</div>
+<div class="line"><span class="lineno"> 7493</span>                <span class="keywordtype">float</span> num4 = (float)Math.Sin(Main.GlobalTimeWrappedHourly * ((<span class="keywordtype">float</span>)Math.PI * 2f) / 5f);</div>
+<div class="line"><span class="lineno"> 7494</span>                Vector2 vector2 = vector + <span class="keyword">new</span> Vector2(0f, -40f) + <span class="keyword">new</span> Vector2(0f, num4 * 4f);</div>
+<div class="line"><span class="lineno"> 7495</span>                Color color = Lighting.GetColor(p.X, p.Y);</div>
+<div class="line"><span class="lineno"> 7496</span>                SpriteEffects effects = (num3 ? SpriteEffects.FlipHorizontally : SpriteEffects.None);</div>
+<div class="line"><span class="lineno"> 7497</span>                Main.spriteBatch.Draw(value, vector2 - Main.screenPosition, rectangle, color, 0f, origin, 1f, effects, 0f);</div>
+<div class="line"><span class="lineno"> 7498</span>                <span class="keywordtype">float</span> num5 = (float)Math.Sin(Main.GlobalTimeWrappedHourly * ((<span class="keywordtype">float</span>)Math.PI * 2f) / 2f) * 0.3f + 0.7f;</div>
+<div class="line"><span class="lineno"> 7499</span>                Color color2 = color;</div>
+<div class="line"><span class="lineno"> 7500</span>                color2.A = 0;</div>
+<div class="line"><span class="lineno"> 7501</span>                color2 = color2 * 0.1f * num5;</div>
+<div class="line"><span class="lineno"> 7502</span>                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> num6 = 0f; num6 &lt; 1f; num6 += 1f / 6f)</div>
+<div class="line"><span class="lineno"> 7503</span>                {</div>
+<div class="line"><span class="lineno"> 7504</span>                    Main.spriteBatch.Draw(value, vector2 - Main.screenPosition + ((<span class="keywordtype">float</span>)Math.PI * 2f * num6).ToRotationVector2() * (6f + num4 * 2f), rectangle, color2, 0f, origin, 1f, effects, 0f);</div>
+<div class="line"><span class="lineno"> 7505</span>                }</div>
+<div class="line"><span class="lineno"> 7506</span>            }</div>
+<div class="line"><span class="lineno"> 7507</span>        }</div>
+<div class="line"><span class="lineno"> 7508</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef_html_ab517a179b7049e7b28b3e60f492954ef"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">Terraria.GameContent.Drawing.TileDrawing._specialPositions</a></div><div class="ttdeci">Point[][] _specialPositions</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:75</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf_html_af219d870ab59557f15af1fc3081ccbdf"><div class="ttname"><a href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">Terraria.GameContent.Drawing.TileDrawing._specialsCount</a></div><div class="ttdeci">int[] _specialsCount</div><div class="ttdef"><b>Definition</b> TileDrawing.cs:73</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab517a179b7049e7b28b3e60f492954ef.html#ab517a179b7049e7b28b3e60f492954ef">Terraria.GameContent.Drawing.TileDrawing._specialPositions</a>, <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_af219d870ab59557f15af1fc3081ccbdf.html#af219d870ab59557f15af1fc3081ccbdf">Terraria.GameContent.Drawing.TileDrawing._specialsCount</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d1/d17/classTerraria_1_1GameContent_1_1TextureAssets_a93f5f4e2fc9f35d60f57b2ff928a4f1f.html#a93f5f4e2fc9f35d60f57b2ff928a4f1f">Terraria.GameContent.TextureAssets.Extra</a>, <a class="el" href="../../d0/d12/classTerraria_1_1Lighting_a2c2fd9311b2452f5117063553f320a85.html#a2c2fd9311b2452f5117063553f320a85">Terraria.Lighting.GetColor()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af83196cd3257dbb8b510980bbcff03dc.html#af83196cd3257dbb8b510980bbcff03dc">Terraria.Main.GlobalTimeWrappedHourly</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d6f09a4da6c2e14d081814d33975189.html#a6d6f09a4da6c2e14d081814d33975189">Terraria.Main.screenPosition</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a38548a3abd5efb339f211c40946a1060.html#a38548a3abd5efb339f211c40946a1060">Terraria.Main.spriteBatch</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_a195bc3275a5fbd6fe52452a5a2251e49.html#a195bc3275a5fbd6fe52452a5a2251e49">Terraria.GameContent.Drawing.TileDrawing.PostDrawTiles()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

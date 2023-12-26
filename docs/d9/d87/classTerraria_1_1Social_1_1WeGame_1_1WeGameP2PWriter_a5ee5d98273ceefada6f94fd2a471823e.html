@@ -126,6 +126,39 @@ $(function(){initNavTree('d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PW
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        lock (<a class="code hl_variable" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a848af9abfc79a8d49dd041e525d95d1e.html#a848af9abfc79a8d49dd041e525d95d1e">_lock</a>)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            Queue&lt;WriteInformation&gt; queue2 = (<a class="code hl_variable" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6.html#a27ec0fe4b33a147087876f3be327c6d6">_pendingSendData</a>.ContainsKey(user) ? <a class="code hl_variable" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6.html#a27ec0fe4b33a147087876f3be327c6d6">_pendingSendData</a>[user] : (<a class="code hl_variable" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6.html#a27ec0fe4b33a147087876f3be327c6d6">_pendingSendData</a>[user] = <span class="keyword">new</span> Queue&lt;WriteInformation&gt;()));</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">int</span> num = length;</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">while</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                WriteInformation writeInformation;</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (queue2.Count == 0 || 1024 - queue2.Peek().Size == 0)</div>
+<div class="line"><span class="lineno">   51</span>                {</div>
+<div class="line"><span class="lineno">   52</span>                    writeInformation = ((_bufferPool.Count &lt;= 0) ? <span class="keyword">new</span> WriteInformation() : <span class="keyword">new</span> WriteInformation(<a class="code hl_variable" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a739c56db966d22373d3c88b202687b60.html#a739c56db966d22373d3c88b202687b60">_bufferPool</a>.Dequeue()));</div>
+<div class="line"><span class="lineno">   53</span>                    queue2.Enqueue(writeInformation);</div>
+<div class="line"><span class="lineno">   54</span>                }</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    writeInformation = queue2.Peek();</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordtype">int</span> num3 = Math.Min(num, 1024 - writeInformation.Size);</div>
+<div class="line"><span class="lineno">   60</span>                Array.Copy(data, num2, writeInformation.Data, writeInformation.Size, num3);</div>
+<div class="line"><span class="lineno">   61</span>                writeInformation.Size += num3;</div>
+<div class="line"><span class="lineno">   62</span>                num -= num3;</div>
+<div class="line"><span class="lineno">   63</span>                num2 += num3;</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6_html_a27ec0fe4b33a147087876f3be327c6d6"><div class="ttname"><a href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6.html#a27ec0fe4b33a147087876f3be327c6d6">Terraria.Social.WeGame.WeGameP2PWriter._pendingSendData</a></div><div class="ttdeci">Dictionary&lt; RailID, Queue&lt; WriteInformation &gt; &gt; _pendingSendData</div><div class="ttdef"><b>Definition</b> WeGameP2PWriter.cs:32</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a739c56db966d22373d3c88b202687b60_html_a739c56db966d22373d3c88b202687b60"><div class="ttname"><a href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a739c56db966d22373d3c88b202687b60.html#a739c56db966d22373d3c88b202687b60">Terraria.Social.WeGame.WeGameP2PWriter._bufferPool</a></div><div class="ttdeci">Queue&lt; byte[]&gt; _bufferPool</div><div class="ttdef"><b>Definition</b> WeGameP2PWriter.cs:36</div></div>
+<div class="ttc" id="aclassTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a848af9abfc79a8d49dd041e525d95d1e_html_a848af9abfc79a8d49dd041e525d95d1e"><div class="ttname"><a href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a848af9abfc79a8d49dd041e525d95d1e.html#a848af9abfc79a8d49dd041e525d95d1e">Terraria.Social.WeGame.WeGameP2PWriter._lock</a></div><div class="ttdeci">object _lock</div><div class="ttdef"><b>Definition</b> WeGameP2PWriter.cs:38</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a739c56db966d22373d3c88b202687b60.html#a739c56db966d22373d3c88b202687b60">Terraria.Social.WeGame.WeGameP2PWriter._bufferPool</a>, <a class="el" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a848af9abfc79a8d49dd041e525d95d1e.html#a848af9abfc79a8d49dd041e525d95d1e">Terraria.Social.WeGame.WeGameP2PWriter._lock</a>, <a class="el" href="../../d9/d87/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_a27ec0fe4b33a147087876f3be327c6d6.html#a27ec0fe4b33a147087876f3be327c6d6">Terraria.Social.WeGame.WeGameP2PWriter._pendingSendData</a>, <a class="el" href="../../d5/d79/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_1_1WriteInformation_ae5ca5d54390e27e33001d808bc2dd3e7.html#ae5ca5d54390e27e33001d808bc2dd3e7">Terraria.Social.WeGame.WeGameP2PWriter.WriteInformation.Data</a>, and <a class="el" href="../../d5/d79/classTerraria_1_1Social_1_1WeGame_1_1WeGameP2PWriter_1_1WriteInformation_a37bb2fa048c9d0ca4402ba2f3d33c49b.html#a37bb2fa048c9d0ca4402ba2f3d33c49b">Terraria.Social.WeGame.WeGameP2PWriter.WriteInformation.Size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d78/classTerraria_1_1Social_1_1WeGame_1_1NetSocialModule_abe1be23bc4e762f5225d6beeba393208.html#abe1be23bc4e762f5225d6beeba393208">Terraria.Social.WeGame.NetSocialModule.Send()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

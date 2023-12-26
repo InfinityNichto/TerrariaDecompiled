@@ -117,6 +117,571 @@ $(function(){initNavTree('d7/d54/classTerraria_1_1IO_1_1WorldFile_acc4461017fa1c
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 3245</span>    {</div>
+<div class="line"><span class="lineno"> 3246</span>        Main.WorldFileMetadata = FileMetadata.FromCurrentSettings(FileType.World);</div>
+<div class="line"><span class="lineno"> 3247</span>        <span class="keywordtype">int</span> versionNumber = <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ad83cf83a1364650e5aec043988e4585f.html#ad83cf83a1364650e5aec043988e4585f">_versionNumber</a>;</div>
+<div class="line"><span class="lineno"> 3248</span>        <span class="keywordflow">if</span> (versionNumber &gt; 279)</div>
+<div class="line"><span class="lineno"> 3249</span>        {</div>
+<div class="line"><span class="lineno"> 3250</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno"> 3251</span>        }</div>
+<div class="line"><span class="lineno"> 3252</span>        Main.worldName = fileIO.ReadString();</div>
+<div class="line"><span class="lineno"> 3253</span>        Main.worldID = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3254</span>        Main.leftWorld = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3255</span>        Main.rightWorld = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3256</span>        Main.topWorld = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3257</span>        Main.bottomWorld = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3258</span>        Main.maxTilesY = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3259</span>        Main.maxTilesX = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3260</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 112)</div>
+<div class="line"><span class="lineno"> 3261</span>        {</div>
+<div class="line"><span class="lineno"> 3262</span>            Main.GameMode = (fileIO.ReadBoolean() ? 1 : 0);</div>
+<div class="line"><span class="lineno"> 3263</span>        }</div>
+<div class="line"><span class="lineno"> 3264</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3265</span>        {</div>
+<div class="line"><span class="lineno"> 3266</span>            Main.GameMode = 0;</div>
+<div class="line"><span class="lineno"> 3267</span>        }</div>
+<div class="line"><span class="lineno"> 3268</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 63)</div>
+<div class="line"><span class="lineno"> 3269</span>        {</div>
+<div class="line"><span class="lineno"> 3270</span>            Main.moonType = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3271</span>        }</div>
+<div class="line"><span class="lineno"> 3272</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3273</span>        {</div>
+<div class="line"><span class="lineno"> 3274</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.RandomizeMoonState(<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand);</div>
+<div class="line"><span class="lineno"> 3275</span>        }</div>
+<div class="line"><span class="lineno"> 3276</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.clearWorld();</div>
+<div class="line"><span class="lineno"> 3277</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 44)</div>
+<div class="line"><span class="lineno"> 3278</span>        {</div>
+<div class="line"><span class="lineno"> 3279</span>            Main.treeX[0] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3280</span>            Main.treeX[1] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3281</span>            Main.treeX[2] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3282</span>            Main.treeStyle[0] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3283</span>            Main.treeStyle[1] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3284</span>            Main.treeStyle[2] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3285</span>            Main.treeStyle[3] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3286</span>        }</div>
+<div class="line"><span class="lineno"> 3287</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 60)</div>
+<div class="line"><span class="lineno"> 3288</span>        {</div>
+<div class="line"><span class="lineno"> 3289</span>            Main.caveBackX[0] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3290</span>            Main.caveBackX[1] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3291</span>            Main.caveBackX[2] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3292</span>            Main.caveBackStyle[0] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3293</span>            Main.caveBackStyle[1] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3294</span>            Main.caveBackStyle[2] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3295</span>            Main.caveBackStyle[3] = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3296</span>            Main.iceBackStyle = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3297</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 61)</div>
+<div class="line"><span class="lineno"> 3298</span>            {</div>
+<div class="line"><span class="lineno"> 3299</span>                Main.jungleBackStyle = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3300</span>                Main.hellBackStyle = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3301</span>            }</div>
+<div class="line"><span class="lineno"> 3302</span>        }</div>
+<div class="line"><span class="lineno"> 3303</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3304</span>        {</div>
+<div class="line"><span class="lineno"> 3305</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.RandomizeCaveBackgrounds();</div>
+<div class="line"><span class="lineno"> 3306</span>        }</div>
+<div class="line"><span class="lineno"> 3307</span>        Main.spawnTileX = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3308</span>        Main.spawnTileY = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3309</span>        Main.worldSurface = fileIO.ReadDouble();</div>
+<div class="line"><span class="lineno"> 3310</span>        Main.rockLayer = fileIO.ReadDouble();</div>
+<div class="line"><span class="lineno"> 3311</span>        <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_af9e4c0c47333a768d5189a6b2055ef58.html#af9e4c0c47333a768d5189a6b2055ef58">_tempTime</a> = fileIO.ReadDouble();</div>
+<div class="line"><span class="lineno"> 3312</span>        <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a8eccf03957baed74069e648b1b2ba0a4.html#a8eccf03957baed74069e648b1b2ba0a4">_tempDayTime</a> = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3313</span>        <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aeda2ee1bf23e78b6b66d7d946b341c05.html#aeda2ee1bf23e78b6b66d7d946b341c05">_tempMoonPhase</a> = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3314</span>        <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_abc26b0d2a2d9a9436f61b5bbc1901458.html#abc26b0d2a2d9a9436f61b5bbc1901458">_tempBloodMoon</a> = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3315</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 70)</div>
+<div class="line"><span class="lineno"> 3316</span>        {</div>
+<div class="line"><span class="lineno"> 3317</span>            <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aebdd3f6b0230d00025dc57bb4929452d.html#aebdd3f6b0230d00025dc57bb4929452d">_tempEclipse</a> = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3318</span>            Main.eclipse = <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aebdd3f6b0230d00025dc57bb4929452d.html#aebdd3f6b0230d00025dc57bb4929452d">_tempEclipse</a>;</div>
+<div class="line"><span class="lineno"> 3319</span>        }</div>
+<div class="line"><span class="lineno"> 3320</span>        Main.dungeonX = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3321</span>        Main.dungeonY = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3322</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 56)</div>
+<div class="line"><span class="lineno"> 3323</span>        {</div>
+<div class="line"><span class="lineno"> 3324</span>            WorldGen.crimson = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3325</span>        }</div>
+<div class="line"><span class="lineno"> 3326</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3327</span>        {</div>
+<div class="line"><span class="lineno"> 3328</span>            WorldGen.crimson = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3329</span>        }</div>
+<div class="line"><span class="lineno"> 3330</span>        NPC.downedBoss1 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3331</span>        NPC.downedBoss2 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3332</span>        NPC.downedBoss3 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3333</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 66)</div>
+<div class="line"><span class="lineno"> 3334</span>        {</div>
+<div class="line"><span class="lineno"> 3335</span>            NPC.downedQueenBee = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3336</span>        }</div>
+<div class="line"><span class="lineno"> 3337</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 44)</div>
+<div class="line"><span class="lineno"> 3338</span>        {</div>
+<div class="line"><span class="lineno"> 3339</span>            NPC.downedMechBoss1 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3340</span>            NPC.downedMechBoss2 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3341</span>            NPC.downedMechBoss3 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3342</span>            NPC.downedMechBossAny = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3343</span>        }</div>
+<div class="line"><span class="lineno"> 3344</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 64)</div>
+<div class="line"><span class="lineno"> 3345</span>        {</div>
+<div class="line"><span class="lineno"> 3346</span>            NPC.downedPlantBoss = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3347</span>            NPC.downedGolemBoss = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3348</span>        }</div>
+<div class="line"><span class="lineno"> 3349</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 29)</div>
+<div class="line"><span class="lineno"> 3350</span>        {</div>
+<div class="line"><span class="lineno"> 3351</span>            NPC.savedGoblin = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3352</span>            NPC.savedWizard = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3353</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 34)</div>
+<div class="line"><span class="lineno"> 3354</span>            {</div>
+<div class="line"><span class="lineno"> 3355</span>                NPC.savedMech = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3356</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 80)</div>
+<div class="line"><span class="lineno"> 3357</span>                {</div>
+<div class="line"><span class="lineno"> 3358</span>                    NPC.savedStylist = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3359</span>                }</div>
+<div class="line"><span class="lineno"> 3360</span>            }</div>
+<div class="line"><span class="lineno"> 3361</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 129)</div>
+<div class="line"><span class="lineno"> 3362</span>            {</div>
+<div class="line"><span class="lineno"> 3363</span>                NPC.savedTaxCollector = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3364</span>            }</div>
+<div class="line"><span class="lineno"> 3365</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 201)</div>
+<div class="line"><span class="lineno"> 3366</span>            {</div>
+<div class="line"><span class="lineno"> 3367</span>                NPC.savedGolfer = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3368</span>            }</div>
+<div class="line"><span class="lineno"> 3369</span>            NPC.downedGoblins = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3370</span>        }</div>
+<div class="line"><span class="lineno"> 3371</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 32)</div>
+<div class="line"><span class="lineno"> 3372</span>        {</div>
+<div class="line"><span class="lineno"> 3373</span>            NPC.downedClown = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3374</span>        }</div>
+<div class="line"><span class="lineno"> 3375</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 37)</div>
+<div class="line"><span class="lineno"> 3376</span>        {</div>
+<div class="line"><span class="lineno"> 3377</span>            NPC.downedFrost = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3378</span>        }</div>
+<div class="line"><span class="lineno"> 3379</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 56)</div>
+<div class="line"><span class="lineno"> 3380</span>        {</div>
+<div class="line"><span class="lineno"> 3381</span>            NPC.downedPirates = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3382</span>        }</div>
+<div class="line"><span class="lineno"> 3383</span>        WorldGen.shadowOrbSmashed = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3384</span>        WorldGen.spawnMeteor = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3385</span>        WorldGen.shadowOrbCount = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3386</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 23)</div>
+<div class="line"><span class="lineno"> 3387</span>        {</div>
+<div class="line"><span class="lineno"> 3388</span>            WorldGen.altarCount = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3389</span>            Main.hardMode = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3390</span>        }</div>
+<div class="line"><span class="lineno"> 3391</span>        Main.invasionDelay = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3392</span>        Main.invasionSize = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3393</span>        Main.invasionType = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3394</span>        Main.invasionX = fileIO.ReadDouble();</div>
+<div class="line"><span class="lineno"> 3395</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 113)</div>
+<div class="line"><span class="lineno"> 3396</span>        {</div>
+<div class="line"><span class="lineno"> 3397</span>            Main.sundialCooldown = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3398</span>        }</div>
+<div class="line"><span class="lineno"> 3399</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 53)</div>
+<div class="line"><span class="lineno"> 3400</span>        {</div>
+<div class="line"><span class="lineno"> 3401</span>            <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a481c1e4a4828a21b02ddac347a25f9b1.html#a481c1e4a4828a21b02ddac347a25f9b1">_tempRaining</a> = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3402</span>            <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a9c946af45532d7c69bf04dc33491fd83.html#a9c946af45532d7c69bf04dc33491fd83">_tempRainTime</a> = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3403</span>            <a class="code hl_variable" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aa1ef2a32fdaa3782a9b8db6c7618424c.html#aa1ef2a32fdaa3782a9b8db6c7618424c">_tempMaxRain</a> = fileIO.ReadSingle();</div>
+<div class="line"><span class="lineno"> 3404</span>        }</div>
+<div class="line"><span class="lineno"> 3405</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 54)</div>
+<div class="line"><span class="lineno"> 3406</span>        {</div>
+<div class="line"><span class="lineno"> 3407</span>            WorldGen.SavedOreTiers.Cobalt = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3408</span>            WorldGen.SavedOreTiers.Mythril = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3409</span>            WorldGen.SavedOreTiers.Adamantite = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3410</span>        }</div>
+<div class="line"><span class="lineno"> 3411</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (versionNumber &gt;= 23 &amp;&amp; <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.altarCount == 0)</div>
+<div class="line"><span class="lineno"> 3412</span>        {</div>
+<div class="line"><span class="lineno"> 3413</span>            WorldGen.SavedOreTiers.Cobalt = -1;</div>
+<div class="line"><span class="lineno"> 3414</span>            WorldGen.SavedOreTiers.Mythril = -1;</div>
+<div class="line"><span class="lineno"> 3415</span>            WorldGen.SavedOreTiers.Adamantite = -1;</div>
+<div class="line"><span class="lineno"> 3416</span>        }</div>
+<div class="line"><span class="lineno"> 3417</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3418</span>        {</div>
+<div class="line"><span class="lineno"> 3419</span>            WorldGen.SavedOreTiers.Cobalt = 107;</div>
+<div class="line"><span class="lineno"> 3420</span>            WorldGen.SavedOreTiers.Mythril = 108;</div>
+<div class="line"><span class="lineno"> 3421</span>            WorldGen.SavedOreTiers.Adamantite = 111;</div>
+<div class="line"><span class="lineno"> 3422</span>        }</div>
+<div class="line"><span class="lineno"> 3423</span>        <span class="keywordtype">int</span> style = 0;</div>
+<div class="line"><span class="lineno"> 3424</span>        <span class="keywordtype">int</span> style2 = 0;</div>
+<div class="line"><span class="lineno"> 3425</span>        <span class="keywordtype">int</span> style3 = 0;</div>
+<div class="line"><span class="lineno"> 3426</span>        <span class="keywordtype">int</span> style4 = 0;</div>
+<div class="line"><span class="lineno"> 3427</span>        <span class="keywordtype">int</span> style5 = 0;</div>
+<div class="line"><span class="lineno"> 3428</span>        <span class="keywordtype">int</span> style6 = 0;</div>
+<div class="line"><span class="lineno"> 3429</span>        <span class="keywordtype">int</span> style7 = 0;</div>
+<div class="line"><span class="lineno"> 3430</span>        <span class="keywordtype">int</span> style8 = 0;</div>
+<div class="line"><span class="lineno"> 3431</span>        <span class="keywordtype">int</span> style9 = 0;</div>
+<div class="line"><span class="lineno"> 3432</span>        <span class="keywordtype">int</span> style10 = 0;</div>
+<div class="line"><span class="lineno"> 3433</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 55)</div>
+<div class="line"><span class="lineno"> 3434</span>        {</div>
+<div class="line"><span class="lineno"> 3435</span>            style = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3436</span>            style2 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3437</span>            style3 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3438</span>        }</div>
+<div class="line"><span class="lineno"> 3439</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 60)</div>
+<div class="line"><span class="lineno"> 3440</span>        {</div>
+<div class="line"><span class="lineno"> 3441</span>            style4 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3442</span>            style5 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3443</span>            style6 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3444</span>            style7 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3445</span>            style8 = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3446</span>        }</div>
+<div class="line"><span class="lineno"> 3447</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(0, style);</div>
+<div class="line"><span class="lineno"> 3448</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(1, style2);</div>
+<div class="line"><span class="lineno"> 3449</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(2, style3);</div>
+<div class="line"><span class="lineno"> 3450</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(3, style4);</div>
+<div class="line"><span class="lineno"> 3451</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(4, style5);</div>
+<div class="line"><span class="lineno"> 3452</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(5, style6);</div>
+<div class="line"><span class="lineno"> 3453</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(6, style7);</div>
+<div class="line"><span class="lineno"> 3454</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(7, style8);</div>
+<div class="line"><span class="lineno"> 3455</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(8, style9);</div>
+<div class="line"><span class="lineno"> 3456</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(9, style10);</div>
+<div class="line"><span class="lineno"> 3457</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(10, style);</div>
+<div class="line"><span class="lineno"> 3458</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(11, style);</div>
+<div class="line"><span class="lineno"> 3459</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.setBG(12, style);</div>
+<div class="line"><span class="lineno"> 3460</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 60)</div>
+<div class="line"><span class="lineno"> 3461</span>        {</div>
+<div class="line"><span class="lineno"> 3462</span>            Main.cloudBGActive = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3463</span>            <span class="keywordflow">if</span> (Main.cloudBGActive &gt;= 1f)</div>
+<div class="line"><span class="lineno"> 3464</span>            {</div>
+<div class="line"><span class="lineno"> 3465</span>                Main.cloudBGAlpha = 1f;</div>
+<div class="line"><span class="lineno"> 3466</span>            }</div>
+<div class="line"><span class="lineno"> 3467</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3468</span>            {</div>
+<div class="line"><span class="lineno"> 3469</span>                Main.cloudBGAlpha = 0f;</div>
+<div class="line"><span class="lineno"> 3470</span>            }</div>
+<div class="line"><span class="lineno"> 3471</span>        }</div>
+<div class="line"><span class="lineno"> 3472</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3473</span>        {</div>
+<div class="line"><span class="lineno"> 3474</span>            Main.cloudBGActive = -<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.genRand.Next(8640, 86400);</div>
+<div class="line"><span class="lineno"> 3475</span>        }</div>
+<div class="line"><span class="lineno"> 3476</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 62)</div>
+<div class="line"><span class="lineno"> 3477</span>        {</div>
+<div class="line"><span class="lineno"> 3478</span>            Main.numClouds = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3479</span>            Main.windSpeedTarget = fileIO.ReadSingle();</div>
+<div class="line"><span class="lineno"> 3480</span>            Main.windSpeedCurrent = Main.windSpeedTarget;</div>
+<div class="line"><span class="lineno"> 3481</span>        }</div>
+<div class="line"><span class="lineno"> 3482</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3483</span>        {</div>
+<div class="line"><span class="lineno"> 3484</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.RandomizeWeather();</div>
+<div class="line"><span class="lineno"> 3485</span>        }</div>
+<div class="line"><span class="lineno"> 3486</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Main.maxTilesX; i++)</div>
+<div class="line"><span class="lineno"> 3487</span>        {</div>
+<div class="line"><span class="lineno"> 3488</span>            <span class="keywordtype">float</span> num = (float)i / (<span class="keywordtype">float</span>)Main.maxTilesX;</div>
+<div class="line"><span class="lineno"> 3489</span>            Main.statusText = Lang.gen[51].Value + <span class="stringliteral">&quot; &quot;</span> + (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(num * 100f + 1f) + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3490</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; Main.maxTilesY; j++)</div>
+<div class="line"><span class="lineno"> 3491</span>            {</div>
+<div class="line"><span class="lineno"> 3492</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 3493</span>                <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno"> 3494</span>                tile.active(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3495</span>                <span class="keywordflow">if</span> (tile.active())</div>
+<div class="line"><span class="lineno"> 3496</span>                {</div>
+<div class="line"><span class="lineno"> 3497</span>                    num2 = ((versionNumber &lt;= 77) ? fileIO.ReadByte() : fileIO.ReadUInt16());</div>
+<div class="line"><span class="lineno"> 3498</span>                    tile.type = (ushort)num2;</div>
+<div class="line"><span class="lineno"> 3499</span>                    <span class="keywordflow">if</span> (tile.type == 127 || tile.type == 504)</div>
+<div class="line"><span class="lineno"> 3500</span>                    {</div>
+<div class="line"><span class="lineno"> 3501</span>                        tile.active(active: false);</div>
+<div class="line"><span class="lineno"> 3502</span>                    }</div>
+<div class="line"><span class="lineno"> 3503</span>                    <span class="keywordflow">if</span> (versionNumber &lt; 72 &amp;&amp; (tile.type == 35 || tile.type == 36 || tile.type == 170 || tile.type == 171 || tile.type == 172))</div>
+<div class="line"><span class="lineno"> 3504</span>                    {</div>
+<div class="line"><span class="lineno"> 3505</span>                        tile.frameX = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3506</span>                        tile.frameY = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3507</span>                    }</div>
+<div class="line"><span class="lineno"> 3508</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.tileFrameImportant[num2])</div>
+<div class="line"><span class="lineno"> 3509</span>                    {</div>
+<div class="line"><span class="lineno"> 3510</span>                        <span class="keywordflow">if</span> (versionNumber &lt; 28 &amp;&amp; num2 == 4)</div>
+<div class="line"><span class="lineno"> 3511</span>                        {</div>
+<div class="line"><span class="lineno"> 3512</span>                            tile.frameX = 0;</div>
+<div class="line"><span class="lineno"> 3513</span>                            tile.frameY = 0;</div>
+<div class="line"><span class="lineno"> 3514</span>                        }</div>
+<div class="line"><span class="lineno"> 3515</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (versionNumber &lt; 40 &amp;&amp; tile.type == 19)</div>
+<div class="line"><span class="lineno"> 3516</span>                        {</div>
+<div class="line"><span class="lineno"> 3517</span>                            tile.frameX = 0;</div>
+<div class="line"><span class="lineno"> 3518</span>                            tile.frameY = 0;</div>
+<div class="line"><span class="lineno"> 3519</span>                        }</div>
+<div class="line"><span class="lineno"> 3520</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (versionNumber &lt; 195 &amp;&amp; tile.type == 49)</div>
+<div class="line"><span class="lineno"> 3521</span>                        {</div>
+<div class="line"><span class="lineno"> 3522</span>                            tile.frameX = 0;</div>
+<div class="line"><span class="lineno"> 3523</span>                            tile.frameY = 0;</div>
+<div class="line"><span class="lineno"> 3524</span>                        }</div>
+<div class="line"><span class="lineno"> 3525</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3526</span>                        {</div>
+<div class="line"><span class="lineno"> 3527</span>                            tile.frameX = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3528</span>                            tile.frameY = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3529</span>                            <span class="keywordflow">if</span> (tile.type == 144)</div>
+<div class="line"><span class="lineno"> 3530</span>                            {</div>
+<div class="line"><span class="lineno"> 3531</span>                                tile.frameY = 0;</div>
+<div class="line"><span class="lineno"> 3532</span>                            }</div>
+<div class="line"><span class="lineno"> 3533</span>                        }</div>
+<div class="line"><span class="lineno"> 3534</span>                    }</div>
+<div class="line"><span class="lineno"> 3535</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3536</span>                    {</div>
+<div class="line"><span class="lineno"> 3537</span>                        tile.frameX = -1;</div>
+<div class="line"><span class="lineno"> 3538</span>                        tile.frameY = -1;</div>
+<div class="line"><span class="lineno"> 3539</span>                    }</div>
+<div class="line"><span class="lineno"> 3540</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 48 &amp;&amp; fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3541</span>                    {</div>
+<div class="line"><span class="lineno"> 3542</span>                        tile.color(fileIO.ReadByte());</div>
+<div class="line"><span class="lineno"> 3543</span>                    }</div>
+<div class="line"><span class="lineno"> 3544</span>                }</div>
+<div class="line"><span class="lineno"> 3545</span>                <span class="keywordflow">if</span> (versionNumber &lt;= 25)</div>
+<div class="line"><span class="lineno"> 3546</span>                {</div>
+<div class="line"><span class="lineno"> 3547</span>                    fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3548</span>                }</div>
+<div class="line"><span class="lineno"> 3549</span>                <span class="keywordflow">if</span> (fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3550</span>                {</div>
+<div class="line"><span class="lineno"> 3551</span>                    tile.wall = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3552</span>                    <span class="keywordflow">if</span> (tile.wall &gt;= <a class="code hl_class" href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">WallID</a>.<a class="code hl_variable" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Count</a>)</div>
+<div class="line"><span class="lineno"> 3553</span>                    {</div>
+<div class="line"><span class="lineno"> 3554</span>                        tile.wall = 0;</div>
+<div class="line"><span class="lineno"> 3555</span>                    }</div>
+<div class="line"><span class="lineno"> 3556</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 48 &amp;&amp; fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3557</span>                    {</div>
+<div class="line"><span class="lineno"> 3558</span>                        tile.wallColor(fileIO.ReadByte());</div>
+<div class="line"><span class="lineno"> 3559</span>                    }</div>
+<div class="line"><span class="lineno"> 3560</span>                }</div>
+<div class="line"><span class="lineno"> 3561</span>                <span class="keywordflow">if</span> (fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3562</span>                {</div>
+<div class="line"><span class="lineno"> 3563</span>                    tile.liquid = fileIO.ReadByte();</div>
+<div class="line"><span class="lineno"> 3564</span>                    tile.lava(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3565</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 51)</div>
+<div class="line"><span class="lineno"> 3566</span>                    {</div>
+<div class="line"><span class="lineno"> 3567</span>                        tile.honey(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3568</span>                    }</div>
+<div class="line"><span class="lineno"> 3569</span>                }</div>
+<div class="line"><span class="lineno"> 3570</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 33)</div>
+<div class="line"><span class="lineno"> 3571</span>                {</div>
+<div class="line"><span class="lineno"> 3572</span>                    tile.wire(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3573</span>                }</div>
+<div class="line"><span class="lineno"> 3574</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 43)</div>
+<div class="line"><span class="lineno"> 3575</span>                {</div>
+<div class="line"><span class="lineno"> 3576</span>                    tile.wire2(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3577</span>                    tile.wire3(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3578</span>                }</div>
+<div class="line"><span class="lineno"> 3579</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 41)</div>
+<div class="line"><span class="lineno"> 3580</span>                {</div>
+<div class="line"><span class="lineno"> 3581</span>                    tile.halfBrick(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3582</span>                    <span class="keywordflow">if</span> (!Main.tileSolid[tile.type] &amp;&amp; !<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a75e89d5a71604fd5d15795d31580bcb0.html#a75e89d5a71604fd5d15795d31580bcb0">NonSolidSaveSlopes</a>[tile.type])</div>
+<div class="line"><span class="lineno"> 3583</span>                    {</div>
+<div class="line"><span class="lineno"> 3584</span>                        tile.halfBrick(halfBrick: false);</div>
+<div class="line"><span class="lineno"> 3585</span>                    }</div>
+<div class="line"><span class="lineno"> 3586</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 49)</div>
+<div class="line"><span class="lineno"> 3587</span>                    {</div>
+<div class="line"><span class="lineno"> 3588</span>                        tile.slope(fileIO.ReadByte());</div>
+<div class="line"><span class="lineno"> 3589</span>                        <span class="keywordflow">if</span> (!Main.tileSolid[tile.type] &amp;&amp; !<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a75e89d5a71604fd5d15795d31580bcb0.html#a75e89d5a71604fd5d15795d31580bcb0">NonSolidSaveSlopes</a>[tile.type])</div>
+<div class="line"><span class="lineno"> 3590</span>                        {</div>
+<div class="line"><span class="lineno"> 3591</span>                            tile.slope(0);</div>
+<div class="line"><span class="lineno"> 3592</span>                        }</div>
+<div class="line"><span class="lineno"> 3593</span>                    }</div>
+<div class="line"><span class="lineno"> 3594</span>                }</div>
+<div class="line"><span class="lineno"> 3595</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 42)</div>
+<div class="line"><span class="lineno"> 3596</span>                {</div>
+<div class="line"><span class="lineno"> 3597</span>                    tile.actuator(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3598</span>                    tile.inActive(fileIO.ReadBoolean());</div>
+<div class="line"><span class="lineno"> 3599</span>                }</div>
+<div class="line"><span class="lineno"> 3600</span>                <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno"> 3601</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 25)</div>
+<div class="line"><span class="lineno"> 3602</span>                {</div>
+<div class="line"><span class="lineno"> 3603</span>                    num3 = fileIO.ReadInt16();</div>
+<div class="line"><span class="lineno"> 3604</span>                }</div>
+<div class="line"><span class="lineno"> 3605</span>                <span class="keywordflow">if</span> (num2 != -1)</div>
+<div class="line"><span class="lineno"> 3606</span>                {</div>
+<div class="line"><span class="lineno"> 3607</span>                    <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)j &lt;= Main.worldSurface)</div>
+<div class="line"><span class="lineno"> 3608</span>                    {</div>
+<div class="line"><span class="lineno"> 3609</span>                        <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)(j + num3) &lt;= Main.worldSurface)</div>
+<div class="line"><span class="lineno"> 3610</span>                        {</div>
+<div class="line"><span class="lineno"> 3611</span>                            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.tileCounts[num2] += (num3 + 1) * 5;</div>
+<div class="line"><span class="lineno"> 3612</span>                        }</div>
+<div class="line"><span class="lineno"> 3613</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3614</span>                        {</div>
+<div class="line"><span class="lineno"> 3615</span>                            <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Main.worldSurface - (<span class="keywordtype">double</span>)j + 1.0);</div>
+<div class="line"><span class="lineno"> 3616</span>                            <span class="keywordtype">int</span> num5 = num3 + 1 - num4;</div>
+<div class="line"><span class="lineno"> 3617</span>                            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.tileCounts[num2] += num4 * 5 + num5;</div>
+<div class="line"><span class="lineno"> 3618</span>                        }</div>
+<div class="line"><span class="lineno"> 3619</span>                    }</div>
+<div class="line"><span class="lineno"> 3620</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3621</span>                    {</div>
+<div class="line"><span class="lineno"> 3622</span>                        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.tileCounts[num2] += num3 + 1;</div>
+<div class="line"><span class="lineno"> 3623</span>                    }</div>
+<div class="line"><span class="lineno"> 3624</span>                }</div>
+<div class="line"><span class="lineno"> 3625</span>                <span class="keywordflow">if</span> (num3 &gt; 0)</div>
+<div class="line"><span class="lineno"> 3626</span>                {</div>
+<div class="line"><span class="lineno"> 3627</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = j + 1; k &lt; j + num3 + 1; k++)</div>
+<div class="line"><span class="lineno"> 3628</span>                    {</div>
+<div class="line"><span class="lineno"> 3629</span>                        Main.tile[i, k].CopyFrom(Main.tile[i, j]);</div>
+<div class="line"><span class="lineno"> 3630</span>                    }</div>
+<div class="line"><span class="lineno"> 3631</span>                    j += num3;</div>
+<div class="line"><span class="lineno"> 3632</span>                }</div>
+<div class="line"><span class="lineno"> 3633</span>            }</div>
+<div class="line"><span class="lineno"> 3634</span>        }</div>
+<div class="line"><span class="lineno"> 3635</span>        <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.AddUpAlignmentCounts(clearCounts: true);</div>
+<div class="line"><span class="lineno"> 3636</span>        <span class="keywordflow">if</span> (versionNumber &lt; 67)</div>
+<div class="line"><span class="lineno"> 3637</span>        {</div>
+<div class="line"><span class="lineno"> 3638</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.FixSunflowers();</div>
+<div class="line"><span class="lineno"> 3639</span>        }</div>
+<div class="line"><span class="lineno"> 3640</span>        <span class="keywordflow">if</span> (versionNumber &lt; 72)</div>
+<div class="line"><span class="lineno"> 3641</span>        {</div>
+<div class="line"><span class="lineno"> 3642</span>            <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.FixChands();</div>
+<div class="line"><span class="lineno"> 3643</span>        }</div>
+<div class="line"><span class="lineno"> 3644</span>        <span class="keywordtype">int</span> num6 = 40;</div>
+<div class="line"><span class="lineno"> 3645</span>        <span class="keywordflow">if</span> (versionNumber &lt; 58)</div>
+<div class="line"><span class="lineno"> 3646</span>        {</div>
+<div class="line"><span class="lineno"> 3647</span>            num6 = 20;</div>
+<div class="line"><span class="lineno"> 3648</span>        }</div>
+<div class="line"><span class="lineno"> 3649</span>        <span class="keywordtype">int</span> num7 = 1000;</div>
+<div class="line"><span class="lineno"> 3650</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; num7; l++)</div>
+<div class="line"><span class="lineno"> 3651</span>        {</div>
+<div class="line"><span class="lineno"> 3652</span>            <span class="keywordflow">if</span> (!fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3653</span>            {</div>
+<div class="line"><span class="lineno"> 3654</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3655</span>            }</div>
+<div class="line"><span class="lineno"> 3656</span>            Main.chest[l] = <span class="keyword">new</span> Chest();</div>
+<div class="line"><span class="lineno"> 3657</span>            Main.chest[l].x = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3658</span>            Main.chest[l].y = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3659</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 85)</div>
+<div class="line"><span class="lineno"> 3660</span>            {</div>
+<div class="line"><span class="lineno"> 3661</span>                <span class="keywordtype">string</span> text = fileIO.ReadString();</div>
+<div class="line"><span class="lineno"> 3662</span>                <span class="keywordflow">if</span> (text.Length &gt; 20)</div>
+<div class="line"><span class="lineno"> 3663</span>                {</div>
+<div class="line"><span class="lineno"> 3664</span>                    text = text.Substring(0, 20);</div>
+<div class="line"><span class="lineno"> 3665</span>                }</div>
+<div class="line"><span class="lineno"> 3666</span>                Main.chest[l].name = text;</div>
+<div class="line"><span class="lineno"> 3667</span>            }</div>
+<div class="line"><span class="lineno"> 3668</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; 40; m++)</div>
+<div class="line"><span class="lineno"> 3669</span>            {</div>
+<div class="line"><span class="lineno"> 3670</span>                Main.chest[l].item[m] = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno"> 3671</span>                <span class="keywordflow">if</span> (m &gt;= num6)</div>
+<div class="line"><span class="lineno"> 3672</span>                {</div>
+<div class="line"><span class="lineno"> 3673</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3674</span>                }</div>
+<div class="line"><span class="lineno"> 3675</span>                <span class="keywordtype">int</span> num8 = 0;</div>
+<div class="line"><span class="lineno"> 3676</span>                num8 = ((versionNumber &lt; 59) ? fileIO.ReadByte() : fileIO.ReadInt16());</div>
+<div class="line"><span class="lineno"> 3677</span>                <span class="keywordflow">if</span> (num8 &gt; 0)</div>
+<div class="line"><span class="lineno"> 3678</span>                {</div>
+<div class="line"><span class="lineno"> 3679</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 38)</div>
+<div class="line"><span class="lineno"> 3680</span>                    {</div>
+<div class="line"><span class="lineno"> 3681</span>                        Main.chest[l].item[m].netDefaults(fileIO.ReadInt32());</div>
+<div class="line"><span class="lineno"> 3682</span>                    }</div>
+<div class="line"><span class="lineno"> 3683</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3684</span>                    {</div>
+<div class="line"><span class="lineno"> 3685</span>                        <span class="keywordtype">short</span> defaults = <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_function" href="../../de/d57/classTerraria_1_1ID_1_1ItemID_a9e0cf3fc92b658aad42029ac6be74e20.html#a9e0cf3fc92b658aad42029ac6be74e20">FromLegacyName</a>(fileIO.ReadString(), versionNumber);</div>
+<div class="line"><span class="lineno"> 3686</span>                        Main.chest[l].item[m].SetDefaults(defaults);</div>
+<div class="line"><span class="lineno"> 3687</span>                    }</div>
+<div class="line"><span class="lineno"> 3688</span>                    Main.chest[l].item[m].stack = num8;</div>
+<div class="line"><span class="lineno"> 3689</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 36)</div>
+<div class="line"><span class="lineno"> 3690</span>                    {</div>
+<div class="line"><span class="lineno"> 3691</span>                        Main.chest[l].item[m].Prefix(fileIO.ReadByte());</div>
+<div class="line"><span class="lineno"> 3692</span>                    }</div>
+<div class="line"><span class="lineno"> 3693</span>                }</div>
+<div class="line"><span class="lineno"> 3694</span>            }</div>
+<div class="line"><span class="lineno"> 3695</span>        }</div>
+<div class="line"><span class="lineno"> 3696</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; 1000; n++)</div>
+<div class="line"><span class="lineno"> 3697</span>        {</div>
+<div class="line"><span class="lineno"> 3698</span>            <span class="keywordflow">if</span> (fileIO.ReadBoolean())</div>
+<div class="line"><span class="lineno"> 3699</span>            {</div>
+<div class="line"><span class="lineno"> 3700</span>                <span class="keywordtype">string</span> text2 = fileIO.ReadString();</div>
+<div class="line"><span class="lineno"> 3701</span>                <span class="keywordtype">int</span> num9 = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3702</span>                <span class="keywordtype">int</span> num10 = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3703</span>                <span class="keywordflow">if</span> (Main.tile[num9, num10].active() &amp;&amp; (Main.tile[num9, num10].type == 55 || Main.tile[num9, num10].type == 85))</div>
+<div class="line"><span class="lineno"> 3704</span>                {</div>
+<div class="line"><span class="lineno"> 3705</span>                    Main.sign[n] = <span class="keyword">new</span> Sign();</div>
+<div class="line"><span class="lineno"> 3706</span>                    Main.sign[n].x = num9;</div>
+<div class="line"><span class="lineno"> 3707</span>                    Main.sign[n].y = num10;</div>
+<div class="line"><span class="lineno"> 3708</span>                    Main.sign[n].text = text2;</div>
+<div class="line"><span class="lineno"> 3709</span>                }</div>
+<div class="line"><span class="lineno"> 3710</span>            }</div>
+<div class="line"><span class="lineno"> 3711</span>        }</div>
+<div class="line"><span class="lineno"> 3712</span>        <span class="keywordtype">bool</span> flag = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3713</span>        <span class="keywordtype">int</span> num11 = 0;</div>
+<div class="line"><span class="lineno"> 3714</span>        <span class="keywordflow">while</span> (flag)</div>
+<div class="line"><span class="lineno"> 3715</span>        {</div>
+<div class="line"><span class="lineno"> 3716</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 190)</div>
+<div class="line"><span class="lineno"> 3717</span>            {</div>
+<div class="line"><span class="lineno"> 3718</span>                Main.npc[num11].SetDefaults(fileIO.ReadInt32());</div>
+<div class="line"><span class="lineno"> 3719</span>            }</div>
+<div class="line"><span class="lineno"> 3720</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3721</span>            {</div>
+<div class="line"><span class="lineno"> 3722</span>                Main.npc[num11].SetDefaults(<a class="code hl_class" href="../../d9/d0d/classTerraria_1_1ID_1_1NPCID.html">NPCID</a>.<a class="code hl_function" href="../../d9/d0d/classTerraria_1_1ID_1_1NPCID_ac78c9a5bff949568070b1103f3a91133.html#ac78c9a5bff949568070b1103f3a91133">FromLegacyName</a>(fileIO.ReadString()));</div>
+<div class="line"><span class="lineno"> 3723</span>            }</div>
+<div class="line"><span class="lineno"> 3724</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 83)</div>
+<div class="line"><span class="lineno"> 3725</span>            {</div>
+<div class="line"><span class="lineno"> 3726</span>                Main.npc[num11].GivenName = fileIO.ReadString();</div>
+<div class="line"><span class="lineno"> 3727</span>            }</div>
+<div class="line"><span class="lineno"> 3728</span>            Main.npc[num11].position.X = fileIO.ReadSingle();</div>
+<div class="line"><span class="lineno"> 3729</span>            Main.npc[num11].position.Y = fileIO.ReadSingle();</div>
+<div class="line"><span class="lineno"> 3730</span>            Main.npc[num11].homeless = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3731</span>            Main.npc[num11].homeTileX = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3732</span>            Main.npc[num11].homeTileY = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3733</span>            flag = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3734</span>            num11++;</div>
+<div class="line"><span class="lineno"> 3735</span>        }</div>
+<div class="line"><span class="lineno"> 3736</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 31 &amp;&amp; versionNumber &lt;= 83)</div>
+<div class="line"><span class="lineno"> 3737</span>        {</div>
+<div class="line"><span class="lineno"> 3738</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 17, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3739</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 18, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3740</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 19, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3741</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 20, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3742</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 22, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3743</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 54, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3744</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 38, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3745</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 107, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3746</span>            <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 108, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3747</span>            <span class="keywordflow">if</span> (versionNumber &gt;= 35)</div>
+<div class="line"><span class="lineno"> 3748</span>            {</div>
+<div class="line"><span class="lineno"> 3749</span>                <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 124, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3750</span>                <span class="keywordflow">if</span> (versionNumber &gt;= 65)</div>
+<div class="line"><span class="lineno"> 3751</span>                {</div>
+<div class="line"><span class="lineno"> 3752</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 160, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3753</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 178, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3754</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 207, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3755</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 208, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3756</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 209, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3757</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 227, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3758</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 228, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3759</span>                    <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 229, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3760</span>                    <span class="keywordflow">if</span> (versionNumber &gt;= 79)</div>
+<div class="line"><span class="lineno"> 3761</span>                    {</div>
+<div class="line"><span class="lineno"> 3762</span>                        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">NPC</a>.setNPCName(fileIO.ReadString(), 353, resetExtras: true);</div>
+<div class="line"><span class="lineno"> 3763</span>                    }</div>
+<div class="line"><span class="lineno"> 3764</span>                }</div>
+<div class="line"><span class="lineno"> 3765</span>            }</div>
+<div class="line"><span class="lineno"> 3766</span>        }</div>
+<div class="line"><span class="lineno"> 3767</span>        <span class="keywordflow">if</span> (Main.invasionType &gt; 0 &amp;&amp; Main.invasionSize &gt; 0)</div>
+<div class="line"><span class="lineno"> 3768</span>        {</div>
+<div class="line"><span class="lineno"> 3769</span>            Main.FakeLoadInvasionStart();</div>
+<div class="line"><span class="lineno"> 3770</span>        }</div>
+<div class="line"><span class="lineno"> 3771</span>        <span class="keywordflow">if</span> (versionNumber &gt;= 7)</div>
+<div class="line"><span class="lineno"> 3772</span>        {</div>
+<div class="line"><span class="lineno"> 3773</span>            <span class="keywordtype">bool</span> num12 = fileIO.ReadBoolean();</div>
+<div class="line"><span class="lineno"> 3774</span>            <span class="keywordtype">string</span> text3 = fileIO.ReadString();</div>
+<div class="line"><span class="lineno"> 3775</span>            <span class="keywordtype">int</span> num13 = fileIO.ReadInt32();</div>
+<div class="line"><span class="lineno"> 3776</span>            <span class="keywordflow">if</span> (num12 &amp;&amp; (text3 == Main.worldName || num13 == Main.worldID))</div>
+<div class="line"><span class="lineno"> 3777</span>            {</div>
+<div class="line"><span class="lineno"> 3778</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 3779</span>            }</div>
+<div class="line"><span class="lineno"> 3780</span>            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno"> 3781</span>        }</div>
+<div class="line"><span class="lineno"> 3782</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 3783</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_a9e0cf3fc92b658aad42029ac6be74e20_html_a9e0cf3fc92b658aad42029ac6be74e20"><div class="ttname"><a href="../../de/d57/classTerraria_1_1ID_1_1ItemID_a9e0cf3fc92b658aad42029ac6be74e20.html#a9e0cf3fc92b658aad42029ac6be74e20">Terraria.ID.ItemID.FromLegacyName</a></div><div class="ttdeci">static short FromLegacyName(string name, int release)</div><div class="ttdef"><b>Definition</b> ItemID.cs:12856</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_html"><div class="ttname"><a href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">Terraria.ID.ItemID</a></div><div class="ttdef"><b>Definition</b> ItemID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1NPCID_ac78c9a5bff949568070b1103f3a91133_html_ac78c9a5bff949568070b1103f3a91133"><div class="ttname"><a href="../../d9/d0d/classTerraria_1_1ID_1_1NPCID_ac78c9a5bff949568070b1103f3a91133.html#ac78c9a5bff949568070b1103f3a91133">Terraria.ID.NPCID.FromLegacyName</a></div><div class="ttdeci">static int FromLegacyName(string name)</div><div class="ttdef"><b>Definition</b> NPCID.cs:11748</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1NPCID_html"><div class="ttname"><a href="../../d9/d0d/classTerraria_1_1ID_1_1NPCID.html">Terraria.ID.NPCID</a></div><div class="ttdef"><b>Definition</b> NPCID.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_a75e89d5a71604fd5d15795d31580bcb0_html_a75e89d5a71604fd5d15795d31580bcb0"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a75e89d5a71604fd5d15795d31580bcb0.html#a75e89d5a71604fd5d15795d31580bcb0">Terraria.ID.TileID.Sets.NonSolidSaveSlopes</a></div><div class="ttdeci">static bool[] NonSolidSaveSlopes</div><div class="ttdef"><b>Definition</b> TileID.cs:109</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9_html_a3072f148cf2c586360b0704a7f2c36d9"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a></div><div class="ttdeci">static readonly ushort Count</div><div class="ttdef"><b>Definition</b> WallID.cs:753</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1WallID_html"><div class="ttname"><a href="../../d0/da3/classTerraria_1_1ID_1_1WallID.html">Terraria.ID.WallID</a></div><div class="ttdef"><b>Definition</b> WallID.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_a481c1e4a4828a21b02ddac347a25f9b1_html_a481c1e4a4828a21b02ddac347a25f9b1"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a481c1e4a4828a21b02ddac347a25f9b1.html#a481c1e4a4828a21b02ddac347a25f9b1">Terraria.IO.WorldFile._tempRaining</a></div><div class="ttdeci">static bool _tempRaining</div><div class="ttdef"><b>Definition</b> WorldFile.cs:101</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_a8eccf03957baed74069e648b1b2ba0a4_html_a8eccf03957baed74069e648b1b2ba0a4"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a8eccf03957baed74069e648b1b2ba0a4.html#a8eccf03957baed74069e648b1b2ba0a4">Terraria.IO.WorldFile._tempDayTime</a></div><div class="ttdeci">static bool _tempDayTime</div><div class="ttdef"><b>Definition</b> WorldFile.cs:107</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_a9c946af45532d7c69bf04dc33491fd83_html_a9c946af45532d7c69bf04dc33491fd83"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a9c946af45532d7c69bf04dc33491fd83.html#a9c946af45532d7c69bf04dc33491fd83">Terraria.IO.WorldFile._tempRainTime</a></div><div class="ttdeci">static int _tempRainTime</div><div class="ttdef"><b>Definition</b> WorldFile.cs:105</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_aa1ef2a32fdaa3782a9b8db6c7618424c_html_aa1ef2a32fdaa3782a9b8db6c7618424c"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aa1ef2a32fdaa3782a9b8db6c7618424c.html#aa1ef2a32fdaa3782a9b8db6c7618424c">Terraria.IO.WorldFile._tempMaxRain</a></div><div class="ttdeci">static float _tempMaxRain</div><div class="ttdef"><b>Definition</b> WorldFile.cs:103</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_abc26b0d2a2d9a9436f61b5bbc1901458_html_abc26b0d2a2d9a9436f61b5bbc1901458"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_abc26b0d2a2d9a9436f61b5bbc1901458.html#abc26b0d2a2d9a9436f61b5bbc1901458">Terraria.IO.WorldFile._tempBloodMoon</a></div><div class="ttdeci">static bool _tempBloodMoon</div><div class="ttdef"><b>Definition</b> WorldFile.cs:109</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_ad83cf83a1364650e5aec043988e4585f_html_ad83cf83a1364650e5aec043988e4585f"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ad83cf83a1364650e5aec043988e4585f.html#ad83cf83a1364650e5aec043988e4585f">Terraria.IO.WorldFile._versionNumber</a></div><div class="ttdeci">static int _versionNumber</div><div class="ttdef"><b>Definition</b> WorldFile.cs:117</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_aebdd3f6b0230d00025dc57bb4929452d_html_aebdd3f6b0230d00025dc57bb4929452d"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aebdd3f6b0230d00025dc57bb4929452d.html#aebdd3f6b0230d00025dc57bb4929452d">Terraria.IO.WorldFile._tempEclipse</a></div><div class="ttdeci">static bool _tempEclipse</div><div class="ttdef"><b>Definition</b> WorldFile.cs:111</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_aeda2ee1bf23e78b6b66d7d946b341c05_html_aeda2ee1bf23e78b6b66d7d946b341c05"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aeda2ee1bf23e78b6b66d7d946b341c05.html#aeda2ee1bf23e78b6b66d7d946b341c05">Terraria.IO.WorldFile._tempMoonPhase</a></div><div class="ttdeci">static int _tempMoonPhase</div><div class="ttdef"><b>Definition</b> WorldFile.cs:113</div></div>
+<div class="ttc" id="aclassTerraria_1_1IO_1_1WorldFile_af9e4c0c47333a768d5189a6b2055ef58_html_af9e4c0c47333a768d5189a6b2055ef58"><div class="ttname"><a href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_af9e4c0c47333a768d5189a6b2055ef58.html#af9e4c0c47333a768d5189a6b2055ef58">Terraria.IO.WorldFile._tempTime</a></div><div class="ttdeci">static double _tempTime</div><div class="ttdef"><b>Definition</b> WorldFile.cs:99</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda2bda99597da06a11feafd8760b68aec6">Terraria.Enums.NPCTargetType.NPC</a></div><div class="ttdeci">@ NPC</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_abc26b0d2a2d9a9436f61b5bbc1901458.html#abc26b0d2a2d9a9436f61b5bbc1901458">Terraria.IO.WorldFile._tempBloodMoon</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a8eccf03957baed74069e648b1b2ba0a4.html#a8eccf03957baed74069e648b1b2ba0a4">Terraria.IO.WorldFile._tempDayTime</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aebdd3f6b0230d00025dc57bb4929452d.html#aebdd3f6b0230d00025dc57bb4929452d">Terraria.IO.WorldFile._tempEclipse</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aa1ef2a32fdaa3782a9b8db6c7618424c.html#aa1ef2a32fdaa3782a9b8db6c7618424c">Terraria.IO.WorldFile._tempMaxRain</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_aeda2ee1bf23e78b6b66d7d946b341c05.html#aeda2ee1bf23e78b6b66d7d946b341c05">Terraria.IO.WorldFile._tempMoonPhase</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a481c1e4a4828a21b02ddac347a25f9b1.html#a481c1e4a4828a21b02ddac347a25f9b1">Terraria.IO.WorldFile._tempRaining</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a9c946af45532d7c69bf04dc33491fd83.html#a9c946af45532d7c69bf04dc33491fd83">Terraria.IO.WorldFile._tempRainTime</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_af9e4c0c47333a768d5189a6b2055ef58.html#af9e4c0c47333a768d5189a6b2055ef58">Terraria.IO.WorldFile._tempTime</a>, <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_ad83cf83a1364650e5aec043988e4585f.html#ad83cf83a1364650e5aec043988e4585f">Terraria.IO.WorldFile._versionNumber</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_af8ebac4fe00f28248e557aaab131e4ac.html#af8ebac4fe00f28248e557aaab131e4ac">Terraria.Tile.actuator()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ab0bf0cc304736605903e122b4df05c83.html#ab0bf0cc304736605903e122b4df05c83">Terraria.WorldGen.AddUpAlignmentCounts()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a94cf1b959f0900e76bce807af1236dba.html#a94cf1b959f0900e76bce807af1236dba">Terraria.WorldGen.altarCount</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a5ba73336228f2f83e93b0e63865c73d1.html#a5ba73336228f2f83e93b0e63865c73d1">Terraria.Main.caveBackStyle</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae4c182e3beead62a4cb5a5c2cc96aaec.html#ae4c182e3beead62a4cb5a5c2cc96aaec">Terraria.Main.caveBackX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a894a07c4898fd6044992e22a6c2e2a8b.html#a894a07c4898fd6044992e22a6c2e2a8b">Terraria.WorldGen.clearWorld()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad208414da8a0a69fb1d8e7c3cba6aacd.html#ad208414da8a0a69fb1d8e7c3cba6aacd">Terraria.Main.cloudBGActive</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a083f90a80ef987726fd28c52ffc4787e.html#a083f90a80ef987726fd28c52ffc4787e">Terraria.Tile.color()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae930e3944f908f5e087004e311e68bde.html#ae930e3944f908f5e087004e311e68bde">Terraria.Tile.CopyFrom()</a>, <a class="el" href="../../d0/da3/classTerraria_1_1ID_1_1WallID_a3072f148cf2c586360b0704a7f2c36d9.html#a3072f148cf2c586360b0704a7f2c36d9">Terraria.ID.WallID.Count</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_abc040126a1114396d2913957d91ec298.html#abc040126a1114396d2913957d91ec298">Terraria.Main.FakeLoadInvasionStart()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_acfb1229fa6c4b878aa65e19ac4a4f8cb.html#acfb1229fa6c4b878aa65e19ac4a4f8cb">Terraria.WorldGen.FixChands()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a797c5643a379a69beb74314d2f4dacc0.html#a797c5643a379a69beb74314d2f4dacc0">Terraria.WorldGen.FixSunflowers()</a>, <a class="el" href="../../d3/d37/classTerraria_1_1IO_1_1FileMetadata_ae463bcf339fec8c9ba5305cf3546fc2e.html#ae463bcf339fec8c9ba5305cf3546fc2e">Terraria.IO.FileMetadata.FromCurrentSettings()</a>, <a class="el" href="../../d9/d0d/classTerraria_1_1ID_1_1NPCID_ac78c9a5bff949568070b1103f3a91133.html#ac78c9a5bff949568070b1103f3a91133">Terraria.ID.NPCID.FromLegacyName()</a>, <a class="el" href="../../de/d57/classTerraria_1_1ID_1_1ItemID_a9e0cf3fc92b658aad42029ac6be74e20.html#a9e0cf3fc92b658aad42029ac6be74e20">Terraria.ID.ItemID.FromLegacyName()</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a095af09f0f067b0f6a2ea31f11e967a5.html#a095af09f0f067b0f6a2ea31f11e967a5">Terraria.Lang.gen</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a344c365c776cb2a70fae00303f94b2eb.html#a344c365c776cb2a70fae00303f94b2eb">Terraria.NPC.GivenName</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_acacb38a8cca2cd4b5f07186e532f06df.html#acacb38a8cca2cd4b5f07186e532f06df">Terraria.NPC.homeless</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a707a46d1de85d1ace60dc76a36477e2b.html#a707a46d1de85d1ace60dc76a36477e2b">Terraria.NPC.homeTileX</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_afacdc5dddcb7a8ea399198751ee18584.html#afacdc5dddcb7a8ea399198751ee18584">Terraria.NPC.homeTileY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_abce32b6727439dc5fd177ed547a260a6.html#abce32b6727439dc5fd177ed547a260a6">Terraria.Tile.honey()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afa1e4c4ac7de58ee5e37f598d395f321.html#afa1e4c4ac7de58ee5e37f598d395f321">Terraria.Main.invasionSize</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa238e4346c5c4cc0bd3d40b455f50a35.html#aa238e4346c5c4cc0bd3d40b455f50a35">Terraria.Main.invasionType</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7d12be50c317c1f241b48a4c0fc99d8c.html#a7d12be50c317c1f241b48a4c0fc99d8c">Terraria.Chest.item</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac5e7a45a98f6e9037975c4c7e043a7a9.html#ac5e7a45a98f6e9037975c4c7e043a7a9">Terraria.Tile.lava()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_aa47beed4f0461ec43242cd299a4bf27d.html#aa47beed4f0461ec43242cd299a4bf27d">Terraria.Chest.name</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a2498a0b49e340b1c4c8729318b73b82c.html#a2498a0b49e340b1c4c8729318b73b82c">Terraria.Item.netDefaults()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a75e89d5a71604fd5d15795d31580bcb0.html#a75e89d5a71604fd5d15795d31580bcb0">Terraria.ID.TileID.Sets.NonSolidSaveSlopes</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab6c98cf245bb2db337fe609d6096626e.html#ab6c98cf245bb2db337fe609d6096626e">Terraria.Main.npc</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4928326c0c5a324286cf922203704666.html#a4928326c0c5a324286cf922203704666">Terraria.Item.Prefix()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ac076c39e9991be9651ef01ad66aa968e.html#ac076c39e9991be9651ef01ad66aa968e">Terraria.WorldGen.RandomizeCaveBackgrounds()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_ab5ea3022c7c3c18e8de7edd08bcfb5bb.html#ab5ea3022c7c3c18e8de7edd08bcfb5bb">Terraria.WorldGen.RandomizeMoonState()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a5cc759e4d36a6a546d43063a73d2e210.html#a5cc759e4d36a6a546d43063a73d2e210">Terraria.WorldGen.RandomizeWeather()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a47ea9761ceab0e263b47c6d5f9336055.html#a47ea9761ceab0e263b47c6d5f9336055">Terraria.WorldGen.setBG()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a063ba9b4494999cf79b91a12d375e317.html#a063ba9b4494999cf79b91a12d375e317">Terraria.NPC.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_afc1911b0bdd8edb99616b1027c3069ea.html#afc1911b0bdd8edb99616b1027c3069ea">Terraria.NPC.setNPCName()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aeef7a240c63c4e7b67fd3a526739d803.html#aeef7a240c63c4e7b67fd3a526739d803">Terraria.Main.sign</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, <a class="el" href="../../dd/d21/classTerraria_1_1Sign_a131f9c37e32667c96d8e31248faa8151.html#a131f9c37e32667c96d8e31248faa8151">Terraria.Sign.text</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_af148499ce76f933f07cb4cd12d8c7c20.html#af148499ce76f933f07cb4cd12d8c7c20">Terraria.WorldGen.tileCounts</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ae338dce4937a8f86359adf78ce853f21.html#ae338dce4937a8f86359adf78ce853f21">Terraria.Main.tileFrameImportant</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ac950f83a8eddcd5f2925e3b58269d755.html#ac950f83a8eddcd5f2925e3b58269d755">Terraria.Main.treeStyle</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a42562f5fb23da20caf88269400373347.html#a42562f5fb23da20caf88269400373347">Terraria.Main.treeX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ae29f1e935710d0c9f5e325f873709719.html#ae29f1e935710d0c9f5e325f873709719">Terraria.Tile.wallColor()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a20cc77b313efdde49821dd3b81d46ad2.html#a20cc77b313efdde49821dd3b81d46ad2">Terraria.Main.windSpeedTarget</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afa6c2317752f526f7aa78d40ff06a386.html#afa6c2317752f526f7aa78d40ff06a386">Terraria.Tile.wire()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ad4ab095f57bcb4816f7c057b4f06843f.html#ad4ab095f57bcb4816f7c057b4f06843f">Terraria.Tile.wire2()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a23882d8ab9e0c0c5539af01871555d33.html#a23882d8ab9e0c0c5539af01871555d33">Terraria.Tile.wire3()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab473a916c9baf04ce662e724309d4b4e.html#ab473a916c9baf04ce662e724309d4b4e">Terraria.Main.worldID</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a73b67bd30108fe6af9d5b8c202809b15.html#a73b67bd30108fe6af9d5b8c202809b15">Terraria.Main.worldName</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a3b847fe649772619b0422322f0080dba.html#a3b847fe649772619b0422322f0080dba">Terraria.Main.worldSurface</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a05f297dafeb5936070f43e8a49b5ce91.html#a05f297dafeb5936070f43e8a49b5ce91">Terraria.Chest.x</a>, <a class="el" href="../../dd/d21/classTerraria_1_1Sign_af7bbb8bd25ac2247b84dea168780b2fe.html#af7bbb8bd25ac2247b84dea168780b2fe">Terraria.Sign.x</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a66024685f339f6bc059218d4857248fc.html#a66024685f339f6bc059218d4857248fc">Terraria.Chest.y</a>, and <a class="el" href="../../dd/d21/classTerraria_1_1Sign_a05b588de56baa5b7f1845132ab220bec.html#a05b588de56baa5b7f1845132ab220bec">Terraria.Sign.y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d54/classTerraria_1_1IO_1_1WorldFile_a1c041c6d14c59fa0e7e8fdf66ecb7dbd.html#a1c041c6d14c59fa0e7e8fdf66ecb7dbd">Terraria.IO.WorldFile.LoadWorld()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

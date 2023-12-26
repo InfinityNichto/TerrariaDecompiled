@@ -131,6 +131,61 @@ $(function(){initNavTree('dd/de1/classTerraria_1_1UI_1_1ItemSlot_a5e3a22d7c08b34
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 1556</span>    {</div>
+<div class="line"><span class="lineno"> 1557</span>        <span class="keywordflow">if</span> (Main.npcShop &gt; 0 || ((inv[slot].type &lt;= 0 || inv[slot].stack &lt;= 0) &amp;&amp; (inv[slot - 10].type &lt;= 0 || inv[slot - 10].stack &lt;= 0)))</div>
+<div class="line"><span class="lineno"> 1558</span>        {</div>
+<div class="line"><span class="lineno"> 1559</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1560</span>        }</div>
+<div class="line"><span class="lineno"> 1561</span>        Item item = inv[slot - 10];</div>
+<div class="line"><span class="lineno"> 1562</span>        <span class="keywordtype">bool</span> flag = context != 11 || item.FitsAccessoryVanitySlot || item.IsAir;</div>
+<div class="line"><span class="lineno"> 1563</span>        <span class="keywordflow">if</span> (flag &amp;&amp; context == 11 &amp;&amp; inv[slot].wingSlot &gt; 0)</div>
+<div class="line"><span class="lineno"> 1564</span>        {</div>
+<div class="line"><span class="lineno"> 1565</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 3; i &lt; 10; i++)</div>
+<div class="line"><span class="lineno"> 1566</span>            {</div>
+<div class="line"><span class="lineno"> 1567</span>                <span class="keywordflow">if</span> (inv[i].wingSlot &gt; 0 &amp;&amp; i != slot - 10)</div>
+<div class="line"><span class="lineno"> 1568</span>                {</div>
+<div class="line"><span class="lineno"> 1569</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1570</span>                }</div>
+<div class="line"><span class="lineno"> 1571</span>            }</div>
+<div class="line"><span class="lineno"> 1572</span>        }</div>
+<div class="line"><span class="lineno"> 1573</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno"> 1574</span>        {</div>
+<div class="line"><span class="lineno"> 1575</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1576</span>        }</div>
+<div class="line"><span class="lineno"> 1577</span>        Utils.Swap(ref inv[slot], ref inv[slot - 10]);</div>
+<div class="line"><span class="lineno"> 1578</span>        <a class="code hl_class" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">SoundEngine</a>.<a class="code hl_function" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">PlaySound</a>(7);</div>
+<div class="line"><span class="lineno"> 1579</span>        Recipe.FindRecipes();</div>
+<div class="line"><span class="lineno"> 1580</span>        <span class="keywordflow">if</span> (inv[slot].stack &gt; 0)</div>
+<div class="line"><span class="lineno"> 1581</span>        {</div>
+<div class="line"><span class="lineno"> 1582</span>            <span class="keywordflow">switch</span> (context)</div>
+<div class="line"><span class="lineno"> 1583</span>            {</div>
+<div class="line"><span class="lineno"> 1584</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 1585</span>                <a class="code hl_class" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper.html">AchievementsHelper</a>.<a class="code hl_function" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ab9a20c518937f41d79e455e9f51b3345.html#ab9a20c518937f41d79e455e9f51b3345">NotifyItemPickup</a>(player, inv[slot]);</div>
+<div class="line"><span class="lineno"> 1586</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1587</span>            <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno"> 1588</span>            <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1589</span>            <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno"> 1590</span>            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno"> 1591</span>            <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno"> 1592</span>            <span class="keywordflow">case</span> 16:</div>
+<div class="line"><span class="lineno"> 1593</span>            <span class="keywordflow">case</span> 17:</div>
+<div class="line"><span class="lineno"> 1594</span>            <span class="keywordflow">case</span> 25:</div>
+<div class="line"><span class="lineno"> 1595</span>            <span class="keywordflow">case</span> 27:</div>
+<div class="line"><span class="lineno"> 1596</span>            <span class="keywordflow">case</span> 33:</div>
+<div class="line"><span class="lineno"> 1597</span>                <a class="code hl_class" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper.html">AchievementsHelper</a>.<a class="code hl_function" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ac540940e178110405059e118d974495b.html#ac540940e178110405059e118d974495b">HandleOnEquip</a>(player, inv[slot], context);</div>
+<div class="line"><span class="lineno"> 1598</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1599</span>            }</div>
+<div class="line"><span class="lineno"> 1600</span>        }</div>
+<div class="line"><span class="lineno"> 1601</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94_html_a65b4b1502c673e839c9bd620e23b2c94"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound</a></div><div class="ttdeci">static void PlaySound(int type, Vector2 position, int style=1)</div><div class="ttdef"><b>Definition</b> SoundEngine.cs:71</div></div>
+<div class="ttc" id="aclassTerraria_1_1Audio_1_1SoundEngine_html"><div class="ttname"><a href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine.html">Terraria.Audio.SoundEngine</a></div><div class="ttdef"><b>Definition</b> SoundEngine.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ab9a20c518937f41d79e455e9f51b3345_html_ab9a20c518937f41d79e455e9f51b3345"><div class="ttname"><a href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ab9a20c518937f41d79e455e9f51b3345.html#ab9a20c518937f41d79e455e9f51b3345">Terraria.GameContent.Achievements.AchievementsHelper.NotifyItemPickup</a></div><div class="ttdeci">static void NotifyItemPickup(Player player, Item item)</div><div class="ttdef"><b>Definition</b> AchievementsHelper.cs:55</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ac540940e178110405059e118d974495b_html_ac540940e178110405059e118d974495b"><div class="ttname"><a href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ac540940e178110405059e118d974495b.html#ac540940e178110405059e118d974495b">Terraria.GameContent.Achievements.AchievementsHelper.HandleOnEquip</a></div><div class="ttdeci">static void HandleOnEquip(Player player, Item item, int context)</div><div class="ttdef"><b>Definition</b> AchievementsHelper.cs:228</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_html"><div class="ttname"><a href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper.html">Terraria.GameContent.Achievements.AchievementsHelper</a></div><div class="ttdef"><b>Definition</b> AchievementsHelper.cs:4</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/dda/classTerraria_1_1Recipe_ae41569d5e6adbe1a2eff6cfac7391480.html#ae41569d5e6adbe1a2eff6cfac7391480">Terraria.Recipe.FindRecipes()</a>, <a class="el" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ac540940e178110405059e118d974495b.html#ac540940e178110405059e118d974495b">Terraria.GameContent.Achievements.AchievementsHelper.HandleOnEquip()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a6092d6f80443cfc07335ec274665656d.html#a6092d6f80443cfc07335ec274665656d">Terraria.Item.IsAir</a>, <a class="el" href="../../d8/d82/classTerraria_1_1GameContent_1_1Achievements_1_1AchievementsHelper_ab9a20c518937f41d79e455e9f51b3345.html#ab9a20c518937f41d79e455e9f51b3345">Terraria.GameContent.Achievements.AchievementsHelper.NotifyItemPickup()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aa1220dd1dfd6bb05571b40806a32177c.html#aa1220dd1dfd6bb05571b40806a32177c">Terraria.Main.npcShop</a>, <a class="el" href="../../d3/d78/classTerraria_1_1Audio_1_1SoundEngine_a65b4b1502c673e839c9bd620e23b2c94.html#a65b4b1502c673e839c9bd620e23b2c94">Terraria.Audio.SoundEngine.PlaySound()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/de1/classTerraria_1_1UI_1_1ItemSlot_a98bc424277619fb6826fcabb8607e3bc.html#a98bc424277619fb6826fcabb8607e3bc">Terraria.UI.ItemSlot.RightClick()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

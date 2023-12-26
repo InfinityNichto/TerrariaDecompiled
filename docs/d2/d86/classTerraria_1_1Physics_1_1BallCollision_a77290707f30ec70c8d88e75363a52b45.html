@@ -126,6 +126,45 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a7729
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        Point tileCoordinates = center.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_enumvalue" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = (contactTile = Main.tile[tileCoordinates.X, tileCoordinates.Y]);</div>
+<div class="line"><span class="lineno">   95</span>        type = <a class="code hl_enumeration" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">BallPassThroughType</a>.None;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (tile == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (tile.nactive())</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            type = <a class="code hl_enumeration" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">BallPassThroughType</a>.Tile;</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ac5864a44791bc219545e851d92211f1b.html#ac5864a44791bc219545e851d92211f1b">IsPositionInsideTile</a>(center, tileCoordinates, tile);</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (tile.liquid &gt; 0)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordtype">float</span> num = (float)(tileCoordinates.Y + 1) * 16f - (float)(<span class="keywordtype">int</span>)tile.liquid / 255f * 16f;</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">switch</span> (tile.liquidType())</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  111</span>                type = <a class="code hl_enumeration" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">BallPassThroughType</a>.Lava;</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  114</span>                type = <a class="code hl_enumeration" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">BallPassThroughType</a>.Honey;</div>
+<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  117</span>                type = <a class="code hl_enumeration" href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">BallPassThroughType</a>.Water;</div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  119</span>            }</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> num &lt; center.Y;</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Physics_1_1BallCollision_ac5864a44791bc219545e851d92211f1b_html_ac5864a44791bc219545e851d92211f1b"><div class="ttname"><a href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ac5864a44791bc219545e851d92211f1b.html#ac5864a44791bc219545e851d92211f1b">Terraria.Physics.BallCollision.IsPositionInsideTile</a></div><div class="ttdeci">static bool IsPositionInsideTile(Vector2 position, Point tileCoordinates, Tile tile)</div><div class="ttdef"><b>Definition</b> BallCollision.cs:125</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd_html_a460df4cd5b42416923caafb1b24d35dd"><div class="ttname"><a href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35dd">Terraria.Physics.BallPassThroughType</a></div><div class="ttdeci">BallPassThroughType</div><div class="ttdef"><b>Definition</b> BallPassThroughType.cs:4</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd_html_a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Terraria.Physics.BallPassThroughType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_aa9197f124ec9ab878bb71edc476935f9.html#aa9197f124ec9ab878bb71edc476935f9">Terraria.Tile.Tile()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ac5864a44791bc219545e851d92211f1b.html#ac5864a44791bc219545e851d92211f1b">Terraria.Physics.BallCollision.IsPositionInsideTile()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a60ac4733dfd5728a363948860bedb743.html#a60ac4733dfd5728a363948860bedb743">Terraria.Tile.liquid</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a335565f4893c2442247db8b5e8d47970.html#a335565f4893c2442247db8b5e8d47970">Terraria.Tile.liquidType()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a67333fdcb7938a55b0485a62f4aaeb56.html#a67333fdcb7938a55b0485a62f4aaeb56">Terraria.Physics.BallCollision.Step()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

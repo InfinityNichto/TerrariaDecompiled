@@ -121,6 +121,83 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_af7673f35adb645f233
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">44085</span>    {</div>
+<div class="line"><span class="lineno">44086</span>        Item item = <span class="keyword">new</span> Item();</div>
+<div class="line"><span class="lineno">44087</span>        item.SetDefaults(itemType);</div>
+<div class="line"><span class="lineno">44088</span>        <span class="keywordflow">if</span> (itemType == 3196)</div>
+<div class="line"><span class="lineno">44089</span>        {</div>
+<div class="line"><span class="lineno">44090</span>            <span class="keywordtype">int</span> finalFishingLevel = thePlayer.GetFishingConditions().FinalFishingLevel;</div>
+<div class="line"><span class="lineno">44091</span>            <span class="keywordtype">int</span> minValue = (finalFishingLevel / 20 + 3) / 2;</div>
+<div class="line"><span class="lineno">44092</span>            <span class="keywordtype">int</span> num = (finalFishingLevel / 10 + 6) / 2;</div>
+<div class="line"><span class="lineno">44093</span>            <span class="keywordflow">if</span> (Main.rand.Next(50) &lt; finalFishingLevel)</div>
+<div class="line"><span class="lineno">44094</span>            {</div>
+<div class="line"><span class="lineno">44095</span>                num++;</div>
+<div class="line"><span class="lineno">44096</span>            }</div>
+<div class="line"><span class="lineno">44097</span>            <span class="keywordflow">if</span> (Main.rand.Next(100) &lt; finalFishingLevel)</div>
+<div class="line"><span class="lineno">44098</span>            {</div>
+<div class="line"><span class="lineno">44099</span>                num++;</div>
+<div class="line"><span class="lineno">44100</span>            }</div>
+<div class="line"><span class="lineno">44101</span>            <span class="keywordflow">if</span> (Main.rand.Next(150) &lt; finalFishingLevel)</div>
+<div class="line"><span class="lineno">44102</span>            {</div>
+<div class="line"><span class="lineno">44103</span>                num++;</div>
+<div class="line"><span class="lineno">44104</span>            }</div>
+<div class="line"><span class="lineno">44105</span>            <span class="keywordflow">if</span> (Main.rand.Next(200) &lt; finalFishingLevel)</div>
+<div class="line"><span class="lineno">44106</span>            {</div>
+<div class="line"><span class="lineno">44107</span>                num++;</div>
+<div class="line"><span class="lineno">44108</span>            }</div>
+<div class="line"><span class="lineno">44109</span>            <span class="keywordtype">int</span> stack = Main.rand.Next(minValue, num + 1);</div>
+<div class="line"><span class="lineno">44110</span>            item.stack = stack;</div>
+<div class="line"><span class="lineno">44111</span>        }</div>
+<div class="line"><span class="lineno">44112</span>        <span class="keywordflow">if</span> (itemType == 3197)</div>
+<div class="line"><span class="lineno">44113</span>        {</div>
+<div class="line"><span class="lineno">44114</span>            <span class="keywordtype">int</span> finalFishingLevel2 = thePlayer.GetFishingConditions().FinalFishingLevel;</div>
+<div class="line"><span class="lineno">44115</span>            <span class="keywordtype">int</span> minValue2 = (finalFishingLevel2 / 4 + 15) / 2;</div>
+<div class="line"><span class="lineno">44116</span>            <span class="keywordtype">int</span> num2 = (finalFishingLevel2 / 2 + 40) / 2;</div>
+<div class="line"><span class="lineno">44117</span>            <span class="keywordflow">if</span> (Main.rand.Next(50) &lt; finalFishingLevel2)</div>
+<div class="line"><span class="lineno">44118</span>            {</div>
+<div class="line"><span class="lineno">44119</span>                num2 += 6;</div>
+<div class="line"><span class="lineno">44120</span>            }</div>
+<div class="line"><span class="lineno">44121</span>            <span class="keywordflow">if</span> (Main.rand.Next(100) &lt; finalFishingLevel2)</div>
+<div class="line"><span class="lineno">44122</span>            {</div>
+<div class="line"><span class="lineno">44123</span>                num2 += 6;</div>
+<div class="line"><span class="lineno">44124</span>            }</div>
+<div class="line"><span class="lineno">44125</span>            <span class="keywordflow">if</span> (Main.rand.Next(150) &lt; finalFishingLevel2)</div>
+<div class="line"><span class="lineno">44126</span>            {</div>
+<div class="line"><span class="lineno">44127</span>                num2 += 6;</div>
+<div class="line"><span class="lineno">44128</span>            }</div>
+<div class="line"><span class="lineno">44129</span>            <span class="keywordflow">if</span> (Main.rand.Next(200) &lt; finalFishingLevel2)</div>
+<div class="line"><span class="lineno">44130</span>            {</div>
+<div class="line"><span class="lineno">44131</span>                num2 += 6;</div>
+<div class="line"><span class="lineno">44132</span>            }</div>
+<div class="line"><span class="lineno">44133</span>            <span class="keywordtype">int</span> stack2 = Main.rand.Next(minValue2, num2 + 1);</div>
+<div class="line"><span class="lineno">44134</span>            item.stack = stack2;</div>
+<div class="line"><span class="lineno">44135</span>        }</div>
+<div class="line"><span class="lineno">44136</span>        item.newAndShiny = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">44137</span>        Item item2 = thePlayer.GetItem(<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>, item, <span class="keywordflow">default</span>(GetItemSettings));</div>
+<div class="line"><span class="lineno">44138</span>        <span class="keywordflow">if</span> (item2.stack &gt; 0)</div>
+<div class="line"><span class="lineno">44139</span>        {</div>
+<div class="line"><span class="lineno">44140</span>            <span class="keywordtype">int</span> number = Item.NewItem(<span class="keyword">new</span> <a class="code hl_class" href="../../d9/deb/classTerraria_1_1DataStructures_1_1EntitySource__FishedOut.html">EntitySource_FishedOut</a>(<span class="keyword">this</span>), (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.X, (<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">position</a>.Y, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">height</a>, itemType, item2.stack, noBroadcast: <span class="keyword">false</span>, 0, noGrabDelay: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">44141</span>            <span class="keywordflow">if</span> (Main.netMode == 1)</div>
+<div class="line"><span class="lineno">44142</span>            {</div>
+<div class="line"><span class="lineno">44143</span>                NetMessage.SendData(21, -1, -1, <span class="keyword">null</span>, number, 1f);</div>
+<div class="line"><span class="lineno">44144</span>            }</div>
+<div class="line"><span class="lineno">44145</span>        }</div>
+<div class="line"><span class="lineno">44146</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">44147</span>        {</div>
+<div class="line"><span class="lineno">44148</span>            item.position.X = base.Center.X - (float)(item.width / 2);</div>
+<div class="line"><span class="lineno">44149</span>            item.position.Y = base.Center.Y - (float)(item.height / 2);</div>
+<div class="line"><span class="lineno">44150</span>            item.active = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">44151</span>            PopupText.NewText(PopupTextContext.RegularItemPickup, item, 0);</div>
+<div class="line"><span class="lineno">44152</span>        }</div>
+<div class="line"><span class="lineno">44153</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1DataStructures_1_1EntitySource__FishedOut_html"><div class="ttname"><a href="../../d9/deb/classTerraria_1_1DataStructures_1_1EntitySource__FishedOut.html">Terraria.DataStructures.EntitySource_FishedOut</a></div><div class="ttdef"><b>Definition</b> EntitySource_FishedOut.cs:4</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8_html_abfdbce2af6c86939a8db98ff6d53a7b8"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdef"><b>Definition</b> Entity.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862_html_afe03c30bbaf67690e7de3a54b82f2862"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Entity.cs:28</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d8d/structTerraria_1_1DataStructures_1_1PlayerFishingConditions_a157eb7ff47217c419f81fddff306df38.html#a157eb7ff47217c419f81fddff306df38">Terraria.DataStructures.PlayerFishingConditions.FinalFishingLevel</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa3955b2c362aeea199961fde5cd4e13a.html#aa3955b2c362aeea199961fde5cd4e13a">Terraria.Player.GetFishingConditions()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3a7ebeb86e906703ff9dbc377db773b0.html#a3a7ebeb86e906703ff9dbc377db773b0">Terraria.Player.GetItem()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ae0f057a4ed207ce83cd3141063371604.html#ae0f057a4ed207ce83cd3141063371604">Terraria.Item.NewItem()</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a8468adb2d30550725db8a99cfe9924ab.html#a8468adb2d30550725db8a99cfe9924ab">Terraria.PopupText.NewText()</a>, <a class="el" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ab2a8b04c02fa05cda4d236c33e289f64.html#ab2a8b04c02fa05cda4d236c33e289f64">Terraria.Main.rand</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_adb2554f9d394eca69180ff503efd10d9.html#adb2554f9d394eca69180ff503efd10d9">Terraria.Item.SetDefaults()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a383996c95e68950a46d631d21abd7b74.html#a383996c95e68950a46d631d21abd7b74">Terraria.Item.stack</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

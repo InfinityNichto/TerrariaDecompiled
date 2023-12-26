@@ -141,6 +141,202 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a4dec276f8d2858ee4dd
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  552</span>    {</div>
+<div class="line"><span class="lineno">  553</span>        <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position1.X + (<span class="keywordtype">float</span>)(Width1 / 2)) / 16f);</div>
+<div class="line"><span class="lineno">  554</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position1.Y + (<span class="keywordtype">float</span>)(Height1 / 2)) / 16f);</div>
+<div class="line"><span class="lineno">  555</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position2.X + (<span class="keywordtype">float</span>)(Width2 / 2)) / 16f);</div>
+<div class="line"><span class="lineno">  556</span>        <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position2.Y + (<span class="keywordtype">float</span>)(Height2 / 2)) / 16f);</div>
+<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">if</span> (num &lt;= 1)</div>
+<div class="line"><span class="lineno">  558</span>        {</div>
+<div class="line"><span class="lineno">  559</span>            num = 1;</div>
+<div class="line"><span class="lineno">  560</span>        }</div>
+<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">if</span> (num &gt;= Main.maxTilesX)</div>
+<div class="line"><span class="lineno">  562</span>        {</div>
+<div class="line"><span class="lineno">  563</span>            num = Main.maxTilesX - 1;</div>
+<div class="line"><span class="lineno">  564</span>        }</div>
+<div class="line"><span class="lineno">  565</span>        <span class="keywordflow">if</span> (num3 &lt;= 1)</div>
+<div class="line"><span class="lineno">  566</span>        {</div>
+<div class="line"><span class="lineno">  567</span>            num3 = 1;</div>
+<div class="line"><span class="lineno">  568</span>        }</div>
+<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">if</span> (num3 &gt;= Main.maxTilesX)</div>
+<div class="line"><span class="lineno">  570</span>        {</div>
+<div class="line"><span class="lineno">  571</span>            num3 = Main.maxTilesX - 1;</div>
+<div class="line"><span class="lineno">  572</span>        }</div>
+<div class="line"><span class="lineno">  573</span>        <span class="keywordflow">if</span> (num2 &lt;= 1)</div>
+<div class="line"><span class="lineno">  574</span>        {</div>
+<div class="line"><span class="lineno">  575</span>            num2 = 1;</div>
+<div class="line"><span class="lineno">  576</span>        }</div>
+<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">if</span> (num2 &gt;= Main.maxTilesY)</div>
+<div class="line"><span class="lineno">  578</span>        {</div>
+<div class="line"><span class="lineno">  579</span>            num2 = Main.maxTilesY - 1;</div>
+<div class="line"><span class="lineno">  580</span>        }</div>
+<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">if</span> (num4 &lt;= 1)</div>
+<div class="line"><span class="lineno">  582</span>        {</div>
+<div class="line"><span class="lineno">  583</span>            num4 = 1;</div>
+<div class="line"><span class="lineno">  584</span>        }</div>
+<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">if</span> (num4 &gt;= Main.maxTilesY)</div>
+<div class="line"><span class="lineno">  586</span>        {</div>
+<div class="line"><span class="lineno">  587</span>            num4 = Main.maxTilesY - 1;</div>
+<div class="line"><span class="lineno">  588</span>        }</div>
+<div class="line"><span class="lineno">  589</span>        <span class="keywordtype">float</span> num5 = Math.Abs(num - num3);</div>
+<div class="line"><span class="lineno">  590</span>        <span class="keywordtype">float</span> num6 = Math.Abs(num2 - num4);</div>
+<div class="line"><span class="lineno">  591</span>        <span class="keywordflow">if</span> (num5 == 0f &amp;&amp; num6 == 0f)</div>
+<div class="line"><span class="lineno">  592</span>        {</div>
+<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  594</span>        }</div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordtype">float</span> num7 = 1f;</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordtype">float</span> num8 = 1f;</div>
+<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">if</span> (num5 == 0f || num6 == 0f)</div>
+<div class="line"><span class="lineno">  598</span>        {</div>
+<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">if</span> (num5 == 0f)</div>
+<div class="line"><span class="lineno">  600</span>            {</div>
+<div class="line"><span class="lineno">  601</span>                num7 = 0f;</div>
+<div class="line"><span class="lineno">  602</span>            }</div>
+<div class="line"><span class="lineno">  603</span>            <span class="keywordflow">if</span> (num6 == 0f)</div>
+<div class="line"><span class="lineno">  604</span>            {</div>
+<div class="line"><span class="lineno">  605</span>                num8 = 0f;</div>
+<div class="line"><span class="lineno">  606</span>            }</div>
+<div class="line"><span class="lineno">  607</span>        }</div>
+<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 &gt; num6)</div>
+<div class="line"><span class="lineno">  609</span>        {</div>
+<div class="line"><span class="lineno">  610</span>            num7 = num5 / num6;</div>
+<div class="line"><span class="lineno">  611</span>        }</div>
+<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  613</span>        {</div>
+<div class="line"><span class="lineno">  614</span>            num8 = num6 / num5;</div>
+<div class="line"><span class="lineno">  615</span>        }</div>
+<div class="line"><span class="lineno">  616</span>        <span class="keywordtype">float</span> num9 = 0f;</div>
+<div class="line"><span class="lineno">  617</span>        <span class="keywordtype">float</span> num10 = 0f;</div>
+<div class="line"><span class="lineno">  618</span>        <span class="keywordtype">int</span> num11 = 1;</div>
+<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">if</span> (num2 &lt; num4)</div>
+<div class="line"><span class="lineno">  620</span>        {</div>
+<div class="line"><span class="lineno">  621</span>            num11 = 2;</div>
+<div class="line"><span class="lineno">  622</span>        }</div>
+<div class="line"><span class="lineno">  623</span>        <span class="keywordtype">int</span> num12 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num5;</div>
+<div class="line"><span class="lineno">  624</span>        <span class="keywordtype">int</span> num13 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num6;</div>
+<div class="line"><span class="lineno">  625</span>        <span class="keywordtype">int</span> num14 = Math.Sign(num3 - num);</div>
+<div class="line"><span class="lineno">  626</span>        <span class="keywordtype">int</span> num15 = Math.Sign(num4 - num2);</div>
+<div class="line"><span class="lineno">  627</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  628</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  630</span>        {</div>
+<div class="line"><span class="lineno">  631</span>            <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  632</span>            {</div>
+<div class="line"><span class="lineno">  633</span>                <span class="keywordflow">switch</span> (num11)</div>
+<div class="line"><span class="lineno">  634</span>                {</div>
+<div class="line"><span class="lineno">  635</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  636</span>                {</div>
+<div class="line"><span class="lineno">  637</span>                    num9 += num7;</div>
+<div class="line"><span class="lineno">  638</span>                    <span class="keywordtype">int</span> num17 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num9;</div>
+<div class="line"><span class="lineno">  639</span>                    num9 %= 1f;</div>
+<div class="line"><span class="lineno">  640</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num17; j++)</div>
+<div class="line"><span class="lineno">  641</span>                    {</div>
+<div class="line"><span class="lineno">  642</span>                        <span class="keywordflow">if</span> (Main.tile[num, num2 - 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  643</span>                        {</div>
+<div class="line"><span class="lineno">  644</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  645</span>                        }</div>
+<div class="line"><span class="lineno">  646</span>                        <span class="keywordflow">if</span> (Main.tile[num, num2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  647</span>                        {</div>
+<div class="line"><span class="lineno">  648</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  649</span>                        }</div>
+<div class="line"><span class="lineno">  650</span>                        <span class="keywordflow">if</span> (Main.tile[num, num2 + 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  651</span>                        {</div>
+<div class="line"><span class="lineno">  652</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  653</span>                        }</div>
+<div class="line"><span class="lineno">  654</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile4 = Main.tile[num, num2 - 1];</div>
+<div class="line"><span class="lineno">  655</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile5 = Main.tile[num, num2 + 1];</div>
+<div class="line"><span class="lineno">  656</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile6 = Main.tile[num, num2];</div>
+<div class="line"><span class="lineno">  657</span>                        <span class="keywordflow">if</span> ((!tile4.inActive() &amp;&amp; tile4.active() &amp;&amp; Main.tileSolid[tile4.type] &amp;&amp; !Main.tileSolidTop[tile4.type]) || (!tile5.inActive() &amp;&amp; tile5.active() &amp;&amp; Main.tileSolid[tile5.type] &amp;&amp; !Main.tileSolidTop[tile5.type]) || (!tile6.inActive() &amp;&amp; tile6.active() &amp;&amp; Main.tileSolid[tile6.type] &amp;&amp; !Main.tileSolidTop[tile6.type]))</div>
+<div class="line"><span class="lineno">  658</span>                        {</div>
+<div class="line"><span class="lineno">  659</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  660</span>                        }</div>
+<div class="line"><span class="lineno">  661</span>                        <span class="keywordflow">if</span> (num12 == 0 &amp;&amp; num13 == 0)</div>
+<div class="line"><span class="lineno">  662</span>                        {</div>
+<div class="line"><span class="lineno">  663</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  664</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  665</span>                        }</div>
+<div class="line"><span class="lineno">  666</span>                        num += num14;</div>
+<div class="line"><span class="lineno">  667</span>                        num12--;</div>
+<div class="line"><span class="lineno">  668</span>                        <span class="keywordflow">if</span> (num12 == 0 &amp;&amp; num13 == 0 &amp;&amp; num17 == 1)</div>
+<div class="line"><span class="lineno">  669</span>                        {</div>
+<div class="line"><span class="lineno">  670</span>                            flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  671</span>                        }</div>
+<div class="line"><span class="lineno">  672</span>                    }</div>
+<div class="line"><span class="lineno">  673</span>                    <span class="keywordflow">if</span> (num13 != 0)</div>
+<div class="line"><span class="lineno">  674</span>                    {</div>
+<div class="line"><span class="lineno">  675</span>                        num11 = 1;</div>
+<div class="line"><span class="lineno">  676</span>                    }</div>
+<div class="line"><span class="lineno">  677</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  678</span>                }</div>
+<div class="line"><span class="lineno">  679</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  680</span>                {</div>
+<div class="line"><span class="lineno">  681</span>                    num10 += num8;</div>
+<div class="line"><span class="lineno">  682</span>                    <span class="keywordtype">int</span> num16 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)num10;</div>
+<div class="line"><span class="lineno">  683</span>                    num10 %= 1f;</div>
+<div class="line"><span class="lineno">  684</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num16; i++)</div>
+<div class="line"><span class="lineno">  685</span>                    {</div>
+<div class="line"><span class="lineno">  686</span>                        <span class="keywordflow">if</span> (Main.tile[num - 1, num2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  687</span>                        {</div>
+<div class="line"><span class="lineno">  688</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  689</span>                        }</div>
+<div class="line"><span class="lineno">  690</span>                        <span class="keywordflow">if</span> (Main.tile[num, num2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  691</span>                        {</div>
+<div class="line"><span class="lineno">  692</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  693</span>                        }</div>
+<div class="line"><span class="lineno">  694</span>                        <span class="keywordflow">if</span> (Main.tile[num + 1, num2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  695</span>                        {</div>
+<div class="line"><span class="lineno">  696</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  697</span>                        }</div>
+<div class="line"><span class="lineno">  698</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[num - 1, num2];</div>
+<div class="line"><span class="lineno">  699</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[num + 1, num2];</div>
+<div class="line"><span class="lineno">  700</span>                        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile3 = Main.tile[num, num2];</div>
+<div class="line"><span class="lineno">  701</span>                        <span class="keywordflow">if</span> ((!tile.inActive() &amp;&amp; tile.active() &amp;&amp; Main.tileSolid[tile.type] &amp;&amp; !Main.tileSolidTop[tile.type]) || (!tile2.inActive() &amp;&amp; tile2.active() &amp;&amp; Main.tileSolid[tile2.type] &amp;&amp; !Main.tileSolidTop[tile2.type]) || (!tile3.inActive() &amp;&amp; tile3.active() &amp;&amp; Main.tileSolid[tile3.type] &amp;&amp; !Main.tileSolidTop[tile3.type]))</div>
+<div class="line"><span class="lineno">  702</span>                        {</div>
+<div class="line"><span class="lineno">  703</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  704</span>                        }</div>
+<div class="line"><span class="lineno">  705</span>                        <span class="keywordflow">if</span> (num12 == 0 &amp;&amp; num13 == 0)</div>
+<div class="line"><span class="lineno">  706</span>                        {</div>
+<div class="line"><span class="lineno">  707</span>                            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  708</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  709</span>                        }</div>
+<div class="line"><span class="lineno">  710</span>                        num2 += num15;</div>
+<div class="line"><span class="lineno">  711</span>                        num13--;</div>
+<div class="line"><span class="lineno">  712</span>                        <span class="keywordflow">if</span> (num12 == 0 &amp;&amp; num13 == 0 &amp;&amp; num16 == 1)</div>
+<div class="line"><span class="lineno">  713</span>                        {</div>
+<div class="line"><span class="lineno">  714</span>                            flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  715</span>                        }</div>
+<div class="line"><span class="lineno">  716</span>                    }</div>
+<div class="line"><span class="lineno">  717</span>                    <span class="keywordflow">if</span> (num12 != 0)</div>
+<div class="line"><span class="lineno">  718</span>                    {</div>
+<div class="line"><span class="lineno">  719</span>                        num11 = 2;</div>
+<div class="line"><span class="lineno">  720</span>                    }</div>
+<div class="line"><span class="lineno">  721</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  722</span>                }</div>
+<div class="line"><span class="lineno">  723</span>                }</div>
+<div class="line"><span class="lineno">  724</span>                <span class="keywordflow">if</span> (Main.tile[num, num2] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  725</span>                {</div>
+<div class="line"><span class="lineno">  726</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  727</span>                }</div>
+<div class="line"><span class="lineno">  728</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile7 = Main.tile[num, num2];</div>
+<div class="line"><span class="lineno">  729</span>                <span class="keywordflow">if</span> (!tile7.inActive() &amp;&amp; tile7.active() &amp;&amp; Main.tileSolid[tile7.type] &amp;&amp; !Main.tileSolidTop[tile7.type])</div>
+<div class="line"><span class="lineno">  730</span>                {</div>
+<div class="line"><span class="lineno">  731</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  732</span>                }</div>
+<div class="line"><span class="lineno">  733</span>            }</div>
+<div class="line"><span class="lineno">  734</span>            <span class="keywordflow">while</span> (!(flag || flag2));</div>
+<div class="line"><span class="lineno">  735</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  736</span>        }</div>
+<div class="line"><span class="lineno">  737</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  738</span>        {</div>
+<div class="line"><span class="lineno">  739</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  740</span>        }</div>
+<div class="line"><span class="lineno">  741</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d0d/classTerraria_1_1NPC_af998ad2acbc8e9008e7d83aad42551f2.html#af998ad2acbc8e9008e7d83aad42551f2">Terraria.NPC.AI()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ade6daf19b968d8070968d9aaea851492.html#ade6daf19b968d8070968d9aaea851492">Terraria.Projectile.AI_001()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a115bdd24332de2127f031719e77458b2.html#a115bdd24332de2127f031719e77458b2">Terraria.NPC.AI_003_Fighters()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_ae5825585a8b5a0bea9de435fb0d2cae0.html#ae5825585a8b5a0bea9de435fb0d2cae0">Terraria.NPC.AI_006_Worms()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a79f2070799ef3105848968d9312f4017.html#a79f2070799ef3105848968d9312f4017">Terraria.NPC.AI_007_TownEntities()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a5ddcbe94eede1b13085a409ef17ed76c.html#a5ddcbe94eede1b13085a409ef17ed76c">Terraria.Projectile.AI_026()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a1ba973d8d80f5e63bebbdde722b07595.html#a1ba973d8d80f5e63bebbdde722b07595">Terraria.Projectile.AI_062()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aa3220841343b2b9014ae808568e18ba3.html#aa3220841343b2b9014ae808568e18ba3">Terraria.Projectile.AI_100_Medusa()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a21549a1872eba86b4b0435188f58080c.html#a21549a1872eba86b4b0435188f58080c">Terraria.NPC.AI_107_ImprovedWalkers()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a35411309fce6a8952e58ff6205b97647.html#a35411309fce6a8952e58ff6205b97647">Terraria.NPC.AI_109_DarkMage()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_a8e4db0a4e1a82b0c09dabf6d0316a651.html#a8e4db0a4e1a82b0c09dabf6d0316a651">Terraria.NPC.AI_121_QueenSlime()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2c68bd8fb14ce89537a4e29ff7370842.html#a2c68bd8fb14ce89537a4e29ff7370842">Terraria.Projectile.AI_130_FlameBurstTower_FindTarget()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a0e979e1cdf108cffcf80c961accf3866.html#a0e979e1cdf108cffcf80c961accf3866">Terraria.Projectile.AI_134_Ballista_FindTarget()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aea48b18addb7cc6c6e7a3e8d3bf527b2.html#aea48b18addb7cc6c6e7a3e8d3bf527b2">Terraria.Projectile.AI_137_CanHit()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_ab414736083f49b61adfd13e1bbd8a464.html#ab414736083f49b61adfd13e1bbd8a464">Terraria.NPC.BloodNautilus_CallForHelp()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a6dba4d7587417307b0dafd40b72a4ce6.html#a6dba4d7587417307b0dafd40b72a4ce6">Terraria.Player.CanHit()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aa18d7e1fa7b65e96565963ef7693799f.html#aa18d7e1fa7b65e96565963ef7693799f">Terraria.Projectile.CanHitWithMeleeWeapon()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a515dee382fc25157902622c06c9f9fa4.html#a515dee382fc25157902622c06c9f9fa4">Terraria.Projectile.CanHitWithOwnBody()</a>, <a class="el" href="../../d2/d0d/classTerraria_1_1Mount_a21d92651dd42e6f40bd5a35f4dcc420b.html#a21d92651dd42e6f40bd5a35f4dcc420b">Terraria.Mount.CastSuperCartLaser()</a>, <a class="el" href="../../d9/da6/classTerraria_1_1GameContent_1_1UI_1_1EmoteBubble_a1a54a24883263fc72d72c5610f5a7451.html#a1a54a24883263fc72d72c5610f5a7451">Terraria.GameContent.UI.EmoteBubble.CheckForNPCsToReactToEmoteBubble()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_abec648b609286fc4b2e8b04acc15a1ca.html#abec648b609286fc4b2e8b04acc15a1ca">Terraria.Projectile.Colliding()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_adc7c36c39fceeca471393b517f1f9a8b.html#adc7c36c39fceeca471393b517f1f9a8b">Terraria.Projectile.Damage()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a54c881bb287a74596163bebab566bfb6.html#a54c881bb287a74596163bebab566bfb6">Terraria.Projectile.FindTargetWithinRange()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_acd01142bcd6fa021aaf5054531658dd4.html#acd01142bcd6fa021aaf5054531658dd4">Terraria.Player.GetFarthestSpawnPositionOnLine()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a8d9b58105005f8173d154dfa648ff8fd.html#a8d9b58105005f8173d154dfa648ff8fd">Terraria.WorldGen.GrowMoreVines()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a1d4ec4eed2d29a40af426a27444be1f3.html#a1d4ec4eed2d29a40af426a27444be1f3">Terraria.Projectile.HandleMovement()</a>, <a class="el" href="../../df/d0d/classTerraria_1_1NPC_ab97c3e37a79e03fc7a6d1e6ab04860d2.html#ab97c3e37a79e03fc7a6d1e6ab04860d2">Terraria.NPC.HitEffect()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_abba66b0ad2d06e6132c51bb281764cf2.html#abba66b0ad2d06e6132c51bb281764cf2">Terraria.Player.ItemCheck_Shoot()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ae8945397f815b554bae82ad9872192e2.html#ae8945397f815b554bae82ad9872192e2">Terraria.Player.QuickMinecart()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aa04136e5fa309fdf54a5ed1a7fafd44c.html#aa04136e5fa309fdf54a5ed1a7fafd44c">Terraria.Player.QuickMinecartSnap()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_afd67a870271f79f733ea9bc91ed01f42.html#afd67a870271f79f733ea9bc91ed01f42">Terraria.Player.SpawnHallucination()</a>, <a class="el" href="../../d9/dc2/classTerraria_1_1GameInput_1_1LockOnHelper_ab9ededd65313964f5095e9fd851c429f.html#ab9ededd65313964f5095e9fd851c429f">Terraria.GameInput.LockOnHelper.Update()</a>, and <a class="el" href="../../d2/d0d/classTerraria_1_1Mount_a7f59eb11637d352f16b0193a73de741c.html#a7f59eb11637d352f16b0193a73de741c">Terraria.Mount.UpdateEffects()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

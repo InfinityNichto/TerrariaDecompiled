@@ -117,6 +117,42 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_ad026aecd3bc24ea41a7171
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49022</span>    {</div>
+<div class="line"><span class="lineno">49023</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">49024</span>        {</div>
+<div class="line"><span class="lineno">49025</span>            Projectile projectile = Main.projectile[i];</div>
+<div class="line"><span class="lineno">49026</span>            <span class="keywordflow">if</span> (!projectile.active || projectile.owner != <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> || !projectile.bobber)</div>
+<div class="line"><span class="lineno">49027</span>            {</div>
+<div class="line"><span class="lineno">49028</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">49029</span>            }</div>
+<div class="line"><span class="lineno">49030</span>            canUse = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">49031</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a> != Main.myPlayer || projectile.ai[0] != 0f)</div>
+<div class="line"><span class="lineno">49032</span>            {</div>
+<div class="line"><span class="lineno">49033</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">49034</span>            }</div>
+<div class="line"><span class="lineno">49035</span>            projectile.ai[0] = 1f;</div>
+<div class="line"><span class="lineno">49036</span>            <span class="keywordtype">float</span> num = -10f;</div>
+<div class="line"><span class="lineno">49037</span>            <span class="keywordflow">if</span> (projectile.wet &amp;&amp; projectile.velocity.Y &gt; num)</div>
+<div class="line"><span class="lineno">49038</span>            {</div>
+<div class="line"><span class="lineno">49039</span>                projectile.velocity.Y = num;</div>
+<div class="line"><span class="lineno">49040</span>            }</div>
+<div class="line"><span class="lineno">49041</span>            projectile.netUpdate2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">49042</span>            <span class="keywordflow">if</span> (projectile.ai[1] &lt; 0f &amp;&amp; projectile.localAI[1] != 0f)</div>
+<div class="line"><span class="lineno">49043</span>            {</div>
+<div class="line"><span class="lineno">49044</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a9af16536e070707b72393c1777a61347.html#a9af16536e070707b72393c1777a61347">ItemCheck_CheckFishingBobber_PickAndConsumeBait</a>(projectile, out var pullTheBobber, out var baitTypeUsed);</div>
+<div class="line"><span class="lineno">49045</span>                <span class="keywordflow">if</span> (pullTheBobber)</div>
+<div class="line"><span class="lineno">49046</span>                {</div>
+<div class="line"><span class="lineno">49047</span>                    <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_a405f2dd0bda71137871c110fb4e5182c.html#a405f2dd0bda71137871c110fb4e5182c">ItemCheck_CheckFishingBobber_PullBobber</a>(projectile, baitTypeUsed);</div>
+<div class="line"><span class="lineno">49048</span>                }</div>
+<div class="line"><span class="lineno">49049</span>            }</div>
+<div class="line"><span class="lineno">49050</span>        }</div>
+<div class="line"><span class="lineno">49051</span>        <span class="keywordflow">return</span> canUse;</div>
+<div class="line"><span class="lineno">49052</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> Entity.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a405f2dd0bda71137871c110fb4e5182c_html_a405f2dd0bda71137871c110fb4e5182c"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a405f2dd0bda71137871c110fb4e5182c.html#a405f2dd0bda71137871c110fb4e5182c">Terraria.Player.ItemCheck_CheckFishingBobber_PullBobber</a></div><div class="ttdeci">void ItemCheck_CheckFishingBobber_PullBobber(Projectile bobber, int baitTypeUsed)</div><div class="ttdef"><b>Definition</b> Player.cs:49054</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a9af16536e070707b72393c1777a61347_html_a9af16536e070707b72393c1777a61347"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a9af16536e070707b72393c1777a61347.html#a9af16536e070707b72393c1777a61347">Terraria.Player.ItemCheck_CheckFishingBobber_PickAndConsumeBait</a></div><div class="ttdeci">void ItemCheck_CheckFishingBobber_PickAndConsumeBait(Projectile bobber, out bool pullTheBobber, out int baitTypeUsed)</div><div class="ttdef"><b>Definition</b> Player.cs:49102</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a8e2023851fbde7b1325b4cd88142e749.html#a8e2023851fbde7b1325b4cd88142e749">Terraria.Projectile.bobber</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a40dd3cce3595df3e5e6f3ecd2616a6a6.html#a40dd3cce3595df3e5e6f3ecd2616a6a6">Terraria.Projectile.localAI</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a8663588d4222e4797697d72a68d9566f.html#a8663588d4222e4797697d72a68d9566f">Terraria.Entity.velocity</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_a0fa66d2f08102e2d76955a6f50633989.html#a0fa66d2f08102e2d76955a6f50633989">Terraria.Entity.wet</a>.</p>
 
 </div>
 </div>

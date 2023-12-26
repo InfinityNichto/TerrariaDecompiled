@@ -117,6 +117,56 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_aff139d0e3dc7b69c64bf8f
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4971</span>    {</div>
+<div class="line"><span class="lineno"> 4972</span>        <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 4973</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">maxBuffs</a>; i++)</div>
+<div class="line"><span class="lineno"> 4974</span>        {</div>
+<div class="line"><span class="lineno"> 4975</span>            <span class="keywordflow">if</span> (attemptedType == 27 &amp;&amp; (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i] == 27 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i] == 101 || <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i] == 102))</div>
+<div class="line"><span class="lineno"> 4976</span>            {</div>
+<div class="line"><span class="lineno"> 4977</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4978</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4979</span>            }</div>
+<div class="line"><span class="lineno"> 4980</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d0/d3e/classTerraria_1_1ID_1_1BuffID.html">BuffID</a>.<a class="code hl_class" href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets_a1e1164eb7c3faa731b3e68238c44762b.html#a1e1164eb7c3faa731b3e68238c44762b">IsWellFed</a>[attemptedType] &amp;&amp; <a class="code hl_class" href="../../d0/d3e/classTerraria_1_1ID_1_1BuffID.html">BuffID</a>.<a class="code hl_class" href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets_a1e1164eb7c3faa731b3e68238c44762b.html#a1e1164eb7c3faa731b3e68238c44762b">IsWellFed</a>[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i]])</div>
+<div class="line"><span class="lineno"> 4981</span>            {</div>
+<div class="line"><span class="lineno"> 4982</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4983</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4984</span>            }</div>
+<div class="line"><span class="lineno"> 4985</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i] == attemptedType)</div>
+<div class="line"><span class="lineno"> 4986</span>            {</div>
+<div class="line"><span class="lineno"> 4987</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4988</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4989</span>            }</div>
+<div class="line"><span class="lineno"> 4990</span>            <span class="keywordflow">if</span> (Main.meleeBuff[attemptedType] &amp;&amp; Main.meleeBuff[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i]])</div>
+<div class="line"><span class="lineno"> 4991</span>            {</div>
+<div class="line"><span class="lineno"> 4992</span>                result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4993</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4994</span>            }</div>
+<div class="line"><span class="lineno"> 4995</span>        }</div>
+<div class="line"><span class="lineno"> 4996</span>        <span class="keywordflow">if</span> (Main.lightPet[attemptedType] || Main.vanityPet[attemptedType])</div>
+<div class="line"><span class="lineno"> 4997</span>        {</div>
+<div class="line"><span class="lineno"> 4998</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">maxBuffs</a>; j++)</div>
+<div class="line"><span class="lineno"> 4999</span>            {</div>
+<div class="line"><span class="lineno"> 5000</span>                <span class="keywordflow">if</span> (Main.lightPet[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[j]] &amp;&amp; Main.lightPet[attemptedType])</div>
+<div class="line"><span class="lineno"> 5001</span>                {</div>
+<div class="line"><span class="lineno"> 5002</span>                    result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5003</span>                }</div>
+<div class="line"><span class="lineno"> 5004</span>                <span class="keywordflow">if</span> (Main.vanityPet[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[j]] &amp;&amp; Main.vanityPet[attemptedType])</div>
+<div class="line"><span class="lineno"> 5005</span>                {</div>
+<div class="line"><span class="lineno"> 5006</span>                    result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5007</span>                }</div>
+<div class="line"><span class="lineno"> 5008</span>            }</div>
+<div class="line"><span class="lineno"> 5009</span>        }</div>
+<div class="line"><span class="lineno"> 5010</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 5011</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1BuffID_1_1Sets_a1e1164eb7c3faa731b3e68238c44762b_html_a1e1164eb7c3faa731b3e68238c44762b"><div class="ttname"><a href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets_a1e1164eb7c3faa731b3e68238c44762b.html#a1e1164eb7c3faa731b3e68238c44762b">Terraria.ID.BuffID.Sets.IsWellFed</a></div><div class="ttdeci">static bool[] IsWellFed</div><div class="ttdef"><b>Definition</b> BuffID.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1BuffID_1_1Sets_html"><div class="ttname"><a href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets.html">Terraria.ID.BuffID.Sets</a></div><div class="ttdef"><b>Definition</b> BuffID.cs:8</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1BuffID_html"><div class="ttname"><a href="../../d0/d3e/classTerraria_1_1ID_1_1BuffID.html">Terraria.ID.BuffID</a></div><div class="ttdef"><b>Definition</b> BuffID.cs:6</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1_html_a29f3e6c334d743f6d52482a5265180e1"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a></div><div class="ttdeci">static readonly int maxBuffs</div><div class="ttdef"><b>Definition</b> Player.cs:1191</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa_html_aba34ea74335a27cda62cca4057b79eaa"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a></div><div class="ttdeci">int[] buffType</div><div class="ttdef"><b>Definition</b> Player.cs:1193</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a>, <a class="el" href="../../d4/d30/classTerraria_1_1ID_1_1BuffID_1_1Sets_a1e1164eb7c3faa731b3e68238c44762b.html#a1e1164eb7c3faa731b3e68238c44762b">Terraria.ID.BuffID.Sets.IsWellFed</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9423daba60141506759a88bb8f90a577.html#a9423daba60141506759a88bb8f90a577">Terraria.Main.lightPet</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a39d07412195237edd6283ee874d330c0.html#a39d07412195237edd6283ee874d330c0">Terraria.Main.meleeBuff</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a0af01de3bcea11395fb1d8df66a5aafb.html#a0af01de3bcea11395fb1d8df66a5aafb">Terraria.Main.vanityPet</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_a3cacb3a4e80b9b3b876ee1f745d4bab3.html#a3cacb3a4e80b9b3b876ee1f745d4bab3">Terraria.Player.QuickBuff()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -136,6 +136,265 @@ $(function(){initNavTree('de/d22/classTerraria_1_1PopupText_a4ed0555f51735430404
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (!Main.showItemText)</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (newItem.Name == <span class="keyword">null</span> || !newItem.active)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordtype">bool</span> flag = newItem.type &gt;= 71 &amp;&amp; newItem.type &lt;= 74;</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 20; i++)</div>
+<div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            PopupText popupText = Main.popupText[i];</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (!popupText.active || popupText.notActuallyAnItem || (!(popupText.name == newItem.AffixName()) &amp;&amp; (!flag || !popupText.coinText)) || popupText.NoStack || noStack)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  190</span>            }</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordtype">string</span> text = newItem.Name + <span class="stringliteral">&quot; (&quot;</span> + (popupText.stack + <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>) + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordtype">string</span> text2 = newItem.Name;</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (popupText.stack &gt; 1)</div>
+<div class="line"><span class="lineno">  194</span>            {</div>
+<div class="line"><span class="lineno">  195</span>                text2 = text2 + <span class="stringliteral">&quot; (&quot;</span> + popupText.stack + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>            Vector2 vector = <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>.MeasureString(text2);</div>
+<div class="line"><span class="lineno">  198</span>            vector = <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>.MeasureString(text);</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (popupText.lifeTime &lt; 0)</div>
+<div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>                popupText.scale = 1f;</div>
+<div class="line"><span class="lineno">  202</span>            }</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (popupText.lifeTime &lt; 60)</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                popupText.lifeTime = 60;</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (flag &amp;&amp; popupText.coinText)</div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                <span class="keywordtype">long</span> num = 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">if</span> (newItem.type == 71)</div>
+<div class="line"><span class="lineno">  211</span>                {</div>
+<div class="line"><span class="lineno">  212</span>                    num += <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  213</span>                }</div>
+<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 72)</div>
+<div class="line"><span class="lineno">  215</span>                {</div>
+<div class="line"><span class="lineno">  216</span>                    num += 100 * <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  217</span>                }</div>
+<div class="line"><span class="lineno">  218</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 73)</div>
+<div class="line"><span class="lineno">  219</span>                {</div>
+<div class="line"><span class="lineno">  220</span>                    num += 10000 * <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  221</span>                }</div>
+<div class="line"><span class="lineno">  222</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 74)</div>
+<div class="line"><span class="lineno">  223</span>                {</div>
+<div class="line"><span class="lineno">  224</span>                    num += 1000000 * <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  225</span>                }</div>
+<div class="line"><span class="lineno">  226</span>                popupText.AddToCoinValue(num);</div>
+<div class="line"><span class="lineno">  227</span>                text = <a class="code hl_function" href="../../de/d22/classTerraria_1_1PopupText_ab8f2c6c08b55fd020352cd5b8abdb5b4.html#ab8f2c6c08b55fd020352cd5b8abdb5b4">ValueToName</a>(popupText.coinValue);</div>
+<div class="line"><span class="lineno">  228</span>                vector = <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>.MeasureString(text);</div>
+<div class="line"><span class="lineno">  229</span>                popupText.name = text;</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">if</span> (popupText.coinValue &gt;= 1000000)</div>
+<div class="line"><span class="lineno">  231</span>                {</div>
+<div class="line"><span class="lineno">  232</span>                    <span class="keywordflow">if</span> (popupText.lifeTime &lt; 300)</div>
+<div class="line"><span class="lineno">  233</span>                    {</div>
+<div class="line"><span class="lineno">  234</span>                        popupText.lifeTime = 300;</div>
+<div class="line"><span class="lineno">  235</span>                    }</div>
+<div class="line"><span class="lineno">  236</span>                    popupText.color = <span class="keyword">new</span> Color(220, 220, 198);</div>
+<div class="line"><span class="lineno">  237</span>                }</div>
+<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText.coinValue &gt;= 10000)</div>
+<div class="line"><span class="lineno">  239</span>                {</div>
+<div class="line"><span class="lineno">  240</span>                    <span class="keywordflow">if</span> (popupText.lifeTime &lt; 240)</div>
+<div class="line"><span class="lineno">  241</span>                    {</div>
+<div class="line"><span class="lineno">  242</span>                        popupText.lifeTime = 240;</div>
+<div class="line"><span class="lineno">  243</span>                    }</div>
+<div class="line"><span class="lineno">  244</span>                    popupText.color = <span class="keyword">new</span> Color(224, 201, 92);</div>
+<div class="line"><span class="lineno">  245</span>                }</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText.coinValue &gt;= 100)</div>
+<div class="line"><span class="lineno">  247</span>                {</div>
+<div class="line"><span class="lineno">  248</span>                    <span class="keywordflow">if</span> (popupText.lifeTime &lt; 180)</div>
+<div class="line"><span class="lineno">  249</span>                    {</div>
+<div class="line"><span class="lineno">  250</span>                        popupText.lifeTime = 180;</div>
+<div class="line"><span class="lineno">  251</span>                    }</div>
+<div class="line"><span class="lineno">  252</span>                    popupText.color = <span class="keyword">new</span> Color(181, 192, 193);</div>
+<div class="line"><span class="lineno">  253</span>                }</div>
+<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText.coinValue &gt;= 1)</div>
+<div class="line"><span class="lineno">  255</span>                {</div>
+<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">if</span> (popupText.lifeTime &lt; 120)</div>
+<div class="line"><span class="lineno">  257</span>                    {</div>
+<div class="line"><span class="lineno">  258</span>                        popupText.lifeTime = 120;</div>
+<div class="line"><span class="lineno">  259</span>                    }</div>
+<div class="line"><span class="lineno">  260</span>                    popupText.color = <span class="keyword">new</span> Color(246, 138, 96);</div>
+<div class="line"><span class="lineno">  261</span>                }</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span>            popupText.stack += <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  264</span>            popupText.scale = 0f;</div>
+<div class="line"><span class="lineno">  265</span>            popupText.rotation = 0f;</div>
+<div class="line"><span class="lineno">  266</span>            popupText.position.X = newItem.position.X + (float)newItem.width * 0.5f - vector.X * 0.5f;</div>
+<div class="line"><span class="lineno">  267</span>            popupText.position.Y = newItem.position.Y + (float)newItem.height * 0.25f - vector.Y * 0.5f;</div>
+<div class="line"><span class="lineno">  268</span>            popupText.velocity.Y = -7f;</div>
+<div class="line"><span class="lineno">  269</span>            popupText.context = <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_aeb766313282685398660454bff8c3ff4.html#aeb766313282685398660454bff8c3ff4">context</a>;</div>
+<div class="line"><span class="lineno">  270</span>            popupText.npcNetID = 0;</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">if</span> (popupText.coinText)</div>
+<div class="line"><span class="lineno">  272</span>            {</div>
+<div class="line"><span class="lineno">  273</span>                popupText.stack = 1<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_function" href="../../de/d22/classTerraria_1_1PopupText_ab7bcdaa82e5d306b5be23a962496aec4.html#ab7bcdaa82e5d306b5be23a962496aec4">FindNextItemTextSlot</a>();</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">if</span> (num2 &gt;= 0)</div>
+<div class="line"><span class="lineno">  279</span>        {</div>
+<div class="line"><span class="lineno">  280</span>            <span class="keywordtype">string</span> text3 = newItem.AffixName();</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a> &gt; 1)</div>
+<div class="line"><span class="lineno">  282</span>            {</div>
+<div class="line"><span class="lineno">  283</span>                text3 = text3 + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a> + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  284</span>            }</div>
+<div class="line"><span class="lineno">  285</span>            Vector2 vector2 = <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>.MeasureString(text3);</div>
+<div class="line"><span class="lineno">  286</span>            PopupText popupText2 = Main.popupText[num2];</div>
+<div class="line"><span class="lineno">  287</span>            <a class="code hl_function" href="../../de/d22/classTerraria_1_1PopupText_a5622b2cfeea3ecd578e7cab0bcef93b8.html#a5622b2cfeea3ecd578e7cab0bcef93b8">ResetText</a>(popupText2);</div>
+<div class="line"><span class="lineno">  288</span>            popupText2.active = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  289</span>            popupText2.position.X = newItem.position.X + (float)newItem.width * 0.5f - vector2.X * 0.5f;</div>
+<div class="line"><span class="lineno">  290</span>            popupText2.position.Y = newItem.position.Y + (float)newItem.height * 0.25f - vector2.Y * 0.5f;</div>
+<div class="line"><span class="lineno">  291</span>            popupText2.color = Color.White;</div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">if</span> (newItem.rare == 1)</div>
+<div class="line"><span class="lineno">  293</span>            {</div>
+<div class="line"><span class="lineno">  294</span>                popupText2.color = <span class="keyword">new</span> Color(150, 150, 255);</div>
+<div class="line"><span class="lineno">  295</span>            }</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 2)</div>
+<div class="line"><span class="lineno">  297</span>            {</div>
+<div class="line"><span class="lineno">  298</span>                popupText2.color = <span class="keyword">new</span> Color(150, 255, 150);</div>
+<div class="line"><span class="lineno">  299</span>            }</div>
+<div class="line"><span class="lineno">  300</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 3)</div>
+<div class="line"><span class="lineno">  301</span>            {</div>
+<div class="line"><span class="lineno">  302</span>                popupText2.color = <span class="keyword">new</span> Color(255, 200, 150);</div>
+<div class="line"><span class="lineno">  303</span>            }</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 4)</div>
+<div class="line"><span class="lineno">  305</span>            {</div>
+<div class="line"><span class="lineno">  306</span>                popupText2.color = <span class="keyword">new</span> Color(255, 150, 150);</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 5)</div>
+<div class="line"><span class="lineno">  309</span>            {</div>
+<div class="line"><span class="lineno">  310</span>                popupText2.color = <span class="keyword">new</span> Color(255, 150, 255);</div>
+<div class="line"><span class="lineno">  311</span>            }</div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == -13)</div>
+<div class="line"><span class="lineno">  313</span>            {</div>
+<div class="line"><span class="lineno">  314</span>                popupText2.master = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  315</span>            }</div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == -11)</div>
+<div class="line"><span class="lineno">  317</span>            {</div>
+<div class="line"><span class="lineno">  318</span>                popupText2.color = <span class="keyword">new</span> Color(255, 175, 0);</div>
+<div class="line"><span class="lineno">  319</span>            }</div>
+<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == -1)</div>
+<div class="line"><span class="lineno">  321</span>            {</div>
+<div class="line"><span class="lineno">  322</span>                popupText2.color = <span class="keyword">new</span> Color(130, 130, 130);</div>
+<div class="line"><span class="lineno">  323</span>            }</div>
+<div class="line"><span class="lineno">  324</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 6)</div>
+<div class="line"><span class="lineno">  325</span>            {</div>
+<div class="line"><span class="lineno">  326</span>                popupText2.color = <span class="keyword">new</span> Color(210, 160, 255);</div>
+<div class="line"><span class="lineno">  327</span>            }</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 7)</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                popupText2.color = <span class="keyword">new</span> Color(150, 255, 10);</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 8)</div>
+<div class="line"><span class="lineno">  333</span>            {</div>
+<div class="line"><span class="lineno">  334</span>                popupText2.color = <span class="keyword">new</span> Color(255, 255, 10);</div>
+<div class="line"><span class="lineno">  335</span>            }</div>
+<div class="line"><span class="lineno">  336</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 9)</div>
+<div class="line"><span class="lineno">  337</span>            {</div>
+<div class="line"><span class="lineno">  338</span>                popupText2.color = <span class="keyword">new</span> Color(5, 200, 255);</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare == 10)</div>
+<div class="line"><span class="lineno">  341</span>            {</div>
+<div class="line"><span class="lineno">  342</span>                popupText2.color = <span class="keyword">new</span> Color(255, 40, 100);</div>
+<div class="line"><span class="lineno">  343</span>            }</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.rare &gt;= 11)</div>
+<div class="line"><span class="lineno">  345</span>            {</div>
+<div class="line"><span class="lineno">  346</span>                popupText2.color = <span class="keyword">new</span> Color(180, 40, 255);</div>
+<div class="line"><span class="lineno">  347</span>            }</div>
+<div class="line"><span class="lineno">  348</span>            popupText2.expert = newItem.expert;</div>
+<div class="line"><span class="lineno">  349</span>            popupText2.name = newItem.AffixName();</div>
+<div class="line"><span class="lineno">  350</span>            popupText2.stack = <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">stack</a>;</div>
+<div class="line"><span class="lineno">  351</span>            popupText2.velocity.Y = -7f;</div>
+<div class="line"><span class="lineno">  352</span>            popupText2.lifeTime = 60;</div>
+<div class="line"><span class="lineno">  353</span>            popupText2.context = <a class="code hl_variable" href="../../de/d22/classTerraria_1_1PopupText_aeb766313282685398660454bff8c3ff4.html#aeb766313282685398660454bff8c3ff4">context</a>;</div>
+<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">if</span> (longText)</div>
+<div class="line"><span class="lineno">  355</span>            {</div>
+<div class="line"><span class="lineno">  356</span>                popupText2.lifeTime *= 5;</div>
+<div class="line"><span class="lineno">  357</span>            }</div>
+<div class="line"><span class="lineno">  358</span>            popupText2.coinValue = 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  359</span>            popupText2.coinText = newItem.type &gt;= 71 &amp;&amp; newItem.type &lt;= 74;</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">if</span> (popupText2.coinText)</div>
+<div class="line"><span class="lineno">  361</span>            {</div>
+<div class="line"><span class="lineno">  362</span>                <span class="keywordtype">long</span> num3 = 0<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  363</span>                <span class="keywordflow">if</span> (newItem.type == 71)</div>
+<div class="line"><span class="lineno">  364</span>                {</div>
+<div class="line"><span class="lineno">  365</span>                    num3 += popupText2.stack;</div>
+<div class="line"><span class="lineno">  366</span>                }</div>
+<div class="line"><span class="lineno">  367</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 72)</div>
+<div class="line"><span class="lineno">  368</span>                {</div>
+<div class="line"><span class="lineno">  369</span>                    num3 += 100 * popupText2.stack;</div>
+<div class="line"><span class="lineno">  370</span>                }</div>
+<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 73)</div>
+<div class="line"><span class="lineno">  372</span>                {</div>
+<div class="line"><span class="lineno">  373</span>                    num3 += 10000 * popupText2.stack;</div>
+<div class="line"><span class="lineno">  374</span>                }</div>
+<div class="line"><span class="lineno">  375</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (newItem.type == 74)</div>
+<div class="line"><span class="lineno">  376</span>                {</div>
+<div class="line"><span class="lineno">  377</span>                    num3 += 1000000 * popupText2.stack;</div>
+<div class="line"><span class="lineno">  378</span>                }</div>
+<div class="line"><span class="lineno">  379</span>                popupText2.AddToCoinValue(num3);</div>
+<div class="line"><span class="lineno">  380</span>                popupText2.ValueToName();</div>
+<div class="line"><span class="lineno">  381</span>                popupText2.stack = 1<a class="code hl_enumvalue" href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">L</a>;</div>
+<div class="line"><span class="lineno">  382</span>                <span class="keywordflow">if</span> (popupText2.coinValue &gt;= 1000000)</div>
+<div class="line"><span class="lineno">  383</span>                {</div>
+<div class="line"><span class="lineno">  384</span>                    <span class="keywordflow">if</span> (popupText2.lifeTime &lt; 300)</div>
+<div class="line"><span class="lineno">  385</span>                    {</div>
+<div class="line"><span class="lineno">  386</span>                        popupText2.lifeTime = 300;</div>
+<div class="line"><span class="lineno">  387</span>                    }</div>
+<div class="line"><span class="lineno">  388</span>                    popupText2.color = <span class="keyword">new</span> Color(220, 220, 198);</div>
+<div class="line"><span class="lineno">  389</span>                }</div>
+<div class="line"><span class="lineno">  390</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText2.coinValue &gt;= 10000)</div>
+<div class="line"><span class="lineno">  391</span>                {</div>
+<div class="line"><span class="lineno">  392</span>                    <span class="keywordflow">if</span> (popupText2.lifeTime &lt; 240)</div>
+<div class="line"><span class="lineno">  393</span>                    {</div>
+<div class="line"><span class="lineno">  394</span>                        popupText2.lifeTime = 240;</div>
+<div class="line"><span class="lineno">  395</span>                    }</div>
+<div class="line"><span class="lineno">  396</span>                    popupText2.color = <span class="keyword">new</span> Color(224, 201, 92);</div>
+<div class="line"><span class="lineno">  397</span>                }</div>
+<div class="line"><span class="lineno">  398</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText2.coinValue &gt;= 100)</div>
+<div class="line"><span class="lineno">  399</span>                {</div>
+<div class="line"><span class="lineno">  400</span>                    <span class="keywordflow">if</span> (popupText2.lifeTime &lt; 180)</div>
+<div class="line"><span class="lineno">  401</span>                    {</div>
+<div class="line"><span class="lineno">  402</span>                        popupText2.lifeTime = 180;</div>
+<div class="line"><span class="lineno">  403</span>                    }</div>
+<div class="line"><span class="lineno">  404</span>                    popupText2.color = <span class="keyword">new</span> Color(181, 192, 193);</div>
+<div class="line"><span class="lineno">  405</span>                }</div>
+<div class="line"><span class="lineno">  406</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (popupText2.coinValue &gt;= 1)</div>
+<div class="line"><span class="lineno">  407</span>                {</div>
+<div class="line"><span class="lineno">  408</span>                    <span class="keywordflow">if</span> (popupText2.lifeTime &lt; 120)</div>
+<div class="line"><span class="lineno">  409</span>                    {</div>
+<div class="line"><span class="lineno">  410</span>                        popupText2.lifeTime = 120;</div>
+<div class="line"><span class="lineno">  411</span>                    }</div>
+<div class="line"><span class="lineno">  412</span>                    popupText2.color = <span class="keyword">new</span> Color(246, 138, 96);</div>
+<div class="line"><span class="lineno">  413</span>                }</div>
+<div class="line"><span class="lineno">  414</span>            }</div>
+<div class="line"><span class="lineno">  415</span>        }</div>
+<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> num2;</div>
+<div class="line"><span class="lineno">  417</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a_html_a2ae0d3919d29634fceacb1374fafd09a"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset.Value</a></div><div class="ttdeci">T Value</div><div class="ttdef"><b>Definition</b> Asset.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0_html_ae4b975931540c8f4272e7054537910d0"><div class="ttname"><a href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">Terraria.GameContent.FontAssets.MouseText</a></div><div class="ttdeci">static Asset&lt; DynamicSpriteFont &gt; MouseText</div><div class="ttdef"><b>Definition</b> FontAssets.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1FontAssets_html"><div class="ttname"><a href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">Terraria.GameContent.FontAssets</a></div><div class="ttdef"><b>Definition</b> FontAssets.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_a5622b2cfeea3ecd578e7cab0bcef93b8_html_a5622b2cfeea3ecd578e7cab0bcef93b8"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_a5622b2cfeea3ecd578e7cab0bcef93b8.html#a5622b2cfeea3ecd578e7cab0bcef93b8">Terraria.PopupText.ResetText</a></div><div class="ttdeci">static void ResetText(PopupText text)</div><div class="ttdef"><b>Definition</b> PopupText.cs:79</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425_html_a93f0e91f8a875a727a7105fcd4d9c425"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">Terraria.PopupText.stack</a></div><div class="ttdeci">long stack</div><div class="ttdef"><b>Definition</b> PopupText.cs:20</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_ab7bcdaa82e5d306b5be23a962496aec4_html_ab7bcdaa82e5d306b5be23a962496aec4"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_ab7bcdaa82e5d306b5be23a962496aec4.html#ab7bcdaa82e5d306b5be23a962496aec4">Terraria.PopupText.FindNextItemTextSlot</a></div><div class="ttdeci">static int FindNextItemTextSlot()</div><div class="ttdef"><b>Definition</b> PopupText.cs:425</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_ab8f2c6c08b55fd020352cd5b8abdb5b4_html_ab8f2c6c08b55fd020352cd5b8abdb5b4"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_ab8f2c6c08b55fd020352cd5b8abdb5b4.html#ab8f2c6c08b55fd020352cd5b8abdb5b4">Terraria.PopupText.ValueToName</a></div><div class="ttdeci">void ValueToName()</div><div class="ttdef"><b>Definition</b> PopupText.cs:515</div></div>
+<div class="ttc" id="aclassTerraria_1_1PopupText_aeb766313282685398660454bff8c3ff4_html_aeb766313282685398660454bff8c3ff4"><div class="ttname"><a href="../../de/d22/classTerraria_1_1PopupText_aeb766313282685398660454bff8c3ff4.html#aeb766313282685398660454bff8c3ff4">Terraria.PopupText.context</a></div><div class="ttdeci">PopupTextContext context</div><div class="ttdef"><b>Definition</b> PopupText.cs:50</div></div>
+<div class="ttc" id="anamespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4_html_a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587"><div class="ttname"><a href="../../d4/d72/namespaceReLogic_1_1Peripherals_1_1RGB_1_1Logitech_a7d8e50d63356accd7ac5c4d1f0f30cc4.html#a7d8e50d63356accd7ac5c4d1f0f30cc4ad20caec3b48a1eef164cb4ca81ba2587">ReLogic.Peripherals.RGB.Logitech.KeyName.L</a></div><div class="ttdeci">@ L</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a8153bc82db686e51040c6c682a13446b.html#a8153bc82db686e51040c6c682a13446b">Terraria.PopupText.active</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_afb39895c06957eb82de09f2bb59597d2.html#afb39895c06957eb82de09f2bb59597d2">Terraria.PopupText.AddToCoinValue()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a1a229fb8df3d9f92dc4366aa4cd92e3a.html#a1a229fb8df3d9f92dc4366aa4cd92e3a">Terraria.Item.AffixName()</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a48b8995de0d4b3d122fbe2b8d89065bb.html#a48b8995de0d4b3d122fbe2b8d89065bb">Terraria.PopupText.coinText</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a690010f93700737a5f533f8c9507f94b.html#a690010f93700737a5f533f8c9507f94b">Terraria.PopupText.coinValue</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_aeb766313282685398660454bff8c3ff4.html#aeb766313282685398660454bff8c3ff4">Terraria.PopupText.context</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a05dfaeec8f9a10fc7ac6218dcfc3f6fe.html#a05dfaeec8f9a10fc7ac6218dcfc3f6fe">Terraria.Item.expert</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_ab7bcdaa82e5d306b5be23a962496aec4.html#ab7bcdaa82e5d306b5be23a962496aec4">Terraria.PopupText.FindNextItemTextSlot()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_ac9f53d9044ea2c4241f9fcd06baea7d2.html#ac9f53d9044ea2c4241f9fcd06baea7d2">Terraria.PopupText.lifeTime</a>, <a class="el" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">Terraria.GameContent.FontAssets.MouseText</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a8de3690c18ae5a96c70495d8d7976f41.html#a8de3690c18ae5a96c70495d8d7976f41">Terraria.Item.Name</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_ae0e8000f62461c760e18289458c0c4d7.html#ae0e8000f62461c760e18289458c0c4d7">Terraria.PopupText.name</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a98848b7bfd176b3243a1a7a771cf39ed.html#a98848b7bfd176b3243a1a7a771cf39ed">Terraria.PopupText.NoStack</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a386974142b57520c91c41fc58bb17439.html#a386974142b57520c91c41fc58bb17439">Terraria.PopupText.notActuallyAnItem</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af4a60061a5794d746cb58b5c09c7b25f.html#af4a60061a5794d746cb58b5c09c7b25f">Terraria.Main.popupText</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a4298ce75f8fc2a75f19804ca2acd4fb6.html#a4298ce75f8fc2a75f19804ca2acd4fb6">Terraria.Item.rare</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a5622b2cfeea3ecd578e7cab0bcef93b8.html#a5622b2cfeea3ecd578e7cab0bcef93b8">Terraria.PopupText.ResetText()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8747160bdf683a1c8ef185b6919818af.html#a8747160bdf683a1c8ef185b6919818af">Terraria.Main.showItemText</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a93f0e91f8a875a727a7105fcd4d9c425.html#a93f0e91f8a875a727a7105fcd4d9c425">Terraria.PopupText.stack</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_af899f98d7e57032a26aada65e7e0168a.html#af899f98d7e57032a26aada65e7e0168a">Terraria.Item.type</a>, <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_ab8f2c6c08b55fd020352cd5b8abdb5b4.html#ab8f2c6c08b55fd020352cd5b8abdb5b4">Terraria.PopupText.ValueToName()</a>, <a class="el" href="../../de/d22/classTerraria_1_1PopupText_a8e9ec4caf02a6d71b12cf99fad6bc722.html#a8e9ec4caf02a6d71b12cf99fad6bc722">Terraria.PopupText.ValueToName()</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

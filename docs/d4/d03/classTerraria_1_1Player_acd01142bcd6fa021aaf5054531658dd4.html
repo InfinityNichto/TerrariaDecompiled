@@ -126,6 +126,36 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_acd01142bcd6fa021aaf505
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">46676</span>    {</div>
+<div class="line"><span class="lineno">46677</span>        Vector2 pointPoisition = Main.ReverseGravitySupport(Main.MouseScreen) + Main.screenPosition;</div>
+<div class="line"><span class="lineno">46678</span>        <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_aae42e052b3b18a6b8e0756c22b122761.html#aae42e052b3b18a6b8e0756c22b122761">LimitPointToPlayerReachableArea</a>(ref pointPoisition);</div>
+<div class="line"><span class="lineno">46679</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">46680</span>        <span class="keywordtype">float</span> num2 = <span class="keyword">new</span> Vector2(speedX, speedY).Length();</div>
+<div class="line"><span class="lineno">46681</span>        <span class="keywordtype">float</span> num3 = (pointPoisition - startPos).Length();</div>
+<div class="line"><span class="lineno">46682</span>        Vector2 center = base.Center;</div>
+<div class="line"><span class="lineno">46683</span>        center.X += <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">direction</a> * 16;</div>
+<div class="line"><span class="lineno">46684</span>        <span class="keywordflow">while</span> (Collision.CanHitLine(center, 0, 0, startPos, 0, 0))</div>
+<div class="line"><span class="lineno">46685</span>        {</div>
+<div class="line"><span class="lineno">46686</span>            num++;</div>
+<div class="line"><span class="lineno">46687</span>            startPos.X += speedX;</div>
+<div class="line"><span class="lineno">46688</span>            startPos.Y += speedY;</div>
+<div class="line"><span class="lineno">46689</span>            <span class="keywordflow">if</span> ((startPos - pointPoisition).Length() &lt; 20f + Math.Abs(speedX) + Math.Abs(speedY))</div>
+<div class="line"><span class="lineno">46690</span>            {</div>
+<div class="line"><span class="lineno">46691</span>                startPos = pointPoisition;</div>
+<div class="line"><span class="lineno">46692</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">46693</span>            }</div>
+<div class="line"><span class="lineno">46694</span>            <span class="keywordflow">if</span> (num2 * (<span class="keywordtype">float</span>)num &gt;= num3)</div>
+<div class="line"><span class="lineno">46695</span>            {</div>
+<div class="line"><span class="lineno">46696</span>                startPos = pointPoisition;</div>
+<div class="line"><span class="lineno">46697</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">46698</span>            }</div>
+<div class="line"><span class="lineno">46699</span>        }</div>
+<div class="line"><span class="lineno">46700</span>        <span class="keywordflow">return</span> startPos;</div>
+<div class="line"><span class="lineno">46701</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f_html_a2dc818b6035d9e739592ea0e9a75945f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a2dc818b6035d9e739592ea0e9a75945f.html#a2dc818b6035d9e739592ea0e9a75945f">Terraria.Entity.direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition</b> Entity.cs:24</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aae42e052b3b18a6b8e0756c22b122761_html_aae42e052b3b18a6b8e0756c22b122761"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aae42e052b3b18a6b8e0756c22b122761.html#aae42e052b3b18a6b8e0756c22b122761">Terraria.Player.LimitPointToPlayerReachableArea</a></div><div class="ttdeci">void LimitPointToPlayerReachableArea(ref Vector2 pointPoisition)</div><div class="ttdef"><b>Definition</b> Player.cs:43259</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a4dec276f8d2858ee4dd91c23f5bffa52.html#a4dec276f8d2858ee4dd91c23f5bffa52">Terraria.Collision.CanHitLine()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a722d85d94fd4ea0c1c641c58c85736f6.html#a722d85d94fd4ea0c1c641c58c85736f6">Terraria.Main.MouseScreen</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a433873fe233ad6228260abd07c38edbe.html#a433873fe233ad6228260abd07c38edbe">Terraria.Main.ReverseGravitySupport()</a>, and <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d6f09a4da6c2e14d081814d33975189.html#a6d6f09a4da6c2e14d081814d33975189">Terraria.Main.screenPosition</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

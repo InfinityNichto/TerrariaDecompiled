@@ -121,6 +121,61 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a985e2bb969d6cf2ed9a1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">59976</span>    {</div>
+<div class="line"><span class="lineno">59977</span>        <span class="keywordtype">int</span> num = 40;</div>
+<div class="line"><span class="lineno">59978</span>        <span class="keywordtype">int</span> num2 = 130;</div>
+<div class="line"><span class="lineno">59979</span>        <span class="keywordtype">int</span> num3 = 35;</div>
+<div class="line"><span class="lineno">59980</span>        <span class="keywordtype">int</span> num4 = 85;</div>
+<div class="line"><span class="lineno">59981</span>        <span class="keywordflow">if</span> (Main.remixWorld)</div>
+<div class="line"><span class="lineno">59982</span>        {</div>
+<div class="line"><span class="lineno">59983</span>            num += 5;</div>
+<div class="line"><span class="lineno">59984</span>            num2 *= 15;</div>
+<div class="line"><span class="lineno">59985</span>            num3 -= 4;</div>
+<div class="line"><span class="lineno">59986</span>            num4 -= 8;</div>
+<div class="line"><span class="lineno">59987</span>        }</div>
+<div class="line"><span class="lineno">59988</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">double</span>)j &lt; Main.rockLayer)</div>
+<div class="line"><span class="lineno">59989</span>        {</div>
+<div class="line"><span class="lineno">59990</span>            num /= 2;</div>
+<div class="line"><span class="lineno">59991</span>            num2 /= 2;</div>
+<div class="line"><span class="lineno">59992</span>            num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((<span class="keywordtype">double</span>)num3 * 1.5);</div>
+<div class="line"><span class="lineno">59993</span>            num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((<span class="keywordtype">double</span>)num4 * 1.5);</div>
+<div class="line"><span class="lineno">59994</span>        }</div>
+<div class="line"><span class="lineno">59995</span>        <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno">59996</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = i - num3; k &lt; i + num3; k++)</div>
+<div class="line"><span class="lineno">59997</span>        {</div>
+<div class="line"><span class="lineno">59998</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = j - num3; l &lt; j + num3; l++)</div>
+<div class="line"><span class="lineno">59999</span>            {</div>
+<div class="line"><span class="lineno">60000</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(k, l) &amp;&amp; Main.tile[k, l].active() &amp;&amp; Main.tile[k, l].type == 211)</div>
+<div class="line"><span class="lineno">60001</span>                {</div>
+<div class="line"><span class="lineno">60002</span>                    num5++;</div>
+<div class="line"><span class="lineno">60003</span>                }</div>
+<div class="line"><span class="lineno">60004</span>            }</div>
+<div class="line"><span class="lineno">60005</span>        }</div>
+<div class="line"><span class="lineno">60006</span>        <span class="keywordflow">if</span> (num5 &gt; num)</div>
+<div class="line"><span class="lineno">60007</span>        {</div>
+<div class="line"><span class="lineno">60008</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">60009</span>        }</div>
+<div class="line"><span class="lineno">60010</span>        num5 = 0;</div>
+<div class="line"><span class="lineno">60011</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = i - num4; m &lt; i + num4; m++)</div>
+<div class="line"><span class="lineno">60012</span>        {</div>
+<div class="line"><span class="lineno">60013</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = j - num4; n &lt; j + num4; n++)</div>
+<div class="line"><span class="lineno">60014</span>            {</div>
+<div class="line"><span class="lineno">60015</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">InWorld</a>(m, n) &amp;&amp; Main.tile[m, n].active() &amp;&amp; Main.tile[m, n].type == 211)</div>
+<div class="line"><span class="lineno">60016</span>                {</div>
+<div class="line"><span class="lineno">60017</span>                    num5++;</div>
+<div class="line"><span class="lineno">60018</span>                }</div>
+<div class="line"><span class="lineno">60019</span>            }</div>
+<div class="line"><span class="lineno">60020</span>        }</div>
+<div class="line"><span class="lineno">60021</span>        <span class="keywordflow">if</span> (num5 &gt; num2)</div>
+<div class="line"><span class="lineno">60022</span>        {</div>
+<div class="line"><span class="lineno">60023</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">60024</span>        }</div>
+<div class="line"><span class="lineno">60025</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">60026</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553_html_adf59bfc3a2909993f72f0c69a5eaf553"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld</a></div><div class="ttdeci">static bool InWorld(int x, int y, int fluff=0)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:5816</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afd35ce4369108f0809662e11ab47bd77.html#afd35ce4369108f0809662e11ab47bd77">Terraria.Main.remixWorld</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a47a1be721a37b573e4e8dce16fbb3172.html#a47a1be721a37b573e4e8dce16fbb3172">Terraria.Main.rockLayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

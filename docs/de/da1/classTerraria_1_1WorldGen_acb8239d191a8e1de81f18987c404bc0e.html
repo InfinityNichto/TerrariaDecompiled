@@ -126,6 +126,63 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_acb8239d191a8e1de81f1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">49510</span>    {</div>
+<div class="line"><span class="lineno">49511</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a4e690cba6c146c87d4d1649a677db678.html#a4e690cba6c146c87d4d1649a677db678">CanUnderwaterPlantGrowHere</a>(type, x, y, ignoreSelf: true))</div>
+<div class="line"><span class="lineno">49512</span>        {</div>
+<div class="line"><span class="lineno">49513</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">KillTile</a>(x, y);</div>
+<div class="line"><span class="lineno">49514</span>            <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">49515</span>            {</div>
+<div class="line"><span class="lineno">49516</span>                NetMessage.SendData(17, -1, -1, <span class="keyword">null</span>, 0, x, y);</div>
+<div class="line"><span class="lineno">49517</span>            }</div>
+<div class="line"><span class="lineno">49518</span>            <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">SquareTileFrame</a>(x, y);</div>
+<div class="line"><span class="lineno">49519</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">49520</span>        }</div>
+<div class="line"><span class="lineno">49521</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely = Framing.GetTileSafely(x, y - 1);</div>
+<div class="line"><span class="lineno">49522</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely2 = Framing.GetTileSafely(x, y);</div>
+<div class="line"><span class="lineno">49523</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tileSafely3 = Framing.GetTileSafely(x, y + 1);</div>
+<div class="line"><span class="lineno">49524</span>        <span class="keywordtype">bool</span> num = tileSafely.active() &amp;&amp; tileSafely.type == type;</div>
+<div class="line"><span class="lineno">49525</span>        <span class="keywordtype">bool</span> flag = tileSafely3.active() &amp;&amp; tileSafely3.type == type;</div>
+<div class="line"><span class="lineno">49526</span>        <span class="keywordtype">int</span> num2 = tileSafely2.frameX / 18;</div>
+<div class="line"><span class="lineno">49527</span>        tileSafely2.frameY = 0;</div>
+<div class="line"><span class="lineno">49528</span>        <span class="keywordflow">if</span> (num)</div>
+<div class="line"><span class="lineno">49529</span>        {</div>
+<div class="line"><span class="lineno">49530</span>            <span class="keywordflow">if</span> (1 &gt; num2 || num2 &gt; 7)</div>
+<div class="line"><span class="lineno">49531</span>            {</div>
+<div class="line"><span class="lineno">49532</span>                tileSafely2.frameX = (short)(<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(1, 8) * 18);</div>
+<div class="line"><span class="lineno">49533</span>                <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">49534</span>                {</div>
+<div class="line"><span class="lineno">49535</span>                    NetMessage.SendTileSquare(-1, x, y);</div>
+<div class="line"><span class="lineno">49536</span>                }</div>
+<div class="line"><span class="lineno">49537</span>            }</div>
+<div class="line"><span class="lineno">49538</span>        }</div>
+<div class="line"><span class="lineno">49539</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">49540</span>        {</div>
+<div class="line"><span class="lineno">49541</span>            <span class="keywordflow">if</span> (7 &gt; num2 || num2 &gt; 12)</div>
+<div class="line"><span class="lineno">49542</span>            {</div>
+<div class="line"><span class="lineno">49543</span>                tileSafely2.frameX = (short)(<a class="code hl_property" href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">genRand</a>.<a class="code hl_function" href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Next</a>(7, 13) * 18);</div>
+<div class="line"><span class="lineno">49544</span>                <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">49545</span>                {</div>
+<div class="line"><span class="lineno">49546</span>                    NetMessage.SendTileSquare(-1, x, y);</div>
+<div class="line"><span class="lineno">49547</span>                }</div>
+<div class="line"><span class="lineno">49548</span>            }</div>
+<div class="line"><span class="lineno">49549</span>        }</div>
+<div class="line"><span class="lineno">49550</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num2 != 0)</div>
+<div class="line"><span class="lineno">49551</span>        {</div>
+<div class="line"><span class="lineno">49552</span>            tileSafely2.frameX = 0;</div>
+<div class="line"><span class="lineno">49553</span>            <span class="keywordflow">if</span> (Main.netMode == 2)</div>
+<div class="line"><span class="lineno">49554</span>            {</div>
+<div class="line"><span class="lineno">49555</span>                NetMessage.SendTileSquare(-1, x, y);</div>
+<div class="line"><span class="lineno">49556</span>            }</div>
+<div class="line"><span class="lineno">49557</span>        }</div>
+<div class="line"><span class="lineno">49558</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000_html_ac4ecc6320b69ab939b9c45eaf7d89000"><div class="ttname"><a href="../../d9/db1/classTerraria_1_1Utilities_1_1UnifiedRandom_ac4ecc6320b69ab939b9c45eaf7d89000.html#ac4ecc6320b69ab939b9c45eaf7d89000">Terraria.Utilities.UnifiedRandom.Next</a></div><div class="ttdeci">virtual int Next()</div><div class="ttdef"><b>Definition</b> UnifiedRandom.cs:98</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab_html_a360652226c9ca1b2b471105e2e5cfdab"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a360652226c9ca1b2b471105e2e5cfdab.html#a360652226c9ca1b2b471105e2e5cfdab">Terraria.WorldGen.KillTile</a></div><div class="ttdeci">static void KillTile(int i, int j, bool fail=false, bool effectOnly=false, bool noItem=false)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:54141</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec_html_a4c972b911a360af70adb863fda31d7ec"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4c972b911a360af70adb863fda31d7ec.html#a4c972b911a360af70adb863fda31d7ec">Terraria.WorldGen.genRand</a></div><div class="ttdeci">static UnifiedRandom genRand</div><div class="ttdef"><b>Definition</b> WorldGen.cs:1215</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4e690cba6c146c87d4d1649a677db678_html_a4e690cba6c146c87d4d1649a677db678"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4e690cba6c146c87d4d1649a677db678.html#a4e690cba6c146c87d4d1649a677db678">Terraria.WorldGen.CanUnderwaterPlantGrowHere</a></div><div class="ttdeci">static bool CanUnderwaterPlantGrowHere(ushort type, int x, int y, bool ignoreSelf)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:49472</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e_html_ae3b5adc363d3e7e034448d39efbe155e"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_ae3b5adc363d3e7e034448d39efbe155e.html#ae3b5adc363d3e7e034448d39efbe155e">Terraria.WorldGen.SquareTileFrame</a></div><div class="ttdeci">static void SquareTileFrame(int i, int j, bool resetFrame=true)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:70362</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../dc/dd7/classTerraria_1_1Framing_adf8f859033cd5cb805b13aad59a55236.html#adf8f859033cd5cb805b13aad59a55236">Terraria.Framing.GetTileSafely()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, and <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a513706d218e38b1dd4765feb618a6b8a.html#a513706d218e38b1dd4765feb618a6b8a">Terraria.NetMessage.SendTileSquare()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

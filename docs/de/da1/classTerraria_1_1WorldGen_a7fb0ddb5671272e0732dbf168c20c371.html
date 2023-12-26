@@ -151,6 +151,59 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a7fb0ddb5671272e0732d
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">53503</span>    {</div>
+<div class="line"><span class="lineno">53504</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno">53505</span>        <span class="keywordtype">int</span> num = i + xoffset;</div>
+<div class="line"><span class="lineno">53506</span>        topTextureFrameWidth = 116;</div>
+<div class="line"><span class="lineno">53507</span>        topTextureFrameHeight = 96;</div>
+<div class="line"><span class="lineno">53508</span>        floorY = j;</div>
+<div class="line"><span class="lineno">53509</span>        <span class="keywordflow">if</span> (!GrowTreeSettings.Profiles.TryGetFromTreeId(tile.type, out var profile))</div>
+<div class="line"><span class="lineno">53510</span>        {</div>
+<div class="line"><span class="lineno">53511</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">53512</span>        }</div>
+<div class="line"><span class="lineno">53513</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 100; k++)</div>
+<div class="line"><span class="lineno">53514</span>        {</div>
+<div class="line"><span class="lineno">53515</span>            floorY = j + k;</div>
+<div class="line"><span class="lineno">53516</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile2 = Main.tile[num, floorY];</div>
+<div class="line"><span class="lineno">53517</span>            <span class="keywordflow">if</span> (tile2 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">53518</span>            {</div>
+<div class="line"><span class="lineno">53519</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">53520</span>            }</div>
+<div class="line"><span class="lineno">53521</span>            <span class="keywordflow">if</span> (profile.GroundTest(tile2.type))</div>
+<div class="line"><span class="lineno">53522</span>            {</div>
+<div class="line"><span class="lineno">53523</span>                <span class="keywordflow">switch</span> (tile.type)</div>
+<div class="line"><span class="lineno">53524</span>                {</div>
+<div class="line"><span class="lineno">53525</span>                <span class="keywordflow">case</span> 583:</div>
+<div class="line"><span class="lineno">53526</span>                    treeStyle = 22;</div>
+<div class="line"><span class="lineno">53527</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53528</span>                <span class="keywordflow">case</span> 584:</div>
+<div class="line"><span class="lineno">53529</span>                    treeStyle = 23;</div>
+<div class="line"><span class="lineno">53530</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53531</span>                <span class="keywordflow">case</span> 585:</div>
+<div class="line"><span class="lineno">53532</span>                    treeStyle = 24;</div>
+<div class="line"><span class="lineno">53533</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53534</span>                <span class="keywordflow">case</span> 586:</div>
+<div class="line"><span class="lineno">53535</span>                    treeStyle = 25;</div>
+<div class="line"><span class="lineno">53536</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53537</span>                <span class="keywordflow">case</span> 587:</div>
+<div class="line"><span class="lineno">53538</span>                    treeStyle = 26;</div>
+<div class="line"><span class="lineno">53539</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53540</span>                <span class="keywordflow">case</span> 588:</div>
+<div class="line"><span class="lineno">53541</span>                    treeStyle = 27;</div>
+<div class="line"><span class="lineno">53542</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53543</span>                <span class="keywordflow">case</span> 589:</div>
+<div class="line"><span class="lineno">53544</span>                    treeStyle = 28;</div>
+<div class="line"><span class="lineno">53545</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">53546</span>                }</div>
+<div class="line"><span class="lineno">53547</span>            }</div>
+<div class="line"><span class="lineno">53548</span>        }</div>
+<div class="line"><span class="lineno">53549</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">53550</span>    }</div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d6/d5c/classTerraria_1_1WorldGen_1_1GrowTreeSettings_1_1Profiles_afb7f76bc6b07b55c4ec9a4b59441d5f8.html#afb7f76bc6b07b55c4ec9a4b59441d5f8">Terraria.WorldGen.GrowTreeSettings.Profiles.TryGetFromTreeId()</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ab404e3196056907e778a4f615a8302a8.html#ab404e3196056907e778a4f615a8302a8">Terraria.GameContent.Drawing.TileDrawing.DrawTrees()</a>, and <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_aa215925fd000aee17a338f46b111da17.html#aa215925fd000aee17a338f46b111da17">Terraria.GameContent.Drawing.TileDrawing.MakeExtraPreparations()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

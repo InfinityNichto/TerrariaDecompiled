@@ -121,6 +121,140 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_addd1f565b6f6043a9b3
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 3379</span>    {</div>
+<div class="line"><span class="lineno"> 3380</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 3381</span>        <span class="keywordflow">if</span> (entity is Player)</div>
+<div class="line"><span class="lineno"> 3382</span>        {</div>
+<div class="line"><span class="lineno"> 3383</span>            player = (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a>)entity;</div>
+<div class="line"><span class="lineno"> 3384</span>            <span class="keywordflow">if</span> (Math.Abs(player.gfxOffY) &gt; 2f || player.grapCount &gt; 0 || player.pulley)</div>
+<div class="line"><span class="lineno"> 3385</span>            {</div>
+<div class="line"><span class="lineno"> 3386</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 3387</span>            }</div>
+<div class="line"><span class="lineno"> 3388</span>            entity.height -= 5;</div>
+<div class="line"><span class="lineno"> 3389</span>            entity.position.Y += 5f;</div>
+<div class="line"><span class="lineno"> 3390</span>        }</div>
+<div class="line"><span class="lineno"> 3391</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno"> 3392</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno"> 3393</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3394</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)entity.position.Y + entity.height;</div>
+<div class="line"><span class="lineno"> 3395</span>        entity.Hitbox.Inflate(2, 2);</div>
+<div class="line"><span class="lineno"> 3396</span>        _ = entity.TopLeft;</div>
+<div class="line"><span class="lineno"> 3397</span>        _ = entity.TopRight;</div>
+<div class="line"><span class="lineno"> 3398</span>        _ = entity.BottomLeft;</div>
+<div class="line"><span class="lineno"> 3399</span>        _ = entity.BottomRight;</div>
+<div class="line"><span class="lineno"> 3400</span>        <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;Point&gt;</a> cacheForConveyorBelts = <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_a66b43a1af47bdedee855ff88ae5bf663.html#a66b43a1af47bdedee855ff88ae5bf663">_cacheForConveyorBelts</a>;</div>
+<div class="line"><span class="lineno"> 3401</span>        cacheForConveyorBelts.Clear();</div>
+<div class="line"><span class="lineno"> 3402</span>        <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_afb11e9d3a17128f10676cf1a2ca425e4.html#afb11e9d3a17128f10676cf1a2ca425e4">GetEntityEdgeTiles</a>(cacheForConveyorBelts, entity, left: false, right: false);</div>
+<div class="line"><span class="lineno"> 3403</span>        Vector2 vector = <span class="keyword">new</span> Vector2(0.0001f);</div>
+<div class="line"><span class="lineno"> 3404</span>        Vector2 lineStart = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 3405</span>        Vector2 lineStart2 = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 3406</span>        Vector2 lineEnd = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 3407</span>        Vector2 lineEnd2 = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 3408</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cacheForConveyorBelts.Count; i++)</div>
+<div class="line"><span class="lineno"> 3409</span>        {</div>
+<div class="line"><span class="lineno"> 3410</span>            Point point = cacheForConveyorBelts[i];</div>
+<div class="line"><span class="lineno"> 3411</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.InWorld(point.X, point.Y) || (player != <span class="keyword">null</span> &amp;&amp; player.onTrack &amp;&amp; point.Y &lt; num3))</div>
+<div class="line"><span class="lineno"> 3412</span>            {</div>
+<div class="line"><span class="lineno"> 3413</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3414</span>            }</div>
+<div class="line"><span class="lineno"> 3415</span>            <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[point.X, point.Y];</div>
+<div class="line"><span class="lineno"> 3416</span>            <span class="keywordflow">if</span> (tile == <span class="keyword">null</span> || !tile.active() || !tile.nactive())</div>
+<div class="line"><span class="lineno"> 3417</span>            {</div>
+<div class="line"><span class="lineno"> 3418</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3419</span>            }</div>
+<div class="line"><span class="lineno"> 3420</span>            <span class="keywordtype">int</span> num4 = <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ac93187a249ee24744821d94121620d05.html#ac93187a249ee24744821d94121620d05">ConveyorDirection</a>[tile.type];</div>
+<div class="line"><span class="lineno"> 3421</span>            <span class="keywordflow">if</span> (num4 == 0)</div>
+<div class="line"><span class="lineno"> 3422</span>            {</div>
+<div class="line"><span class="lineno"> 3423</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 3424</span>            }</div>
+<div class="line"><span class="lineno"> 3425</span>            lineStart.X = (lineStart2.X = point.X * 16);</div>
+<div class="line"><span class="lineno"> 3426</span>            lineEnd.X = (lineEnd2.X = point.X * 16 + 16);</div>
+<div class="line"><span class="lineno"> 3427</span>            <span class="keywordflow">switch</span> (tile.slope())</div>
+<div class="line"><span class="lineno"> 3428</span>            {</div>
+<div class="line"><span class="lineno"> 3429</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 3430</span>                lineStart2.Y = point.Y * 16;</div>
+<div class="line"><span class="lineno"> 3431</span>                lineEnd2.Y = (lineEnd.Y = (lineStart.Y = point.Y * 16 + 16));</div>
+<div class="line"><span class="lineno"> 3432</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 3433</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 3434</span>                lineEnd2.Y = point.Y * 16;</div>
+<div class="line"><span class="lineno"> 3435</span>                lineStart2.Y = (lineEnd.Y = (lineStart.Y = point.Y * 16 + 16));</div>
+<div class="line"><span class="lineno"> 3436</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 3437</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 3438</span>                lineEnd.Y = (lineStart2.Y = (lineEnd2.Y = point.Y * 16));</div>
+<div class="line"><span class="lineno"> 3439</span>                lineStart.Y = point.Y * 16 + 16;</div>
+<div class="line"><span class="lineno"> 3440</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 3441</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 3442</span>                lineStart.Y = (lineStart2.Y = (lineEnd2.Y = point.Y * 16));</div>
+<div class="line"><span class="lineno"> 3443</span>                lineEnd.Y = point.Y * 16 + 16;</div>
+<div class="line"><span class="lineno"> 3444</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 3445</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 3446</span>                <span class="keywordflow">if</span> (tile.halfBrick())</div>
+<div class="line"><span class="lineno"> 3447</span>                {</div>
+<div class="line"><span class="lineno"> 3448</span>                    lineStart2.Y = (lineEnd2.Y = point.Y * 16 + 8);</div>
+<div class="line"><span class="lineno"> 3449</span>                }</div>
+<div class="line"><span class="lineno"> 3450</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 3451</span>                {</div>
+<div class="line"><span class="lineno"> 3452</span>                    lineStart2.Y = (lineEnd2.Y = point.Y * 16);</div>
+<div class="line"><span class="lineno"> 3453</span>                }</div>
+<div class="line"><span class="lineno"> 3454</span>                lineStart.Y = (lineEnd.Y = point.Y * 16 + 16);</div>
+<div class="line"><span class="lineno"> 3455</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 3456</span>            }</div>
+<div class="line"><span class="lineno"> 3457</span>            <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><span class="lineno"> 3458</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Platforms</a>[tile.type] &amp;&amp; <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a629ee2dfbd05a8ae14bfe055bf9d66f4.html#a629ee2dfbd05a8ae14bfe055bf9d66f4">CheckAABBvLineCollision2</a>(entity.position - vector, entity.Size + vector * 2f, lineStart, lineEnd))</div>
+<div class="line"><span class="lineno"> 3459</span>            {</div>
+<div class="line"><span class="lineno"> 3460</span>                num5--;</div>
+<div class="line"><span class="lineno"> 3461</span>            }</div>
+<div class="line"><span class="lineno"> 3462</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a629ee2dfbd05a8ae14bfe055bf9d66f4.html#a629ee2dfbd05a8ae14bfe055bf9d66f4">CheckAABBvLineCollision2</a>(entity.position - vector, entity.Size + vector * 2f, lineStart2, lineEnd2))</div>
+<div class="line"><span class="lineno"> 3463</span>            {</div>
+<div class="line"><span class="lineno"> 3464</span>                num5++;</div>
+<div class="line"><span class="lineno"> 3465</span>            }</div>
+<div class="line"><span class="lineno"> 3466</span>            <span class="keywordflow">if</span> (num5 != 0)</div>
+<div class="line"><span class="lineno"> 3467</span>            {</div>
+<div class="line"><span class="lineno"> 3468</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3469</span>                num += num4 * num5 * (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)gravDir;</div>
+<div class="line"><span class="lineno"> 3470</span>                <span class="keywordflow">if</span> (tile.leftSlope())</div>
+<div class="line"><span class="lineno"> 3471</span>                {</div>
+<div class="line"><span class="lineno"> 3472</span>                    num2 += (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)gravDir * -num4;</div>
+<div class="line"><span class="lineno"> 3473</span>                }</div>
+<div class="line"><span class="lineno"> 3474</span>                <span class="keywordflow">if</span> (tile.rightSlope())</div>
+<div class="line"><span class="lineno"> 3475</span>                {</div>
+<div class="line"><span class="lineno"> 3476</span>                    num2 -= (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)gravDir * -num4;</div>
+<div class="line"><span class="lineno"> 3477</span>                }</div>
+<div class="line"><span class="lineno"> 3478</span>            }</div>
+<div class="line"><span class="lineno"> 3479</span>        }</div>
+<div class="line"><span class="lineno"> 3480</span>        <span class="keywordflow">if</span> (entity is Player)</div>
+<div class="line"><span class="lineno"> 3481</span>        {</div>
+<div class="line"><span class="lineno"> 3482</span>            entity.height += 5;</div>
+<div class="line"><span class="lineno"> 3483</span>            entity.position.Y -= 5f;</div>
+<div class="line"><span class="lineno"> 3484</span>        }</div>
+<div class="line"><span class="lineno"> 3485</span>        <span class="keywordflow">if</span> (flag &amp;&amp; num != 0)</div>
+<div class="line"><span class="lineno"> 3486</span>        {</div>
+<div class="line"><span class="lineno"> 3487</span>            num = Math.Sign(num);</div>
+<div class="line"><span class="lineno"> 3488</span>            num2 = Math.Sign(num2);</div>
+<div class="line"><span class="lineno"> 3489</span>            Vector2 velocity = Vector2.Normalize(<span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)num * gravDir, num2)) * 2.5f;</div>
+<div class="line"><span class="lineno"> 3490</span>            Vector2 vector2 = <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(entity.position, velocity, entity.width, entity.height, fallThrough: false, fall2: false, (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)gravDir);</div>
+<div class="line"><span class="lineno"> 3491</span>            entity.position += vector2;</div>
+<div class="line"><span class="lineno"> 3492</span>            vector2 = <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">TileCollision</a>(Velocity: new Vector2(0f, 2.5f * gravDir), Position: entity.position, Width: entity.width, Height: entity.height, fallThrough: false, fall2: false, gravDir: (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)gravDir);</div>
+<div class="line"><span class="lineno"> 3493</span>            entity.position += vector2;</div>
+<div class="line"><span class="lineno"> 3494</span>        }</div>
+<div class="line"><span class="lineno"> 3495</span>    }</div>
+<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8_html_a5e225736f6e3c509b9915a06cf908dd8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision</a></div><div class="ttdeci">static Vector2 TileCollision(Vector2 Position, Vector2 Velocity, int Width, int Height, bool fallThrough=false, bool fall2=false, int gravDir=1)</div><div class="ttdef"><b>Definition</b> Collision.cs:1910</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a629ee2dfbd05a8ae14bfe055bf9d66f4_html_a629ee2dfbd05a8ae14bfe055bf9d66f4"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a629ee2dfbd05a8ae14bfe055bf9d66f4.html#a629ee2dfbd05a8ae14bfe055bf9d66f4">Terraria.Collision.CheckAABBvLineCollision2</a></div><div class="ttdeci">static bool CheckAABBvLineCollision2(Vector2 aabbPosition, Vector2 aabbDimensions, Vector2 lineStart, Vector2 lineEnd)</div><div class="ttdef"><b>Definition</b> Collision.cs:236</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a66b43a1af47bdedee855ff88ae5bf663_html_a66b43a1af47bdedee855ff88ae5bf663"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a66b43a1af47bdedee855ff88ae5bf663.html#a66b43a1af47bdedee855ff88ae5bf663">Terraria.Collision._cacheForConveyorBelts</a></div><div class="ttdeci">static List&lt; Point &gt; _cacheForConveyorBelts</div><div class="ttdef"><b>Definition</b> Collision.cs:38</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_afb11e9d3a17128f10676cf1a2ca425e4_html_afb11e9d3a17128f10676cf1a2ca425e4"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_afb11e9d3a17128f10676cf1a2ca425e4.html#afb11e9d3a17128f10676cf1a2ca425e4">Terraria.Collision.GetEntityEdgeTiles</a></div><div class="ttdeci">static void GetEntityEdgeTiles(List&lt; Point &gt; p, Entity entity, bool left=true, bool right=true, bool up=true, bool down=true)</div><div class="ttdef"><b>Definition</b> Collision.cs:3326</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b_html_abb51d85dd32dec48d4b04dfb6bc27a5b"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a></div><div class="ttdeci">static bool[] Platforms</div><div class="ttdef"><b>Definition</b> TileID.cs:163</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_ac93187a249ee24744821d94121620d05_html_ac93187a249ee24744821d94121620d05"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ac93187a249ee24744821d94121620d05.html#ac93187a249ee24744821d94121620d05">Terraria.ID.TileID.Sets.ConveyorDirection</a></div><div class="ttdeci">static int[] ConveyorDirection</div><div class="ttdef"><b>Definition</b> TileID.cs:177</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a66b43a1af47bdedee855ff88ae5bf663.html#a66b43a1af47bdedee855ff88ae5bf663">Terraria.Collision._cacheForConveyorBelts</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5bbe63aa7745c543f6ce2a0faa25049f.html#a5bbe63aa7745c543f6ce2a0faa25049f">Terraria.Entity.BottomLeft</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a18a0e41054e59af1a66abc6e28893adc.html#a18a0e41054e59af1a66abc6e28893adc">Terraria.Entity.BottomRight</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a629ee2dfbd05a8ae14bfe055bf9d66f4.html#a629ee2dfbd05a8ae14bfe055bf9d66f4">Terraria.Collision.CheckAABBvLineCollision2()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ac93187a249ee24744821d94121620d05.html#ac93187a249ee24744821d94121620d05">Terraria.ID.TileID.Sets.ConveyorDirection</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_afb11e9d3a17128f10676cf1a2ca425e4.html#afb11e9d3a17128f10676cf1a2ca425e4">Terraria.Collision.GetEntityEdgeTiles()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ab92102c8caf3df3854d6bb70b179c10e.html#ab92102c8caf3df3854d6bb70b179c10e">Terraria.Player.gfxOffY</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_afe03c30bbaf67690e7de3a54b82f2862.html#afe03c30bbaf67690e7de3a54b82f2862">Terraria.Entity.height</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a92be527b1749b6ca5906cffe05ea49e8.html#a92be527b1749b6ca5906cffe05ea49e8">Terraria.Entity.Hitbox</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_adf59bfc3a2909993f72f0c69a5eaf553.html#adf59bfc3a2909993f72f0c69a5eaf553">Terraria.WorldGen.InWorld()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a0289e98c534784e081788e8b3a415fe4.html#a0289e98c534784e081788e8b3a415fe4">Terraria.Tile.leftSlope()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a9148d8ae76071fb6d17b13493b23b33e.html#a9148d8ae76071fb6d17b13493b23b33e">Terraria.Player.onTrack</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_abb51d85dd32dec48d4b04dfb6bc27a5b.html#abb51d85dd32dec48d4b04dfb6bc27a5b">Terraria.ID.TileID.Sets.Platforms</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_abfdbce2af6c86939a8db98ff6d53a7b8.html#abfdbce2af6c86939a8db98ff6d53a7b8">Terraria.Entity.position</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ad7c728c8f893528d52fb81764bf70a3a.html#ad7c728c8f893528d52fb81764bf70a3a">Terraria.Player.pulley</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a322b86afe28b51953771801ab6b661c9.html#a322b86afe28b51953771801ab6b661c9">Terraria.Tile.rightSlope()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5b6b9ec4b3279d94cdb66d0e8fab9ec4.html#a5b6b9ec4b3279d94cdb66d0e8fab9ec4">Terraria.Entity.Size</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab9bfb24365d03f2b4fe0842f6a406765.html#ab9bfb24365d03f2b4fe0842f6a406765">Terraria.Tile.slope()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a5e225736f6e3c509b9915a06cf908dd8.html#a5e225736f6e3c509b9915a06cf908dd8">Terraria.Collision.TileCollision()</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a67e9e84e919ec003059291919c834232.html#a67e9e84e919ec003059291919c834232">Terraria.Entity.TopLeft</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a55f94ba7d60271852415b3635722b3de.html#a55f94ba7d60271852415b3635722b3de">Terraria.Entity.TopRight</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_ace36901ffcd32ae3beda930abfd8f174.html#ace36901ffcd32ae3beda930abfd8f174">Terraria.Player.DryCollision()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_a163b0d30ddfed8c9be14687942d3494a.html#a163b0d30ddfed8c9be14687942d3494a">Terraria.Item.MoveInWorld()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af44290f5d38b6d5076a5fa8d6ee3dd12.html#af44290f5d38b6d5076a5fa8d6ee3dd12">Terraria.Player.Update()</a>, and <a class="el" href="../../df/d0d/classTerraria_1_1NPC_abdb022c1d5b63ace53aff9209b8f9100.html#abdb022c1d5b63ace53aff9209b8f9100">Terraria.NPC.UpdateCollision()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

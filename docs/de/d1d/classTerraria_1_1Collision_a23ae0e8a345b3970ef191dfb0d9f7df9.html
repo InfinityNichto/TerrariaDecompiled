@@ -131,6 +131,64 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_a23ae0e8a345b3970ef1
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (a1.Equals(a2) &amp;&amp; b1.Equals(b2))</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (a1.Equals(b1))</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[1] { a1 };</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[0];</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (b1.Equals(b2))</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_ac5330601e3215fde5628374bc0a361c8.html#ac5330601e3215fde5628374bc0a361c8">PointOnLine</a>(b1, a1, a2))</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[1] { b1 };</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[0];</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (a1.Equals(a2))</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_ac5330601e3215fde5628374bc0a361c8.html#ac5330601e3215fde5628374bc0a361c8">PointOnLine</a>(a1, b1, b2))</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[1] { a1 };</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[0];</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">float</span> num = (b2.X - b1.X) * (a1.Y - b1.Y) - (b2.Y - b1.Y) * (a1.X - b1.X);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">float</span> num2 = (a2.X - a1.X) * (a1.Y - b1.Y) - (a2.Y - a1.Y) * (a1.X - b1.X);</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">float</span> num3 = (b2.Y - b1.Y) * (a2.X - a1.X) - (b2.X - b1.X) * (a2.Y - a1.Y);</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (!(0f - <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a> &lt; num3) || !(num3 &lt; <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a>))</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordtype">float</span> num4 = num / num3;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">float</span> num5 = num2 / num3;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (0f &lt;= num4 &amp;&amp; num4 &lt;= 1f &amp;&amp; 0f &lt;= num5 &amp;&amp; num5 &lt;= 1f)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[1]</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keyword">new</span> Vector2(a1.X + num4 * (a2.X - a1.X), a1.Y + num4 * (a2.Y - a1.Y))</div>
+<div class="line"><span class="lineno">   78</span>                };</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[0];</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> ((0f - <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a> &lt; num &amp;&amp; num &lt; <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a>) || (0f - <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a> &lt; num2 &amp;&amp; num2 &lt; <a class="code hl_variable" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Epsilon</a>))</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (a1.Equals(a2))</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a174f1f7e486308b82fa7859781151d9d.html#a174f1f7e486308b82fa7859781151d9d">OneDimensionalIntersection</a>(b1, b2, a1, a2);</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d1d/classTerraria_1_1Collision_a174f1f7e486308b82fa7859781151d9d.html#a174f1f7e486308b82fa7859781151d9d">OneDimensionalIntersection</a>(a1, a2, b1, b2);</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2[0];</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Collision_a174f1f7e486308b82fa7859781151d9d_html_a174f1f7e486308b82fa7859781151d9d"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_a174f1f7e486308b82fa7859781151d9d.html#a174f1f7e486308b82fa7859781151d9d">Terraria.Collision.OneDimensionalIntersection</a></div><div class="ttdeci">static Vector2[] OneDimensionalIntersection(Vector2 a1, Vector2 a2, Vector2 b1, Vector2 b2)</div><div class="ttdef"><b>Definition</b> Collision.cs:113</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_ac5330601e3215fde5628374bc0a361c8_html_ac5330601e3215fde5628374bc0a361c8"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_ac5330601e3215fde5628374bc0a361c8.html#ac5330601e3215fde5628374bc0a361c8">Terraria.Collision.PointOnLine</a></div><div class="ttdeci">static bool PointOnLine(Vector2 p, Vector2 a1, Vector2 a2)</div><div class="ttdef"><b>Definition</b> Collision.cs:107</div></div>
+<div class="ttc" id="aclassTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33_html_ae606c720d5ff44f33f8cd62a6c884d33"><div class="ttname"><a href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Terraria.Collision.Epsilon</a></div><div class="ttdeci">static float Epsilon</div><div class="ttdef"><b>Definition</b> Collision.cs:36</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ae606c720d5ff44f33f8cd62a6c884d33.html#ae606c720d5ff44f33f8cd62a6c884d33">Terraria.Collision.Epsilon</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a174f1f7e486308b82fa7859781151d9d.html#a174f1f7e486308b82fa7859781151d9d">Terraria.Collision.OneDimensionalIntersection()</a>, and <a class="el" href="../../de/d1d/classTerraria_1_1Collision_ac5330601e3215fde5628374bc0a361c8.html#ac5330601e3215fde5628374bc0a361c8">Terraria.Collision.PointOnLine()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_a5d61682ad1ed4adb02e50eb3afb1d415.html#a5d61682ad1ed4adb02e50eb3afb1d415">Terraria.GameContent.PortalHelper.RemoveIntersectingPortals()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

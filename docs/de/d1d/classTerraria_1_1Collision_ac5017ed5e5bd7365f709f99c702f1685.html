@@ -136,6 +136,108 @@ $(function(){initNavTree('de/d1d/classTerraria_1_1Collision_ac5017ed5e5bd7365f70
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2437</span>    {</div>
+<div class="line"><span class="lineno"> 2438</span>        Vector2 result = Velocity;</div>
+<div class="line"><span class="lineno"> 2439</span>        Vector2 vector = Velocity;</div>
+<div class="line"><span class="lineno"> 2440</span>        Vector2 vector2 = Position + Velocity;</div>
+<div class="line"><span class="lineno"> 2441</span>        Vector2 vector3 = Position;</div>
+<div class="line"><span class="lineno"> 2442</span>        <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.X / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 2443</span>        <span class="keywordtype">int</span> num2 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.X + (<span class="keywordtype">float</span>)Width) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 2444</span>        <span class="keywordtype">int</span> num3 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(Position.Y / 16f) - 1;</div>
+<div class="line"><span class="lineno"> 2445</span>        <span class="keywordtype">int</span> num4 = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)((Position.Y + (<span class="keywordtype">float</span>)Height) / 16f) + 2;</div>
+<div class="line"><span class="lineno"> 2446</span>        <span class="keywordtype">int</span> num5 = -1;</div>
+<div class="line"><span class="lineno"> 2447</span>        <span class="keywordtype">int</span> num6 = -1;</div>
+<div class="line"><span class="lineno"> 2448</span>        <span class="keywordtype">int</span> num7 = -1;</div>
+<div class="line"><span class="lineno"> 2449</span>        <span class="keywordtype">int</span> num8 = -1;</div>
+<div class="line"><span class="lineno"> 2450</span>        <span class="keywordflow">if</span> (num &lt; 0)</div>
+<div class="line"><span class="lineno"> 2451</span>        {</div>
+<div class="line"><span class="lineno"> 2452</span>            num = 0;</div>
+<div class="line"><span class="lineno"> 2453</span>        }</div>
+<div class="line"><span class="lineno"> 2454</span>        <span class="keywordflow">if</span> (num2 &gt; Main.maxTilesX)</div>
+<div class="line"><span class="lineno"> 2455</span>        {</div>
+<div class="line"><span class="lineno"> 2456</span>            num2 = Main.maxTilesX;</div>
+<div class="line"><span class="lineno"> 2457</span>        }</div>
+<div class="line"><span class="lineno"> 2458</span>        <span class="keywordflow">if</span> (num3 &lt; 0)</div>
+<div class="line"><span class="lineno"> 2459</span>        {</div>
+<div class="line"><span class="lineno"> 2460</span>            num3 = 0;</div>
+<div class="line"><span class="lineno"> 2461</span>        }</div>
+<div class="line"><span class="lineno"> 2462</span>        <span class="keywordflow">if</span> (num4 &gt; Main.maxTilesY)</div>
+<div class="line"><span class="lineno"> 2463</span>        {</div>
+<div class="line"><span class="lineno"> 2464</span>            num4 = Main.maxTilesY;</div>
+<div class="line"><span class="lineno"> 2465</span>        }</div>
+<div class="line"><span class="lineno"> 2466</span>        Vector2 vector4 = <span class="keywordflow">default</span>(Vector2);</div>
+<div class="line"><span class="lineno"> 2467</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = num; i &lt; num2; i++)</div>
+<div class="line"><span class="lineno"> 2468</span>        {</div>
+<div class="line"><span class="lineno"> 2469</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num3; j &lt; num4; j++)</div>
+<div class="line"><span class="lineno"> 2470</span>            {</div>
+<div class="line"><span class="lineno"> 2471</span>                <span class="keywordflow">if</span> (Main.tile[i, j] == <span class="keyword">null</span> || !Main.tile[i, j].active() || (!evenActuated &amp;&amp; Main.tile[i, j].inActive()))</div>
+<div class="line"><span class="lineno"> 2472</span>                {</div>
+<div class="line"><span class="lineno"> 2473</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2474</span>                }</div>
+<div class="line"><span class="lineno"> 2475</span>                vector4.X = i * 16;</div>
+<div class="line"><span class="lineno"> 2476</span>                vector4.Y = j * 16;</div>
+<div class="line"><span class="lineno"> 2477</span>                <span class="keywordtype">int</span> num9 = 16;</div>
+<div class="line"><span class="lineno"> 2478</span>                <span class="keywordflow">if</span> (Main.tile[i, j].halfBrick())</div>
+<div class="line"><span class="lineno"> 2479</span>                {</div>
+<div class="line"><span class="lineno"> 2480</span>                    vector4.Y += 8f;</div>
+<div class="line"><span class="lineno"> 2481</span>                    num9 -= 8;</div>
+<div class="line"><span class="lineno"> 2482</span>                }</div>
+<div class="line"><span class="lineno"> 2483</span>                <span class="keywordflow">if</span> (!(vector2.X + (<span class="keywordtype">float</span>)Width &gt; vector4.X) || !(vector2.X &lt; vector4.X + 16f) || !(vector2.Y + (float)Height &gt; vector4.Y) || !(vector2.Y &lt; vector4.Y + (float)num9))</div>
+<div class="line"><span class="lineno"> 2484</span>                {</div>
+<div class="line"><span class="lineno"> 2485</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2486</span>                }</div>
+<div class="line"><span class="lineno"> 2487</span>                <span class="keywordflow">if</span> (vector3.Y + (<span class="keywordtype">float</span>)Height &lt;= vector4.Y)</div>
+<div class="line"><span class="lineno"> 2488</span>                {</div>
+<div class="line"><span class="lineno"> 2489</span>                    num7 = i;</div>
+<div class="line"><span class="lineno"> 2490</span>                    num8 = j;</div>
+<div class="line"><span class="lineno"> 2491</span>                    <span class="keywordflow">if</span> (num7 != num5)</div>
+<div class="line"><span class="lineno"> 2492</span>                    {</div>
+<div class="line"><span class="lineno"> 2493</span>                        result.Y = vector4.Y - (vector3.Y + (float)Height);</div>
+<div class="line"><span class="lineno"> 2494</span>                    }</div>
+<div class="line"><span class="lineno"> 2495</span>                }</div>
+<div class="line"><span class="lineno"> 2496</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vector3.X + (<span class="keywordtype">float</span>)Width &lt;= vector4.X &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 2497</span>                {</div>
+<div class="line"><span class="lineno"> 2498</span>                    num5 = i;</div>
+<div class="line"><span class="lineno"> 2499</span>                    num6 = j;</div>
+<div class="line"><span class="lineno"> 2500</span>                    <span class="keywordflow">if</span> (num6 != num8)</div>
+<div class="line"><span class="lineno"> 2501</span>                    {</div>
+<div class="line"><span class="lineno"> 2502</span>                        result.X = vector4.X - (vector3.X + (float)Width);</div>
+<div class="line"><span class="lineno"> 2503</span>                    }</div>
+<div class="line"><span class="lineno"> 2504</span>                    <span class="keywordflow">if</span> (num7 == num5)</div>
+<div class="line"><span class="lineno"> 2505</span>                    {</div>
+<div class="line"><span class="lineno"> 2506</span>                        result.Y = vector.Y;</div>
+<div class="line"><span class="lineno"> 2507</span>                    }</div>
+<div class="line"><span class="lineno"> 2508</span>                }</div>
+<div class="line"><span class="lineno"> 2509</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vector3.X &gt;= vector4.X + 16f &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 2510</span>                {</div>
+<div class="line"><span class="lineno"> 2511</span>                    num5 = i;</div>
+<div class="line"><span class="lineno"> 2512</span>                    num6 = j;</div>
+<div class="line"><span class="lineno"> 2513</span>                    <span class="keywordflow">if</span> (num6 != num8)</div>
+<div class="line"><span class="lineno"> 2514</span>                    {</div>
+<div class="line"><span class="lineno"> 2515</span>                        result.X = vector4.X + 16f - vector3.X;</div>
+<div class="line"><span class="lineno"> 2516</span>                    }</div>
+<div class="line"><span class="lineno"> 2517</span>                    <span class="keywordflow">if</span> (num7 == num5)</div>
+<div class="line"><span class="lineno"> 2518</span>                    {</div>
+<div class="line"><span class="lineno"> 2519</span>                        result.Y = vector.Y;</div>
+<div class="line"><span class="lineno"> 2520</span>                    }</div>
+<div class="line"><span class="lineno"> 2521</span>                }</div>
+<div class="line"><span class="lineno"> 2522</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vector3.Y &gt;= vector4.Y + (<span class="keywordtype">float</span>)num9 &amp;&amp; !Main.tileSolidTop[Main.tile[i, j].type])</div>
+<div class="line"><span class="lineno"> 2523</span>                {</div>
+<div class="line"><span class="lineno"> 2524</span>                    num7 = i;</div>
+<div class="line"><span class="lineno"> 2525</span>                    num8 = j;</div>
+<div class="line"><span class="lineno"> 2526</span>                    result.Y = vector4.Y + (float)num9 - vector3.Y + 0.01f;</div>
+<div class="line"><span class="lineno"> 2527</span>                    <span class="keywordflow">if</span> (num8 == num6)</div>
+<div class="line"><span class="lineno"> 2528</span>                    {</div>
+<div class="line"><span class="lineno"> 2529</span>                        result.X = vector.X + 0.01f;</div>
+<div class="line"><span class="lineno"> 2530</span>                    }</div>
+<div class="line"><span class="lineno"> 2531</span>                }</div>
+<div class="line"><span class="lineno"> 2532</span>            }</div>
+<div class="line"><span class="lineno"> 2533</span>        }</div>
+<div class="line"><span class="lineno"> 2534</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 2535</span>    }</div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_afac1102270d7f948e822bfbe76d4533d.html#afac1102270d7f948e822bfbe76d4533d">Terraria.Tile.halfBrick()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a68f45508d63b5e1bac9a703a1a99853b.html#a68f45508d63b5e1bac9a703a1a99853b">Terraria.Tile.inActive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a7c5606027776fb4a49a001cd1aa15440.html#a7c5606027776fb4a49a001cd1aa15440">Terraria.Main.maxTilesX</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a133d0ca47318981a342eb38337f1215d.html#a133d0ca47318981a342eb38337f1215d">Terraria.Main.maxTilesY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

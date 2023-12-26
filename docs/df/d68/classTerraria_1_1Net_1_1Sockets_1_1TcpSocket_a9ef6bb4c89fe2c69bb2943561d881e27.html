@@ -119,6 +119,39 @@ $(function(){initNavTree('df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a9
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d4/dcd/interfaceTerraria_1_1Net_1_1Sockets_1_1ISocket_acfd0f06e011366d76f3d37389de564a8.html#acfd0f06e011366d76f3d37389de564a8">Terraria.Net.Sockets.ISocket</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        IPAddress address = IPAddress.Any;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (Program.LaunchParameters.TryGetValue(<span class="stringliteral">&quot;-ip&quot;</span>, out var value) &amp;&amp; !IPAddress.TryParse(value, out address))</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            address = IPAddress.Any;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a129fd311ad0535ed8ec06c874afdf26c.html#a129fd311ad0535ed8ec06c874afdf26c">_isListening</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a4157c66e679ea3da1eb92be160ed04f6.html#a4157c66e679ea3da1eb92be160ed04f6">_listenerCallback</a> = callback;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293.html#a33f2f709ab2a572640e1d9c083435293">_listener</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            <a class="code hl_variable" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293.html#a33f2f709ab2a572640e1d9c083435293">_listener</a> = <span class="keyword">new</span> TcpListener(address, Netplay.ListenPort);</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  153</span>        {</div>
+<div class="line"><span class="lineno">  154</span>            <a class="code hl_variable" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293.html#a33f2f709ab2a572640e1d9c083435293">_listener</a>.Start();</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a>)</div>
+<div class="line"><span class="lineno">  157</span>        {</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        Thread thread = <span class="keyword">new</span> Thread(<a class="code hl_function" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a6a82d9583ac8ffadb9e3b798170fedae.html#a6a82d9583ac8ffadb9e3b798170fedae">ListenLoop</a>);</div>
+<div class="line"><span class="lineno">  161</span>        thread.IsBackground = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  162</span>        thread.Name = <span class="stringliteral">&quot;TCP Listen Thread&quot;</span>;</div>
+<div class="line"><span class="lineno">  163</span>        thread.Start();</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a129fd311ad0535ed8ec06c874afdf26c_html_a129fd311ad0535ed8ec06c874afdf26c"><div class="ttname"><a href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a129fd311ad0535ed8ec06c874afdf26c.html#a129fd311ad0535ed8ec06c874afdf26c">Terraria.Net.Sockets.TcpSocket._isListening</a></div><div class="ttdeci">bool _isListening</div><div class="ttdef"><b>Definition</b> TcpSocket.cs:27</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293_html_a33f2f709ab2a572640e1d9c083435293"><div class="ttname"><a href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293.html#a33f2f709ab2a572640e1d9c083435293">Terraria.Net.Sockets.TcpSocket._listener</a></div><div class="ttdeci">TcpListener _listener</div><div class="ttdef"><b>Definition</b> TcpSocket.cs:21</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a4157c66e679ea3da1eb92be160ed04f6_html_a4157c66e679ea3da1eb92be160ed04f6"><div class="ttname"><a href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a4157c66e679ea3da1eb92be160ed04f6.html#a4157c66e679ea3da1eb92be160ed04f6">Terraria.Net.Sockets.TcpSocket._listenerCallback</a></div><div class="ttdeci">SocketConnectionAccepted _listenerCallback</div><div class="ttdef"><b>Definition</b> TcpSocket.cs:23</div></div>
+<div class="ttc" id="aclassTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a6a82d9583ac8ffadb9e3b798170fedae_html_a6a82d9583ac8ffadb9e3b798170fedae"><div class="ttname"><a href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a6a82d9583ac8ffadb9e3b798170fedae.html#a6a82d9583ac8ffadb9e3b798170fedae">Terraria.Net.Sockets.TcpSocket.ListenLoop</a></div><div class="ttdeci">void ListenLoop()</div><div class="ttdef"><b>Definition</b> TcpSocket.cs:172</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a129fd311ad0535ed8ec06c874afdf26c.html#a129fd311ad0535ed8ec06c874afdf26c">Terraria.Net.Sockets.TcpSocket._isListening</a>, <a class="el" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a33f2f709ab2a572640e1d9c083435293.html#a33f2f709ab2a572640e1d9c083435293">Terraria.Net.Sockets.TcpSocket._listener</a>, <a class="el" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a4157c66e679ea3da1eb92be160ed04f6.html#a4157c66e679ea3da1eb92be160ed04f6">Terraria.Net.Sockets.TcpSocket._listenerCallback</a>, <a class="el" href="../../d9/daf/classTerraria_1_1Program_aeb611f3f6ff2ff69f95bce3f56cc2282.html#aeb611f3f6ff2ff69f95bce3f56cc2282">Terraria.Program.LaunchParameters</a>, <a class="el" href="../../df/d68/classTerraria_1_1Net_1_1Sockets_1_1TcpSocket_a6a82d9583ac8ffadb9e3b798170fedae.html#a6a82d9583ac8ffadb9e3b798170fedae">Terraria.Net.Sockets.TcpSocket.ListenLoop()</a>, and <a class="el" href="../../db/d90/classTerraria_1_1Netplay_aceea9654daeb96b9bc6b440635fdedf2.html#aceea9654daeb96b9bc6b440635fdedf2">Terraria.Netplay.ListenPort</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

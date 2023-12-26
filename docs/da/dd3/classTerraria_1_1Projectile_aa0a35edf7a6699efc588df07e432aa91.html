@@ -117,7 +117,29 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_aa0a35edf7a6699efc5
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">58558</span>    {</div>
+<div class="line"><span class="lineno">58559</span>        Point scanAreaStart = base.TopLeft.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">58560</span>        Point scanAreaEnd = base.BottomRight.ToTileCoordinates();</div>
+<div class="line"><span class="lineno">58561</span>        _ = scanAreaStart.X / 2;</div>
+<div class="line"><span class="lineno">58562</span>        _ = scanAreaEnd.X / 2;</div>
+<div class="line"><span class="lineno">58563</span>        <span class="keywordtype">int</span> explosionRange = <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">width</a>;</div>
+<div class="line"><span class="lineno">58564</span>        <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] += 1f;</div>
+<div class="line"><span class="lineno">58565</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] &gt; 20f)</div>
+<div class="line"><span class="lineno">58566</span>        {</div>
+<div class="line"><span class="lineno">58567</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Kill</a>();</div>
+<div class="line"><span class="lineno">58568</span>        }</div>
+<div class="line"><span class="lineno">58569</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[0] == 1f)</div>
+<div class="line"><span class="lineno">58570</span>        {</div>
+<div class="line"><span class="lineno">58571</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a17f63271f5d62d1937ed00bf81295ad4.html#a17f63271f5d62d1937ed00bf81295ad4">CreateImpactExplosion</a>(6, base.Bottom, ref scanAreaStart, ref scanAreaEnd, explosionRange, out var causedShockwaves);</div>
+<div class="line"><span class="lineno">58572</span>            <a class="code hl_function" href="../../da/dd3/classTerraria_1_1Projectile_a0e81dc7d5b996b18f7efff6d00268ecf.html#a0e81dc7d5b996b18f7efff6d00268ecf">CreateImpactExplosion2_SleepyOctopod</a>(base.Bottom, causedShockwaves);</div>
+<div class="line"><span class="lineno">58573</span>        }</div>
+<div class="line"><span class="lineno">58574</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f_html_acd3ba5d99de546cec9f344967517f07f"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_acd3ba5d99de546cec9f344967517f07f.html#acd3ba5d99de546cec9f344967517f07f">Terraria.Entity.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Entity.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a0e81dc7d5b996b18f7efff6d00268ecf_html_a0e81dc7d5b996b18f7efff6d00268ecf"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a0e81dc7d5b996b18f7efff6d00268ecf.html#a0e81dc7d5b996b18f7efff6d00268ecf">Terraria.Projectile.CreateImpactExplosion2_SleepyOctopod</a></div><div class="ttdeci">void CreateImpactExplosion2_SleepyOctopod(Vector2 explosionOrigin, bool causedShockwaves)</div><div class="ttdef"><b>Definition</b> Projectile.cs:58623</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a17f63271f5d62d1937ed00bf81295ad4_html_a17f63271f5d62d1937ed00bf81295ad4"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a17f63271f5d62d1937ed00bf81295ad4.html#a17f63271f5d62d1937ed00bf81295ad4">Terraria.Projectile.CreateImpactExplosion</a></div><div class="ttdeci">void CreateImpactExplosion(int dustAmountMultiplier, Vector2 explosionOrigin, ref Point scanAreaStart, ref Point scanAreaEnd, int explosionRange, out bool causedShockwaves)</div><div class="ttdef"><b>Definition</b> Projectile.cs:58576</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861_html_ad720c809bf9147dbd21e7fa78f88d861"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> Projectile.cs:59438</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

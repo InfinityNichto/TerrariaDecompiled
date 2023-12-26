@@ -119,6 +119,37 @@ $(function(){initNavTree('d1/dd5/classTerraria_1_1Social_1_1Steam_1_1PlatformSoc
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d5/d3e/interfaceTerraria_1_1Social_1_1ISocialModule_a355787df168e22366d996eaf40bdff67.html#a355787df168e22366d996eaf40bdff67">Terraria.Social.ISocialModule</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (!Main.dedServ)</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordtype">bool</span> num = (PlayerInput.UseSteamDeckIfPossible = SteamUtils.IsSteamRunningOnSteamDeck());</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">if</span> (num)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                <a class="code hl_class" href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">PlayerInput</a>.<a class="code hl_class" href="../../d7/d52/classTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI.html">SettingsForUI</a>.<a class="code hl_function" href="../../d7/d52/classTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI_a4ce28d04035ca76014eb14fb566ca9a0.html#a4ce28d04035ca76014eb14fb566ca9a0">SetCursorMode</a>(<a class="code hl_enumeration" href="../../d9/da4/namespaceTerraria_1_1GameInput_a0fd6604c8409abe0923ed2e4498c2a70.html#a0fd6604c8409abe0923ed2e4498c2a70">CursorMode</a>.Gamepad);</div>
+<div class="line"><span class="lineno">   18</span>                PlayerInput.CurrentInputMode = <a class="code hl_enumeration" href="../../d9/da4/namespaceTerraria_1_1GameInput_af1143be20d08c306f1145dafff9be582.html#af1143be20d08c306f1145dafff9be582">InputMode</a>.XBoxGamepadUI;</div>
+<div class="line"><span class="lineno">   19</span>                GamepadMainMenuHandler.MoveCursorOnNextRun = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   20</span>                PlayerInput.PreventFirstMousePositionGrab = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   21</span>            }</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (num)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                Main.graphics.PreferredBackBufferWidth = (Main.screenWidth = 1280);</div>
+<div class="line"><span class="lineno">   25</span>                Main.graphics.PreferredBackBufferHeight = (Main.screenHeight = 800);</div>
+<div class="line"><span class="lineno">   26</span>                Main.startFullscreen = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>                Main.toggleFullscreen = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   28</span>                Main.screenBorderless = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>                Main.screenMaximized = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   30</span>                Main.InitialMapScale = (Main.MapScale = 0.73f);</div>
+<div class="line"><span class="lineno">   31</span>                Main.UIScale = 1.07f;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI_a4ce28d04035ca76014eb14fb566ca9a0_html_a4ce28d04035ca76014eb14fb566ca9a0"><div class="ttname"><a href="../../d7/d52/classTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI_a4ce28d04035ca76014eb14fb566ca9a0.html#a4ce28d04035ca76014eb14fb566ca9a0">Terraria.GameInput.PlayerInput.SettingsForUI.SetCursorMode</a></div><div class="ttdeci">static void SetCursorMode(CursorMode cursorMode)</div><div class="ttdef"><b>Definition</b> PlayerInput.cs:92</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI_html"><div class="ttname"><a href="../../d7/d52/classTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI.html">Terraria.GameInput.PlayerInput.SettingsForUI</a></div><div class="ttdef"><b>Definition</b> PlayerInput.cs:25</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameInput_1_1PlayerInput_html"><div class="ttname"><a href="../../df/d5b/classTerraria_1_1GameInput_1_1PlayerInput.html">Terraria.GameInput.PlayerInput</a></div><div class="ttdef"><b>Definition</b> PlayerInput.cs:18</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameInput_a0fd6604c8409abe0923ed2e4498c2a70_html_a0fd6604c8409abe0923ed2e4498c2a70"><div class="ttname"><a href="../../d9/da4/namespaceTerraria_1_1GameInput_a0fd6604c8409abe0923ed2e4498c2a70.html#a0fd6604c8409abe0923ed2e4498c2a70">Terraria.GameInput.CursorMode</a></div><div class="ttdeci">CursorMode</div><div class="ttdef"><b>Definition</b> CursorMode.cs:4</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameInput_af1143be20d08c306f1145dafff9be582_html_af1143be20d08c306f1145dafff9be582"><div class="ttname"><a href="../../d9/da4/namespaceTerraria_1_1GameInput_af1143be20d08c306f1145dafff9be582.html#af1143be20d08c306f1145dafff9be582">Terraria.GameInput.InputMode</a></div><div class="ttdeci">InputMode</div><div class="ttdef"><b>Definition</b> InputMode.cs:4</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a51e4289394258b7819811f8b448b1a52.html#a51e4289394258b7819811f8b448b1a52">Terraria.Main.dedServ</a>, and <a class="el" href="../../d7/d52/classTerraria_1_1GameInput_1_1PlayerInput_1_1SettingsForUI_a4ce28d04035ca76014eb14fb566ca9a0.html#a4ce28d04035ca76014eb14fb566ca9a0">Terraria.GameInput.PlayerInput.SettingsForUI.SetCursorMode()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

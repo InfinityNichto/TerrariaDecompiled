@@ -121,6 +121,36 @@ $(function(){initNavTree('d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1Overlay
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        LinkedList&lt;Overlay&gt; linkedList = <a class="code hl_variable" href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a034a06211c93e335bc2e0be84f2bbe8f.html#a034a06211c93e335bc2e0be84f2bbe8f">_activeOverlays</a>[(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)overlay.Priority];</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (overlay.Mode == OverlayMode.FadeIn || overlay.Mode == OverlayMode.Active)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (overlay.Mode == OverlayMode.FadeOut)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            linkedList.Remove(overlay);</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a69c1bd40560e864b8dcceedd996369ea.html#a69c1bd40560e864b8dcceedd996369ea">_overlayCount</a>--;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            overlay.Opacity = 0f;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (linkedList.Count != 0)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">foreach</span> (Overlay item <span class="keywordflow">in</span> linkedList)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                item.Mode = OverlayMode.FadeOut;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        linkedList.AddLast(overlay);</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a69c1bd40560e864b8dcceedd996369ea.html#a69c1bd40560e864b8dcceedd996369ea">_overlayCount</a>++;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a034a06211c93e335bc2e0be84f2bbe8f_html_a034a06211c93e335bc2e0be84f2bbe8f"><div class="ttname"><a href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a034a06211c93e335bc2e0be84f2bbe8f.html#a034a06211c93e335bc2e0be84f2bbe8f">Terraria.Graphics.Effects.OverlayManager._activeOverlays</a></div><div class="ttdeci">LinkedList&lt; Overlay &gt;[] _activeOverlays</div><div class="ttdef"><b>Definition</b> OverlayManager.cs:12</div></div>
+<div class="ttc" id="aclassTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a69c1bd40560e864b8dcceedd996369ea_html_a69c1bd40560e864b8dcceedd996369ea"><div class="ttname"><a href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a69c1bd40560e864b8dcceedd996369ea.html#a69c1bd40560e864b8dcceedd996369ea">Terraria.Graphics.Effects.OverlayManager._overlayCount</a></div><div class="ttdeci">int _overlayCount</div><div class="ttdef"><b>Definition</b> OverlayManager.cs:14</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a034a06211c93e335bc2e0be84f2bbe8f.html#a034a06211c93e335bc2e0be84f2bbe8f">Terraria.Graphics.Effects.OverlayManager._activeOverlays</a>, <a class="el" href="../../d1/d8c/classTerraria_1_1Graphics_1_1Effects_1_1OverlayManager_a69c1bd40560e864b8dcceedd996369ea.html#a69c1bd40560e864b8dcceedd996369ea">Terraria.Graphics.Effects.OverlayManager._overlayCount</a>, <a class="el" href="../../d4/d6f/classTerraria_1_1Graphics_1_1Effects_1_1Overlay_af956dd7acf4589a92544520b03db22c9.html#af956dd7acf4589a92544520b03db22c9">Terraria.Graphics.Effects.Overlay.Mode</a>, and <a class="el" href="../../d1/d23/classTerraria_1_1Graphics_1_1Effects_1_1GameEffect_af800b0ebaa0d932ca9d1d28845120599.html#af800b0ebaa0d932ca9d1d28845120599">Terraria.Graphics.Effects.GameEffect.Priority</a>.</p>
 
 </div>
 </div>

@@ -121,6 +121,26 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_a58e6b26ae121a6ff0c16
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">70429</span>    {</div>
+<div class="line"><span class="lineno">70430</span>        <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a66d52073f62de35dbb3087067f64c87b.html#a66d52073f62de35dbb3087067f64c87b">GetSectionBounds</a>(sectionX, sectionY, sectionX, sectionY, out var tileStartX, out var tileEndX, out var tileStartY, out var tileEndY);</div>
+<div class="line"><span class="lineno">70431</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a47c75195f076994fed4ab49536860a76.html#a47c75195f076994fed4ab49536860a76">noMapUpdate</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">70432</span>        <span class="keywordtype">int</span> totalEcho = 0;</div>
+<div class="line"><span class="lineno">70433</span>        <span class="keywordtype">int</span> totalFramed = 0;</div>
+<div class="line"><span class="lineno">70434</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = tileStartY; i &lt; tileEndY; i += 50)</div>
+<div class="line"><span class="lineno">70435</span>        {</div>
+<div class="line"><span class="lineno">70436</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = tileStartX; j &lt; tileEndX; j += 200)</div>
+<div class="line"><span class="lineno">70437</span>            {</div>
+<div class="line"><span class="lineno">70438</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_afb26c1e08cd61c5c96caa24a6d91f560.html#afb26c1e08cd61c5c96caa24a6d91f560">RefreshStrip</a>(j, i, Math.Min(j + 200, tileEndX), Math.Min(i + 50, tileEndY), ref totalEcho, ref totalFramed);</div>
+<div class="line"><span class="lineno">70439</span>            }</div>
+<div class="line"><span class="lineno">70440</span>        }</div>
+<div class="line"><span class="lineno">70441</span>        <a class="code hl_variable" href="../../de/da1/classTerraria_1_1WorldGen_a47c75195f076994fed4ab49536860a76.html#a47c75195f076994fed4ab49536860a76">noMapUpdate</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">70442</span>        Main.sectionManager.SetSectionAsRefreshed(sectionX, sectionY);</div>
+<div class="line"><span class="lineno">70443</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a47c75195f076994fed4ab49536860a76_html_a47c75195f076994fed4ab49536860a76"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a47c75195f076994fed4ab49536860a76.html#a47c75195f076994fed4ab49536860a76">Terraria.WorldGen.noMapUpdate</a></div><div class="ttdeci">static bool noMapUpdate</div><div class="ttdef"><b>Definition</b> WorldGen.cs:898</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a66d52073f62de35dbb3087067f64c87b_html_a66d52073f62de35dbb3087067f64c87b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a66d52073f62de35dbb3087067f64c87b.html#a66d52073f62de35dbb3087067f64c87b">Terraria.WorldGen.GetSectionBounds</a></div><div class="ttdeci">static void GetSectionBounds(int sectionStartX, int sectionStartY, int sectionEndXInclusive, int sectionEndYInclusive, out int tileStartX, out int tileEndX, out int tileStartY, out int tileEndY)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:70528</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_afb26c1e08cd61c5c96caa24a6d91f560_html_afb26c1e08cd61c5c96caa24a6d91f560"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_afb26c1e08cd61c5c96caa24a6d91f560.html#afb26c1e08cd61c5c96caa24a6d91f560">Terraria.WorldGen.RefreshStrip</a></div><div class="ttdeci">static void RefreshStrip(int xStart, int yStart, int xEnd, int yEnd, ref int totalEcho, ref int totalFramed)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:70445</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a6d8368d2f7f9a11a25d36335a30a463e.html#a6d8368d2f7f9a11a25d36335a30a463e">Terraria.Main.sectionManager</a>, and <a class="el" href="../../d9/d9b/classTerraria_1_1WorldSections_aa4910996bd5f5e3c97cd074684931967.html#aa4910996bd5f5e3c97cd074684931967">Terraria.WorldSections.SetSectionAsRefreshed()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,31 @@ $(function(){initNavTree('d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_a5
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  351</span>    {</div>
+<div class="line"><span class="lineno">  352</span>        <a class="code hl_function" href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_ab0919ee3de367413bd2da748520de7cd.html#ab0919ee3de367413bd2da748520de7cd">GetPortalEdges</a>(position, angle, out var start, out var end);</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><span class="lineno">  354</span>        {</div>
+<div class="line"><span class="lineno">  355</span>            Projectile projectile = Main.projectile[i];</div>
+<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">if</span> (!projectile.active || projectile.type != 602)</div>
+<div class="line"><span class="lineno">  357</span>            {</div>
+<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  359</span>            }</div>
+<div class="line"><span class="lineno">  360</span>            <a class="code hl_function" href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_ab0919ee3de367413bd2da748520de7cd.html#ab0919ee3de367413bd2da748520de7cd">GetPortalEdges</a>(projectile.Center, projectile.ai[0], out var start2, out var end2);</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">if</span> (Collision.CheckLinevLine(start, end, start2, end2).Length != 0)</div>
+<div class="line"><span class="lineno">  362</span>            {</div>
+<div class="line"><span class="lineno">  363</span>                <span class="keywordflow">if</span> (projectile.owner != Main.myPlayer &amp;&amp; Main.netMode != 2)</div>
+<div class="line"><span class="lineno">  364</span>                {</div>
+<div class="line"><span class="lineno">  365</span>                    NetMessage.SendData(95, -1, -1, <span class="keyword">null</span>, projectile.owner, (<span class="keywordtype">int</span>)projectile.ai[1]);</div>
+<div class="line"><span class="lineno">  366</span>                }</div>
+<div class="line"><span class="lineno">  367</span>                projectile.Kill();</div>
+<div class="line"><span class="lineno">  368</span>            }</div>
+<div class="line"><span class="lineno">  369</span>        }</div>
+<div class="line"><span class="lineno">  370</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1PortalHelper_ab0919ee3de367413bd2da748520de7cd_html_ab0919ee3de367413bd2da748520de7cd"><div class="ttname"><a href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_ab0919ee3de367413bd2da748520de7cd.html#ab0919ee3de367413bd2da748520de7cd">Terraria.GameContent.PortalHelper.GetPortalEdges</a></div><div class="ttdeci">static void GetPortalEdges(Vector2 position, float angle, out Vector2 start, out Vector2 end)</div><div class="ttdef"><b>Definition</b> PortalHelper.cs:393</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a>, <a class="el" href="../../df/df6/classTerraria_1_1Entity_a5a1abea808fad014ce7ec4b8a9f566ee.html#a5a1abea808fad014ce7ec4b8a9f566ee">Terraria.Entity.Center</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a23ae0e8a345b3970ef191dfb0d9f7df9.html#a23ae0e8a345b3970ef191dfb0d9f7df9">Terraria.Collision.CheckLinevLine()</a>, <a class="el" href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_ab0919ee3de367413bd2da748520de7cd.html#ab0919ee3de367413bd2da748520de7cd">Terraria.GameContent.PortalHelper.GetPortalEdges()</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_ad720c809bf9147dbd21e7fa78f88d861.html#ad720c809bf9147dbd21e7fa78f88d861">Terraria.Projectile.Kill()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9c34c09aefa9f48a8b86e64d5bfda7e7.html#a9c34c09aefa9f48a8b86e64d5bfda7e7">Terraria.Main.projectile</a>, <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>, and <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a71cc9e5e6c3b27c751ed856976c4bc50.html#a71cc9e5e6c3b27c751ed856976c4bc50">Terraria.Projectile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/db7/classTerraria_1_1GameContent_1_1PortalHelper_a26e4f767492a26057146b62a97ee41a0.html#a26e4f767492a26057146b62a97ee41a0">Terraria.GameContent.PortalHelper.AddPortal()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

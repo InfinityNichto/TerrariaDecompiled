@@ -126,6 +126,123 @@ $(function(){initNavTree('d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelp
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 2518</span>    {</div>
+<div class="line"><span class="lineno"> 2519</span>        <span class="keywordtype">int</span> reachableStartX = providedInfo.reachableStartX;</div>
+<div class="line"><span class="lineno"> 2520</span>        <span class="keywordtype">int</span> reachableStartY = providedInfo.reachableStartY;</div>
+<div class="line"><span class="lineno"> 2521</span>        <span class="keywordtype">int</span> reachableEndX = providedInfo.reachableEndX;</div>
+<div class="line"><span class="lineno"> 2522</span>        <span class="keywordtype">int</span> reachableEndY = providedInfo.reachableEndY;</div>
+<div class="line"><span class="lineno"> 2523</span>        _ = providedInfo.screenTargetX;</div>
+<div class="line"><span class="lineno"> 2524</span>        _ = providedInfo.screenTargetY;</div>
+<div class="line"><span class="lineno"> 2525</span>        <span class="keywordflow">if</span> (providedInfo.item.axe &lt;= 0 || fX != -1 || fY != -1)</div>
+<div class="line"><span class="lineno"> 2526</span>        {</div>
+<div class="line"><span class="lineno"> 2527</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2528</span>        }</div>
+<div class="line"><span class="lineno"> 2529</span>        <span class="keywordtype">float</span> num = -1f;</div>
+<div class="line"><span class="lineno"> 2530</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = reachableStartX; i &lt;= reachableEndX; i++)</div>
+<div class="line"><span class="lineno"> 2531</span>        {</div>
+<div class="line"><span class="lineno"> 2532</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = reachableStartY; j &lt;= reachableEndY; j++)</div>
+<div class="line"><span class="lineno"> 2533</span>            {</div>
+<div class="line"><span class="lineno"> 2534</span>                <span class="keywordflow">if</span> (!Main.tile[i, j].active())</div>
+<div class="line"><span class="lineno"> 2535</span>                {</div>
+<div class="line"><span class="lineno"> 2536</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2537</span>                }</div>
+<div class="line"><span class="lineno"> 2538</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[i, j];</div>
+<div class="line"><span class="lineno"> 2539</span>                <span class="keywordflow">if</span> (!Main.tileAxe[tile.type] || <a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a27e80acabf354fc52b3bb4d3d3321237.html#a27e80acabf354fc52b3bb4d3d3321237">IgnoreSmartCursorPriorityAxe</a>[tile.type])</div>
+<div class="line"><span class="lineno"> 2540</span>                {</div>
+<div class="line"><span class="lineno"> 2541</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2542</span>                }</div>
+<div class="line"><span class="lineno"> 2543</span>                <span class="keywordtype">int</span> num2 = i;</div>
+<div class="line"><span class="lineno"> 2544</span>                <span class="keywordtype">int</span> k = j;</div>
+<div class="line"><span class="lineno"> 2545</span>                <span class="keywordtype">int</span> type = tile.type;</div>
+<div class="line"><span class="lineno"> 2546</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">TileID</a>.<a class="code hl_class" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ad3e8c6de734713cf69460f7223f39548.html#ad3e8c6de734713cf69460f7223f39548">IsATreeTrunk</a>[type])</div>
+<div class="line"><span class="lineno"> 2547</span>                {</div>
+<div class="line"><span class="lineno"> 2548</span>                    <span class="keywordflow">if</span> (Collision.InTileBounds(num2 + 1, k, reachableStartX, reachableStartY, reachableEndX, reachableEndY))</div>
+<div class="line"><span class="lineno"> 2549</span>                    {</div>
+<div class="line"><span class="lineno"> 2550</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameY &gt;= 198 &amp;&amp; Main.tile[num2, k].frameX == 44)</div>
+<div class="line"><span class="lineno"> 2551</span>                        {</div>
+<div class="line"><span class="lineno"> 2552</span>                            num2++;</div>
+<div class="line"><span class="lineno"> 2553</span>                        }</div>
+<div class="line"><span class="lineno"> 2554</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 66 &amp;&amp; Main.tile[num2, k].frameY &lt;= 44)</div>
+<div class="line"><span class="lineno"> 2555</span>                        {</div>
+<div class="line"><span class="lineno"> 2556</span>                            num2++;</div>
+<div class="line"><span class="lineno"> 2557</span>                        }</div>
+<div class="line"><span class="lineno"> 2558</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 44 &amp;&amp; Main.tile[num2, k].frameY &gt;= 132 &amp;&amp; Main.tile[num2, k].frameY &lt;= 176)</div>
+<div class="line"><span class="lineno"> 2559</span>                        {</div>
+<div class="line"><span class="lineno"> 2560</span>                            num2++;</div>
+<div class="line"><span class="lineno"> 2561</span>                        }</div>
+<div class="line"><span class="lineno"> 2562</span>                    }</div>
+<div class="line"><span class="lineno"> 2563</span>                    <span class="keywordflow">if</span> (Collision.InTileBounds(num2 - 1, k, reachableStartX, reachableStartY, reachableEndX, reachableEndY))</div>
+<div class="line"><span class="lineno"> 2564</span>                    {</div>
+<div class="line"><span class="lineno"> 2565</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameY &gt;= 198 &amp;&amp; Main.tile[num2, k].frameX == 66)</div>
+<div class="line"><span class="lineno"> 2566</span>                        {</div>
+<div class="line"><span class="lineno"> 2567</span>                            num2--;</div>
+<div class="line"><span class="lineno"> 2568</span>                        }</div>
+<div class="line"><span class="lineno"> 2569</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 88 &amp;&amp; Main.tile[num2, k].frameY &gt;= 66 &amp;&amp; Main.tile[num2, k].frameY &lt;= 110)</div>
+<div class="line"><span class="lineno"> 2570</span>                        {</div>
+<div class="line"><span class="lineno"> 2571</span>                            num2--;</div>
+<div class="line"><span class="lineno"> 2572</span>                        }</div>
+<div class="line"><span class="lineno"> 2573</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 22 &amp;&amp; Main.tile[num2, k].frameY &gt;= 132 &amp;&amp; Main.tile[num2, k].frameY &lt;= 176)</div>
+<div class="line"><span class="lineno"> 2574</span>                        {</div>
+<div class="line"><span class="lineno"> 2575</span>                            num2--;</div>
+<div class="line"><span class="lineno"> 2576</span>                        }</div>
+<div class="line"><span class="lineno"> 2577</span>                    }</div>
+<div class="line"><span class="lineno"> 2578</span>                    <span class="keywordflow">for</span> (; Main.tile[num2, k].active() &amp;&amp; Main.tile[num2, k].type == type &amp;&amp; Main.tile[num2, k + 1].type == type &amp;&amp; Collision.InTileBounds(num2, k + 1, reachableStartX, reachableStartY, reachableEndX, reachableEndY); k++)</div>
+<div class="line"><span class="lineno"> 2579</span>                    {</div>
+<div class="line"><span class="lineno"> 2580</span>                    }</div>
+<div class="line"><span class="lineno"> 2581</span>                }</div>
+<div class="line"><span class="lineno"> 2582</span>                <span class="keywordflow">if</span> (tile.type == 80)</div>
+<div class="line"><span class="lineno"> 2583</span>                {</div>
+<div class="line"><span class="lineno"> 2584</span>                    <span class="keywordflow">if</span> (Collision.InTileBounds(num2 + 1, k, reachableStartX, reachableStartY, reachableEndX, reachableEndY))</div>
+<div class="line"><span class="lineno"> 2585</span>                    {</div>
+<div class="line"><span class="lineno"> 2586</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 54)</div>
+<div class="line"><span class="lineno"> 2587</span>                        {</div>
+<div class="line"><span class="lineno"> 2588</span>                            num2++;</div>
+<div class="line"><span class="lineno"> 2589</span>                        }</div>
+<div class="line"><span class="lineno"> 2590</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 108 &amp;&amp; Main.tile[num2, k].frameY == 36)</div>
+<div class="line"><span class="lineno"> 2591</span>                        {</div>
+<div class="line"><span class="lineno"> 2592</span>                            num2++;</div>
+<div class="line"><span class="lineno"> 2593</span>                        }</div>
+<div class="line"><span class="lineno"> 2594</span>                    }</div>
+<div class="line"><span class="lineno"> 2595</span>                    <span class="keywordflow">if</span> (Collision.InTileBounds(num2 - 1, k, reachableStartX, reachableStartY, reachableEndX, reachableEndY))</div>
+<div class="line"><span class="lineno"> 2596</span>                    {</div>
+<div class="line"><span class="lineno"> 2597</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 36)</div>
+<div class="line"><span class="lineno"> 2598</span>                        {</div>
+<div class="line"><span class="lineno"> 2599</span>                            num2--;</div>
+<div class="line"><span class="lineno"> 2600</span>                        }</div>
+<div class="line"><span class="lineno"> 2601</span>                        <span class="keywordflow">if</span> (Main.tile[num2, k].frameX == 108 &amp;&amp; Main.tile[num2, k].frameY == 18)</div>
+<div class="line"><span class="lineno"> 2602</span>                        {</div>
+<div class="line"><span class="lineno"> 2603</span>                            num2--;</div>
+<div class="line"><span class="lineno"> 2604</span>                        }</div>
+<div class="line"><span class="lineno"> 2605</span>                    }</div>
+<div class="line"><span class="lineno"> 2606</span>                    <span class="keywordflow">for</span> (; Main.tile[num2, k].active() &amp;&amp; Main.tile[num2, k].type == 80 &amp;&amp; Main.tile[num2, k + 1].type == 80 &amp;&amp; Collision.InTileBounds(num2, k + 1, reachableStartX, reachableStartY, reachableEndX, reachableEndY); k++)</div>
+<div class="line"><span class="lineno"> 2607</span>                    {</div>
+<div class="line"><span class="lineno"> 2608</span>                    }</div>
+<div class="line"><span class="lineno"> 2609</span>                }</div>
+<div class="line"><span class="lineno"> 2610</span>                <span class="keywordflow">if</span> (tile.type == 323 || tile.type == 72)</div>
+<div class="line"><span class="lineno"> 2611</span>                {</div>
+<div class="line"><span class="lineno"> 2612</span>                    <span class="keywordflow">for</span> (; Main.tile[num2, k].active() &amp;&amp; ((Main.tile[num2, k].type == 323 &amp;&amp; Main.tile[num2, k + 1].type == 323) || (Main.tile[num2, k].type == 72 &amp;&amp; Main.tile[num2, k + 1].type == 72)) &amp;&amp; Collision.InTileBounds(num2, k + 1, reachableStartX, reachableStartY, reachableEndX, reachableEndY); k++)</div>
+<div class="line"><span class="lineno"> 2613</span>                    {</div>
+<div class="line"><span class="lineno"> 2614</span>                    }</div>
+<div class="line"><span class="lineno"> 2615</span>                }</div>
+<div class="line"><span class="lineno"> 2616</span>                <span class="keywordtype">float</span> num3 = Vector2.Distance(<span class="keyword">new</span> Vector2(num2, k) * 16f + Vector2.One * 8f, providedInfo.mouse);</div>
+<div class="line"><span class="lineno"> 2617</span>                <span class="keywordflow">if</span> (num == -1f || num3 &lt; num)</div>
+<div class="line"><span class="lineno"> 2618</span>                {</div>
+<div class="line"><span class="lineno"> 2619</span>                    num = num3;</div>
+<div class="line"><span class="lineno"> 2620</span>                    fX = num2;</div>
+<div class="line"><span class="lineno"> 2621</span>                    fY = k;</div>
+<div class="line"><span class="lineno"> 2622</span>                }</div>
+<div class="line"><span class="lineno"> 2623</span>            }</div>
+<div class="line"><span class="lineno"> 2624</span>        }</div>
+<div class="line"><span class="lineno"> 2625</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_a27e80acabf354fc52b3bb4d3d3321237_html_a27e80acabf354fc52b3bb4d3d3321237"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a27e80acabf354fc52b3bb4d3d3321237.html#a27e80acabf354fc52b3bb4d3d3321237">Terraria.ID.TileID.Sets.IgnoreSmartCursorPriorityAxe</a></div><div class="ttdeci">static bool[] IgnoreSmartCursorPriorityAxe</div><div class="ttdef"><b>Definition</b> TileID.cs:131</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_ad3e8c6de734713cf69460f7223f39548_html_ad3e8c6de734713cf69460f7223f39548"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ad3e8c6de734713cf69460f7223f39548.html#ad3e8c6de734713cf69460f7223f39548">Terraria.ID.TileID.Sets.IsATreeTrunk</a></div><div class="ttdeci">static bool[] IsATreeTrunk</div><div class="ttdef"><b>Definition</b> TileID.cs:91</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_1_1Sets_html"><div class="ttname"><a href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets.html">Terraria.ID.TileID.Sets</a></div><div class="ttdef"><b>Definition</b> TileID.cs:9</div></div>
+<div class="ttc" id="aclassTerraria_1_1ID_1_1TileID_html"><div class="ttname"><a href="../../da/d8f/classTerraria_1_1ID_1_1TileID.html">Terraria.ID.TileID</a></div><div class="ttdef"><b>Definition</b> TileID.cs:7</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../db/d79/classTerraria_1_1Item_ad80fa89e988562337135e156e1e3b058.html#ad80fa89e988562337135e156e1e3b058">Terraria.Item.axe</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_a27e80acabf354fc52b3bb4d3d3321237.html#a27e80acabf354fc52b3bb4d3d3321237">Terraria.ID.TileID.Sets.IgnoreSmartCursorPriorityAxe</a>, <a class="el" href="../../de/d1d/classTerraria_1_1Collision_a1104a0d74088cc50a62ea175d882bafa.html#a1104a0d74088cc50a62ea175d882bafa">Terraria.Collision.InTileBounds()</a>, <a class="el" href="../../de/de8/classTerraria_1_1ID_1_1TileID_1_1Sets_ad3e8c6de734713cf69460f7223f39548.html#ad3e8c6de734713cf69460f7223f39548">Terraria.ID.TileID.Sets.IsATreeTrunk</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a7887e061a314eea279dfefc3380c0f75.html#a7887e061a314eea279dfefc3380c0f75">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.item</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0a6bb9ff662642d9a31733c731afa0de.html#a0a6bb9ff662642d9a31733c731afa0de">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.mouse</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_abd4870ae3312dbe99d3bdb7a4eeec166.html#abd4870ae3312dbe99d3bdb7a4eeec166">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_afa76d5eba796bc1fa0a05a5eb9a51530.html#afa76d5eba796bc1fa0a05a5eb9a51530">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableEndY</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a65cc27a15ee3096bab2c688b1c04a752.html#a65cc27a15ee3096bab2c688b1c04a752">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a0d82d09c6bd5e86d727178a422375ae8.html#a0d82d09c6bd5e86d727178a422375ae8">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.reachableStartY</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a7e0e3dc112350edcc776df601f1c211b.html#a7e0e3dc112350edcc776df601f1c211b">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.screenTargetX</a>, <a class="el" href="../../d7/df4/classTerraria_1_1GameContent_1_1SmartCursorHelper_1_1SmartCursorUsageInfo_a69a7da655772208abe5a55e20a7e2494.html#a69a7da655772208abe5a55e20a7e2494">Terraria.GameContent.SmartCursorHelper.SmartCursorUsageInfo.screenTargetY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afdaab6d1e7779217685e8f67c82fadf6.html#afdaab6d1e7779217685e8f67c82fadf6">Terraria.Main.tileAxe</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/de6/classTerraria_1_1GameContent_1_1SmartCursorHelper_abf97830c4eacd4da49a905008c7a5757.html#abf97830c4eacd4da49a905008c7a5757">Terraria.GameContent.SmartCursorHelper.SmartCursorLookup()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,57 @@ $(function(){initNavTree('db/dd0/classTerraria_1_1RemoteServer_a6119788001aabfc4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!Netplay.Disconnect)</div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (length == 0)</div>
+<div class="line"><span class="lineno">   53</span>                {</div>
+<div class="line"><span class="lineno">   54</span>                    Netplay.Disconnect = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   55</span>                    Main.statusText = <a class="code hl_class" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Language</a>.<a class="code hl_function" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">GetTextValue</a>(<span class="stringliteral">&quot;Net.LostConnection&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>                }</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Main.ignoreErrors)</div>
+<div class="line"><span class="lineno">   58</span>                {</div>
+<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   60</span>                    {</div>
+<div class="line"><span class="lineno">   61</span>                        NetMessage.ReceiveBytes(<a class="code hl_variable" href="../../db/dd0/classTerraria_1_1RemoteServer_afa2f11af274c8ea96e01c63a2f646f65.html#afa2f11af274c8ea96e01c63a2f646f65">ReadBuffer</a>, length);</div>
+<div class="line"><span class="lineno">   62</span>                    }</div>
+<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">   64</span>                    {</div>
+<div class="line"><span class="lineno">   65</span>                    }</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   68</span>                {</div>
+<div class="line"><span class="lineno">   69</span>                    NetMessage.ReceiveBytes(<a class="code hl_variable" href="../../db/dd0/classTerraria_1_1RemoteServer_afa2f11af274c8ea96e01c63a2f646f65.html#afa2f11af274c8ea96e01c63a2f646f65">ReadBuffer</a>, length);</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="../../db/dd0/classTerraria_1_1RemoteServer_aa07d3ff5381a0f234d90d38aa866cee4.html#aa07d3ff5381a0f234d90d38aa866cee4">IsReading</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a> value)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keyword">using </span>StreamWriter streamWriter = <span class="keyword">new</span> StreamWriter(<span class="stringliteral">&quot;client-crashlog.txt&quot;</span>, append: true);</div>
+<div class="line"><span class="lineno">   79</span>                streamWriter.WriteLine(DateTime.Now);</div>
+<div class="line"><span class="lineno">   80</span>                streamWriter.WriteLine(value);</div>
+<div class="line"><span class="lineno">   81</span>                streamWriter.WriteLine(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>            Netplay.Disconnect = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78_html_ae4636a4800b9ecbaa498954520462f78"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue</a></div><div class="ttdeci">static string GetTextValue(string key)</div><div class="ttdef"><b>Definition</b> Language.cs:15</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1Language_html"><div class="ttname"><a href="../../d4/d8f/classTerraria_1_1Localization_1_1Language.html">Terraria.Localization.Language</a></div><div class="ttdef"><b>Definition</b> Language.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1RemoteServer_aa07d3ff5381a0f234d90d38aa866cee4_html_aa07d3ff5381a0f234d90d38aa866cee4"><div class="ttname"><a href="../../db/dd0/classTerraria_1_1RemoteServer_aa07d3ff5381a0f234d90d38aa866cee4.html#aa07d3ff5381a0f234d90d38aa866cee4">Terraria.RemoteServer.IsReading</a></div><div class="ttdeci">bool IsReading</div><div class="ttdef"><b>Definition</b> RemoteServer.cs:18</div></div>
+<div class="ttc" id="aclassTerraria_1_1RemoteServer_afa2f11af274c8ea96e01c63a2f646f65_html_afa2f11af274c8ea96e01c63a2f646f65"><div class="ttname"><a href="../../db/dd0/classTerraria_1_1RemoteServer_afa2f11af274c8ea96e01c63a2f646f65.html#afa2f11af274c8ea96e01c63a2f646f65">Terraria.RemoteServer.ReadBuffer</a></div><div class="ttdeci">byte[] ReadBuffer</div><div class="ttdef"><b>Definition</b> RemoteServer.cs:20</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d90/classTerraria_1_1Netplay_a13668ce10e43f9e7986242dfce3474c6.html#a13668ce10e43f9e7986242dfce3474c6">Terraria.Netplay.Disconnect</a>, <a class="el" href="../../d4/d8f/classTerraria_1_1Localization_1_1Language_ae4636a4800b9ecbaa498954520462f78.html#ae4636a4800b9ecbaa498954520462f78">Terraria.Localization.Language.GetTextValue()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_aacab2649dd316b08b456f78d18039c10.html#aacab2649dd316b08b456f78d18039c10">Terraria.Main.ignoreErrors</a>, <a class="el" href="../../db/dd0/classTerraria_1_1RemoteServer_aa07d3ff5381a0f234d90d38aa866cee4.html#aa07d3ff5381a0f234d90d38aa866cee4">Terraria.RemoteServer.IsReading</a>, <a class="el" href="../../db/dd0/classTerraria_1_1RemoteServer_afa2f11af274c8ea96e01c63a2f646f65.html#afa2f11af274c8ea96e01c63a2f646f65">Terraria.RemoteServer.ReadBuffer</a>, and <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0a106e92bed14724f594673be80c618a.html#a0a106e92bed14724f594673be80c618a">Terraria.NetMessage.ReceiveBytes()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d90/classTerraria_1_1Netplay_a0177534cae0ae33727d0590e3585777a.html#a0177534cae0ae33727d0590e3585777a">Terraria.Netplay.InnerClientLoop()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

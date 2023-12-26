@@ -121,6 +121,231 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_aa0ed5e9ca7ba131b22a4
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">47567</span>    {</div>
+<div class="line"><span class="lineno">47568</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">47569</span>        {</div>
+<div class="line"><span class="lineno">47570</span>            <span class="keywordtype">int</span> num = j;</div>
+<div class="line"><span class="lineno">47571</span>            <span class="keywordtype">int</span> num2 = i;</div>
+<div class="line"><span class="lineno">47572</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_aad979cd10c2fda77edd39557b132aa5b.html#aad979cd10c2fda77edd39557b132aa5b">CheckCactus</a>(i, j))</div>
+<div class="line"><span class="lineno">47573</span>            {</div>
+<div class="line"><span class="lineno">47574</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47575</span>            }</div>
+<div class="line"><span class="lineno">47576</span>            <span class="keywordflow">while</span> (Main.tile[num2, num].active() &amp;&amp; Main.tile[num2, num].type == 80)</div>
+<div class="line"><span class="lineno">47577</span>            {</div>
+<div class="line"><span class="lineno">47578</span>                num++;</div>
+<div class="line"><span class="lineno">47579</span>                <span class="keywordflow">if</span> (Main.tile[num2, num] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">47580</span>                {</div>
+<div class="line"><span class="lineno">47581</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47582</span>                }</div>
+<div class="line"><span class="lineno">47583</span>                <span class="keywordflow">if</span> (!Main.tile[num2, num].active() || Main.tile[num2, num].type != 80)</div>
+<div class="line"><span class="lineno">47584</span>                {</div>
+<div class="line"><span class="lineno">47585</span>                    <span class="keywordflow">if</span> (Main.tile[num2 - 1, num] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 - 1, num].active() &amp;&amp; Main.tile[num2 - 1, num].type == 80 &amp;&amp; Main.tile[num2 - 1, num - 1].active() &amp;&amp; Main.tile[num2 - 1, num - 1].type == 80 &amp;&amp; num2 &gt;= i)</div>
+<div class="line"><span class="lineno">47586</span>                    {</div>
+<div class="line"><span class="lineno">47587</span>                        num2--;</div>
+<div class="line"><span class="lineno">47588</span>                    }</div>
+<div class="line"><span class="lineno">47589</span>                    <span class="keywordflow">if</span> (Main.tile[num2 + 1, num] != <span class="keyword">null</span> &amp;&amp; Main.tile[num2 + 1, num].active() &amp;&amp; Main.tile[num2 + 1, num].type == 80 &amp;&amp; Main.tile[num2 + 1, num - 1].active() &amp;&amp; Main.tile[num2 + 1, num - 1].type == 80 &amp;&amp; num2 &lt;= i)</div>
+<div class="line"><span class="lineno">47590</span>                    {</div>
+<div class="line"><span class="lineno">47591</span>                        num2++;</div>
+<div class="line"><span class="lineno">47592</span>                    }</div>
+<div class="line"><span class="lineno">47593</span>                }</div>
+<div class="line"><span class="lineno">47594</span>            }</div>
+<div class="line"><span class="lineno">47595</span>            num--;</div>
+<div class="line"><span class="lineno">47596</span>            <span class="keywordtype">int</span> num3 = i - num2;</div>
+<div class="line"><span class="lineno">47597</span>            num2 = i;</div>
+<div class="line"><span class="lineno">47598</span>            num = j;</div>
+<div class="line"><span class="lineno">47599</span>            <span class="keywordflow">if</span> (Main.tile[i - 2, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">47600</span>            {</div>
+<div class="line"><span class="lineno">47601</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47602</span>            }</div>
+<div class="line"><span class="lineno">47603</span>            <span class="keywordtype">int</span> type = Main.tile[i - 2, j].type;</div>
+<div class="line"><span class="lineno">47604</span>            <span class="keywordflow">if</span> (Main.tile[i - 1, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">47605</span>            {</div>
+<div class="line"><span class="lineno">47606</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47607</span>            }</div>
+<div class="line"><span class="lineno">47608</span>            <span class="keywordtype">int</span> num4 = Main.tile[i - 1, j].type;</div>
+<div class="line"><span class="lineno">47609</span>            <span class="keywordflow">if</span> (Main.tile[i + 1, j] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">47610</span>            {</div>
+<div class="line"><span class="lineno">47611</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47612</span>            }</div>
+<div class="line"><span class="lineno">47613</span>            <span class="keywordtype">int</span> num5 = Main.tile[i + 1, j].type;</div>
+<div class="line"><span class="lineno">47614</span>            <span class="keywordflow">if</span> (Main.tile[i, j - 1] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">47615</span>            {</div>
+<div class="line"><span class="lineno">47616</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">47617</span>            }</div>
+<div class="line"><span class="lineno">47618</span>            <span class="keywordtype">int</span> num6 = Main.tile[i, j - 1].type;</div>
+<div class="line"><span class="lineno">47619</span>            <span class="keywordflow">if</span> (num6 == 227)</div>
+<div class="line"><span class="lineno">47620</span>            {</div>
+<div class="line"><span class="lineno">47621</span>                num6 = 80;</div>
+<div class="line"><span class="lineno">47622</span>            }</div>
+<div class="line"><span class="lineno">47623</span>            <span class="keywordtype">int</span> num7 = Main.tile[i, j + 1].type;</div>
+<div class="line"><span class="lineno">47624</span>            <span class="keywordtype">int</span> num8 = Main.tile[i - 1, j + 1].type;</div>
+<div class="line"><span class="lineno">47625</span>            <span class="keywordtype">int</span> num9 = Main.tile[i + 1, j + 1].type;</div>
+<div class="line"><span class="lineno">47626</span>            <span class="keywordflow">if</span> (!Main.tile[i - 1, j].active())</div>
+<div class="line"><span class="lineno">47627</span>            {</div>
+<div class="line"><span class="lineno">47628</span>                num4 = -1;</div>
+<div class="line"><span class="lineno">47629</span>            }</div>
+<div class="line"><span class="lineno">47630</span>            <span class="keywordflow">if</span> (!Main.tile[i + 1, j].active())</div>
+<div class="line"><span class="lineno">47631</span>            {</div>
+<div class="line"><span class="lineno">47632</span>                num5 = -1;</div>
+<div class="line"><span class="lineno">47633</span>            }</div>
+<div class="line"><span class="lineno">47634</span>            <span class="keywordflow">if</span> (!Main.tile[i, j - 1].active())</div>
+<div class="line"><span class="lineno">47635</span>            {</div>
+<div class="line"><span class="lineno">47636</span>                num6 = -1;</div>
+<div class="line"><span class="lineno">47637</span>            }</div>
+<div class="line"><span class="lineno">47638</span>            <span class="keywordflow">if</span> (!Main.tile[i, j + 1].active())</div>
+<div class="line"><span class="lineno">47639</span>            {</div>
+<div class="line"><span class="lineno">47640</span>                num7 = -1;</div>
+<div class="line"><span class="lineno">47641</span>            }</div>
+<div class="line"><span class="lineno">47642</span>            <span class="keywordflow">if</span> (!Main.tile[i - 1, j + 1].active())</div>
+<div class="line"><span class="lineno">47643</span>            {</div>
+<div class="line"><span class="lineno">47644</span>                num8 = -1;</div>
+<div class="line"><span class="lineno">47645</span>            }</div>
+<div class="line"><span class="lineno">47646</span>            <span class="keywordflow">if</span> (!Main.tile[i + 1, j + 1].active())</div>
+<div class="line"><span class="lineno">47647</span>            {</div>
+<div class="line"><span class="lineno">47648</span>                num9 = -1;</div>
+<div class="line"><span class="lineno">47649</span>            }</div>
+<div class="line"><span class="lineno">47650</span>            <span class="keywordtype">short</span> num10 = Main.tile[i, j].frameX;</div>
+<div class="line"><span class="lineno">47651</span>            <span class="keywordtype">short</span> num11 = Main.tile[i, j].frameY;</div>
+<div class="line"><span class="lineno">47652</span>            <span class="keywordflow">switch</span> (num3)</div>
+<div class="line"><span class="lineno">47653</span>            {</div>
+<div class="line"><span class="lineno">47654</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">47655</span>                <span class="keywordflow">if</span> (num6 != 80)</div>
+<div class="line"><span class="lineno">47656</span>                {</div>
+<div class="line"><span class="lineno">47657</span>                    <span class="keywordflow">if</span> (num4 == 80 &amp;&amp; num5 == 80 &amp;&amp; num8 != 80 &amp;&amp; num9 != 80 &amp;&amp; type != 80)</div>
+<div class="line"><span class="lineno">47658</span>                    {</div>
+<div class="line"><span class="lineno">47659</span>                        num10 = 90;</div>
+<div class="line"><span class="lineno">47660</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47661</span>                    }</div>
+<div class="line"><span class="lineno">47662</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num4 == 80 &amp;&amp; num8 != 80 &amp;&amp; type != 80)</div>
+<div class="line"><span class="lineno">47663</span>                    {</div>
+<div class="line"><span class="lineno">47664</span>                        num10 = 72;</div>
+<div class="line"><span class="lineno">47665</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47666</span>                    }</div>
+<div class="line"><span class="lineno">47667</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 == 80 &amp;&amp; num9 != 80)</div>
+<div class="line"><span class="lineno">47668</span>                    {</div>
+<div class="line"><span class="lineno">47669</span>                        num10 = 18;</div>
+<div class="line"><span class="lineno">47670</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47671</span>                    }</div>
+<div class="line"><span class="lineno">47672</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47673</span>                    {</div>
+<div class="line"><span class="lineno">47674</span>                        num10 = 0;</div>
+<div class="line"><span class="lineno">47675</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47676</span>                    }</div>
+<div class="line"><span class="lineno">47677</span>                }</div>
+<div class="line"><span class="lineno">47678</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num4 == 80 &amp;&amp; num5 == 80 &amp;&amp; num8 != 80 &amp;&amp; num9 != 80 &amp;&amp; type != 80)</div>
+<div class="line"><span class="lineno">47679</span>                {</div>
+<div class="line"><span class="lineno">47680</span>                    num10 = 90;</div>
+<div class="line"><span class="lineno">47681</span>                    num11 = 36;</div>
+<div class="line"><span class="lineno">47682</span>                }</div>
+<div class="line"><span class="lineno">47683</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num4 == 80 &amp;&amp; num8 != 80 &amp;&amp; type != 80)</div>
+<div class="line"><span class="lineno">47684</span>                {</div>
+<div class="line"><span class="lineno">47685</span>                    num10 = 72;</div>
+<div class="line"><span class="lineno">47686</span>                    num11 = 36;</div>
+<div class="line"><span class="lineno">47687</span>                }</div>
+<div class="line"><span class="lineno">47688</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num5 == 80 &amp;&amp; num9 != 80)</div>
+<div class="line"><span class="lineno">47689</span>                {</div>
+<div class="line"><span class="lineno">47690</span>                    num10 = 18;</div>
+<div class="line"><span class="lineno">47691</span>                    num11 = 36;</div>
+<div class="line"><span class="lineno">47692</span>                }</div>
+<div class="line"><span class="lineno">47693</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num7 &gt;= 0 &amp;&amp; Main.tileSolid[num7])</div>
+<div class="line"><span class="lineno">47694</span>                {</div>
+<div class="line"><span class="lineno">47695</span>                    num10 = 0;</div>
+<div class="line"><span class="lineno">47696</span>                    num11 = 36;</div>
+<div class="line"><span class="lineno">47697</span>                }</div>
+<div class="line"><span class="lineno">47698</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47699</span>                {</div>
+<div class="line"><span class="lineno">47700</span>                    num10 = 0;</div>
+<div class="line"><span class="lineno">47701</span>                    num11 = 18;</div>
+<div class="line"><span class="lineno">47702</span>                }</div>
+<div class="line"><span class="lineno">47703</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47704</span>            <span class="keywordflow">case</span> -1:</div>
+<div class="line"><span class="lineno">47705</span>                <span class="keywordflow">if</span> (num5 == 80)</div>
+<div class="line"><span class="lineno">47706</span>                {</div>
+<div class="line"><span class="lineno">47707</span>                    <span class="keywordflow">if</span> (num6 != 80 &amp;&amp; num7 != 80)</div>
+<div class="line"><span class="lineno">47708</span>                    {</div>
+<div class="line"><span class="lineno">47709</span>                        num10 = 108;</div>
+<div class="line"><span class="lineno">47710</span>                        num11 = 36;</div>
+<div class="line"><span class="lineno">47711</span>                    }</div>
+<div class="line"><span class="lineno">47712</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num7 != 80)</div>
+<div class="line"><span class="lineno">47713</span>                    {</div>
+<div class="line"><span class="lineno">47714</span>                        num10 = 54;</div>
+<div class="line"><span class="lineno">47715</span>                        num11 = 36;</div>
+<div class="line"><span class="lineno">47716</span>                    }</div>
+<div class="line"><span class="lineno">47717</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num6 != 80)</div>
+<div class="line"><span class="lineno">47718</span>                    {</div>
+<div class="line"><span class="lineno">47719</span>                        num10 = 54;</div>
+<div class="line"><span class="lineno">47720</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47721</span>                    }</div>
+<div class="line"><span class="lineno">47722</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47723</span>                    {</div>
+<div class="line"><span class="lineno">47724</span>                        num10 = 54;</div>
+<div class="line"><span class="lineno">47725</span>                        num11 = 18;</div>
+<div class="line"><span class="lineno">47726</span>                    }</div>
+<div class="line"><span class="lineno">47727</span>                }</div>
+<div class="line"><span class="lineno">47728</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num6 != 80)</div>
+<div class="line"><span class="lineno">47729</span>                {</div>
+<div class="line"><span class="lineno">47730</span>                    num10 = 54;</div>
+<div class="line"><span class="lineno">47731</span>                    num11 = 0;</div>
+<div class="line"><span class="lineno">47732</span>                }</div>
+<div class="line"><span class="lineno">47733</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47734</span>                {</div>
+<div class="line"><span class="lineno">47735</span>                    num10 = 54;</div>
+<div class="line"><span class="lineno">47736</span>                    num11 = 18;</div>
+<div class="line"><span class="lineno">47737</span>                }</div>
+<div class="line"><span class="lineno">47738</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47739</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">47740</span>                <span class="keywordflow">if</span> (num4 == 80)</div>
+<div class="line"><span class="lineno">47741</span>                {</div>
+<div class="line"><span class="lineno">47742</span>                    <span class="keywordflow">if</span> (num6 != 80 &amp;&amp; num7 != 80)</div>
+<div class="line"><span class="lineno">47743</span>                    {</div>
+<div class="line"><span class="lineno">47744</span>                        num10 = 108;</div>
+<div class="line"><span class="lineno">47745</span>                        num11 = 18;</div>
+<div class="line"><span class="lineno">47746</span>                    }</div>
+<div class="line"><span class="lineno">47747</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num7 != 80)</div>
+<div class="line"><span class="lineno">47748</span>                    {</div>
+<div class="line"><span class="lineno">47749</span>                        num10 = 36;</div>
+<div class="line"><span class="lineno">47750</span>                        num11 = 36;</div>
+<div class="line"><span class="lineno">47751</span>                    }</div>
+<div class="line"><span class="lineno">47752</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num6 != 80)</div>
+<div class="line"><span class="lineno">47753</span>                    {</div>
+<div class="line"><span class="lineno">47754</span>                        num10 = 36;</div>
+<div class="line"><span class="lineno">47755</span>                        num11 = 0;</div>
+<div class="line"><span class="lineno">47756</span>                    }</div>
+<div class="line"><span class="lineno">47757</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47758</span>                    {</div>
+<div class="line"><span class="lineno">47759</span>                        num10 = 36;</div>
+<div class="line"><span class="lineno">47760</span>                        num11 = 18;</div>
+<div class="line"><span class="lineno">47761</span>                    }</div>
+<div class="line"><span class="lineno">47762</span>                }</div>
+<div class="line"><span class="lineno">47763</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num6 != 80)</div>
+<div class="line"><span class="lineno">47764</span>                {</div>
+<div class="line"><span class="lineno">47765</span>                    num10 = 36;</div>
+<div class="line"><span class="lineno">47766</span>                    num11 = 0;</div>
+<div class="line"><span class="lineno">47767</span>                }</div>
+<div class="line"><span class="lineno">47768</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">47769</span>                {</div>
+<div class="line"><span class="lineno">47770</span>                    num10 = 36;</div>
+<div class="line"><span class="lineno">47771</span>                    num11 = 18;</div>
+<div class="line"><span class="lineno">47772</span>                }</div>
+<div class="line"><span class="lineno">47773</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">47774</span>            }</div>
+<div class="line"><span class="lineno">47775</span>            <span class="keywordflow">if</span> (num10 != Main.tile[i, j].frameX || num11 != Main.tile[i, j].frameY)</div>
+<div class="line"><span class="lineno">47776</span>            {</div>
+<div class="line"><span class="lineno">47777</span>                Main.tile[i, j].frameX = num10;</div>
+<div class="line"><span class="lineno">47778</span>                Main.tile[i, j].frameY = num11;</div>
+<div class="line"><span class="lineno">47779</span>                <a class="code hl_function" href="../../de/da1/classTerraria_1_1WorldGen_a4e21d4d9a1dcbfdbdbbbfa7118484e23.html#a4e21d4d9a1dcbfdbdbbbfa7118484e23">DiamondTileFrame</a>(i, j);</div>
+<div class="line"><span class="lineno">47780</span>            }</div>
+<div class="line"><span class="lineno">47781</span>        }</div>
+<div class="line"><span class="lineno">47782</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">47783</span>        {</div>
+<div class="line"><span class="lineno">47784</span>            Main.tile[i, j].frameX = 0;</div>
+<div class="line"><span class="lineno">47785</span>            Main.tile[i, j].frameY = 0;</div>
+<div class="line"><span class="lineno">47786</span>        }</div>
+<div class="line"><span class="lineno">47787</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_a4e21d4d9a1dcbfdbdbbbfa7118484e23_html_a4e21d4d9a1dcbfdbdbbbfa7118484e23"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_a4e21d4d9a1dcbfdbdbbbfa7118484e23.html#a4e21d4d9a1dcbfdbdbbbfa7118484e23">Terraria.WorldGen.DiamondTileFrame</a></div><div class="ttdeci">static void DiamondTileFrame(int i, int j)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:70354</div></div>
+<div class="ttc" id="aclassTerraria_1_1WorldGen_aad979cd10c2fda77edd39557b132aa5b_html_aad979cd10c2fda77edd39557b132aa5b"><div class="ttname"><a href="../../de/da1/classTerraria_1_1WorldGen_aad979cd10c2fda77edd39557b132aa5b.html#aad979cd10c2fda77edd39557b132aa5b">Terraria.WorldGen.CheckCactus</a></div><div class="ttdeci">static bool CheckCactus(int i, int j)</div><div class="ttdef"><b>Definition</b> WorldGen.cs:45737</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

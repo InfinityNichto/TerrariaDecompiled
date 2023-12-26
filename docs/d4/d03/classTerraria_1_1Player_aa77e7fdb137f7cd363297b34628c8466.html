@@ -121,6 +121,48 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_aa77e7fdb137f7cd363297b
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno"> 4477</span>    {</div>
+<div class="line"><span class="lineno"> 4478</span>        <span class="keywordtype">int</span> num = -1;</div>
+<div class="line"><span class="lineno"> 4479</span>        <span class="keywordflow">while</span> (num == -1)</div>
+<div class="line"><span class="lineno"> 4480</span>        {</div>
+<div class="line"><span class="lineno"> 4481</span>            <span class="keywordtype">int</span> num2 = -1;</div>
+<div class="line"><span class="lineno"> 4482</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">maxBuffs</a>; i++)</div>
+<div class="line"><span class="lineno"> 4483</span>            {</div>
+<div class="line"><span class="lineno"> 4484</span>                <span class="keywordflow">if</span> (!Main.debuff[<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[i]])</div>
+<div class="line"><span class="lineno"> 4485</span>                {</div>
+<div class="line"><span class="lineno"> 4486</span>                    num2 = i;</div>
+<div class="line"><span class="lineno"> 4487</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4488</span>                }</div>
+<div class="line"><span class="lineno"> 4489</span>            }</div>
+<div class="line"><span class="lineno"> 4490</span>            <span class="keywordflow">if</span> (num2 == -1)</div>
+<div class="line"><span class="lineno"> 4491</span>            {</div>
+<div class="line"><span class="lineno"> 4492</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 4493</span>            }</div>
+<div class="line"><span class="lineno"> 4494</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = num2; j &lt; <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">maxBuffs</a>; j++)</div>
+<div class="line"><span class="lineno"> 4495</span>            {</div>
+<div class="line"><span class="lineno"> 4496</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[j] == 0)</div>
+<div class="line"><span class="lineno"> 4497</span>                {</div>
+<div class="line"><span class="lineno"> 4498</span>                    num = j;</div>
+<div class="line"><span class="lineno"> 4499</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 4500</span>                }</div>
+<div class="line"><span class="lineno"> 4501</span>            }</div>
+<div class="line"><span class="lineno"> 4502</span>            <span class="keywordflow">if</span> (num == -1)</div>
+<div class="line"><span class="lineno"> 4503</span>            {</div>
+<div class="line"><span class="lineno"> 4504</span>                <a class="code hl_function" href="../../d4/d03/classTerraria_1_1Player_ae95973d4b5efa07894c3344d5734f16e.html#ae95973d4b5efa07894c3344d5734f16e">DelBuff</a>(num2);</div>
+<div class="line"><span class="lineno"> 4505</span>            }</div>
+<div class="line"><span class="lineno"> 4506</span>        }</div>
+<div class="line"><span class="lineno"> 4507</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">buffType</a>[num] = type;</div>
+<div class="line"><span class="lineno"> 4508</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">buffTime</a>[num] = time;</div>
+<div class="line"><span class="lineno"> 4509</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 4510</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1_html_a29f3e6c334d743f6d52482a5265180e1"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a></div><div class="ttdeci">static readonly int maxBuffs</div><div class="ttdef"><b>Definition</b> Player.cs:1191</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b_html_a96747bc1f8725c45b617ca3aeadd6c3b"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">Terraria.Player.buffTime</a></div><div class="ttdeci">int[] buffTime</div><div class="ttdef"><b>Definition</b> Player.cs:1195</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa_html_aba34ea74335a27cda62cca4057b79eaa"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a></div><div class="ttdeci">int[] buffType</div><div class="ttdef"><b>Definition</b> Player.cs:1193</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_ae95973d4b5efa07894c3344d5734f16e_html_ae95973d4b5efa07894c3344d5734f16e"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_ae95973d4b5efa07894c3344d5734f16e.html#ae95973d4b5efa07894c3344d5734f16e">Terraria.Player.DelBuff</a></div><div class="ttdeci">void DelBuff(int b)</div><div class="ttdef"><b>Definition</b> Player.cs:4602</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d03/classTerraria_1_1Player_a96747bc1f8725c45b617ca3aeadd6c3b.html#a96747bc1f8725c45b617ca3aeadd6c3b">Terraria.Player.buffTime</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_aba34ea74335a27cda62cca4057b79eaa.html#aba34ea74335a27cda62cca4057b79eaa">Terraria.Player.buffType</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_afa7bbe6d454e59a71e09db5c9857ef83.html#afa7bbe6d454e59a71e09db5c9857ef83">Terraria.Main.debuff</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_ae95973d4b5efa07894c3344d5734f16e.html#ae95973d4b5efa07894c3344d5734f16e">Terraria.Player.DelBuff()</a>, and <a class="el" href="../../d4/d03/classTerraria_1_1Player_a29f3e6c334d743f6d52482a5265180e1.html#a29f3e6c334d743f6d52482a5265180e1">Terraria.Player.maxBuffs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d03/classTerraria_1_1Player_acb4e91497854fdaf3957abc8098e4f81.html#acb4e91497854fdaf3957abc8098e4f81">Terraria.Player.AddBuff()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -121,6 +121,63 @@ $(function(){initNavTree('d4/d03/classTerraria_1_1Player_a80ebb06065178025becc6e
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">32969</span>    {</div>
+<div class="line"><span class="lineno">32970</span>        <a class="code hl_class" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText.html">LocalizedText</a>[] array = Lang.chestType;</div>
+<div class="line"><span class="lineno">32971</span>        <span class="keywordtype">int</span>[] array2 = Chest.chestTypeToIcon;</div>
+<div class="line"><span class="lineno">32972</span>        <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[myX, myY];</div>
+<div class="line"><span class="lineno">32973</span>        <span class="keywordflow">if</span> (tile.type == 467)</div>
+<div class="line"><span class="lineno">32974</span>        {</div>
+<div class="line"><span class="lineno">32975</span>            array = Lang.chestType2;</div>
+<div class="line"><span class="lineno">32976</span>            array2 = Chest.chestTypeToIcon2;</div>
+<div class="line"><span class="lineno">32977</span>        }</div>
+<div class="line"><span class="lineno">32978</span>        <span class="keywordtype">int</span> num = myX;</div>
+<div class="line"><span class="lineno">32979</span>        <span class="keywordtype">int</span> num2 = myY;</div>
+<div class="line"><span class="lineno">32980</span>        <span class="keywordflow">if</span> (tile.frameX % 36 != 0)</div>
+<div class="line"><span class="lineno">32981</span>        {</div>
+<div class="line"><span class="lineno">32982</span>            num--;</div>
+<div class="line"><span class="lineno">32983</span>        }</div>
+<div class="line"><span class="lineno">32984</span>        <span class="keywordflow">if</span> (tile.frameY % 36 != 0)</div>
+<div class="line"><span class="lineno">32985</span>        {</div>
+<div class="line"><span class="lineno">32986</span>            num2--;</div>
+<div class="line"><span class="lineno">32987</span>        }</div>
+<div class="line"><span class="lineno">32988</span>        <span class="keywordtype">int</span> num3 = Chest.FindChest(num, num2);</div>
+<div class="line"><span class="lineno">32989</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539.html#a1e2f9d9f1dafe56f7530e0e6d0adf539">cursorItemIconID</a> = -1;</div>
+<div class="line"><span class="lineno">32990</span>        <span class="keywordflow">if</span> (num3 &lt; 0)</div>
+<div class="line"><span class="lineno">32991</span>        {</div>
+<div class="line"><span class="lineno">32992</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">cursorItemIconText</a> = array[0].<a class="code hl_property" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Value</a>;</div>
+<div class="line"><span class="lineno">32993</span>        }</div>
+<div class="line"><span class="lineno">32994</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">32995</span>        {</div>
+<div class="line"><span class="lineno">32996</span>            <span class="keywordflow">if</span> (Main.chest[num3].name != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">32997</span>            {</div>
+<div class="line"><span class="lineno">32998</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">cursorItemIconText</a> = Main.chest[num3].name;</div>
+<div class="line"><span class="lineno">32999</span>            }</div>
+<div class="line"><span class="lineno">33000</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">33001</span>            {</div>
+<div class="line"><span class="lineno">33002</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">cursorItemIconText</a> = array[tile.frameX / 36].<a class="code hl_property" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Value</a>;</div>
+<div class="line"><span class="lineno">33003</span>            }</div>
+<div class="line"><span class="lineno">33004</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">cursorItemIconText</a> == array[tile.frameX / 36].Value)</div>
+<div class="line"><span class="lineno">33005</span>            {</div>
+<div class="line"><span class="lineno">33006</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539.html#a1e2f9d9f1dafe56f7530e0e6d0adf539">cursorItemIconID</a> = array2[tile.frameX / 36];</div>
+<div class="line"><span class="lineno">33007</span>                <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">cursorItemIconText</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">33008</span>            }</div>
+<div class="line"><span class="lineno">33009</span>        }</div>
+<div class="line"><span class="lineno">33010</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539.html#a1e2f9d9f1dafe56f7530e0e6d0adf539">cursorItemIconID</a> == 3988)</div>
+<div class="line"><span class="lineno">33011</span>        {</div>
+<div class="line"><span class="lineno">33012</span>            <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539.html#a1e2f9d9f1dafe56f7530e0e6d0adf539">cursorItemIconID</a> = 306;</div>
+<div class="line"><span class="lineno">33013</span>        }</div>
+<div class="line"><span class="lineno">33014</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_aef02427f0b58d20471138620eab0152f.html#aef02427f0b58d20471138620eab0152f">noThrow</a> = 2;</div>
+<div class="line"><span class="lineno">33015</span>        <a class="code hl_variable" href="../../d4/d03/classTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9.html#a1b65e86d9d18f3aa495dc133477eeab9">cursorItemIconEnabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">33016</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8_html_a5a17471e1f9e0fc7f825fde940e3bec8"><div class="ttname"><a href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a></div><div class="ttdeci">string Value</div><div class="ttdef"><b>Definition</b> LocalizedText.cs:14</div></div>
+<div class="ttc" id="aclassTerraria_1_1Localization_1_1LocalizedText_html"><div class="ttname"><a href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText.html">Terraria.Localization.LocalizedText</a></div><div class="ttdef"><b>Definition</b> LocalizedText.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366_html_a047ad4e518abdc3f11c86587a3871366"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a047ad4e518abdc3f11c86587a3871366.html#a047ad4e518abdc3f11c86587a3871366">Terraria.Player.cursorItemIconText</a></div><div class="ttdeci">string cursorItemIconText</div><div class="ttdef"><b>Definition</b> Player.cs:1497</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9_html_a1b65e86d9d18f3aa495dc133477eeab9"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1b65e86d9d18f3aa495dc133477eeab9.html#a1b65e86d9d18f3aa495dc133477eeab9">Terraria.Player.cursorItemIconEnabled</a></div><div class="ttdeci">bool cursorItemIconEnabled</div><div class="ttdef"><b>Definition</b> Player.cs:1489</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539_html_a1e2f9d9f1dafe56f7530e0e6d0adf539"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_a1e2f9d9f1dafe56f7530e0e6d0adf539.html#a1e2f9d9f1dafe56f7530e0e6d0adf539">Terraria.Player.cursorItemIconID</a></div><div class="ttdeci">int cursorItemIconID</div><div class="ttdef"><b>Definition</b> Player.cs:1493</div></div>
+<div class="ttc" id="aclassTerraria_1_1Player_aef02427f0b58d20471138620eab0152f_html_aef02427f0b58d20471138620eab0152f"><div class="ttname"><a href="../../d4/d03/classTerraria_1_1Player_aef02427f0b58d20471138620eab0152f.html#aef02427f0b58d20471138620eab0152f">Terraria.Player.noThrow</a></div><div class="ttdeci">int noThrow</div><div class="ttdef"><b>Definition</b> Player.cs:1141</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a583732aa657fe4bdd26929076a58fa81.html#a583732aa657fe4bdd26929076a58fa81">Terraria.Lang.chestType</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a3382629ae8ef7bddc9959e5916f9ac8a.html#a3382629ae8ef7bddc9959e5916f9ac8a">Terraria.Lang.chestType2</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a7bf5805a3dd1ea45202c16506717f06e.html#a7bf5805a3dd1ea45202c16506717f06e">Terraria.Chest.chestTypeToIcon</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_a62680c01dde481472bd1e61225692a0e.html#a62680c01dde481472bd1e61225692a0e">Terraria.Chest.chestTypeToIcon2</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_acd6e0360d9c88e1b967580124250a028.html#acd6e0360d9c88e1b967580124250a028">Terraria.Chest.FindChest()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_aa47beed4f0461ec43242cd299a4bf27d.html#aa47beed4f0461ec43242cd299a4bf27d">Terraria.Chest.name</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, and <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

@@ -126,6 +126,259 @@ $(function(){initNavTree('da/dd3/classTerraria_1_1Projectile_a21670bb22462aebdb9
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">18043</span>    {</div>
+<div class="line"><span class="lineno">18044</span>        <span class="keywordtype">float</span> num = <a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">ai</a>[1];</div>
+<div class="line"><span class="lineno">18045</span>        <span class="keywordflow">if</span> (rawHueOverride.HasValue)</div>
+<div class="line"><span class="lineno">18046</span>        {</div>
+<div class="line"><span class="lineno">18047</span>            num = rawHueOverride.Value;</div>
+<div class="line"><span class="lineno">18048</span>        }</div>
+<div class="line"><span class="lineno">18049</span>        <span class="keywordtype">float</span> num2 = (num + 0.5f) % 1f;</div>
+<div class="line"><span class="lineno">18050</span>        <span class="keywordtype">float</span> saturation = 1f;</div>
+<div class="line"><span class="lineno">18051</span>        <span class="keywordtype">float</span> luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18052</span>        <span class="keywordflow">if</span> (Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].active)</div>
+<div class="line"><span class="lineno">18053</span>        {</div>
+<div class="line"><span class="lineno">18054</span>            <span class="keywordflow">switch</span> (Main.player[<a class="code hl_variable" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">owner</a>].name)</div>
+<div class="line"><span class="lineno">18055</span>            {</div>
+<div class="line"><span class="lineno">18056</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Cenx&quot;</span>:</div>
+<div class="line"><span class="lineno">18057</span>            {</div>
+<div class="line"><span class="lineno">18058</span>                <span class="keywordtype">float</span> amount13 = Utils.PingPongFrom01To010(num2);</div>
+<div class="line"><span class="lineno">18059</span>                amount13 = MathHelper.SmoothStep(0f, 1f, amount13);</div>
+<div class="line"><span class="lineno">18060</span>                amount13 = MathHelper.SmoothStep(0f, 1f, amount13);</div>
+<div class="line"><span class="lineno">18061</span>                Color color3 = Color.Lerp(<span class="keyword">new</span> Color(0.3f, 1f, 0.2f), Color.HotPink, amount13);</div>
+<div class="line"><span class="lineno">18062</span>                <span class="keywordflow">if</span> (lerpToWhite != 0f)</div>
+<div class="line"><span class="lineno">18063</span>                {</div>
+<div class="line"><span class="lineno">18064</span>                    color3 = Color.Lerp(color3, Color.White, lerpToWhite);</div>
+<div class="line"><span class="lineno">18065</span>                }</div>
+<div class="line"><span class="lineno">18066</span>                color3.A = (byte)((<span class="keywordtype">float</span>)(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)color3.A * alphaChannelMultiplier);</div>
+<div class="line"><span class="lineno">18067</span>                <span class="keywordflow">return</span> color3;</div>
+<div class="line"><span class="lineno">18068</span>            }</div>
+<div class="line"><span class="lineno">18069</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Crowno&quot;</span>:</div>
+<div class="line"><span class="lineno">18070</span>                luminosity = MathHelper.Lerp(0.25f, 0.4f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18071</span>                num2 = MathHelper.Lerp(127f / 180f, 47f / 60f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18072</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18073</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18074</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Yoraiz0r&quot;</span>:</div>
+<div class="line"><span class="lineno">18075</span>                num2 = MathHelper.Lerp(0.9f, 0.95f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18076</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18077</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18078</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Jaxrud&quot;</span>:</div>
+<div class="line"><span class="lineno">18079</span>                num2 = MathHelper.Lerp(13f / 72f, 0.43611112f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18080</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18081</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18082</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Lazure&quot;</span>:</div>
+<div class="line"><span class="lineno">18083</span>                num2 = MathHelper.Lerp(8f / 15f, 83f / 90f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18084</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18085</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18086</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Leinfors&quot;</span>:</div>
+<div class="line"><span class="lineno">18087</span>                num2 = MathHelper.Lerp(0.7f, 0.77f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18088</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18089</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18090</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Grox The Great&quot;</span>:</div>
+<div class="line"><span class="lineno">18091</span>                num2 = MathHelper.Lerp(0.31f, 0.5f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18092</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18093</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 1f, 0.8f);</div>
+<div class="line"><span class="lineno">18094</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18095</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Acamaeda&quot;</span>:</div>
+<div class="line"><span class="lineno">18096</span>                num2 = MathHelper.Lerp(0.06f, 0.28f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18097</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18098</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18099</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18100</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Alchemystics&quot;</span>:</div>
+<div class="line"><span class="lineno">18101</span>                num2 = MathHelper.Lerp(0.74f, 0.96f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18102</span>                luminosity = 0.6f;</div>
+<div class="line"><span class="lineno">18103</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18104</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18105</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Antithesis&quot;</span>:</div>
+<div class="line"><span class="lineno">18106</span>            {</div>
+<div class="line"><span class="lineno">18107</span>                num2 = 0.51f;</div>
+<div class="line"><span class="lineno">18108</span>                <span class="keywordtype">float</span> amount14 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18109</span>                luminosity = MathHelper.Lerp(0f, 0.5f, amount14);</div>
+<div class="line"><span class="lineno">18110</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18111</span>            }</div>
+<div class="line"><span class="lineno">18112</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Aurora3500&quot;</span>:</div>
+<div class="line"><span class="lineno">18113</span>                num2 = MathHelper.Lerp(0.33f, 0.8f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18114</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18115</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18116</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18117</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Bame&quot;</span>:</div>
+<div class="line"><span class="lineno">18118</span>            {</div>
+<div class="line"><span class="lineno">18119</span>                <span class="keywordtype">float</span> amount12 = Utils.PingPongFrom01To010(num2);</div>
+<div class="line"><span class="lineno">18120</span>                amount12 = MathHelper.SmoothStep(0f, 1f, amount12);</div>
+<div class="line"><span class="lineno">18121</span>                amount12 = MathHelper.SmoothStep(0f, 1f, amount12);</div>
+<div class="line"><span class="lineno">18122</span>                Color color2 = Color.Lerp(Color.Yellow, <span class="keyword">new</span> Color(0.4f, 0f, 0.75f), amount12);</div>
+<div class="line"><span class="lineno">18123</span>                <span class="keywordflow">if</span> (lerpToWhite != 0f)</div>
+<div class="line"><span class="lineno">18124</span>                {</div>
+<div class="line"><span class="lineno">18125</span>                    color2 = Color.Lerp(color2, Color.White, lerpToWhite);</div>
+<div class="line"><span class="lineno">18126</span>                }</div>
+<div class="line"><span class="lineno">18127</span>                color2.A = (byte)((<span class="keywordtype">float</span>)(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)color2.A * alphaChannelMultiplier);</div>
+<div class="line"><span class="lineno">18128</span>                <span class="keywordflow">return</span> color2;</div>
+<div class="line"><span class="lineno">18129</span>            }</div>
+<div class="line"><span class="lineno">18130</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Criddle&quot;</span>:</div>
+<div class="line"><span class="lineno">18131</span>                num2 = MathHelper.Lerp(0.05f, 0.15f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18132</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18133</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18134</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18135</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Darthkitten&quot;</span>:</div>
+<div class="line"><span class="lineno">18136</span>            {</div>
+<div class="line"><span class="lineno">18137</span>                num2 = 1f;</div>
+<div class="line"><span class="lineno">18138</span>                <span class="keywordtype">float</span> amount11 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18139</span>                luminosity = MathHelper.Lerp(1f, 0.4f, amount11);</div>
+<div class="line"><span class="lineno">18140</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18141</span>            }</div>
+<div class="line"><span class="lineno">18142</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;darthmorf&quot;</span>:</div>
+<div class="line"><span class="lineno">18143</span>            {</div>
+<div class="line"><span class="lineno">18144</span>                num2 = 0f;</div>
+<div class="line"><span class="lineno">18145</span>                <span class="keywordtype">float</span> amount10 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18146</span>                luminosity = MathHelper.Lerp(0f, 0.2f, amount10);</div>
+<div class="line"><span class="lineno">18147</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18148</span>            }</div>
+<div class="line"><span class="lineno">18149</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Discipile&quot;</span>:</div>
+<div class="line"><span class="lineno">18150</span>            {</div>
+<div class="line"><span class="lineno">18151</span>                num2 = 0.53f;</div>
+<div class="line"><span class="lineno">18152</span>                <span class="keywordtype">float</span> amount9 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18153</span>                luminosity = MathHelper.Lerp(0.05f, 0.5f, amount9);</div>
+<div class="line"><span class="lineno">18154</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18155</span>            }</div>
+<div class="line"><span class="lineno">18156</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Doylee&quot;</span>:</div>
+<div class="line"><span class="lineno">18157</span>                num2 = MathHelper.Lerp(0.68f, 1f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18158</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18159</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18160</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18161</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Ghostar&quot;</span>:</div>
+<div class="line"><span class="lineno">18162</span>            {</div>
+<div class="line"><span class="lineno">18163</span>                num2 = 0.66f;</div>
+<div class="line"><span class="lineno">18164</span>                <span class="keywordtype">float</span> amount8 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18165</span>                luminosity = MathHelper.Lerp(0.15f, 0.85f, amount8);</div>
+<div class="line"><span class="lineno">18166</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18167</span>            }</div>
+<div class="line"><span class="lineno">18168</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Jenosis&quot;</span>:</div>
+<div class="line"><span class="lineno">18169</span>                num2 = MathHelper.Lerp(0.9f, 1.13f, Utils.Turn01ToCyclic010(num2)) % 1f;</div>
+<div class="line"><span class="lineno">18170</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18171</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18172</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18173</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Kazzymodus&quot;</span>:</div>
+<div class="line"><span class="lineno">18174</span>            {</div>
+<div class="line"><span class="lineno">18175</span>                num2 = 0.33f;</div>
+<div class="line"><span class="lineno">18176</span>                <span class="keywordtype">float</span> amount7 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18177</span>                luminosity = MathHelper.Lerp(0.15f, 0.4f, amount7);</div>
+<div class="line"><span class="lineno">18178</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18179</span>            }</div>
+<div class="line"><span class="lineno">18180</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Khaios&quot;</span>:</div>
+<div class="line"><span class="lineno">18181</span>            {</div>
+<div class="line"><span class="lineno">18182</span>                num2 = 0.33f;</div>
+<div class="line"><span class="lineno">18183</span>                <span class="keywordtype">float</span> amount6 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18184</span>                luminosity = MathHelper.Lerp(0f, 0.2f, amount6);</div>
+<div class="line"><span class="lineno">18185</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18186</span>            }</div>
+<div class="line"><span class="lineno">18187</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Loki&quot;</span>:</div>
+<div class="line"><span class="lineno">18188</span>            {</div>
+<div class="line"><span class="lineno">18189</span>                num2 = 0f;</div>
+<div class="line"><span class="lineno">18190</span>                <span class="keywordtype">float</span> amount5 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18191</span>                luminosity = MathHelper.Lerp(0f, 0.25f, amount5);</div>
+<div class="line"><span class="lineno">18192</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18193</span>            }</div>
+<div class="line"><span class="lineno">18194</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;ManaUser&quot;</span>:</div>
+<div class="line"><span class="lineno">18195</span>                num2 = MathHelper.Lerp(0.41f, 0.57f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18196</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18197</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18198</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Mid&quot;</span>:</div>
+<div class="line"><span class="lineno">18199</span>            {</div>
+<div class="line"><span class="lineno">18200</span>                num2 = 0f;</div>
+<div class="line"><span class="lineno">18201</span>                <span class="keywordtype">float</span> amount4 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18202</span>                luminosity = MathHelper.Lerp(0f, 0.9f, amount4);</div>
+<div class="line"><span class="lineno">18203</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18204</span>            }</div>
+<div class="line"><span class="lineno">18205</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Nimbus&quot;</span>:</div>
+<div class="line"><span class="lineno">18206</span>                num2 = MathHelper.Lerp(0.75f, 1f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18207</span>                luminosity = 1f;</div>
+<div class="line"><span class="lineno">18208</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.8f);</div>
+<div class="line"><span class="lineno">18209</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18210</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Nike Leon&quot;</span>:</div>
+<div class="line"><span class="lineno">18211</span>                num2 = MathHelper.Lerp(0.04f, 0.1f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18212</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18213</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18214</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18215</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;ppowersteef&quot;</span>:</div>
+<div class="line"><span class="lineno">18216</span>                num2 = MathHelper.Lerp(0f, 0.15f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18217</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18218</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18219</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18220</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;RBrandon&quot;</span>:</div>
+<div class="line"><span class="lineno">18221</span>                num2 = 0.03f;</div>
+<div class="line"><span class="lineno">18222</span>                luminosity = 0.3f;</div>
+<div class="line"><span class="lineno">18223</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18224</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18225</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Redigit&quot;</span>:</div>
+<div class="line"><span class="lineno">18226</span>                num2 = 0.7f;</div>
+<div class="line"><span class="lineno">18227</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18228</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18229</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Serenity&quot;</span>:</div>
+<div class="line"><span class="lineno">18230</span>            {</div>
+<div class="line"><span class="lineno">18231</span>                num2 = 0.85f;</div>
+<div class="line"><span class="lineno">18232</span>                <span class="keywordtype">float</span> amount3 = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18233</span>                luminosity = MathHelper.Lerp(1f, 0.5f, amount3);</div>
+<div class="line"><span class="lineno">18234</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18235</span>            }</div>
+<div class="line"><span class="lineno">18236</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Sigma&quot;</span>:</div>
+<div class="line"><span class="lineno">18237</span>                num2 = MathHelper.Lerp(0f, 0.12f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18238</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18239</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18240</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18241</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;teiull&quot;</span>:</div>
+<div class="line"><span class="lineno">18242</span>                num2 = MathHelper.Lerp(0.66f, 1f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18243</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18244</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18245</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unit One&quot;</span>:</div>
+<div class="line"><span class="lineno">18246</span>            {</div>
+<div class="line"><span class="lineno">18247</span>                <span class="keywordtype">float</span> amount2 = Utils.PingPongFrom01To010(num2);</div>
+<div class="line"><span class="lineno">18248</span>                amount2 = MathHelper.SmoothStep(0f, 1f, amount2);</div>
+<div class="line"><span class="lineno">18249</span>                Color color = Color.Lerp(Color.Yellow, Color.Blue, amount2);</div>
+<div class="line"><span class="lineno">18250</span>                <span class="keywordflow">if</span> (lerpToWhite != 0f)</div>
+<div class="line"><span class="lineno">18251</span>                {</div>
+<div class="line"><span class="lineno">18252</span>                    color = Color.Lerp(color, Color.White, lerpToWhite);</div>
+<div class="line"><span class="lineno">18253</span>                }</div>
+<div class="line"><span class="lineno">18254</span>                color.A = (byte)((<span class="keywordtype">float</span>)(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)color.A * alphaChannelMultiplier);</div>
+<div class="line"><span class="lineno">18255</span>                <span class="keywordflow">return</span> color;</div>
+<div class="line"><span class="lineno">18256</span>            }</div>
+<div class="line"><span class="lineno">18257</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Vulpes Inculta&quot;</span>:</div>
+<div class="line"><span class="lineno">18258</span>                num2 = MathHelper.Lerp(0.65f, 0.75f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18259</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18260</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">18261</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18262</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Waze3174&quot;</span>:</div>
+<div class="line"><span class="lineno">18263</span>                num2 = MathHelper.Lerp(0.33f, 0f, Utils.Turn01ToCyclic010(num2));</div>
+<div class="line"><span class="lineno">18264</span>                luminosity = 0.3f;</div>
+<div class="line"><span class="lineno">18265</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18266</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18267</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Xman101&quot;</span>:</div>
+<div class="line"><span class="lineno">18268</span>            {</div>
+<div class="line"><span class="lineno">18269</span>                num2 = 0.06f;</div>
+<div class="line"><span class="lineno">18270</span>                <span class="keywordtype">float</span> amount = (float)Math.Cos(num * ((<span class="keywordtype">float</span>)Math.PI * 2f)) * 0.5f + 0.5f;</div>
+<div class="line"><span class="lineno">18271</span>                luminosity = MathHelper.Lerp(0f, 0.5f, amount);</div>
+<div class="line"><span class="lineno">18272</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18273</span>            }</div>
+<div class="line"><span class="lineno">18274</span>            <span class="keywordflow">case</span> <span class="stringliteral">&quot;Zoomo&quot;</span>:</div>
+<div class="line"><span class="lineno">18275</span>                num2 = 0.77f;</div>
+<div class="line"><span class="lineno">18276</span>                luminosity = 0.5f;</div>
+<div class="line"><span class="lineno">18277</span>                alphaChannelMultiplier = MathHelper.Lerp(alphaChannelMultiplier, 0.6f, 0.5f);</div>
+<div class="line"><span class="lineno">18278</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">18279</span>            }</div>
+<div class="line"><span class="lineno">18280</span>        }</div>
+<div class="line"><span class="lineno">18281</span>        Color color4 = Main.hslToRgb(num2, saturation, luminosity);</div>
+<div class="line"><span class="lineno">18282</span>        color4 *= <a class="code hl_property" href="../../da/dd3/classTerraria_1_1Projectile_aae09de00d55af9708c55de45debefb78.html#aae09de00d55af9708c55de45debefb78">Opacity</a>;</div>
+<div class="line"><span class="lineno">18283</span>        <span class="keywordflow">if</span> (lerpToWhite != 0f)</div>
+<div class="line"><span class="lineno">18284</span>        {</div>
+<div class="line"><span class="lineno">18285</span>            color4 = Color.Lerp(color4, Color.White, lerpToWhite);</div>
+<div class="line"><span class="lineno">18286</span>        }</div>
+<div class="line"><span class="lineno">18287</span>        color4.A = (byte)((<span class="keywordtype">float</span>)(<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)color4.A * alphaChannelMultiplier);</div>
+<div class="line"><span class="lineno">18288</span>        <span class="keywordflow">return</span> color4;</div>
+<div class="line"><span class="lineno">18289</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3_html_a14933a607b87ea45dd7e469a637a48e3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a></div><div class="ttdeci">int owner</div><div class="ttdef"><b>Definition</b> Projectile.cs:116</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3_html_a2812b28695edc6d2e89a6058104c11d3"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a></div><div class="ttdeci">float[] ai</div><div class="ttdef"><b>Definition</b> Projectile.cs:118</div></div>
+<div class="ttc" id="aclassTerraria_1_1Projectile_aae09de00d55af9708c55de45debefb78_html_aae09de00d55af9708c55de45debefb78"><div class="ttname"><a href="../../da/dd3/classTerraria_1_1Projectile_aae09de00d55af9708c55de45debefb78.html#aae09de00d55af9708c55de45debefb78">Terraria.Projectile.Opacity</a></div><div class="ttdeci">float Opacity</div><div class="ttdef"><b>Definition</b> Projectile.cs:281</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/df6/classTerraria_1_1Entity_afb9077785deba0c2b9de1691369cee84.html#afb9077785deba0c2b9de1691369cee84">Terraria.Entity.active</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a2812b28695edc6d2e89a6058104c11d3.html#a2812b28695edc6d2e89a6058104c11d3">Terraria.Projectile.ai</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_adef1b0a0b4b9395367fcf88ce24d8c3d.html#adef1b0a0b4b9395367fcf88ce24d8c3d">Terraria.Main.hslToRgb()</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a0d3c51710cd1629940eb7743f3e83b09.html#a0d3c51710cd1629940eb7743f3e83b09">Terraria.Player.name</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_aae09de00d55af9708c55de45debefb78.html#aae09de00d55af9708c55de45debefb78">Terraria.Projectile.Opacity</a>, <a class="el" href="../../da/dd3/classTerraria_1_1Projectile_a14933a607b87ea45dd7e469a637a48e3.html#a14933a607b87ea45dd7e469a637a48e3">Terraria.Projectile.owner</a>, <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_ace5abf11f01dac36c0af0f61ab255c10.html#ace5abf11f01dac36c0af0f61ab255c10">Terraria.Utils.PingPongFrom01To010()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a738e534b58d5ed6a9aa474e4de9713d7.html#a738e534b58d5ed6a9aa474e4de9713d7">Terraria.Utils.Turn01ToCyclic010()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

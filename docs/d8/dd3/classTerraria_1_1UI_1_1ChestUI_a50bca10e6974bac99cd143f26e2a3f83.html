@@ -117,6 +117,100 @@ $(function(){initNavTree('d8/dd3/classTerraria_1_1UI_1_1ChestUI_a50bca10e6974bac
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Player</a> player = Main.player[Main.myPlayer];</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">string</span> text = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (Main.editChest)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            text = Main.npcChatText;</div>
+<div class="line"><span class="lineno">  102</span>            Main.instance.textBlinkerCount++;</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (Main.instance.textBlinkerCount &gt;= 20)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (Main.instance.textBlinkerState == 0)</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    Main.instance.textBlinkerState = 1;</div>
+<div class="line"><span class="lineno">  108</span>                }</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  110</span>                {</div>
+<div class="line"><span class="lineno">  111</span>                    Main.instance.textBlinkerState = 0;</div>
+<div class="line"><span class="lineno">  112</span>                }</div>
+<div class="line"><span class="lineno">  113</span>                Main.instance.textBlinkerCount = 0;</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (Main.instance.textBlinkerState == 1)</div>
+<div class="line"><span class="lineno">  116</span>            {</div>
+<div class="line"><span class="lineno">  117</span>                text += <span class="stringliteral">&quot;|&quot;</span>;</div>
+<div class="line"><span class="lineno">  118</span>            }</div>
+<div class="line"><span class="lineno">  119</span>            Main.instance.DrawWindowsIMEPanel(<span class="keyword">new</span> Vector2(120f, 518f));</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.chest &gt; -1)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (Main.chest[player.chest] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                Main.chest[player.chest] = <span class="keyword">new</span> Chest();</div>
+<div class="line"><span class="lineno">  126</span>            }</div>
+<div class="line"><span class="lineno">  127</span>            Chest chest = Main.chest[player.chest];</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (chest.name != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                text = chest.name;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  133</span>            {</div>
+<div class="line"><span class="lineno">  134</span>                <a class="code hl_enumvalue" href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Tile</a> tile = Main.tile[player.chestX, player.chestY];</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">if</span> (tile.type == 21)</div>
+<div class="line"><span class="lineno">  136</span>                {</div>
+<div class="line"><span class="lineno">  137</span>                    text = Lang.chestType[tile.frameX / 36].Value;</div>
+<div class="line"><span class="lineno">  138</span>                }</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 467 &amp;&amp; tile.frameX / 36 == 4)</div>
+<div class="line"><span class="lineno">  140</span>                {</div>
+<div class="line"><span class="lineno">  141</span>                    text = Lang.GetItemNameValue(3988);</div>
+<div class="line"><span class="lineno">  142</span>                }</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 467)</div>
+<div class="line"><span class="lineno">  144</span>                {</div>
+<div class="line"><span class="lineno">  145</span>                    text = Lang.chestType2[tile.frameX / 36].Value;</div>
+<div class="line"><span class="lineno">  146</span>                }</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile.type == 88)</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                    text = Lang.dresserType[tile.frameX / 54].Value;</div>
+<div class="line"><span class="lineno">  150</span>                }</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.chest == -2)</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            text = Lang.inter[32].Value;</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.chest == -3)</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            text = Lang.inter[33].Value;</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.chest == -4)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            text = Lang.GetItemNameValue(3813);</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.chest == -5)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            text = Lang.GetItemNameValue(4076);</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>        Color color = <span class="keyword">new</span> Color(Main.mouseTextColor, Main.mouseTextColor, Main.mouseTextColor, Main.mouseTextColor);</div>
+<div class="line"><span class="lineno">  170</span>        color = Color.White * (1f - (255f - (float)(<span class="keywordtype">int</span>)Main.mouseTextColor) / 255f * 0.5f);</div>
+<div class="line"><span class="lineno">  171</span>        color.A = <span class="keywordtype">byte</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  172</span>        Utils.WordwrapString(text, <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>, 200, 1, out var lineAmount);</div>
+<div class="line"><span class="lineno">  173</span>        lineAmount++;</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; lineAmount; i++)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            <a class="code hl_class" href="../../d7/df6/classTerraria_1_1UI_1_1Chat_1_1ChatManager.html">ChatManager</a>.<a class="code hl_function" href="../../d7/df6/classTerraria_1_1UI_1_1Chat_1_1ChatManager_a7261cbc482b776957bb8f3615380fbf2.html#a7261cbc482b776957bb8f3615380fbf2">DrawColorCodedStringWithShadow</a>(spritebatch, <a class="code hl_class" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">FontAssets</a>.<a class="code hl_variable" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">MouseText</a>.<a class="code hl_property" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">Value</a>, text, <span class="keyword">new</span> Vector2(504f, Main.instance.invBottom + i * 26), color, 0f, Vector2.Zero, Vector2.One, -1f, 1.5f);</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a_html_a2ae0d3919d29634fceacb1374fafd09a"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset.Value</a></div><div class="ttdeci">T Value</div><div class="ttdef"><b>Definition</b> Asset.cs:26</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0_html_ae4b975931540c8f4272e7054537910d0"><div class="ttname"><a href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">Terraria.GameContent.FontAssets.MouseText</a></div><div class="ttdeci">static Asset&lt; DynamicSpriteFont &gt; MouseText</div><div class="ttdef"><b>Definition</b> FontAssets.cs:10</div></div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1FontAssets_html"><div class="ttname"><a href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets.html">Terraria.GameContent.FontAssets</a></div><div class="ttdef"><b>Definition</b> FontAssets.cs:7</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Chat_1_1ChatManager_a7261cbc482b776957bb8f3615380fbf2_html_a7261cbc482b776957bb8f3615380fbf2"><div class="ttname"><a href="../../d7/df6/classTerraria_1_1UI_1_1Chat_1_1ChatManager_a7261cbc482b776957bb8f3615380fbf2.html#a7261cbc482b776957bb8f3615380fbf2">Terraria.UI.Chat.ChatManager.DrawColorCodedStringWithShadow</a></div><div class="ttdeci">static Vector2 DrawColorCodedStringWithShadow(SpriteBatch spriteBatch, DynamicSpriteFont font, TextSnippet[] snippets, Vector2 position, float rotation, Vector2 origin, Vector2 baseScale, out int hoveredSnippet, float maxWidth=-1f, float spread=2f)</div><div class="ttdef"><b>Definition</b> ChatManager.cs:285</div></div>
+<div class="ttc" id="aclassTerraria_1_1UI_1_1Chat_1_1ChatManager_html"><div class="ttname"><a href="../../d7/df6/classTerraria_1_1UI_1_1Chat_1_1ChatManager.html">Terraria.UI.Chat.ChatManager</a></div><div class="ttdef"><b>Definition</b> ChatManager.cs:14</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485_html_a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../de/d78/namespaceTerraria_1_1DataStructures_a07f76c43e1e486afbc0918c156dc4485.html#a07f76c43e1e486afbc0918c156dc4485ac5457c5f3cfb4da8638ce7190f8e5152">Terraria.DataStructures.TileDataType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="anamespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed_html_ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_ac9f96fa58ffb47f3cf7c6a6dd81518ed.html#ac9f96fa58ffb47f3cf7c6a6dd81518eda636da1d35e805b00eae0fcd8333f9234">Terraria.Enums.NPCTargetType.Player</a></div><div class="ttdeci">@ Player</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27fadabf9e96721e2a5d5111dfb64d38.html#a27fadabf9e96721e2a5d5111dfb64d38">Terraria.Main.chest</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a11b3317c5fe00345c0292caded3d2286.html#a11b3317c5fe00345c0292caded3d2286">Terraria.Player.chest</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a583732aa657fe4bdd26929076a58fa81.html#a583732aa657fe4bdd26929076a58fa81">Terraria.Lang.chestType</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a3382629ae8ef7bddc9959e5916f9ac8a.html#a3382629ae8ef7bddc9959e5916f9ac8a">Terraria.Lang.chestType2</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_a2c92aeed7ffd77056849c21893957a12.html#a2c92aeed7ffd77056849c21893957a12">Terraria.Player.chestX</a>, <a class="el" href="../../d4/d03/classTerraria_1_1Player_af54ba58074a3e0a8e605f96452a7fdff.html#af54ba58074a3e0a8e605f96452a7fdff">Terraria.Player.chestY</a>, <a class="el" href="../../d7/df6/classTerraria_1_1UI_1_1Chat_1_1ChatManager_a7261cbc482b776957bb8f3615380fbf2.html#a7261cbc482b776957bb8f3615380fbf2">Terraria.UI.Chat.ChatManager.DrawColorCodedStringWithShadow()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a021d6158617de7260e7a0bf428be973b.html#a021d6158617de7260e7a0bf428be973b">Terraria.Main.DrawWindowsIMEPanel()</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a1097b4e4c38e51f3e92930f8973e8791.html#a1097b4e4c38e51f3e92930f8973e8791">Terraria.Lang.dresserType</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a9159574ef411eb12c2b7cb319e34bac7.html#a9159574ef411eb12c2b7cb319e34bac7">Terraria.Main.editChest</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a62ffcf2cb194550a08a4755246ccaf79.html#a62ffcf2cb194550a08a4755246ccaf79">Terraria.Lang.GetItemNameValue()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a640bd6abca8f6abf255f3eedcd15565b.html#a640bd6abca8f6abf255f3eedcd15565b">Terraria.Main.instance</a>, <a class="el" href="../../df/dd3/classTerraria_1_1Lang_a086bb5957290e175946e3d8b9cbd4563.html#a086bb5957290e175946e3d8b9cbd4563">Terraria.Lang.inter</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4fe4c93a67df32209811a120657d23b0.html#a4fe4c93a67df32209811a120657d23b0">Terraria.Main.invBottom</a>, <a class="el" href="../../d5/d9d/classTerraria_1_1GameContent_1_1FontAssets_ae4b975931540c8f4272e7054537910d0.html#ae4b975931540c8f4272e7054537910d0">Terraria.GameContent.FontAssets.MouseText</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a77cee1d28a2bf22c476d437effae65c4.html#a77cee1d28a2bf22c476d437effae65c4">Terraria.Main.mouseTextColor</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a423edcb3c71df44775aabfaf3b8a415b.html#a423edcb3c71df44775aabfaf3b8a415b">Terraria.Main.myPlayer</a>, <a class="el" href="../../dc/ddf/classTerraria_1_1Chest_aa47beed4f0461ec43242cd299a4bf27d.html#aa47beed4f0461ec43242cd299a4bf27d">Terraria.Chest.name</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a27778bbbdf6d059c3b3854d118e310c7.html#a27778bbbdf6d059c3b3854d118e310c7">Terraria.Main.npcChatText</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_af29312b124a817a5bbaee9332d2ae2ae.html#af29312b124a817a5bbaee9332d2ae2ae">Terraria.Main.player</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a98abff9217f3db13562a37ba1b378f3d.html#a98abff9217f3db13562a37ba1b378f3d">Terraria.Main.textBlinkerCount</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_ad6330223823d8f55ddb93e6a9fea59c5.html#ad6330223823d8f55ddb93e6a9fea59c5">Terraria.Main.textBlinkerState</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>, <a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset_a2ae0d3919d29634fceacb1374fafd09a.html#a2ae0d3919d29634fceacb1374fafd09a">ReLogic.Content.Asset&lt; T &gt;.Value</a>, <a class="el" href="../../d5/d73/classTerraria_1_1Localization_1_1LocalizedText_a5a17471e1f9e0fc7f825fde940e3bec8.html#a5a17471e1f9e0fc7f825fde940e3bec8">Terraria.Localization.LocalizedText.Value</a>, and <a class="el" href="../../d1/d9c/classTerraria_1_1Utils_a442f8005ec19d09d1b247cbe6be204cb.html#a442f8005ec19d09d1b247cbe6be204cb">Terraria.Utils.WordwrapString()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/dd3/classTerraria_1_1UI_1_1ChestUI_a88b244e7968d6898255653a9d6790103.html#a88b244e7968d6898255653a9d6790103">Terraria.UI.ChestUI.Draw()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

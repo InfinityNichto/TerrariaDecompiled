@@ -117,6 +117,25 @@ $(function(){initNavTree('d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSyste
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (Directory.Exists(<a class="code hl_variable" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce.html#a923785f3c4d939c33ff484f51cdc3bce">_basePath</a>))</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">string</span>[] files = Directory.GetFiles(<a class="code hl_variable" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce.html#a923785f3c4d939c33ff484f51cdc3bce">_basePath</a>, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; files.Length; i++)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordtype">string</span> fullPath = Path.GetFullPath(files[i]);</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordtype">string</span> path = fullPath.Substring(<a class="code hl_variable" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce.html#a923785f3c4d939c33ff484f51cdc3bce">_basePath</a>.Length);</div>
+<div class="line"><span class="lineno">   55</span>                path = AssetPathHelper.CleanPath(path);</div>
+<div class="line"><span class="lineno">   56</span>                <a class="code hl_variable" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a461afcd092b581aea9e92293d768eb9c.html#a461afcd092b581aea9e92293d768eb9c">_nameToAbsolutePath</a>[path] = fullPath;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a461afcd092b581aea9e92293d768eb9c_html_a461afcd092b581aea9e92293d768eb9c"><div class="ttname"><a href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a461afcd092b581aea9e92293d768eb9c.html#a461afcd092b581aea9e92293d768eb9c">ReLogic.Content.Sources.FileSystemContentSource._nameToAbsolutePath</a></div><div class="ttdeci">readonly Dictionary&lt; string, string &gt; _nameToAbsolutePath</div><div class="ttdef"><b>Definition</b> FileSystemContentSource.cs:11</div></div>
+<div class="ttc" id="aclassReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce_html_a923785f3c4d939c33ff484f51cdc3bce"><div class="ttname"><a href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce.html#a923785f3c4d939c33ff484f51cdc3bce">ReLogic.Content.Sources.FileSystemContentSource._basePath</a></div><div class="ttdeci">readonly string _basePath</div><div class="ttdef"><b>Definition</b> FileSystemContentSource.cs:9</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a923785f3c4d939c33ff484f51cdc3bce.html#a923785f3c4d939c33ff484f51cdc3bce">ReLogic.Content.Sources.FileSystemContentSource._basePath</a>, <a class="el" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_a461afcd092b581aea9e92293d768eb9c.html#a461afcd092b581aea9e92293d768eb9c">ReLogic.Content.Sources.FileSystemContentSource._nameToAbsolutePath</a>, and <a class="el" href="../../d3/d06/classReLogic_1_1Content_1_1AssetPathHelper_a35ac84dfb1b89acecea0705d99f1cdbd.html#a35ac84dfb1b89acecea0705d99f1cdbd">ReLogic.Content.AssetPathHelper.CleanPath()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/db0/classReLogic_1_1Content_1_1Sources_1_1FileSystemContentSource_af4b70fbdf31ec09fc616357b8c7df3ac.html#af4b70fbdf31ec09fc616357b8c7df3ac">ReLogic.Content.Sources.FileSystemContentSource.FileSystemContentSource()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">

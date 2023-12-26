@@ -126,6 +126,50 @@ $(function(){initNavTree('d1/d34/classTerraria_1_1GameContent_1_1Biomes_1_1Deser
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -holeRadius - 3; i &lt; holeRadius + 3; i++)</div>
+<div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = description.Surface[i + position.X]; j &lt;= description.Hive.Top + 10; j++)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                <span class="keywordtype">double</span> value = (double)(j - description.Surface[i + position.X]) / (double)(description.Hive.Top - description.Desert.Top);</div>
+<div class="line"><span class="lineno">   23</span>                value = Utils.Clamp(value, 0.0, 1.0);</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(<a class="code hl_function" href="../../d1/d34/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1PitEntrance_ae07db1540ae31e5dcbcc27359a154031.html#ae07db1540ae31e5dcbcc27359a154031">GetHoleRadiusScaleAt</a>(value) * (double)holeRadius);</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> (Math.Abs(i) &lt; num)</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    Main.tile[i + position.X, j].ClearEverything();</div>
+<div class="line"><span class="lineno">   28</span>                }</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Math.Abs(i) &lt; num + 3 &amp;&amp; value &gt; 0.35)</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    Main.tile[i + position.X, j].ResetToType(397);</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordtype">double</span> num2 = Math.Abs((<span class="keywordtype">double</span>)i / (double)holeRadius);</div>
+<div class="line"><span class="lineno">   34</span>                num2 *= num2;</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (Math.Abs(i) &lt; num + 3 &amp;&amp; (double)(j - position.Y) &gt; 15.0 - 3.0 * num2)</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    Main.tile[i + position.X, j].wall = 187;</div>
+<div class="line"><span class="lineno">   38</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareWallFrame(i + position.X, j - 1);</div>
+<div class="line"><span class="lineno">   39</span>                    <a class="code hl_enumvalue" href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">WorldGen</a>.SquareWallFrame(i + position.X, j);</div>
+<div class="line"><span class="lineno">   40</span>                }</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        holeRadius += 4;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = -holeRadius; k &lt; holeRadius; k++)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">int</span> num3 = holeRadius - Math.Abs(k);</div>
+<div class="line"><span class="lineno">   47</span>            num3 = Math.Min(10, num3 * num3);</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; num3; l++)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                Main.tile[k + position.X, l + description.Surface[k + position.X]].ClearEverything();</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="aclassTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1PitEntrance_ae07db1540ae31e5dcbcc27359a154031_html_ae07db1540ae31e5dcbcc27359a154031"><div class="ttname"><a href="../../d1/d34/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1PitEntrance_ae07db1540ae31e5dcbcc27359a154031.html#ae07db1540ae31e5dcbcc27359a154031">Terraria.GameContent.Biomes.Desert.PitEntrance.GetHoleRadiusScaleAt</a></div><div class="ttdeci">static double GetHoleRadiusScaleAt(double yProgress)</div><div class="ttdef"><b>Definition</b> PitEntrance.cs:55</div></div>
+<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="anamespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628_html_af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515"><div class="ttname"><a href="../../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628ac3a4804cc71f0254193cbc7d25554515">Terraria.GameContent.GameNotificationType.WorldGen</a></div><div class="ttdeci">@ WorldGen</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ab79e270007e021e75ccb812a92c4a4fd.html#ab79e270007e021e75ccb812a92c4a4fd">Terraria.Tile.ClearEverything()</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a243220f796223c7452b678ca9517fd91.html#a243220f796223c7452b678ca9517fd91">Terraria.GameContent.Biomes.Desert.DesertDescription.Desert</a>, <a class="el" href="../../d1/d34/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1PitEntrance_ae07db1540ae31e5dcbcc27359a154031.html#ae07db1540ae31e5dcbcc27359a154031">Terraria.GameContent.Biomes.Desert.PitEntrance.GetHoleRadiusScaleAt()</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a234633921201fb41c39415c1d6726670.html#a234633921201fb41c39415c1d6726670">Terraria.GameContent.Biomes.Desert.DesertDescription.Hive</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a6af28eec581f25407736f7ae6ad16aa1.html#a6af28eec581f25407736f7ae6ad16aa1">Terraria.Tile.ResetToType()</a>, <a class="el" href="../../de/da1/classTerraria_1_1WorldGen_a67368177c8b2b232ae8dcfc4f6148b5d.html#a67368177c8b2b232ae8dcfc4f6148b5d">Terraria.WorldGen.SquareWallFrame()</a>, <a class="el" href="../../d3/d44/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1DesertDescription_a58ee81eb790a6f16d2e5681d81cac6bf.html#a58ee81eb790a6f16d2e5681d81cac6bf">Terraria.GameContent.Biomes.Desert.DesertDescription.Surface</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_ac90d0b7ad6a3eed9b49d1079850020fd.html#ac90d0b7ad6a3eed9b49d1079850020fd">Terraria.Tile.wall</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d34/classTerraria_1_1GameContent_1_1Biomes_1_1Desert_1_1PitEntrance_a5aae877819643686776c9a1559239aab.html#a5aae877819643686776c9a1559239aab">Terraria.GameContent.Biomes.Desert.PitEntrance.Place()</a>.</p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
