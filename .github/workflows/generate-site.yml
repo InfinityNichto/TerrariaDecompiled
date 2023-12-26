@@ -20,9 +20,13 @@ jobs:
 
     - name: Generate Documentation
       run: |
+        wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
+        tar -xzvf doxygen-1.10.0.linux.bin.tar.gz
+        mv doxygen-1.10.0/bin/doxygen .
+        rm -r doxygen-1.10.0
         chmod +x ./doxygen
         ./doxygen Doxyfile
-        rm -r ./docs
+        rm -r ./docs doxygen
         mv html docs
 
     - name: Commit and push
