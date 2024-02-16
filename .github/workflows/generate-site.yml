@@ -19,6 +19,11 @@ jobs:
         sudo apt-get install -y graphviz global
         wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
 
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 10
+
     - name: Generate Documentation
       run: |
         ulimit -H -a
