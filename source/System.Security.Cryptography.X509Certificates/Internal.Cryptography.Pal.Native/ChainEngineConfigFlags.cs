@@ -1,0 +1,14 @@
+using System;
+
+namespace Internal.Cryptography.Pal.Native;
+
+[Flags]
+internal enum ChainEngineConfigFlags
+{
+	CERT_CHAIN_CACHE_END_CERT = 1,
+	CERT_CHAIN_CACHE_ONLY_URL_RETRIEVAL = 4,
+	CERT_CHAIN_USE_LOCAL_MACHINE_STORE = 8,
+	CERT_CHAIN_ENABLE_CACHE_AUTO_UPDATE = 0x10,
+	CERT_CHAIN_ENABLE_SHARE_STORE = 0x20,
+	CERT_CHAIN_DISABLE_AIA = 0x2000
+}

@@ -1,0 +1,11 @@
+namespace Internal.Cryptography.Pal.Native;
+
+internal enum CertFindType
+{
+	CERT_FIND_SUBJECT_CERT = 720896,
+	CERT_FIND_HASH = 65536,
+	CERT_FIND_SUBJECT_STR = 524295,
+	CERT_FIND_ISSUER_STR = 524292,
+	CERT_FIND_EXISTING = 851968,
+	CERT_FIND_ANY = 0
+}

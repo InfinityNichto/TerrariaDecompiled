@@ -1,0 +1,98 @@
+using System.Data.Common;
+using System.Numerics;
+
+namespace System.Data;
+
+internal sealed class AutoIncrementBigInteger : AutoIncrementValue
+{
+	private BigInteger _current;
+
+	private long _seed;
+
+	private BigInteger _step = 1;
+
+	internal override object Current
+	{
+		get
+		{
+			return _current;
+		}
+		set
+		{
+			_current = (BigInteger)value;
+		}
+	}
+
+	internal override Type DataType => typeof(BigInteger);
+
+	internal override long Seed
+	{
+		get
+		{
+			return _seed;
+		}
+		set
+		{
+			if (_current == _seed || BoundaryCheck(value))
+			{
+				_current = value;
+			}
+			_seed = value;
+		}
+	}
+
+	internal override long Step
+	{
+		get
+		{
+			return (long)_step;
+		}
+		set
+		{
+			if (value == 0L)
+			{
+				throw ExceptionBuilder.AutoIncrementSeed();
+			}
+			if (_step != value)
+			{
+				if (_current != Seed)
+				{
+					_current = _current - _step + value;
+				}
+				_step = value;
+			}
+		}
+	}
+
+	internal override void MoveAfter()
+	{
+		_current += _step;
+	}
+
+	internal override void SetCurrent(object value, IFormatProvider formatProvider)
+	{
+		_current = BigIntegerStorage.ConvertToBigInteger(value, formatProvider);
+	}
+
+	internal override void SetCurrentAndIncrement(object value)
+	{
+		BigInteger bigInteger = (BigInteger)value;
+		if (BoundaryCheck(bigInteger))
+		{
+			_current = bigInteger + _step;
+		}
+	}
+
+	private bool BoundaryCheck(BigInteger value)
+	{
+		if (!(_step < 0L) || !(value <= _current))
+		{
+			if (0L < _step)
+			{
+				return _current <= value;
+			}
+			return false;
+		}
+		return true;
+	}
+}

@@ -1,0 +1,28 @@
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace System.Net.Http;
+
+internal sealed class HttpConnectionHandler : HttpMessageHandlerStage
+{
+	private readonly HttpConnectionPoolManager _poolManager;
+
+	public HttpConnectionHandler(HttpConnectionPoolManager poolManager)
+	{
+		_poolManager = poolManager;
+	}
+
+	internal override ValueTask<HttpResponseMessage> SendAsync(HttpRequestMessage request, bool async, CancellationToken cancellationToken)
+	{
+		return _poolManager.SendAsync(request, async, doRequestAuth: false, cancellationToken);
+	}
+
+	protected override void Dispose(bool disposing)
+	{
+		if (disposing)
+		{
+			_poolManager.Dispose();
+		}
+		base.Dispose(disposing);
+	}
+}

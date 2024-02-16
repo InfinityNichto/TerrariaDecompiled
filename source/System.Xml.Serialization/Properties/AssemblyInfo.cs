@@ -1,0 +1,52 @@
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.Versioning;
+using System.Security;
+using System.Security.Permissions;
+using System.Xml.Serialization;
+
+[assembly: CLSCompliant(true)]
+[assembly: AssemblyDefaultAlias("System.Xml.Serialization")]
+[assembly: AssemblyMetadata(".NETFrameworkAssembly", "")]
+[assembly: AssemblyMetadata("Serviceable", "True")]
+[assembly: AssemblyMetadata("PreferInbox", "True")]
+[assembly: AssemblyMetadata("IsTrimmable", "True")]
+[assembly: AssemblyCompany("Microsoft Corporation")]
+[assembly: AssemblyCopyright("© Microsoft Corporation. All rights reserved.")]
+[assembly: AssemblyDescription("System.Xml.Serialization")]
+[assembly: AssemblyFileVersion("6.0.21.52210")]
+[assembly: AssemblyInformationalVersion("6.0.0+4822e3c3aa77eb82b2fb33c9321f923cf11ddde6")]
+[assembly: AssemblyProduct("Microsoft® .NET")]
+[assembly: AssemblyTitle("System.Xml.Serialization")]
+[assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/dotnet/runtime")]
+[assembly: AssemblyVersion("4.0.0.0")]
+[assembly: TypeForwardedTo(typeof(IXmlSerializable))]
+[assembly: TypeForwardedTo(typeof(XmlAnyAttributeAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlAnyElementAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlAnyElementAttributes))]
+[assembly: TypeForwardedTo(typeof(XmlArrayAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlArrayItemAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlArrayItemAttributes))]
+[assembly: TypeForwardedTo(typeof(XmlAttributeAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlAttributeOverrides))]
+[assembly: TypeForwardedTo(typeof(XmlAttributes))]
+[assembly: TypeForwardedTo(typeof(XmlChoiceIdentifierAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlElementAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlElementAttributes))]
+[assembly: TypeForwardedTo(typeof(XmlEnumAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlIgnoreAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlIncludeAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlMapping))]
+[assembly: TypeForwardedTo(typeof(XmlMappingAccess))]
+[assembly: TypeForwardedTo(typeof(XmlNamespaceDeclarationsAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlReflectionImporter))]
+[assembly: TypeForwardedTo(typeof(XmlRootAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlSchemaProviderAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlSerializer))]
+[assembly: TypeForwardedTo(typeof(XmlSerializerNamespaces))]
+[assembly: TypeForwardedTo(typeof(XmlTextAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlTypeAttribute))]
+[assembly: TypeForwardedTo(typeof(XmlTypeMapping))]
+[module: SkipLocalsInit]

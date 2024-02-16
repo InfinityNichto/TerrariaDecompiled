@@ -1,0 +1,36 @@
+namespace System.Xml.Xsl.XPath;
+
+internal enum XPathOperator
+{
+	Unknown = 0,
+	Or = 1,
+	And = 2,
+	Eq = 3,
+	Ne = 4,
+	Lt = 5,
+	Le = 6,
+	Gt = 7,
+	Ge = 8,
+	Plus = 9,
+	Minus = 10,
+	Multiply = 11,
+	Divide = 12,
+	Modulo = 13,
+	UnaryMinus = 14,
+	Union = 15,
+	LastXPath1Operator = 15,
+	UnaryPlus = 16,
+	Idiv = 17,
+	Is = 18,
+	After = 19,
+	Before = 20,
+	Range = 21,
+	Except = 22,
+	Intersect = 23,
+	ValEq = 24,
+	ValNe = 25,
+	ValLt = 26,
+	ValLe = 27,
+	ValGt = 28,
+	ValGe = 29
+}
