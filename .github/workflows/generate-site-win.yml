@@ -1,0 +1,48 @@
+name: generate-site
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: |
+        echo "Installing graphviz and doxygen using Chocolatey..."
+        choco install -y graphviz
+        echo "Downloading Doxygen binary release..."
+        Invoke-WebRequest -Uri 'https://www.doxygen.nl/files/doxygen-1.10.0.windows.x64.bin.zip' -OutFile 'doxygen.zip' -Verbose
+        echo "Extracting Doxygen binary release..."
+        Expand-Archive -Path 'doxygen.zip' -DestinationPath 'doxygen' -Verbose
+        Remove-Item 'doxygen.zip' -Verbose
+
+    - name: Generate Documentation
+      run: |
+        echo "Generating documentation using Doxygen..."
+        .\doxygen\bin\doxygen.exe Doxyfile
+        Remove-Item -Recurse -Force 'docs'
+        Move-Item -Path 'html' -Destination 'docs'
+
+    - name: Clean up Doxygen
+      run: |
+        echo "Cleaning up extracted Doxygen files..."
+        Remove-Item -Recurse -Force 'doxygen'
+
+    - name: Commit and push
+      run: |
+        echo "Configuring Git user..."
+        git config user.name "InfinityNichto"
+        git config user.email "u5170201@gmail.com"
+        echo "Adding changes to Git staging area..."
+        git add .
+        echo "Committing changes..."
+        git commit -m "Commit docs"
+        echo "Pulling changes from master branch..."
+        git pull origin master
+        echo "Pushing changes to repository..."
+        git push
