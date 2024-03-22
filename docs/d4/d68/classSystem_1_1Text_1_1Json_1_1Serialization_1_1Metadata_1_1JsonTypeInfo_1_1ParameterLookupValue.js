@@ -1,0 +1,6 @@
+var classSystem_1_1Text_1_1Json_1_1Serialization_1_1Metadata_1_1JsonTypeInfo_1_1ParameterLookupValue =
+[
+    [ "ParameterLookupValue", "d4/d68/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Metadata_1_1JsonTypeInfo_1_1ParameterLookupValue_a1427173a381411be2046bcd84615b09a.html#a1427173a381411be2046bcd84615b09a", null ],
+    [ "DuplicateName", "d4/d68/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Metadata_1_1JsonTypeInfo_1_1ParameterLookupValue_a5b748d05ae9f841dd451f9e526d67a41.html#a5b748d05ae9f841dd451f9e526d67a41", null ],
+    [ "JsonPropertyInfo", "d4/d68/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Metadata_1_1JsonTypeInfo_1_1ParameterLookupValue_ae00e69f6254109b0d054ee54953ac362.html#ae00e69f6254109b0d054ee54953ac362", null ]
+];

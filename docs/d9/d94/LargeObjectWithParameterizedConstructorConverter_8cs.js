@@ -1,0 +1,4 @@
+var LargeObjectWithParameterizedConstructorConverter_8cs =
+[
+    [ "System.Text.Json.Serialization.Converters.LargeObjectWithParameterizedConstructorConverter< T >", "d5/da6/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1LargeObjectWithParameterizedConstructorConverter.html", "d5/da6/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1LargeObjectWithParameterizedConstructorConverter" ]
+];

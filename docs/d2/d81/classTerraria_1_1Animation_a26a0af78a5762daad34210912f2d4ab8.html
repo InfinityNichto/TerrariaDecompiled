@@ -107,17 +107,17 @@ $(function(){initNavTree('d2/d81/classTerraria_1_1Animation_a26a0af78a5762daad34
         <tr>
           <td class="memname">static <a class="el" href="../../d9/db9/classbool.html">bool</a> Terraria.Animation.GetTemporaryFrame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">out <a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>frameData</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">out</a> int</td>          <td class="paramname"><span class="paramname"><em>frameData</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -129,28 +129,24 @@ $(function(){initNavTree('d2/d81/classTerraria_1_1Animation_a26a0af78a5762daad34
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d6a/Animation_8cs_source.html#l00186">186</a> of file <a class="el" href="../../d1/d6a/Animation_8cs_source.html">Animation.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  187</span>    {</div>
-<div class="line"><span class="lineno">  188</span>        <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a> key = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(x, y);</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d2/d81/classTerraria_1_1Animation_a145cff354f71f89eac807cf620b95722.html#a145cff354f71f89eac807cf620b95722">_temporaryAnimations</a>.TryGetValue(key, out var value))</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a> <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a3c6e0b8a9c15224a8228b9a98ca1531d">key</a> = <span class="keyword">new</span> <a class="code hl_struct" href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Point16</a>(x, y);</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d2/d81/classTerraria_1_1Animation_a145cff354f71f89eac807cf620b95722.html#a145cff354f71f89eac807cf620b95722">_temporaryAnimations</a>.TryGetValue(key, <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">out</a> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">var</a> value))</div>
 <div class="line"><span class="lineno">  190</span>        {</div>
-<div class="line"><span class="lineno">  191</span>            frameData = 0;</div>
+<div class="line"><span class="lineno">  191</span>            <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">frameData</a> = 0;</div>
 <div class="line"><span class="lineno">  192</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  193</span>        }</div>
-<div class="line"><span class="lineno">  194</span>        frameData = value._frameData[value._frame];</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">frameData</a> = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a2063c1608d6e0baf80249c42e2be5804">value</a>._frameData[<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a2063c1608d6e0baf80249c42e2be5804">value</a>._frame];</div>
 <div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  196</span>    }</div>
+<div class="ttc" id="aclassSystem_1_1Collections_1_1Generic_1_1Dictionary_html"><div class="ttname"><a href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">System.Collections.Generic.Dictionary</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d61/Dictionary_8cs_source.html#l00013">Dictionary.cs:14</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1Animation_a145cff354f71f89eac807cf620b95722_html_a145cff354f71f89eac807cf620b95722"><div class="ttname"><a href="../../d2/d81/classTerraria_1_1Animation_a145cff354f71f89eac807cf620b95722.html#a145cff354f71f89eac807cf620b95722">Terraria.Animation._temporaryAnimations</a></div><div class="ttdeci">static Dictionary&lt; Point16, Animation &gt; _temporaryAnimations</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d6a/Animation_8cs_source.html#l00010">Animation.cs:10</a></div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637a2063c1608d6e0baf80249c42e2be5804"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a2063c1608d6e0baf80249c42e2be5804">System.ExceptionArgument.value</a></div><div class="ttdeci">@ value</div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637a3c6e0b8a9c15224a8228b9a98ca1531d"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a3c6e0b8a9c15224a8228b9a98ca1531d">System.ExceptionArgument.key</a></div><div class="ttdeci">@ key</div></div>
 <div class="ttc" id="astructTerraria_1_1DataStructures_1_1Point16_html"><div class="ttname"><a href="../../df/d4d/structTerraria_1_1DataStructures_1_1Point16.html">Terraria.DataStructures.Point16</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/db0/Point16_8cs_source.html#l00005">Point16.cs:6</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d2/d81/classTerraria_1_1Animation_a145cff354f71f89eac807cf620b95722.html#a145cff354f71f89eac807cf620b95722">Terraria.Animation._temporaryAnimations</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d6/d7b/classTerraria_1_1GameContent_1_1Drawing_1_1TileDrawing_ac7aacc94fcd521219b289beb3bdd41a3.html#ac7aacc94fcd521219b289beb3bdd41a3">Terraria.GameContent.Drawing.TileDrawing.GetTileDrawData()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d81/classTerraria_1_1Animation_a26a0af78a5762daad34210912f2d4ab8_a26a0af78a5762daad34210912f2d4ab8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>

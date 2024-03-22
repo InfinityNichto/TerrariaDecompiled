@@ -1,0 +1,26 @@
+var classSystem_1_1Security_1_1Policy_1_1Evidence =
+[
+    [ "Evidence", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_ae72cb557ae00aa2bdd67b99388732823.html#ae72cb557ae00aa2bdd67b99388732823", null ],
+    [ "Evidence", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a30e8edb82d9e9283343149d49379ebb3.html#a30e8edb82d9e9283343149d49379ebb3", null ],
+    [ "Evidence", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_aa27056b6a44305721e667d4f7d1110b3.html#aa27056b6a44305721e667d4f7d1110b3", null ],
+    [ "Evidence", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a50baa0ca7471e561371e1301a4f9396b.html#a50baa0ca7471e561371e1301a4f9396b", null ],
+    [ "AddAssembly", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_ad182576b5703c5de77f8d62ef1fd7d5c.html#ad182576b5703c5de77f8d62ef1fd7d5c", null ],
+    [ "AddAssemblyEvidence< T >", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a4a77e54ef306c4b5cd0b6b4aca52a045.html#a4a77e54ef306c4b5cd0b6b4aca52a045", null ],
+    [ "AddHost", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_aa5469f3d8ef919e2a1ba5a854ca79f52.html#aa5469f3d8ef919e2a1ba5a854ca79f52", null ],
+    [ "AddHostEvidence< T >", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_af331fe45065faa11ebd81dbf0a8f16bd.html#af331fe45065faa11ebd81dbf0a8f16bd", null ],
+    [ "Clear", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a2fedd513dc26e0537875a345cea5df2a.html#a2fedd513dc26e0537875a345cea5df2a", null ],
+    [ "Clone", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a5aa643e048f3b3f973cc22381883a1d1.html#a5aa643e048f3b3f973cc22381883a1d1", null ],
+    [ "CopyTo", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a9e513c7de37344d3116ba7e9f14c76e0.html#a9e513c7de37344d3116ba7e9f14c76e0", null ],
+    [ "GetAssemblyEnumerator", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a617e60e76206936d3d251370930da6f4.html#a617e60e76206936d3d251370930da6f4", null ],
+    [ "GetAssemblyEvidence< T >", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a83b106caf58f7c0e10df3e4ac498b445.html#a83b106caf58f7c0e10df3e4ac498b445", null ],
+    [ "GetEnumerator", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a32ee3043df8f25985c7044fc278a2707.html#a32ee3043df8f25985c7044fc278a2707", null ],
+    [ "GetHostEnumerator", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_af197f3d08cdd35d61a0a7ae118eb26f5.html#af197f3d08cdd35d61a0a7ae118eb26f5", null ],
+    [ "GetHostEvidence< T >", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a77d87875809b44f7fdd92f820ae4c677.html#a77d87875809b44f7fdd92f820ae4c677", null ],
+    [ "Merge", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a5b04f75bb4feac36f830363dd11bdf77.html#a5b04f75bb4feac36f830363dd11bdf77", null ],
+    [ "RemoveType", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a1259c76fd47974f68136c901e697b707.html#a1259c76fd47974f68136c901e697b707", null ],
+    [ "Count", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_af3d547caef9d1cb5a42c87161f7970dd.html#af3d547caef9d1cb5a42c87161f7970dd", null ],
+    [ "IsReadOnly", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_af21f5d40da3dee704b18bceda18c2fca.html#af21f5d40da3dee704b18bceda18c2fca", null ],
+    [ "IsSynchronized", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a35890fb7cd7c842b117e07be679f5fab.html#a35890fb7cd7c842b117e07be679f5fab", null ],
+    [ "Locked", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a6030a4ab26fe5f3664bffba8bcec8a6d.html#a6030a4ab26fe5f3664bffba8bcec8a6d", null ],
+    [ "SyncRoot", "d4/dd1/classSystem_1_1Security_1_1Policy_1_1Evidence_a82f4e75b82cc3a3e7f2b8e12f82f7191.html#a82f4e75b82cc3a3e7f2b8e12f82f7191", null ]
+];

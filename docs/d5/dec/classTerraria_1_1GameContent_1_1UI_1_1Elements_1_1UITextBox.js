@@ -5,6 +5,7 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox =
     [ "CursorLeft", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox_acebad009603d66d992dc65f3bd0069d7.html#acebad009603d66d992dc65f3bd0069d7", null ],
     [ "CursorRight", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox_a1ce65ce784f0c020fc1af028992dd359.html#a1ce65ce784f0c020fc1af028992dd359", null ],
     [ "DrawSelf", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox_a36e7edd4508e402cdd5c8573a34ac48d.html#a36e7edd4508e402cdd5c8573a34ac48d", null ],
+    [ "DrawSelf", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox.html#a865ded764507ef8884fea66b8c2ba562", null ],
     [ "DrawText", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox.html#a08b137baa1f03210bf7e4f8c9a2c2bf1", null ],
     [ "Recalculate", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox.html#a998f2fe54f3221d81d8c4af4ba62f4ad", null ],
     [ "SetText", "d5/dec/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UITextBox_ae75c01e7bc43eae39b018b52aabe5e6f.html#ae75c01e7bc43eae39b018b52aabe5e6f", null ],

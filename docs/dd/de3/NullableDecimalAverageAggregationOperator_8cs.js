@@ -1,0 +1,5 @@
+var NullableDecimalAverageAggregationOperator_8cs =
+[
+    [ "System.Linq.Parallel.NullableDecimalAverageAggregationOperator", "d9/dc1/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalAverageAggregationOperator.html", "d9/dc1/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalAverageAggregationOperator" ],
+    [ "System.Linq.Parallel.NullableDecimalAverageAggregationOperator.NullableDecimalAverageAggregationOperatorEnumerator< TKey >", "db/d0f/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalAverageAggregationOperator_1_1NullableDecimalA06658c545e9e9942ab9b98c0a733d6f1.html", "db/d0f/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalAverageAggregationOperator_1_1NullableDecimalA06658c545e9e9942ab9b98c0a733d6f1" ]
+];

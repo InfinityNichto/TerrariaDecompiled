@@ -1,0 +1,25 @@
+var classSystem_1_1IO_1_1Win32Marshal =
+[
+    [ "GetExceptionForLastWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_aa2cc85df2a1696649a112902eb5ab2a3.html#aa2cc85df2a1696649a112902eb5ab2a3", null ],
+    [ "GetExceptionForLastWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_aa2cc85df2a1696649a112902eb5ab2a3.html#aa2cc85df2a1696649a112902eb5ab2a3", null ],
+    [ "GetExceptionForLastWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_aa2cc85df2a1696649a112902eb5ab2a3.html#aa2cc85df2a1696649a112902eb5ab2a3", null ],
+    [ "GetExceptionForLastWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_aa2cc85df2a1696649a112902eb5ab2a3.html#aa2cc85df2a1696649a112902eb5ab2a3", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetExceptionForWin32Error", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ae49f96a4b61d5464013f6f8fe8d1c71d.html#ae49f96a4b61d5464013f6f8fe8d1c71d", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "GetMessage", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_ac01e04802b0dd4c109458527f5ab5686.html#ac01e04802b0dd4c109458527f5ab5686", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ],
+    [ "MakeHRFromErrorCode", "dd/d51/classSystem_1_1IO_1_1Win32Marshal_a06a0ceaa9cc1b9e3d8288c5a13c24f4a.html#a06a0ceaa9cc1b9e3d8288c5a13c24f4a", null ]
+];

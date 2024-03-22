@@ -1,0 +1,13 @@
+var WebSocketBase_8cs =
+[
+    [ "System.Net.WebSockets.WebSocketBase", "da/d76/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase.html", "da/d76/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase" ],
+    [ "System.Net.WebSockets.WebSocketBase.WebSocketOperation", "df/ddb/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation.html", "df/ddb/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation" ],
+    [ "System.Net.WebSockets.WebSocketBase.WebSocketOperation.ReceiveOperation", "d9/dbe/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1ReceiveOperation.html", "d9/dbe/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1ReceiveOperation" ],
+    [ "System.Net.WebSockets.WebSocketBase.WebSocketOperation.SendOperation", "d7/dcb/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1SendOperation.html", "d7/dcb/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1SendOperation" ],
+    [ "System.Net.WebSockets.WebSocketBase.WebSocketOperation.CloseOutputOperation", "dc/d12/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1CloseOutputOperation.html", "dc/d12/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1WebSocketOperation_1_1CloseOutputOperation" ],
+    [ "System.Net.WebSockets.WebSocketBase.KeepAliveTracker", "d3/d90/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker.html", "d3/d90/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker" ],
+    [ "System.Net.WebSockets.WebSocketBase.KeepAliveTracker.DisabledKeepAliveTracker", "d5/daa/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker_1_1DisabledKeepAliveTracker.html", "d5/daa/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker_1_1DisabledKeepAliveTracker" ],
+    [ "System.Net.WebSockets.WebSocketBase.KeepAliveTracker.DefaultKeepAliveTracker", "d4/d74/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker_1_1DefaultKeepAliveTracker.html", "d4/d74/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1KeepAliveTracker_1_1DefaultKeepAliveTracker" ],
+    [ "System.Net.WebSockets.WebSocketBase.OutstandingOperationHelper", "d8/dfc/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1OutstandingOperationHelper.html", "d8/dfc/classSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1OutstandingOperationHelper" ],
+    [ "System.Net.WebSockets.WebSocketBase.IWebSocketStream", "dd/dab/interfaceSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1IWebSocketStream.html", "dd/dab/interfaceSystem_1_1Net_1_1WebSockets_1_1WebSocketBase_1_1IWebSocketStream" ]
+];

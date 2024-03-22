@@ -1,0 +1,25 @@
+var classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner =
+[
+    [ "StaticIndexRangePartitioner", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner_a58c2026ad419211c9919107d63fd9d32.html#a58c2026ad419211c9919107d63fd9d32", null ],
+    [ "Create", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a970790f6bb8bdb1a5d4a0797ec64a97f", null ],
+    [ "Create", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a76d336dd6bc12eb3350ae4f496bf551a", null ],
+    [ "Create", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#aa3901a8af07050ee06d80400d0ad9fa4", null ],
+    [ "Create", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#ad432cbd3dfd14a40c5fd03ff34aec828", null ],
+    [ "Create< TSource >", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a2340db8d57e20e3fa4e4a3d4624f90bf", null ],
+    [ "Create< TSource >", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a72817722b7a429158c3759a38f044db9", null ],
+    [ "Create< TSource >", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a1ed60fbf3c3e473e7cd7ef4a4c8b7f3c", null ],
+    [ "Create< TSource >", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a0ef8a4e2b1c0b508f72ee9d60fb2bc42", null ],
+    [ "CreatePartition", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner_a1997a8cb31d2d710d2ad97fce75a2307.html#a1997a8cb31d2d710d2ad97fce75a2307", null ],
+    [ "CreateRanges", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a9dcba700763a9cefdf2afc343807f332", null ],
+    [ "CreateRanges", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#ac1bce66cbbfceb3963077783a8ed2f4d", null ],
+    [ "GetDefaultChunkSize< TSource >", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a053e79f13369376717978d2a03715791", null ],
+    [ "GetDynamicPartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#ad0336b6e2db8c5dae7e506241c98d2ef", null ],
+    [ "GetOrderableDynamicPartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a28212ecb620d0edd8b3d0df0e753a536", null ],
+    [ "GetOrderablePartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner_ad8070391fbaa4496b38bcfa372a0ec82.html#ad8070391fbaa4496b38bcfa372a0ec82", null ],
+    [ "GetPartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#ad044e9c2efa15d4c6bc103621cd576c2", null ],
+    [ "KeysNormalized", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#ac299882629168121513ebd09d2f5c210", null ],
+    [ "KeysOrderedAcrossPartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a6e520f31c6b7174c8a82999c61342c03", null ],
+    [ "KeysOrderedInEachPartition", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a012a5dc726509de9f800a1ebdde5a75c", null ],
+    [ "SourceCount", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner_a55500a8b0b031792d0d2504bfa795e9a.html#a55500a8b0b031792d0d2504bfa795e9a", null ],
+    [ "SupportsDynamicPartitions", "de/d6b/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1StaticIndexRangePartitioner.html#a2f6d7459a6340db1afd0e2a6bd521489", null ]
+];

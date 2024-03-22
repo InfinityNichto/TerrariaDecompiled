@@ -1,0 +1,8 @@
+var classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable =
+[
+    [ "InternalPartitionEnumerable", "db/dc8/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable_a66f1fed8ea4919ca85760de1c86794a6.html#a66f1fed8ea4919ca85760de1c86794a6", null ],
+    [ "GetEnumerator", "db/dc8/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable_a31034ee6d25b630dd4e6465f6dc7623a.html#a31034ee6d25b630dd4e6465f6dc7623a", null ],
+    [ "GetEnumerator", "db/dc8/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable_a75f8534c39e68a9e89a29d0a7b29cd33.html#a75f8534c39e68a9e89a29d0a7b29cd33", null ],
+    [ "_sharedIndex", "db/dc8/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable_a47c9865eb213c633b24b65e8cb8f0c3c.html#a47c9865eb213c633b24b65e8cb8f0c3c", null ],
+    [ "_sharedReader", "db/dc8/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerable_afd0bf3deb8d6c1bad83709b048ee7183.html#afd0bf3deb8d6c1bad83709b048ee7183", null ]
+];

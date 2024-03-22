@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Mime_1_1MimeBasePart =
+[
+    [ "MimePartAsyncResult", "de/d4a/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_1_1MimePartAsyncResult.html", "de/d4a/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_1_1MimePartAsyncResult" ],
+    [ "MimeBasePart", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a690c6ba3ee47917e543750a4ac5e184b.html#a690c6ba3ee47917e543750a4ac5e184b", null ],
+    [ "BeginSend", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a8f8fb5c16fbbc019ffa1721ce3e3e54a.html#a8f8fb5c16fbbc019ffa1721ce3e3e54a", null ],
+    [ "DecodeEncoding", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a8b66704cd2eaa3cc6f4b6e3f3e548f3a.html#a8b66704cd2eaa3cc6f4b6e3f3e548f3a", null ],
+    [ "DecodeHeaderValue", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_aa75e9c778c7673563eda491f6c8cd915.html#aa75e9c778c7673563eda491f6c8cd915", null ],
+    [ "EncodeHeaderValue", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a71837a92bf6db789347f36d0338892ad.html#a71837a92bf6db789347f36d0338892ad", null ],
+    [ "EncodeHeaderValue", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a26cce6953523375f56829dee3976a7df.html#a26cce6953523375f56829dee3976a7df", null ],
+    [ "EndSend", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a39865c900ef5d033bebae972c2e489f0.html#a39865c900ef5d033bebae972c2e489f0", null ],
+    [ "IsAscii", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a63360d347858b1a8bb191d23573b8fc4.html#a63360d347858b1a8bb191d23573b8fc4", null ],
+    [ "PrepareHeaders", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_aa27b550a75f69ed95dc34e3f65e11423.html#aa27b550a75f69ed95dc34e3f65e11423", null ],
+    [ "Send", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a751504acfd094d421c62a888964245b8.html#a751504acfd094d421c62a888964245b8", null ],
+    [ "ShouldUseBase64Encoding", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a8a47864f4e3f34887e9780f3d8649e97.html#a8a47864f4e3f34887e9780f3d8649e97", null ],
+    [ "_contentDisposition", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_aa0524d5a8dd2b2ce58d61a0093e19498.html#aa0524d5a8dd2b2ce58d61a0093e19498", null ],
+    [ "_contentType", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a66dc1e1aac2228cc9b93b5743f23a2c2.html#a66dc1e1aac2228cc9b93b5743f23a2c2", null ],
+    [ "_headers", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a7480cc8df0f67969af5be8dc006bd2a6.html#a7480cc8df0f67969af5be8dc006bd2a6", null ],
+    [ "s_decodeEncodingSplitChars", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_abf06a6f7b404df1bfa862dbd9b3ee4a4.html#abf06a6f7b404df1bfa862dbd9b3ee4a4", null ],
+    [ "s_headerValueSplitChars", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_ab0d84cc295158e3f535339beac7af45f.html#ab0d84cc295158e3f535339beac7af45f", null ],
+    [ "s_questionMarkSplitChars", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a9f7f9f2c6e02347cae7b830bcf206747.html#a9f7f9f2c6e02347cae7b830bcf206747", null ],
+    [ "ContentID", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_ae6c939dd12c54db630cebc5cd44b5efc.html#ae6c939dd12c54db630cebc5cd44b5efc", null ],
+    [ "ContentLocation", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_af11f894d3bd03e32189faef734214cd4.html#af11f894d3bd03e32189faef734214cd4", null ],
+    [ "ContentType", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a950b242a6f2546038d339a9e2723091e.html#a950b242a6f2546038d339a9e2723091e", null ],
+    [ "Headers", "d7/d81/classSystem_1_1Net_1_1Mime_1_1MimeBasePart_a772430cbf538bdcfd92df9bf869b10fd.html#a772430cbf538bdcfd92df9bf869b10fd", null ]
+];

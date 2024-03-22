@@ -1,0 +1,27 @@
+var classSystem_1_1Random =
+[
+    [ "CompatPrng", "dc/d13/structSystem_1_1Random_1_1CompatPrng.html", "dc/d13/structSystem_1_1Random_1_1CompatPrng" ],
+    [ "ImplBase", "d0/d69/classSystem_1_1Random_1_1ImplBase.html", "d0/d69/classSystem_1_1Random_1_1ImplBase" ],
+    [ "Net5CompatDerivedImpl", "da/d04/classSystem_1_1Random_1_1Net5CompatDerivedImpl.html", "da/d04/classSystem_1_1Random_1_1Net5CompatDerivedImpl" ],
+    [ "Net5CompatSeedImpl", "dc/d34/classSystem_1_1Random_1_1Net5CompatSeedImpl.html", "dc/d34/classSystem_1_1Random_1_1Net5CompatSeedImpl" ],
+    [ "ThreadSafeRandom", "df/d64/classSystem_1_1Random_1_1ThreadSafeRandom.html", "df/d64/classSystem_1_1Random_1_1ThreadSafeRandom" ],
+    [ "XoshiroImpl", "d3/d7c/classSystem_1_1Random_1_1XoshiroImpl.html", "d3/d7c/classSystem_1_1Random_1_1XoshiroImpl" ],
+    [ "Random", "d6/d60/classSystem_1_1Random_abab7b56c567e7345896b0deb7fd1aaea.html#abab7b56c567e7345896b0deb7fd1aaea", null ],
+    [ "Random", "d6/d60/classSystem_1_1Random_a6d8af2623b9590467a1353028e0c4da4.html#a6d8af2623b9590467a1353028e0c4da4", null ],
+    [ "Random", "d6/d60/classSystem_1_1Random_a088025887798cd72a99c1659a96e1f99.html#a088025887798cd72a99c1659a96e1f99", null ],
+    [ "Next", "d6/d60/classSystem_1_1Random_a25102dbc165950dc58af7e2949e96765.html#a25102dbc165950dc58af7e2949e96765", null ],
+    [ "Next", "d6/d60/classSystem_1_1Random_aa2bc262cec5f51d8a5a0d0ec2593078c.html#aa2bc262cec5f51d8a5a0d0ec2593078c", null ],
+    [ "Next", "d6/d60/classSystem_1_1Random_a90c5cd76c2205151ee47867b3262ca92.html#a90c5cd76c2205151ee47867b3262ca92", null ],
+    [ "NextBytes", "d6/d60/classSystem_1_1Random_a496d5744b7b08ccde5f185dc615a2c55.html#a496d5744b7b08ccde5f185dc615a2c55", null ],
+    [ "NextBytes", "d6/d60/classSystem_1_1Random_a22b1730fb6b07fb5052475856e92a5dc.html#a22b1730fb6b07fb5052475856e92a5dc", null ],
+    [ "NextDouble", "d6/d60/classSystem_1_1Random_a48ada3b426d9b3eb72c237627561852e.html#a48ada3b426d9b3eb72c237627561852e", null ],
+    [ "NextInt64", "d6/d60/classSystem_1_1Random_adb4d6019109fcc6f879e1adf3ccd7d46.html#adb4d6019109fcc6f879e1adf3ccd7d46", null ],
+    [ "NextInt64", "d6/d60/classSystem_1_1Random_aae285220e1c7c91dddfbd5336271afd4.html#aae285220e1c7c91dddfbd5336271afd4", null ],
+    [ "NextInt64", "d6/d60/classSystem_1_1Random_ad901afe2d75ab45a8754dab22c52db47.html#ad901afe2d75ab45a8754dab22c52db47", null ],
+    [ "NextSingle", "d6/d60/classSystem_1_1Random_a28fc41634cdbbfa213d49537498dcf0d.html#a28fc41634cdbbfa213d49537498dcf0d", null ],
+    [ "Sample", "d6/d60/classSystem_1_1Random_a057978f346bc0152b0e5439859d58107.html#a057978f346bc0152b0e5439859d58107", null ],
+    [ "ThrowMaxValueMustBeNonNegative", "d6/d60/classSystem_1_1Random_adb9c552894c8f52d0b1b8890b4afa28d.html#adb9c552894c8f52d0b1b8890b4afa28d", null ],
+    [ "ThrowMinMaxValueSwapped", "d6/d60/classSystem_1_1Random_a061af4863b82d68a4dbb30584f4c9f4a.html#a061af4863b82d68a4dbb30584f4c9f4a", null ],
+    [ "_impl", "d6/d60/classSystem_1_1Random_adc11a9ab3e1793c3b466e44b23ad059a.html#adc11a9ab3e1793c3b466e44b23ad059a", null ],
+    [ "Shared", "d6/d60/classSystem_1_1Random_aa0ebd5ce12136269035021d16e6314a5.html#aa0ebd5ce12136269035021d16e6314a5", null ]
+];

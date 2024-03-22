@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEvent =
+[
+    [ "Data", "d7/d4b/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEvent_ae9f0c0393d5d646f7892687144d78867.html#ae9f0c0393d5d646f7892687144d78867", null ],
+    [ "Type", "d7/d4b/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEvent_acebf4cba009a09667098ee39afab3d2f.html#acebf4cba009a09667098ee39afab3d2f", null ]
+];

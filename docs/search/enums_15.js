@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['validatingreaderstate_0',['ValidatingReaderState',['../d1/dc4/classSystem_1_1Xml_1_1XsdValidatingReader_ad3411966620d4c380c282acb5fb6e793.html#ad3411966620d4c380c282acb5fb6e793',1,'System::Xml::XsdValidatingReader']]],
+  ['validationtype_1',['ValidationType',['../db/d38/namespaceSystem_1_1Xml_a8696837d1de571776744c0899a33ae48.html#a8696837d1de571776744c0899a33ae48',1,'System::Xml']]],
+  ['validatorstate_2',['ValidatorState',['../d8/dde/namespaceSystem_1_1Xml_1_1Schema_a90f02d4e3218adf0c3fe6ccf509ccdb5.html#a90f02d4e3218adf0c3fe6ccf509ccdb5',1,'System::Xml::Schema']]],
+  ['valuefixupenum_3',['ValueFixupEnum',['../db/d02/namespaceSystem_1_1Runtime_1_1Serialization_1_1Formatters_1_1Binary_a382437aa3a75b90780716260325e188d.html#a382437aa3a75b90780716260325e188d',1,'System::Runtime::Serialization::Formatters::Binary']]],
+  ['valuehandleconststringtype_4',['ValueHandleConstStringType',['../db/d38/namespaceSystem_1_1Xml_a2524aad21d0d2975d6966f1607722881.html#a2524aad21d0d2975d6966f1607722881',1,'System::Xml']]],
+  ['valuehandletype_5',['ValueHandleType',['../db/d38/namespaceSystem_1_1Xml_ae55dd1897353ad4092061ede0e2c05b6.html#ae55dd1897353ad4092061ede0e2c05b6',1,'System::Xml']]],
+  ['valueid_6',['ValueId',['../d5/d07/classSystem_1_1Diagnostics_1_1NtProcessManager_a7404e763368280b416965dbadc30b57b.html#a7404e763368280b416965dbadc30b57b',1,'System::Diagnostics::NtProcessManager']]],
+  ['valuetasksourceoncompletedflags_7',['ValueTaskSourceOnCompletedFlags',['../d7/db1/namespaceSystem_1_1Threading_1_1Tasks_1_1Sources_a3153f379dab7fc120d0227095e800149.html#a3153f379dab7fc120d0227095e800149',1,'System::Threading::Tasks::Sources']]],
+  ['valuetasksourcestatus_8',['ValueTaskSourceStatus',['../d7/db1/namespaceSystem_1_1Threading_1_1Tasks_1_1Sources_ab33d854a142b7f20b42bd4a1b451dd9b.html#ab33d854a142b7f20b42bd4a1b451dd9b',1,'System::Threading::Tasks::Sources']]],
+  ['valuetype_9',['ValueType',['../d9/d58/namespaceSystem_1_1Data_a014cbf6f79bf5ff5856d4023b86326c6.html#a014cbf6f79bf5ff5856d4023b86326c6',1,'System::Data']]],
+  ['varenum_10',['VarEnum',['../df/d96/namespaceSystem_1_1Runtime_1_1InteropServices_a139b4606ae806347d7091a528fbb3f45.html#a139b4606ae806347d7091a528fbb3f45',1,'System::Runtime::InteropServices']]],
+  ['varflags_11',['VARFLAGS',['../d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cade',1,'System::Runtime::InteropServices::ComTypes']]],
+  ['variablestoragekind_12',['VariableStorageKind',['../d2/d5c/namespaceSystem_1_1Linq_1_1Expressions_1_1Compiler_ae36ab5155188a1fc2bf9a4c83ecb2164.html#ae36ab5155188a1fc2bf9a4c83ecb2164',1,'System::Linq::Expressions::Compiler']]],
+  ['variabletype_13',['VariableType',['../d7/d3b/namespaceSystem_1_1Xml_1_1Xsl_1_1XsltOld_a9b921e68682f2094862d9184c48ea976.html#a9b921e68682f2094862d9184c48ea976',1,'System::Xml::Xsl::XsltOld']]],
+  ['varkind_14',['VARKIND',['../d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222d',1,'System::Runtime::InteropServices::ComTypes']]],
+  ['vertexelementformat_15',['VertexElementFormat',['../d0/d1c/namespaceMicrosoft_1_1Xna_1_1Framework_1_1Graphics_a302e2d6473c531ecccf8cef6a400a948.html#a302e2d6473c531ecccf8cef6a400a948',1,'Microsoft::Xna::Framework::Graphics']]],
+  ['vertexelementusage_16',['VertexElementUsage',['../d0/d1c/namespaceMicrosoft_1_1Xna_1_1Framework_1_1Graphics_a9543d5e3bc00e7f0e6db3380e2f0bf55.html#a9543d5e3bc00e7f0e6db3380e2f0bf55',1,'Microsoft::Xna::Framework::Graphics']]],
+  ['viewtechnology_17',['ViewTechnology',['../d6/dd5/namespaceSystem_1_1ComponentModel_1_1Design_aac1a8df05c3aacbf3a2198f8fd04c4a0.html#aac1a8df05c3aacbf3a2198f8fd04c4a0',1,'System::ComponentModel::Design']]],
+  ['virtualindex_18',['VirtualIndex',['../d1/d9f/structSystem_1_1Reflection_1_1Metadata_1_1AssemblyReferenceHandle_a1dd418bcb588d328587f56cb7d020569.html#a1dd418bcb588d328587f56cb7d020569',1,'System.Reflection.Metadata.AssemblyReferenceHandle.VirtualIndex'],['../d6/d1b/structSystem_1_1Reflection_1_1Metadata_1_1BlobHandle_a11da3ce53676caa6415bd816d21f1111.html#a11da3ce53676caa6415bd816d21f1111',1,'System.Reflection.Metadata.BlobHandle.VirtualIndex'],['../d2/d28/structSystem_1_1Reflection_1_1Metadata_1_1StringHandle_a9a28bf0226e1c6c63de49c6aab85776b.html#a9a28bf0226e1c6c63de49c6aab85776b',1,'System.Reflection.Metadata.StringHandle.VirtualIndex']]]
+];

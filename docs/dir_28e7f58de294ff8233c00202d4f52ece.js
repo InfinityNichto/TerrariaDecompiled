@@ -1,0 +1,26 @@
+var dir_28e7f58de294ff8233c00202d4f52ece =
+[
+    [ "AssemblyAttributesGoHere.cs", "d0/d33/AssemblyAttributesGoHere_8cs.html", "d0/d33/AssemblyAttributesGoHere_8cs" ],
+    [ "AssemblyAttributesGoHereM.cs", "d8/d73/AssemblyAttributesGoHereM_8cs.html", "d8/d73/AssemblyAttributesGoHereM_8cs" ],
+    [ "AssemblyAttributesGoHereS.cs", "d5/d12/AssemblyAttributesGoHereS_8cs.html", "d5/d12/AssemblyAttributesGoHereS_8cs" ],
+    [ "AssemblyAttributesGoHereSM.cs", "d1/dfd/AssemblyAttributesGoHereSM_8cs.html", "d1/dfd/AssemblyAttributesGoHereSM_8cs" ],
+    [ "CompilerMarshalOverride.cs", "df/dd5/CompilerMarshalOverride_8cs.html", "df/dd5/CompilerMarshalOverride_8cs" ],
+    [ "CppInlineNamespaceAttribute.cs", "d6/ddf/CppInlineNamespaceAttribute_8cs.html", "d6/ddf/CppInlineNamespaceAttribute_8cs" ],
+    [ "DecoratedNameAttribute.cs", "d3/de4/DecoratedNameAttribute_8cs.html", "d3/de4/DecoratedNameAttribute_8cs" ],
+    [ "HasCopySemanticsAttribute.cs", "d5/d4f/HasCopySemanticsAttribute_8cs.html", "d5/d4f/HasCopySemanticsAttribute_8cs" ],
+    [ "IsBoxed.cs", "d7/de4/IsBoxed_8cs.html", "d7/de4/IsBoxed_8cs" ],
+    [ "IsByValue.cs", "da/d19/IsByValue_8cs.html", "da/d19/IsByValue_8cs" ],
+    [ "IsCopyConstructed.cs", "d4/db1/IsCopyConstructed_8cs.html", "d4/db1/IsCopyConstructed_8cs" ],
+    [ "IsExplicitlyDereferenced.cs", "d6/d6d/IsExplicitlyDereferenced_8cs.html", "d6/d6d/IsExplicitlyDereferenced_8cs" ],
+    [ "IsImplicitlyDereferenced.cs", "df/d77/IsImplicitlyDereferenced_8cs.html", "df/d77/IsImplicitlyDereferenced_8cs" ],
+    [ "IsJitIntrinsic.cs", "d7/d44/IsJitIntrinsic_8cs.html", "d7/d44/IsJitIntrinsic_8cs" ],
+    [ "IsLong.cs", "d9/d71/IsLong_8cs.html", "d9/d71/IsLong_8cs" ],
+    [ "IsPinned.cs", "d2/d8e/IsPinned_8cs.html", "d2/d8e/IsPinned_8cs" ],
+    [ "IsSignUnspecifiedByte.cs", "d6/dc2/IsSignUnspecifiedByte_8cs.html", "d6/dc2/IsSignUnspecifiedByte_8cs" ],
+    [ "IsUdtReturn.cs", "d5/d7d/IsUdtReturn_8cs.html", "d5/d7d/IsUdtReturn_8cs" ],
+    [ "NativeCppClassAttribute.cs", "df/d5b/NativeCppClassAttribute_8cs.html", "df/d5b/NativeCppClassAttribute_8cs" ],
+    [ "NullablePublicOnlyAttribute.cs", "d3/d5c/System_8Runtime_8CompilerServices_8VisualC_2System_8Runtime_8CompilerServices_2NullablePublicOnlyAttribute_8cs.html", "d3/d5c/System_8Runtime_8CompilerServices_8VisualC_2System_8Runtime_8CompilerServices_2NullablePublicOnlyAttribute_8cs" ],
+    [ "RequiredAttributeAttribute.cs", "d3/d98/RequiredAttributeAttribute_8cs.html", "d3/d98/RequiredAttributeAttribute_8cs" ],
+    [ "ScopelessEnumAttribute.cs", "d5/d16/ScopelessEnumAttribute_8cs.html", "d5/d16/ScopelessEnumAttribute_8cs" ],
+    [ "SuppressMergeCheckAttribute.cs", "d8/dc6/SuppressMergeCheckAttribute_8cs.html", "d8/dc6/SuppressMergeCheckAttribute_8cs" ]
+];

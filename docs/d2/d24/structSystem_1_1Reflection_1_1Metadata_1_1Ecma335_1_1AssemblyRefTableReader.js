@@ -1,0 +1,25 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader =
+[
+    [ "AssemblyRefTableReader", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_aefd545622cf8ecae432827663c234323.html#aefd545622cf8ecae432827663c234323", null ],
+    [ "GetCulture", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a9472c5d3b4e1decd14c135d26b2d0edd.html#a9472c5d3b4e1decd14c135d26b2d0edd", null ],
+    [ "GetFlags", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a79ff807c712b24352036c389cce85016.html#a79ff807c712b24352036c389cce85016", null ],
+    [ "GetHashValue", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a104e8c741b6753a8242e7217397f26af.html#a104e8c741b6753a8242e7217397f26af", null ],
+    [ "GetName", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a8ba6c8c024787d022e9e559e85f8374a.html#a8ba6c8c024787d022e9e559e85f8374a", null ],
+    [ "GetPublicKeyOrToken", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a5d22e58c859e21b6eeed32fba4726e5b.html#a5d22e58c859e21b6eeed32fba4726e5b", null ],
+    [ "GetVersion", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_acb5c11000b36d8e7b7cecd85b5169842.html#acb5c11000b36d8e7b7cecd85b5169842", null ],
+    [ "_BuildNumberOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a20b760d816b973e5a3c463d57809c185.html#a20b760d816b973e5a3c463d57809c185", null ],
+    [ "_CultureOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_aa8a5fbfed5502118499ccc2dad05ab0c.html#aa8a5fbfed5502118499ccc2dad05ab0c", null ],
+    [ "_FlagsOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_adf3107e132d99360e284faef313424f9.html#adf3107e132d99360e284faef313424f9", null ],
+    [ "_HashValueOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_aefcebbcdde21a5d9367c52edaafff7f5.html#aefcebbcdde21a5d9367c52edaafff7f5", null ],
+    [ "_IsBlobHeapRefSizeSmall", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a0fe5eb5bbb28963db805f07f57768156.html#a0fe5eb5bbb28963db805f07f57768156", null ],
+    [ "_IsStringHeapRefSizeSmall", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a74f1d341d57949a41284c8dd99b75444.html#a74f1d341d57949a41284c8dd99b75444", null ],
+    [ "_MajorVersionOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a5323db5c70ab7de87dac180d6b12766f.html#a5323db5c70ab7de87dac180d6b12766f", null ],
+    [ "_MinorVersionOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_aa1d1ccf134ce003a1948390068d2c828.html#aa1d1ccf134ce003a1948390068d2c828", null ],
+    [ "_NameOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_ae77166934e40d58242d227a90093df6a.html#ae77166934e40d58242d227a90093df6a", null ],
+    [ "_PublicKeyOrTokenOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_abe484b91019573afd9325f07c571f8ea.html#abe484b91019573afd9325f07c571f8ea", null ],
+    [ "_RevisionNumberOffset", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a3d8a900521615d72d64c21d6919edcdd.html#a3d8a900521615d72d64c21d6919edcdd", null ],
+    [ "Block", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a5132b0b45f220dc5a15967b940fb063b.html#a5132b0b45f220dc5a15967b940fb063b", null ],
+    [ "NumberOfNonVirtualRows", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_aca3a96f8dcb4c90579608c864751c31e.html#aca3a96f8dcb4c90579608c864751c31e", null ],
+    [ "NumberOfVirtualRows", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_afdd8e5d1ccc706d5da7d6a3551393de5.html#afdd8e5d1ccc706d5da7d6a3551393de5", null ],
+    [ "RowSize", "d2/d24/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1AssemblyRefTableReader_a2af877f17981c3a21d7522d10e840869.html#a2af877f17981c3a21d7522d10e840869", null ]
+];

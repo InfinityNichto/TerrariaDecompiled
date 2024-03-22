@@ -1,0 +1,5 @@
+var interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPointContainer =
+[
+    [ "EnumConnectionPoints", "db/d5b/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPointContainer_a6327526883fa7e93cd6a5b3e0818813f.html#a6327526883fa7e93cd6a5b3e0818813f", null ],
+    [ "FindConnectionPoint", "db/d5b/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPointContainer_af5a4276708842ba2aafa696ab6d681ed.html#af5a4276708842ba2aafa696ab6d681ed", null ]
+];

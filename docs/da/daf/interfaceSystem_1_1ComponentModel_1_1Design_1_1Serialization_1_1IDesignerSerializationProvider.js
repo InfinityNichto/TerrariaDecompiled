@@ -1,0 +1,4 @@
+var interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationProvider =
+[
+    [ "GetSerializer", "da/daf/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationProvider_a399e3f1c0afa0e870aa14e53c29a01f1.html#a399e3f1c0afa0e870aa14e53c29a01f1", null ]
+];

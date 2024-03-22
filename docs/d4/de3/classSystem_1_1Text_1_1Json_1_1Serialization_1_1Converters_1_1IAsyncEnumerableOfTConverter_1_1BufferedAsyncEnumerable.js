@@ -1,0 +1,6 @@
+var classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1IAsyncEnumerableOfTConverter_1_1BufferedAsyncEnumerable =
+[
+    [ "GetAsyncEnumerator", "d4/de3/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1IAsyncEnumerableOfTConverter_1_1BufferedAsyncEnumerable_a3885d8e4b77664f69795aaa4c22f592b.html#a3885d8e4b77664f69795aaa4c22f592b", null ],
+    [ "GetAsyncEnumerator", "d4/de3/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1IAsyncEnumerableOfTConverter_1_1BufferedAsyncEnumerable.html#aaa1d173068eb4c04c761eeb8fac3132a", null ],
+    [ "_buffer", "d4/de3/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1IAsyncEnumerableOfTConverter_1_1BufferedAsyncEnumerable_ad81aa7f9b55d27c5e733587e91f92f16.html#ad81aa7f9b55d27c5e733587e91f92f16", null ]
+];

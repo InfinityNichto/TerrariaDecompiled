@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities =
+[
+    [ "AddHexEscaped", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a1a71a21419b9310a829465560e52d640.html#a1a71a21419b9310a829465560e52d640", null ],
+    [ "AreEqualCollections< T >", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a34a943773afa821e0b7655feebfd6149.html#a34a943773afa821e0b7655feebfd6149", null ],
+    [ "AreEqualCollections< T >", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a624e1b7b90768c2fb8868b21a9620c06.html#a624e1b7b90768c2fb8868b21a9620c06", null ],
+    [ "CheckValidComment", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a3c8d638f5d90d8564c6bb95f46a82ce5.html#a3c8d638f5d90d8564c6bb95f46a82ce5", null ],
+    [ "CheckValidQuotedString", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a77707d55960fd7eb7feb12334a1d0748.html#a77707d55960fd7eb7feb12334a1d0748", null ],
+    [ "CheckValidToken", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_ad5d849dcd4c6f2118be69d74a2cb0190.html#ad5d849dcd4c6f2118be69d74a2cb0190", null ],
+    [ "Clone", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a793cd8f873080c170f8fab13f0d5091c.html#a793cd8f873080c170f8fab13f0d5091c", null ],
+    [ "ContainsNonAscii", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_ab6bb5d68ac2e1a26674f96191b6eb8c4.html#ab6bb5d68ac2e1a26674f96191b6eb8c4", null ],
+    [ "DumpHeaders", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_ac7d7ffae8bbdefe6c42058b4f3f90b65.html#ac7d7ffae8bbdefe6c42058b4f3f90b65", null ],
+    [ "Encode5987", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_ab997f07d3d430647d3d6a788ce12100f.html#ab997f07d3d430647d3d6a788ce12100f", null ],
+    [ "GetDateTimeOffsetValue", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a6f76a3938897dce4e7799056d1d8db6b.html#a6f76a3938897dce4e7799056d1d8db6b", null ],
+    [ "GetNextNonEmptyOrWhitespaceIndex", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_adec0a168d5c929ac7c9ddf1b7dcb6893.html#adec0a168d5c929ac7c9ddf1b7dcb6893", null ],
+    [ "GetQuality", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_ab6d2cd924093af8883b5e1d6e8ea3728.html#ab6d2cd924093af8883b5e1d6e8ea3728", null ],
+    [ "GetTimeSpanValue", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a0cae37e71d399ac902f6b04890b1d3c9.html#a0cae37e71d399ac902f6b04890b1d3c9", null ],
+    [ "SetQuality", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a34500c9bbc05d3c86cb0190af0a88fb7.html#a34500c9bbc05d3c86cb0190af0a88fb7", null ],
+    [ "TryParseInt32", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_aa734f8b6565072476c41b24ed6df8f0f.html#aa734f8b6565072476c41b24ed6df8f0f", null ],
+    [ "TryParseInt32", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a5a2f0bbaa955c411ea534f776b211ee0.html#a5a2f0bbaa955c411ea534f776b211ee0", null ],
+    [ "TryParseInt64", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_acaa14f09fa6f346220d1114fe1445847.html#acaa14f09fa6f346220d1114fe1445847", null ],
+    [ "ValidateToken", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a3728a964e16b3bc0299478fd1fecc187.html#a3728a964e16b3bc0299478fd1fecc187", null ],
+    [ "ExpectContinue", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a364bb7ac4ce46ff3ef1422308140022d.html#a364bb7ac4ce46ff3ef1422308140022d", null ],
+    [ "TokenValidator", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a670980856d0971c983ba41f054cde1c1.html#a670980856d0971c983ba41f054cde1c1", null ],
+    [ "TransferEncodingChunked", "dd/d45/classSystem_1_1Net_1_1Http_1_1Headers_1_1HeaderUtilities_a7388af6334ddf85beff8fc67323292ff.html#a7388af6334ddf85beff8fc67323292ff", null ]
+];

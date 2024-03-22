@@ -1,0 +1,25 @@
+var classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs =
+[
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a55e91ab8b8545057ce857e986f5e173a.html#a55e91ab8b8545057ce857e986f5e173a", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a6a586185bb433dbcbc5832c57eecbf04.html#a6a586185bb433dbcbc5832c57eecbf04", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ae68d407dfd374fdac9ce48aa8dd418a8.html#ae68d407dfd374fdac9ce48aa8dd418a8", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ae67699492f9fff3a96488c68fbdc8546.html#ae67699492f9fff3a96488c68fbdc8546", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a3e51854542b923df228b43cf11562054.html#a3e51854542b923df228b43cf11562054", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ad9fc12e61457b4e908c1c994d2d65e07.html#ad9fc12e61457b4e908c1c994d2d65e07", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a8779304c4639f4581a0a890d44cd501e.html#a8779304c4639f4581a0a890d44cd501e", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a19c4d46104ec7dec6f638f8a044cc4f3.html#a19c4d46104ec7dec6f638f8a044cc4f3", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a9a3025f2c4ec16eafd9f6456ee082588.html#a9a3025f2c4ec16eafd9f6456ee082588", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a5dfc3efa62a184327bf8e77044744adb.html#a5dfc3efa62a184327bf8e77044744adb", null ],
+    [ "NotifyCollectionChangedEventArgs", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a963d434f3ef1f15ab2577f15b6cc524b.html#a963d434f3ef1f15ab2577f15b6cc524b", null ],
+    [ "_action", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ad8350e24cce537bba1053cd63dec4a0d.html#ad8350e24cce537bba1053cd63dec4a0d", null ],
+    [ "_newItems", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_af394007cb58b692dc61758663769fb9a.html#af394007cb58b692dc61758663769fb9a", null ],
+    [ "_newStartingIndex", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a990eda89d4dc2f992256371228f296d1.html#a990eda89d4dc2f992256371228f296d1", null ],
+    [ "_oldItems", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ade4ec7e05d0ef2c6a79617b93e66c9a6.html#ade4ec7e05d0ef2c6a79617b93e66c9a6", null ],
+    [ "_oldStartingIndex", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_afde30669724172c9b53e30330211f4ad.html#afde30669724172c9b53e30330211f4ad", null ],
+    [ "Empty", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs.html#aee7caaeb37b8beddd2126e6f680dc0a3", null ],
+    [ "Action", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ac805867c04d88969bdba0c0905b5486f.html#ac805867c04d88969bdba0c0905b5486f", null ],
+    [ "NewItems", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ab4ea0fa4dd65e0369d835354072ca86a.html#ab4ea0fa4dd65e0369d835354072ca86a", null ],
+    [ "NewStartingIndex", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a63064da54a35c69e12131b8f3528de25.html#a63064da54a35c69e12131b8f3528de25", null ],
+    [ "OldItems", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_ad3297c871d79442a0133f91580bf11da.html#ad3297c871d79442a0133f91580bf11da", null ],
+    [ "OldStartingIndex", "d5/dac/classSystem_1_1Collections_1_1Specialized_1_1NotifyCollectionChangedEventArgs_a02c502aab049e59093e5abab2aa587ad.html#a02c502aab049e59093e5abab2aa587ad", null ]
+];

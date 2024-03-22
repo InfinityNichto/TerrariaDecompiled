@@ -1,0 +1,14 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources =
+[
+    [ "BatchedJoinBlockTargetSharedResources", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_aef7921c8d45d1effbec40d0f92b9d084.html#aef7921c8d45d1effbec40d0f92b9d084", null ],
+    [ "_allTargetsDecliningPermanentlyAction", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_a634eecb6312106ccf702785cf8bce226.html#a634eecb6312106ccf702785cf8bce226", null ],
+    [ "_batchesCreated", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_a6074240a37cda9db668d06d6c5b68b94.html#a6074240a37cda9db668d06d6c5b68b94", null ],
+    [ "_batchSize", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_aed296d3fa6252e08ea7c1ae883974bec.html#aed296d3fa6252e08ea7c1ae883974bec", null ],
+    [ "_batchSizeReachedAction", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_afa2f9d25b11def1f3b436d18bdef6c65.html#afa2f9d25b11def1f3b436d18bdef6c65", null ],
+    [ "_completionAction", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_a25a6e212cb94e1cdb42258691163873f.html#a25a6e212cb94e1cdb42258691163873f", null ],
+    [ "_decliningPermanently", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_ad0ebfd1d7fe9dee2f1bf79756070a859.html#ad0ebfd1d7fe9dee2f1bf79756070a859", null ],
+    [ "_exceptionAction", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_a187ef1edd1d049fc18bd9228d9c10084.html#a187ef1edd1d049fc18bd9228d9c10084", null ],
+    [ "_incomingLock", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_aa8207af7a07eb7c35e13c7cf4c4c70a9.html#aa8207af7a07eb7c35e13c7cf4c4c70a9", null ],
+    [ "_remainingAliveTargets", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_aa807aecaee454042ceaabbe03af27b97.html#aa807aecaee454042ceaabbe03af27b97", null ],
+    [ "_remainingItemsInBatch", "dd/d98/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTargetSharedResources_a0ddc0ffb2eca88d215925dfec209eb30.html#a0ddc0ffb2eca88d215925dfec209eb30", null ]
+];

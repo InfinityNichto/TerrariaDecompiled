@@ -1,0 +1,28 @@
+var classSystem_1_1Data_1_1SqlTypes_1_1SqlXml =
+[
+    [ "SqlXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a77022e045549cdff7051a702c1b0d7bc.html#a77022e045549cdff7051a702c1b0d7bc", null ],
+    [ "SqlXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a6a87ede4b5b7210664ce840c2a9b6b57.html#a6a87ede4b5b7210664ce840c2a9b6b57", null ],
+    [ "SqlXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a497e1b1641a24a5c6baee6898c2224ac.html#a497e1b1641a24a5c6baee6898c2224ac", null ],
+    [ "SqlXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_abd5191a2368e1e1c992c1eeac65085a4.html#abd5191a2368e1e1c992c1eeac65085a4", null ],
+    [ "CreateMemoryStreamFromXmlReader", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_acdd2decd277a1a71618c396665e390e3.html#acdd2decd277a1a71618c396665e390e3", null ],
+    [ "CreateReader", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a91f906edd6805da16e233fffdaef434f.html#a91f906edd6805da16e233fffdaef434f", null ],
+    [ "CreateSqlReaderDelegate", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_acd3bd2dc4ea7812ad552ef32298a36a4.html#acd3bd2dc4ea7812ad552ef32298a36a4", null ],
+    [ "CreateSqlXmlReader", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ae2cfed1dad663ac791a05ba099ddb0ee.html#ae2cfed1dad663ac791a05ba099ddb0ee", null ],
+    [ "GetSchema", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ac0c8e156b66f904624a6cd30e2da6ac0.html#ac0c8e156b66f904624a6cd30e2da6ac0", null ],
+    [ "GetXsdType", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a3e3c3130c31c015fb7e123e02ba49dff.html#a3e3c3130c31c015fb7e123e02ba49dff", null ],
+    [ "ReadXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a5873155c7e5fc8843c4e4ecd1407f2f1.html#a5873155c7e5fc8843c4e4ecd1407f2f1", null ],
+    [ "SetNull", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_af418f1f94f41d3526a81d05f4476a7d6.html#af418f1f94f41d3526a81d05f4476a7d6", null ],
+    [ "WriteXml", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a58f76d51456aaa6283eaf2d39d3e9bc6.html#a58f76d51456aaa6283eaf2d39d3e9bc6", null ],
+    [ "_createSqlReaderMethodInfo", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ae311416e250744d112c04e2275eb5d1a.html#ae311416e250744d112c04e2275eb5d1a", null ],
+    [ "_firstCreateReader", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ac77b3a9efc9f0e3d1f1c2f703d0dc200.html#ac77b3a9efc9f0e3d1f1c2f703d0dc200", null ],
+    [ "_fNotNull", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_abb5e6756593272d1f9e941e7395eccd0.html#abb5e6756593272d1f9e941e7395eccd0", null ],
+    [ "_stream", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a509593edc129ea8ece36e911a4d7494b.html#a509593edc129ea8ece36e911a4d7494b", null ],
+    [ "s_createSqlReaderMethodInfo", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a2126b401052a0d75f080d3b68660c17a.html#a2126b401052a0d75f080d3b68660c17a", null ],
+    [ "s_defaultXmlReaderSettings", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ad0535bf1d8a1a07b04dafdbf65e09491.html#ad0535bf1d8a1a07b04dafdbf65e09491", null ],
+    [ "s_defaultXmlReaderSettingsCloseInput", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_af3f6e943172fd419bb487f718e6ba2df.html#af3f6e943172fd419bb487f718e6ba2df", null ],
+    [ "s_sqlReaderDelegate", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ac82698e124cd515b35b4c3392305794f.html#ac82698e124cd515b35b4c3392305794f", null ],
+    [ "CreateSqlReaderMethodInfo", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ab46feaa4b0efaa9fb8e05fac7e4e8e5e.html#ab46feaa4b0efaa9fb8e05fac7e4e8e5e", null ],
+    [ "IsNull", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_ac1f5f39772a33e1101fe23b5b5810231.html#ac1f5f39772a33e1101fe23b5b5810231", null ],
+    [ "Null", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_aac44d90c83470d5785cb77e04e11d4e7.html#aac44d90c83470d5785cb77e04e11d4e7", null ],
+    [ "Value", "d4/d35/classSystem_1_1Data_1_1SqlTypes_1_1SqlXml_a81e0267c8eba2d9ea7b6535b1fbbab35.html#a81e0267c8eba2d9ea7b6535b1fbbab35", null ]
+];

@@ -1,0 +1,8 @@
+var classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables =
+[
+    [ "Mutables", "da/d67/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables_aa68c1eea998cd75fa7c74c3d8da7b299.html#aa68c1eea998cd75fa7c74c3d8da7b299", null ],
+    [ "_currentChunkOffset", "da/d67/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables_a26274cedbea9f38a577682f24bf90e76.html#a26274cedbea9f38a577682f24bf90e76", null ],
+    [ "_currentChunkSize", "da/d67/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables_a4cf4f352a95e4f3c648add46a19271a3.html#a4cf4f352a95e4f3c648add46a19271a3", null ],
+    [ "_currentPositionInChunk", "da/d67/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables_a972e0a1516873d319d798b2e9f021c97.html#a972e0a1516873d319d798b2e9f021c97", null ],
+    [ "_currentSection", "da/d67/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ListIndexRangeEnumerator_1_1Mutables_a71fe2fc69e2fd30f64351ec4b384e99d.html#a71fe2fc69e2fd30f64351ec4b384e99d", null ]
+];

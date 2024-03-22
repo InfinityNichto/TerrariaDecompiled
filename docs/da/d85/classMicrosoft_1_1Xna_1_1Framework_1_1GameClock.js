@@ -1,0 +1,26 @@
+var classMicrosoft_1_1Xna_1_1Framework_1_1GameClock =
+[
+    [ "GameClock", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a4f1fe2c53340000cf98bb8b14803c5f8.html#a4f1fe2c53340000cf98bb8b14803c5f8", null ],
+    [ "AdvanceFrameTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a7c89a259a08661d780f0490ed3fe5ed8.html#a7c89a259a08661d780f0490ed3fe5ed8", null ],
+    [ "CounterToTimeSpan", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_ababe6d070a0c8e2c33a1d2691b96fa16.html#ababe6d070a0c8e2c33a1d2691b96fa16", null ],
+    [ "Reset", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a01a3b9d4fd73580871241dec6f0ed993.html#a01a3b9d4fd73580871241dec6f0ed993", null ],
+    [ "Resume", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_ac523b845b5446557817518d7db969f43.html#ac523b845b5446557817518d7db969f43", null ],
+    [ "Suspend", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a14ecd414fa0df5d9f900a645e2d765a8.html#a14ecd414fa0df5d9f900a645e2d765a8", null ],
+    [ "UpdateElapsedTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a053bdc73949fc2519293c63d078d11ca.html#a053bdc73949fc2519293c63d078d11ca", null ],
+    [ "baseRealTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_ac71243dfc5f89d2f9bc1a89513946269.html#ac71243dfc5f89d2f9bc1a89513946269", null ],
+    [ "currentTimeBase", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a6116834acd76ea43d7fec2c600a9ea91.html#a6116834acd76ea43d7fec2c600a9ea91", null ],
+    [ "currentTimeOffset", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a610a6d2dc7c6b0678fedf00123f26464.html#a610a6d2dc7c6b0678fedf00123f26464", null ],
+    [ "elapsedAdjustedTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_aa1bb48c9f8cefd86e7c3f46082ed02e2.html#aa1bb48c9f8cefd86e7c3f46082ed02e2", null ],
+    [ "elapsedTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a8c8bf4a1583848cadeb166718639cb1c.html#a8c8bf4a1583848cadeb166718639cb1c", null ],
+    [ "lastRealTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a2a14a2acdb95cc6dd77c36883401105e.html#a2a14a2acdb95cc6dd77c36883401105e", null ],
+    [ "lastRealTimeCandidate", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a66f86352d43e047310a7ee97991ee9a6.html#a66f86352d43e047310a7ee97991ee9a6", null ],
+    [ "lastRealTimeValid", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_aa98961852d6705b7eb9b264c6745adb7.html#aa98961852d6705b7eb9b264c6745adb7", null ],
+    [ "suspendCount", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a51f3cee0303d45dd4aa43694270034f0.html#a51f3cee0303d45dd4aa43694270034f0", null ],
+    [ "suspendStartTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a4f29aa5bd4510a46ccf4434a5928f04b.html#a4f29aa5bd4510a46ccf4434a5928f04b", null ],
+    [ "timeLostToSuspension", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a42df59d91286453e78c92b195a6a88b4.html#a42df59d91286453e78c92b195a6a88b4", null ],
+    [ "Counter", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a2b1cd8812e49e3806fc2a66279654025.html#a2b1cd8812e49e3806fc2a66279654025", null ],
+    [ "CurrentTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_acab0ab38e227b32e5d18ddee5e480cc6.html#acab0ab38e227b32e5d18ddee5e480cc6", null ],
+    [ "ElapsedAdjustedTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a375b30f8dcf97aadd8e0796bcd1c795d.html#a375b30f8dcf97aadd8e0796bcd1c795d", null ],
+    [ "ElapsedTime", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a4320d57977749cd19190003c2a376557.html#a4320d57977749cd19190003c2a376557", null ],
+    [ "Frequency", "da/d85/classMicrosoft_1_1Xna_1_1Framework_1_1GameClock_a3186d89b5710ecadbaa6f0068ef21f61.html#a3186d89b5710ecadbaa6f0068ef21f61", null ]
+];

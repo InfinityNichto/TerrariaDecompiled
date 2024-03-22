@@ -1,0 +1,13 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation =
+[
+    [ "DebuggingInformation", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a5d0f7bbe75b90c663e9cebcac1f504b8.html#a5d0f7bbe75b90c663e9cebcac1f504b8", null ],
+    [ "_source", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a4c2ec3f09f583b7c825d3935e90d6446.html#a4c2ec3f09f583b7c825d3935e90d6446", null ],
+    [ "DataflowBlockOptions", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a5f44e9694b5faddb1948fa203f36799e.html#a5f44e9694b5faddb1948fa203f36799e", null ],
+    [ "HasValue", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_af33bd77a552470c07316ce7ad2c59950.html#af33bd77a552470c07316ce7ad2c59950", null ],
+    [ "InputQueue", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a201e95787c4796041912206c96de0c31.html#a201e95787c4796041912206c96de0c31", null ],
+    [ "IsCompleted", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a625333245d8e5d5a811af46dd1328ada.html#a625333245d8e5d5a811af46dd1328ada", null ],
+    [ "LinkedTargets", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a79c4e5f3cb3cf3bd87dc14da0aa77f14.html#a79c4e5f3cb3cf3bd87dc14da0aa77f14", null ],
+    [ "NextMessageReservedFor", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a67b936470df0d48e0dfb10c2570ae04d.html#a67b936470df0d48e0dfb10c2570ae04d", null ],
+    [ "TaskForOutputProcessing", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a7954fbc244d5a9ba3e45473e16bb1031.html#a7954fbc244d5a9ba3e45473e16bb1031", null ],
+    [ "Value", "d2/d9e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BroadcastBlock_1_1BroadcastingSourceCore_1_1DebuggingInformation_a576f16db9fe98865154b8615c1eb918c.html#a576f16db9fe98865154b8615c1eb918c", null ]
+];

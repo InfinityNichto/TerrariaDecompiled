@@ -1,0 +1,13 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator =
+[
+    [ "NullableDoubleMinMaxAggregationOperatorEnumerator", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator_a7e6c28d4b1961c3b4ac7b2be84bf3aa3.html#a7e6c28d4b1961c3b4ac7b2be84bf3aa3", null ],
+    [ "Dispose", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator_a3e404224f99b6dd2b5debb4ce41a8985.html#a3e404224f99b6dd2b5debb4ce41a8985", null ],
+    [ "MoveNext", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator_ad96dae3ac31552f15c80b31791c5e05b.html#ad96dae3ac31552f15c80b31791c5e05b", null ],
+    [ "_cancellationToken", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_sign", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator_ae32f96920364962512e89fc8ecb6a6ff.html#ae32f96920364962512e89fc8ecb6a6ff", null ],
+    [ "_source", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator_ab2e9ace9b27b44ea7ed13dbd1e93768b.html#ab2e9ace9b27b44ea7ed13dbd1e93768b", null ]
+];

@@ -1,0 +1,12 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator =
+[
+    [ "NullableLongAverageAggregationOperatorEnumerator", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator_a01b54435f5a86f9845ac798c22505abe.html#a01b54435f5a86f9845ac798c22505abe", null ],
+    [ "Dispose", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator_aefb8296d45b73ae5af556299ae2e8d2a.html#aefb8296d45b73ae5af556299ae2e8d2a", null ],
+    [ "MoveNext", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator_a6b66d1081f7e3b75193dfaca4b426f2c.html#a6b66d1081f7e3b75193dfaca4b426f2c", null ],
+    [ "_cancellationToken", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_source", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator_acc520303a13aa0e3914d7b409938eac3.html#acc520303a13aa0e3914d7b409938eac3", null ]
+];

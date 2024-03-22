@@ -1,0 +1,26 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract =
+[
+    [ "JsonCollectionDataContractCriticalHelper", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper" ],
+    [ "JsonCollectionDataContract", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a3012e20768a37bb1fa331ac517df6ffa.html#a3012e20768a37bb1fa331ac517df6ffa", null ],
+    [ "GetGeneratedReadWriteDelegates", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a2ae36ef5c5508dcbd673eab76da5f8ec", null ],
+    [ "GetJsonDataContract", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#af860ba76055eaaec537bf4760a03396a", null ],
+    [ "GetReadWriteDelegatesFromGeneratedAssembly", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a6f6e557edb2db4ef8990aaba930d2713", null ],
+    [ "HandleReadValue", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a9c19b19072ccd290a7a43a7ec5a57de7", null ],
+    [ "PopKnownDataContracts", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a2a86b7c84694b9e96cc71c239ee35b86", null ],
+    [ "PushKnownDataContracts", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#abbb2b2914b1aaabd955b2ec7943be422", null ],
+    [ "ReadJsonValue", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a4cd19467bdd4c457602f8bcdab7cfe54", null ],
+    [ "ReadJsonValueCore", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a1753ea325010d19cccc8317548490ef7.html#a1753ea325010d19cccc8317548490ef7", null ],
+    [ "TryGetReadWriteDelegatesFromGeneratedAssembly", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a53bfea7c3a1233cd19bbd65c913a2a3c", null ],
+    [ "TryReadNullAtTopLevel", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a9942934ac5975780780c132c74a38258", null ],
+    [ "WriteJsonValue", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a4153ec4c33bd702915cf41ba1e9d2e58", null ],
+    [ "WriteJsonValueCore", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a3703babc41a55d98ed3bbad3489f8deb.html#a3703babc41a55d98ed3bbad3489f8deb", null ],
+    [ "_helper", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a1db65caa0afc0cf97123a358631c7aca.html#a1db65caa0afc0cf97123a358631c7aca", null ],
+    [ "Helper", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#abfb2407483804d10e5e85fc9efcdd263", null ],
+    [ "JsonFormatGetOnlyReaderDelegate", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_aa5a2e0b07b0680cc2ea6e3c50808370a.html#aa5a2e0b07b0680cc2ea6e3c50808370a", null ],
+    [ "JsonFormatReaderDelegate", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a999634096f3d009c34811f51835fac69.html#a999634096f3d009c34811f51835fac69", null ],
+    [ "JsonFormatWriterDelegate", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a9dc74030fe20e3f34ee7e37dad22a31a.html#a9dc74030fe20e3f34ee7e37dad22a31a", null ],
+    [ "KnownDataContracts", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#ac5de23f9fce4d64c0e4f39410da69393", null ],
+    [ "TraditionalCollectionDataContract", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_a10966f38553a538d9f59d00c80d5371c.html#a10966f38553a538d9f59d00c80d5371c", null ],
+    [ "TraditionalDataContract", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#a2c769a048359004ea6fd4bda2d3e04e6", null ],
+    [ "TypeName", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html#ab75452a49abf0ed2472b29d925724d1c", null ]
+];

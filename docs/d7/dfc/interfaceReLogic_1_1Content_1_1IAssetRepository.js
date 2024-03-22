@@ -1,6 +1,7 @@
 var interfaceReLogic_1_1Content_1_1IAssetRepository =
 [
     [ "CreateUntracked< T >", "d7/dfc/interfaceReLogic_1_1Content_1_1IAssetRepository_a7f74f9fc1033152390145ce2be894c94.html#a7f74f9fc1033152390145ce2be894c94", null ],
+    [ "Dispose", "d7/dfc/interfaceReLogic_1_1Content_1_1IAssetRepository.html#a710286bfcecdda4067fe45e6c927f482", null ],
     [ "Request< T >", "d7/dfc/interfaceReLogic_1_1Content_1_1IAssetRepository_a21677e06b2b8b420057d991a187de4f8.html#a21677e06b2b8b420057d991a187de4f8", null ],
     [ "Request< T >", "d7/dfc/interfaceReLogic_1_1Content_1_1IAssetRepository_aaf448b5bec9f2b3cd49bfac24f5a78d3.html#aaf448b5bec9f2b3cd49bfac24f5a78d3", null ],
     [ "SetSources", "d7/dfc/interfaceReLogic_1_1Content_1_1IAssetRepository_afadef1f9c49c883ac45577347bd14677.html#afadef1f9c49c883ac45577347bd14677", null ],

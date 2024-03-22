@@ -1,0 +1,28 @@
+var classSystem_1_1Net_1_1FileWebResponse =
+[
+    [ "FileWebResponse", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a8a7287c54d4f3469f96547e553db36a3.html#a8a7287c54d4f3469f96547e553db36a3", null ],
+    [ "FileWebResponse", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a3220c4f31cc0f0ae0c96226070852f96.html#a3220c4f31cc0f0ae0c96226070852f96", null ],
+    [ "CheckDisposed", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_af88df3b9bed602e626997a0ae73838b7.html#af88df3b9bed602e626997a0ae73838b7", null ],
+    [ "Close", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_aa9631ff2eb9d57b9a9a9d2be51a6c4ae.html#aa9631ff2eb9d57b9a9a9d2be51a6c4ae", null ],
+    [ "Dispose", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#ad90ce59710755bbff3ee1ba42ccbab5c", null ],
+    [ "Dispose", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#ab646e0c6e0b4b5249aa95ae67691fd09", null ],
+    [ "GetLifetimeService", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#a8a0e8d12e507f470de5db16e74f238dd", null ],
+    [ "GetObjectData", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a33bf8be88f245c8e270f6cf753560eac.html#a33bf8be88f245c8e270f6cf753560eac", null ],
+    [ "GetObjectData", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a59beda2af0e0e82f2117bbca2772f445.html#a59beda2af0e0e82f2117bbca2772f445", null ],
+    [ "GetResponseStream", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a1ccd68a3135a7e9545291a7bb90a6d12.html#a1ccd68a3135a7e9545291a7bb90a6d12", null ],
+    [ "InitializeLifetimeService", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#ac831ed6de7a66333d07144ce2abd382a", null ],
+    [ "MemberwiseClone", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#aac9c0e041d02e755546e945445352a9a", null ],
+    [ "_closed", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a7f3fdda161760679042514b68d5955a7.html#a7f3fdda161760679042514b68d5955a7", null ],
+    [ "_contentLength", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a1c9648543b1685ab20104b32a3ca3bd2.html#a1c9648543b1685ab20104b32a3ca3bd2", null ],
+    [ "_fileAccess", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_adb6f8b67225e9bcd4fb79dc3ee1131f1.html#adb6f8b67225e9bcd4fb79dc3ee1131f1", null ],
+    [ "_headers", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_ae410177654c08ca622c9110836c583b6.html#ae410177654c08ca622c9110836c583b6", null ],
+    [ "_stream", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_ad94334e079b03620f1cada7f33ab3692.html#ad94334e079b03620f1cada7f33ab3692", null ],
+    [ "_uri", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a70e2fa4a82060353bfbd9db2cbc3758c.html#a70e2fa4a82060353bfbd9db2cbc3758c", null ],
+    [ "ContentLength", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_ab0b0b456a702e2107266abc8c34b94ee.html#ab0b0b456a702e2107266abc8c34b94ee", null ],
+    [ "ContentType", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a29b026d72e3d0db415cc892ed72335d0.html#a29b026d72e3d0db415cc892ed72335d0", null ],
+    [ "Headers", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_abcb7d1345959658fe049a5039570b035.html#abcb7d1345959658fe049a5039570b035", null ],
+    [ "IsFromCache", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#a3094396090b8bfb79f2829c35fde70c9", null ],
+    [ "IsMutuallyAuthenticated", "de/d5a/classSystem_1_1Net_1_1FileWebResponse.html#a325101b1d17613d0bb0ac9bd6df5747f", null ],
+    [ "ResponseUri", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_a6fc775d21f2709c8224112e64b1a04a8.html#a6fc775d21f2709c8224112e64b1a04a8", null ],
+    [ "SupportsHeaders", "de/d5a/classSystem_1_1Net_1_1FileWebResponse_abe713257198380768cb2782f0be1cbc2.html#abe713257198380768cb2782f0be1cbc2", null ]
+];

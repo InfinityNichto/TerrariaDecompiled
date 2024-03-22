@@ -1,0 +1,25 @@
+var classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask =
+[
+    [ "OrderPreservingPipeliningSpoolingTask", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a3693983b09828b7fbc21f193525563ad.html#a3693983b09828b7fbc21f193525563ad", null ],
+    [ "BaseWork", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#ad1b82b47c6f824043ef0dd33b56ac1de", null ],
+    [ "RunAsynchronously", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#a137016378ae7cc23ab1b6f5db4a07efc", null ],
+    [ "RunSynchronously", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#a1935493286866dc070d6586662ff3c1f", null ],
+    [ "RunTaskSynchronously", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#a893bed95fa6b840d0dd9094b74e9b6fc", null ],
+    [ "Spool", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a4522d514d0ba28e6ad459b1d36f54a2e.html#a4522d514d0ba28e6ad459b1d36f54a2e", null ],
+    [ "SpoolingFinally", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a25d430084b6162719c8efb8cb6c36b0a.html#a25d430084b6162719c8efb8cb6c36b0a", null ],
+    [ "SpoolingWork", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a18d0f34207a4bca575b7077c66fd4ef4.html#a18d0f34207a4bca575b7077c66fd4ef4", null ],
+    [ "Work", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#a943173cc09eb0c8cd7642c2485d41199", null ],
+    [ "_autoBuffered", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_ad668d1f75473d5a10c0f6a310b913877.html#ad668d1f75473d5a10c0f6a310b913877", null ],
+    [ "_bufferLock", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a2ba36516487f0241deaedb2c55333348.html#a2ba36516487f0241deaedb2c55333348", null ],
+    [ "_buffers", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_ab4a82e8684bc722ded3f674cf463b7e8.html#ab4a82e8684bc722ded3f674cf463b7e8", null ],
+    [ "_consumerWaiting", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_ae7ab695b81b954b60f4305ae63e94a50.html#ae7ab695b81b954b60f4305ae63e94a50", null ],
+    [ "_groupState", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#abcd765579cc797b42a8595bea378b719", null ],
+    [ "_partition", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a454d24d9682d6109749d9fb1084fa287.html#a454d24d9682d6109749d9fb1084fa287", null ],
+    [ "_partitionIndex", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_ac31769dc2729485418b1b80f28cb73fa.html#ac31769dc2729485418b1b80f28cb73fa", null ],
+    [ "_producerDone", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a22a762bd826e1dba948d8dd98df07d57.html#a22a762bd826e1dba948d8dd98df07d57", null ],
+    [ "_producerWaiting", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_a31b1b120fce28c34267340f1395e5d77.html#a31b1b120fce28c34267340f1395e5d77", null ],
+    [ "_taskGroupState", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask_aeafa0a30a31657f99e9c26e653f93ae7.html#aeafa0a30a31657f99e9c26e653f93ae7", null ],
+    [ "_taskIndex", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#aaeb7e2f67bdeb15e5263a030251ef946", null ],
+    [ "s_baseWorkDelegate", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#ac473713f5e30c1aa0b2e630830dcee31", null ],
+    [ "s_runTaskSynchronouslyDelegate", "d9/d95/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningSpoolingTask.html#ad7dd04f7894e75f330f6b5c2a3a40368", null ]
+];

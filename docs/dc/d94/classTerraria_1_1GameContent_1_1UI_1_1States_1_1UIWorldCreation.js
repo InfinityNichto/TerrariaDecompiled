@@ -38,6 +38,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation =
     [ "ClickRandomizeSeed", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation_a136ca5670ef38cdcb6037e62ad1ee71a.html#a136ca5670ef38cdcb6037e62ad1ee71a", null ],
     [ "ClickSizeOption", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation_ad7b01ca4b653316973aac750f704fc52.html#ad7b01ca4b653316973aac750f704fc52", null ],
     [ "CompareTo", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "dc/d94/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIWorldCreation.html#a172ab329792a6b10d313e66ccd63f30f", null ],

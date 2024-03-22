@@ -1,0 +1,10 @@
+var classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator =
+[
+    [ "InternalPartitionEnumerator", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator_abc809101ba77f0591dbf0b2421f7b9c9.html#abc809101ba77f0591dbf0b2421f7b9c9", null ],
+    [ "Dispose", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator.html#ac8c24968c183c265922edb4d2446d517", null ],
+    [ "GrabNextChunk", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator.html#ac134d16335b5951250086196fcc875b2", null ],
+    [ "_startIndex", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator.html#a5219eb32f1b733d989e1b3ea3e55d779", null ],
+    [ "Current", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator_aaf596ae9699fec341852b3fef04e5b60.html#aaf596ae9699fec341852b3fef04e5b60", null ],
+    [ "HasNoElementsLeft", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator.html#a80c1f56a06b8b79a7a2effa45ad5afb2", null ],
+    [ "SourceCount", "d7/df9/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIList_1_1InternalPartitionEnumerator_aa92799ac7a7e224052f6750698d4e7c2.html#aa92799ac7a7e224052f6750698d4e7c2", null ]
+];

@@ -1,0 +1,25 @@
+var structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes =
+[
+    [ "_bool", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_aaf116d66cf534fb301f0d4f1f8082d1e.html#aaf116d66cf534fb301f0d4f1f8082d1e", null ],
+    [ "_bstr", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a997148b3c19a9715b32a79c686806a53.html#a997148b3c19a9715b32a79c686806a53", null ],
+    [ "_byref", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_ac41db8d0b28370dcbdff4bfc8f72cade.html#ac41db8d0b28370dcbdff4bfc8f72cade", null ],
+    [ "_cy", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_ad677993fd0c205c12b06041e3135e85b.html#ad677993fd0c205c12b06041e3135e85b", null ],
+    [ "_date", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a9dcea34a97cf545a40e2f5de40676b23.html#a9dcea34a97cf545a40e2f5de40676b23", null ],
+    [ "_dispatch", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_aee26e003e7fc06adfe0bd2d90651cdb3.html#aee26e003e7fc06adfe0bd2d90651cdb3", null ],
+    [ "_error", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a0b5242e09464dc7de3a00031148842b6.html#a0b5242e09464dc7de3a00031148842b6", null ],
+    [ "_i1", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_af35d3025e92f9124d1460a6b24b77a0f.html#af35d3025e92f9124d1460a6b24b77a0f", null ],
+    [ "_i2", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_aafd1a4b984eacdd3399afaed9ea25a04.html#aafd1a4b984eacdd3399afaed9ea25a04", null ],
+    [ "_i4", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a4bf61670e1d7b36a1de6637fd2e08b9d.html#a4bf61670e1d7b36a1de6637fd2e08b9d", null ],
+    [ "_i8", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a0077e0b278b372c073d5fd070096ccd6.html#a0077e0b278b372c073d5fd070096ccd6", null ],
+    [ "_int", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a1069b91eca2cde78d9456fc4e94cba3f.html#a1069b91eca2cde78d9456fc4e94cba3f", null ],
+    [ "_pvarVal", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_acd0debac3a990f40d96e672216237d0f.html#acd0debac3a990f40d96e672216237d0f", null ],
+    [ "_r4", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a54e777cdadd15a0dd0b242e5e0121ed6.html#a54e777cdadd15a0dd0b242e5e0121ed6", null ],
+    [ "_r8", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a9596c14cfa8e5923581c86bbf532f588.html#a9596c14cfa8e5923581c86bbf532f588", null ],
+    [ "_record", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_aabe3aace46330e4c697b1e4d2c6976d7.html#aabe3aace46330e4c697b1e4d2c6976d7", null ],
+    [ "_ui1", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a4c59d58195653c6136722e751610f2b6.html#a4c59d58195653c6136722e751610f2b6", null ],
+    [ "_ui2", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a4aeea5f7340ee79b8622fc3f59658d11.html#a4aeea5f7340ee79b8622fc3f59658d11", null ],
+    [ "_ui4", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a36f2e1e23bf9695ef661c1a06b423526.html#a36f2e1e23bf9695ef661c1a06b423526", null ],
+    [ "_ui8", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a31f505d24c99898158cd80425f856f0e.html#a31f505d24c99898158cd80425f856f0e", null ],
+    [ "_uint", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_ab9aba1ec587857478a4904e796460db9.html#ab9aba1ec587857478a4904e796460db9", null ],
+    [ "_unknown", "d1/d33/structSystem_1_1Runtime_1_1InteropServices_1_1Variant_1_1UnionTypes_a466152d090f4d0d8583c002ed491b941.html#a466152d090f4d0d8583c002ed491b941", null ]
+];

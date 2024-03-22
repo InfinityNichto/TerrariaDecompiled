@@ -1,0 +1,46 @@
+var structSystem_1_1Xml_1_1Schema_1_1XsdDuration =
+[
+    [ "DurationType", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_af53d4621dda72127ef533afaa0a6316f.html#af53d4621dda72127ef533afaa0a6316f", [
+      [ "Duration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_af53d4621dda72127ef533afaa0a6316f.html#af53d4621dda72127ef533afaa0a6316fae02d2ae03de9d493df2b6b2d2813d302", null ],
+      [ "YearMonthDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_af53d4621dda72127ef533afaa0a6316f.html#af53d4621dda72127ef533afaa0a6316faf82761023a690d5b4ea8e00d8a1f63f6", null ],
+      [ "DayTimeDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_af53d4621dda72127ef533afaa0a6316f.html#af53d4621dda72127ef533afaa0a6316fa23fc320c36ae4bdafb2b37c54194d2b4", null ]
+    ] ],
+    [ "Parts", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399", [
+      [ "HasNone", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399a8b990572aff921ecb1643a1a535db30c", null ],
+      [ "HasYears", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399a6d999af5dec54601d5d50149f99e542e", null ],
+      [ "HasMonths", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399a87a8c98a1a290bf7f6bbb6d95495cd49", null ],
+      [ "HasDays", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399ab3ec17c201f2d4f8be5c34d3184a016f", null ],
+      [ "HasHours", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399ad3117a9bbca16d23f323391d15e2e70e", null ],
+      [ "HasMinutes", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399a0808fd48c8b351e995c99c9f53f00eed", null ],
+      [ "HasSeconds", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7fbd59545fe98d427da89969dc20e399.html#a7fbd59545fe98d427da89969dc20e399a2b4b03de956cb357cb9cc57195da01e8", null ]
+    ] ],
+    [ "XsdDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_aa9b0b7b457accc9b19db0166a3428665.html#aa9b0b7b457accc9b19db0166a3428665", null ],
+    [ "XsdDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_accb86f3e5df53b117c8972b8e57fca1b.html#accb86f3e5df53b117c8972b8e57fca1b", null ],
+    [ "XsdDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a35090808283d41ecf2d342a7e687dc7b.html#a35090808283d41ecf2d342a7e687dc7b", null ],
+    [ "XsdDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ae7ef5b8f659236140824d75d33d50141.html#ae7ef5b8f659236140824d75d33d50141", null ],
+    [ "XsdDuration", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a9100a5aa566898a497b8f540f2d0ba86.html#a9100a5aa566898a497b8f540f2d0ba86", null ],
+    [ "ToString", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_abe66c869d79670459ab1bde5846f2f22.html#abe66c869d79670459ab1bde5846f2f22", null ],
+    [ "ToString", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a30a70cee4d0bd0a0d4307dc653b5b6f8.html#a30a70cee4d0bd0a0d4307dc653b5b6f8", null ],
+    [ "ToTimeSpan", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a0577e989636e8aef10df397699db5621.html#a0577e989636e8aef10df397699db5621", null ],
+    [ "ToTimeSpan", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7f9990d0cc84a473925c91743236c536.html#a7f9990d0cc84a473925c91743236c536", null ],
+    [ "TryParse", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_aed2c57615ca6eb1a928f94e95e7dc8eb.html#aed2c57615ca6eb1a928f94e95e7dc8eb", null ],
+    [ "TryParse", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a00c36ff5885826e774f2aed823842ab6.html#a00c36ff5885826e774f2aed823842ab6", null ],
+    [ "TryParseDigits", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ad3b451a67d7f120b737f90da11522214.html#ad3b451a67d7f120b737f90da11522214", null ],
+    [ "TryToTimeSpan", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a8ea2d5c622b6834edda9dbe7a2736e9f.html#a8ea2d5c622b6834edda9dbe7a2736e9f", null ],
+    [ "TryToTimeSpan", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a681c9b8f450cb338a77ddb28b42da509.html#a681c9b8f450cb338a77ddb28b42da509", null ],
+    [ "_days", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ac9f5aa20120feac5cbc47bb517064b3d.html#ac9f5aa20120feac5cbc47bb517064b3d", null ],
+    [ "_hours", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a24acfc0c6fab3f0c53a4245af275da86.html#a24acfc0c6fab3f0c53a4245af275da86", null ],
+    [ "_minutes", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_af452a94bdc085246ff0f6c6c99f795cb.html#af452a94bdc085246ff0f6c6c99f795cb", null ],
+    [ "_months", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_aab8d320aa848482df5cf628a5ff90439.html#aab8d320aa848482df5cf628a5ff90439", null ],
+    [ "_nanoseconds", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ac28d3955452ab637b2598e2fc1c9ad1a.html#ac28d3955452ab637b2598e2fc1c9ad1a", null ],
+    [ "_seconds", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ae98c26471216e737885f1d40ee4e6044.html#ae98c26471216e737885f1d40ee4e6044", null ],
+    [ "_years", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a1ff61816d97e142f97a411742fa16242.html#a1ff61816d97e142f97a411742fa16242", null ],
+    [ "Days", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a90c3ce4cfe1201a74a5907ee122a3099.html#a90c3ce4cfe1201a74a5907ee122a3099", null ],
+    [ "Hours", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a5e183f66564b7d816d23ff746c49fdd3.html#a5e183f66564b7d816d23ff746c49fdd3", null ],
+    [ "IsNegative", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_ae44e3b5fbf5e5f2fc70fd8eca210038d.html#ae44e3b5fbf5e5f2fc70fd8eca210038d", null ],
+    [ "Minutes", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a7d5990d6e9bd881db043a13c10de01e7.html#a7d5990d6e9bd881db043a13c10de01e7", null ],
+    [ "Months", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_abc4fd635ed33cc5ce25e2e5e0d412291.html#abc4fd635ed33cc5ce25e2e5e0d412291", null ],
+    [ "Nanoseconds", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_aa63ee10d1984c53ad34598f612fb00f4.html#aa63ee10d1984c53ad34598f612fb00f4", null ],
+    [ "Seconds", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_aa9180827825e1c6325f53435dbd36ff6.html#aa9180827825e1c6325f53435dbd36ff6", null ],
+    [ "Years", "d2/da8/structSystem_1_1Xml_1_1Schema_1_1XsdDuration_a39d5953a24f4eb3b5c55235ac388c758.html#a39d5953a24f4eb3b5c55235ac388c758", null ]
+];

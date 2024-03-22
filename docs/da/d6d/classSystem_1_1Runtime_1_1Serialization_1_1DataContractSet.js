@@ -1,0 +1,25 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet =
+[
+    [ "DataContractSet", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a62516470c720e8c81944ba06b9007535.html#a62516470c720e8c81944ba06b9007535", null ],
+    [ "Add", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_abbe5037e2d3f913511960f6ff0e50634.html#abbe5037e2d3f913511960f6ff0e50634", null ],
+    [ "Add", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_aebf5115c4d615444300d5d2110cbd722.html#aebf5115c4d615444300d5d2110cbd722", null ],
+    [ "Add", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a17f78bd95facfc624cf657331ff0cb05.html#a17f78bd95facfc624cf657331ff0cb05", null ],
+    [ "AddClassDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_af3b3ddd108dafa44cf2871226b450f61.html#af3b3ddd108dafa44cf2871226b450f61", null ],
+    [ "AddCollectionDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_abb5e844cab3d7ffcc7b510a9e8d7723d.html#abb5e844cab3d7ffcc7b510a9e8d7723d", null ],
+    [ "AddKnownDataContracts", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_ab24237d8014d6440ffd42d8f16db9c82.html#ab24237d8014d6440ffd42d8f16db9c82", null ],
+    [ "AddXmlDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a6587f88fee89b6e9d1f27db1fd445870.html#a6587f88fee89b6e9d1f27db1fd445870", null ],
+    [ "EnsureTypeNotGeneric", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_aed0f0c514d391df416b5741b36bf44eb.html#aed0f0c514d391df416b5741b36bf44eb", null ],
+    [ "GetDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a030fb139929940617e0e42ba9bf9963a.html#a030fb139929940617e0e42ba9bf9963a", null ],
+    [ "GetEnumerator", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a4cd9f80180416c54b7f56e99ebaaf0cf.html#a4cd9f80180416c54b7f56e99ebaaf0cf", null ],
+    [ "GetItemTypeDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_abcc06dff2dc86a1ce1ebe1eef296f323.html#abcc06dff2dc86a1ce1ebe1eef296f323", null ],
+    [ "GetMemberTypeDataContract", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a72f7f885360c615826b76885032e9ab6.html#a72f7f885360c615826b76885032e9ab6", null ],
+    [ "InternalAdd", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_abc6a90f721ef86c147c941967c7e23af.html#abc6a90f721ef86c147c941967c7e23af", null ],
+    [ "IsContractProcessed", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_ac8ebcd28e420f7656c4c9571d4922227.html#ac8ebcd28e420f7656c4c9571d4922227", null ],
+    [ "SetContractProcessed", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a19c484321488ef8c1b2fe74c98721589.html#a19c484321488ef8c1b2fe74c98721589", null ],
+    [ "_contracts", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a5697b172bf9dd43c32ce085132e69341.html#a5697b172bf9dd43c32ce085132e69341", null ],
+    [ "_processedContracts", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_ac3e298d77c1f5cc3ca1a35bb87505513.html#ac3e298d77c1f5cc3ca1a35bb87505513", null ],
+    [ "_referencedCollectionTypes", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a311cd92e242d99b54d6dbbc726c1f113.html#a311cd92e242d99b54d6dbbc726c1f113", null ],
+    [ "_referencedTypes", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_a3bf015c467bf0f2d400fb0752740b838.html#a3bf015c467bf0f2d400fb0752740b838", null ],
+    [ "Contracts", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_af4ff62bf24921616b9ca4fd9284eb7f8.html#af4ff62bf24921616b9ca4fd9284eb7f8", null ],
+    [ "ProcessedContracts", "da/d6d/classSystem_1_1Runtime_1_1Serialization_1_1DataContractSet_ac0896a0099aaf9e0d1aefa054718897c.html#ac0896a0099aaf9e0d1aefa054718897c", null ]
+];

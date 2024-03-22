@@ -1,0 +1,7 @@
+var System_8Threading_8Channels_2System_8Collections_8Concurrent_2SingleProducerSingleConsumerQueue_8cs =
+[
+    [ "System.Collections.Concurrent.SingleProducerSingleConsumerQueue< T >", "df/d54/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue.html", "df/d54/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue" ],
+    [ "System.Collections.Concurrent.SingleProducerSingleConsumerQueue< T >.Segment", "d9/d3b/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1Segment.html", "d9/d3b/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1Segment" ],
+    [ "System.Collections.Concurrent.SingleProducerSingleConsumerQueue< T >.SegmentState", "d7/d24/structSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SegmentState.html", "d7/d24/structSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SegmentState" ],
+    [ "System.Collections.Concurrent.SingleProducerSingleConsumerQueue< T >.SingleProducerSingleConsumerQueue_DebugView", "d0/d38/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView.html", "d0/d38/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView" ]
+];

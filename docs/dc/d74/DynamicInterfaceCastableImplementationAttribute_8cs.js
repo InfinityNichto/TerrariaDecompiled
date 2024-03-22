@@ -1,0 +1,4 @@
+var DynamicInterfaceCastableImplementationAttribute_8cs =
+[
+    [ "System.Runtime.InteropServices.DynamicInterfaceCastableImplementationAttribute", "d4/d3b/classSystem_1_1Runtime_1_1InteropServices_1_1DynamicInterfaceCastableImplementationAttribute.html", "d4/d3b/classSystem_1_1Runtime_1_1InteropServices_1_1DynamicInterfaceCastableImplementationAttribute" ]
+];

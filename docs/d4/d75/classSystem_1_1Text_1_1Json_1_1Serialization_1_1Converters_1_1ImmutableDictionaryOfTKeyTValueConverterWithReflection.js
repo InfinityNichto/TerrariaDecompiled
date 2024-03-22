@@ -1,0 +1,10 @@
+var classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection =
+[
+    [ "ImmutableDictionaryOfTKeyTValueConverterWithReflection", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection_aae14b5184dd89369b8f2fe7f1967efc4.html#aae14b5184dd89369b8f2fe7f1967efc4", null ],
+    [ "Add", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection.html#affc488288f4291807f7eccd6b017b4de", null ],
+    [ "ConvertCollection", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection.html#a34bd84f5e7bac0e8e483bf1b760fd598", null ],
+    [ "CreateCollection", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection.html#a5d5aaef5a87c67e04636b4efb2dc4e7b", null ],
+    [ "Initialize", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection_a665980683a6b1b1f7560982ace983a7e.html#a665980683a6b1b1f7560982ace983a7e", null ],
+    [ "CanHaveIdMetadata", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection.html#a88676b86901c68097a343467f5fce355", null ],
+    [ "RequiresDynamicMemberAccessors", "d4/d75/classSystem_1_1Text_1_1Json_1_1Serialization_1_1Converters_1_1ImmutableDictionaryOfTKeyTValueConverterWithReflection_a3c8ef8c4420e1ca08c4e75c5910d3c8b.html#a3c8ef8c4420e1ca08c4e75c5910d3c8b", null ]
+];

@@ -1,0 +1,26 @@
+var classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults =
+[
+    [ "ChildResultsRecipient", "dd/dba/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_1_1ChildResultsRecipient.html", "dd/dba/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_1_1ChildResultsRecipient" ],
+    [ "SortQueryOperatorResults", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_aed2267fccf4698a47e315fa76d2de586.html#aed2267fccf4698a47e315fa76d2de586", null ],
+    [ "Add", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#ac05dcd48875f10fa73c84221e684d8d4", null ],
+    [ "Clear", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a42bd336a640966268a1f0846bc9fe4dd", null ],
+    [ "Contains", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a8474d2537604ce9172d8b05ba1a65791", null ],
+    [ "CopyTo", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a387b6119402c38a9a51a61e0672eccf4", null ],
+    [ "GetElement", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a6e6c77fcb210e3eec9be727df0dc56aa", null ],
+    [ "GetEnumerator", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a52070bebd81aed14938568dc4262947e", null ],
+    [ "GetEnumerator", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a5a0bf3c8b0a7abcda86e37faf31fd31c", null ],
+    [ "GivePartitionedStream", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a21178a97a859efe55c9f841c955667df", null ],
+    [ "GivePartitionedStream", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_ab154f94665daec8151d5b67766a68edc.html#ab154f94665daec8151d5b67766a68edc", null ],
+    [ "IndexOf", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a45eb759b31f6a438d981d54618b3c67e", null ],
+    [ "Insert", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a13ca8108f357810bfa894d2135728afb", null ],
+    [ "Remove", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#ad606833bc70af6471807d6db683581f3", null ],
+    [ "RemoveAt", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a3f9e281e5f0819391fe994fe0db004a0", null ],
+    [ "_childQueryResults", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_a504d911ebeec3ccea231e81bc60a26f8.html#a504d911ebeec3ccea231e81bc60a26f8", null ],
+    [ "_op", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_ac29844a8bb31e0842c8498064a611348.html#ac29844a8bb31e0842c8498064a611348", null ],
+    [ "_settings", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_ac5cfa01397941cb2d23dc61ebcfad3b4.html#ac5cfa01397941cb2d23dc61ebcfad3b4", null ],
+    [ "Count", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#af302cba784309dbd2ffa2bcdb3cd4810", null ],
+    [ "ElementsCount", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#ad927d42635cfd0ea2c7c9cb8cb93e962", null ],
+    [ "IsIndexible", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults_aaad7c850f693c7d3db157241703ad62b.html#aaad7c850f693c7d3db157241703ad62b", null ],
+    [ "IsReadOnly", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#a6aefc56e0c52c224a7e5de7232b87eeb", null ],
+    [ "this[int index]", "d9/dd5/classSystem_1_1Linq_1_1Parallel_1_1SortQueryOperatorResults.html#ab318f246338885505da3fffe516e3931", null ]
+];

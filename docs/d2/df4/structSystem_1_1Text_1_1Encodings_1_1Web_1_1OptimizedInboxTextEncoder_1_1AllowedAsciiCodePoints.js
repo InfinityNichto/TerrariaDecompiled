@@ -1,0 +1,7 @@
+var structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AllowedAsciiCodePoints =
+[
+    [ "IsAllowedAsciiCodePoint", "d2/df4/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AllowedAsciiCodePoints_a24f9deecd3bcb7b06ebc6a8099eeee43.html#a24f9deecd3bcb7b06ebc6a8099eeee43", null ],
+    [ "PopulateAllowedCodePoints", "d2/df4/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AllowedAsciiCodePoints_a03bd283be72fec060a6aa223840b5cdb.html#a03bd283be72fec060a6aa223840b5cdb", null ],
+    [ "AsBytes", "d2/df4/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AllowedAsciiCodePoints_a8e751633e884c191cf9400d775ab57ac.html#a8e751633e884c191cf9400d775ab57ac", null ],
+    [ "AsVector", "d2/df4/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AllowedAsciiCodePoints_a84624f10d17626b30e521be4992e82e1.html#a84624f10d17626b30e521be4992e82e1", null ]
+];

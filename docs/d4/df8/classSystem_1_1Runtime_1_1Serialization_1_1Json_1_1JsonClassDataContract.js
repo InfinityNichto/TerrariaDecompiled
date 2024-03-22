@@ -1,0 +1,26 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract =
+[
+    [ "JsonClassDataContractCriticalHelper", "d4/db6/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_1_1JsonClassDataContractCriticalHelper.html", "d4/db6/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_1_1JsonClassDataContractCriticalHelper" ],
+    [ "JsonClassDataContract", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a47c8ff386ec7080c4fc7ffbeb704ee81.html#a47c8ff386ec7080c4fc7ffbeb704ee81", null ],
+    [ "GetGeneratedReadWriteDelegates", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a2ae36ef5c5508dcbd673eab76da5f8ec", null ],
+    [ "GetJsonDataContract", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#af860ba76055eaaec537bf4760a03396a", null ],
+    [ "GetReadWriteDelegatesFromGeneratedAssembly", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a6f6e557edb2db4ef8990aaba930d2713", null ],
+    [ "HandleReadValue", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a9c19b19072ccd290a7a43a7ec5a57de7", null ],
+    [ "PopKnownDataContracts", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a2a86b7c84694b9e96cc71c239ee35b86", null ],
+    [ "PushKnownDataContracts", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#abbb2b2914b1aaabd955b2ec7943be422", null ],
+    [ "ReadJsonValue", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a4cd19467bdd4c457602f8bcdab7cfe54", null ],
+    [ "ReadJsonValueCore", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_aad6463c18f0612efae8c36a15095a104.html#aad6463c18f0612efae8c36a15095a104", null ],
+    [ "TryGetReadWriteDelegatesFromGeneratedAssembly", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a53bfea7c3a1233cd19bbd65c913a2a3c", null ],
+    [ "TryReadNullAtTopLevel", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a9942934ac5975780780c132c74a38258", null ],
+    [ "WriteJsonValue", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a4153ec4c33bd702915cf41ba1e9d2e58", null ],
+    [ "WriteJsonValueCore", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a7829b0782d0d979efd095d820a119129.html#a7829b0782d0d979efd095d820a119129", null ],
+    [ "_helper", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a0da1998016c854e2dc1c421e740b86ad.html#a0da1998016c854e2dc1c421e740b86ad", null ],
+    [ "Helper", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#abfb2407483804d10e5e85fc9efcdd263", null ],
+    [ "JsonFormatReaderDelegate", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a8c99f2d7167ed568404f3f719203fbe3.html#a8c99f2d7167ed568404f3f719203fbe3", null ],
+    [ "JsonFormatWriterDelegate", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a9c79d083c67ba47ebcb359325847870c.html#a9c79d083c67ba47ebcb359325847870c", null ],
+    [ "KnownDataContracts", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#ac5de23f9fce4d64c0e4f39410da69393", null ],
+    [ "MemberNames", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_ac2ddac7fb587cc388dde73e6de522fcc.html#ac2ddac7fb587cc388dde73e6de522fcc", null ],
+    [ "TraditionalClassDataContract", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a584816fab228a1c079e07a3db894cbd2.html#a584816fab228a1c079e07a3db894cbd2", null ],
+    [ "TraditionalDataContract", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract.html#a2c769a048359004ea6fd4bda2d3e04e6", null ],
+    [ "TypeName", "d4/df8/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonClassDataContract_a6dd1b9615bcd21c7b352d9a10a0c3083.html#a6dd1b9615bcd21c7b352d9a10a0c3083", null ]
+];

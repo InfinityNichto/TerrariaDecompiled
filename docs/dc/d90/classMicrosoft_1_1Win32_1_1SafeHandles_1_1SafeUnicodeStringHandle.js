@@ -1,0 +1,25 @@
+var classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle =
+[
+    [ "SafeUnicodeStringHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_a4c72ace58fef744e3815ccbd826c35e9.html#a4c72ace58fef744e3815ccbd826c35e9", null ],
+    [ "SafeUnicodeStringHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_a2b8ac4b88913fe4ae4a32165ef7e60e0.html#a2b8ac4b88913fe4ae4a32165ef7e60e0", null ],
+    [ "SafeUnicodeStringHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_a4c72ace58fef744e3815ccbd826c35e9.html#a4c72ace58fef744e3815ccbd826c35e9", null ],
+    [ "SafeUnicodeStringHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_a2b8ac4b88913fe4ae4a32165ef7e60e0.html#a2b8ac4b88913fe4ae4a32165ef7e60e0", null ],
+    [ "Close", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#aa5d1a98a1419a7bfeaf7373b86996046", null ],
+    [ "DangerousAddRef", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a016e15831e479135e9927eed4afc4d6d", null ],
+    [ "DangerousGetHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a424cc281bd8123fdfb254fb943233b9f", null ],
+    [ "DangerousRelease", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a0b33a39fe618278a5098954f5689f7c1", null ],
+    [ "Dispose", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#aa6f4faab748ef89385be080c9333476a", null ],
+    [ "Dispose", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a344d136a775824ae067d8bee9b303060", null ],
+    [ "InternalRelease", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#aa85089f98aeaef674d178780f24b7f5e", null ],
+    [ "ReleaseHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_aa52df257e654b3a5c8d6448d1ff1f977.html#aa52df257e654b3a5c8d6448d1ff1f977", null ],
+    [ "ReleaseHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_aa52df257e654b3a5c8d6448d1ff1f977.html#aa52df257e654b3a5c8d6448d1ff1f977", null ],
+    [ "SetHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a3fb15f153dbeb6d1885b4918eefdd25a", null ],
+    [ "SetHandleAsInvalid", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a52aa845d880e936a4f3d725864ef9d4a", null ],
+    [ "_fullyInitialized", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a19664aa0b411365b153e47ca7cd2edc9", null ],
+    [ "_ownsHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#aece96629eca5c98ec8b4ec443eec813e", null ],
+    [ "_state", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#ab3a69aaa593e0a8456d3076ff13c22e5", null ],
+    [ "handle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a7998659110bb0dab360363c425b828f7", null ],
+    [ "IsClosed", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a993302e5d4328d7205ccd5e511abb5b5", null ],
+    [ "IsInvalid", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle_af4af6a8f1ae7b310f276ecfb77c2594e.html#af4af6a8f1ae7b310f276ecfb77c2594e", null ],
+    [ "OwnsHandle", "dc/d90/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafeUnicodeStringHandle.html#a54e920aaac84119d574a001bfcaf60f1", null ]
+];

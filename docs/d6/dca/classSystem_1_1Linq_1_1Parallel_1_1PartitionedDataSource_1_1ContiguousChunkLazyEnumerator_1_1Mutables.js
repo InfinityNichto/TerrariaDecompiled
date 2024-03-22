@@ -1,0 +1,10 @@
+var classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables =
+[
+    [ "Mutables", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_aa934119be7227a38d35b4f2e6bf5f61b.html#aa934119be7227a38d35b4f2e6bf5f61b", null ],
+    [ "_chunkBaseIndex", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a3eccb4c81cbb74de11c0e1491bf2b730.html#a3eccb4c81cbb74de11c0e1491bf2b730", null ],
+    [ "_chunkBuffer", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a09dc1d593513c63848bc62061b27f240.html#a09dc1d593513c63848bc62061b27f240", null ],
+    [ "_chunkCounter", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a216e0a6de4e80e8d4842732cc7f1608b.html#a216e0a6de4e80e8d4842732cc7f1608b", null ],
+    [ "_currentChunkIndex", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a06c1749fd50b6f41551567bc5f492730.html#a06c1749fd50b6f41551567bc5f492730", null ],
+    [ "_currentChunkSize", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a8ce072ee8cb60870e21737b4fcdbc732.html#a8ce072ee8cb60870e21737b4fcdbc732", null ],
+    [ "_nextChunkMaxSize", "d6/dca/classSystem_1_1Linq_1_1Parallel_1_1PartitionedDataSource_1_1ContiguousChunkLazyEnumerator_1_1Mutables_a3b7ecc8e00d036b84c1d627e51bd3fbc.html#a3b7ecc8e00d036b84c1d627e51bd3fbc", null ]
+];

@@ -1,0 +1,6 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1JoinBlockTarget_1_1NonGreedyState =
+[
+    [ "ConsumedMessage", "da/d87/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1JoinBlockTarget_1_1NonGreedyState_a8d28c5eae30306b1956db1541e21d92c.html#a8d28c5eae30306b1956db1541e21d92c", null ],
+    [ "PostponedMessages", "da/d87/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1JoinBlockTarget_1_1NonGreedyState_a36c321b2bd049b3adcedc8bfd0cd58ba.html#a36c321b2bd049b3adcedc8bfd0cd58ba", null ],
+    [ "ReservedMessage", "da/d87/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1JoinBlockTarget_1_1NonGreedyState_a4684ab657f9fc0e7153ce1a950c66f5d.html#a4684ab657f9fc0e7153ce1a950c66f5d", null ]
+];

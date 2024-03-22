@@ -1,0 +1,28 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper =
+[
+    [ "JsonCollectionDataContractCriticalHelper", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a4a51bfc208c48370c5f012a5385a436e.html#a4a51bfc208c48370c5f012a5385a436e", null ],
+    [ "AddCollectionItemContractsToKnownDataContracts", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#ad48c30a5615e77c47e7f6b3f9757e84d", null ],
+    [ "CreateJsonDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a10ffdc3710c40ee7728c8981c6d174f2", null ],
+    [ "GetId", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#abcc2a4e8245ccde068c4a4eefcaabe3c", null ],
+    [ "GetJsonDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a24c7a1493313b58f1681d90152189807", null ],
+    [ "_jsonFormatGetOnlyReaderDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_aa321726bf41277baff83b16605cfa4b3.html#aa321726bf41277baff83b16605cfa4b3", null ],
+    [ "_jsonFormatReaderDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a25832649c17481bc3dd0aff9980d6c41.html#a25832649c17481bc3dd0aff9980d6c41", null ],
+    [ "_jsonFormatWriterDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a84a475e0cf6c6961e8225e9f18d60c9d.html#a84a475e0cf6c6961e8225e9f18d60c9d", null ],
+    [ "_knownDataContracts", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a818b9b0f00bcab32135219a448890f2b", null ],
+    [ "_traditionalCollectionDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a7f5e9e2e6682f070ae3e06b211e8c1bc.html#a7f5e9e2e6682f070ae3e06b211e8c1bc", null ],
+    [ "_traditionalDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#aca6864c6ee3e9d86ac6bda92c1516c66", null ],
+    [ "_typeName", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#af9b2271d5e5e1dfda00cdff31eeeb08c", null ],
+    [ "s_cacheLock", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a057fe902cf7a24a7b66a736f0e5e435d", null ],
+    [ "s_createDataContractLock", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a937c726156369f5f71da57dfc4e2b9e5", null ],
+    [ "s_dataContractCache", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#ae4fecb79144ab67f77917790c0387890", null ],
+    [ "s_dataContractID", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#aabc2e510886afc405497d54f3cab3738", null ],
+    [ "s_typeHandleRef", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#ae93d4c49fe2c50ff98e30ba005f386a3", null ],
+    [ "s_typeToIDCache", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#ac6c4a739888ab41b43c3c5817e171964", null ],
+    [ "JsonFormatGetOnlyReaderDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a58bf1dfc1e398a0444d92c029b27e659.html#a58bf1dfc1e398a0444d92c029b27e659", null ],
+    [ "JsonFormatReaderDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a6fe1175f638d6cdcb5f6fd620c75e99b.html#a6fe1175f638d6cdcb5f6fd620c75e99b", null ],
+    [ "JsonFormatWriterDelegate", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a10ba9f63d8808dd49dced9e888a2ca82.html#a10ba9f63d8808dd49dced9e888a2ca82", null ],
+    [ "KnownDataContracts", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a282d3120d42039e7056b2f1995048d7e", null ],
+    [ "TraditionalCollectionDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper_a10db49f0edd390e5e39a4607829637f5.html#a10db49f0edd390e5e39a4607829637f5", null ],
+    [ "TraditionalDataContract", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#ac70835361480815001f238bc3a5602ad", null ],
+    [ "TypeName", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html#a38447e2357f47c0644c852fc95fb0f60", null ]
+];

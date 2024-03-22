@@ -1,0 +1,36 @@
+var classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers =
+[
+    [ "ArrayElement", "d3/dc4/structSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_1_1ArrayElement.html", "d3/dc4/structSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_1_1ArrayElement" ],
+    [ "CastCacheEntry", "d7/df0/structSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_1_1CastCacheEntry.html", "d7/df0/structSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_1_1CastCacheEntry" ],
+    [ "CastResult", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a1cc28f3e51584be8b8bc686dcf03b99c.html#a1cc28f3e51584be8b8bc686dcf03b99c", [
+      [ "CannotCast", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a1cc28f3e51584be8b8bc686dcf03b99c.html#a1cc28f3e51584be8b8bc686dcf03b99ca9199d7481e29eeae2f10ecf39425be39", null ],
+      [ "CanCast", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a1cc28f3e51584be8b8bc686dcf03b99c.html#a1cc28f3e51584be8b8bc686dcf03b99ca6377a4bf131064b437d67c4f22d0e5b5", null ],
+      [ "MaybeCast", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a1cc28f3e51584be8b8bc686dcf03b99c.html#a1cc28f3e51584be8b8bc686dcf03b99caabab454b249b92edf5024a69b1b0eec1", null ]
+    ] ],
+    [ "ChkCast_Helper", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_aa8b8ef6e38c2e3c776600f73f5e3bc2c.html#aa8b8ef6e38c2e3c776600f73f5e3bc2c", null ],
+    [ "ChkCastAny", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_aae6391da2ff7f5e7fb200cdbd0aeca57.html#aae6391da2ff7f5e7fb200cdbd0aeca57", null ],
+    [ "ChkCastAny_NoCacheLookup", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a1da1e56f520dd27d9b892ef13c9dbcc6.html#a1da1e56f520dd27d9b892ef13c9dbcc6", null ],
+    [ "ChkCastClass", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a69d80c35068b55a392078ea75d59997a.html#a69d80c35068b55a392078ea75d59997a", null ],
+    [ "ChkCastClassSpecial", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a6930e26e4a5cbb3a65a7cfb0e60f16ce.html#a6930e26e4a5cbb3a65a7cfb0e60f16ce", null ],
+    [ "ChkCastInterface", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_aba3fe9a70292e92b0fae5c7e65048c37.html#aba3fe9a70292e92b0fae5c7e65048c37", null ],
+    [ "Element", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ae0c4cda306d3860a6b5180fc393dc936.html#ae0c4cda306d3860a6b5180fc393dc936", null ],
+    [ "HashShift", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_adb792928977ef450286ba6d3743c80c0.html#adb792928977ef450286ba6d3743c80c0", null ],
+    [ "IsInstance_Helper", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a34c490f0ed488714ffcb8791f16982b4.html#a34c490f0ed488714ffcb8791f16982b4", null ],
+    [ "IsInstanceOfAny", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a6d99b5a90a99732f56f164fd3ded59e6.html#a6d99b5a90a99732f56f164fd3ded59e6", null ],
+    [ "IsInstanceOfAny_NoCacheLookup", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a0043317a213720b79afa6cbf462f0116.html#a0043317a213720b79afa6cbf462f0116", null ],
+    [ "IsInstanceOfClass", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a77ff5b0c9157e53f18dd6a6e5b409cf6.html#a77ff5b0c9157e53f18dd6a6e5b409cf6", null ],
+    [ "IsInstanceOfInterface", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a30b0fb57f071915a446dc44fd6a479d2.html#a30b0fb57f071915a446dc44fd6a479d2", null ],
+    [ "KeyToBucket", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ae317c515102310d9ee69296d405fa2cb.html#ae317c515102310d9ee69296d405fa2cb", null ],
+    [ "LdelemaRef", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a5f7b653a18156d35a9f1950038e8a89a.html#a5f7b653a18156d35a9f1950038e8a89a", null ],
+    [ "StelemRef", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ace0e7f3a06e6de3992f5f8d61a2cf4c4.html#ace0e7f3a06e6de3992f5f8d61a2cf4c4", null ],
+    [ "StelemRef_Helper", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a0dd8b30aa42829ef2b3627760672a354.html#a0dd8b30aa42829ef2b3627760672a354", null ],
+    [ "StelemRef_Helper_NoCacheLookup", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ae2f28232704b72139ea48e92e4cbd034.html#ae2f28232704b72139ea48e92e4cbd034", null ],
+    [ "TableData", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a006040b88cfe8f678d8243536577a1ba.html#a006040b88cfe8f678d8243536577a1ba", null ],
+    [ "TableMask", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_aecbd33f679f7a78e039244b71fa297a9.html#aecbd33f679f7a78e039244b71fa297a9", null ],
+    [ "ThrowArrayMismatchException", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a2674dc1e2b9ba7f023d9bbcf7f00ffba.html#a2674dc1e2b9ba7f023d9bbcf7f00ffba", null ],
+    [ "TryGet", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a921fe096f87792e07bae1fa86670efe6.html#a921fe096f87792e07bae1fa86670efe6", null ],
+    [ "Unbox", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_a75222e6ec3a6a3056cf36808e8be88f1.html#a75222e6ec3a6a3056cf36808e8be88f1", null ],
+    [ "Unbox_Helper", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ab6ac6b48a2b0e7489c53e3d092ecd9a9.html#ab6ac6b48a2b0e7489c53e3d092ecd9a9", null ],
+    [ "WriteBarrier", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_ac805b5d235c7ca0a329c791c8a056ad9.html#ac805b5d235c7ca0a329c791c8a056ad9", null ],
+    [ "s_table", "db/db8/classSystem_1_1Runtime_1_1CompilerServices_1_1CastHelpers_aeb55ed25138c66255b2705a32b5cbc0d.html#aeb55ed25138c66255b2705a32b5cbc0d", null ]
+];

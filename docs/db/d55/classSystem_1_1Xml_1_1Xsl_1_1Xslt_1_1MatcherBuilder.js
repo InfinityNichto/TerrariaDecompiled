@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder =
+[
+    [ "MatcherBuilder", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a1d9eda2490a2ce1c1ba2d7e311059351.html#a1d9eda2490a2ce1c1ba2d7e311059351", null ],
+    [ "AddPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a95d188ea7e48bf08157916500109b700.html#a95d188ea7e48bf08157916500109b700", null ],
+    [ "BuildMatcher", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a06172eceaa0af6c8ee545f0e54dbd0fe.html#a06172eceaa0af6c8ee545f0e54dbd0fe", null ],
+    [ "Clear", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a77b96b310e7ee8b968c52bcf9d76be8e.html#a77b96b310e7ee8b968c52bcf9d76be8e", null ],
+    [ "CollectPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_ad2cee66147d9f88b9843a7ed9d95760b.html#ad2cee66147d9f88b9843a7ed9d95760b", null ],
+    [ "CollectPatternsInternal", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_ae610c8d8e54f934f0db6c59e81d4a470.html#ae610c8d8e54f934f0db6c59e81d4a470", null ],
+    [ "IsNoMatch", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a1d7888fe5671a7c9a75c063bc184a445.html#a1d7888fe5671a7c9a75c063bc184a445", null ],
+    [ "MatchPattern", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a72a92be5dec331e9216cd39d8f9359c4.html#a72a92be5dec331e9216cd39d8f9359c4", null ],
+    [ "MatchPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_abc8e8ef032df23847174b4092269a696.html#abc8e8ef032df23847174b4092269a696", null ],
+    [ "MatchPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a33592d7e9893e043c0583b55c4fa1e61.html#a33592d7e9893e043c0583b55c4fa1e61", null ],
+    [ "MatchPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a3f41d317ee1ef9076d991e698904ae9f.html#a3f41d317ee1ef9076d991e698904ae9f", null ],
+    [ "MatchPatternsWhosePriorityGreater", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_afbeb3aaaa6a3f0962338e69e851c49c3.html#afbeb3aaaa6a3f0962338e69e851c49c3", null ],
+    [ "_allMatches", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a77b379206b98fbcb27da1e133d56b3bb.html#a77b379206b98fbcb27da1e133d56b3bb", null ],
+    [ "_attributePatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a5c29c44032e0b07869286d7cb3bedc71.html#a5c29c44032e0b07869286d7cb3bedc71", null ],
+    [ "_commentPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_af8177cac4adc6818b8c756cca484ccf4.html#af8177cac4adc6818b8c756cca484ccf4", null ],
+    [ "_documentPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a3bd89f3a39c00b56e0f15c7b39968bcb.html#a3bd89f3a39c00b56e0f15c7b39968bcb", null ],
+    [ "_elementPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_aac1cbc2507b58b51bd8168b5664f04e9.html#aac1cbc2507b58b51bd8168b5664f04e9", null ],
+    [ "_f", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a8dafb5afa637e058911d02ee6784f9e3.html#a8dafb5afa637e058911d02ee6784f9e3", null ],
+    [ "_heterogenousPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a9d5d9a26ecebb61dda69f3bdd8f60fd5.html#a9d5d9a26ecebb61dda69f3bdd8f60fd5", null ],
+    [ "_invkGen", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_afb25ca360ed44928c6dd42bfa4434726.html#afb25ca360ed44928c6dd42bfa4434726", null ],
+    [ "_piPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a83643bf06100e406c2019331b1ea8188.html#a83643bf06100e406c2019331b1ea8188", null ],
+    [ "_priority", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a5961ade5c06897b51a2e82ca4371e258.html#a5961ade5c06897b51a2e82ca4371e258", null ],
+    [ "_refReplacer", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_a84e9b6c2e61268ec3502b0065f1ec4ef.html#a84e9b6c2e61268ec3502b0065f1ec4ef", null ],
+    [ "_textPatterns", "db/d55/classSystem_1_1Xml_1_1Xsl_1_1Xslt_1_1MatcherBuilder_aa5f6de9e5ced8b868bc022af8ae375f1.html#aa5f6de9e5ced8b868bc022af8ae375f1", null ]
+];

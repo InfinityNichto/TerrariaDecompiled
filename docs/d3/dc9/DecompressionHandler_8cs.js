@@ -1,0 +1,10 @@
+var DecompressionHandler_8cs =
+[
+    [ "System.Net.Http.DecompressionHandler", "d6/d3f/classSystem_1_1Net_1_1Http_1_1DecompressionHandler.html", "d6/d3f/classSystem_1_1Net_1_1Http_1_1DecompressionHandler" ],
+    [ "System.Net.Http.DecompressionHandler.DecompressedContent", "d2/de4/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DecompressedContent.html", "d2/de4/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DecompressedContent" ],
+    [ "System.Net.Http.DecompressionHandler.GZipDecompressedContent", "d3/dd8/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1GZipDecompressedContent.html", "d3/dd8/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1GZipDecompressedContent" ],
+    [ "System.Net.Http.DecompressionHandler.DeflateDecompressedContent", "d7/d68/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent.html", "d7/d68/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent" ],
+    [ "System.Net.Http.DecompressionHandler.DeflateDecompressedContent.ZLibOrDeflateStream", "de/d20/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent_1_1ZLibOrDeflateStream.html", "de/d20/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent_1_1ZLibOrDeflateStream" ],
+    [ "System.Net.Http.DecompressionHandler.DeflateDecompressedContent.ZLibOrDeflateStream.PeekFirstByteReadStream", "db/dcf/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent_1_1ZLibOrDeflatff191898497d3352e959650b00d55a0d.html", "db/dcf/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent_1_1ZLibOrDeflatff191898497d3352e959650b00d55a0d" ],
+    [ "System.Net.Http.DecompressionHandler.BrotliDecompressedContent", "d9/de0/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1BrotliDecompressedContent.html", "d9/de0/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1BrotliDecompressedContent" ]
+];

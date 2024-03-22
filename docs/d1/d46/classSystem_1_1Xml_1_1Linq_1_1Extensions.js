@@ -1,0 +1,28 @@
+var classSystem_1_1Xml_1_1Linq_1_1Extensions =
+[
+    [ "Ancestors< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_aab89ced94a57f7eae82f17742fc979de.html#aab89ced94a57f7eae82f17742fc979de", null ],
+    [ "Ancestors< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a5c3878ee80b1c28267963f3cb4808d6d.html#a5c3878ee80b1c28267963f3cb4808d6d", null ],
+    [ "AncestorsAndSelf", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a49696d9685a9d8c511a600fe0bf157e5.html#a49696d9685a9d8c511a600fe0bf157e5", null ],
+    [ "AncestorsAndSelf", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a4670669bab727f7255f9f7d7f164bee4.html#a4670669bab727f7255f9f7d7f164bee4", null ],
+    [ "Attributes", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_aa0b28195ab03b4c9d90d445e06710044.html#aa0b28195ab03b4c9d90d445e06710044", null ],
+    [ "Attributes", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_ad8c391b6d0b2f49bce434d05174acb4d.html#ad8c391b6d0b2f49bce434d05174acb4d", null ],
+    [ "DescendantNodes< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a6cd2778b5906790fd0fe53874a08c706.html#a6cd2778b5906790fd0fe53874a08c706", null ],
+    [ "DescendantNodesAndSelf", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a315ed7aa1240f38876ea65a58dd2cf26.html#a315ed7aa1240f38876ea65a58dd2cf26", null ],
+    [ "Descendants< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a6478d1bda8569822a6b55691d85cd94a.html#a6478d1bda8569822a6b55691d85cd94a", null ],
+    [ "Descendants< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_ac3d0b264f6eba2eb9148c35ee0fb93e7.html#ac3d0b264f6eba2eb9148c35ee0fb93e7", null ],
+    [ "DescendantsAndSelf", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a437018662a56d67db3e9b1a20603218e.html#a437018662a56d67db3e9b1a20603218e", null ],
+    [ "DescendantsAndSelf", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a2361de35ec5372709db8b2fd285711dc.html#a2361de35ec5372709db8b2fd285711dc", null ],
+    [ "DocumentOrderIterator< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a53b9d107ec905edfdea77cff68aef584.html#a53b9d107ec905edfdea77cff68aef584", null ],
+    [ "Elements< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a47d9bfd674be6efec22cc0cd5974b1fa.html#a47d9bfd674be6efec22cc0cd5974b1fa", null ],
+    [ "Elements< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_ad0c24dd28f514e6c4d4abe013b64a7be.html#ad0c24dd28f514e6c4d4abe013b64a7be", null ],
+    [ "GetAncestors< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_ad3c1974bf3afe7664542bbcb3dbd71c0.html#ad3c1974bf3afe7664542bbcb3dbd71c0", null ],
+    [ "GetAttributes", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_af85acf19416c08b15e6a5b16570ecdf6.html#af85acf19416c08b15e6a5b16570ecdf6", null ],
+    [ "GetDescendantNodes< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a4b14489d6b1cb04fcc67a5857789e7e6.html#a4b14489d6b1cb04fcc67a5857789e7e6", null ],
+    [ "GetDescendants< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a8a39cc4b794ee0b6448d67c8e1cd6193.html#a8a39cc4b794ee0b6448d67c8e1cd6193", null ],
+    [ "GetElements< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a2a8e9fb90660957c280e619a25042da6.html#a2a8e9fb90660957c280e619a25042da6", null ],
+    [ "InDocumentOrder< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_ae6e87f8373b335176ca519dc1f4d1906.html#ae6e87f8373b335176ca519dc1f4d1906", null ],
+    [ "Nodes< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a0c0835286dbb8d7206bd20a84e594c22.html#a0c0835286dbb8d7206bd20a84e594c22", null ],
+    [ "NodesIterator< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a1a2c749bcd6b74ca61bfc282d91e43bd.html#a1a2c749bcd6b74ca61bfc282d91e43bd", null ],
+    [ "Remove", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_a11bf2394f7d76e2b7138014644e58744.html#a11bf2394f7d76e2b7138014644e58744", null ],
+    [ "Remove< T >", "d1/d46/classSystem_1_1Xml_1_1Linq_1_1Extensions_aaf2d365f2ca52a05129be92ec43b203e.html#aaf2d365f2ca52a05129be92ec43b203e", null ]
+];

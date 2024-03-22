@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEvent =
+[
+    [ "Data", "d8/da1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEvent_a3d55095b9506f9038c62f3f67316bfe6.html#a3d55095b9506f9038c62f3f67316bfe6", null ],
+    [ "Type", "d8/da1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEvent_a24596a9089c9119574012b26f5dce680.html#a24596a9089c9119574012b26f5dce680", null ]
+];

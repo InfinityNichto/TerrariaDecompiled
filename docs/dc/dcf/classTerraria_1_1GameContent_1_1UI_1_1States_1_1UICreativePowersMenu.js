@@ -27,6 +27,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu =
     [ "Append", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "CategoryButton_OnUpdate_DisplayTooltips", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu_a4a56a8d70b57b14c29c74b0fc9b0cb0e.html#a4a56a8d70b57b14c29c74b0fc9b0cb0e", null ],
     [ "CompareTo", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateMainPowerStrip", "dc/dcf/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICreativePowersMenu_a483ac5d7c28407187612260be599cdf8.html#a483ac5d7c28407187612260be599cdf8", null ],

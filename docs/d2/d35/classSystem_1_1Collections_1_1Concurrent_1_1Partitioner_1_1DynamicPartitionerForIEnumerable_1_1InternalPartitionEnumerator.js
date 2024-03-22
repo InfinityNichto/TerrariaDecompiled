@@ -1,0 +1,21 @@
+var classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator =
+[
+    [ "InternalPartitionEnumerator", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_a09bad07fbd5cc675647c4e24052920c3.html#a09bad07fbd5cc675647c4e24052920c3", null ],
+    [ "Dispose", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_ab56cfb55af8837d36950454db4c6c60a.html#ab56cfb55af8837d36950454db4c6c60a", null ],
+    [ "GrabNextChunk", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_acf6a1c072e246338ce8dd813c1701b33.html#acf6a1c072e246338ce8dd813c1701b33", null ],
+    [ "MoveNext", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a5fb871fa54b503722534c60fcf9321da", null ],
+    [ "Reset", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#ae01cfccb243e0cd86303c31e97fac385", null ],
+    [ "_activePartitionCount", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_a9b7b928890986de1bc5c83c0d9289965.html#a9b7b928890986de1bc5c83c0d9289965", null ],
+    [ "_currentChunkSize", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a3f4b885d396f0494a33d68e71aa5c07d", null ],
+    [ "_doublingCountdown", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a52c2f152cf9aa6eea08cdf0919baf782", null ],
+    [ "_enumerable", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_a1dad3098f4887bcfa8459f1a85910f6a.html#a1dad3098f4887bcfa8459f1a85910f6a", null ],
+    [ "_hasNoElementsLeft", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_abdc06d0fe74b30ab265653688a3722bb.html#abdc06d0fe74b30ab265653688a3722bb", null ],
+    [ "_localList", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_a4fcc9ab233907df7543d9ef0650af7ab.html#a4fcc9ab233907df7543d9ef0650af7ab", null ],
+    [ "_localOffset", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a230f9c9a2ecb646ffd56a040a8906c5f", null ],
+    [ "_maxChunkSize", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#ac9b71d2eac72a2fb41f746bb42450bcb", null ],
+    [ "_sharedIndex", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a798a3779c2d1b91e17e4bf1b2cfd0619", null ],
+    [ "_sharedReader", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#a05be184112f6cb324aabbe6eb458130f", null ],
+    [ "s_defaultMaxChunkSize", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator.html#ad1187c372bd61bc0a1a1b33c5199ed45", null ],
+    [ "Current", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_ab19e650d624dea1d01b12dc50b05bd95.html#ab19e650d624dea1d01b12dc50b05bd95", null ],
+    [ "HasNoElementsLeft", "d2/d35/classSystem_1_1Collections_1_1Concurrent_1_1Partitioner_1_1DynamicPartitionerForIEnumerable_1_1InternalPartitionEnumerator_af637fd2de57bb71c0b827e3c2a0a1ef7.html#af637fd2de57bb71c0b827e3c2a0a1ef7", null ]
+];

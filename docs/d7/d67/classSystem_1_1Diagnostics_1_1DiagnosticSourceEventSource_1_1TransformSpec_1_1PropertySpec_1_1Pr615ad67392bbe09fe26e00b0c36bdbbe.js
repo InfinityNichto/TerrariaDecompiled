@@ -1,0 +1,8 @@
+var classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe =
+[
+    [ "CurrentActivityPropertyFetch", "d7/d67/classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe_adad2341b3c4f55a73fed182f83b5e869.html#adad2341b3c4f55a73fed182f83b5e869", null ],
+    [ "Fetch", "d7/d67/classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe_a0ebcc08ec3785f44370cf66094c77f8e.html#a0ebcc08ec3785f44370cf66094c77f8e", null ],
+    [ "FetcherForProperty", "d7/d67/classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe.html#a69ce36c75374155fa4f53e1403fba2c2", null ],
+    [ "StructFunc< TStruct, TProperty >", "d7/d67/classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe.html#ab89f2dfca1e1f8b05db51c4d20937698", null ],
+    [ "Type", "d7/d67/classSystem_1_1Diagnostics_1_1DiagnosticSourceEventSource_1_1TransformSpec_1_1PropertySpec_1_1Pr615ad67392bbe09fe26e00b0c36bdbbe.html#a783ee7a4106cc601f5f5256221e55d97", null ]
+];

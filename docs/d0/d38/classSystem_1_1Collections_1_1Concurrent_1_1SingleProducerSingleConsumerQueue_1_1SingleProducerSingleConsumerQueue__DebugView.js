@@ -1,0 +1,6 @@
+var classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView =
+[
+    [ "SingleProducerSingleConsumerQueue_DebugView", "d0/d38/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a363499147dc1fbfc526b2e452869d86c.html#a363499147dc1fbfc526b2e452869d86c", null ],
+    [ "_queue", "d0/d38/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a2d71f5c3516b0e5fb5b1db3fff2262b4.html#a2d71f5c3516b0e5fb5b1db3fff2262b4", null ],
+    [ "Items", "d0/d38/classSystem_1_1Collections_1_1Concurrent_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a4f6cfed9303434f3528d409da915f287.html#a4f6cfed9303434f3528d409da915f287", null ]
+];

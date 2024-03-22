@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Security_1_1SafeCredentialReference =
+[
+    [ "SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a962c94d634b08052f2ea5ba832b6924f.html#a962c94d634b08052f2ea5ba832b6924f", null ],
+    [ "~SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_aa33ddd05353ae69cc43e35045de3c9c0.html#aa33ddd05353ae69cc43e35045de3c9c0", null ],
+    [ "SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a962c94d634b08052f2ea5ba832b6924f.html#a962c94d634b08052f2ea5ba832b6924f", null ],
+    [ "~SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_aa33ddd05353ae69cc43e35045de3c9c0.html#aa33ddd05353ae69cc43e35045de3c9c0", null ],
+    [ "SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a962c94d634b08052f2ea5ba832b6924f.html#a962c94d634b08052f2ea5ba832b6924f", null ],
+    [ "~SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_aa33ddd05353ae69cc43e35045de3c9c0.html#aa33ddd05353ae69cc43e35045de3c9c0", null ],
+    [ "SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_aac9e156fe2812921ca9bc6ffe8850320.html#aac9e156fe2812921ca9bc6ffe8850320", null ],
+    [ "~SafeCredentialReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_aa33ddd05353ae69cc43e35045de3c9c0.html#aa33ddd05353ae69cc43e35045de3c9c0", null ],
+    [ "CreateReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_acd2c6daf00c2b58e631704e3ff8862dc.html#acd2c6daf00c2b58e631704e3ff8862dc", null ],
+    [ "CreateReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a0d462d0ebec2ade225e320fee5c25e69.html#a0d462d0ebec2ade225e320fee5c25e69", null ],
+    [ "CreateReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a0d462d0ebec2ade225e320fee5c25e69.html#a0d462d0ebec2ade225e320fee5c25e69", null ],
+    [ "CreateReference", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a0d462d0ebec2ade225e320fee5c25e69.html#a0d462d0ebec2ade225e320fee5c25e69", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a8f3f941286696aa9cf4472c1c4cfc543.html#a8f3f941286696aa9cf4472c1c4cfc543", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a8f3f941286696aa9cf4472c1c4cfc543.html#a8f3f941286696aa9cf4472c1c4cfc543", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a8f3f941286696aa9cf4472c1c4cfc543.html#a8f3f941286696aa9cf4472c1c4cfc543", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a8f3f941286696aa9cf4472c1c4cfc543.html#a8f3f941286696aa9cf4472c1c4cfc543", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a20ae9c1774923b39acd76b69c979df17.html#a20ae9c1774923b39acd76b69c979df17", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a20ae9c1774923b39acd76b69c979df17.html#a20ae9c1774923b39acd76b69c979df17", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a20ae9c1774923b39acd76b69c979df17.html#a20ae9c1774923b39acd76b69c979df17", null ],
+    [ "Dispose", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a20ae9c1774923b39acd76b69c979df17.html#a20ae9c1774923b39acd76b69c979df17", null ],
+    [ "Target", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_acaa39a5949b205dfd8844cb9f7ccc519.html#acaa39a5949b205dfd8844cb9f7ccc519", null ],
+    [ "Target", "d7/d86/classSystem_1_1Net_1_1Security_1_1SafeCredentialReference_a9b74d00451a26e598480a81b5509f795.html#a9b74d00451a26e598480a81b5509f795", null ]
+];

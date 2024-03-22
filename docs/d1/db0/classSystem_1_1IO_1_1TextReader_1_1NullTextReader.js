@@ -1,0 +1,27 @@
+var classSystem_1_1IO_1_1TextReader_1_1NullTextReader =
+[
+    [ "Close", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#ab22c0e8473b4ae7d14f9e6c52f1ef4c6", null ],
+    [ "Dispose", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#aee5d1c00c04d3a100d03d389d5a491a7", null ],
+    [ "Dispose", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#ad38ffa38f5b6a25fe94a6b684a31f3f2", null ],
+    [ "GetLifetimeService", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a8a0e8d12e507f470de5db16e74f238dd", null ],
+    [ "InitializeLifetimeService", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#ac831ed6de7a66333d07144ce2abd382a", null ],
+    [ "MemberwiseClone", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#aac9c0e041d02e755546e945445352a9a", null ],
+    [ "Peek", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#afc1a48141b2ace476e724ababe49bf09", null ],
+    [ "Read", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a0d94ee910591e5aeece55a071fce2513", null ],
+    [ "Read", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader_afecd195a1ab89d75773cf4f2684480c3.html#afecd195a1ab89d75773cf4f2684480c3", null ],
+    [ "Read", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a3807e9257d3048a59b94ce5131e7694b", null ],
+    [ "ReadAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a2680a25e0a0e004e745068a88554bc84", null ],
+    [ "ReadAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#ae2432108566c4fe2fc5c4e1fce48819e", null ],
+    [ "ReadAsyncInternal", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a70bd5425f4af269eabb31717553291eb", null ],
+    [ "ReadBlock", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a07e0827fdad4097a7a32f605afc36541", null ],
+    [ "ReadBlock", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a365a126eb29c76f9d4084c53fb3d218d", null ],
+    [ "ReadBlockAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a66a94fbaad01028b18d4e03bedf28d67", null ],
+    [ "ReadBlockAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a2f6dc3d35c8d6f48f421c6447d1f5923", null ],
+    [ "ReadBlockAsyncInternal", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a8f891004438cb8a87a431b9218f8fe8b", null ],
+    [ "ReadLine", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader_a6b8813dd477c56fc322a0c110e163804.html#a6b8813dd477c56fc322a0c110e163804", null ],
+    [ "ReadLineAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a4511b72d987f5f20b95d99a0c27fd5ac", null ],
+    [ "ReadToEnd", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a5cd638d355ee06f22eb052c29b307e78", null ],
+    [ "ReadToEndAsync", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a662214eaf36f746feec5ffbb9205efc6", null ],
+    [ "Synchronized", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a3610c2dc5360798a78d86c08f3ae2d57", null ],
+    [ "Null", "d1/db0/classSystem_1_1IO_1_1TextReader_1_1NullTextReader.html#a94b610b5167f6e502a689c7f1f620afe", null ]
+];

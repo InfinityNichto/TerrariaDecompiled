@@ -1,0 +1,28 @@
+var structSystem_1_1ReadOnlySpan =
+[
+    [ "Enumerator", "dd/dc0/structSystem_1_1ReadOnlySpan_1_1Enumerator.html", "dd/dc0/structSystem_1_1ReadOnlySpan_1_1Enumerator" ],
+    [ "ReadOnlySpan", "db/d2e/structSystem_1_1ReadOnlySpan_af995df29c114be47ef569d805a688e87.html#af995df29c114be47ef569d805a688e87", null ],
+    [ "ReadOnlySpan", "db/d2e/structSystem_1_1ReadOnlySpan_abf3c17c758f78bf0d736a1378f9f9630.html#abf3c17c758f78bf0d736a1378f9f9630", null ],
+    [ "ReadOnlySpan", "db/d2e/structSystem_1_1ReadOnlySpan_a545eb9a6325e7b4d971f913a9058ce1b.html#a545eb9a6325e7b4d971f913a9058ce1b", null ],
+    [ "ReadOnlySpan", "db/d2e/structSystem_1_1ReadOnlySpan_a61b6b3c53015cb4bd1c038c3acaf71e7.html#a61b6b3c53015cb4bd1c038c3acaf71e7", null ],
+    [ "CopyTo", "db/d2e/structSystem_1_1ReadOnlySpan_a7eb2bbdbc2976f2fd6d802c659064b58.html#a7eb2bbdbc2976f2fd6d802c659064b58", null ],
+    [ "Equals", "db/d2e/structSystem_1_1ReadOnlySpan_aacf97af924231f5978437fbd6195fe60.html#aacf97af924231f5978437fbd6195fe60", null ],
+    [ "GetEnumerator", "db/d2e/structSystem_1_1ReadOnlySpan_a13ac14dc6b5d0b9f4b1ec6154bb5d43e.html#a13ac14dc6b5d0b9f4b1ec6154bb5d43e", null ],
+    [ "GetHashCode", "db/d2e/structSystem_1_1ReadOnlySpan_abda3d6441c64b58cfea77c9ccc230776.html#abda3d6441c64b58cfea77c9ccc230776", null ],
+    [ "GetPinnableReference", "db/d2e/structSystem_1_1ReadOnlySpan_a01587d7e01a789a1e7226c23361089b0.html#a01587d7e01a789a1e7226c23361089b0", null ],
+    [ "operator ReadOnlySpan< T >", "db/d2e/structSystem_1_1ReadOnlySpan_a607ae27358a88c32d01def310aca1349.html#a607ae27358a88c32d01def310aca1349", null ],
+    [ "operator ReadOnlySpan< T >", "db/d2e/structSystem_1_1ReadOnlySpan_ae6c8fba900a27a1b66fb1d86aba91239.html#ae6c8fba900a27a1b66fb1d86aba91239", null ],
+    [ "operator!=", "db/d2e/structSystem_1_1ReadOnlySpan_aedc4e9c3a698aed7872687c3176d0241.html#aedc4e9c3a698aed7872687c3176d0241", null ],
+    [ "operator==", "db/d2e/structSystem_1_1ReadOnlySpan_a11330580f4a076850fa7363fd4a35770.html#a11330580f4a076850fa7363fd4a35770", null ],
+    [ "Slice", "db/d2e/structSystem_1_1ReadOnlySpan_acdd9a45fdc059838e713822b0dd5d64b.html#acdd9a45fdc059838e713822b0dd5d64b", null ],
+    [ "Slice", "db/d2e/structSystem_1_1ReadOnlySpan_a80003d2eca8ef7a9f483b94bd9eee4b2.html#a80003d2eca8ef7a9f483b94bd9eee4b2", null ],
+    [ "ToArray", "db/d2e/structSystem_1_1ReadOnlySpan_a91bc6204a6f2accdb37f506f4a912a27.html#a91bc6204a6f2accdb37f506f4a912a27", null ],
+    [ "ToString", "db/d2e/structSystem_1_1ReadOnlySpan_af4fb3335b96229c2643d22131599c13d.html#af4fb3335b96229c2643d22131599c13d", null ],
+    [ "TryCopyTo", "db/d2e/structSystem_1_1ReadOnlySpan_a47fba711aab1191f6a8852ea1c91768f.html#a47fba711aab1191f6a8852ea1c91768f", null ],
+    [ "_length", "db/d2e/structSystem_1_1ReadOnlySpan_ab52faa0fcbb75aef9663a13c1cd45457.html#ab52faa0fcbb75aef9663a13c1cd45457", null ],
+    [ "_pointer", "db/d2e/structSystem_1_1ReadOnlySpan_ac6432430b0b647d9e157aeb9faeed4b0.html#ac6432430b0b647d9e157aeb9faeed4b0", null ],
+    [ "Empty", "db/d2e/structSystem_1_1ReadOnlySpan_ac51e324e3049e0f2ad6e3da296e6000c.html#ac51e324e3049e0f2ad6e3da296e6000c", null ],
+    [ "IsEmpty", "db/d2e/structSystem_1_1ReadOnlySpan_a5e387a5f7ca548c1edc47cde4a4d99d8.html#a5e387a5f7ca548c1edc47cde4a4d99d8", null ],
+    [ "Length", "db/d2e/structSystem_1_1ReadOnlySpan_a4f24a3526eee3608b091f1755869af08.html#a4f24a3526eee3608b091f1755869af08", null ],
+    [ "this[int index]", "db/d2e/structSystem_1_1ReadOnlySpan_ac38a4fae0750e57b6a46d9d925a6de2a.html#ac38a4fae0750e57b6a46d9d925a6de2a", null ]
+];

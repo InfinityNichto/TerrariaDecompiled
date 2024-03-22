@@ -15,6 +15,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState =
     [ "ClickPublicityOption", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState_a9ee81fd32accded0ca0c0cc9a8865d72.html#a9ee81fd32accded0ca0c0cc9a8865d72", null ],
     [ "ClickTagOption", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState_aa6ad77c9402b43fcf354a7b257d380c9.html#aa6ad77c9402b43fcf354a7b257d380c9", null ],
     [ "CompareTo", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateInsturctionsPanel", "d9/d6a/classTerraria_1_1GameContent_1_1UI_1_1States_1_1AWorkshopPublishInfoState_a61b6e46d494b03a3fecc9f8ba0056e82.html#a61b6e46d494b03a3fecc9f8ba0056e82", null ],

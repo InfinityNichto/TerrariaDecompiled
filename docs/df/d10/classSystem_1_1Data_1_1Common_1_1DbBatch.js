@@ -1,0 +1,26 @@
+var classSystem_1_1Data_1_1Common_1_1DbBatch =
+[
+    [ "Cancel", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_ad7add5b62a02c1c3c1f6c592b71a4f92.html#ad7add5b62a02c1c3c1f6c592b71a4f92", null ],
+    [ "CreateBatchCommand", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_affe67e8cdc3f21136751030ab171d075.html#affe67e8cdc3f21136751030ab171d075", null ],
+    [ "CreateDbBatchCommand", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a80a08fc84e1ec2477adbb13c4881f8d0.html#a80a08fc84e1ec2477adbb13c4881f8d0", null ],
+    [ "Dispose", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_ac1b3f1abdabfc188cb3b1943595c862e.html#ac1b3f1abdabfc188cb3b1943595c862e", null ],
+    [ "DisposeAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a1cf72fe82324a50301cdbe88e482a5a7.html#a1cf72fe82324a50301cdbe88e482a5a7", null ],
+    [ "ExecuteDbDataReader", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a33f5e34ce0c407f22ce524c80d8a20a7.html#a33f5e34ce0c407f22ce524c80d8a20a7", null ],
+    [ "ExecuteDbDataReaderAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_abd2cd54c528d766e8726d3d21c5e0d17.html#abd2cd54c528d766e8726d3d21c5e0d17", null ],
+    [ "ExecuteNonQuery", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a1400b8837ce1b1e434ca55d62aa51046.html#a1400b8837ce1b1e434ca55d62aa51046", null ],
+    [ "ExecuteNonQueryAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_abf9ca25a1dd7d3a3b6da149dae352774.html#abf9ca25a1dd7d3a3b6da149dae352774", null ],
+    [ "ExecuteReader", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a46ffb823030296c6b04ca288fdbbdc33.html#a46ffb823030296c6b04ca288fdbbdc33", null ],
+    [ "ExecuteReaderAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a3b4e212b9db65e45ccf5914d4e6a8323.html#a3b4e212b9db65e45ccf5914d4e6a8323", null ],
+    [ "ExecuteReaderAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a2ac613840968b49920bd9870966fd748.html#a2ac613840968b49920bd9870966fd748", null ],
+    [ "ExecuteScalar", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a93a6c8a8b79a00c54d5b2e8f6c83ec47.html#a93a6c8a8b79a00c54d5b2e8f6c83ec47", null ],
+    [ "ExecuteScalarAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a78c89bb15046a4160e22b73b15fe9f3e.html#a78c89bb15046a4160e22b73b15fe9f3e", null ],
+    [ "Prepare", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_acbb4cda0c65c2dc44e8ba20f48460fb6.html#acbb4cda0c65c2dc44e8ba20f48460fb6", null ],
+    [ "PrepareAsync", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_ae0db7a32da0d85f9685fa7a17e7c682f.html#ae0db7a32da0d85f9685fa7a17e7c682f", null ],
+    [ "BatchCommands", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_aa8b63a23adb16051f41802b86dac8dcb.html#aa8b63a23adb16051f41802b86dac8dcb", null ],
+    [ "Connection", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a21332d87996df92afe7a6b99cdcb0d8f.html#a21332d87996df92afe7a6b99cdcb0d8f", null ],
+    [ "DbBatchCommands", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_aafeaff13f17e83ef59852abaec22533f.html#aafeaff13f17e83ef59852abaec22533f", null ],
+    [ "DbConnection", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a7d4889f640c42b17ae6d1ce3890bc1af.html#a7d4889f640c42b17ae6d1ce3890bc1af", null ],
+    [ "DbTransaction", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a3f16600b8535268a7b1dcc3f5075f194.html#a3f16600b8535268a7b1dcc3f5075f194", null ],
+    [ "Timeout", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a918c00250e71d054e822535313cc201d.html#a918c00250e71d054e822535313cc201d", null ],
+    [ "Transaction", "df/d10/classSystem_1_1Data_1_1Common_1_1DbBatch_a6b72426a6c73f7ce325790a84fc8ca7d.html#a6b72426a6c73f7ce325790a84fc8ca7d", null ]
+];

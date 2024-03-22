@@ -1,0 +1,9 @@
+var structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative =
+[
+    [ "MarshalToNative", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_a17c5263fe56998fdd9dc03abe37beb79.html#a17c5263fe56998fdd9dc03abe37beb79", null ],
+    [ "Release", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_aff183f825498c061f939eef1d28a7d29.html#aff183f825498c061f939eef1d28a7d29", null ],
+    [ "m_keywords", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_adac68e51c59b7d37178b352d296a271c.html#adac68e51c59b7d37178b352d296a271c", null ],
+    [ "m_loggingLevel", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_a07602f96a989967e3cc8807bece82577.html#a07602f96a989967e3cc8807bece82577", null ],
+    [ "m_pFilterData", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_a537070eb2e72d65d9d533f296b802cf3.html#a537070eb2e72d65d9d533f296b802cf3", null ],
+    [ "m_pProviderName", "d5/daa/structSystem_1_1Diagnostics_1_1Tracing_1_1EventPipeInternal_1_1EventPipeProviderConfigurationNative_a968579e56bb4491bc0014400470a989c.html#a968579e56bb4491bc0014400470a989c", null ]
+];

@@ -114,30 +114,30 @@ $(function(){initNavTree('de/d12/classTerraria_1_1UI_1_1ItemSorting_1_1ItemSorti
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> ItemSortingLayer(<span class="stringliteral">&quot;Equip - Grapple&quot;</span>, delegate(ItemSortingLayer layer, Item[] inv, <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> itemsToSort)</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> ItemSortingLayer(<span class="stringliteral">&quot;Equip - Grapple&quot;</span>, delegate(ItemSortingLayer layer, Item[] inv, List&lt;int&gt; itemsToSort)</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> indexesSortable22 = itemsToSort.Where((<span class="keywordtype">int</span> i) =&gt; Main.projHook[inv[i].shoot]).ToList();</div>
+<div class="line">            List&lt;int&gt; indexesSortable22 = itemsToSort.Where((<span class="keywordtype">int</span> i) =&gt; Main.projHook[inv[i].shoot]).ToList();</div>
 <div class="line">            layer.Validate(ref indexesSortable22, inv);</div>
 <div class="line">            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> item17 <span class="keywordflow">in</span> indexesSortable22)</div>
 <div class="line">            {</div>
 <div class="line">                itemsToSort.Remove(item17);</div>
 <div class="line">            }</div>
-<div class="line">            indexesSortable22.Sort(delegate(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line">            <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">indexesSortable22</a>.Sort(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">delegate</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">int</span> num22 = inv[y].OriginalRarity.CompareTo(inv[x].OriginalRarity);</div>
-<div class="line">                <span class="keywordflow">if</span> (num22 == 0)</div>
+<div class="line">                <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num22</a> = <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[y].OriginalRarity.CompareTo(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[x].OriginalRarity);</div>
+<div class="line">                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num22</a> == 0)</div>
 <div class="line">                {</div>
-<div class="line">                    num22 = inv[x].netID.CompareTo(inv[y].netID);</div>
+<div class="line">                    <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num22</a> = <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[x].netID.CompareTo(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[y].netID);</div>
 <div class="line">                }</div>
-<div class="line">                <span class="keywordflow">if</span> (num22 == 0)</div>
+<div class="line">                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num22</a> == 0)</div>
 <div class="line">                {</div>
-<div class="line">                    num22 = x.CompareTo(y);</div>
+<div class="line">                    <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num22</a> = x.CompareTo(y);</div>
 <div class="line">                }</div>
 <div class="line">                <span class="keywordflow">return</span> num22;</div>
 <div class="line">            });</div>
 <div class="line">            <span class="keywordflow">return</span> indexesSortable22;</div>
 <div class="line">        })</div>
-<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassSystem_1_1Collections_1_1Generic_1_1Dictionary_html"><div class="ttname"><a href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">System.Collections.Generic.Dictionary</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d61/Dictionary_8cs_source.html#l00013">Dictionary.cs:14</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../d1/d78/ItemSorting_8cs_source.html#l00362">362</a> of file <a class="el" href="../../d1/d78/ItemSorting_8cs_source.html">ItemSorting.cs</a>.</p>
 

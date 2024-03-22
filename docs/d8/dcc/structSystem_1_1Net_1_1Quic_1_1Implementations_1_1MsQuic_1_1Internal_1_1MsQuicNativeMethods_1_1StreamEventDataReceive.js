@@ -1,0 +1,8 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive =
+[
+    [ "AbsoluteOffset", "d8/dcc/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive_a605aa867909140e021a2aaa1960781b3.html#a605aa867909140e021a2aaa1960781b3", null ],
+    [ "BufferCount", "d8/dcc/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive_ac6f235f1a695037cd13ce53af75914c1.html#ac6f235f1a695037cd13ce53af75914c1", null ],
+    [ "Buffers", "d8/dcc/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive_a907227df3e06a7e22381c1dd35d3c07e.html#a907227df3e06a7e22381c1dd35d3c07e", null ],
+    [ "Flags", "d8/dcc/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive_a7c13a63aa0404424788d1abf41171c22.html#a7c13a63aa0404424788d1abf41171c22", null ],
+    [ "TotalBufferLength", "d8/dcc/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataReceive_afefac335bdcfbab573eda8445d213d13.html#afefac335bdcfbab573eda8445d213d13", null ]
+];

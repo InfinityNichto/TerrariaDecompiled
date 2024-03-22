@@ -1,0 +1,13 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator =
+[
+    [ "NullableIntMinMaxAggregationOperatorEnumerator", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator_a313a511cddd6c2ba9bd5b7769fca8a69.html#a313a511cddd6c2ba9bd5b7769fca8a69", null ],
+    [ "Dispose", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator_a9bdb20297e440ffa8ba85d8b3387fea6.html#a9bdb20297e440ffa8ba85d8b3387fea6", null ],
+    [ "MoveNext", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator_aa19d9d56133778e57bd27f12393b4d90.html#aa19d9d56133778e57bd27f12393b4d90", null ],
+    [ "_cancellationToken", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_sign", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator_ab554a5150b39b67a67e51dfab5aa839b.html#ab554a5150b39b67a67e51dfab5aa839b", null ],
+    [ "_source", "dd/d08/classSystem_1_1Linq_1_1Parallel_1_1NullableIntMinMaxAggregationOperator_1_1NullableIntMinMaxAggregationOperatorEnumerator_acfe891c1d196aa2cc161c750551ea583.html#acfe891c1d196aa2cc161c750551ea583", null ]
+];

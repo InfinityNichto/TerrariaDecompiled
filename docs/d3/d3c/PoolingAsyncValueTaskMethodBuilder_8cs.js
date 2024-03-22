@@ -1,0 +1,6 @@
+var PoolingAsyncValueTaskMethodBuilder_8cs =
+[
+    [ "System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder< TResult >", "da/d69/structSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder.html", "da/d69/structSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder" ],
+    [ "System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder< TResult >.StateMachineBox< TStateMachine >", "de/df1/classSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder_1_1StateMachineBox.html", "de/df1/classSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder_1_1StateMachineBox" ],
+    [ "System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder< TResult >.SyncSuccessSentinelStateMachineBox", "da/d19/classSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder_1_1SyncSuccessSentinelStateMachineBox.html", "da/d19/classSystem_1_1Runtime_1_1CompilerServices_1_1PoolingAsyncValueTaskMethodBuilder_1_1SyncSuccessSentinelStateMachineBox" ]
+];

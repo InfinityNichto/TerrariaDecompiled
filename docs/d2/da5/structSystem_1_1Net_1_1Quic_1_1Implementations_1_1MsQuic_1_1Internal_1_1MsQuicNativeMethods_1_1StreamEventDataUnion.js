@@ -1,0 +1,9 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion =
+[
+    [ "PeerReceiveAborted", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_a7cddaccfcba3998784492b57bf7db8b9.html#a7cddaccfcba3998784492b57bf7db8b9", null ],
+    [ "PeerSendAborted", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_aa775345bd5e5c71825e0851cdf3fef18.html#aa775345bd5e5c71825e0851cdf3fef18", null ],
+    [ "Receive", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_a7bdc7136b0690c53c48a58a831603d2d.html#a7bdc7136b0690c53c48a58a831603d2d", null ],
+    [ "SendComplete", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_aaba2aa687f946829ede84489a50eba5f.html#aaba2aa687f946829ede84489a50eba5f", null ],
+    [ "SendShutdownComplete", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_a3f109b640914ad1de266ef11f87611a9.html#a3f109b640914ad1de266ef11f87611a9", null ],
+    [ "ShutdownComplete", "d2/da5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataUnion_a51865e1b2fdc5081ac962a94c48bc52c.html#a51865e1b2fdc5081ac962a94c48bc52c", null ]
+];

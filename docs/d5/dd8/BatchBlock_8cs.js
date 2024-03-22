@@ -1,0 +1,8 @@
+var BatchBlock_8cs =
+[
+    [ "System.Threading.Tasks.Dataflow.BatchBlock< T >", "d0/d2c/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock.html", "d0/d2c/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock" ],
+    [ "System.Threading.Tasks.Dataflow.BatchBlock< T >.DebugView", "d7/d73/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1DebugView.html", "d7/d73/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1DebugView" ],
+    [ "System.Threading.Tasks.Dataflow.BatchBlock< T >.BatchBlockTargetCore", "d1/d77/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore.html", "d1/d77/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore" ],
+    [ "System.Threading.Tasks.Dataflow.BatchBlock< T >.BatchBlockTargetCore.NonGreedyState", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState.html", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState" ],
+    [ "System.Threading.Tasks.Dataflow.BatchBlock< T >.BatchBlockTargetCore.DebuggingInformation", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation.html", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation" ]
+];

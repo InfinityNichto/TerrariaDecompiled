@@ -1,0 +1,22 @@
+var namespaceSystem_1_1ComponentModel_1_1Design_1_1Serialization =
+[
+    [ "ComponentSerializationService", "dc/d6b/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ComponentSerializationService.html", "dc/d6b/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ComponentSerializationService" ],
+    [ "ContextStack", "d5/da4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ContextStack.html", "d5/da4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ContextStack" ],
+    [ "DefaultSerializationProviderAttribute", "d3/dc4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DefaultSerializationProviderAttribute.html", "d3/dc4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DefaultSerializationProviderAttribute" ],
+    [ "DesignerLoader", "d8/d0f/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DesignerLoader.html", "d8/d0f/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DesignerLoader" ],
+    [ "DesignerSerializerAttribute", "dc/da9/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DesignerSerializerAttribute.html", "dc/da9/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DesignerSerializerAttribute" ],
+    [ "IDesignerLoaderHost", "d7/df6/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderHost.html", "d7/df6/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderHost" ],
+    [ "IDesignerLoaderHost2", "d4/d0a/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderHost2.html", "d4/d0a/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderHost2" ],
+    [ "IDesignerLoaderService", "db/df3/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderService.html", "db/df3/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerLoaderService" ],
+    [ "IDesignerSerializationManager", "da/dd0/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationManager.html", "da/dd0/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationManager" ],
+    [ "IDesignerSerializationProvider", "da/daf/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationProvider.html", "da/daf/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationProvider" ],
+    [ "IDesignerSerializationService", "d6/dbd/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationService.html", "d6/dbd/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationService" ],
+    [ "INameCreationService", "dc/d61/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1INameCreationService.html", "dc/d61/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1INameCreationService" ],
+    [ "InstanceDescriptor", "d7/d48/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1InstanceDescriptor.html", "d7/d48/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1InstanceDescriptor" ],
+    [ "MemberRelationship", "d1/dfe/structSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1MemberRelationship.html", "d1/dfe/structSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1MemberRelationship" ],
+    [ "MemberRelationshipService", "da/da9/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1MemberRelationshipService.html", "da/da9/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1MemberRelationshipService" ],
+    [ "ResolveNameEventArgs", "d7/dfe/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ResolveNameEventArgs.html", "d7/dfe/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1ResolveNameEventArgs" ],
+    [ "RootDesignerSerializerAttribute", "d5/dcc/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1RootDesignerSerializerAttribute.html", "d5/dcc/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1RootDesignerSerializerAttribute" ],
+    [ "SerializationStore", "d7/d90/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1SerializationStore.html", "d7/d90/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1SerializationStore" ],
+    [ "ResolveNameEventHandler", "d7/de7/namespaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_a0f4986eeb7af93a0f1615c7d3c0475d0.html#a0f4986eeb7af93a0f1615c7d3c0475d0", null ]
+];

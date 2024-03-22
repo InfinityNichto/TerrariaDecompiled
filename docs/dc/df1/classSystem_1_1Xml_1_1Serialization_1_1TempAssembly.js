@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Serialization_1_1TempAssembly =
+[
+    [ "TempMethod", "d8/d35/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_1_1TempMethod.html", "d8/d35/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_1_1TempMethod" ],
+    [ "TempMethodDictionary", "d6/d16/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_1_1TempMethodDictionary.html", "d6/d16/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_1_1TempMethodDictionary" ],
+    [ "TempAssembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a4d50ff41e90a61115b2ccfba217c9595.html#a4d50ff41e90a61115b2ccfba217c9595", null ],
+    [ "TempAssembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ab78e2ab9d812b2745a13d4c59fecb619.html#ab78e2ab9d812b2745a13d4c59fecb619", null ],
+    [ "CanRead", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a9f9fa65d466246308b135e3d3ed50056.html#a9f9fa65d466246308b135e3d3ed50056", null ],
+    [ "GenerateAssemblyId", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ac2efbecf3ddfbdc53c27bdcbb0647684.html#ac2efbecf3ddfbdc53c27bdcbb0647684", null ],
+    [ "GenerateRefEmitAssembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ad55a499c70b7dba440c8a8952c96ae0d.html#ad55a499c70b7dba440c8a8952c96ae0d", null ],
+    [ "GenerateSerializerToStream", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_af5948bdc81cf2afee395c4b570bc84e1.html#af5948bdc81cf2afee395c4b570bc84e1", null ],
+    [ "GetMethodFromType", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a9db237bad271cdc79baa10d6b9b16975.html#a9db237bad271cdc79baa10d6b9b16975", null ],
+    [ "GetTypeFromAssembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a936b08b5ddf60798d7f0d2c00c1a166a.html#a936b08b5ddf60798d7f0d2c00c1a166a", null ],
+    [ "InitAssemblyMethods", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ad52973e6d924ba1807601495635d3528.html#ad52973e6d924ba1807601495635d3528", null ],
+    [ "InvokeReader", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_aae1db6176c9229d64e53697e1c82fd76.html#aae1db6176c9229d64e53697e1c82fd76", null ],
+    [ "InvokeWriter", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a0640a0271c81a353d605b7c99abdb03b.html#a0640a0271c81a353d605b7c99abdb03b", null ],
+    [ "IsSerializerVersionMatch", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a8f96a2c7a897ef0fa9bdf28f2c495a18.html#a8f96a2c7a897ef0fa9bdf28f2c495a18", null ],
+    [ "LoadAssemblyByPath", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ad01b4b2b2b1a753ef9308d25048a9b70.html#ad01b4b2b2b1a753ef9308d25048a9b70", null ],
+    [ "LoadGeneratedAssembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a620f1e42077cb9c28b57a2627c515ab9.html#a620f1e42077cb9c28b57a2627c515ab9", null ],
+    [ "ValidateEncodingStyle", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ac93e8c91bcbbdac0c6af18959e3246a2.html#ac93e8c91bcbbdac0c6af18959e3246a2", null ],
+    [ "_assembly", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_aacebfbeafd7077b4847450a72695aacf.html#aacebfbeafd7077b4847450a72695aacf", null ],
+    [ "_contract", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a7d3b11b9f8c93e2bbe30eabaf68716e8.html#a7d3b11b9f8c93e2bbe30eabaf68716e8", null ],
+    [ "_methods", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a247af3b3cdf17a2d3f70c9fa158b1325.html#a247af3b3cdf17a2d3f70c9fa158b1325", null ],
+    [ "_readerMethods", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a74ccc28222f181a6777a5dea466cfadd.html#a74ccc28222f181a6777a5dea466cfadd", null ],
+    [ "_writerMethods", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_a4f79576119aa7f1a413fcf44068f924a.html#a4f79576119aa7f1a413fcf44068f924a", null ],
+    [ "Contract", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_ae054ea662234bdb32db5bd7838f32014.html#ae054ea662234bdb32db5bd7838f32014", null ],
+    [ "UseLegacySerializerGeneration", "dc/df1/classSystem_1_1Xml_1_1Serialization_1_1TempAssembly_aeb92af04e52f6bac6872d61f60a8bcb0.html#aeb92af04e52f6bac6872d61f60a8bcb0", null ]
+];

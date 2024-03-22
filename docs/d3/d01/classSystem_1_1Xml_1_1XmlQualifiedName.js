@@ -1,0 +1,25 @@
+var classSystem_1_1Xml_1_1XmlQualifiedName =
+[
+    [ "XmlQualifiedName", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a0fa75d8fad22f12f18ee7e57187fc932.html#a0fa75d8fad22f12f18ee7e57187fc932", null ],
+    [ "XmlQualifiedName", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a916c90dc90f2b9b9065f677aa07a868a.html#a916c90dc90f2b9b9065f677aa07a868a", null ],
+    [ "XmlQualifiedName", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a95616357044277eea3d30e8dc157bdda.html#a95616357044277eea3d30e8dc157bdda", null ],
+    [ "Atomize", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a36e199083da549c4fe4f244a09e214dd.html#a36e199083da549c4fe4f244a09e214dd", null ],
+    [ "Clone", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a6536255042a3ff7a13a8dbb5a4194289.html#a6536255042a3ff7a13a8dbb5a4194289", null ],
+    [ "Equals", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a77719ba04e17ac767811ed97dfe05cab.html#a77719ba04e17ac767811ed97dfe05cab", null ],
+    [ "GetHashCode", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_ac983061c46d9f75c1e560154f2f12ab3.html#ac983061c46d9f75c1e560154f2f12ab3", null ],
+    [ "Init", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_af27038ef96b22987bc2ed7898e24abdd.html#af27038ef96b22987bc2ed7898e24abdd", null ],
+    [ "operator!=", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_aae5dde85565237e93e4f738212c440fe.html#aae5dde85565237e93e4f738212c440fe", null ],
+    [ "operator==", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_add080d8bb15ba9abd2acbbfd9e86169a.html#add080d8bb15ba9abd2acbbfd9e86169a", null ],
+    [ "Parse", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a46db0459ff4c53e4403f111a6dcadb1f.html#a46db0459ff4c53e4403f111a6dcadb1f", null ],
+    [ "SetNamespace", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_ab5a53d7fb0f71090033cc4476dfbc808.html#ab5a53d7fb0f71090033cc4476dfbc808", null ],
+    [ "ToString", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a0169dc42a0b81cfef5771865023ee8dd.html#a0169dc42a0b81cfef5771865023ee8dd", null ],
+    [ "ToString", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a43963b18c051771689652d5c3036c886.html#a43963b18c051771689652d5c3036c886", null ],
+    [ "Verify", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a891fde0d3c827c7c39c37756c5037bb6.html#a891fde0d3c827c7c39c37756c5037bb6", null ],
+    [ "_hash", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a8f31aa5d9da3f7bfbd228aba90d6a0ab.html#a8f31aa5d9da3f7bfbd228aba90d6a0ab", null ],
+    [ "_name", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a6a1643e05ed5fd1f558aa011ba10f146.html#a6a1643e05ed5fd1f558aa011ba10f146", null ],
+    [ "_ns", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_ab357b4b266758e27f7a8a4b89559fb90.html#ab357b4b266758e27f7a8a4b89559fb90", null ],
+    [ "Empty", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_ae85a1508a90fe44a015156232772e93d.html#ae85a1508a90fe44a015156232772e93d", null ],
+    [ "IsEmpty", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a79a9fe43951faa52ad53021fd075613c.html#a79a9fe43951faa52ad53021fd075613c", null ],
+    [ "Name", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_a26548a1288e03197cd3bc6348f5e4285.html#a26548a1288e03197cd3bc6348f5e4285", null ],
+    [ "Namespace", "d3/d01/classSystem_1_1Xml_1_1XmlQualifiedName_ad49bb2c17427979579732279c893523c.html#ad49bb2c17427979579732279c893523c", null ]
+];

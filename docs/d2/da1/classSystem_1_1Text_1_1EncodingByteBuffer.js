@@ -1,0 +1,28 @@
+var classSystem_1_1Text_1_1EncodingByteBuffer =
+[
+    [ "EncodingByteBuffer", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_af689cd390a69655bc762114c67d12247.html#af689cd390a69655bc762114c67d12247", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_af7a63c4d643141d0ad106678c8d63332.html#af7a63c4d643141d0ad106678c8d63332", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ac4b9e7cc830765ac55996528126c4b35.html#ac4b9e7cc830765ac55996528126c4b35", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_adb25bdd353a862e7cd3bbe597082cbfa.html#adb25bdd353a862e7cd3bbe597082cbfa", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ad90ce1411e6fc45ea15dcae84929745a.html#ad90ce1411e6fc45ea15dcae84929745a", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a2bed69cb4bb4ccb66605455e04dac119.html#a2bed69cb4bb4ccb66605455e04dac119", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ae289a42153fb78713e362be24abd9de3.html#ae289a42153fb78713e362be24abd9de3", null ],
+    [ "AddByte", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ae59ade5ec10153e960445822d8fbf2ce.html#ae59ade5ec10153e960445822d8fbf2ce", null ],
+    [ "Fallback", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a40553d57d3e27edc5ae657d0886c233b.html#a40553d57d3e27edc5ae657d0886c233b", null ],
+    [ "GetNextChar", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a5db48750767e2977aee2e1749673f3df.html#a5db48750767e2977aee2e1749673f3df", null ],
+    [ "MovePrevious", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a74b97fdfd046a1619481c82a4318bee2.html#a74b97fdfd046a1619481c82a4318bee2", null ],
+    [ "_byteCountResult", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a451e69c8359571493722a0e963a069d4.html#a451e69c8359571493722a0e963a069d4", null ],
+    [ "_byteEnd", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_aef8e4e1e8c13482d69422d060304374f.html#aef8e4e1e8c13482d69422d060304374f", null ],
+    [ "_bytes", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ade823c2444435b74f5500be1c7500cb6.html#ade823c2444435b74f5500be1c7500cb6", null ],
+    [ "_byteStart", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_af9aba7f562e2231b9f556b2f789a9ad7.html#af9aba7f562e2231b9f556b2f789a9ad7", null ],
+    [ "_charEnd", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_aa49b1c55fe4192e06e597a403d3dde25.html#aa49b1c55fe4192e06e597a403d3dde25", null ],
+    [ "_chars", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a7785df297cba930ac4dafea122d0394c.html#a7785df297cba930ac4dafea122d0394c", null ],
+    [ "_charStart", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a8bacede8d9dcf06dfef8f7f3b6699bc8.html#a8bacede8d9dcf06dfef8f7f3b6699bc8", null ],
+    [ "_enc", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a1684a5cbba8d4beee120eefa4095e9db.html#a1684a5cbba8d4beee120eefa4095e9db", null ],
+    [ "_encoder", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_af12a39a53c2b4430cf19c3edc88f4107.html#af12a39a53c2b4430cf19c3edc88f4107", null ],
+    [ "fallbackBuffer", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a0f53acf8c94fbd59fc06a0140f67c8a7.html#a0f53acf8c94fbd59fc06a0140f67c8a7", null ],
+    [ "fallbackBufferHelper", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ac0caf5e568f5446bb8b394efa6e48150.html#ac0caf5e568f5446bb8b394efa6e48150", null ],
+    [ "CharsUsed", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a8842386a7ae285e47e33da4ce54f0982.html#a8842386a7ae285e47e33da4ce54f0982", null ],
+    [ "Count", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_ab58a9c06f8bfa123ab65d6c7df84c7dd.html#ab58a9c06f8bfa123ab65d6c7df84c7dd", null ],
+    [ "MoreData", "d2/da1/classSystem_1_1Text_1_1EncodingByteBuffer_a45e97af0016f981f63e0b8438ecae589.html#a45e97af0016f981f63e0b8438ecae589", null ]
+];

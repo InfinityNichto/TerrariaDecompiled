@@ -1,0 +1,26 @@
+var classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs =
+[
+    [ "RowUpdatedEventArgs", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a9ba4d3f2b29f0830007e3b5c99a7753b.html#a9ba4d3f2b29f0830007e3b5c99a7753b", null ],
+    [ "AdapterInit", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_aa4f4d2f6b69170915c55532c8110cd6b.html#aa4f4d2f6b69170915c55532c8110cd6b", null ],
+    [ "AdapterInit", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_aa42e86b0a9ddeb958933c992c370943a.html#aa42e86b0a9ddeb958933c992c370943a", null ],
+    [ "CopyToRows", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a7af59db3cab8f58276b40ee5117a7452.html#a7af59db3cab8f58276b40ee5117a7452", null ],
+    [ "CopyToRows", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_ae6803a0f2fd3ba25f95cecf80b94f32d.html#ae6803a0f2fd3ba25f95cecf80b94f32d", null ],
+    [ "_command", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a4a65058053143b5e2dd5ec115d20c1ce.html#a4a65058053143b5e2dd5ec115d20c1ce", null ],
+    [ "_dataRow", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a7975e511c92a20ea79eadcb60e776c10.html#a7975e511c92a20ea79eadcb60e776c10", null ],
+    [ "_dataRows", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a12935919de1a148a550cf3fdd839e47d.html#a12935919de1a148a550cf3fdd839e47d", null ],
+    [ "_errors", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a7df586596fcff3411c1861ec599a18d9.html#a7df586596fcff3411c1861ec599a18d9", null ],
+    [ "_recordsAffected", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a35fd77af0b78a03869ef62c6ed5ae820.html#a35fd77af0b78a03869ef62c6ed5ae820", null ],
+    [ "_statementType", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a5f2ff47693976ab417f46da61f697cf2.html#a5f2ff47693976ab417f46da61f697cf2", null ],
+    [ "_status", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a0d938a0f3ef61051dccef7e2a1c2d627.html#a0d938a0f3ef61051dccef7e2a1c2d627", null ],
+    [ "_tableMapping", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a707e6e1f472467e135ad6fc8f55e881c.html#a707e6e1f472467e135ad6fc8f55e881c", null ],
+    [ "Empty", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs.html#aee7caaeb37b8beddd2126e6f680dc0a3", null ],
+    [ "Command", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a38db7ca3d24be232c65cb4524d15504c.html#a38db7ca3d24be232c65cb4524d15504c", null ],
+    [ "Errors", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a242af902105bb3d6ae58da9d8b0c03ed.html#a242af902105bb3d6ae58da9d8b0c03ed", null ],
+    [ "RecordsAffected", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a8cf411498073370b81d59dd328dd1660.html#a8cf411498073370b81d59dd328dd1660", null ],
+    [ "Row", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a0ccc93eb016aa40866a9dff1d7abec6f.html#a0ccc93eb016aa40866a9dff1d7abec6f", null ],
+    [ "RowCount", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_aaaf27e80b1f703cea3eeed6df73df14e.html#aaaf27e80b1f703cea3eeed6df73df14e", null ],
+    [ "Rows", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a5372cb2f80dc325145b9ce77458c4df6.html#a5372cb2f80dc325145b9ce77458c4df6", null ],
+    [ "StatementType", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a21151bb91c0fe9b85cf2c55552f86c48.html#a21151bb91c0fe9b85cf2c55552f86c48", null ],
+    [ "Status", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_a93df467999fb8b9816bcc2b98dc553fb.html#a93df467999fb8b9816bcc2b98dc553fb", null ],
+    [ "TableMapping", "d3/da7/classSystem_1_1Data_1_1Common_1_1RowUpdatedEventArgs_ac502e2147df8e4217208ec13f089c64d.html#ac502e2147df8e4217208ec13f089c64d", null ]
+];

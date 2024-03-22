@@ -1,7 +1,11 @@
 var structTerraria_1_1IO_1_1ResourcePackVersion =
 [
     [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion_a67d7fd40c4c7d0095917949aca816fd7.html#a67d7fd40c4c7d0095917949aca816fd7", null ],
+    [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
     [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion_a92da0e773386d46d4a1d68d3e8040337.html#a92da0e773386d46d4a1d68d3e8040337", null ],
+    [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion.html#a01c7b7c2613269003848242162567051", null ],
+    [ "CompareTo", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion.html#a01c7b7c2613269003848242162567051", null ],
     [ "Create", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion_a69fff6bd9c449aa41117dd58ca2ce559.html#a69fff6bd9c449aa41117dd58ca2ce559", null ],
     [ "Equals", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion_a0f46de2423e9bd54aac9dc9ead01c677.html#a0f46de2423e9bd54aac9dc9ead01c677", null ],
     [ "GetFormattedVersion", "dd/d20/structTerraria_1_1IO_1_1ResourcePackVersion_a08281f507ee977c53ce7bfb544dac8ba.html#a08281f507ee977c53ce7bfb544dac8ba", null ],

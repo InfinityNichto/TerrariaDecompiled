@@ -1,0 +1,27 @@
+var classSystem_1_1Collections_1_1Specialized_1_1ListDictionary =
+[
+    [ "DictionaryNode", "d6/d98/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1DictionaryNode.html", "d6/d98/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1DictionaryNode" ],
+    [ "NodeEnumerator", "da/d0b/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1NodeEnumerator.html", "da/d0b/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1NodeEnumerator" ],
+    [ "NodeKeyValueCollection", "d4/dd1/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1NodeKeyValueCollection.html", "d4/dd1/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_1_1NodeKeyValueCollection" ],
+    [ "ListDictionary", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_afcafafa0adcba2fdc03c2d5fef48564e.html#afcafafa0adcba2fdc03c2d5fef48564e", null ],
+    [ "ListDictionary", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a10ab0b070bfdabb8af18b8cb42b0c790.html#a10ab0b070bfdabb8af18b8cb42b0c790", null ],
+    [ "Add", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a5649445457a6b5c790d236c1dc2dfa71.html#a5649445457a6b5c790d236c1dc2dfa71", null ],
+    [ "Clear", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a3f218691cd301db2c0c609cdec94c8b7.html#a3f218691cd301db2c0c609cdec94c8b7", null ],
+    [ "Contains", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_aa2ec11f817ccb0389df9f06b60541b42.html#aa2ec11f817ccb0389df9f06b60541b42", null ],
+    [ "CopyTo", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a29d53a3ef160b08af8e0ce542f1d2d3a.html#a29d53a3ef160b08af8e0ce542f1d2d3a", null ],
+    [ "GetEnumerator", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_aaaf1812810966c58f4ac80615eda0b8c.html#aaaf1812810966c58f4ac80615eda0b8c", null ],
+    [ "GetEnumerator", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_af0305d32c911993c0663c58720e4dcc2.html#af0305d32c911993c0663c58720e4dcc2", null ],
+    [ "Remove", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_aa01471de024484c3e26aab9e2bc63a0e.html#aa01471de024484c3e26aab9e2bc63a0e", null ],
+    [ "comparer", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_aead482ecb7ae7eacc915d0351f50206b.html#aead482ecb7ae7eacc915d0351f50206b", null ],
+    [ "count", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a9fd5b6ea34342b1b22adf4b1c4999932.html#a9fd5b6ea34342b1b22adf4b1c4999932", null ],
+    [ "head", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a3e8d83ada6c6480cc335d9d629caebf4.html#a3e8d83ada6c6480cc335d9d629caebf4", null ],
+    [ "version", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a1eb08851651563abca047651ab0d7bdb.html#a1eb08851651563abca047651ab0d7bdb", null ],
+    [ "Count", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a5e7ad2545d680865b9f99627aadf35eb.html#a5e7ad2545d680865b9f99627aadf35eb", null ],
+    [ "IsFixedSize", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a039070286c9fbf898c5d041a87ae3be7.html#a039070286c9fbf898c5d041a87ae3be7", null ],
+    [ "IsReadOnly", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_aaa7e23fb6c4e7093f5cbbab67714997a.html#aaa7e23fb6c4e7093f5cbbab67714997a", null ],
+    [ "IsSynchronized", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a7800e718dac8dca5932885384224d835.html#a7800e718dac8dca5932885384224d835", null ],
+    [ "Keys", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a5d8a7e38a8bc2cd20103a52bcbcb8ebb.html#a5d8a7e38a8bc2cd20103a52bcbcb8ebb", null ],
+    [ "SyncRoot", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_ab6a9df4a2f2b45918fd2fe481ddde95a.html#ab6a9df4a2f2b45918fd2fe481ddde95a", null ],
+    [ "this[object key]", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_a7d417be47b25022d18d958781e760284.html#a7d417be47b25022d18d958781e760284", null ],
+    [ "Values", "de/d20/classSystem_1_1Collections_1_1Specialized_1_1ListDictionary_ad9c720eb4e575d849d998a80d7667509.html#ad9c720eb4e575d849d998a80d7667509", null ]
+];

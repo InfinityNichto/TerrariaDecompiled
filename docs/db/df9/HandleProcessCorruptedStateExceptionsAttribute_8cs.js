@@ -1,0 +1,4 @@
+var HandleProcessCorruptedStateExceptionsAttribute_8cs =
+[
+    [ "System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute", "d3/d45/classSystem_1_1Runtime_1_1ExceptionServices_1_1HandleProcessCorruptedStateExceptionsAttribute.html", "d3/d45/classSystem_1_1Runtime_1_1ExceptionServices_1_1HandleProcessCorruptedStateExceptionsAttribute" ]
+];

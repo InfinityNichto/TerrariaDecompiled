@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1QuicBuffer =
+[
+    [ "Buffer", "d7/db5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1QuicBuffer_adb44e2b958b219e9398806cc6900b83c.html#adb44e2b958b219e9398806cc6900b83c", null ],
+    [ "Length", "d7/db5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1QuicBuffer_a8237ab49e76a753eaeccd231b8bce889.html#a8237ab49e76a753eaeccd231b8bce889", null ]
+];

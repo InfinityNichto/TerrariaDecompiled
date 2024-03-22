@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['zipbehavior_0',['ZipBehavior',['../db/d6a/classTerraria_1_1GameContent_1_1Skies_1_1MartianSky_1_1ZipBehavior.html',1,'Terraria::GameContent::Skies::MartianSky']]],
-  ['zipcontentsource_1',['ZipContentSource',['../d8/d8b/classReLogic_1_1Content_1_1Sources_1_1ZipContentSource.html',1,'ReLogic::Content::Sources']]],
-  ['zombieknockondoor_2',['ZombieKnockOnDoor',['../dc/dd4/classTerraria_1_1GameContent_1_1Animations_1_1Actions_1_1NPCs_1_1ZombieKnockOnDoor.html',1,'Terraria::GameContent::Animations::Actions::NPCs']]]
+  ['zeroopnode_0',['ZeroOpNode',['../df/d88/classSystem_1_1Data_1_1ZeroOpNode.html',1,'System::Data']]],
+  ['zip64endofcentraldirectorylocator_1',['Zip64EndOfCentralDirectoryLocator',['../dd/d52/structSystem_1_1IO_1_1Compression_1_1Zip64EndOfCentralDirectoryLocator.html',1,'System::IO::Compression']]],
+  ['zip64endofcentraldirectoryrecord_2',['Zip64EndOfCentralDirectoryRecord',['../dd/dde/structSystem_1_1IO_1_1Compression_1_1Zip64EndOfCentralDirectoryRecord.html',1,'System::IO::Compression']]],
+  ['zip64extrafield_3',['Zip64ExtraField',['../db/def/structSystem_1_1IO_1_1Compression_1_1Zip64ExtraField.html',1,'System::IO::Compression']]],
+  ['ziparchive_4',['ZipArchive',['../d6/d87/classSystem_1_1IO_1_1Compression_1_1ZipArchive.html',1,'System::IO::Compression']]],
+  ['ziparchiveentry_5',['ZipArchiveEntry',['../dc/d4b/classSystem_1_1IO_1_1Compression_1_1ZipArchiveEntry.html',1,'System::IO::Compression']]],
+  ['zipbehavior_6',['ZipBehavior',['../db/d6a/classTerraria_1_1GameContent_1_1Skies_1_1MartianSky_1_1ZipBehavior.html',1,'Terraria::GameContent::Skies::MartianSky']]],
+  ['zipcentraldirectoryfileheader_7',['ZipCentralDirectoryFileHeader',['../db/db5/structSystem_1_1IO_1_1Compression_1_1ZipCentralDirectoryFileHeader.html',1,'System::IO::Compression']]],
+  ['zipcontentsource_8',['ZipContentSource',['../d8/d8b/classReLogic_1_1Content_1_1Sources_1_1ZipContentSource.html',1,'ReLogic::Content::Sources']]],
+  ['zipendofcentraldirectoryblock_9',['ZipEndOfCentralDirectoryBlock',['../d7/d0f/structSystem_1_1IO_1_1Compression_1_1ZipEndOfCentralDirectoryBlock.html',1,'System::IO::Compression']]],
+  ['zipfile_10',['ZipFile',['../dc/df2/classSystem_1_1IO_1_1Compression_1_1ZipFile.html',1,'System::IO::Compression']]],
+  ['zipfileextensions_11',['ZipFileExtensions',['../da/d2b/classSystem_1_1IO_1_1Compression_1_1ZipFileExtensions.html',1,'System::IO::Compression']]],
+  ['zipfileutils_12',['ZipFileUtils',['../d9/d0b/classSystem_1_1IO_1_1Compression_1_1ZipFileUtils.html',1,'System::IO::Compression']]],
+  ['zipgenericextrafield_13',['ZipGenericExtraField',['../dc/da6/structSystem_1_1IO_1_1Compression_1_1ZipGenericExtraField.html',1,'System::IO::Compression']]],
+  ['ziphelper_14',['ZipHelper',['../d3/d92/classSystem_1_1IO_1_1Compression_1_1ZipHelper.html',1,'System::IO::Compression']]],
+  ['ziplocalfileheader_15',['ZipLocalFileHeader',['../d8/d8a/structSystem_1_1IO_1_1Compression_1_1ZipLocalFileHeader.html',1,'System::IO::Compression']]],
+  ['zipqueryoperator_16',['ZipQueryOperator',['../d6/d8c/classSystem_1_1Linq_1_1Parallel_1_1ZipQueryOperator.html',1,'System::Linq::Parallel']]],
+  ['zipqueryoperatorresults_17',['ZipQueryOperatorResults',['../d4/db4/classSystem_1_1Linq_1_1Parallel_1_1ZipQueryOperator_1_1ZipQueryOperatorResults.html',1,'System::Linq::Parallel::ZipQueryOperator']]],
+  ['zlib_18',['zlib',['../d3/d20/classInterop_1_1zlib.html',1,'Interop']]],
+  ['zlibexception_19',['ZLibException',['../d5/dc9/classSystem_1_1IO_1_1Compression_1_1ZLibException.html',1,'System::IO::Compression']]],
+  ['zlibnative_20',['ZLibNative',['../d0/d2e/classSystem_1_1IO_1_1Compression_1_1ZLibNative.html',1,'System::IO::Compression']]],
+  ['zlibordeflatestream_21',['ZLibOrDeflateStream',['../de/d20/classSystem_1_1Net_1_1Http_1_1DecompressionHandler_1_1DeflateDecompressedContent_1_1ZLibOrDeflateStream.html',1,'System::Net::Http::DecompressionHandler::DeflateDecompressedContent']]],
+  ['zlibstream_22',['ZLibStream',['../d2/d6d/classSystem_1_1IO_1_1Compression_1_1ZLibStream.html',1,'System::IO::Compression']]],
+  ['zlibstreamhandle_23',['ZLibStreamHandle',['../da/d70/classSystem_1_1IO_1_1Compression_1_1ZLibNative_1_1ZLibStreamHandle.html',1,'System::IO::Compression::ZLibNative']]],
+  ['zombieknockondoor_24',['ZombieKnockOnDoor',['../dc/dd4/classTerraria_1_1GameContent_1_1Animations_1_1Actions_1_1NPCs_1_1ZombieKnockOnDoor.html',1,'Terraria::GameContent::Animations::Actions::NPCs']]],
+  ['zstream_25',['ZStream',['../d4/de0/structSystem_1_1IO_1_1Compression_1_1ZLibNative_1_1ZStream.html',1,'System::IO::Compression::ZLibNative']]]
 ];

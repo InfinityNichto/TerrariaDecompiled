@@ -1,0 +1,25 @@
+var classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer =
+[
+    [ "CreateAndInitialize", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a4a393986474dfff17d6618a83603103d", null ],
+    [ "DrainRemainingDataForGetCharCount", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a91ced4249f9f106f14c5bd7ed39d0907", null ],
+    [ "Fallback", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer_a1372ccf7269c08b38f635301dbd76612.html#a1372ccf7269c08b38f635301dbd76612", null ],
+    [ "GetNextChar", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer_af172540f62709859834996477c45cd5d.html#af172540f62709859834996477c45cd5d", null ],
+    [ "GetNextRune", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a74e0cc25fef299445cff0e27c14d7342", null ],
+    [ "InternalFallback", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a1ec4d8d393eccd4b0b986857dc1273f2", null ],
+    [ "InternalFallback", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a8835cfe3d9ef34e0db7a0e98dfc21181", null ],
+    [ "InternalFallbackGetCharCount", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a366f06eff0f691b73a1e6a2c99ba29e0", null ],
+    [ "InternalInitialize", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a256c3df70054834e1e7d5884902ef169", null ],
+    [ "InternalReset", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#acec9a734509d809f4bc69720ee532164", null ],
+    [ "MovePrevious", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer_a2d5d5172ee893ef40a0729a8bcce0cce.html#a2d5d5172ee893ef40a0729a8bcce0cce", null ],
+    [ "Reset", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a83dcb05f2b03bdbe1bf9e0499d291b10", null ],
+    [ "Throw", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer_a91042966a91ffe86dd7461c38b8d4935.html#a91042966a91ffe86dd7461c38b8d4935", null ],
+    [ "ThrowLastBytesRecursive", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a9acd9e9f9f28aba013aa7c53440da393", null ],
+    [ "TryDrainRemainingDataForGetChars", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#aeca52e7a8edeec240681ee5623dac507", null ],
+    [ "TryInternalFallbackGetChars", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a7f696d47d586de4ed450290bfb0ff890", null ],
+    [ "_decoder", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#afc858a79d3c0505e7027a738b9657b7b", null ],
+    [ "_encoding", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a4778b3f6f228174df7857964ea1ed375", null ],
+    [ "_originalByteCount", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a53b82e27218494027a44ff45ac3dd4a4", null ],
+    [ "byteStart", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a456e397f207be98a64cb0adf4d02375f", null ],
+    [ "charEnd", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer.html#a4f4fab7373dcba6de7127b0c67e736ec", null ],
+    [ "Remaining", "dc/da0/classSystem_1_1Text_1_1DecoderExceptionFallbackBuffer_adf7f95d1c90db8dfef7f748e5b382275.html#adf7f95d1c90db8dfef7f748e5b382275", null ]
+];

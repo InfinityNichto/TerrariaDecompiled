@@ -1,0 +1,6 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer =
+[
+    [ "Compare", "d7/dae/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer_a73157658a888af24b2bc5ad6da5ebdbc.html#a73157658a888af24b2bc5ad6da5ebdbc", null ],
+    [ "Compare", "d7/dae/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer.html#ac362ad14185651cb4b044b65f176f0b8", null ],
+    [ "Singleton", "d7/dae/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer_a408fbe18f6f2159d33a638f05b1ce5a8.html#a408fbe18f6f2159d33a638f05b1ce5a8", null ]
+];

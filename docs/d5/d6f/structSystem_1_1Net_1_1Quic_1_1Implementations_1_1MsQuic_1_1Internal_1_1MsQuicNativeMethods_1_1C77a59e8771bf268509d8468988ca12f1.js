@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C77a59e8771bf268509d8468988ca12f1 =
+[
+    [ "Flags", "d5/d6f/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C77a59e8771bf268509d8468988ca12f1_ab8b50db83a5f632d7d862dfe6574f875.html#ab8b50db83a5f632d7d862dfe6574f875", null ]
+];

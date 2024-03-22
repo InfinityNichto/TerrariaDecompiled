@@ -1,0 +1,25 @@
+var classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection =
+[
+    [ "ListSortDescriptionCollection", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a4fe29a19692d75b0bc6e74bf016ae42e.html#a4fe29a19692d75b0bc6e74bf016ae42e", null ],
+    [ "ListSortDescriptionCollection", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_ac8ffea5fe8da954ec5d114b2dd440b83.html#ac8ffea5fe8da954ec5d114b2dd440b83", null ],
+    [ "Add", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_ac5b170e05eb6917c74f677b3a2a9ec78.html#ac5b170e05eb6917c74f677b3a2a9ec78", null ],
+    [ "Add", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection.html#a93662c688a6e680976ca2053d851053a", null ],
+    [ "Clear", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a9a03ac5bf30bcd84b12cb6eb8a4df653.html#a9a03ac5bf30bcd84b12cb6eb8a4df653", null ],
+    [ "Contains", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_ab6b6f9c563e2b724d37111bf2ab22733.html#ab6b6f9c563e2b724d37111bf2ab22733", null ],
+    [ "CopyTo", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a9ee1ffcc04a01a3ea978e7cf7bff8b0c.html#a9ee1ffcc04a01a3ea978e7cf7bff8b0c", null ],
+    [ "GetEnumerator", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a42219e322212ce078af3b0370b45856f.html#a42219e322212ce078af3b0370b45856f", null ],
+    [ "IndexOf", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a1160fb410515e4e1b7c9b885dc1529ab.html#a1160fb410515e4e1b7c9b885dc1529ab", null ],
+    [ "Insert", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a516baafc41bc1ddbb1fb59c991576976.html#a516baafc41bc1ddbb1fb59c991576976", null ],
+    [ "Insert", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection.html#a67a2f70d07f3e2e9a4f15bfc20a7a26b", null ],
+    [ "Remove", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a032deeb7ccef7128565ac6caf5392191.html#a032deeb7ccef7128565ac6caf5392191", null ],
+    [ "Remove", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection.html#ac9e4087bd16c1891b2d5d74b76713d2b", null ],
+    [ "RemoveAt", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a13121e0e2760317e7dea6b1e5211aac5.html#a13121e0e2760317e7dea6b1e5211aac5", null ],
+    [ "_sorts", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_afedd23e03a53e26d10571c79413c47e1.html#afedd23e03a53e26d10571c79413c47e1", null ],
+    [ "Count", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a408927123f05007ffcabe3203b3ccd3f.html#a408927123f05007ffcabe3203b3ccd3f", null ],
+    [ "IsFixedSize", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a4aa350c6a945445afca0db0c5543e106.html#a4aa350c6a945445afca0db0c5543e106", null ],
+    [ "IsReadOnly", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_ac75543caf3555f495f48951bf8bb1114.html#ac75543caf3555f495f48951bf8bb1114", null ],
+    [ "IsSynchronized", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a5e52cd5e8d9db13e5ed4cbe3c571eb72.html#a5e52cd5e8d9db13e5ed4cbe3c571eb72", null ],
+    [ "SyncRoot", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_a2c6050e9583b34b07976d18621c2df20.html#a2c6050e9583b34b07976d18621c2df20", null ],
+    [ "this[int index]", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_af8c40a66674d8d2d85ff9dcc36688490.html#af8c40a66674d8d2d85ff9dcc36688490", null ],
+    [ "this[int index]", "d8/d3a/classSystem_1_1ComponentModel_1_1ListSortDescriptionCollection_af938d90fecae98283527deeb04b65149.html#af938d90fecae98283527deeb04b65149", null ]
+];

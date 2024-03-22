@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler =
+[
+    [ "ActivityStartData", "de/de4/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ActivityStartData.html", "de/de4/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ActivityStartData" ],
+    [ "ActivityStopData", "da/da7/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ActivityStopData.html", "da/da7/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ActivityStopData" ],
+    [ "ExceptionData", "de/d62/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ExceptionData.html", "de/d62/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ExceptionData" ],
+    [ "RequestData", "db/d29/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1RequestData.html", "db/d29/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1RequestData" ],
+    [ "ResponseData", "d7/d90/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ResponseData.html", "d7/d90/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_1_1ResponseData" ],
+    [ "DiagnosticsHandler", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_aa57f98bc895d909f20d4360ff20281f6.html#aa57f98bc895d909f20d4360ff20281f6", null ],
+    [ "Dispose", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler.html#ab4b13943d5d992b43f3e4e39e145760d", null ],
+    [ "Dispose", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_ae0e18e1335e6e4bfd912341b82faf8c1.html#ae0e18e1335e6e4bfd912341b82faf8c1", null ],
+    [ "InjectHeaders", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_a39ad61d800e24b95be336a33bfc80bb6.html#a39ad61d800e24b95be336a33bfc80bb6", null ],
+    [ "IsEnabled", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_aab94c9b523c9b32ddd95733412975fdf.html#aab94c9b523c9b32ddd95733412975fdf", null ],
+    [ "IsGloballyEnabled", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_a42f378ffa16926ee9769dbbff7104ba2.html#a42f378ffa16926ee9769dbbff7104ba2", null ],
+    [ "Send", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler.html#aa6da074caead87c80f846fe525e9fbfa", null ],
+    [ "SendAsync", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_af0838682571dd79d08db1862e2c96c94.html#af0838682571dd79d08db1862e2c96c94", null ],
+    [ "SendAsync", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler.html#ab2e18bfaae517cc55d3ebf93343e9e0e", null ],
+    [ "SendAsyncCore", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_ace36448c6205476e7550eadbbc16f2f8.html#ace36448c6205476e7550eadbbc16f2f8", null ],
+    [ "StartActivity<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T >", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_af2bc785975df7791fc1e1e3865653787.html#af2bc785975df7791fc1e1e3865653787", null ],
+    [ "StopActivity<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T >", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_a9700fb43462ce30bfcb9c97513a3a955.html#a9700fb43462ce30bfcb9c97513a3a955", null ],
+    [ "Write<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T >", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_ab4df1a1ad24c727d7284574ddf20b154.html#ab4df1a1ad24c727d7284574ddf20b154", null ],
+    [ "_innerHandler", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_afde5b5a67f9e1300dde47cb5007e5896.html#afde5b5a67f9e1300dde47cb5007e5896", null ],
+    [ "_propagator", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_aeebe26a80af2a01d8cf549a3d7fab757.html#aeebe26a80af2a01d8cf549a3d7fab757", null ],
+    [ "_propagatorFields", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_a56ca6f8c850114398e53fbedad282498.html#a56ca6f8c850114398e53fbedad282498", null ],
+    [ "s_diagnosticListener", "d9/d4b/classSystem_1_1Net_1_1Http_1_1DiagnosticsHandler_aa4ee907706a89dc52cddc13395d72de5.html#aa4ee907706a89dc52cddc13395d72de5", null ]
+];

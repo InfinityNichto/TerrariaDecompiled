@@ -1,0 +1,25 @@
+var structSystem_1_1Text_1_1Json_1_1ReadStackFrame =
+[
+    [ "EndConstructorParameter", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a412f8276e394deeb0f2ccefe9d6f33c3.html#a412f8276e394deeb0f2ccefe9d6f33c3", null ],
+    [ "EndElement", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_ae3611ede82d53531a1d160afbac78a2e.html#ae3611ede82d53531a1d160afbac78a2e", null ],
+    [ "EndProperty", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a6045b757573cfbfcec350a83e21ab208.html#a6045b757573cfbfcec350a83e21ab208", null ],
+    [ "IsProcessingDictionary", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a5d888b51895a4d878747624a63c07231.html#a5d888b51895a4d878747624a63c07231", null ],
+    [ "IsProcessingEnumerable", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_aca1fb9f40aa5efe0d8cf54aac91f47f6.html#aca1fb9f40aa5efe0d8cf54aac91f47f6", null ],
+    [ "CtorArgumentState", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a3e71af8bea26dea9b01d2784377be048.html#a3e71af8bea26dea9b01d2784377be048", null ],
+    [ "CtorArgumentStateIndex", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a174a4cfcbc60c25dfc9bce04f4beaa42.html#a174a4cfcbc60c25dfc9bce04f4beaa42", null ],
+    [ "DictionaryKey", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a8ba338ca70813a1ee23dc4e8a24c18ca.html#a8ba338ca70813a1ee23dc4e8a24c18ca", null ],
+    [ "JsonPropertyInfo", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_ae8cfd048d5be57343c2c1a19d3748cd2.html#ae8cfd048d5be57343c2c1a19d3748cd2", null ],
+    [ "JsonPropertyName", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_aa71ab1e83cd389670039d97eebd35c1b.html#aa71ab1e83cd389670039d97eebd35c1b", null ],
+    [ "JsonPropertyNameAsString", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a792600a3f2c14156cba0230c04f1daa1.html#a792600a3f2c14156cba0230c04f1daa1", null ],
+    [ "JsonTypeInfo", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a592303f138fe4f0f0170524dcf72635a.html#a592303f138fe4f0f0170524dcf72635a", null ],
+    [ "NumberHandling", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_af1a22afb94af391bd8f182f5fe29ddd8.html#af1a22afb94af391bd8f182f5fe29ddd8", null ],
+    [ "ObjectState", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_ad929e4af874d72c8fd2619a30afb6cf5.html#ad929e4af874d72c8fd2619a30afb6cf5", null ],
+    [ "OriginalDepth", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_ac343937ff9ec7034e7f08559327d84f7.html#ac343937ff9ec7034e7f08559327d84f7", null ],
+    [ "OriginalTokenType", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a06d55f5d5ca2bf65b6df56d834cf15de.html#a06d55f5d5ca2bf65b6df56d834cf15de", null ],
+    [ "PropertyIndex", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a537f237e4a4f8ff8087b3ef6c6417d7d.html#a537f237e4a4f8ff8087b3ef6c6417d7d", null ],
+    [ "PropertyRefCache", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_aee972f1f10e136b5f1eb43c72e055c18.html#aee972f1f10e136b5f1eb43c72e055c18", null ],
+    [ "PropertyState", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_a5986e21ccb7c461e248674fc268998f6.html#a5986e21ccb7c461e248674fc268998f6", null ],
+    [ "ReturnValue", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_aa7e9189c6172ee84a7fe9e8d106f51c1.html#aa7e9189c6172ee84a7fe9e8d106f51c1", null ],
+    [ "UseExtensionProperty", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_ae53a631c64f34cbc7c03868f3ade2490.html#ae53a631c64f34cbc7c03868f3ade2490", null ],
+    [ "ValidateEndTokenOnArray", "d2/d72/structSystem_1_1Text_1_1Json_1_1ReadStackFrame_af7eeec6f4341ca2c418a288735365c73.html#af7eeec6f4341ca2c418a288735365c73", null ]
+];

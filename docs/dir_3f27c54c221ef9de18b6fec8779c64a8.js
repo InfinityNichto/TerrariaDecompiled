@@ -1,0 +1,27 @@
+var dir_3f27c54c221ef9de18b6fec8779c64a8 =
+[
+    [ "BatchedJoinBlockTarget.cs", "d4/d0d/BatchedJoinBlockTarget_8cs.html", "d4/d0d/BatchedJoinBlockTarget_8cs" ],
+    [ "BatchedJoinBlockTargetSharedResources.cs", "d8/d70/BatchedJoinBlockTargetSharedResources_8cs.html", "d8/d70/BatchedJoinBlockTargetSharedResources_8cs" ],
+    [ "BoundingState.cs", "d3/d44/BoundingState_8cs.html", "d3/d44/BoundingState_8cs" ],
+    [ "BoundingStateWithPostponed.cs", "de/d4b/BoundingStateWithPostponed_8cs.html", "de/d4b/BoundingStateWithPostponed_8cs" ],
+    [ "BoundingStateWithPostponedAndTask.cs", "d5/d66/BoundingStateWithPostponedAndTask_8cs.html", "d5/d66/BoundingStateWithPostponedAndTask_8cs" ],
+    [ "Common.cs", "d5/db8/Common_8cs.html", "d5/db8/Common_8cs" ],
+    [ "DataflowEtwProvider.cs", "dd/de7/DataflowEtwProvider_8cs.html", "dd/de7/DataflowEtwProvider_8cs" ],
+    [ "Disposables.cs", "d9/d3c/Disposables_8cs.html", "d9/d3c/Disposables_8cs" ],
+    [ "EnumerableDebugView.cs", "d4/df6/EnumerableDebugView_8cs.html", "d4/df6/EnumerableDebugView_8cs" ],
+    [ "IDebuggerDisplay.cs", "d7/d45/IDebuggerDisplay_8cs.html", "d7/d45/IDebuggerDisplay_8cs" ],
+    [ "ImmutableArray.cs", "db/d0e/System_8Threading_8Tasks_8Dataflow_2System_8Threading_8Tasks_8Dataflow_8Internal_2ImmutableArray_8cs.html", "db/d0e/System_8Threading_8Tasks_8Dataflow_2System_8Threading_8Tasks_8Dataflow_8Internal_2ImmutableArray_8cs" ],
+    [ "IReorderingBuffer.cs", "dd/daf/IReorderingBuffer_8cs.html", "dd/daf/IReorderingBuffer_8cs" ],
+    [ "JoinBlockTarget.cs", "dc/d2f/JoinBlockTarget_8cs.html", "dc/d2f/JoinBlockTarget_8cs" ],
+    [ "JoinBlockTargetBase.cs", "d6/da8/JoinBlockTargetBase_8cs.html", "d6/da8/JoinBlockTargetBase_8cs" ],
+    [ "JoinBlockTargetSharedResources.cs", "df/d14/JoinBlockTargetSharedResources_8cs.html", "df/d14/JoinBlockTargetSharedResources_8cs" ],
+    [ "PaddedInt64.cs", "d0/db1/PaddedInt64_8cs.html", "d0/db1/PaddedInt64_8cs" ],
+    [ "QueuedMap.cs", "d5/dd5/QueuedMap_8cs.html", "d5/dd5/QueuedMap_8cs" ],
+    [ "ReorderingBuffer.cs", "d6/da7/ReorderingBuffer_8cs.html", "d6/da7/ReorderingBuffer_8cs" ],
+    [ "SourceCore.cs", "de/d28/SourceCore_8cs.html", "de/d28/SourceCore_8cs" ],
+    [ "SpscTargetCore.cs", "d2/de1/SpscTargetCore_8cs.html", "d2/de1/SpscTargetCore_8cs" ],
+    [ "TargetCore.cs", "de/d83/TargetCore_8cs.html", "de/d83/TargetCore_8cs" ],
+    [ "TargetCoreOptions.cs", "d4/dca/TargetCoreOptions_8cs.html", "d4/dca/TargetCoreOptions_8cs" ],
+    [ "TargetRegistry.cs", "d5/dbe/TargetRegistry_8cs.html", "d5/dbe/TargetRegistry_8cs" ],
+    [ "VoidResult.cs", "d7/dfb/System_8Threading_8Tasks_8Dataflow_2System_8Threading_8Tasks_8Dataflow_8Internal_2VoidResult_8cs.html", "d7/dfb/System_8Threading_8Tasks_8Dataflow_2System_8Threading_8Tasks_8Dataflow_8Internal_2VoidResult_8cs" ]
+];

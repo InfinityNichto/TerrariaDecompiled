@@ -1,0 +1,28 @@
+var classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder =
+[
+    [ "EscaperImplementation", "db/d28/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_1_1EscaperImplementation.html", "db/d28/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_1_1EscaperImplementation" ],
+    [ "DefaultHtmlEncoder", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a1fdd4fe63d7228cb0089fe7f958fe0b3.html#a1fdd4fe63d7228cb0089fe7f958fe0b3", null ],
+    [ "Create", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a1028b88b8add99d4b768cb4232a246c5", null ],
+    [ "Create", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a1cd302341a5d9efa7c6309cccb136472", null ],
+    [ "Encode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a86c25bb37f4854228e9cb99b03ebcb11", null ],
+    [ "Encode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a896d08911a13c1fa84d1affed2d44621", null ],
+    [ "Encode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#aac503fbeac15f8a9f257fc7cb2d8bca2", null ],
+    [ "Encode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#ae1d77016d71f2c18e57f43ecc3fc19ff", null ],
+    [ "Encode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a7f0ee84c8e0469d340f7181a39fc342b", null ],
+    [ "EncodeCore", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_ac00dfe078dc3ad39d6ee16ed8ec3b7ed.html#ac00dfe078dc3ad39d6ee16ed8ec3b7ed", null ],
+    [ "EncodeToNewString", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a13caac353453983522915fe7d7c165b4", null ],
+    [ "EncodeUtf8", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a768d79b7f80dac338aa69e1a356543f4", null ],
+    [ "EncodeUtf8Core", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a3a0659f89f006298362d6d077807cc34.html#a3a0659f89f006298362d6d077807cc34", null ],
+    [ "FindFirstCharacterToEncode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_add5d48285f3f063e13898cd02dc2c968.html#add5d48285f3f063e13898cd02dc2c968", null ],
+    [ "FindFirstCharacterToEncode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a86e5cc0477da025949540f63b9aa9bba.html#a86e5cc0477da025949540f63b9aa9bba", null ],
+    [ "FindFirstCharacterToEncodeUtf8", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a6371c9c104852c92921b5e873e5363ba.html#a6371c9c104852c92921b5e873e5363ba", null ],
+    [ "ThrowArgumentException_MaxOutputCharsPerInputChar", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#ac1a031f8febd95d14f73b93de039d753", null ],
+    [ "TryEncodeUnicodeScalar", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a47f45a72ed9d25ef1823c3b284e2333d.html#a47f45a72ed9d25ef1823c3b284e2333d", null ],
+    [ "TryEncodeUnicodeScalarUtf8", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#a60973dcbedd6204b3b2e1d8694ea80a9", null ],
+    [ "ValidateRanges", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#ad1330595f96b3dab6f37fcb490e2c68f", null ],
+    [ "WillEncode", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a8db27169f584021f69893b87bd7cd391.html#a8db27169f584021f69893b87bd7cd391", null ],
+    [ "_innerEncoder", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a945e233cca64c6c7c876ba1b2e386598.html#a945e233cca64c6c7c876ba1b2e386598", null ],
+    [ "BasicLatinSingleton", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a074e2732ee7962face60ca025cec1d78.html#a074e2732ee7962face60ca025cec1d78", null ],
+    [ "Default", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder.html#aa38df24067c3fe59e859bc56abb8cb0e", null ],
+    [ "MaxOutputCharactersPerInputCharacter", "d8/dda/classSystem_1_1Text_1_1Encodings_1_1Web_1_1DefaultHtmlEncoder_a470c6dcfaf42e1283365832a78a7018c.html#a470c6dcfaf42e1283365832a78a7018c", null ]
+];

@@ -1,0 +1,28 @@
+var classSystem_1_1Net_1_1Mail_1_1SmtpTransport =
+[
+    [ "SmtpTransport", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a7d96d7f7541b4bee68651ac5c49e9b7d.html#a7d96d7f7541b4bee68651ac5c49e9b7d", null ],
+    [ "SmtpTransport", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_aabc4cd53b0799deb4b65b5efa2eea2a1.html#aabc4cd53b0799deb4b65b5efa2eea2a1", null ],
+    [ "Abort", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a304aed494dd971a99d02b73db41c58f2.html#a304aed494dd971a99d02b73db41c58f2", null ],
+    [ "BeginGetConnection", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a8e4c10b7a6c6f48d38253c2dbedf4fcf.html#a8e4c10b7a6c6f48d38253c2dbedf4fcf", null ],
+    [ "BeginSendMail", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_ac5741e19ce0796eca7babcf5c47aa163.html#ac5741e19ce0796eca7babcf5c47aa163", null ],
+    [ "EndGetConnection", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a7a14b610d4ceeb62194890a71b12d35c.html#a7a14b610d4ceeb62194890a71b12d35c", null ],
+    [ "EndSendMail", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a9dbd30fd306634442e89121fc2a23bb1.html#a9dbd30fd306634442e89121fc2a23bb1", null ],
+    [ "GetConnection", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_ac5802397d4eb2509296e47ec2d52befb.html#ac5802397d4eb2509296e47ec2d52befb", null ],
+    [ "ReleaseConnection", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a4a9b496dc77cfcc41730e15ae679c449.html#a4a9b496dc77cfcc41730e15ae679c449", null ],
+    [ "SendMail", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a79836b639b75d6c1890cf9a8f0042e68.html#a79836b639b75d6c1890cf9a8f0042e68", null ],
+    [ "_authenticationModules", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_af1ec094c271df508b5e853f0ce199c44.html#af1ec094c271df508b5e853f0ce199c44", null ],
+    [ "_client", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_adfb212c3360290bd6c3961b1df10f524.html#adfb212c3360290bd6c3961b1df10f524", null ],
+    [ "_clientCertificates", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_afa5a438d27f5feaf39911aea006b00b8.html#afa5a438d27f5feaf39911aea006b00b8", null ],
+    [ "_connection", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_ae9d4c30cd1acc4639b6e0b14ecdf2452.html#ae9d4c30cd1acc4639b6e0b14ecdf2452", null ],
+    [ "_credentials", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_abb14403620cf5a1e04855606f530a370.html#abb14403620cf5a1e04855606f530a370", null ],
+    [ "_enableSsl", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a391b158317c7792fb2888bf2bf95224a.html#a391b158317c7792fb2888bf2bf95224a", null ],
+    [ "_failedRecipientExceptions", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_ac8e1cbf8d0babd9d6e2e5cfd02f28d1d.html#ac8e1cbf8d0babd9d6e2e5cfd02f28d1d", null ],
+    [ "_identityRequired", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a3c9751a539916879f80eae4890fc4ef4.html#a3c9751a539916879f80eae4890fc4ef4", null ],
+    [ "_shouldAbort", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a8d38fb8d69cdece17d9c41895d1cd2d4.html#a8d38fb8d69cdece17d9c41895d1cd2d4", null ],
+    [ "ClientCertificates", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_ac3ed38f72514672e34ed98d25ac8366f.html#ac3ed38f72514672e34ed98d25ac8366f", null ],
+    [ "Credentials", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a3eb0e51f4dfe1ae64e06b28d0879a66f.html#a3eb0e51f4dfe1ae64e06b28d0879a66f", null ],
+    [ "EnableSsl", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a47a5f07f9cc4c386c9f97ec8b509481e.html#a47a5f07f9cc4c386c9f97ec8b509481e", null ],
+    [ "IdentityRequired", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a81555351561a76a12db57709cd4c8141.html#a81555351561a76a12db57709cd4c8141", null ],
+    [ "IsConnected", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a1f199ccd684628552af2ad7e8e2ab250.html#a1f199ccd684628552af2ad7e8e2ab250", null ],
+    [ "ServerSupportsEai", "d4/d8c/classSystem_1_1Net_1_1Mail_1_1SmtpTransport_a76b61675ade93da136645702d8c2e6b8.html#a76b61675ade93da136645702d8c2e6b8", null ]
+];

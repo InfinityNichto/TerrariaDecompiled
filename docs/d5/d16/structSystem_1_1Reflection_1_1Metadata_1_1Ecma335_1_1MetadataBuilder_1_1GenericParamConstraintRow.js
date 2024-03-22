@@ -1,0 +1,5 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1GenericParamConstraintRow =
+[
+    [ "Constraint", "d5/d16/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1GenericParamConstraintRow_a88275767bbf06202391d8fb45f37b4cb.html#a88275767bbf06202391d8fb45f37b4cb", null ],
+    [ "Owner", "d5/d16/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1GenericParamConstraintRow_a2b4a637245264cd30c27637fb9191fe0.html#a2b4a637245264cd30c27637fb9191fe0", null ]
+];

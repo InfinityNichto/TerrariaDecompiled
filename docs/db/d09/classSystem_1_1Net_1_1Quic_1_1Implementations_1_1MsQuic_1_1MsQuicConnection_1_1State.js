@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State =
+[
+    [ "RemoveStream", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_afda9088ac6ab9617f269fbabd3d9bac9.html#afda9088ac6ab9617f269fbabd3d9bac9", null ],
+    [ "SetClosing", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_aa9651e68e7e3bd3f7a1d590c5825c65d.html#aa9651e68e7e3bd3f7a1d590c5825c65d", null ],
+    [ "TryAddStream", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_abce3d0a3aae2523ecaeb62d72914c6fa.html#abce3d0a3aae2523ecaeb62d72914c6fa", null ],
+    [ "TryQueueNewStream", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a4c33669afaec87a944234966b46b9cc4.html#a4c33669afaec87a944234966b46b9cc4", null ],
+    [ "_closing", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_abdc3c05c4595acef5d0735aff0179011.html#abdc3c05c4595acef5d0735aff0179011", null ],
+    [ "AbortErrorCode", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_aba24c05314b165f280eb6d0405339219.html#aba24c05314b165f280eb6d0405339219", null ],
+    [ "AcceptQueue", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a9032cf62ec7580150e709219609f50ee.html#a9032cf62ec7580150e709219609f50ee", null ],
+    [ "Connected", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_ae00d50070609dc7604c94d03c3772f05.html#ae00d50070609dc7604c94d03c3772f05", null ],
+    [ "Connection", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a788046f4c0974e3d430645b99693150e.html#a788046f4c0974e3d430645b99693150e", null ],
+    [ "ConnectTcs", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a015ca32fa6e40ad41cd55ef9bdf5e5e1.html#a015ca32fa6e40ad41cd55ef9bdf5e5e1", null ],
+    [ "Handle", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_aefb04d4388f8c4dbbf991f274df31417.html#aefb04d4388f8c4dbbf991f274df31417", null ],
+    [ "IsServer", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a824cc16c00648006ecc320b8cea96b24.html#a824cc16c00648006ecc320b8cea96b24", null ],
+    [ "ListenerState", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a956ff7fb8b0c961f5a9cf1f5d2e4f1a9.html#a956ff7fb8b0c961f5a9cf1f5d2e4f1a9", null ],
+    [ "NewBidirectionalStreamsAvailable", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a4fa620e4bd509063073d747d19bf631a.html#a4fa620e4bd509063073d747d19bf631a", null ],
+    [ "NewUnidirectionalStreamsAvailable", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_aa3a15bf2a48b9ad85ca5acb610063a72.html#aa3a15bf2a48b9ad85ca5acb610063a72", null ],
+    [ "RemoteCertificate", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_ad88d534cf2a3cf9aa035e62b2f8898a2.html#ad88d534cf2a3cf9aa035e62b2f8898a2", null ],
+    [ "RemoteCertificateRequired", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_ab08551cce3393afa4bacdee333337ae8.html#ab08551cce3393afa4bacdee333337ae8", null ],
+    [ "RemoteCertificateValidationCallback", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a69e69da791d3df9c38da78beab691d98.html#a69e69da791d3df9c38da78beab691d98", null ],
+    [ "RevocationMode", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_ae537a1288635b8d1d4dbb1cc26bd2926.html#ae537a1288635b8d1d4dbb1cc26bd2926", null ],
+    [ "ShutdownTcs", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a9ae3b0fa190efc5776cbfff71e74e3d3.html#a9ae3b0fa190efc5776cbfff71e74e3d3", null ],
+    [ "StateGCHandle", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a4c107313824d53e0f3b9209683b1a108.html#a4c107313824d53e0f3b9209683b1a108", null ],
+    [ "StreamCount", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a4f2af2c3a7ed5f211b88093bacc440f1.html#a4f2af2c3a7ed5f211b88093bacc440f1", null ],
+    [ "TargetHost", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a3d29a96aa6568580db497b1c7bbfde87.html#a3d29a96aa6568580db497b1c7bbfde87", null ],
+    [ "TraceId", "db/d09/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1MsQuicConnection_1_1State_a145f0da9dd4db424e2b2686d6d7b29ca.html#a145f0da9dd4db424e2b2686d6d7b29ca", null ]
+];

@@ -1,0 +1,26 @@
+var structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore =
+[
+    [ "CngSymmetricAlgorithmCore", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_ac0ed1b7d02ce2e6c327834aee7beb821.html#ac0ed1b7d02ce2e6c327834aee7beb821", null ],
+    [ "CngSymmetricAlgorithmCore", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_ad7847fab225e56948483e535f20c6e4d.html#ad7847fab225e56948483e535f20c6e4d", null ],
+    [ "CreateCryptoTransform", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a1ff8d3dccdcab2c9091c4e5e5b340262.html#a1ff8d3dccdcab2c9091c4e5e5b340262", null ],
+    [ "CreateCryptoTransform", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_acc1505c0c4bbdff31dfe3d4e3ac17221.html#acc1505c0c4bbdff31dfe3d4e3ac17221", null ],
+    [ "CreateCryptoTransform", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a98ad21b6750bfeb0b58ddad5df00243a.html#a98ad21b6750bfeb0b58ddad5df00243a", null ],
+    [ "CreateDecryptor", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a3b55c02e8411311c515a64987e4ed555.html#a3b55c02e8411311c515a64987e4ed555", null ],
+    [ "CreateDecryptor", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_aec6f3cc03907d6f3147cabd74fd5794a.html#aec6f3cc03907d6f3147cabd74fd5794a", null ],
+    [ "CreateEncryptor", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a17bb62a6dcad4863560bcc10324a4b86.html#a17bb62a6dcad4863560bcc10324a4b86", null ],
+    [ "CreateEncryptor", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a222f261a9b2d33448f7fa51649f24335.html#a222f261a9b2d33448f7fa51649f24335", null ],
+    [ "CreateEphemeralCryptoTransformCore", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a7b23b545caedcb567f2ff8201cd0ac1f.html#a7b23b545caedcb567f2ff8201cd0ac1f", null ],
+    [ "CreatePersistedCryptoTransformCore", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_ac420829447a60d09a31dfcb8014d5ef3.html#ac420829447a60d09a31dfcb8014d5ef3", null ],
+    [ "GenerateIV", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a08c20963d542700892f8df4e4fb73276.html#a08c20963d542700892f8df4e4fb73276", null ],
+    [ "GenerateKey", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a158b949458146ea70c8d02126feeff42.html#a158b949458146ea70c8d02126feeff42", null ],
+    [ "GetKeyIfExportable", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a04656fed2beb44e891ec33b697ecc402.html#a04656fed2beb44e891ec33b697ecc402", null ],
+    [ "ProduceCngKey", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_aeb2e69b5bde3b05d8894ca4c44fb3cf9.html#aeb2e69b5bde3b05d8894ca4c44fb3cf9", null ],
+    [ "SetKey", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_aa264ff2f135f6287dd5452847adfb644.html#aa264ff2f135f6287dd5452847adfb644", null ],
+    [ "SetKeySize", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a4fa08f9f9271bd34c82fd8ed386a2682.html#a4fa08f9f9271bd34c82fd8ed386a2682", null ],
+    [ "ValidateFeedbackSize", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a20ea51ee14f85323b24e97119d90ccc3.html#a20ea51ee14f85323b24e97119d90ccc3", null ],
+    [ "_keyName", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_ab34ed342230b0e2238bb0929e087ed80.html#ab34ed342230b0e2238bb0929e087ed80", null ],
+    [ "_optionOptions", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a3e99fa5004cf5c224cb6ccb477e67817.html#a3e99fa5004cf5c224cb6ccb477e67817", null ],
+    [ "_outer", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a51e6ea570e7f20ef8b8ad5752142bf3a.html#a51e6ea570e7f20ef8b8ad5752142bf3a", null ],
+    [ "_provider", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a7307353f692be1d705fb91045ab47546.html#a7307353f692be1d705fb91045ab47546", null ],
+    [ "KeyInPlainText", "da/d3f/structInternal_1_1Cryptography_1_1CngSymmetricAlgorithmCore_a924b3e2fd61aacf96be2cdaff2eb96c9.html#a924b3e2fd61aacf96be2cdaff2eb96c9", null ]
+];

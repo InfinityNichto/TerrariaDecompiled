@@ -40,6 +40,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation =
     [ "Click_RandomizePlayer", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation_a186e7e1b8537e0b52a36d038beb9ba2e.html#a186e7e1b8537e0b52a36d038beb9ba2e", null ],
     [ "Click_RandomizeSingleColor", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation_adf08d1aba1bf7b8af34c94bee1d84bb7.html#adf08d1aba1bf7b8af34c94bee1d84bb7", null ],
     [ "CompareTo", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateColorPicker", "d8/db0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UICharacterCreation_acd656b4fdb85ed10956255516c47c22e.html#acd656b4fdb85ed10956255516c47c22e", null ],

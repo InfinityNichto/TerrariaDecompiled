@@ -4,6 +4,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem
     [ "Activate", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a53dde9d58711507264436e68759382d7", null ],
     [ "Append", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "CompareTo", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "db/d1d/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIKeybindingToggleListItem.html#a172ab329792a6b10d313e66ccd63f30f", null ],

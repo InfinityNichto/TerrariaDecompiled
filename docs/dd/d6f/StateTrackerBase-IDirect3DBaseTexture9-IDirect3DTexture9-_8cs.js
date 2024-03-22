@@ -1,0 +1,4 @@
+var StateTrackerBase_IDirect3DBaseTexture9_IDirect3DTexture9__8cs =
+[
+    [ "Microsoft.Xna.Framework.Graphics.StateTrackerBase_003CIDirect3DBaseTexture9_002CIDirect3DTexture9_003E", "d5/d1f/structMicrosoft_1_1Xna_1_1Framework_1_1Graphics_1_1StateTrackerBase__003CIDirect3DBaseTexture9__002CIDirect3DTexture9__003E.html", null ]
+];

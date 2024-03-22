@@ -1,7 +1,7 @@
 var dir_d4c2fb78d011b60c85cbebfaf5fda409 =
 [
     [ "AttributeUtilities.cs", "d6/d2c/AttributeUtilities_8cs.html", "d6/d2c/AttributeUtilities_8cs" ],
-    [ "Crc32.cs", "df/dd1/Crc32_8cs.html", "df/dd1/Crc32_8cs" ],
+    [ "Crc32.cs", "da/db3/ReLogic_2ReLogic_8Utilities_2Crc32_8cs.html", "da/db3/ReLogic_2ReLogic_8Utilities_2Crc32_8cs" ],
     [ "MultiTimer.cs", "dc/d4f/MultiTimer_8cs.html", "dc/d4f/MultiTimer_8cs" ],
     [ "ReinterpretCast.cs", "d8/d2d/ReinterpretCast_8cs.html", "d8/d2d/ReinterpretCast_8cs" ],
     [ "SlotId.cs", "d3/dcb/SlotId_8cs.html", "d3/dcb/SlotId_8cs" ],

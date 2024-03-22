@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1ServicePoint =
+[
+    [ "ServicePoint", "d3/daf/classSystem_1_1Net_1_1ServicePoint_ab724e061e1f3dd977b79fe1818cab03a.html#ab724e061e1f3dd977b79fe1818cab03a", null ],
+    [ "CloseConnectionGroup", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a488fe52cd511a30befaf93a7bd2f00ea.html#a488fe52cd511a30befaf93a7bd2f00ea", null ],
+    [ "SetTcpKeepAlive", "d3/daf/classSystem_1_1Net_1_1ServicePoint_aac4fbe0789bdc72c5f60a4cd666a8c49.html#aac4fbe0789bdc72c5f60a4cd666a8c49", null ],
+    [ "_connectionLeaseTimeout", "d3/daf/classSystem_1_1Net_1_1ServicePoint_aeffc4ce890d5e5d26f2a67a1354ed6e8.html#aeffc4ce890d5e5d26f2a67a1354ed6e8", null ],
+    [ "_connectionLimit", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a8495c1a0d255f2f0e0ed6a4beda70ff0.html#a8495c1a0d255f2f0e0ed6a4beda70ff0", null ],
+    [ "_maxIdleTime", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a2b39fc462828911b4f75a3a686becd41.html#a2b39fc462828911b4f75a3a686becd41", null ],
+    [ "_receiveBufferSize", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a3243b948d74fbe4c600fad1dd25005b8.html#a3243b948d74fbe4c600fad1dd25005b8", null ],
+    [ "Address", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a86d6859fc3dc0d4663fd1d58f4c69ef2.html#a86d6859fc3dc0d4663fd1d58f4c69ef2", null ],
+    [ "BindIPEndPointDelegate", "d3/daf/classSystem_1_1Net_1_1ServicePoint_ac52e06153e4eed7043891f2848d2cb9d.html#ac52e06153e4eed7043891f2848d2cb9d", null ],
+    [ "Certificate", "d3/daf/classSystem_1_1Net_1_1ServicePoint_aaf3f58924ab14551d5683f32a118ce04.html#aaf3f58924ab14551d5683f32a118ce04", null ],
+    [ "ClientCertificate", "d3/daf/classSystem_1_1Net_1_1ServicePoint_aea5893120b9472b0d8d1b97a5ac8d8a5.html#aea5893120b9472b0d8d1b97a5ac8d8a5", null ],
+    [ "ConnectionLeaseTimeout", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a02326c45f834397b4bafcb8d718e732b.html#a02326c45f834397b4bafcb8d718e732b", null ],
+    [ "ConnectionLimit", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a01e11ad5127ab38d94f793942d13700d.html#a01e11ad5127ab38d94f793942d13700d", null ],
+    [ "ConnectionName", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a91f806c39331323ba8ced031b403de63.html#a91f806c39331323ba8ced031b403de63", null ],
+    [ "CurrentConnections", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a8bb778bbdda87a8d0443f771ba484b3e.html#a8bb778bbdda87a8d0443f771ba484b3e", null ],
+    [ "Expect100Continue", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a0612716ecaf6be965220a6e8d4e1be1a.html#a0612716ecaf6be965220a6e8d4e1be1a", null ],
+    [ "IdleSince", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a826360bea073caa5cad4889141f666cc.html#a826360bea073caa5cad4889141f666cc", null ],
+    [ "MaxIdleTime", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a85168dbb8f08080207054be1fa7159e8.html#a85168dbb8f08080207054be1fa7159e8", null ],
+    [ "ProtocolVersion", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a08e9cbaf321edb77919168d029118767.html#a08e9cbaf321edb77919168d029118767", null ],
+    [ "ReceiveBufferSize", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a263ab64e74f5040161d168f71561f475.html#a263ab64e74f5040161d168f71561f475", null ],
+    [ "SupportsPipelining", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a70bff70fdd538af9865508e3268cff2b.html#a70bff70fdd538af9865508e3268cff2b", null ],
+    [ "UseNagleAlgorithm", "d3/daf/classSystem_1_1Net_1_1ServicePoint_a371a9eab1e76e4d401ee637ce77d75ae.html#a371a9eab1e76e4d401ee637ce77d75ae", null ]
+];

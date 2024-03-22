@@ -1,0 +1,6 @@
+var QUIC__LISTENER__EVENT_8cs =
+[
+    [ "QUIC_LISTENER_EVENT", "d0/df6/QUIC__LISTENER__EVENT_8cs.html#a35027b3a317c025d788aa8610c0850ce", [
+      [ "NEW_CONNECTION", "d0/df6/QUIC__LISTENER__EVENT_8cs.html#a35027b3a317c025d788aa8610c0850cea7baec55aec9068d1bebf5e5342919204", null ]
+    ] ]
+];

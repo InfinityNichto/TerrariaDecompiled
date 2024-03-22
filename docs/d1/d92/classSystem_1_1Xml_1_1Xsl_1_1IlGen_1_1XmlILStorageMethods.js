@@ -1,0 +1,25 @@
+var classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods =
+[
+    [ "XmlILStorageMethods", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a52d5321cdc3d06c91e29ea4dd324155c.html#a52d5321cdc3d06c91e29ea4dd324155c", null ],
+    [ "AggAvg", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_ae9e8289cc3c959298bfdaf0a120b50fc.html#ae9e8289cc3c959298bfdaf0a120b50fc", null ],
+    [ "AggAvgResult", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_aa8d71fd719eb312c04efb16e32ab3c0c.html#aa8d71fd719eb312c04efb16e32ab3c0c", null ],
+    [ "AggCreate", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a9d12ed65c1f1ba88a64e1599f28dca11.html#a9d12ed65c1f1ba88a64e1599f28dca11", null ],
+    [ "AggIsEmpty", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_ab7f1b4191eaa0952bc9838625677495f.html#ab7f1b4191eaa0952bc9838625677495f", null ],
+    [ "AggMax", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a18df25213a1fc718443faf00e07aba42.html#a18df25213a1fc718443faf00e07aba42", null ],
+    [ "AggMaxResult", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a263d1e0b67d4112d58a43de2a72d69f3.html#a263d1e0b67d4112d58a43de2a72d69f3", null ],
+    [ "AggMin", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a586cd7f27144f33b67dfa3bfc71a6682.html#a586cd7f27144f33b67dfa3bfc71a6682", null ],
+    [ "AggMinResult", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_aff6ab073b5cb016369b4ddb20dc466be.html#aff6ab073b5cb016369b4ddb20dc466be", null ],
+    [ "AggSum", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a3dbed0f28fa01a3f2f220e84086f8fe4.html#a3dbed0f28fa01a3f2f220e84086f8fe4", null ],
+    [ "AggSumResult", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a019c68919171496ee74a1a200dd2f692.html#a019c68919171496ee74a1a200dd2f692", null ],
+    [ "IListCount", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a447f789b19ff3c1ec2d1fc8c22db0f7a.html#a447f789b19ff3c1ec2d1fc8c22db0f7a", null ],
+    [ "IListItem", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a58523e165e0621c1046ea94c58ca4fc3.html#a58523e165e0621c1046ea94c58ca4fc3", null ],
+    [ "IListType", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a7452642a61086cc9af530986949f7bdd.html#a7452642a61086cc9af530986949f7bdd", null ],
+    [ "SeqAdd", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_ae5f7b69a77ce69b3bb733ed49827f27a.html#ae5f7b69a77ce69b3bb733ed49827f27a", null ],
+    [ "SeqEmpty", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a564a5bcf0f906b0df1abb93fa5ad3da2.html#a564a5bcf0f906b0df1abb93fa5ad3da2", null ],
+    [ "SeqReuse", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_ab702af3a489278802990aecf1bf6180e.html#ab702af3a489278802990aecf1bf6180e", null ],
+    [ "SeqReuseSgl", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_acbcbda0150b7a726a334210462a7b08f.html#acbcbda0150b7a726a334210462a7b08f", null ],
+    [ "SeqSortByKeys", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a1ad2f7d4958bc60582bad080e0e7461b.html#a1ad2f7d4958bc60582bad080e0e7461b", null ],
+    [ "SeqType", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a62c643b82914d07d910939153f869813.html#a62c643b82914d07d910939153f869813", null ],
+    [ "ToAtomicValue", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a6d372e3b30eeea5defe4870c406601ab.html#a6d372e3b30eeea5defe4870c406601ab", null ],
+    [ "ValueAs", "d1/d92/classSystem_1_1Xml_1_1Xsl_1_1IlGen_1_1XmlILStorageMethods_a3cb9bfa30624181348e281253914b034.html#a3cb9bfa30624181348e281253914b034", null ]
+];

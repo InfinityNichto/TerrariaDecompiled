@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Mail_1_1MailWriter =
+[
+    [ "MailWriter", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter_ad304995a49a95175d579575f2f1917f2.html#ad304995a49a95175d579575f2f1917f2", null ],
+    [ "BeginGetContentStream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a587e31d2dccb594e51667e84a415f18c", null ],
+    [ "CheckBoundary", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a2a948a1ee2a2722058c4d1d3429d2dce", null ],
+    [ "Close", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter_ae4fb1e67ceb16632e766549cdd3f0873.html#ae4fb1e67ceb16632e766549cdd3f0873", null ],
+    [ "EndGetContentStream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a09d1c0d26600624b20b110175d191e5f", null ],
+    [ "Flush", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#afb2a3ce62968138c0f764151a8fb494d", null ],
+    [ "GetContentStream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a5a0004e5f3744ff58343b6fb6f2fca69", null ],
+    [ "GetContentStream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a442ad821a885741153beedffa55195a3", null ],
+    [ "OnClose", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter_ab1f96f034ae09fd1aab8a4dbca2c47f1.html#ab1f96f034ae09fd1aab8a4dbca2c47f1", null ],
+    [ "OnWrite", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#aa21207d4624e5fca68b0087f4eb68710", null ],
+    [ "WriteAndFold", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a8eb47942aaa5e557fdfcecf4ed3439ea", null ],
+    [ "WriteHeader", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a77bdd8420ae3a88ec743b53b2fe235dc", null ],
+    [ "WriteHeaders", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter_aa59826c4d582bebd79163ec50b86cbd1.html#aa59826c4d582bebd79163ec50b86cbd1", null ],
+    [ "_bufferBuilder", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#ad5a5b4fb32a3be95e6ffd2d5049bec0c", null ],
+    [ "_contentStream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#ad27e05d75c711f9aa4d9a71d2f2a409c", null ],
+    [ "_isInContent", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a30e10aa76df03abd85a0595f8e7558ee", null ],
+    [ "_lineLength", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a5d64741d8a5f63d5e1d6566d86051c18", null ],
+    [ "_onCloseHandler", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#ad9ea280f23cee350295b5b6024729d43", null ],
+    [ "_shouldEncodeLeadingDots", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a1a2626b36dd5ebb140a2a14eb426f1a7", null ],
+    [ "_stream", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a2684830f492247447f0756f760daecb1", null ],
+    [ "s_crlf", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#a949565ead43f5929cf72b86e4ef074fe", null ],
+    [ "s_onWrite", "df/df2/classSystem_1_1Net_1_1Mail_1_1MailWriter.html#ae5082a3f4c772ec9674b200be46dc7da", null ]
+];

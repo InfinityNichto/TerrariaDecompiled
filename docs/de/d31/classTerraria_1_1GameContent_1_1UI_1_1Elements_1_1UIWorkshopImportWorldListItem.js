@@ -5,6 +5,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListI
     [ "Append", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "ButtonMouseOut", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem_aefa12e095fbc3f7d0f6e8aaa38833749.html#aefa12e095fbc3f7d0f6e8aaa38833749", null ],
     [ "CompareTo", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem_a35b2dee3ca6b453edd39b1d884fe158b.html#a35b2dee3ca6b453edd39b1d884fe158b", null ],
+    [ "CompareTo", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "de/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorkshopImportWorldListItem.html#a172ab329792a6b10d313e66ccd63f30f", null ],

@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1AsyncRequestContext =
+[
+    [ "AsyncRequestContext", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_ab0bb7832121caf703220088d3276cf4f.html#ab0bb7832121caf703220088d3276cf4f", null ],
+    [ "Allocate", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_ab8264fbd360d662828bee58dcfe53c23.html#ab8264fbd360d662828bee58dcfe53c23", null ],
+    [ "BaseConstruction", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a7bd8cbccd8fdeabe0e86eb608ca844d7", null ],
+    [ "Close", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a2fc12fdd24b378f778daf85e70d52e83", null ],
+    [ "Dispose", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#aaf624da78def88b7a604e3d3e76c18db", null ],
+    [ "Dispose", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_a30fd4b544f0b1c3742a3f9f67bde4041.html#a30fd4b544f0b1c3742a3f9f67bde4041", null ],
+    [ "OnReleasePins", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_a501122c78f99a6396d846ab076cdad4f.html#a501122c78f99a6396d846ab076cdad4f", null ],
+    [ "ReleasePins", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#aeac5671fa543961f241bab3718a4d20c", null ],
+    [ "Reset", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_addcdac29e92e8b6a4a341e3fd446eb16.html#addcdac29e92e8b6a4a341e3fd446eb16", null ],
+    [ "SetBlob", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#ac260d9cce989d01158ef2a3574472ac2", null ],
+    [ "SetBuffer", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a49a2bed7909d90f47e3b7eddadbbba94", null ],
+    [ "UnsetBlob", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a5b7ef91fe262ece21759866593e14bcf", null ],
+    [ "_backingBuffer", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a5929a7d0d025dfdae19382afc87e4eb0", null ],
+    [ "_backingBufferLength", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a8b7c29891eae28d768bd007eef604f8d", null ],
+    [ "_boundHandle", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_a21c36ae7511c811385bc45c0dc667c52.html#a21c36ae7511c811385bc45c0dc667c52", null ],
+    [ "_memoryBlob", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a92965ff9e4cf7d7e588ec03c8451dc34", null ],
+    [ "_nativeOverlapped", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_ad45ece7ee32f3660d79d314ad263c9e2.html#ad45ece7ee32f3660d79d314ad263c9e2", null ],
+    [ "_originalBlobAddress", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#aeb96e085c5480be8559dfe735ee208f3", null ],
+    [ "_result", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_a11ad5aa5f31d8dccf71f48c86736d3fb.html#a11ad5aa5f31d8dccf71f48c86736d3fb", null ],
+    [ "NativeOverlapped", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext_a8c7b4a1916e0949935946f197e08a2da.html#a8c7b4a1916e0949935946f197e08a2da", null ],
+    [ "OriginalBlobAddress", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#af0274cc34b2d409755d1360ae6e008c9", null ],
+    [ "RequestBlob", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a54e667a80e23f0066675034a14d8466f", null ],
+    [ "RequestBuffer", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#a51cef0b4d4cf94663d41daae91f0848f", null ],
+    [ "Size", "d3/df5/classSystem_1_1Net_1_1AsyncRequestContext.html#af2ddcc6532f2e5eab2dfdb4dffd961e0", null ]
+];

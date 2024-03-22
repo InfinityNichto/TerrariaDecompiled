@@ -1,0 +1,35 @@
+var UnicodeCategory_8cs =
+[
+    [ "UnicodeCategory", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656", [
+      [ "UppercaseLetter", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656af49c2b9bee0060f6a031039aab3cb831", null ],
+      [ "LowercaseLetter", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a12face25dc04d4eeb2778f2d770faa15", null ],
+      [ "TitlecaseLetter", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a9cbd356a9afa7a7b25feb50a3474b55d", null ],
+      [ "ModifierLetter", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656aa199a7d6ce92aa34cbd145114663734d", null ],
+      [ "OtherLetter", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a681a32d2498d80cc39bf6ebceb5e391c", null ],
+      [ "NonSpacingMark", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a48faad424f3f453b24b025066b6e0b93", null ],
+      [ "SpacingCombiningMark", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656aad08003f175ae29e2809713d2258eb0b", null ],
+      [ "EnclosingMark", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656aa67d9a2d97914888f8ae462db2a831f9", null ],
+      [ "DecimalDigitNumber", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a192fb668d1a1370a761535e1ca2e6d9a", null ],
+      [ "LetterNumber", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a42369054abce1b9d6964df08e51dc20a", null ],
+      [ "OtherNumber", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a74b756a83a5e346c58cc1c08f50ff5cf", null ],
+      [ "SpaceSeparator", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a03a8366204717d259e5343eb66312d9d", null ],
+      [ "LineSeparator", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656ad155e6769dc59055b802565ef5fd5996", null ],
+      [ "ParagraphSeparator", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a2167744993d720bd69c83b17a5e9ce31", null ],
+      [ "Control", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656aa1595abbb4c3a326636dd178757cd6c1", null ],
+      [ "Format", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a520d0db389f362bf79ef56ca0af3dcab", null ],
+      [ "Surrogate", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656ad8c89ecb5e5cba34e0c876d66ca08369", null ],
+      [ "PrivateUse", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a8a8e9b082c860bdeba920d5adab79a6e", null ],
+      [ "ConnectorPunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656ae5da0306effef47df6ddda870e6ad896", null ],
+      [ "DashPunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a7419591dce2902efc6486185cf693720", null ],
+      [ "OpenPunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a9278ed37c7f00ffd0bb1df604ea59d22", null ],
+      [ "ClosePunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656afeeee7fd708b5a8c1a3dea201ed499b6", null ],
+      [ "InitialQuotePunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656ab9b7b88929c0cde12d87151122d6559f", null ],
+      [ "FinalQuotePunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a838f828f54db19ef6d52bad82c2bc739", null ],
+      [ "OtherPunctuation", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a336916896c8b0222ac24dd0cd0a7b784", null ],
+      [ "MathSymbol", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656ae1d4caaabff78c116d09a339b5cea36e", null ],
+      [ "CurrencySymbol", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a46e9737be97174f02f344f4784bbdbb3", null ],
+      [ "ModifierSymbol", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a8cbb2b4b13a6109eb0c0f159f4ef933c", null ],
+      [ "OtherSymbol", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a698c43a5a66a5db0c134e9ab07a03e60", null ],
+      [ "OtherNotAssigned", "de/d6e/UnicodeCategory_8cs.html#ab4f99ef2cb47535471142e0d6f715656a6e4a11ff3136f0affe448ecadd0fbbe1", null ]
+    ] ]
+];

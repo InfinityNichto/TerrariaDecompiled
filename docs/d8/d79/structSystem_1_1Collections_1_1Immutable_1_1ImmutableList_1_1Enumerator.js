@@ -1,0 +1,27 @@
+var structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator =
+[
+    [ "Enumerator", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_ad40c78585f549663db85bce480980fd9.html#ad40c78585f549663db85bce480980fd9", null ],
+    [ "Dispose", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a72cedfeb07c9a4757f1214754cecd312.html#a72cedfeb07c9a4757f1214754cecd312", null ],
+    [ "MoveNext", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_afb59f709b154b445198f5d1e3e2c1e58.html#afb59f709b154b445198f5d1e3e2c1e58", null ],
+    [ "NextBranch", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_ab5eae74cd37d31edf8ab198c0e2df7bc.html#ab5eae74cd37d31edf8ab198c0e2df7bc", null ],
+    [ "PreviousBranch", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_ae24aaca5584328ce977b3abf0849f1c1.html#ae24aaca5584328ce977b3abf0849f1c1", null ],
+    [ "PushNext", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a6ae89e5f4a1642ce9fe98143f8db9877.html#a6ae89e5f4a1642ce9fe98143f8db9877", null ],
+    [ "Reset", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_afaf5fec8dafc1951536b928669ad0a81.html#afaf5fec8dafc1951536b928669ad0a81", null ],
+    [ "ResetStack", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a515d8f5c684b39443c898ec491752f64.html#a515d8f5c684b39443c898ec491752f64", null ],
+    [ "ThrowIfChanged", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a7eacfb26948eb5c4a765a5085181d091.html#a7eacfb26948eb5c4a765a5085181d091", null ],
+    [ "ThrowIfDisposed", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a85313124122396693d32c7f2cec80db6.html#a85313124122396693d32c7f2cec80db6", null ],
+    [ "_builder", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a6de9b486febbc42842f822a555ac6c90.html#a6de9b486febbc42842f822a555ac6c90", null ],
+    [ "_count", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a99d1719a75c9b19e1549345dab441ac5.html#a99d1719a75c9b19e1549345dab441ac5", null ],
+    [ "_current", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a1f4d40ff001b2aa622227b84f14e3b69.html#a1f4d40ff001b2aa622227b84f14e3b69", null ],
+    [ "_enumeratingBuilderVersion", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a22efbcb8e6dcfeb89fee82f0d1b9aa42.html#a22efbcb8e6dcfeb89fee82f0d1b9aa42", null ],
+    [ "_poolUserId", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a732cd37053630b3a28a7ced778bd4bd4.html#a732cd37053630b3a28a7ced778bd4bd4", null ],
+    [ "_remainingCount", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a6e297925aa3c4cf76720954b7b700297.html#a6e297925aa3c4cf76720954b7b700297", null ],
+    [ "_reversed", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a4111395dbc342f063228d2fa33b5c963.html#a4111395dbc342f063228d2fa33b5c963", null ],
+    [ "_root", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a6ecadbfc6446befa95d3c34f8463a173.html#a6ecadbfc6446befa95d3c34f8463a173", null ],
+    [ "_stack", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a04960fc6d2e2a0cc3a5c696a2d6530ab.html#a04960fc6d2e2a0cc3a5c696a2d6530ab", null ],
+    [ "_startIndex", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a1ac6d982068d3c741c0403cfcfbb9c82.html#a1ac6d982068d3c741c0403cfcfbb9c82", null ],
+    [ "s_EnumeratingStacks", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_abe43b7771b7d5c6ecf0087fde132035d.html#abe43b7771b7d5c6ecf0087fde132035d", null ],
+    [ "Current", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a6c641cf72a4069467af6f97a674bd797.html#a6c641cf72a4069467af6f97a674bd797", null ],
+    [ "Current", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_afae7a912cc8d1b4ba5550aeaa892306d.html#afae7a912cc8d1b4ba5550aeaa892306d", null ],
+    [ "PoolUserId", "d8/d79/structSystem_1_1Collections_1_1Immutable_1_1ImmutableList_1_1Enumerator_a45bd7c3664eabeb296deafe25f790fb4.html#a45bd7c3664eabeb296deafe25f790fb4", null ]
+];

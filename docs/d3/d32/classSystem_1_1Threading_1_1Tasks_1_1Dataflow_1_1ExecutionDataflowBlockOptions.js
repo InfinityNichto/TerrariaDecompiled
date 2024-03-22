@@ -1,0 +1,25 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions =
+[
+    [ "DefaultOrClone", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_ad7f0a545c30af5c4257816b4b1d9b83e.html#ad7f0a545c30af5c4257816b4b1d9b83e", null ],
+    [ "_boundedCapacity", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a2cce700be0b190a74e8c6a2d46f59e19", null ],
+    [ "_cancellationToken", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a8f55b066146a2cfb12c640f7ce7f6e5b", null ],
+    [ "_ensureOrdered", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#ab72ed58f0b8cba4a42640b1fb0b845d8", null ],
+    [ "_maxDegreeOfParallelism", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_acb3aa4f6d685f7c7bee843c947143d81.html#acb3aa4f6d685f7c7bee843c947143d81", null ],
+    [ "_maxMessagesPerTask", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a31e07ad0e6b3c58ea27f8bba1b8ef443", null ],
+    [ "_nameFormat", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#ae1135a2873a758e473a13ed19e227020", null ],
+    [ "_singleProducerConstrained", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_a39b75b7bb69ac7ce521e416bbdacb7ac.html#a39b75b7bb69ac7ce521e416bbdacb7ac", null ],
+    [ "_taskScheduler", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#ac9b26cbafbc45e004ae8f24563239d8d", null ],
+    [ "Default", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_a2f592ce6e16706ee78ac134e2deeba35.html#a2f592ce6e16706ee78ac134e2deeba35", null ],
+    [ "Unbounded", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a6cf06d064e668b8f524d2cffaee3b618", null ],
+    [ "ActualMaxDegreeOfParallelism", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_a4ea5ae0c6174e4d0703a9f8c73759bee.html#a4ea5ae0c6174e4d0703a9f8c73759bee", null ],
+    [ "ActualMaxMessagesPerTask", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a5dd56e2a1a558d4752cb174ac6b8cc6c", null ],
+    [ "BoundedCapacity", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a113d2cf4b86783c72925ed998dbbf1f2", null ],
+    [ "CancellationToken", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#ae9b511839682ed1f91212f174db3acd3", null ],
+    [ "EnsureOrdered", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#ac0178866ae4c2a667b97a4ac783a282c", null ],
+    [ "MaxDegreeOfParallelism", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_ae361248daf32e329859f9e1240460939.html#ae361248daf32e329859f9e1240460939", null ],
+    [ "MaxMessagesPerTask", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#add9196a4d089b6b7e047020a278a0b24", null ],
+    [ "NameFormat", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a5956264ce9501d29b8d52f3e48bf15f5", null ],
+    [ "SingleProducerConstrained", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_af03db8e3398e8e4949d0069b5893e674.html#af03db8e3398e8e4949d0069b5893e674", null ],
+    [ "SupportsParallelExecution", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions_ac8be31f9b3b8ea9263458f67061750d1.html#ac8be31f9b3b8ea9263458f67061750d1", null ],
+    [ "TaskScheduler", "d3/d32/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1ExecutionDataflowBlockOptions.html#a3cd8f38e482e01dd8b38c1eb57729425", null ]
+];

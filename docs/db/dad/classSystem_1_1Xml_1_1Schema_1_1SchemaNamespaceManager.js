@@ -1,0 +1,26 @@
+var classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager =
+[
+    [ "SchemaNamespaceManager", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager_a5333dddcec929d7694342d1b63f31d23.html#a5333dddcec929d7694342d1b63f31d23", null ],
+    [ "AddNamespace", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#abeb4dd39e59a6d5bdf34a686a0e7ac3a", null ],
+    [ "GetEnumerator", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#af44616175c62114d659c815e41a2f309", null ],
+    [ "GetNamespaceDeclaration", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#ab53f54e02fd8d34180e855ce1e7f8a09", null ],
+    [ "GetNamespacesInScope", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#aa087b1d4acdeef356021330d9789e7fb", null ],
+    [ "HasNamespace", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#aad3fdc7cc88bfd8f748fbab16ea52c0f", null ],
+    [ "LookupNamespace", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager_a8ac7c78f580498567a13d70abc8d66e3.html#a8ac7c78f580498567a13d70abc8d66e3", null ],
+    [ "LookupNamespaceDecl", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a962f350c70bf1988711156fa7d8bb75b", null ],
+    [ "LookupPrefix", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager_a822c3e1ce62f53f2e3e1f06d38d31c22.html#a822c3e1ce62f53f2e3e1f06d38d31c22", null ],
+    [ "PopScope", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a522f482753eb5bf8449ca55d263cd04f", null ],
+    [ "PushScope", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a6a9b10a53a00192fd28c4b9a7cdb09f3", null ],
+    [ "RemoveNamespace", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#ae252ce31447117883997a11e0b7588d0", null ],
+    [ "_hashTable", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#af2a617339f2dd743544b73c0a8d0d15b", null ],
+    [ "_lastDecl", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a93b18513977c23da16f4e11cd422e0db", null ],
+    [ "_nameTable", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#adc38e00b790ad70729d5b7938497fa43", null ],
+    [ "_node", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager_a8566badbcf4294d8972effc596eea117.html#a8566badbcf4294d8972effc596eea117", null ],
+    [ "_nsdecls", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a79aa584587d21f544d768cf68db44787", null ],
+    [ "_scopeId", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#ab1d5ae89a9936046ed6ab0d29ba5affc", null ],
+    [ "_useHashtable", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a3947ab5fad32dc8c0cf350de17fa8dd4", null ],
+    [ "_xml", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#af5977a9516bc2888e47b00209233118b", null ],
+    [ "_xmlNs", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#abc3ddd0408d1d8c3dc6f3683563cd856", null ],
+    [ "DefaultNamespace", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#a9d787893a42ec8c2a38af07a3ca3d6ae", null ],
+    [ "NameTable", "db/dad/classSystem_1_1Xml_1_1Schema_1_1SchemaNamespaceManager.html#ab8c7ccc67eefe3f04e31280476af4b0f", null ]
+];

@@ -4,6 +4,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine =
     [ "Activate", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#a53dde9d58711507264436e68759382d7", null ],
     [ "Append", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "CompareTo", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine_a9d00990fdb970865c20c3ef123a21255.html#a9d00990fdb970865c20c3ef123a21255", null ],
+    [ "CompareTo", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d6/ddf/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryInfoItemLine.html#a172ab329792a6b10d313e66ccd63f30f", null ],

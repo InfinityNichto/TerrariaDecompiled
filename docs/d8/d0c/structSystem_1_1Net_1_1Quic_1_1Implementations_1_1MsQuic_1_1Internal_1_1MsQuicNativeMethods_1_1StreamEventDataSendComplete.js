@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataSendComplete =
+[
+    [ "Canceled", "d8/d0c/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataSendComplete_aa96872a83366947a5ed6aabf9d85a7ae.html#aa96872a83366947a5ed6aabf9d85a7ae", null ],
+    [ "ClientContext", "d8/d0c/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataSendComplete_a6d4d58c72e0be0e2cf4a96b40206ee1f.html#a6d4d58c72e0be0e2cf4a96b40206ee1f", null ]
+];

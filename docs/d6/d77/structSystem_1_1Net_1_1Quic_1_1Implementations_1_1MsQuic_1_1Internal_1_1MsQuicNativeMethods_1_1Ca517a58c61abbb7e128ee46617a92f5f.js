@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1Ca517a58c61abbb7e128ee46617a92f5f =
+[
+    [ "BiDirectionalCount", "d6/d77/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1Ca517a58c61abbb7e128ee46617a92f5f_a2ec7d8591e8200ded4e8881622fcf974.html#a2ec7d8591e8200ded4e8881622fcf974", null ],
+    [ "UniDirectionalCount", "d6/d77/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1Ca517a58c61abbb7e128ee46617a92f5f_a431a627f93f7e2c3c08dd4f9a87ca21f.html#a431a627f93f7e2c3c08dd4f9a87ca21f", null ]
+];

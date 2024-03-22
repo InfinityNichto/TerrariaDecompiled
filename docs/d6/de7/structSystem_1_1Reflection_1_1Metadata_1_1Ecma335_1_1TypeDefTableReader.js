@@ -1,0 +1,26 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader =
+[
+    [ "TypeDefTableReader", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a19c684862785662f852ceb41756b3a20.html#a19c684862785662f852ceb41756b3a20", null ],
+    [ "FindTypeContainingField", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_aa794e1b9a08688fdd7478efac9ccf31e.html#aa794e1b9a08688fdd7478efac9ccf31e", null ],
+    [ "FindTypeContainingMethod", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a3b7b41d9d2f3ab1bebe828968430a106.html#a3b7b41d9d2f3ab1bebe828968430a106", null ],
+    [ "GetExtends", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a1182e1accfb2227a7d50cd7249c275c2.html#a1182e1accfb2227a7d50cd7249c275c2", null ],
+    [ "GetFieldStart", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a4e05055128f15fb27d7b0c563959b668.html#a4e05055128f15fb27d7b0c563959b668", null ],
+    [ "GetFlags", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a942b2e21ae20617517222d81e5f06435.html#a942b2e21ae20617517222d81e5f06435", null ],
+    [ "GetMethodStart", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a8597b711a8ec9a6ee46199dcc0a418b0.html#a8597b711a8ec9a6ee46199dcc0a418b0", null ],
+    [ "GetName", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a8177419ae03ac8c6308e5426ca04101e.html#a8177419ae03ac8c6308e5426ca04101e", null ],
+    [ "GetNamespace", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a45f70a5f42c344213976d421f02d2179.html#a45f70a5f42c344213976d421f02d2179", null ],
+    [ "GetNamespaceDefinition", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_aa2760445080563951f92364546faec71.html#aa2760445080563951f92364546faec71", null ],
+    [ "_ExtendsOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a49f5b827bc5f239fa0c4c42a4679abe1.html#a49f5b827bc5f239fa0c4c42a4679abe1", null ],
+    [ "_FieldListOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a3ac16169c77659094ef8beaaca1348d6.html#a3ac16169c77659094ef8beaaca1348d6", null ],
+    [ "_FlagsOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a3b26d3dac8919bf7c1ed28d70259930c.html#a3b26d3dac8919bf7c1ed28d70259930c", null ],
+    [ "_IsFieldRefSizeSmall", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a6e7043b032ffe491dbd4149a1281247e.html#a6e7043b032ffe491dbd4149a1281247e", null ],
+    [ "_IsMethodRefSizeSmall", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a86c5c5270b4034dceeb4d63674bc87a7.html#a86c5c5270b4034dceeb4d63674bc87a7", null ],
+    [ "_IsStringHeapRefSizeSmall", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_ad9fd78bf067500dbd1d5de2bdafdafd7.html#ad9fd78bf067500dbd1d5de2bdafdafd7", null ],
+    [ "_IsTypeDefOrRefRefSizeSmall", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a65a75885fb82fffbb8eaad33e38dfca4.html#a65a75885fb82fffbb8eaad33e38dfca4", null ],
+    [ "_MethodListOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a2116019e49596ae8be16d574590d32a8.html#a2116019e49596ae8be16d574590d32a8", null ],
+    [ "_NameOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_aef963a2ec25a58369ffdf9daa1a5bb6e.html#aef963a2ec25a58369ffdf9daa1a5bb6e", null ],
+    [ "_NamespaceOffset", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a486863650298fd66ae4c876819ce595f.html#a486863650298fd66ae4c876819ce595f", null ],
+    [ "Block", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a88b7e051318212945b6ce5fa67ae8cda.html#a88b7e051318212945b6ce5fa67ae8cda", null ],
+    [ "NumberOfRows", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_a6ff1e44767bcc0f8f67782e68d2934dc.html#a6ff1e44767bcc0f8f67782e68d2934dc", null ],
+    [ "RowSize", "d6/de7/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1TypeDefTableReader_af7d076196097191433d116bca9b2a5ee.html#af7d076196097191433d116bca9b2a5ee", null ]
+];

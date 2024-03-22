@@ -1,0 +1,28 @@
+var structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState =
+[
+    [ "Clear", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a292afe89c1a2ca55388206b72d8547a1.html#a292afe89c1a2ca55388206b72d8547a1", null ],
+    [ "Close", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a4df7ad2c933bf0e5b3048a50ab230fab.html#a4df7ad2c933bf0e5b3048a50ab230fab", null ],
+    [ "appendMode", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a079ecd3f602a4096070363791ce6e95d.html#a079ecd3f602a4096070363791ce6e95d", null ],
+    [ "baseUri", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_ad03cf8939626b3763a3f35b852cd3e77.html#ad03cf8939626b3763a3f35b852cd3e77", null ],
+    [ "baseUriStr", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a1adfcd083bf454277c24c92aa0ef241f.html#a1adfcd083bf454277c24c92aa0ef241f", null ],
+    [ "bytePos", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_acb62a1217fa8b80407fc27cbf4d0c23d.html#acb62a1217fa8b80407fc27cbf4d0c23d", null ],
+    [ "bytes", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a7f2d68604593affac51b2d0789182a1e.html#a7f2d68604593affac51b2d0789182a1e", null ],
+    [ "bytesUsed", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_aff76db68fe0b27254a56307811455e54.html#aff76db68fe0b27254a56307811455e54", null ],
+    [ "charPos", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a347fa9d964bf4bb15acc7598ff5c4cf9.html#a347fa9d964bf4bb15acc7598ff5c4cf9", null ],
+    [ "chars", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a5695a9cc96ac132cf9ac401d07c47903.html#a5695a9cc96ac132cf9ac401d07c47903", null ],
+    [ "charsUsed", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_adedf27d3ae494fd5995e451d56ea9447.html#adedf27d3ae494fd5995e451d56ea9447", null ],
+    [ "decoder", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a6530bceb16fbd9d52843c99ab404c0f1.html#a6530bceb16fbd9d52843c99ab404c0f1", null ],
+    [ "encoding", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_acd8dd315aabe1c95e995cb8f84fd8b19.html#acd8dd315aabe1c95e995cb8f84fd8b19", null ],
+    [ "entity", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a8aa6b4c858148e8838c687c8054663c6.html#a8aa6b4c858148e8838c687c8054663c6", null ],
+    [ "entityId", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a1aae238160d8f40b2e37e0ea7205a10a.html#a1aae238160d8f40b2e37e0ea7205a10a", null ],
+    [ "entityResolvedManually", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a7c2219e0c076fae903be17cec0ca5324.html#a7c2219e0c076fae903be17cec0ca5324", null ],
+    [ "eolNormalized", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a94768a9e0987c97c995e1a3fe1efd354.html#a94768a9e0987c97c995e1a3fe1efd354", null ],
+    [ "isEof", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a44134a7cce51efd519567455621e39b2.html#a44134a7cce51efd519567455621e39b2", null ],
+    [ "isStreamEof", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a3261b1bb97306987e12cc1bb17c13ef4.html#a3261b1bb97306987e12cc1bb17c13ef4", null ],
+    [ "lineNo", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a7ffe31a25a0bc774f39e94359a022669.html#a7ffe31a25a0bc774f39e94359a022669", null ],
+    [ "lineStartPos", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_adc841c5ae02180093a9d1f0577f06e28.html#adc841c5ae02180093a9d1f0577f06e28", null ],
+    [ "stream", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a03ce60bbabbfa331b454ce16f4a2758a.html#a03ce60bbabbfa331b454ce16f4a2758a", null ],
+    [ "textReader", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_af6fcfc8e549f3733057951b94fb439a6.html#af6fcfc8e549f3733057951b94fb439a6", null ],
+    [ "LineNo", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_a44a09b7faa7b6924bfb84d1ec160e750.html#a44a09b7faa7b6924bfb84d1ec160e750", null ],
+    [ "LinePos", "dd/d92/structSystem_1_1Xml_1_1XmlTextReaderImpl_1_1ParsingState_ab1cf8d282de65604eeef52ca6ed22eb0.html#ab1cf8d282de65604eeef52ca6ed22eb0", null ]
+];

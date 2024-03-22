@@ -1,0 +1,37 @@
+var classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder =
+[
+    [ "Format", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a4dc3a5170b49a73024f2e645c7217970.html#a4dc3a5170b49a73024f2e645c7217970", [
+      [ "ToString", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a4dc3a5170b49a73024f2e645c7217970.html#a4dc3a5170b49a73024f2e645c7217970afbf5c789cacbeafe714e07d3c502d945", null ],
+      [ "FullName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a4dc3a5170b49a73024f2e645c7217970.html#a4dc3a5170b49a73024f2e645c7217970ae309e678d77a80e722dd1695137a5a21", null ],
+      [ "AssemblyQualifiedName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a4dc3a5170b49a73024f2e645c7217970.html#a4dc3a5170b49a73024f2e645c7217970a31b2dbb99a0be5a7c065811403fc28c4", null ]
+    ] ],
+    [ "TypeNameBuilder", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a17e38094339a6f4c7be18e6230eabe89.html#a17e38094339a6f4c7be18e6230eabe89", null ],
+    [ "AddArray", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_aeda30facb0ab8a28d331253523157dcb.html#aeda30facb0ab8a28d331253523157dcb", null ],
+    [ "AddAssemblyQualifiedName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a76a3907f9e79ef9ab3243ebec022db30.html#a76a3907f9e79ef9ab3243ebec022db30", null ],
+    [ "AddAssemblySpec", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_abe0e0642547665eff14e8a14f95b9859.html#abe0e0642547665eff14e8a14f95b9859", null ],
+    [ "AddElementType", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_ac03a36f559ac8b119c0ac4491acf332c.html#ac03a36f559ac8b119c0ac4491acf332c", null ],
+    [ "AddName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a2d569da770dc195b2efc874cc880089b.html#a2d569da770dc195b2efc874cc880089b", null ],
+    [ "Append", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_ac5a6b88cfc93ecd98d673a986e726f76.html#ac5a6b88cfc93ecd98d673a986e726f76", null ],
+    [ "Append", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a396e65b3de2362dc721589af9dc43ddd.html#a396e65b3de2362dc721589af9dc43ddd", null ],
+    [ "CloseGenericArgument", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_af10c73b05b615e59a36c395fcae83ad0.html#af10c73b05b615e59a36c395fcae83ad0", null ],
+    [ "CloseGenericArguments", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a73ece882bbb55b5875a0d8aa9bc0539c.html#a73ece882bbb55b5875a0d8aa9bc0539c", null ],
+    [ "ContainsReservedChar", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_ab8a4c8e31329b5562a9482f3b646cd27.html#ab8a4c8e31329b5562a9482f3b646cd27", null ],
+    [ "EscapeAssemblyName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a19c201fc3673dadd4d1f41abf1ef1389.html#a19c201fc3673dadd4d1f41abf1ef1389", null ],
+    [ "EscapeEmbeddedAssemblyName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a58b6a533b4f3156fb41c8805bf20e68a.html#a58b6a533b4f3156fb41c8805bf20e68a", null ],
+    [ "EscapeName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a5be166060b013efd0f372cff712648ed.html#a5be166060b013efd0f372cff712648ed", null ],
+    [ "IsTypeNameReservedChar", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a53c6db77044c92798c6bb6ed6e6850d2.html#a53c6db77044c92798c6bb6ed6e6850d2", null ],
+    [ "OpenGenericArgument", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_abdc0aa10cdfe1821992c927c2fd9c791.html#abdc0aa10cdfe1821992c927c2fd9c791", null ],
+    [ "OpenGenericArguments", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a539945a6ee2a5c40464552bb68c2ae7d.html#a539945a6ee2a5c40464552bb68c2ae7d", null ],
+    [ "PopOpenGenericArgument", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a08c603045ddca247ea89d37651e9a751.html#a08c603045ddca247ea89d37651e9a751", null ],
+    [ "PushOpenGenericArgument", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a9ac1bd35372c224f185cdc04dd4b2bb7.html#a9ac1bd35372c224f185cdc04dd4b2bb7", null ],
+    [ "ToString", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a64eaf0a20d26b542138e1109671af015.html#a64eaf0a20d26b542138e1109671af015", null ],
+    [ "ToString", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_ae906068cca602a6f27e43d148eff7447.html#ae906068cca602a6f27e43d148eff7447", null ],
+    [ "_firstInstArg", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a671b3bfb7c9c1b2c7b088fdbd849f508.html#a671b3bfb7c9c1b2c7b088fdbd849f508", null ],
+    [ "_hasAssemblySpec", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a34259b4f5686d65e013f84a25643bceb.html#a34259b4f5686d65e013f84a25643bceb", null ],
+    [ "_instNesting", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a26649d89d0a1072bb82502a102c4179f.html#a26649d89d0a1072bb82502a102c4179f", null ],
+    [ "_nestedName", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_ad2505b7448456b93b12992dcabd52a23.html#ad2505b7448456b93b12992dcabd52a23", null ],
+    [ "_stack", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a1a01f273978ea02aa8128a94f8cfb86f.html#a1a01f273978ea02aa8128a94f8cfb86f", null ],
+    [ "_stackIdx", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_aca33d2dc67c6af2ecbd76d2bd5f683d4.html#aca33d2dc67c6af2ecbd76d2bd5f683d4", null ],
+    [ "_str", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_a8b6f6eae5e2dbd961ab0624ec0cdb7d3.html#a8b6f6eae5e2dbd961ab0624ec0cdb7d3", null ],
+    [ "_useAngleBracketsForGenerics", "d2/dd1/classSystem_1_1Reflection_1_1Emit_1_1TypeNameBuilder_acac3893d3f0b2bbdd7262b03212bbb67.html#acac3893d3f0b2bbdd7262b03212bbb67", null ]
+];

@@ -1,0 +1,5 @@
+var classSystem_1_1Transactions_1_1Distributed_1_1DistributedTransaction_1_1RealDistributedTransaction =
+[
+    [ "_003CInternalTransaction_003Ek__BackingField", "d3/d99/classSystem_1_1Transactions_1_1Distributed_1_1DistributedTransaction_1_1RealDistributedTransaction_a57ccd078b61282c1d475c2453d539d80.html#a57ccd078b61282c1d475c2453d539d80", null ],
+    [ "InternalTransaction", "d3/d99/classSystem_1_1Transactions_1_1Distributed_1_1DistributedTransaction_1_1RealDistributedTransaction_ab93e28242f1b4497f75085eeea315817.html#ab93e28242f1b4497f75085eeea315817", null ]
+];

@@ -1,0 +1,26 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition =
+[
+    [ "MethodDefinition", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a58cd014c5074b2f9cfe05a1c6e22a67c.html#a58cd014c5074b2f9cfe05a1c6e22a67c", null ],
+    [ "DecodeSignature< TType, TGenericContext >", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a453df167f168712ecdf99ea33a25347f.html#a453df167f168712ecdf99ea33a25347f", null ],
+    [ "GetCustomAttributes", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a8edf02f48b34c4eea77b4c15724a1eed.html#a8edf02f48b34c4eea77b4c15724a1eed", null ],
+    [ "GetDeclarativeSecurityAttributes", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a0c24b04edb6942ef24806b5be71e7dbe.html#a0c24b04edb6942ef24806b5be71e7dbe", null ],
+    [ "GetDeclaringType", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a343b0ed494743f63cd0a204a8eaa2973.html#a343b0ed494743f63cd0a204a8eaa2973", null ],
+    [ "GetGenericParameters", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_af16167f3724b4e5ecb25de268784f14b.html#af16167f3724b4e5ecb25de268784f14b", null ],
+    [ "GetImport", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_ac4dc05e9c02ddeccaaed387c9251c6b0.html#ac4dc05e9c02ddeccaaed387c9251c6b0", null ],
+    [ "GetParameters", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a2f140bf69b29c587f7dbd1e3051ff9a2.html#a2f140bf69b29c587f7dbd1e3051ff9a2", null ],
+    [ "GetProjectedFlags", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_aa57fd804a0c357e723edce35d30a6a86.html#aa57fd804a0c357e723edce35d30a6a86", null ],
+    [ "GetProjectedImplFlags", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a61e9d7bec631a5ab5c8d750dc4caf5d1.html#a61e9d7bec631a5ab5c8d750dc4caf5d1", null ],
+    [ "GetProjectedName", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a606d37339533ae381973a716c66cc37f.html#a606d37339533ae381973a716c66cc37f", null ],
+    [ "GetProjectedRelativeVirtualAddress", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_af1f2eb6dfd6601ae9ff3c79bc71c5cca.html#af1f2eb6dfd6601ae9ff3c79bc71c5cca", null ],
+    [ "GetProjectedSignature", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a4dfef94e6cf7e8cac77f1075f90dd1ee.html#a4dfef94e6cf7e8cac77f1075f90dd1ee", null ],
+    [ "_reader", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a170ba8d72836a510a81402dee4fca195.html#a170ba8d72836a510a81402dee4fca195", null ],
+    [ "_treatmentAndRowId", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_ad59c1da33f0d85f6248661800bbb5ecf.html#ad59c1da33f0d85f6248661800bbb5ecf", null ],
+    [ "Attributes", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a8924eb601f3edbffbd74ff44b006e68b.html#a8924eb601f3edbffbd74ff44b006e68b", null ],
+    [ "Handle", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a5349f3f8ff66d51948b345ff8a90b588.html#a5349f3f8ff66d51948b345ff8a90b588", null ],
+    [ "ImplAttributes", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_ad4d8944da0ca0db6facda4b5f91f345f.html#ad4d8944da0ca0db6facda4b5f91f345f", null ],
+    [ "Name", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_aec3b3c519d3a7620afd79274470f8ded.html#aec3b3c519d3a7620afd79274470f8ded", null ],
+    [ "RelativeVirtualAddress", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a490e24c48293083e8e6bd0378e14cc40.html#a490e24c48293083e8e6bd0378e14cc40", null ],
+    [ "RowId", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a6e3ce107cb8d77ce44e7fc549d778ccd.html#a6e3ce107cb8d77ce44e7fc549d778ccd", null ],
+    [ "Signature", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a999f7bd09ab083f5ed88cd5a4e89cd56.html#a999f7bd09ab083f5ed88cd5a4e89cd56", null ],
+    [ "Treatment", "d9/d19/structSystem_1_1Reflection_1_1Metadata_1_1MethodDefinition_a332991b5c90bdba4b02b6b3bc7a72f78.html#a332991b5c90bdba4b02b6b3bc7a72f78", null ]
+];

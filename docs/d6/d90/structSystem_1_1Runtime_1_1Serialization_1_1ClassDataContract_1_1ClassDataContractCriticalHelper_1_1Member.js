@@ -1,0 +1,7 @@
+var structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member =
+[
+    [ "Member", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member_a6ab67634583001ba50f8d17e5e627cd4.html#a6ab67634583001ba50f8d17e5e627cd4", null ],
+    [ "baseTypeIndex", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member_a25f51f68df8221e29f18b1aacf120cf4.html#a25f51f68df8221e29f18b1aacf120cf4", null ],
+    [ "member", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member_a92763de0cbeb2e4551e1d8062bc06657.html#a92763de0cbeb2e4551e1d8062bc06657", null ],
+    [ "ns", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member_aff6bbf9a508d4548dae0aea2cd24e61f.html#aff6bbf9a508d4548dae0aea2cd24e61f", null ]
+];

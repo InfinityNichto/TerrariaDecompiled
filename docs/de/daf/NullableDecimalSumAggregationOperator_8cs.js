@@ -1,0 +1,5 @@
+var NullableDecimalSumAggregationOperator_8cs =
+[
+    [ "System.Linq.Parallel.NullableDecimalSumAggregationOperator", "df/d67/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalSumAggregationOperator.html", "df/d67/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalSumAggregationOperator" ],
+    [ "System.Linq.Parallel.NullableDecimalSumAggregationOperator.NullableDecimalSumAggregationOperatorEnumerator< TKey >", "d1/d3d/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalSumAggregationOperator_1_1NullableDecimalSumAggregationOperatorEnumerator.html", "d1/d3d/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalSumAggregationOperator_1_1NullableDecimalSumAggregationOperatorEnumerator" ]
+];

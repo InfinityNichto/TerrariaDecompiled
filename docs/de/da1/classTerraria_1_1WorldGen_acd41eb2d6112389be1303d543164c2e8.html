@@ -105,14 +105,14 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_acd41eb2d6112389be130
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Terraria.WorldGen.PlaceUncheckedStalactite </td>
+          <td class="memname">static <a class="el" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">void</a> Terraria.WorldGen.PlaceUncheckedStalactite </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -122,7 +122,7 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_acd41eb2d6112389be130
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>variation</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>variation</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -139,274 +139,263 @@ $(function(){initNavTree('de/da1/classTerraria_1_1WorldGen_acd41eb2d6112389be130
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d73/WorldGen_8cs_source.html#l33134">33134</a> of file <a class="el" href="../../d3/d73/WorldGen_8cs_source.html">WorldGen.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">33135</span>    {</div>
-<div class="line"><span class="lineno">33136</span>        ushort type = 165;</div>
-<div class="line"><span class="lineno">33137</span>        variation = Utils.Clamp(variation, 0, 2);</div>
+<div class="line"><span class="lineno">33136</span>        ushort <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a> = 165;</div>
+<div class="line"><span class="lineno">33137</span>        <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> = Utils.Clamp(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a>, 0, 2);</div>
 <div class="line"><span class="lineno">33138</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(x, y - 1) &amp;&amp; !Main.tile[x, y].active() &amp;&amp; !Main.tile[x, y + 1].active())</div>
 <div class="line"><span class="lineno">33139</span>        {</div>
-<div class="line"><span class="lineno">33140</span>            <span class="keywordflow">if</span> (spiders)</div>
+<div class="line"><span class="lineno">33140</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">spiders</a>)</div>
 <div class="line"><span class="lineno">33141</span>            {</div>
-<div class="line"><span class="lineno">33142</span>                <span class="keywordtype">int</span> num = 108 + variation * 18;</div>
-<div class="line"><span class="lineno">33143</span>                Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33144</span>                Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33145</span>                Main.tile[x, y].frameX = (short)num;</div>
+<div class="line"><span class="lineno">33142</span>                <span class="keywordtype">int</span> num = 108 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33143</span>                Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33144</span>                Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33145</span>                Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)num;</div>
 <div class="line"><span class="lineno">33146</span>                Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33147</span>                Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33148</span>                Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33149</span>                Main.tile[x, y + 1].frameX = (short)num;</div>
+<div class="line"><span class="lineno">33147</span>                Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33148</span>                Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33149</span>                Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)num;</div>
 <div class="line"><span class="lineno">33150</span>                Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33151</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">33152</span>            }</div>
 <div class="line"><span class="lineno">33153</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 147 || Main.tile[x, y - 1].type == 161 || Main.tile[x, y - 1].type == 163 || Main.tile[x, y - 1].type == 164 || Main.tile[x, y - 1].type == 200)</div>
 <div class="line"><span class="lineno">33154</span>            {</div>
-<div class="line"><span class="lineno">33155</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33155</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33156</span>                {</div>
-<div class="line"><span class="lineno">33157</span>                    <span class="keywordtype">int</span> num2 = variation * 18;</div>
-<div class="line"><span class="lineno">33158</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33159</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33160</span>                    Main.tile[x, y].frameX = (short)num2;</div>
+<div class="line"><span class="lineno">33157</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num2</a> = <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33158</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33159</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33160</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num2</a>;</div>
 <div class="line"><span class="lineno">33161</span>                    Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33162</span>                }</div>
 <div class="line"><span class="lineno">33163</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33164</span>                {</div>
-<div class="line"><span class="lineno">33165</span>                    <span class="keywordtype">int</span> num3 = variation * 18;</div>
-<div class="line"><span class="lineno">33166</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33167</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33168</span>                    Main.tile[x, y].frameX = (short)num3;</div>
+<div class="line"><span class="lineno">33165</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num3</a> = <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33166</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33167</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33168</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num3</a>;</div>
 <div class="line"><span class="lineno">33169</span>                    Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33170</span>                    Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33171</span>                    Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33172</span>                    Main.tile[x, y + 1].frameX = (short)num3;</div>
+<div class="line"><span class="lineno">33170</span>                    Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33171</span>                    Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33172</span>                    Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num3</a>;</div>
 <div class="line"><span class="lineno">33173</span>                    Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33174</span>                }</div>
 <div class="line"><span class="lineno">33175</span>            }</div>
 <div class="line"><span class="lineno">33176</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 1 || Main.tileMoss[Main.tile[x, y - 1].type] || Main.tile[x, y - 1].type == 117 || Main.tile[x, y - 1].type == 25 || Main.tile[x, y - 1].type == 203)</div>
 <div class="line"><span class="lineno">33177</span>            {</div>
-<div class="line"><span class="lineno">33178</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33178</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33179</span>                {</div>
-<div class="line"><span class="lineno">33180</span>                    <span class="keywordtype">int</span> num4 = 54 + variation * 18;</div>
-<div class="line"><span class="lineno">33181</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33182</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33183</span>                    Main.tile[x, y].frameX = (short)num4;</div>
+<div class="line"><span class="lineno">33180</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num4</a> = 54 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33181</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33182</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33183</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num4</a>;</div>
 <div class="line"><span class="lineno">33184</span>                    Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33185</span>                }</div>
 <div class="line"><span class="lineno">33186</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33187</span>                {</div>
-<div class="line"><span class="lineno">33188</span>                    <span class="keywordtype">int</span> num5 = 54 + variation * 18;</div>
-<div class="line"><span class="lineno">33189</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33190</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33191</span>                    Main.tile[x, y].frameX = (short)num5;</div>
+<div class="line"><span class="lineno">33188</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num5</a> = 54 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33189</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33190</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33191</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num5</a>;</div>
 <div class="line"><span class="lineno">33192</span>                    Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33193</span>                    Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33194</span>                    Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33195</span>                    Main.tile[x, y + 1].frameX = (short)num5;</div>
+<div class="line"><span class="lineno">33193</span>                    Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33194</span>                    Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33195</span>                    Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num5</a>;</div>
 <div class="line"><span class="lineno">33196</span>                    Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33197</span>                }</div>
 <div class="line"><span class="lineno">33198</span>            }</div>
 <div class="line"><span class="lineno">33199</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 225)</div>
 <div class="line"><span class="lineno">33200</span>            {</div>
-<div class="line"><span class="lineno">33201</span>                <span class="keywordtype">int</span> num6 = 162 + variation * 18;</div>
-<div class="line"><span class="lineno">33202</span>                Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33203</span>                Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33204</span>                Main.tile[x, y].frameX = (short)num6;</div>
+<div class="line"><span class="lineno">33201</span>                <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> = 162 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33202</span>                Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33203</span>                Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33204</span>                Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a>;</div>
 <div class="line"><span class="lineno">33205</span>                Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33206</span>            }</div>
 <div class="line"><span class="lineno">33207</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 396 || Main.tile[x, y - 1].type == 397)</div>
 <div class="line"><span class="lineno">33208</span>            {</div>
-<div class="line"><span class="lineno">33209</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33209</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33210</span>                {</div>
-<div class="line"><span class="lineno">33211</span>                    <span class="keywordtype">int</span> num7 = 378 + variation * 18;</div>
-<div class="line"><span class="lineno">33212</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33213</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33214</span>                    Main.tile[x, y].frameX = (short)num7;</div>
+<div class="line"><span class="lineno">33211</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num7</a> = 378 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33212</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33213</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33214</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num7</a>;</div>
 <div class="line"><span class="lineno">33215</span>                    Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33216</span>                }</div>
 <div class="line"><span class="lineno">33217</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33218</span>                {</div>
-<div class="line"><span class="lineno">33219</span>                    <span class="keywordtype">int</span> num8 = 378 + variation * 18;</div>
-<div class="line"><span class="lineno">33220</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33221</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33222</span>                    Main.tile[x, y].frameX = (short)num8;</div>
+<div class="line"><span class="lineno">33219</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num8</a> = 378 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33220</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33221</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33222</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num8</a>;</div>
 <div class="line"><span class="lineno">33223</span>                    Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33224</span>                    Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33225</span>                    Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33226</span>                    Main.tile[x, y + 1].frameX = (short)num8;</div>
+<div class="line"><span class="lineno">33224</span>                    Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33225</span>                    Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33226</span>                    Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num8</a>;</div>
 <div class="line"><span class="lineno">33227</span>                    Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33228</span>                }</div>
 <div class="line"><span class="lineno">33229</span>            }</div>
 <div class="line"><span class="lineno">33230</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 368)</div>
 <div class="line"><span class="lineno">33231</span>            {</div>
-<div class="line"><span class="lineno">33232</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33232</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33233</span>                {</div>
-<div class="line"><span class="lineno">33234</span>                    <span class="keywordtype">int</span> num9 = 432 + variation * 18;</div>
-<div class="line"><span class="lineno">33235</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33236</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33237</span>                    Main.tile[x, y].frameX = (short)num9;</div>
+<div class="line"><span class="lineno">33234</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num9</a> = 432 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33235</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33236</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33237</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num9</a>;</div>
 <div class="line"><span class="lineno">33238</span>                    Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33239</span>                }</div>
 <div class="line"><span class="lineno">33240</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33241</span>                {</div>
-<div class="line"><span class="lineno">33242</span>                    <span class="keywordtype">int</span> num10 = 432 + variation * 18;</div>
-<div class="line"><span class="lineno">33243</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33244</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33245</span>                    Main.tile[x, y].frameX = (short)num10;</div>
+<div class="line"><span class="lineno">33242</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num10</a> = 432 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33243</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33244</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33245</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num10</a>;</div>
 <div class="line"><span class="lineno">33246</span>                    Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33247</span>                    Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33248</span>                    Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33249</span>                    Main.tile[x, y + 1].frameX = (short)num10;</div>
+<div class="line"><span class="lineno">33247</span>                    Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33248</span>                    Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33249</span>                    Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num10</a>;</div>
 <div class="line"><span class="lineno">33250</span>                    Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33251</span>                }</div>
 <div class="line"><span class="lineno">33252</span>            }</div>
 <div class="line"><span class="lineno">33253</span>            <span class="keywordflow">if</span> (Main.tile[x, y - 1].type == 367)</div>
 <div class="line"><span class="lineno">33254</span>            {</div>
-<div class="line"><span class="lineno">33255</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33255</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33256</span>                {</div>
-<div class="line"><span class="lineno">33257</span>                    <span class="keywordtype">int</span> num11 = 486 + variation * 18;</div>
-<div class="line"><span class="lineno">33258</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33259</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33260</span>                    Main.tile[x, y].frameX = (short)num11;</div>
+<div class="line"><span class="lineno">33257</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num11</a> = 486 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33258</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33259</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33260</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num11</a>;</div>
 <div class="line"><span class="lineno">33261</span>                    Main.tile[x, y].frameY = 72;</div>
 <div class="line"><span class="lineno">33262</span>                }</div>
 <div class="line"><span class="lineno">33263</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33264</span>                {</div>
-<div class="line"><span class="lineno">33265</span>                    <span class="keywordtype">int</span> num12 = 486 + variation * 18;</div>
-<div class="line"><span class="lineno">33266</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33267</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33268</span>                    Main.tile[x, y].frameX = (short)num12;</div>
+<div class="line"><span class="lineno">33265</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num12</a> = 486 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33266</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33267</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33268</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num12</a>;</div>
 <div class="line"><span class="lineno">33269</span>                    Main.tile[x, y].frameY = 0;</div>
-<div class="line"><span class="lineno">33270</span>                    Main.tile[x, y + 1].type = type;</div>
-<div class="line"><span class="lineno">33271</span>                    Main.tile[x, y + 1].active(active: true);</div>
-<div class="line"><span class="lineno">33272</span>                    Main.tile[x, y + 1].frameX = (short)num12;</div>
+<div class="line"><span class="lineno">33270</span>                    Main.tile[x, y + 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33271</span>                    Main.tile[x, y + 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33272</span>                    Main.tile[x, y + 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num12</a>;</div>
 <div class="line"><span class="lineno">33273</span>                    Main.tile[x, y + 1].frameY = 18;</div>
 <div class="line"><span class="lineno">33274</span>                }</div>
 <div class="line"><span class="lineno">33275</span>            }</div>
 <div class="line"><span class="lineno">33276</span>        }</div>
 <div class="line"><span class="lineno">33277</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33278</span>        {</div>
-<div class="line"><span class="lineno">33279</span>            <span class="keywordflow">if</span> (spiders || !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(x, y + 1) || Main.tile[x, y].active() || Main.tile[x, y - 1].active())</div>
+<div class="line"><span class="lineno">33279</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">spiders</a> || !<a class="code hl_enumvalue" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">SolidTile</a>(x, y + 1) || Main.tile[x, y].active() || Main.tile[x, y - 1].active())</div>
 <div class="line"><span class="lineno">33280</span>            {</div>
 <div class="line"><span class="lineno">33281</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">33282</span>            }</div>
 <div class="line"><span class="lineno">33283</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].type == 1 || Main.tileMoss[Main.tile[x, y + 1].type] || Main.tile[x, y - 1].type == 117 || Main.tile[x, y - 1].type == 25 || Main.tile[x, y - 1].type == 203)</div>
 <div class="line"><span class="lineno">33284</span>            {</div>
-<div class="line"><span class="lineno">33285</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33285</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33286</span>                {</div>
-<div class="line"><span class="lineno">33287</span>                    <span class="keywordtype">int</span> num13 = 54 + variation * 18;</div>
-<div class="line"><span class="lineno">33288</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33289</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33290</span>                    Main.tile[x, y].frameX = (short)num13;</div>
+<div class="line"><span class="lineno">33287</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num13</a> = 54 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33288</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33289</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33290</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num13</a>;</div>
 <div class="line"><span class="lineno">33291</span>                    Main.tile[x, y].frameY = 90;</div>
 <div class="line"><span class="lineno">33292</span>                }</div>
 <div class="line"><span class="lineno">33293</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33294</span>                {</div>
-<div class="line"><span class="lineno">33295</span>                    <span class="keywordtype">int</span> num14 = 54 + variation * 18;</div>
-<div class="line"><span class="lineno">33296</span>                    Main.tile[x, y - 1].type = type;</div>
-<div class="line"><span class="lineno">33297</span>                    Main.tile[x, y - 1].active(active: true);</div>
-<div class="line"><span class="lineno">33298</span>                    Main.tile[x, y - 1].frameX = (short)num14;</div>
+<div class="line"><span class="lineno">33295</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num14</a> = 54 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33296</span>                    Main.tile[x, y - 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33297</span>                    Main.tile[x, y - 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33298</span>                    Main.tile[x, y - 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num14</a>;</div>
 <div class="line"><span class="lineno">33299</span>                    Main.tile[x, y - 1].frameY = 36;</div>
-<div class="line"><span class="lineno">33300</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33301</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33302</span>                    Main.tile[x, y].frameX = (short)num14;</div>
+<div class="line"><span class="lineno">33300</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33301</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33302</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num14</a>;</div>
 <div class="line"><span class="lineno">33303</span>                    Main.tile[x, y].frameY = 54;</div>
 <div class="line"><span class="lineno">33304</span>                }</div>
 <div class="line"><span class="lineno">33305</span>            }</div>
 <div class="line"><span class="lineno">33306</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].type == 225)</div>
 <div class="line"><span class="lineno">33307</span>            {</div>
-<div class="line"><span class="lineno">33308</span>                <span class="keywordtype">int</span> num15 = 162 + variation * 18;</div>
-<div class="line"><span class="lineno">33309</span>                Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33310</span>                Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33311</span>                Main.tile[x, y].frameX = (short)num15;</div>
+<div class="line"><span class="lineno">33308</span>                <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num15</a> = 162 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33309</span>                Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33310</span>                Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33311</span>                Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num15</a>;</div>
 <div class="line"><span class="lineno">33312</span>                Main.tile[x, y].frameY = 90;</div>
 <div class="line"><span class="lineno">33313</span>            }</div>
 <div class="line"><span class="lineno">33314</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].type == 396 || Main.tile[x, y + 1].type == 397)</div>
 <div class="line"><span class="lineno">33315</span>            {</div>
-<div class="line"><span class="lineno">33316</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33316</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33317</span>                {</div>
-<div class="line"><span class="lineno">33318</span>                    <span class="keywordtype">int</span> num16 = 378 + variation * 18;</div>
-<div class="line"><span class="lineno">33319</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33320</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33321</span>                    Main.tile[x, y].frameX = (short)num16;</div>
+<div class="line"><span class="lineno">33318</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num16</a> = 378 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33319</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33320</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33321</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num16</a>;</div>
 <div class="line"><span class="lineno">33322</span>                    Main.tile[x, y].frameY = 90;</div>
 <div class="line"><span class="lineno">33323</span>                }</div>
 <div class="line"><span class="lineno">33324</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33325</span>                {</div>
-<div class="line"><span class="lineno">33326</span>                    <span class="keywordtype">int</span> num17 = 378 + variation * 18;</div>
-<div class="line"><span class="lineno">33327</span>                    Main.tile[x, y - 1].type = type;</div>
-<div class="line"><span class="lineno">33328</span>                    Main.tile[x, y - 1].active(active: true);</div>
-<div class="line"><span class="lineno">33329</span>                    Main.tile[x, y - 1].frameX = (short)num17;</div>
+<div class="line"><span class="lineno">33326</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num17</a> = 378 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33327</span>                    Main.tile[x, y - 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33328</span>                    Main.tile[x, y - 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33329</span>                    Main.tile[x, y - 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num17</a>;</div>
 <div class="line"><span class="lineno">33330</span>                    Main.tile[x, y - 1].frameY = 36;</div>
-<div class="line"><span class="lineno">33331</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33332</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33333</span>                    Main.tile[x, y].frameX = (short)num17;</div>
+<div class="line"><span class="lineno">33331</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33332</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33333</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num17</a>;</div>
 <div class="line"><span class="lineno">33334</span>                    Main.tile[x, y].frameY = 54;</div>
 <div class="line"><span class="lineno">33335</span>                }</div>
 <div class="line"><span class="lineno">33336</span>            }</div>
 <div class="line"><span class="lineno">33337</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].type == 368)</div>
 <div class="line"><span class="lineno">33338</span>            {</div>
-<div class="line"><span class="lineno">33339</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33339</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33340</span>                {</div>
-<div class="line"><span class="lineno">33341</span>                    <span class="keywordtype">int</span> num18 = 432 + variation * 18;</div>
-<div class="line"><span class="lineno">33342</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33343</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33344</span>                    Main.tile[x, y].frameX = (short)num18;</div>
+<div class="line"><span class="lineno">33341</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num18</a> = 432 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33342</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33343</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33344</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num18</a>;</div>
 <div class="line"><span class="lineno">33345</span>                    Main.tile[x, y].frameY = 90;</div>
 <div class="line"><span class="lineno">33346</span>                }</div>
 <div class="line"><span class="lineno">33347</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33348</span>                {</div>
-<div class="line"><span class="lineno">33349</span>                    <span class="keywordtype">int</span> num19 = 432 + variation * 18;</div>
-<div class="line"><span class="lineno">33350</span>                    Main.tile[x, y - 1].type = type;</div>
-<div class="line"><span class="lineno">33351</span>                    Main.tile[x, y - 1].active(active: true);</div>
-<div class="line"><span class="lineno">33352</span>                    Main.tile[x, y - 1].frameX = (short)num19;</div>
+<div class="line"><span class="lineno">33349</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num19</a> = 432 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33350</span>                    Main.tile[x, y - 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33351</span>                    Main.tile[x, y - 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33352</span>                    Main.tile[x, y - 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num19</a>;</div>
 <div class="line"><span class="lineno">33353</span>                    Main.tile[x, y - 1].frameY = 36;</div>
-<div class="line"><span class="lineno">33354</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33355</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33356</span>                    Main.tile[x, y].frameX = (short)num19;</div>
+<div class="line"><span class="lineno">33354</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33355</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33356</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num19</a>;</div>
 <div class="line"><span class="lineno">33357</span>                    Main.tile[x, y].frameY = 54;</div>
 <div class="line"><span class="lineno">33358</span>                }</div>
 <div class="line"><span class="lineno">33359</span>            }</div>
 <div class="line"><span class="lineno">33360</span>            <span class="keywordflow">if</span> (Main.tile[x, y + 1].type == 367)</div>
 <div class="line"><span class="lineno">33361</span>            {</div>
-<div class="line"><span class="lineno">33362</span>                <span class="keywordflow">if</span> (preferSmall)</div>
+<div class="line"><span class="lineno">33362</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">preferSmall</a>)</div>
 <div class="line"><span class="lineno">33363</span>                {</div>
-<div class="line"><span class="lineno">33364</span>                    <span class="keywordtype">int</span> num20 = 486 + variation * 18;</div>
-<div class="line"><span class="lineno">33365</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33366</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33367</span>                    Main.tile[x, y].frameX = (short)num20;</div>
+<div class="line"><span class="lineno">33364</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num20</a> = 486 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33365</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33366</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33367</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num20</a>;</div>
 <div class="line"><span class="lineno">33368</span>                    Main.tile[x, y].frameY = 90;</div>
 <div class="line"><span class="lineno">33369</span>                }</div>
 <div class="line"><span class="lineno">33370</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">33371</span>                {</div>
-<div class="line"><span class="lineno">33372</span>                    <span class="keywordtype">int</span> num21 = 486 + variation * 18;</div>
-<div class="line"><span class="lineno">33373</span>                    Main.tile[x, y - 1].type = type;</div>
-<div class="line"><span class="lineno">33374</span>                    Main.tile[x, y - 1].active(active: true);</div>
-<div class="line"><span class="lineno">33375</span>                    Main.tile[x, y - 1].frameX = (short)num21;</div>
+<div class="line"><span class="lineno">33372</span>                    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num21</a> = 486 + <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">variation</a> * 18;</div>
+<div class="line"><span class="lineno">33373</span>                    Main.tile[x, y - 1].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33374</span>                    Main.tile[x, y - 1].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33375</span>                    Main.tile[x, y - 1].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num21</a>;</div>
 <div class="line"><span class="lineno">33376</span>                    Main.tile[x, y - 1].frameY = 36;</div>
-<div class="line"><span class="lineno">33377</span>                    Main.tile[x, y].type = type;</div>
-<div class="line"><span class="lineno">33378</span>                    Main.tile[x, y].active(active: true);</div>
-<div class="line"><span class="lineno">33379</span>                    Main.tile[x, y].frameX = (short)num21;</div>
+<div class="line"><span class="lineno">33377</span>                    Main.tile[x, y].type = <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">type</a>;</div>
+<div class="line"><span class="lineno">33378</span>                    Main.tile[x, y].active(active: <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">true</a>);</div>
+<div class="line"><span class="lineno">33379</span>                    Main.tile[x, y].frameX = (<a class="code hl_class" href="../../dc/d10/classshort.html">short</a>)<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num21</a>;</div>
 <div class="line"><span class="lineno">33380</span>                    Main.tile[x, y].frameY = 54;</div>
 <div class="line"><span class="lineno">33381</span>                }</div>
 <div class="line"><span class="lineno">33382</span>            }</div>
 <div class="line"><span class="lineno">33383</span>        }</div>
 <div class="line"><span class="lineno">33384</span>    }</div>
+<div class="ttc" id="aclassSystem_1_1Collections_1_1Generic_1_1Dictionary_html"><div class="ttname"><a href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">System.Collections.Generic.Dictionary</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d61/Dictionary_8cs_source.html#l00013">Dictionary.cs:14</a></div></div>
+<div class="ttc" id="aclassshort_html"><div class="ttname"><a href="../../dc/d10/classshort.html">short</a></div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">System.ExceptionArgument.type</a></div><div class="ttdeci">@ type</div></div>
 <div class="ttc" id="anamespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014_html_a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd"><div class="ttname"><a href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.AnchorType.SolidTile</a></div><div class="ttdeci">@ SolidTile</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a9a3f37926e6d7f23ba057d6c0aeab1a5.html#a9a3f37926e6d7f23ba057d6c0aeab1a5">Terraria.Tile.active()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a87f05d408084b49b4be1973f556321d9.html#a87f05d408084b49b4be1973f556321d9">Terraria.Tile.frameX</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a53bdddf3f446d6f41515f40e61843436.html#a53bdddf3f446d6f41515f40e61843436">Terraria.Main.tileMoss</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d0b/namespaceTerraria_1_1Enums_a204aa8cb535489f0ef22f6ea25eda014.html#a204aa8cb535489f0ef22f6ea25eda014a5a2ea40847687878b6b6a618be9510fd">Terraria.Enums.SolidTile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a53bdddf3f446d6f41515f40e61843436.html#a53bdddf3f446d6f41515f40e61843436">Terraria.Main.tileMoss</a>, and <a class="el" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a599dcce2998a6b40b1e38e8c6006cb0a">System.type</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d6/d17/classTerraria_1_1GameContent_1_1Biomes_1_1GraniteBiome_af86bdee12341b2a398fde93b572b97bd.html#af86bdee12341b2a398fde93b572b97bd">Terraria.GameContent.Biomes.GraniteBiome.PlaceDecorations()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/da1/classTerraria_1_1WorldGen_acd41eb2d6112389be1303d543164c2e8_acd41eb2d6112389be1303d543164c2e8_cgraph.svg" width="450" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/da1/classTerraria_1_1WorldGen_acd41eb2d6112389be1303d543164c2e8_acd41eb2d6112389be1303d543164c2e8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>

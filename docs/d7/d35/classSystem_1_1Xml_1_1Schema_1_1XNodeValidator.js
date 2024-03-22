@@ -1,0 +1,28 @@
+var classSystem_1_1Xml_1_1Schema_1_1XNodeValidator =
+[
+    [ "XNodeValidator", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a4791201aabf98b4bf5e0049b28324253.html#a4791201aabf98b4bf5e0049b28324253", null ],
+    [ "GetDefaultAttributeSchemaInfo", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a9efee434b6a3426b164e9dfff8d59620.html#a9efee434b6a3426b164e9dfff8d59620", null ],
+    [ "GetDefaultValue", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ae3075c2346f40b055d4219168255b66b.html#ae3075c2346f40b055d4219168255b66b", null ],
+    [ "GetDefaultValue", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ab0c30a99f1ea22762aee1c8fef73e5b4.html#ab0c30a99f1ea22762aee1c8fef73e5b4", null ],
+    [ "PushAncestorsAndSelf", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ae3693cde8998f2b351700a1a6ac6cbc2.html#ae3693cde8998f2b351700a1a6ac6cbc2", null ],
+    [ "PushElement", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_afb4da6a327e7a34f764f4350e29dbed6.html#afb4da6a327e7a34f764f4350e29dbed6", null ],
+    [ "ReplaceSchemaInfo", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a6e83c89f5286838f22a64f98c2487d3b.html#a6e83c89f5286838f22a64f98c2487d3b", null ],
+    [ "RestoreLineInfo", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a1d1afdfe39b55f66bf9ba90f5d5e2f37.html#a1d1afdfe39b55f66bf9ba90f5d5e2f37", null ],
+    [ "SaveLineInfo", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a733b9d50c86b112e324f8973b6a6e376.html#a733b9d50c86b112e324f8973b6a6e376", null ],
+    [ "Validate", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_af5d14f1a106d9fef9878ff3b2fd588ed.html#af5d14f1a106d9fef9878ff3b2fd588ed", null ],
+    [ "ValidateAttribute", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ad2bac2dddc7bdfdda392a516a05db96d.html#ad2bac2dddc7bdfdda392a516a05db96d", null ],
+    [ "ValidateAttributes", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a0ec9bdf39fd60682ea4c9331d691613c.html#a0ec9bdf39fd60682ea4c9331d691613c", null ],
+    [ "ValidateElement", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a208e2dce1c3880c41beafe5a62e040e0.html#a208e2dce1c3880c41beafe5a62e040e0", null ],
+    [ "ValidateNodes", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ab09b2cfd5f3fe78eb7a24ca084e5d5ed.html#ab09b2cfd5f3fe78eb7a24ca084e5d5ed", null ],
+    [ "ValidationCallback", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a7a826ca2842170381180f9fe2e624b39.html#a7a826ca2842170381180f9fe2e624b39", null ],
+    [ "addSchemaInfo", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_aa043f283b741f49442d91487b1728c95.html#aa043f283b741f49442d91487b1728c95", null ],
+    [ "defaultAttributes", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_ac2288b337ee5e5948633bd74c810fa8d.html#ac2288b337ee5e5948633bd74c810fa8d", null ],
+    [ "namespaceManager", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a04c0d8cfa854e5e3b1ae47562e627b36.html#a04c0d8cfa854e5e3b1ae47562e627b36", null ],
+    [ "schemaInfos", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a12f8fb963924978fff5dd33f20d4b29a.html#a12f8fb963924978fff5dd33f20d4b29a", null ],
+    [ "schemas", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a6c3da382b871b2fef555c6f0e4d98ce5.html#a6c3da382b871b2fef555c6f0e4d98ce5", null ],
+    [ "source", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a6076e025006f31226877a4f83fdcfab7.html#a6076e025006f31226877a4f83fdcfab7", null ],
+    [ "validationEventHandler", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a434fd39cb3e991674ee8f41ad2f60f70.html#a434fd39cb3e991674ee8f41ad2f60f70", null ],
+    [ "validator", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a6a73643261e1c5842c786d8b3e0a7364.html#a6a73643261e1c5842c786d8b3e0a7364", null ],
+    [ "xsiNilName", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a968ef22f407d30512f7b37f45c4d60fd.html#a968ef22f407d30512f7b37f45c4d60fd", null ],
+    [ "xsiTypeName", "d7/d35/classSystem_1_1Xml_1_1Schema_1_1XNodeValidator_a7e7dc57c625bb5ff4e39405a92a081b3.html#a7e7dc57c625bb5ff4e39405a92a081b3", null ]
+];

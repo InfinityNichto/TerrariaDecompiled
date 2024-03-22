@@ -1,0 +1,28 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper =
+[
+    [ "CriticalHelper", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a23949c262ae449487a80656681bf010f.html#a23949c262ae449487a80656681bf010f", null ],
+    [ "_conflictingMember", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_aadbbe2f93f36c47564d647cc21eb8703.html#aadbbe2f93f36c47564d647cc21eb8703", null ],
+    [ "_emitDefaultValue", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_ae953491e224456b7760335e1381f655f.html#ae953491e224456b7760335e1381f655f", null ],
+    [ "_hasConflictingNameAndType", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a44f404a584675e9c19e2267781e56780.html#a44f404a584675e9c19e2267781e56780", null ],
+    [ "_isGetOnlyCollection", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a3d66e962dfc7ac6cc202a3a254c75e80.html#a3d66e962dfc7ac6cc202a3a254c75e80", null ],
+    [ "_isNullable", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a2f04cef237d0d36a522fc718befbef9d.html#a2f04cef237d0d36a522fc718befbef9d", null ],
+    [ "_isRequired", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a5b3f2efa018406c2a7550b691b775fc2.html#a5b3f2efa018406c2a7550b691b775fc2", null ],
+    [ "_memberInfo", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_af3b4b63ba77461d87cd22acfa46a9666.html#af3b4b63ba77461d87cd22acfa46a9666", null ],
+    [ "_memberPrimitiveContract", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a7abe030ec72623194f9d4439acdb2865.html#a7abe030ec72623194f9d4439acdb2865", null ],
+    [ "_memberType", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a09be88e15c6d75f5fd99357bd0a8444c.html#a09be88e15c6d75f5fd99357bd0a8444c", null ],
+    [ "_memberTypeContract", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_ad9870c2b9ba32613d70a8e3a1325651b.html#ad9870c2b9ba32613d70a8e3a1325651b", null ],
+    [ "_name", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a1d409072ae30bbee79584865cc7a7ab6.html#a1d409072ae30bbee79584865cc7a7ab6", null ],
+    [ "_order", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_adf761182a835de126198fa307008d482.html#adf761182a835de126198fa307008d482", null ],
+    [ "ConflictingMember", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a745380e53386cf009473202aa33a6293.html#a745380e53386cf009473202aa33a6293", null ],
+    [ "EmitDefaultValue", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_afcc1e4b1807c887731c4cbd59f518a22.html#afcc1e4b1807c887731c4cbd59f518a22", null ],
+    [ "HasConflictingNameAndType", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_aac8ff63c0b57f32aa0d9f2a8ab5eec77.html#aac8ff63c0b57f32aa0d9f2a8ab5eec77", null ],
+    [ "IsGetOnlyCollection", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a26606aeb78f00dbdf79ed5ae4c925dff.html#a26606aeb78f00dbdf79ed5ae4c925dff", null ],
+    [ "IsNullable", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a6f72111f89d3ae6a97b49ad5c9aa9bcb.html#a6f72111f89d3ae6a97b49ad5c9aa9bcb", null ],
+    [ "IsRequired", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_aa3a47ecef35e3972867670c6a625b3d1.html#aa3a47ecef35e3972867670c6a625b3d1", null ],
+    [ "MemberInfo", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a41b5fa1c8339ee770d37afaf811d3bbc.html#a41b5fa1c8339ee770d37afaf811d3bbc", null ],
+    [ "MemberPrimitiveContract", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_afd399d7f6d90bf359705404c1ba1ba03.html#afd399d7f6d90bf359705404c1ba1ba03", null ],
+    [ "MemberType", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_adb69e278faeec32676363f08501b517a.html#adb69e278faeec32676363f08501b517a", null ],
+    [ "MemberTypeContract", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a1a209bac8838afe31a6755fe623b428f.html#a1a209bac8838afe31a6755fe623b428f", null ],
+    [ "Name", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a056925d339526a30426f24a1af86d0aa.html#a056925d339526a30426f24a1af86d0aa", null ],
+    [ "Order", "d3/dad/classSystem_1_1Runtime_1_1Serialization_1_1DataMember_1_1CriticalHelper_a374f00c6258fb78f40e10fe1eda85c92.html#a374f00c6258fb78f40e10fe1eda85c92", null ]
+];

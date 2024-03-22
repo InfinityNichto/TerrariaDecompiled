@@ -1,5 +1,6 @@
 var interfaceTerraria_1_1Audio_1_1IAudioSystem =
 [
+    [ "Dispose", "df/d21/interfaceTerraria_1_1Audio_1_1IAudioSystem.html#a710286bfcecdda4067fe45e6c927f482", null ],
     [ "IsTrackPlaying", "df/d21/interfaceTerraria_1_1Audio_1_1IAudioSystem_a0497fcdda0a2443a0ce09dda8b66f311.html#a0497fcdda0a2443a0ce09dda8b66f311", null ],
     [ "LoadCue", "df/d21/interfaceTerraria_1_1Audio_1_1IAudioSystem_a4a779fd53cc96e5c92e8e7dd361beab0.html#a4a779fd53cc96e5c92e8e7dd361beab0", null ],
     [ "LoadFromSources", "df/d21/interfaceTerraria_1_1Audio_1_1IAudioSystem_a2caa78e0fdb8b5ab7822a14e7e844062.html#a2caa78e0fdb8b5ab7822a14e7e844062", null ],

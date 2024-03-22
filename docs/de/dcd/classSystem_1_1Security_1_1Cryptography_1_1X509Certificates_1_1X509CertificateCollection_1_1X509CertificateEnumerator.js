@@ -1,0 +1,11 @@
+var classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator =
+[
+    [ "X509CertificateEnumerator", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_a5b97916863bc1dae59b5664a4a2be9ef.html#a5b97916863bc1dae59b5664a4a2be9ef", null ],
+    [ "MoveNext", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_a6f36e7692e2a2ae0b1be9397608177b8.html#a6f36e7692e2a2ae0b1be9397608177b8", null ],
+    [ "MoveNext", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_aafbaff0e0124a8fc71c97458d104b82d.html#aafbaff0e0124a8fc71c97458d104b82d", null ],
+    [ "Reset", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_a26d9d5d9799ea40e1e0502e548be21c1.html#a26d9d5d9799ea40e1e0502e548be21c1", null ],
+    [ "Reset", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_a1916a2553fc09c5c34a35cd2750f7025.html#a1916a2553fc09c5c34a35cd2750f7025", null ],
+    [ "_enumerator", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_ad856069caea6f6c8d878b73deef86007.html#ad856069caea6f6c8d878b73deef86007", null ],
+    [ "Current", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_ad40b975a626cace55d7c1657ae13ff96.html#ad40b975a626cace55d7c1657ae13ff96", null ],
+    [ "Current", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator_a1fc665dd7766a985b528eb75e991e7e2.html#a1fc665dd7766a985b528eb75e991e7e2", null ]
+];

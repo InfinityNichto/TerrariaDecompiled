@@ -1,0 +1,25 @@
+var classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList =
+[
+    [ "ReadOnlyList", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a2bf7469ef72026681e45b32a722f09b1.html#a2bf7469ef72026681e45b32a722f09b1", null ],
+    [ "Add", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a289c4f070f100339b7ae9efab6be9c2f.html#a289c4f070f100339b7ae9efab6be9c2f", null ],
+    [ "Add", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList.html#a93662c688a6e680976ca2053d851053a", null ],
+    [ "Clear", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a2ea5628758e3ef3e6f83ed198d6509b1.html#a2ea5628758e3ef3e6f83ed198d6509b1", null ],
+    [ "Contains", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a9b6a6931b0632b4e4b6a796e37760d44.html#a9b6a6931b0632b4e4b6a796e37760d44", null ],
+    [ "Contains", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList.html#ab4252783b87687648a60c05b331f2be4", null ],
+    [ "CopyTo", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_ab2ede4d6f63eee94a8a5385e98cff52b.html#ab2ede4d6f63eee94a8a5385e98cff52b", null ],
+    [ "GetEnumerator", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a2e09107f4c59b470f21ef3a840a85615.html#a2e09107f4c59b470f21ef3a840a85615", null ],
+    [ "IndexOf", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a7e72c08a6e78d0f1e4cca2f35bc590f1.html#a7e72c08a6e78d0f1e4cca2f35bc590f1", null ],
+    [ "IndexOf", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList.html#adce95e13ddc832c8a9b24c6f7042708e", null ],
+    [ "Insert", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_afe615a3368d69b62cb34e89dc3594386.html#afe615a3368d69b62cb34e89dc3594386", null ],
+    [ "Insert", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList.html#a67a2f70d07f3e2e9a4f15bfc20a7a26b", null ],
+    [ "Remove", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a102a8f722ac11d290c7daac25f15450b.html#a102a8f722ac11d290c7daac25f15450b", null ],
+    [ "Remove", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList.html#ac9e4087bd16c1891b2d5d74b76713d2b", null ],
+    [ "RemoveAt", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a1c4868a8ade1bd11e030140b4d10cdba.html#a1c4868a8ade1bd11e030140b4d10cdba", null ],
+    [ "_list", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_aa4ffa1eba63297d1960076a61bcdb849.html#aa4ffa1eba63297d1960076a61bcdb849", null ],
+    [ "Count", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_af6497d231cd09bb15e9891397376a155.html#af6497d231cd09bb15e9891397376a155", null ],
+    [ "IsFixedSize", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a1c5db8a58b0585f6baac54da78c3943c.html#a1c5db8a58b0585f6baac54da78c3943c", null ],
+    [ "IsReadOnly", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_ae2fcc546fab2b46c409dbbc40a41f2f4.html#ae2fcc546fab2b46c409dbbc40a41f2f4", null ],
+    [ "IsSynchronized", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a01ccb6440d1ab9a65d13c9934aeddc02.html#a01ccb6440d1ab9a65d13c9934aeddc02", null ],
+    [ "SyncRoot", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a332d5be4ece076593f3f7bc987236190.html#a332d5be4ece076593f3f7bc987236190", null ],
+    [ "this[int index]", "d6/d3a/classSystem_1_1Collections_1_1Specialized_1_1ReadOnlyList_a9cd0a97a5855aaf0030236de78ae2eff.html#a9cd0a97a5855aaf0030236de78ae2eff", null ]
+];

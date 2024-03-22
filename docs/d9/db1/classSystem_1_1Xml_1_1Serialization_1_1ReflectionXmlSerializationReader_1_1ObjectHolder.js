@@ -1,0 +1,4 @@
+var classSystem_1_1Xml_1_1Serialization_1_1ReflectionXmlSerializationReader_1_1ObjectHolder =
+[
+    [ "Object", "d9/db1/classSystem_1_1Xml_1_1Serialization_1_1ReflectionXmlSerializationReader_1_1ObjectHolder_a21c971387224661e4abdf07fe2a126d9.html#a21c971387224661e4abdf07fe2a126d9", null ]
+];

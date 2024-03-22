@@ -1,0 +1,6 @@
+var structSystem_1_1Globalization_1_1CalendricalCalculationsHelper_1_1EphemerisCorrectionAlgorithmMap =
+[
+    [ "EphemerisCorrectionAlgorithmMap", "db/d11/structSystem_1_1Globalization_1_1CalendricalCalculationsHelper_1_1EphemerisCorrectionAlgorithmMap_a7e7c74a745ddd8237b634b71f58b5b13.html#a7e7c74a745ddd8237b634b71f58b5b13", null ],
+    [ "_algorithm", "db/d11/structSystem_1_1Globalization_1_1CalendricalCalculationsHelper_1_1EphemerisCorrectionAlgorithmMap_a2b4aa064989870c327450641b7fbf0ed.html#a2b4aa064989870c327450641b7fbf0ed", null ],
+    [ "_lowestYear", "db/d11/structSystem_1_1Globalization_1_1CalendricalCalculationsHelper_1_1EphemerisCorrectionAlgorithmMap_a63c4e54fe65e94f0bb4038f4d4ce0a1b.html#a63c4e54fe65e94f0bb4038f4d4ce0a1b", null ]
+];

@@ -1,0 +1,27 @@
+var classSystem_1_1Linq_1_1Parallel_1_1QueryOperator =
+[
+    [ "QueryOperator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a972f9c9ea55b69eec3609e9999167ac2.html#a972f9c9ea55b69eec3609e9999167ac2", null ],
+    [ "QueryOperator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a836faf27d49c0f6bd53122710b6e122f.html#a836faf27d49c0f6bd53122710b6e122f", null ],
+    [ "AsQueryOperator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_ae1c3d4e53d527876051adc91181a4b3d.html#ae1c3d4e53d527876051adc91181a4b3d", null ],
+    [ "AsSequentialQuery", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a720efc7fe151cc5535528bfcc80a7066.html#a720efc7fe151cc5535528bfcc80a7066", null ],
+    [ "Cast< TCastTo >", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#a3b3699b3a1f73bc125e9bf8b4eaed81c", null ],
+    [ "Cast< TCastTo >", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#a3918d2d7c533235c51649381599984c8", null ],
+    [ "ExecuteAndCollectResults< TKey >", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a73fd0b40791d7bb000f8d258493eb916.html#a73fd0b40791d7bb000f8d258493eb916", null ],
+    [ "ExecuteAndGetResultsAsArray", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a1ee6ba08e4bb9af77ee98d12992370b7.html#a1ee6ba08e4bb9af77ee98d12992370b7", null ],
+    [ "GetEnumerator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_aa611b9d81244d9c3c6a8755f546bf424.html#aa611b9d81244d9c3c6a8755f546bf424", null ],
+    [ "GetEnumerator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a2bc8cb3668f437ed5f915aa8274cf5d1.html#a2bc8cb3668f437ed5f915aa8274cf5d1", null ],
+    [ "GetEnumerator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a9285d74164de19e3eeb70c3053e45a6b.html#a9285d74164de19e3eeb70c3053e45a6b", null ],
+    [ "GetEnumeratorUntyped", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#a53e6756e753fb262f943d38bf4a0f722", null ],
+    [ "GetEnumeratorUntyped", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#ad18a45e2eb370f38dc0671837f38a2d0", null ],
+    [ "GetOpenedEnumerator", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a5d6b627efd01c8535aba26d4d908c81b.html#a5d6b627efd01c8535aba26d4d908c81b", null ],
+    [ "GetQueryResults", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_aa9e9a868888148652fca3b96137318ea.html#aa9e9a868888148652fca3b96137318ea", null ],
+    [ "OfType< TCastTo >", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#af9fe5a9f414e276c2a1eb8077e08085c", null ],
+    [ "OfType< TCastTo >", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#a34d0c3652dd5fdd50f705c3a8b4780ce", null ],
+    [ "Open", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a49775f35be3dde0f23a140729554011d.html#a49775f35be3dde0f23a140729554011d", null ],
+    [ "_outputOrdered", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a826c6db341cc6f8911f010fe6ecbd0fb.html#a826c6db341cc6f8911f010fe6ecbd0fb", null ],
+    [ "_specifiedSettings", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#ab97f84c99766e4a9fb975bdcb92856c3", null ],
+    [ "LimitsParallelism", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a48551570d557b6efd8ff560473c010e8.html#a48551570d557b6efd8ff560473c010e8", null ],
+    [ "OrdinalIndexState", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a51afee849a3ac3fc3cc44f6b8b2ba80e.html#a51afee849a3ac3fc3cc44f6b8b2ba80e", null ],
+    [ "OutputOrdered", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator_a5b6c7b9ddb34ad74b89533f1beaefca3.html#a5b6c7b9ddb34ad74b89533f1beaefca3", null ],
+    [ "SpecifiedQuerySettings", "d7/d5e/classSystem_1_1Linq_1_1Parallel_1_1QueryOperator.html#a5b18c6c15a127897c98e99f8ebd6c62f", null ]
+];

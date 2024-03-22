@@ -1,0 +1,5 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1MethodDebugInformationRow =
+[
+    [ "Document", "de/d71/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1MethodDebugInformationRow_a68c3d999e9f9d4c0bd09db3b02ee12b3.html#a68c3d999e9f9d4c0bd09db3b02ee12b3", null ],
+    [ "SequencePoints", "de/d71/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1MethodDebugInformationRow_abe19d6e6177a21d291880229ad3fa469.html#abe19d6e6177a21d291880229ad3fa469", null ]
+];

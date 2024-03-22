@@ -1,0 +1,25 @@
+var classSystem_1_1CurrentSystemTimeZone =
+[
+    [ "CurrentSystemTimeZone", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a89af3e7a7f73d4a9afa71a83c0df6542.html#a89af3e7a7f73d4a9afa71a83c0df6542", null ],
+    [ "CalculateUtcOffset", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a7db2b9ff92bd53382fed66d0e00daa76", null ],
+    [ "CreateDaylightChanges", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a14ec0801fbe7e98f4f09bca89e754226.html#a14ec0801fbe7e98f4f09bca89e754226", null ],
+    [ "GetCachedDaylightChanges", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a28066c597d561ab3103f3d341ed08627.html#a28066c597d561ab3103f3d341ed08627", null ],
+    [ "GetDaylightChanges", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a23afa70917a6236bedb131712e8f692b.html#a23afa70917a6236bedb131712e8f692b", null ],
+    [ "GetUtcOffset", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a87a3947c172872b833ba6ab28a9f3bdb.html#a87a3947c172872b833ba6ab28a9f3bdb", null ],
+    [ "GetUtcOffsetFromUniversalTime", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a38c5b50dde1e19cb75611c3c49c178af.html#a38c5b50dde1e19cb75611c3c49c178af", null ],
+    [ "IsDaylightSavingTime", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a087c1372a6166f207a610d203153d1c7", null ],
+    [ "IsDaylightSavingTime", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a282aad943c373f101b84cf9bf7a42b51", null ],
+    [ "ResetTimeZone", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a4d760a0269f55909ab32904fc4bfffec", null ],
+    [ "ToLocalTime", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a09b9920eb5a33e4902bc23529aa3831d.html#a09b9920eb5a33e4902bc23529aa3831d", null ],
+    [ "ToUniversalTime", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a9cf4158c243bdaca63626dd347d3eacd", null ],
+    [ "currentTimeZone", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a5b31ca8c038b3ce00c2d80de143f5549", null ],
+    [ "m_CachedDaylightChanges", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a08504b43dbff2b54d773c3a689a96d1e.html#a08504b43dbff2b54d773c3a689a96d1e", null ],
+    [ "m_daylightName", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a57ff45c92ef823704176ef9401f73820.html#a57ff45c92ef823704176ef9401f73820", null ],
+    [ "m_standardName", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a6241167b84f4d23c893094a6ab054a48.html#a6241167b84f4d23c893094a6ab054a48", null ],
+    [ "m_ticksOffset", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a6871079878750d710fcca2b5c3a67d58.html#a6871079878750d710fcca2b5c3a67d58", null ],
+    [ "s_InternalSyncObject", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a66f0802ca0a0108887c850c0ca988488", null ],
+    [ "CurrentTimeZone", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a5bd4ca0c806224fab5519c9a3eac5bc0", null ],
+    [ "DaylightName", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a53ff678bbf747dfa0b32a887724fb9a5.html#a53ff678bbf747dfa0b32a887724fb9a5", null ],
+    [ "InternalSyncObject", "de/dd3/classSystem_1_1CurrentSystemTimeZone.html#a9eb0ddcee4ab2f10f8c27cf7bdbb604b", null ],
+    [ "StandardName", "de/dd3/classSystem_1_1CurrentSystemTimeZone_a4c837a5d69be55f00e85b5d32e012ee1.html#a4c837a5d69be55f00e85b5d32e012ee1", null ]
+];

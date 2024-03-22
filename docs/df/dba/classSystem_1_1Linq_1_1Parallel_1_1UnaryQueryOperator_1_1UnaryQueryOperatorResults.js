@@ -1,0 +1,27 @@
+var classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults =
+[
+    [ "ChildResultsRecipient", "db/da9/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_1_1ChildResultsRecipient.html", "db/da9/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_1_1ChildResultsRecipient" ],
+    [ "UnaryQueryOperatorResults", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_a4f5c949f927c220d9ea97794a6b32c12.html#a4f5c949f927c220d9ea97794a6b32c12", null ],
+    [ "Add", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#ac05dcd48875f10fa73c84221e684d8d4", null ],
+    [ "Clear", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a42bd336a640966268a1f0846bc9fe4dd", null ],
+    [ "Contains", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a8474d2537604ce9172d8b05ba1a65791", null ],
+    [ "CopyTo", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a387b6119402c38a9a51a61e0672eccf4", null ],
+    [ "GetElement", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a6e6c77fcb210e3eec9be727df0dc56aa", null ],
+    [ "GetEnumerator", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a52070bebd81aed14938568dc4262947e", null ],
+    [ "GetEnumerator", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a5a0bf3c8b0a7abcda86e37faf31fd31c", null ],
+    [ "GivePartitionedStream", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a21178a97a859efe55c9f841c955667df", null ],
+    [ "GivePartitionedStream", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_a92360c4f53f1006cd130ffe64d92e4da.html#a92360c4f53f1006cd130ffe64d92e4da", null ],
+    [ "IndexOf", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a45eb759b31f6a438d981d54618b3c67e", null ],
+    [ "Insert", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a13ca8108f357810bfa894d2135728afb", null ],
+    [ "Remove", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#ad606833bc70af6471807d6db683581f3", null ],
+    [ "RemoveAt", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a3f9e281e5f0819391fe994fe0db004a0", null ],
+    [ "_childQueryResults", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_aa589cc2bc7b6d211c036c9e2f303bb9c.html#aa589cc2bc7b6d211c036c9e2f303bb9c", null ],
+    [ "_op", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_a29a8842700c4f156048c8cc656abcdbd.html#a29a8842700c4f156048c8cc656abcdbd", null ],
+    [ "_preferStriping", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_a916ee571279582f7b662918c2e20b50d.html#a916ee571279582f7b662918c2e20b50d", null ],
+    [ "_settings", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults_ad9d9e683c9b9a8f37db3ddcffc3b72b2.html#ad9d9e683c9b9a8f37db3ddcffc3b72b2", null ],
+    [ "Count", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#af302cba784309dbd2ffa2bcdb3cd4810", null ],
+    [ "ElementsCount", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#ad927d42635cfd0ea2c7c9cb8cb93e962", null ],
+    [ "IsIndexible", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#aa310d378965f3adfd1bbe25e5f95ce63", null ],
+    [ "IsReadOnly", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#a6aefc56e0c52c224a7e5de7232b87eeb", null ],
+    [ "this[int index]", "df/dba/classSystem_1_1Linq_1_1Parallel_1_1UnaryQueryOperator_1_1UnaryQueryOperatorResults.html#ab318f246338885505da3fffe516e3931", null ]
+];

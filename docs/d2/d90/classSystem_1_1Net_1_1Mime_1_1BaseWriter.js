@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1Mime_1_1BaseWriter =
+[
+    [ "BaseWriter", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a810af128282e346f4171179c058ff045.html#a810af128282e346f4171179c058ff045", null ],
+    [ "BeginGetContentStream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a587e31d2dccb594e51667e84a415f18c.html#a587e31d2dccb594e51667e84a415f18c", null ],
+    [ "CheckBoundary", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a2a948a1ee2a2722058c4d1d3429d2dce.html#a2a948a1ee2a2722058c4d1d3429d2dce", null ],
+    [ "Close", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a7a45dafa1e6c1ac30df3f3009b90e344.html#a7a45dafa1e6c1ac30df3f3009b90e344", null ],
+    [ "EndGetContentStream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a09d1c0d26600624b20b110175d191e5f.html#a09d1c0d26600624b20b110175d191e5f", null ],
+    [ "Flush", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_afb2a3ce62968138c0f764151a8fb494d.html#afb2a3ce62968138c0f764151a8fb494d", null ],
+    [ "GetContentStream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a5a0004e5f3744ff58343b6fb6f2fca69.html#a5a0004e5f3744ff58343b6fb6f2fca69", null ],
+    [ "GetContentStream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a442ad821a885741153beedffa55195a3.html#a442ad821a885741153beedffa55195a3", null ],
+    [ "OnClose", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a963200b5adaef9ffb5cd583374e13fd0.html#a963200b5adaef9ffb5cd583374e13fd0", null ],
+    [ "OnWrite", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_aa21207d4624e5fca68b0087f4eb68710.html#aa21207d4624e5fca68b0087f4eb68710", null ],
+    [ "WriteAndFold", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a8eb47942aaa5e557fdfcecf4ed3439ea.html#a8eb47942aaa5e557fdfcecf4ed3439ea", null ],
+    [ "WriteHeader", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a77bdd8420ae3a88ec743b53b2fe235dc.html#a77bdd8420ae3a88ec743b53b2fe235dc", null ],
+    [ "WriteHeaders", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a0641eddb7906e55e9b4280af5e27fb27.html#a0641eddb7906e55e9b4280af5e27fb27", null ],
+    [ "_bufferBuilder", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_ad5a5b4fb32a3be95e6ffd2d5049bec0c.html#ad5a5b4fb32a3be95e6ffd2d5049bec0c", null ],
+    [ "_contentStream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_ad27e05d75c711f9aa4d9a71d2f2a409c.html#ad27e05d75c711f9aa4d9a71d2f2a409c", null ],
+    [ "_isInContent", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a30e10aa76df03abd85a0595f8e7558ee.html#a30e10aa76df03abd85a0595f8e7558ee", null ],
+    [ "_lineLength", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a5d64741d8a5f63d5e1d6566d86051c18.html#a5d64741d8a5f63d5e1d6566d86051c18", null ],
+    [ "_onCloseHandler", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_ad9ea280f23cee350295b5b6024729d43.html#ad9ea280f23cee350295b5b6024729d43", null ],
+    [ "_shouldEncodeLeadingDots", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a1a2626b36dd5ebb140a2a14eb426f1a7.html#a1a2626b36dd5ebb140a2a14eb426f1a7", null ],
+    [ "_stream", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a2684830f492247447f0756f760daecb1.html#a2684830f492247447f0756f760daecb1", null ],
+    [ "s_crlf", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_a949565ead43f5929cf72b86e4ef074fe.html#a949565ead43f5929cf72b86e4ef074fe", null ],
+    [ "s_onWrite", "d2/d90/classSystem_1_1Net_1_1Mime_1_1BaseWriter_ae5082a3f4c772ec9674b200be46dc7da.html#ae5082a3f4c772ec9674b200be46dc7da", null ]
+];

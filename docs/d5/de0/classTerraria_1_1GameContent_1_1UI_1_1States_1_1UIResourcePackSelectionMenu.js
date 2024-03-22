@@ -9,6 +9,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu 
     [ "CleanUpResourcePackPriority", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu_af5996276211349fd9c17b114b6317f05.html#af5996276211349fd9c17b114b6317f05", null ],
     [ "Click_Info", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu_a2c0392d729d2d09fea712cc733f9bd25.html#a2c0392d729d2d09fea712cc733f9bd25", null ],
     [ "CompareTo", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateOffsetButton", "d5/de0/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIResourcePackSelectionMenu_aed40164df2424755e909de0c42a8c7c9.html#aed40164df2424755e909de0c42a8c7c9", null ],

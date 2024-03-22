@@ -1,0 +1,5 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1Formatters_1_1Binary_1_1ObjectReader_1_1TypeNAssembly =
+[
+    [ "AssemblyName", "dd/d25/classSystem_1_1Runtime_1_1Serialization_1_1Formatters_1_1Binary_1_1ObjectReader_1_1TypeNAssembly_a63e280382a26baa1bcb19ffa593ce7cd.html#a63e280382a26baa1bcb19ffa593ce7cd", null ],
+    [ "Type", "dd/d25/classSystem_1_1Runtime_1_1Serialization_1_1Formatters_1_1Binary_1_1ObjectReader_1_1TypeNAssembly_a4a279759688193501e0db6cfcb1f9ffb.html#a4a279759688193501e0db6cfcb1f9ffb", null ]
+];

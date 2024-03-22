@@ -1,0 +1,6 @@
+var structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AsciiPreescapedData =
+[
+    [ "PopulatePreescapedData", "d4/dc8/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AsciiPreescapedData_acc8a46874cee79dfcc0342b195f57586.html#acc8a46874cee79dfcc0342b195f57586", null ],
+    [ "TryGetPreescapedData", "d4/dc8/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AsciiPreescapedData_afebbf74527c6e9b960b39e2ab0194987.html#afebbf74527c6e9b960b39e2ab0194987", null ],
+    [ "Data", "d4/dc8/structSystem_1_1Text_1_1Encodings_1_1Web_1_1OptimizedInboxTextEncoder_1_1AsciiPreescapedData_a87631936203b3d90dfbc7b535a4470ec.html#a87631936203b3d90dfbc7b535a4470ec", null ]
+];

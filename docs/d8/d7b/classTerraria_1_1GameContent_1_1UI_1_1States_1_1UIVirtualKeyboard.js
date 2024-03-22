@@ -15,6 +15,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard =
     [ "CanDisplay", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard_acabeaa3e0ef2efc3d745c18edfac4315.html#acabeaa3e0ef2efc3d745c18edfac4315", null ],
     [ "CanRestore", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard_a89cc0bd3d6bcab95d13bf5aa07145e21.html#a89cc0bd3d6bcab95d13bf5aa07145e21", null ],
     [ "CompareTo", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CopyTextToChest", "d8/d7b/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIVirtualKeyboard_a8851c294c422391e08814fb75568bf35.html#a8851c294c422391e08814fb75568bf35", null ],

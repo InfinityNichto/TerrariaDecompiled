@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1Mail_1_1AttachmentBase =
+[
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aae964af39a499d3c0731ce598bef8a21.html#aae964af39a499d3c0731ce598bef8a21", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_ab98c734961d8ab748f6cc7a7a3e61a5f.html#ab98c734961d8ab748f6cc7a7a3e61a5f", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a2917386e8e641e04072a604fb59c46a8.html#a2917386e8e641e04072a604fb59c46a8", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_ae9f39afed2cd369865765ab0f40ed3f5.html#ae9f39afed2cd369865765ab0f40ed3f5", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aff24c6879a4bcce2c8a866f2a9144eba.html#aff24c6879a4bcce2c8a866f2a9144eba", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a7b5db99ad2d233617aab6239a1618f1b.html#a7b5db99ad2d233617aab6239a1618f1b", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_ad6215a2042cd2be8dd0fbbc16957db19.html#ad6215a2042cd2be8dd0fbbc16957db19", null ],
+    [ "AttachmentBase", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a871987dae6b5a5f1304dd9659aceec8a.html#a871987dae6b5a5f1304dd9659aceec8a", null ],
+    [ "Dispose", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_affe8c6917a32122580f1c56c05160007.html#affe8c6917a32122580f1c56c05160007", null ],
+    [ "Dispose", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a958d9d4be47a9f83337419fcda3100e1.html#a958d9d4be47a9f83337419fcda3100e1", null ],
+    [ "PrepareForSending", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aaa5118ef47f14bfc4b8fa0724f9806da.html#aaa5118ef47f14bfc4b8fa0724f9806da", null ],
+    [ "SetContentFromFile", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aa7f81a84fb37b84fa0a510b5eec10553.html#aa7f81a84fb37b84fa0a510b5eec10553", null ],
+    [ "SetContentFromFile", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_afdf0f3d59953dd1a6400ab1469de0a3c.html#afdf0f3d59953dd1a6400ab1469de0a3c", null ],
+    [ "SetContentFromString", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a1e2db859e570d1c0d3e4721891c35836.html#a1e2db859e570d1c0d3e4721891c35836", null ],
+    [ "SetContentFromString", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_adefcc73c6ee73cfe1bde10c8ec586ef6.html#adefcc73c6ee73cfe1bde10c8ec586ef6", null ],
+    [ "_part", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a998e6a2995d95d227294eb6cfb15ef70.html#a998e6a2995d95d227294eb6cfb15ef70", null ],
+    [ "disposed", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aa3aa0dc90ed13cb3b9c6703a23f45bbe.html#aa3aa0dc90ed13cb3b9c6703a23f45bbe", null ],
+    [ "s_contentCIDInvalidChars", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_abb1dc600ba4ee27cf30a46dd6c9bc0bb.html#abb1dc600ba4ee27cf30a46dd6c9bc0bb", null ],
+    [ "ContentId", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_ae9c2bcda13654e4ab11a5635c6dc1081.html#ae9c2bcda13654e4ab11a5635c6dc1081", null ],
+    [ "ContentLocation", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_aa8e6f68d0d8981035d020a60d2c51573.html#aa8e6f68d0d8981035d020a60d2c51573", null ],
+    [ "ContentStream", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a4c79a82f851bb0b25177e742643151a8.html#a4c79a82f851bb0b25177e742643151a8", null ],
+    [ "ContentType", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a7392233d0ee2c837e7e27e779a4c789d.html#a7392233d0ee2c837e7e27e779a4c789d", null ],
+    [ "MimePart", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_ad27a76bd9c4e494f334ad23579feaf62.html#ad27a76bd9c4e494f334ad23579feaf62", null ],
+    [ "TransferEncoding", "d2/dcc/classSystem_1_1Net_1_1Mail_1_1AttachmentBase_a9c841c3a20c83eaade2c1ddb66d1514b.html#a9c841c3a20c83eaade2c1ddb66d1514b", null ]
+];

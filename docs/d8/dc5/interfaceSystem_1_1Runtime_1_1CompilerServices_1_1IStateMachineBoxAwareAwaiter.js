@@ -1,0 +1,4 @@
+var interfaceSystem_1_1Runtime_1_1CompilerServices_1_1IStateMachineBoxAwareAwaiter =
+[
+    [ "AwaitUnsafeOnCompleted", "d8/dc5/interfaceSystem_1_1Runtime_1_1CompilerServices_1_1IStateMachineBoxAwareAwaiter_aa3807d4d6de52a96bf0908902b8b46e6.html#aa3807d4d6de52a96bf0908902b8b46e6", null ]
+];

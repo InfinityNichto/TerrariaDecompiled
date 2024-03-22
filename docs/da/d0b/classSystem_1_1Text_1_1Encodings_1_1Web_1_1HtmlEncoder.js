@@ -1,0 +1,26 @@
+var classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder =
+[
+    [ "Create", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder_a1028b88b8add99d4b768cb4232a246c5.html#a1028b88b8add99d4b768cb4232a246c5", null ],
+    [ "Create", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder_a1cd302341a5d9efa7c6309cccb136472.html#a1cd302341a5d9efa7c6309cccb136472", null ],
+    [ "Encode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a86c25bb37f4854228e9cb99b03ebcb11", null ],
+    [ "Encode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a896d08911a13c1fa84d1affed2d44621", null ],
+    [ "Encode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#aac503fbeac15f8a9f257fc7cb2d8bca2", null ],
+    [ "Encode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#ae1d77016d71f2c18e57f43ecc3fc19ff", null ],
+    [ "Encode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a7f0ee84c8e0469d340f7181a39fc342b", null ],
+    [ "EncodeCore", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a837ddcd1408d3638e42355b184ba28b7", null ],
+    [ "EncodeCore", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a1fe3f01678b19fb5ef7c1a78d3d5c931", null ],
+    [ "EncodeToNewString", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a13caac353453983522915fe7d7c165b4", null ],
+    [ "EncodeUtf8", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a768d79b7f80dac338aa69e1a356543f4", null ],
+    [ "EncodeUtf8Core", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a3a3c3089d2af17138f32ce3d38b4f3b2", null ],
+    [ "FindFirstCharacterToEncode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#ac218308d2fcf91f72612f3569eb4c4ba", null ],
+    [ "FindFirstCharacterToEncode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a3b897c7db06259e1b89d9d0d77878e21", null ],
+    [ "FindFirstCharacterToEncodeUtf8", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a86f91b5c3407f53469d40b27dedfe77a", null ],
+    [ "ThrowArgumentException_MaxOutputCharsPerInputChar", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#ac1a031f8febd95d14f73b93de039d753", null ],
+    [ "TryEncodeUnicodeScalar", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#aec45a927f3cb7a06f2b602379080f3b8", null ],
+    [ "TryEncodeUnicodeScalar", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a8eee3b75f3cf1be9ebb8ae337d21bae7", null ],
+    [ "TryEncodeUnicodeScalarUtf8", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a60973dcbedd6204b3b2e1d8694ea80a9", null ],
+    [ "ValidateRanges", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#ad1330595f96b3dab6f37fcb490e2c68f", null ],
+    [ "WillEncode", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a7387ae79a0c2d5157cac9a12c5a45071", null ],
+    [ "Default", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder_aa38df24067c3fe59e859bc56abb8cb0e.html#aa38df24067c3fe59e859bc56abb8cb0e", null ],
+    [ "MaxOutputCharactersPerInputCharacter", "da/d0b/classSystem_1_1Text_1_1Encodings_1_1Web_1_1HtmlEncoder.html#a26d276dd28289838b81493a3b644742e", null ]
+];

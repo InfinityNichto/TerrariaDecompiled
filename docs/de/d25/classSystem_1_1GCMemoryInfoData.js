@@ -1,0 +1,26 @@
+var classSystem_1_1GCMemoryInfoData =
+[
+    [ "_compacted", "de/d25/classSystem_1_1GCMemoryInfoData_a8fb2e2a092025577c6ab38ed26828f58.html#a8fb2e2a092025577c6ab38ed26828f58", null ],
+    [ "_concurrent", "de/d25/classSystem_1_1GCMemoryInfoData_acb1e7bb2b11f637208526bfaaca1afa7.html#acb1e7bb2b11f637208526bfaaca1afa7", null ],
+    [ "_finalizationPendingCount", "de/d25/classSystem_1_1GCMemoryInfoData_af91ff42bd3437956c2b4823a57681210.html#af91ff42bd3437956c2b4823a57681210", null ],
+    [ "_fragmentedBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a4d3c0d86b3e4ca07e596414cbf083266.html#a4d3c0d86b3e4ca07e596414cbf083266", null ],
+    [ "_generation", "de/d25/classSystem_1_1GCMemoryInfoData_a5ae2131ff33f4541282497c1eb913369.html#a5ae2131ff33f4541282497c1eb913369", null ],
+    [ "_generationInfo0", "de/d25/classSystem_1_1GCMemoryInfoData_a430fbe3aeb303041f44d139aa07c153b.html#a430fbe3aeb303041f44d139aa07c153b", null ],
+    [ "_generationInfo1", "de/d25/classSystem_1_1GCMemoryInfoData_a79b7fb623c78c0db4d122b431459d66b.html#a79b7fb623c78c0db4d122b431459d66b", null ],
+    [ "_generationInfo2", "de/d25/classSystem_1_1GCMemoryInfoData_a2da09816a44a80ca12a204ab249b28eb.html#a2da09816a44a80ca12a204ab249b28eb", null ],
+    [ "_generationInfo3", "de/d25/classSystem_1_1GCMemoryInfoData_ab29fc5cec659f780bcf02cc03a07d0ed.html#ab29fc5cec659f780bcf02cc03a07d0ed", null ],
+    [ "_generationInfo4", "de/d25/classSystem_1_1GCMemoryInfoData_a6b04d3258e02b6d0ece964d1cb10a0e7.html#a6b04d3258e02b6d0ece964d1cb10a0e7", null ],
+    [ "_heapSizeBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a88fd64b1510f81a760ea72dd63441fc8.html#a88fd64b1510f81a760ea72dd63441fc8", null ],
+    [ "_highMemoryLoadThresholdBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a80f6c4b2f91602c88f420f0a5e9821ea.html#a80f6c4b2f91602c88f420f0a5e9821ea", null ],
+    [ "_index", "de/d25/classSystem_1_1GCMemoryInfoData_af0c09f58c96901a57e481b68d84329ac.html#af0c09f58c96901a57e481b68d84329ac", null ],
+    [ "_memoryLoadBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a3192df49c4ee840cada396019cd1513f.html#a3192df49c4ee840cada396019cd1513f", null ],
+    [ "_pauseDuration0", "de/d25/classSystem_1_1GCMemoryInfoData_a7fcfb3a5614c4e9d506c68e7c125ca5e.html#a7fcfb3a5614c4e9d506c68e7c125ca5e", null ],
+    [ "_pauseDuration1", "de/d25/classSystem_1_1GCMemoryInfoData_aad5cf3d7725da9a02f2af60fa1e71108.html#aad5cf3d7725da9a02f2af60fa1e71108", null ],
+    [ "_pauseTimePercentage", "de/d25/classSystem_1_1GCMemoryInfoData_a9d6d93c27700a55430a6440b8dceae7a.html#a9d6d93c27700a55430a6440b8dceae7a", null ],
+    [ "_pinnedObjectsCount", "de/d25/classSystem_1_1GCMemoryInfoData_abe28c3cb3549a935716d53fc882234e7.html#abe28c3cb3549a935716d53fc882234e7", null ],
+    [ "_promotedBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a234a1e71d09fa727d8290cb0dea5dbfe.html#a234a1e71d09fa727d8290cb0dea5dbfe", null ],
+    [ "_totalAvailableMemoryBytes", "de/d25/classSystem_1_1GCMemoryInfoData_a8a685df89d616e513268a9f84def34b1.html#a8a685df89d616e513268a9f84def34b1", null ],
+    [ "_totalCommittedBytes", "de/d25/classSystem_1_1GCMemoryInfoData_ae60ef563cb0511f8f7c7883da13d9adc.html#ae60ef563cb0511f8f7c7883da13d9adc", null ],
+    [ "GenerationInfoAsSpan", "de/d25/classSystem_1_1GCMemoryInfoData_a03d8acf64f1e4fcf820ae1f080850667.html#a03d8acf64f1e4fcf820ae1f080850667", null ],
+    [ "PauseDurationsAsSpan", "de/d25/classSystem_1_1GCMemoryInfoData_a17d3bacb2e723aa25754cba404678cff.html#a17d3bacb2e723aa25754cba404678cff", null ]
+];

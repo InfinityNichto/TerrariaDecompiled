@@ -1,0 +1,26 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1Attributes =
+[
+    [ "Read", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_aa7d85c46e80c7e886f65c9e6a2bbb0e1.html#aa7d85c46e80c7e886f65c9e6a2bbb0e1", null ],
+    [ "ReadArraySize", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ac26b2d6417a3a1ed917853951a84f5fb.html#ac26b2d6417a3a1ed917853951a84f5fb", null ],
+    [ "ReadFactoryType", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ac04951a1333486481a528fd2aa50c87c.html#ac04951a1333486481a528fd2aa50c87c", null ],
+    [ "ReadId", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a48f4d135721fd771c2a1c946da60ad6a.html#a48f4d135721fd771c2a1c946da60ad6a", null ],
+    [ "ReadRef", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ae2d41191c9d245077d5a5ef4585e5362.html#ae2d41191c9d245077d5a5ef4585e5362", null ],
+    [ "ReadXsiNil", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_acc9fa488a914bade3c2b8ffc80e22b6b.html#acc9fa488a914bade3c2b8ffc80e22b6b", null ],
+    [ "ReadXsiType", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ae56e891fcf273a0c91805f50ea790be4.html#ae56e891fcf273a0c91805f50ea790be4", null ],
+    [ "Reset", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a3f792a62f793196897409fcd896ce978.html#a3f792a62f793196897409fcd896ce978", null ],
+    [ "ArraySZSize", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_af19ea8442c10430f882560291131ad61.html#af19ea8442c10430f882560291131ad61", null ],
+    [ "ClrAssembly", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_aa57c25139cc211f6f59c7627c403907c.html#aa57c25139cc211f6f59c7627c403907c", null ],
+    [ "ClrType", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_aa4f0e17ddedf57859261d3e3bde3ba6b.html#aa4f0e17ddedf57859261d3e3bde3ba6b", null ],
+    [ "FactoryTypeName", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ae2ada5384b92a0f628a3d01ff80d0052.html#ae2ada5384b92a0f628a3d01ff80d0052", null ],
+    [ "FactoryTypeNamespace", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_aecd35f12a0105e20f530856a44872e51.html#aecd35f12a0105e20f530856a44872e51", null ],
+    [ "FactoryTypePrefix", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a0970cf088a4412e69fa53dc124d26deb.html#a0970cf088a4412e69fa53dc124d26deb", null ],
+    [ "Id", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a1ffd4194bcabdaaae99d08bab1f97905.html#a1ffd4194bcabdaaae99d08bab1f97905", null ],
+    [ "Ref", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a0d2ac27f4f4abe46ed0da651670c9d8b.html#a0d2ac27f4f4abe46ed0da651670c9d8b", null ],
+    [ "s_schemaInstanceLocalNames", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a57d1c4ffb47770942eaa9d0d85cb63ca.html#a57d1c4ffb47770942eaa9d0d85cb63ca", null ],
+    [ "s_serializationLocalNames", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_aa7cebc6b029553325fe1528bbe299630.html#aa7cebc6b029553325fe1528bbe299630", null ],
+    [ "UnrecognizedAttributesFound", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a68b891b8be93fe3cd7c2fe64ac27ee22.html#a68b891b8be93fe3cd7c2fe64ac27ee22", null ],
+    [ "XsiNil", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_adc72e67cadc137b90fc5118a91083ed9.html#adc72e67cadc137b90fc5118a91083ed9", null ],
+    [ "XsiTypeName", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_ac56747e62473a8fd8822685ac45473c6.html#ac56747e62473a8fd8822685ac45473c6", null ],
+    [ "XsiTypeNamespace", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a88c98b91f69e3ca6928e8a9fba7a97c0.html#a88c98b91f69e3ca6928e8a9fba7a97c0", null ],
+    [ "XsiTypePrefix", "d1/de8/classSystem_1_1Runtime_1_1Serialization_1_1Attributes_a8696bfcec8444768308eb1e45c48d678.html#a8696bfcec8444768308eb1e45c48d678", null ]
+];

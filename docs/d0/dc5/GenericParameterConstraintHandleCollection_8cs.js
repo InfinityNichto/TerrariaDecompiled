@@ -1,0 +1,5 @@
+var GenericParameterConstraintHandleCollection_8cs =
+[
+    [ "System.Reflection.Metadata.GenericParameterConstraintHandleCollection", "de/db4/structSystem_1_1Reflection_1_1Metadata_1_1GenericParameterConstraintHandleCollection.html", "de/db4/structSystem_1_1Reflection_1_1Metadata_1_1GenericParameterConstraintHandleCollection" ],
+    [ "System.Reflection.Metadata.GenericParameterConstraintHandleCollection.Enumerator", "dd/daa/structSystem_1_1Reflection_1_1Metadata_1_1GenericParameterConstraintHandleCollection_1_1Enumerator.html", "dd/daa/structSystem_1_1Reflection_1_1Metadata_1_1GenericParameterConstraintHandleCollection_1_1Enumerator" ]
+];

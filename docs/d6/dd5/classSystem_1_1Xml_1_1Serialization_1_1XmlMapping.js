@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Serialization_1_1XmlMapping =
+[
+    [ "XmlMapping", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a6a759775502c35aa737ee8afaef8403f.html#a6a759775502c35aa737ee8afaef8403f", null ],
+    [ "XmlMapping", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a4b2e21b80020cfed9e43f359e59d2aef.html#a4b2e21b80020cfed9e43f359e59d2aef", null ],
+    [ "CheckShallow", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_adbd55d45f9ccf1ef9d39e7219ca5329c.html#adbd55d45f9ccf1ef9d39e7219ca5329c", null ],
+    [ "GenerateKey", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_aedf9ffd5cd864ec870960e4e56c51737.html#aedf9ffd5cd864ec870960e4e56c51737", null ],
+    [ "IsShallow", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a7d40981dd05fa74f0ccb0f8c3b481fde.html#a7d40981dd05fa74f0ccb0f8c3b481fde", null ],
+    [ "SetKey", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a2b05abee0a84ae69304e69a491798d50.html#a2b05abee0a84ae69304e69a491798d50", null ],
+    [ "SetKeyInternal", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a4fbb3df698f7fe366bea07a382e8ec69.html#a4fbb3df698f7fe366bea07a382e8ec69", null ],
+    [ "_access", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_af09b0513a14089d29bc060955007348e.html#af09b0513a14089d29bc060955007348e", null ],
+    [ "_accessor", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_aed0ddfd420b3dfd8b08498982fd43f2e.html#aed0ddfd420b3dfd8b08498982fd43f2e", null ],
+    [ "_generateSerializer", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a3094849f5d3ef065f634c1d335a70771.html#a3094849f5d3ef065f634c1d335a70771", null ],
+    [ "_isSoap", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a7858f05a98bec99f2a1e1fb3e7e40ba3.html#a7858f05a98bec99f2a1e1fb3e7e40ba3", null ],
+    [ "_key", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a495fc279b13abdc148891f3069bdabf1.html#a495fc279b13abdc148891f3069bdabf1", null ],
+    [ "_scope", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_afc044c29c12063377c2f52318b0b212b.html#afc044c29c12063377c2f52318b0b212b", null ],
+    [ "_shallow", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a4d6b3f1ccb5c11bfce2b4d76b480c04b.html#a4d6b3f1ccb5c11bfce2b4d76b480c04b", null ],
+    [ "Accessor", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_ab4ab22d497493517d75518d58df5b07a.html#ab4ab22d497493517d75518d58df5b07a", null ],
+    [ "ElementName", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a962c52c125507b4b2ce3ad2619e44406.html#a962c52c125507b4b2ce3ad2619e44406", null ],
+    [ "GenerateSerializer", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a83d6cea70d702f9261cea0a8e5bc0320.html#a83d6cea70d702f9261cea0a8e5bc0320", null ],
+    [ "IsReadable", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_ae8cee4edb25241b118eb6ec7cb1e441a.html#ae8cee4edb25241b118eb6ec7cb1e441a", null ],
+    [ "IsSoap", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a19272fd757841e20a574bbe85cbfc079.html#a19272fd757841e20a574bbe85cbfc079", null ],
+    [ "IsWriteable", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a76ac12eca85db09fa221cfa8c79ddbb0.html#a76ac12eca85db09fa221cfa8c79ddbb0", null ],
+    [ "Key", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_add89d04e24b3c040da1ef8b1b47bd627.html#add89d04e24b3c040da1ef8b1b47bd627", null ],
+    [ "Namespace", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a64330876ed89a6dbcd5273d48789d55f.html#a64330876ed89a6dbcd5273d48789d55f", null ],
+    [ "Scope", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a3feb3ef30b631f447da7569e39aa418a.html#a3feb3ef30b631f447da7569e39aa418a", null ],
+    [ "XsdElementName", "d6/dd5/classSystem_1_1Xml_1_1Serialization_1_1XmlMapping_a85f8c2c6b4f27ff8f55dcf19ce160965.html#a85f8c2c6b4f27ff8f55dcf19ce160965", null ]
+];

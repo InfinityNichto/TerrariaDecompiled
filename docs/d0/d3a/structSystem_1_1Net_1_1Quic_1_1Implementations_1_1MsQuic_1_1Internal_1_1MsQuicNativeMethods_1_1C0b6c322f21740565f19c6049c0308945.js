@@ -1,0 +1,5 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C0b6c322f21740565f19c6049c0308945 =
+[
+    [ "Flags", "d0/d3a/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C0b6c322f21740565f19c6049c0308945_a68372c0f16cf1786c429e3852e7a5615.html#a68372c0f16cf1786c429e3852e7a5615", null ],
+    [ "Stream", "d0/d3a/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C0b6c322f21740565f19c6049c0308945_a9b7e7dd415d3e53609f6815676805204.html#a9b7e7dd415d3e53609f6815676805204", null ]
+];

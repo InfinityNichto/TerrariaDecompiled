@@ -1,0 +1,8 @@
+var classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView =
+[
+    [ "SingleProducerSingleConsumerQueue_DebugView", "db/d3d/classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a72f80414aa0613c78f9c95898866b740.html#a72f80414aa0613c78f9c95898866b740", null ],
+    [ "SingleProducerSingleConsumerQueue_DebugView", "db/d3d/classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a9f7934d730a4d6398f3d995802462d07.html#a9f7934d730a4d6398f3d995802462d07", null ],
+    [ "_queue", "db/d3d/classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a678c0fe9e473bf6879d46b84166a5435.html#a678c0fe9e473bf6879d46b84166a5435", null ],
+    [ "m_queue", "db/d3d/classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_a0bf5731a0ed7fb2f2c48f27f98f391c5.html#a0bf5731a0ed7fb2f2c48f27f98f391c5", null ],
+    [ "Items", "db/d3d/classSystem_1_1Threading_1_1Tasks_1_1SingleProducerSingleConsumerQueue_1_1SingleProducerSingleConsumerQueue__DebugView_ae2c8486c35189fcb784888d8dc1effb3.html#ae2c8486c35189fcb784888d8dc1effb3", null ]
+];

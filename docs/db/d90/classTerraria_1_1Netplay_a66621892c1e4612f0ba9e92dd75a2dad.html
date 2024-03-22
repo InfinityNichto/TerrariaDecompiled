@@ -123,45 +123,35 @@ $(function(){initNavTree('db/d90/classTerraria_1_1Netplay_a66621892c1e4612f0ba9e
 <div class="line"><span class="lineno">  128</span>        <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  129</span>        {</div>
 <div class="line"><span class="lineno">  130</span>            <span class="keywordtype">string</span> identifier = address.<a class="code hl_function" href="../../d2/d92/classTerraria_1_1Net_1_1RemoteAddress_a7aea01dcf2989e8311883e44670e4eb5.html#a7aea01dcf2989e8311883e44670e4eb5">GetIdentifier</a>();</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (File.Exists(<a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">BanFilePath</a>))</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d5/d7f/classSystem_1_1IO_1_1File.html">File</a>.<a class="code hl_function" href="../../d5/d7f/classSystem_1_1IO_1_1File_a2f2cf3ac33248a8cdeb4a17ccc05187e.html#a2f2cf3ac33248a8cdeb4a17ccc05187e">Exists</a>(<a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">BanFilePath</a>))</div>
 <div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keyword">using </span>StreamReader streamReader = <span class="keyword">new</span> StreamReader(<a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">BanFilePath</a>);</div>
-<div class="line"><span class="lineno">  134</span>                <span class="keywordtype">string</span> text;</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">while</span> ((text = streamReader.ReadLine()) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keyword">using </span><a class="code hl_class" href="../../db/da4/classSystem_1_1IO_1_1StreamReader.html">StreamReader</a> streamReader = <span class="keyword">new</span> <a class="code hl_class" href="../../db/da4/classSystem_1_1IO_1_1StreamReader.html">StreamReader</a>(<a class="code hl_variable" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">BanFilePath</a>);</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordtype">string</span> <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1">text</a>;</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">while</span> ((<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1">text</a> = streamReader.ReadLine()) != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  136</span>                {</div>
-<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">if</span> (text == identifier)</div>
+<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1">text</a> == identifier)</div>
 <div class="line"><span class="lineno">  138</span>                    {</div>
 <div class="line"><span class="lineno">  139</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  140</span>                    }</div>
 <div class="line"><span class="lineno">  141</span>                }</div>
 <div class="line"><span class="lineno">  142</span>            }</div>
 <div class="line"><span class="lineno">  143</span>        }</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d4/d67/classException.html">Exception</a>)</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../db/d78/classSystem_1_1Exception.html">Exception</a>)</div>
 <div class="line"><span class="lineno">  145</span>        {</div>
 <div class="line"><span class="lineno">  146</span>        }</div>
 <div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclassException_html"><div class="ttname"><a href="../../d4/d67/classException.html">Exception</a></div></div>
+<div class="ttc" id="aclassSystem_1_1Exception_html"><div class="ttname"><a href="../../db/d78/classSystem_1_1Exception.html">System.Exception</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d44/Exception_8cs_source.html#l00014">Exception.cs:15</a></div></div>
+<div class="ttc" id="aclassSystem_1_1IO_1_1File_a2f2cf3ac33248a8cdeb4a17ccc05187e_html_a2f2cf3ac33248a8cdeb4a17ccc05187e"><div class="ttname"><a href="../../d5/d7f/classSystem_1_1IO_1_1File_a2f2cf3ac33248a8cdeb4a17ccc05187e.html#a2f2cf3ac33248a8cdeb4a17ccc05187e">System.IO.File.Exists</a></div><div class="ttdeci">static bool Exists([NotNullWhen(true)] string? path)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d43/File_8cs_source.html#l00097">File.cs:97</a></div></div>
+<div class="ttc" id="aclassSystem_1_1IO_1_1File_html"><div class="ttname"><a href="../../d5/d7f/classSystem_1_1IO_1_1File.html">System.IO.File</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d43/File_8cs_source.html#l00014">File.cs:15</a></div></div>
+<div class="ttc" id="aclassSystem_1_1IO_1_1StreamReader_html"><div class="ttname"><a href="../../db/da4/classSystem_1_1IO_1_1StreamReader.html">System.IO.StreamReader</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4c/StreamReader_8cs_source.html#l00008">StreamReader.cs:9</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1Net_1_1RemoteAddress_a7aea01dcf2989e8311883e44670e4eb5_html_a7aea01dcf2989e8311883e44670e4eb5"><div class="ttname"><a href="../../d2/d92/classTerraria_1_1Net_1_1RemoteAddress_a7aea01dcf2989e8311883e44670e4eb5.html#a7aea01dcf2989e8311883e44670e4eb5">Terraria.Net.RemoteAddress.GetIdentifier</a></div><div class="ttdeci">string GetIdentifier()</div></div>
 <div class="ttc" id="aclassTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906_html_ab243b9210e05d43851da97680cbf9906"><div class="ttname"><a href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">Terraria.Netplay.BanFilePath</a></div><div class="ttdeci">static string BanFilePath</div><div class="ttdef"><b>Definition</b> <a href="../../db/dba/Netplay_8cs_source.html#l00033">Netplay.cs:33</a></div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1">System.ExceptionArgument.text</a></div><div class="ttdeci">@ text</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">Terraria.Netplay.BanFilePath</a>, and <a class="el" href="../../d2/d92/classTerraria_1_1Net_1_1RemoteAddress_a7aea01dcf2989e8311883e44670e4eb5.html#a7aea01dcf2989e8311883e44670e4eb5">Terraria.Net.RemoteAddress.GetIdentifier()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d90/classTerraria_1_1Netplay_ab243b9210e05d43851da97680cbf9906.html#ab243b9210e05d43851da97680cbf9906">Terraria.Netplay.BanFilePath</a>, <a class="el" href="../../d5/d7f/classSystem_1_1IO_1_1File_a2f2cf3ac33248a8cdeb4a17ccc05187e.html#a2f2cf3ac33248a8cdeb4a17ccc05187e">System.IO.File.Exists()</a>, <a class="el" href="../../d2/d92/classTerraria_1_1Net_1_1RemoteAddress_a7aea01dcf2989e8311883e44670e4eb5.html#a7aea01dcf2989e8311883e44670e4eb5">Terraria.Net.RemoteAddress.GetIdentifier()</a>, and <a class="el" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a1cb251ec0d568de6a929b520c4aed8d1">System.text</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../db/d63/classTerraria_1_1MessageBuffer_ab4039006321b0ab8e7d66acbd82370b0.html#ab4039006321b0ab8e7d66acbd82370b0">Terraria.MessageBuffer.GetData()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d90/classTerraria_1_1Netplay_a66621892c1e4612f0ba9e92dd75a2dad_a66621892c1e4612f0ba9e92dd75a2dad_cgraph.svg" width="456" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d90/classTerraria_1_1Netplay_a66621892c1e4612f0ba9e92dd75a2dad_a66621892c1e4612f0ba9e92dd75a2dad_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>

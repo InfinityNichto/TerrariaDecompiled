@@ -1,0 +1,26 @@
+var classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers =
+[
+    [ "AsyncCopyToAwaitable", "d5/da0/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_1_1AsyncCopyToAwaitable.html", "d5/da0/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_1_1AsyncCopyToAwaitable" ],
+    [ "AsyncModeCopyToAsync", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a08bf98cb7f60e4937155e858175cbbba.html#a08bf98cb7f60e4937155e858175cbbba", null ],
+    [ "ChooseStrategy", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a256eb71ba31bd3af8638c7ce42f3f171.html#a256eb71ba31bd3af8638c7ce42f3f171", null ],
+    [ "ChooseStrategy", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_ad12fb6c682b329541c6bf65904c579b9.html#ad12fb6c682b329541c6bf65904c579b9", null ],
+    [ "ChooseStrategyCore", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a9de384640ed2a179118fd35b2819c567.html#a9de384640ed2a179118fd35b2819c567", null ],
+    [ "ChooseStrategyCore", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a3038e00b95318af825b334306f096dd1.html#a3038e00b95318af825b334306f096dd1", null ],
+    [ "EnableBufferingIfNeeded", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_abb886d94fea71bba7d70de2cf4685dc7.html#abb886d94fea71bba7d70de2cf4685dc7", null ],
+    [ "FlushToDisk", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a99efd768b16dcdea57a9aa6c2ce527f3.html#a99efd768b16dcdea57a9aa6c2ce527f3", null ],
+    [ "GetLastWin32ErrorAndDisposeHandleIfInvalid", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a5c8773c24f4811825196b230e4ddda97.html#a5c8773c24f4811825196b230e4ddda97", null ],
+    [ "IsIoRelatedException", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_af6364d658c064d38c5bfb1924513c8fd.html#af6364d658c064d38c5bfb1924513c8fd", null ],
+    [ "Lock", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a7ee55cfab707dfd68ccf6b6d61bc100f.html#a7ee55cfab707dfd68ccf6b6d61bc100f", null ],
+    [ "ReadFileNative", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a5ec57a9026467f5c4137e3d2071f37c1.html#a5ec57a9026467f5c4137e3d2071f37c1", null ],
+    [ "Seek", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_aadb8996f18531a2f8bc7c566dcb0cd12.html#aadb8996f18531a2f8bc7c566dcb0cd12", null ],
+    [ "SerializationGuard", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a7372f1504b405de18c33782f081a8daf.html#a7372f1504b405de18c33782f081a8daf", null ],
+    [ "SetFileLength", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a7beb50e427c0f334446fc232ad86b64b.html#a7beb50e427c0f334446fc232ad86b64b", null ],
+    [ "ThrowInvalidArgument", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_ab53e64baa662485f990def7a1d0bc45e.html#ab53e64baa662485f990def7a1d0bc45e", null ],
+    [ "TrySetFileLength", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a0f51848ddaff952516aad40590f04bde.html#a0f51848ddaff952516aad40590f04bde", null ],
+    [ "Unlock", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a92c09d6ed899718460223483f9df374a.html#a92c09d6ed899718460223483f9df374a", null ],
+    [ "ValidateArguments", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a123661a16c5bb09823b5a1b0a04586ae.html#a123661a16c5bb09823b5a1b0a04586ae", null ],
+    [ "ValidateArgumentsForPreallocation", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_ad3680c260efe2159f4107aebe61218ce.html#ad3680c260efe2159f4107aebe61218ce", null ],
+    [ "WrapIfDerivedType", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a3a5827d9ddeefa2ab6419d96b9e05035.html#a3a5827d9ddeefa2ab6419d96b9e05035", null ],
+    [ "s_cachedSerializationSwitch", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_a8481c283471fcc06f42828c8c1fc0e1a.html#a8481c283471fcc06f42828c8c1fc0e1a", null ],
+    [ "UseNet5CompatStrategy", "d9/d0a/classSystem_1_1IO_1_1Strategies_1_1FileStreamHelpers_af004964b30d60098d7a0580bf9757cc8.html#af004964b30d60098d7a0580bf9757cc8", null ]
+];

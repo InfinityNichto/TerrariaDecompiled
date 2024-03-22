@@ -1,0 +1,12 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator =
+[
+    [ "NullableDoubleSumAggregationOperatorEnumerator", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator_a21e7e8f9f8d0891f93934b4f1919b96d.html#a21e7e8f9f8d0891f93934b4f1919b96d", null ],
+    [ "Dispose", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator_a46761c7ce84dc659b71eb8936930623f.html#a46761c7ce84dc659b71eb8936930623f", null ],
+    [ "MoveNext", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator_a55de83751170be85925c15e3e0fc5810.html#a55de83751170be85925c15e3e0fc5810", null ],
+    [ "_cancellationToken", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_source", "de/d09/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleSumAggregationOperator_1_1NullableDoubleSumAggregationOperatorEnumerator_a77abd0b4e2e3124f7f0a57ed3d612d8d.html#a77abd0b4e2e3124f7f0a57ed3d612d8d", null ]
+];

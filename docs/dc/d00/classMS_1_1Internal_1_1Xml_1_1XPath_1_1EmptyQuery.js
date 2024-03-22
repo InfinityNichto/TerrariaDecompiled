@@ -1,0 +1,27 @@
+var classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery =
+[
+    [ "Advance", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a5938321652427826871709d7eae8dce8.html#a5938321652427826871709d7eae8dce8", null ],
+    [ "Clone", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a2bbac2127ae4b8430f2af3932b3f40f9.html#a2bbac2127ae4b8430f2af3932b3f40f9", null ],
+    [ "Clone", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#ae56865d8e6b043b9801823f20d3fd08e", null ],
+    [ "Clone", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#afbc8cc08611a5905f33cdfb9d7287008", null ],
+    [ "Clone", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a8f124e437f9af36b00bde78a4dc57f30", null ],
+    [ "CompareNodes", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#aa23a6355077290584e7d40d1b836c5fc", null ],
+    [ "Evaluate", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_ad23fe0cc5dbd74a84cec03596bb7f756.html#ad23fe0cc5dbd74a84cec03596bb7f756", null ],
+    [ "GetEnumerator", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a9a1a169ce05f8c1507a82baf92b48af1", null ],
+    [ "GetMedian", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#af6db21e6b1ebd555b023a15559ec383d", null ],
+    [ "GetXPathType", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a55b658ee3fb0c9f94d63c49d5ad2caf1", null ],
+    [ "Insert", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#ab35b6e4af630a13676e4ee23d0730ed7", null ],
+    [ "MatchNode", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#aa0c4af36c62890409e78dd11872df9e5", null ],
+    [ "MoveNext", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a883803c8367f2a164c0e2255fd4392fd", null ],
+    [ "Reset", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_aec22ba8e2f2d166f45a1aae672dbf6b3.html#aec22ba8e2f2d166f45a1aae672dbf6b3", null ],
+    [ "ResetCount", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#af13ea280756aefef1e436902660ee09f", null ],
+    [ "SetXsltContext", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a6d0ce5ec073d0835fa7bf0a388953278", null ],
+    [ "count", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a8a69173a9484b82e9a7c8f1184400585", null ],
+    [ "Count", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a7f17724d65741975502144d26e03cf1a.html#a7f17724d65741975502144d26e03cf1a", null ],
+    [ "Current", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a1aed0ec1208a2f987983f1b857fa2177.html#a1aed0ec1208a2f987983f1b857fa2177", null ],
+    [ "CurrentPosition", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_aed2e8b11b3d72b01d16e7b5ef8070c66.html#aed2e8b11b3d72b01d16e7b5ef8070c66", null ],
+    [ "debuggerDisplayProxy", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#a56a632fb63d20116e1071508954c2ec9", null ],
+    [ "Properties", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a64de441e2932e5be66bc4ca810ca84f8.html#a64de441e2932e5be66bc4ca810ca84f8", null ],
+    [ "StaticType", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery_a9039e5b0201b999ec3a3d5424545d729.html#a9039e5b0201b999ec3a3d5424545d729", null ],
+    [ "XsltDefaultPriority", "dc/d00/classMS_1_1Internal_1_1Xml_1_1XPath_1_1EmptyQuery.html#ab32851f3437285b5a3844ba34005600e", null ]
+];

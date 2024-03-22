@@ -1,0 +1,25 @@
+var classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup =
+[
+    [ "CounterGroup", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a6d80397e5904036ad9562482ad1b9ae0.html#a6d80397e5904036ad9562482ad1b9ae0", null ],
+    [ "Add", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_afe6c37b64a496869e7cb05b89d772348.html#afe6c37b64a496869e7cb05b89d772348", null ],
+    [ "DisableTimer", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a2f8ec468191bda21e2e1ed33d4be0d98.html#a2f8ec468191bda21e2e1ed33d4be0d98", null ],
+    [ "EnableTimer", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_ab4b4583562ef607950106ac3991e189f.html#ab4b4583562ef607950106ac3991e189f", null ],
+    [ "EnsureEventSourceIndexAvailable", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_ae22369681999f13c7cb09412f51df850.html#ae22369681999f13c7cb09412f51df850", null ],
+    [ "GetCounterGroup", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a5d894f62b3c1d2356b3ed05784ccd02c.html#a5d894f62b3c1d2356b3ed05784ccd02c", null ],
+    [ "OnEventSourceCommand", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a74d35a5ba47a8cdb974a68c1220ea8d2.html#a74d35a5ba47a8cdb974a68c1220ea8d2", null ],
+    [ "OnTimer", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a0b8a09571d45e5b1530acc7a07b7a344.html#a0b8a09571d45e5b1530acc7a07b7a344", null ],
+    [ "PollForValues", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a99bc03aa5f7b48cb2d81726b1c5215c6.html#a99bc03aa5f7b48cb2d81726b1c5215c6", null ],
+    [ "RegisterCommandCallback", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a95c8bbeb8db8d2b0887ac8092e471e87.html#a95c8bbeb8db8d2b0887ac8092e471e87", null ],
+    [ "Remove", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a9638143e3e47d603746ff6e4f27aaa90.html#a9638143e3e47d603746ff6e4f27aaa90", null ],
+    [ "ResetCounters", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_afd94c602f01dcc633922a39e273aa832.html#afd94c602f01dcc633922a39e273aa832", null ],
+    [ "_counters", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a43508eda0d44f851fa6af80ee54db6d4.html#a43508eda0d44f851fa6af80ee54db6d4", null ],
+    [ "_eventSource", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_aec6d2fff315f37ac3037979841490a6c.html#aec6d2fff315f37ac3037979841490a6c", null ],
+    [ "_nextPollingTimeStamp", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_ab6732c69ab13295914fb0a851ffdca0c.html#ab6732c69ab13295914fb0a851ffdca0c", null ],
+    [ "_pollingIntervalInMilliseconds", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a200753567859819530dcdb4d3cdcc637.html#a200753567859819530dcdb4d3cdcc637", null ],
+    [ "_timeStampSinceCollectionStarted", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a505ad01bc5ebf710d2c43e5732565aad.html#a505ad01bc5ebf710d2c43e5732565aad", null ],
+    [ "s_counterGroupEnabledList", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a963943989b3ceeb3241e968db5cb7dda.html#a963943989b3ceeb3241e968db5cb7dda", null ],
+    [ "s_counterGroupLock", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_af936b73a60f15ed5b00dbf9f302b8c35.html#af936b73a60f15ed5b00dbf9f302b8c35", null ],
+    [ "s_counterGroups", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_ac9fcd9fe6a7df7934ea9ea93abf31335.html#ac9fcd9fe6a7df7934ea9ea93abf31335", null ],
+    [ "s_pollingThread", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a57e43ea9c8f6d74537785c093d97f7a3.html#a57e43ea9c8f6d74537785c093d97f7a3", null ],
+    [ "s_pollingThreadSleepEvent", "d4/df7/classSystem_1_1Diagnostics_1_1Tracing_1_1CounterGroup_a9dbe63a86fa450abec736f2d5d25a965.html#a9dbe63a86fa450abec736f2d5d25a965", null ]
+];

@@ -3,7 +3,7 @@ var dir_fc1d51a53b4a7e8c5a3f280a9bc1176f =
     [ "CustomSky.cs", "db/de2/CustomSky_8cs.html", "db/de2/CustomSky_8cs" ],
     [ "EffectManager.cs", "d2/dd5/EffectManager_8cs.html", "d2/dd5/EffectManager_8cs" ],
     [ "EffectPriority.cs", "da/d14/EffectPriority_8cs.html", "da/d14/EffectPriority_8cs" ],
-    [ "Filter.cs", "d4/dff/Filter_8cs.html", "d4/dff/Filter_8cs" ],
+    [ "Filter.cs", "dc/db1/Terraria_8Graphics_8Effects_2Filter_8cs.html", "dc/db1/Terraria_8Graphics_8Effects_2Filter_8cs" ],
     [ "FilterManager.cs", "da/da3/FilterManager_8cs.html", "da/da3/FilterManager_8cs" ],
     [ "Filters.cs", "d7/d39/Terraria_8Graphics_8Effects_2Filters_8cs.html", "d7/d39/Terraria_8Graphics_8Effects_2Filters_8cs" ],
     [ "GameEffect.cs", "d7/dff/GameEffect_8cs.html", "d7/dff/GameEffect_8cs" ],

@@ -1,0 +1,26 @@
+var classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle =
+[
+    [ "SafePasswordHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a161df03dc2d28799b3bec63d880a9bb5.html#a161df03dc2d28799b3bec63d880a9bb5", null ],
+    [ "SafePasswordHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a2d48377a3aaedf99e1820a38e5b1b750.html#a2d48377a3aaedf99e1820a38e5b1b750", null ],
+    [ "SafePasswordHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a5b680a660195bdc4f798eebed5d59043.html#a5b680a660195bdc4f798eebed5d59043", null ],
+    [ "Close", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#aa5d1a98a1419a7bfeaf7373b86996046", null ],
+    [ "DangerousAddRef", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a016e15831e479135e9927eed4afc4d6d", null ],
+    [ "DangerousGetHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a424cc281bd8123fdfb254fb943233b9f", null ],
+    [ "DangerousRelease", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a0b33a39fe618278a5098954f5689f7c1", null ],
+    [ "Dispose", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#aa6f4faab748ef89385be080c9333476a", null ],
+    [ "Dispose", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a95b9e503b3722a67ae1936f2d67017ea.html#a95b9e503b3722a67ae1936f2d67017ea", null ],
+    [ "InternalRelease", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#aa85089f98aeaef674d178780f24b7f5e", null ],
+    [ "ReleaseHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a8ff0f536b38ea5c478e34e80e80e06bb.html#a8ff0f536b38ea5c478e34e80e80e06bb", null ],
+    [ "SetHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a3fb15f153dbeb6d1885b4918eefdd25a", null ],
+    [ "SetHandleAsInvalid", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a52aa845d880e936a4f3d725864ef9d4a", null ],
+    [ "_003CLength_003Ek__BackingField", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_ad04fff17350d3de92effade05ceb9cd8.html#ad04fff17350d3de92effade05ceb9cd8", null ],
+    [ "_fullyInitialized", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a19664aa0b411365b153e47ca7cd2edc9", null ],
+    [ "_ownsHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#aece96629eca5c98ec8b4ec443eec813e", null ],
+    [ "_state", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#ab3a69aaa593e0a8456d3076ff13c22e5", null ],
+    [ "handle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a7998659110bb0dab360363c425b828f7", null ],
+    [ "InvalidHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a73e5a64b66dd91fbdc0c4f3d4e46958d.html#a73e5a64b66dd91fbdc0c4f3d4e46958d", null ],
+    [ "IsClosed", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a993302e5d4328d7205ccd5e511abb5b5", null ],
+    [ "IsInvalid", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#ab7d39268ddfeae3ab1bfc6b00f7b2ed1", null ],
+    [ "Length", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle_a7a023920828cc2a857e005cc653d5c5d.html#a7a023920828cc2a857e005cc653d5c5d", null ],
+    [ "OwnsHandle", "d3/d4c/classMicrosoft_1_1Win32_1_1SafeHandles_1_1SafePasswordHandle.html#a54e920aaac84119d574a001bfcaf60f1", null ]
+];

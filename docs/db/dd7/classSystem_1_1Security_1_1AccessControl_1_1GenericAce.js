@@ -1,0 +1,25 @@
+var classSystem_1_1Security_1_1AccessControl_1_1GenericAce =
+[
+    [ "GenericAce", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_adad34f01a5985461850cb6795ea58de0.html#adad34f01a5985461850cb6795ea58de0", null ],
+    [ "AceFlagsFromAuditFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ae402e607d7e388f0ad78296b5d3217eb.html#ae402e607d7e388f0ad78296b5d3217eb", null ],
+    [ "AceFlagsFromInheritanceFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_af148c55d431307fde6ec1503a44cbdce.html#af148c55d431307fde6ec1503a44cbdce", null ],
+    [ "Copy", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a475164e303c449c68d12fe279ae8e92f.html#a475164e303c449c68d12fe279ae8e92f", null ],
+    [ "CreateFromBinaryForm", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_afcbb15bae1f2d4d21129a207abc22eb8.html#afcbb15bae1f2d4d21129a207abc22eb8", null ],
+    [ "Equals", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a2d3dc865e1be8f9d1acfb94620cdc4b3.html#a2d3dc865e1be8f9d1acfb94620cdc4b3", null ],
+    [ "GetBinaryForm", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_adfd93460717ef2804174fba675954e21.html#adfd93460717ef2804174fba675954e21", null ],
+    [ "GetHashCode", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_abeb916a6aa7187b66c3583647590ea94.html#abeb916a6aa7187b66c3583647590ea94", null ],
+    [ "MarshalHeader", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ad9805c0c4301ef35a5c542fd3eae3167.html#ad9805c0c4301ef35a5c542fd3eae3167", null ],
+    [ "operator!=", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ad3daba58d0c62e324f7ed59d478eb085.html#ad3daba58d0c62e324f7ed59d478eb085", null ],
+    [ "operator==", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_aa8457f7c14fe5a9a2f81ea1ed88ac14c.html#aa8457f7c14fe5a9a2f81ea1ed88ac14c", null ],
+    [ "VerifyHeader", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ab7bb199f263d1ac1577cd15c7f687f4f.html#ab7bb199f263d1ac1577cd15c7f687f4f", null ],
+    [ "_flags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a3f0ab4a860111204c9d27492d6b5d840.html#a3f0ab4a860111204c9d27492d6b5d840", null ],
+    [ "_indexInAcl", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a762b6f2f41cd1ed74117222ecca3847d.html#a762b6f2f41cd1ed74117222ecca3847d", null ],
+    [ "_type", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_aca6b7dd9b262f522eb0ef1d8d9d2429d.html#aca6b7dd9b262f522eb0ef1d8d9d2429d", null ],
+    [ "AceFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a006be1e9760cc316051d9c773ce84ac9.html#a006be1e9760cc316051d9c773ce84ac9", null ],
+    [ "AceType", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a7c672537ad84247dbf60057e010ff4e5.html#a7c672537ad84247dbf60057e010ff4e5", null ],
+    [ "AuditFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ab4bc963edc89ec6171d8bd5374b6aaf9.html#ab4bc963edc89ec6171d8bd5374b6aaf9", null ],
+    [ "BinaryLength", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a59be05c6b5a6e35d58846335fe517011.html#a59be05c6b5a6e35d58846335fe517011", null ],
+    [ "InheritanceFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a7aec3854edf4a886d836ea53b277337d.html#a7aec3854edf4a886d836ea53b277337d", null ],
+    [ "IsInherited", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_ae38df24676c0ce1fb2b81bc6c9940222.html#ae38df24676c0ce1fb2b81bc6c9940222", null ],
+    [ "PropagationFlags", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce_a9ec5bdd8bf0b42290b4597ff2bed08d2.html#a9ec5bdd8bf0b42290b4597ff2bed08d2", null ]
+];

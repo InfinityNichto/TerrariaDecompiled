@@ -1,0 +1,6 @@
+var classSystem_1_1Threading_1_1ThreadInt64PersistentCounter_1_1ThreadLocalNodeFinalizationHelper =
+[
+    [ "ThreadLocalNodeFinalizationHelper", "d1/de8/classSystem_1_1Threading_1_1ThreadInt64PersistentCounter_1_1ThreadLocalNodeFinalizationHelper_ae157e22353a0bec7da2db31efe06e5de.html#ae157e22353a0bec7da2db31efe06e5de", null ],
+    [ "~ThreadLocalNodeFinalizationHelper", "d1/de8/classSystem_1_1Threading_1_1ThreadInt64PersistentCounter_1_1ThreadLocalNodeFinalizationHelper_af65cac05a5e0e68a7361f2488ad13e66.html#af65cac05a5e0e68a7361f2488ad13e66", null ],
+    [ "_node", "d1/de8/classSystem_1_1Threading_1_1ThreadInt64PersistentCounter_1_1ThreadLocalNodeFinalizationHelper_ab2b5c1720c22132f3d21972341d06b44.html#ab2b5c1720c22132f3d21972341d06b44", null ]
+];

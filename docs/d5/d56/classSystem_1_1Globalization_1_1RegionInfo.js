@@ -1,0 +1,26 @@
+var classSystem_1_1Globalization_1_1RegionInfo =
+[
+    [ "RegionInfo", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_adbdebeecd84b2f89485cc9f4e9b845f7.html#adbdebeecd84b2f89485cc9f4e9b845f7", null ],
+    [ "RegionInfo", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_abac58d0363dfcf4287313b4c4304ff8a.html#abac58d0363dfcf4287313b4c4304ff8a", null ],
+    [ "RegionInfo", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a797cec88ef24778397415cb84282e21c.html#a797cec88ef24778397415cb84282e21c", null ],
+    [ "Equals", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a4a38458febfd316ea69c698ed23cb3b2.html#a4a38458febfd316ea69c698ed23cb3b2", null ],
+    [ "GetHashCode", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a41b0a7ba9868f2ed461399ce263ff0b5.html#a41b0a7ba9868f2ed461399ce263ff0b5", null ],
+    [ "ToString", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a118205bfcab2745b0436006250e390d5.html#a118205bfcab2745b0436006250e390d5", null ],
+    [ "_cultureData", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a3c22f6d39f86c9d320332adad4fa7866.html#a3c22f6d39f86c9d320332adad4fa7866", null ],
+    [ "_name", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_af93ba2af4cafa81d7eb5bbda4d7cf04a.html#af93ba2af4cafa81d7eb5bbda4d7cf04a", null ],
+    [ "s_currentRegionInfo", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_aada685277592e81a7172e0e5c1f5db2a.html#aada685277592e81a7172e0e5c1f5db2a", null ],
+    [ "CurrencyEnglishName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_ab42290aefd0e6fd45ee96771ceb9db85.html#ab42290aefd0e6fd45ee96771ceb9db85", null ],
+    [ "CurrencyNativeName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_aea0459f0e49337d23bb183d8f2a8c984.html#aea0459f0e49337d23bb183d8f2a8c984", null ],
+    [ "CurrencySymbol", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a12d4f15a364cbcd6aaa0205b86ce846d.html#a12d4f15a364cbcd6aaa0205b86ce846d", null ],
+    [ "CurrentRegion", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_ad8a97d04507c913a7d66b5cfa736c2eb.html#ad8a97d04507c913a7d66b5cfa736c2eb", null ],
+    [ "DisplayName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_aeba6c265c2e331ca575a6a7857d0944f.html#aeba6c265c2e331ca575a6a7857d0944f", null ],
+    [ "EnglishName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_af4abea891d8e5b66bd5a297650c57689.html#af4abea891d8e5b66bd5a297650c57689", null ],
+    [ "GeoId", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a9b365b063b5db65d6fa4fa20886ef9ba.html#a9b365b063b5db65d6fa4fa20886ef9ba", null ],
+    [ "IsMetric", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_ad841d644efcad27f44354bec391db419.html#ad841d644efcad27f44354bec391db419", null ],
+    [ "ISOCurrencySymbol", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a833b137988e30dbedf4d834feb3d04dd.html#a833b137988e30dbedf4d834feb3d04dd", null ],
+    [ "Name", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_af2523ee316cbd170a152089d3761f677.html#af2523ee316cbd170a152089d3761f677", null ],
+    [ "NativeName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a0f40f959a33de87715085de048f8e31a.html#a0f40f959a33de87715085de048f8e31a", null ],
+    [ "ThreeLetterISORegionName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a4b861ef55ddf892d5111d5420ee86fa8.html#a4b861ef55ddf892d5111d5420ee86fa8", null ],
+    [ "ThreeLetterWindowsRegionName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_ad492bfd9e2156a563481a52da996eda0.html#ad492bfd9e2156a563481a52da996eda0", null ],
+    [ "TwoLetterISORegionName", "d5/d56/classSystem_1_1Globalization_1_1RegionInfo_a1b4ff95ec51c5523c112c8c01e12649d.html#a1b4ff95ec51c5523c112c8c01e12649d", null ]
+];

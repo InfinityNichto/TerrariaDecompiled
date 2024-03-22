@@ -1,0 +1,28 @@
+var interfaceSystem_1_1Data_1_1IDataRecord =
+[
+    [ "GetBoolean", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_ae0e6b11b4df4005fa8f01ae993750b4f.html#ae0e6b11b4df4005fa8f01ae993750b4f", null ],
+    [ "GetByte", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a8002f78e7306dd5cce39627f4b4a211c.html#a8002f78e7306dd5cce39627f4b4a211c", null ],
+    [ "GetBytes", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a05e79c43cea60b90850e0211d39be1c9.html#a05e79c43cea60b90850e0211d39be1c9", null ],
+    [ "GetChar", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_abdd84f6c220fd3169a7729d2c698c3fa.html#abdd84f6c220fd3169a7729d2c698c3fa", null ],
+    [ "GetChars", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a9ac064ff7ec57e8f8be230ad66573ef8.html#a9ac064ff7ec57e8f8be230ad66573ef8", null ],
+    [ "GetData", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a5c0aecd7ab6d7a75079856526c320c14.html#a5c0aecd7ab6d7a75079856526c320c14", null ],
+    [ "GetDataTypeName", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_ab38b9f5564d483d8d104b1f993143b95.html#ab38b9f5564d483d8d104b1f993143b95", null ],
+    [ "GetDateTime", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a2bfc3a95f1a37ae5f13372dfe73aa3f9.html#a2bfc3a95f1a37ae5f13372dfe73aa3f9", null ],
+    [ "GetDecimal", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a2c1134f2ce203f98ec06493cb52e071c.html#a2c1134f2ce203f98ec06493cb52e071c", null ],
+    [ "GetDouble", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_abf70133e185e0c14cb47477b32d13349.html#abf70133e185e0c14cb47477b32d13349", null ],
+    [ "GetFieldType", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_ac11c12cecdce52fb4af7fbdd3e02be80.html#ac11c12cecdce52fb4af7fbdd3e02be80", null ],
+    [ "GetFloat", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_af552d83e1531d1deb48e7c3abba34205.html#af552d83e1531d1deb48e7c3abba34205", null ],
+    [ "GetGuid", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a35f2c0f3eaa0bccac4e538f38f7bde7c.html#a35f2c0f3eaa0bccac4e538f38f7bde7c", null ],
+    [ "GetInt16", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a587ba8144b0120daa02e849a06692990.html#a587ba8144b0120daa02e849a06692990", null ],
+    [ "GetInt32", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a955995e0fb3e334b83d74d47a8b562ac.html#a955995e0fb3e334b83d74d47a8b562ac", null ],
+    [ "GetInt64", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a74cc406d529994a8c2e0844fcc4e2a16.html#a74cc406d529994a8c2e0844fcc4e2a16", null ],
+    [ "GetName", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a5d0cecf090f65d15ef52f02eaba4b263.html#a5d0cecf090f65d15ef52f02eaba4b263", null ],
+    [ "GetOrdinal", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a0fc0f4a0448fd0825f1a9343fe871468.html#a0fc0f4a0448fd0825f1a9343fe871468", null ],
+    [ "GetString", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_ad088e468700c152eb543f9a43fa29f94.html#ad088e468700c152eb543f9a43fa29f94", null ],
+    [ "GetValue", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_aa05d18e8ded472f12f0ee45e609e2fcb.html#aa05d18e8ded472f12f0ee45e609e2fcb", null ],
+    [ "GetValues", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_af960ffcfcc6c270da99d4fd29f44cb27.html#af960ffcfcc6c270da99d4fd29f44cb27", null ],
+    [ "IsDBNull", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_aa0a68ecf3a2cd9cfd17b49b26f0d272c.html#aa0a68ecf3a2cd9cfd17b49b26f0d272c", null ],
+    [ "FieldCount", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a52983513f2331879815f325b0ef28fbb.html#a52983513f2331879815f325b0ef28fbb", null ],
+    [ "this[int i]", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_af567cfe1178b0418c750651cc505705f.html#af567cfe1178b0418c750651cc505705f", null ],
+    [ "this[string name]", "d6/d5c/interfaceSystem_1_1Data_1_1IDataRecord_a440e4865621dda72d3eac7db02ee2194.html#a440e4865621dda72d3eac7db02ee2194", null ]
+];

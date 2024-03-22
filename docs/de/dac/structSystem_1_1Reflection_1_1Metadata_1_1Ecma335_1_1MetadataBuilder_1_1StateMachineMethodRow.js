@@ -1,0 +1,5 @@
+var structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1StateMachineMethodRow =
+[
+    [ "KickoffMethod", "de/dac/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1StateMachineMethodRow_a383ea32171dcf91792eb2386a15b033f.html#a383ea32171dcf91792eb2386a15b033f", null ],
+    [ "MoveNextMethod", "de/dac/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1MetadataBuilder_1_1StateMachineMethodRow_a44b36b94f8585ce2c70f4a38e357e649.html#a44b36b94f8585ce2c70f4a38e357e649", null ]
+];

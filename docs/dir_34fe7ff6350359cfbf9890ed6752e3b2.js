@@ -1,0 +1,26 @@
+var dir_34fe7ff6350359cfbf9890ed6752e3b2 =
+[
+    [ "FxResources.System.Private.Xml", "dir_40fb1c622d32e5659e1fe791d3d88d04.html", "dir_40fb1c622d32e5659e1fe791d3d88d04" ],
+    [ "Microsoft.CodeAnalysis", "dir_658b12cd1ca9cf401a4b858c1ad189ca.html", "dir_658b12cd1ca9cf401a4b858c1ad189ca" ],
+    [ "MS.Internal.Xml.Cache", "dir_a7bbced0261aa2e6861968d6cde931f2.html", "dir_a7bbced0261aa2e6861968d6cde931f2" ],
+    [ "MS.Internal.Xml.XPath", "dir_8a8dc062fd3da823a22ccc3f5a451c7c.html", "dir_8a8dc062fd3da823a22ccc3f5a451c7c" ],
+    [ "Properties", "dir_82dca1943b0e07c7bff2827b1ce2765a.html", "dir_82dca1943b0e07c7bff2827b1ce2765a" ],
+    [ "System", "dir_20188f960743c9178a20f88ca8fae76c.html", "dir_20188f960743c9178a20f88ca8fae76c" ],
+    [ "System.Runtime.CompilerServices", "dir_daf98ba880ba42d3604369d00c0c1f04.html", "dir_daf98ba880ba42d3604369d00c0c1f04" ],
+    [ "System.Text", "dir_d44e39441e03b2ddf68738495bf1c3a9.html", "dir_d44e39441e03b2ddf68738495bf1c3a9" ],
+    [ "System.Xml", "dir_c5fb240f289c971f6d5618fc961b04e8.html", "dir_c5fb240f289c971f6d5618fc961b04e8" ],
+    [ "System.Xml.Extensions", "dir_886bb5293ad8ce1e5da46043990ebcd2.html", "dir_886bb5293ad8ce1e5da46043990ebcd2" ],
+    [ "System.Xml.Resolvers", "dir_9cbe3f2bbfaa74db8a7dfda649ddcd85.html", "dir_9cbe3f2bbfaa74db8a7dfda649ddcd85" ],
+    [ "System.Xml.Schema", "dir_30eb0ee0d2fb548337ba0940d173536e.html", "dir_30eb0ee0d2fb548337ba0940d173536e" ],
+    [ "System.Xml.Serialization", "dir_bcb2d2c5bc283e5c66ea2a6be0444f89.html", "dir_bcb2d2c5bc283e5c66ea2a6be0444f89" ],
+    [ "System.Xml.Serialization.Configuration", "dir_c68f5d2b0ed7c72bb1a2128ca388ef02.html", "dir_c68f5d2b0ed7c72bb1a2128ca388ef02" ],
+    [ "System.Xml.XPath", "dir_a89907d0c09551834307bde58f5f64b8.html", "dir_a89907d0c09551834307bde58f5f64b8" ],
+    [ "System.Xml.Xsl", "dir_56c472faae7d1d7c057ba15aa2a9551c.html", "dir_56c472faae7d1d7c057ba15aa2a9551c" ],
+    [ "System.Xml.Xsl.IlGen", "dir_7d32da8e5a64b2ba41c1f8b3ec616613.html", "dir_7d32da8e5a64b2ba41c1f8b3ec616613" ],
+    [ "System.Xml.Xsl.Qil", "dir_ff72b21d31f4fa05a155273e0d42ee56.html", "dir_ff72b21d31f4fa05a155273e0d42ee56" ],
+    [ "System.Xml.Xsl.Runtime", "dir_887a5af15d02401a364a9342c38b5593.html", "dir_887a5af15d02401a364a9342c38b5593" ],
+    [ "System.Xml.Xsl.XPath", "dir_e4df82858341899e1381b828e9acd23e.html", "dir_e4df82858341899e1381b828e9acd23e" ],
+    [ "System.Xml.Xsl.Xslt", "dir_1d33e2a65e263d7ed15666844cfaa7a6.html", "dir_1d33e2a65e263d7ed15666844cfaa7a6" ],
+    [ "System.Xml.Xsl.XsltOld", "dir_58791fc90ba2f03de5704fd6b132289c.html", "dir_58791fc90ba2f03de5704fd6b132289c" ],
+    [ "System.Xml.Xsl.XsltOld.Debugger", "dir_0b4aa035db868afd48a5bc1f664512f4.html", "dir_0b4aa035db868afd48a5bc1f664512f4" ]
+];

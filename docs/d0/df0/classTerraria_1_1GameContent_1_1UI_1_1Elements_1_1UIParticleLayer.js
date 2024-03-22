@@ -6,6 +6,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer =
     [ "Append", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "ClearParticles", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer_aa958567eb21d7775247a4f0b57212c0b.html#aa958567eb21d7775247a4f0b57212c0b", null ],
     [ "CompareTo", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d0/df0/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIParticleLayer.html#a172ab329792a6b10d313e66ccd63f30f", null ],

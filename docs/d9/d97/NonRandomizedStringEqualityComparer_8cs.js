@@ -1,0 +1,6 @@
+var NonRandomizedStringEqualityComparer_8cs =
+[
+    [ "System.Collections.Generic.NonRandomizedStringEqualityComparer", "d8/d67/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer.html", "d8/d67/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer" ],
+    [ "System.Collections.Generic.NonRandomizedStringEqualityComparer.OrdinalComparer", "d7/dc0/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer_1_1OrdinalComparer.html", "d7/dc0/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer_1_1OrdinalComparer" ],
+    [ "System.Collections.Generic.NonRandomizedStringEqualityComparer.OrdinalIgnoreCaseComparer", "dd/dff/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer_1_1OrdinalIgnoreCaseComparer.html", "dd/dff/classSystem_1_1Collections_1_1Generic_1_1NonRandomizedStringEqualityComparer_1_1OrdinalIgnoreCaseComparer" ]
+];

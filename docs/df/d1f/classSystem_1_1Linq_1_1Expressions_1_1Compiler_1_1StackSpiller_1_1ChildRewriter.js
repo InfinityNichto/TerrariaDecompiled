@@ -1,0 +1,26 @@
+var classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter =
+[
+    [ "ChildRewriter", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a5e34ef5ed135c00f39d3ae987d245ad1.html#a5e34ef5ed135c00f39d3ae987d245ad1", null ],
+    [ "Add", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ade69ba795bd1d645c91bd16bb1dcf510.html#ade69ba795bd1d645c91bd16bb1dcf510", null ],
+    [ "Add", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a9a43109af0f797ddcc8206a780b033e6.html#a9a43109af0f797ddcc8206a780b033e6", null ],
+    [ "AddArguments", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a96178ddcfd7046004ccf9311750b043e.html#a96178ddcfd7046004ccf9311750b043e", null ],
+    [ "EnsureDone", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a12ab4ef0a5aaf26827444c43c89acbba.html#a12ab4ef0a5aaf26827444c43c89acbba", null ],
+    [ "Finish", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a5a62849f2293727774b6b5a9dade12e6.html#a5a62849f2293727774b6b5a9dade12e6", null ],
+    [ "MarkRef", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ada6279227258d92fffe6c4cd13c8a020.html#ada6279227258d92fffe6c4cd13c8a020", null ],
+    [ "MarkRefArgs", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ac43bf3ad5c8dc5644d2c6724d54b4ee5.html#ac43bf3ad5c8dc5644d2c6724d54b4ee5", null ],
+    [ "MarkRefInstance", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a837bd4f656b1d0b82a2b4968ed5f5850.html#a837bd4f656b1d0b82a2b4968ed5f5850", null ],
+    [ "ShouldSaveToTemp", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_af9cc471905340776d065aec1ea737393.html#af9cc471905340776d065aec1ea737393", null ],
+    [ "_action", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ab2e7f1ed8de274ee847c7f90da0c8c52.html#ab2e7f1ed8de274ee847c7f90da0c8c52", null ],
+    [ "_byRefs", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_abc90fa659474ae2e7a06d984d3df2ab5.html#abc90fa659474ae2e7a06d984d3df2ab5", null ],
+    [ "_comma", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ad95e762c382f54841732920feac0fc21.html#ad95e762c382f54841732920feac0fc21", null ],
+    [ "_done", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a0ed6c723293d9477dd617646fc42198a.html#a0ed6c723293d9477dd617646fc42198a", null ],
+    [ "_expressions", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_adb4ffcbbb7f1e5b35a1e4b20fc70d042.html#adb4ffcbbb7f1e5b35a1e4b20fc70d042", null ],
+    [ "_expressionsCount", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a7b9cdf53fedf38bf330ed3beb2c84e11.html#a7b9cdf53fedf38bf330ed3beb2c84e11", null ],
+    [ "_lastSpillIndex", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a0be1c7f954bd60e619684e9910ca4f45.html#a0be1c7f954bd60e619684e9910ca4f45", null ],
+    [ "_self", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a9870ffd59981fa5d3ceec5320ceb5426.html#a9870ffd59981fa5d3ceec5320ceb5426", null ],
+    [ "_stack", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a6cf00d8cf03e2cfdcba2488a60d6190e.html#a6cf00d8cf03e2cfdcba2488a60d6190e", null ],
+    [ "Action", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a91a4112c01f7e5150798a36508e54652.html#a91a4112c01f7e5150798a36508e54652", null ],
+    [ "Rewrite", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_ad5c5c65743fa111a865a7e6a70f78659.html#ad5c5c65743fa111a865a7e6a70f78659", null ],
+    [ "this[int first, int last]", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_aa1cd7948333e050c963b1c3ee25ad7b4.html#aa1cd7948333e050c963b1c3ee25ad7b4", null ],
+    [ "this[int index]", "df/d1f/classSystem_1_1Linq_1_1Expressions_1_1Compiler_1_1StackSpiller_1_1ChildRewriter_a93174c4a37601dddaad858482e1bbdb7.html#a93174c4a37601dddaad858482e1bbdb7", null ]
+];

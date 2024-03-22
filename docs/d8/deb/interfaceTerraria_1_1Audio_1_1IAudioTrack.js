@@ -1,5 +1,6 @@
 var interfaceTerraria_1_1Audio_1_1IAudioTrack =
 [
+    [ "Dispose", "d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack.html#a710286bfcecdda4067fe45e6c927f482", null ],
     [ "Pause", "d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a18b69e526636e47df16ddd7747a7a538.html#a18b69e526636e47df16ddd7747a7a538", null ],
     [ "Play", "d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a96355f95acf27e06be73257333f86378.html#a96355f95acf27e06be73257333f86378", null ],
     [ "Resume", "d8/deb/interfaceTerraria_1_1Audio_1_1IAudioTrack_a44651012b05019c0ab17dcc94eeaee9f.html#a44651012b05019c0ab17dcc94eeaee9f", null ],

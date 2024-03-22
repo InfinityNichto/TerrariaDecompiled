@@ -1,0 +1,9 @@
+var classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers =
+[
+    [ "GetImmutableDictionaryConstructingType", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_a2a3849790b297e71de6ad17b9f1ea984.html#a2a3849790b297e71de6ad17b9f1ea984", null ],
+    [ "GetImmutableDictionaryCreateRangeMethod", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_aae12291bf6204ffafef5c19057f8f34c.html#aae12291bf6204ffafef5c19057f8f34c", null ],
+    [ "GetImmutableEnumerableConstructingType", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_a2cee577f6f7eea18019be2473330ddee.html#a2cee577f6f7eea18019be2473330ddee", null ],
+    [ "GetImmutableEnumerableCreateRangeMethod", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_a2352ac052a055a43a41a70c85ad716c0.html#a2352ac052a055a43a41a70c85ad716c0", null ],
+    [ "GetTypeIfExists", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_a89b4e0383cd43afcdc2af72580d30f83.html#a89b4e0383cd43afcdc2af72580d30f83", null ],
+    [ "IsNonGenericStackOrQueue", "d2/d13/classSystem_1_1Text_1_1Json_1_1Serialization_1_1IEnumerableConverterFactoryHelpers_a709ef57a32b84148cea41ec76d5a7b8d.html#a709ef57a32b84148cea41ec76d5a7b8d", null ]
+];

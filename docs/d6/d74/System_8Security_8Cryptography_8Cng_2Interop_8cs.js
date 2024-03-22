@@ -1,0 +1,28 @@
+var System_8Security_8Cryptography_8Cng_2Interop_8cs =
+[
+    [ "Interop", "dc/d79/classInterop.html", "dc/d79/classInterop" ],
+    [ "Interop.BCrypt", "d6/dba/classInterop_1_1BCrypt.html", "d6/dba/classInterop_1_1BCrypt" ],
+    [ "Interop.BCrypt.BCRYPT_KEY_DATA_BLOB_HEADER", "d4/dc3/structInterop_1_1BCrypt_1_1BCRYPT__KEY__DATA__BLOB__HEADER.html", "d4/dc3/structInterop_1_1BCrypt_1_1BCRYPT__KEY__DATA__BLOB__HEADER" ],
+    [ "Interop.BCrypt.BCRYPT_OAEP_PADDING_INFO", "d1/d6b/structInterop_1_1BCrypt_1_1BCRYPT__OAEP__PADDING__INFO.html", "d1/d6b/structInterop_1_1BCrypt_1_1BCRYPT__OAEP__PADDING__INFO" ],
+    [ "Interop.BCrypt.BCRYPT_PKCS1_PADDING_INFO", "dc/d41/structInterop_1_1BCrypt_1_1BCRYPT__PKCS1__PADDING__INFO.html", "dc/d41/structInterop_1_1BCrypt_1_1BCRYPT__PKCS1__PADDING__INFO" ],
+    [ "Interop.BCrypt.BCRYPT_PSS_PADDING_INFO", "dc/d80/structInterop_1_1BCrypt_1_1BCRYPT__PSS__PADDING__INFO.html", "dc/d80/structInterop_1_1BCrypt_1_1BCRYPT__PSS__PADDING__INFO" ],
+    [ "Interop.BCrypt.BCRYPT_RSAKEY_BLOB", "d0/d07/structInterop_1_1BCrypt_1_1BCRYPT__RSAKEY__BLOB.html", "d0/d07/structInterop_1_1BCrypt_1_1BCRYPT__RSAKEY__BLOB" ],
+    [ "Interop.BCrypt.BCRYPT_DSA_KEY_BLOB", "d1/d6e/structInterop_1_1BCrypt_1_1BCRYPT__DSA__KEY__BLOB.html", "d1/d6e/structInterop_1_1BCrypt_1_1BCRYPT__DSA__KEY__BLOB" ],
+    [ "Interop.BCrypt.BCRYPT_DSA_KEY_BLOB_V2", "d0/df7/structInterop_1_1BCrypt_1_1BCRYPT__DSA__KEY__BLOB__V2.html", "d0/df7/structInterop_1_1BCrypt_1_1BCRYPT__DSA__KEY__BLOB__V2" ],
+    [ "Interop.BCrypt.BCRYPT_ECCKEY_BLOB", "d7/d2e/structInterop_1_1BCrypt_1_1BCRYPT__ECCKEY__BLOB.html", "d7/d2e/structInterop_1_1BCrypt_1_1BCRYPT__ECCKEY__BLOB" ],
+    [ "Interop.BCrypt.BCRYPT_ECCFULLKEY_BLOB", "df/d07/structInterop_1_1BCrypt_1_1BCRYPT__ECCFULLKEY__BLOB.html", "df/d07/structInterop_1_1BCrypt_1_1BCRYPT__ECCFULLKEY__BLOB" ],
+    [ "Interop.BCrypt.BCryptBuffer", "d6/daf/structInterop_1_1BCrypt_1_1BCryptBuffer.html", "d6/daf/structInterop_1_1BCrypt_1_1BCryptBuffer" ],
+    [ "Interop.BCrypt.BCryptBufferDesc", "de/d5a/structInterop_1_1BCrypt_1_1BCryptBufferDesc.html", "de/d5a/structInterop_1_1BCrypt_1_1BCryptBufferDesc" ],
+    [ "Interop.BCrypt.BCRYPT_ECC_PARAMETER_HEADER", "da/da2/structInterop_1_1BCrypt_1_1BCRYPT__ECC__PARAMETER__HEADER.html", "da/da2/structInterop_1_1BCrypt_1_1BCRYPT__ECC__PARAMETER__HEADER" ],
+    [ "Interop.BCrypt.BCryptAlgorithmCache", "d1/d10/classInterop_1_1BCrypt_1_1BCryptAlgorithmCache.html", "d1/d10/classInterop_1_1BCrypt_1_1BCryptAlgorithmCache" ],
+    [ "Interop.BCrypt.BCryptAlgorithmCache.Entry", "d2/de4/structInterop_1_1BCrypt_1_1BCryptAlgorithmCache_1_1Entry.html", "d2/de4/structInterop_1_1BCrypt_1_1BCryptAlgorithmCache_1_1Entry" ],
+    [ "Interop.Crypt32", "d7/d1e/classInterop_1_1Crypt32.html", "d7/d1e/classInterop_1_1Crypt32" ],
+    [ "Interop.Crypt32.CRYPT_OID_INFO", "db/d3c/structInterop_1_1Crypt32_1_1CRYPT__OID__INFO.html", "db/d3c/structInterop_1_1Crypt32_1_1CRYPT__OID__INFO" ],
+    [ "Interop.NCrypt", "db/d6a/classInterop_1_1NCrypt.html", "db/d6a/classInterop_1_1NCrypt" ],
+    [ "Interop.NCrypt.CRYPT_PKCS12_PBE_PARAMS", "da/d97/structInterop_1_1NCrypt_1_1CRYPT__PKCS12__PBE__PARAMS.html", "da/d97/structInterop_1_1NCrypt_1_1CRYPT__PKCS12__PBE__PARAMS" ],
+    [ "Interop.NCrypt.PBE_PARAMS", "d9/d82/structInterop_1_1NCrypt_1_1PBE__PARAMS.html", "d9/d82/structInterop_1_1NCrypt_1_1PBE__PARAMS" ],
+    [ "Interop.NCrypt.NCryptBuffer", "de/dca/structInterop_1_1NCrypt_1_1NCryptBuffer.html", "de/dca/structInterop_1_1NCrypt_1_1NCryptBuffer" ],
+    [ "Interop.NCrypt.NCryptBufferDesc", "d4/dbb/structInterop_1_1NCrypt_1_1NCryptBufferDesc.html", "d4/dbb/structInterop_1_1NCrypt_1_1NCryptBufferDesc" ],
+    [ "Interop.NCrypt.NCRYPT_UI_POLICY", "de/d0f/structInterop_1_1NCrypt_1_1NCRYPT__UI__POLICY.html", "de/d0f/structInterop_1_1NCrypt_1_1NCRYPT__UI__POLICY" ],
+    [ "Interop.Kernel32", "d3/d49/classInterop_1_1Kernel32.html", "d3/d49/classInterop_1_1Kernel32" ]
+];

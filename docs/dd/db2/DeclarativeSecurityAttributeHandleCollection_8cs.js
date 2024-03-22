@@ -1,0 +1,5 @@
+var DeclarativeSecurityAttributeHandleCollection_8cs =
+[
+    [ "System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection", "d5/dc1/structSystem_1_1Reflection_1_1Metadata_1_1DeclarativeSecurityAttributeHandleCollection.html", "d5/dc1/structSystem_1_1Reflection_1_1Metadata_1_1DeclarativeSecurityAttributeHandleCollection" ],
+    [ "System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection.Enumerator", "d4/d5d/structSystem_1_1Reflection_1_1Metadata_1_1DeclarativeSecurityAttributeHandleCollection_1_1Enumerator.html", "d4/d5d/structSystem_1_1Reflection_1_1Metadata_1_1DeclarativeSecurityAttributeHandleCollection_1_1Enumerator" ]
+];

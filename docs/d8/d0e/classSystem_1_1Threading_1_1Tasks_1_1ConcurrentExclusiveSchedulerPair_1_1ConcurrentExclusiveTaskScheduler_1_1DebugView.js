@@ -1,0 +1,8 @@
+var classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView =
+[
+    [ "DebugView", "d8/d0e/classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView_a59eaec4dfb032a82035c12d0a543fdfc.html#a59eaec4dfb032a82035c12d0a543fdfc", null ],
+    [ "m_taskScheduler", "d8/d0e/classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView_aafbcf0dc564ad25713f2f2f28a98f010.html#aafbcf0dc564ad25713f2f2f28a98f010", null ],
+    [ "MaximumConcurrencyLevel", "d8/d0e/classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView_a345611bbb69036f31a2c257416db3569.html#a345611bbb69036f31a2c257416db3569", null ],
+    [ "ScheduledTasks", "d8/d0e/classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView_a0b53c414d0cba1bf4deabcc3dc2eba08.html#a0b53c414d0cba1bf4deabcc3dc2eba08", null ],
+    [ "SchedulerPair", "d8/d0e/classSystem_1_1Threading_1_1Tasks_1_1ConcurrentExclusiveSchedulerPair_1_1ConcurrentExclusiveTaskScheduler_1_1DebugView_af06dc2ca85371f313ce0c771f51ba4bb.html#af06dc2ca85371f313ce0c771f51ba4bb", null ]
+];

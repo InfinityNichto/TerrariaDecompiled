@@ -1,0 +1,4 @@
+var DefaultSerializationProviderAttribute_8cs =
+[
+    [ "System.ComponentModel.Design.Serialization.DefaultSerializationProviderAttribute", "d3/dc4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DefaultSerializationProviderAttribute.html", "d3/dc4/classSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1DefaultSerializationProviderAttribute" ]
+];

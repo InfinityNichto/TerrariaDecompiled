@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup =
+[
+    [ "AddAnnotation", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a569521a2e209c71619160b874476a858", null ],
+    [ "Clone", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a1fbe282a7df8e720e102884a1107e411", null ],
+    [ "OnAdd", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#adfbf0233fcc33996797c329cfc2fc976", null ],
+    [ "OnClear", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a961fe18b53dac28f048a9cbfd3b356e7", null ],
+    [ "OnRemove", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a45ef610f06886d9522a47c767a5ccb7c", null ],
+    [ "SetUnhandledAttributes", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a6fffb2d95914c7a8c5e7c501759c64ce", null ],
+    [ "_examplar", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup_ac49d820361a69aa9611940445d5fb28d.html#ac49d820361a69aa9611940445d5fb28d", null ],
+    [ "_isProcessing", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a4fe8fb9fa224edeb5b3bf5b16497d779", null ],
+    [ "_lineNum", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a37ecd727360370b076ce83aec5e6b9dd", null ],
+    [ "_linePos", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a91bc0e2ce2688f53a1fe1509bc0090e3", null ],
+    [ "_membersList", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup_af66802cddc901cbcd5ee02a808a13669.html#af66802cddc901cbcd5ee02a808a13669", null ],
+    [ "_namespaces", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a8186f0374e25183d6a86b404e3d86d73", null ],
+    [ "_parent", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#ad168a9a38f741e37be8f6ca22c1dddfc", null ],
+    [ "_sourceUri", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#ae186336f3888d350ec02d830af22cb01", null ],
+    [ "Examplar", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup_aaa1cf27f9e48c049fbe184263e3bf70e.html#aaa1cf27f9e48c049fbe184263e3bf70e", null ],
+    [ "IdAttribute", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#ad168064677a693392c8b9608c7ac1d78", null ],
+    [ "IsProcessing", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a532771fabac5eb0b152bc541b7a99740", null ],
+    [ "LineNumber", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a1ba729d69f5bc217d568a999a22238a2", null ],
+    [ "LinePosition", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#ae38949dabb5de4285364b4dcd2eb6a2f", null ],
+    [ "Members", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup_ab6d4549f0590916445fd1f25f6439246.html#ab6d4549f0590916445fd1f25f6439246", null ],
+    [ "NameAttribute", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#a62e6a5307051e2861c63ed975d649d1f", null ],
+    [ "Namespaces", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#ae40890f9d1266dda151b3b4bead513cc", null ],
+    [ "Parent", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#aaa28e3af6865ee194ac99b5a8e63ce57", null ],
+    [ "SourceUri", "d2/d29/classSystem_1_1Xml_1_1Schema_1_1XmlSchemaSubstitutionGroup.html#aa2f8175c3955ca93cb34dfb5917b67f0", null ]
+];

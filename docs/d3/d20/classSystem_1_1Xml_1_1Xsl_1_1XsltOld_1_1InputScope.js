@@ -1,0 +1,28 @@
+var classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope =
+[
+    [ "InputScope", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_afcde80d77948ac9591490b2b40538418.html#afcde80d77948ac9591490b2b40538418", null ],
+    [ "AddNamespace", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope.html#ad994676d0e908837cfc1c7264beb0111", null ],
+    [ "GetVeriablesCount", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a3c9eea359eac77a53b7024bdbde206f9.html#a3c9eea359eac77a53b7024bdbde206f9", null ],
+    [ "Init", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a1310e34860d032ed629cd5cc2331ba32.html#a1310e34860d032ed629cd5cc2331ba32", null ],
+    [ "InsertExcludedNamespace", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a288b8a3cbff106aed81126c176e3fd5d.html#a288b8a3cbff106aed81126c176e3fd5d", null ],
+    [ "InsertExtensionNamespace", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a8d9a837cc9107113f2a87f888a318618.html#a8d9a837cc9107113f2a87f888a318618", null ],
+    [ "InsertVariable", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_ae72b7d94f0bd6ad47290c5018cbccc3c.html#ae72b7d94f0bd6ad47290c5018cbccc3c", null ],
+    [ "IsExcludedNamespace", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_abfc6fbe33749225157dd570a21a1358a.html#abfc6fbe33749225157dd570a21a1358a", null ],
+    [ "IsExtensionNamespace", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a6ec2480cee969aee3ea2e938e4fe86eb.html#a6ec2480cee969aee3ea2e938e4fe86eb", null ],
+    [ "ResolveAtom", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope.html#ac9bfb41e4df217aa2d663aaf1bbb6a8e", null ],
+    [ "ResolveGlobalVariable", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_af20e0e9daff4f74426908b4d6458f74e.html#af20e0e9daff4f74426908b4d6458f74e", null ],
+    [ "ResolveNonAtom", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope.html#a5425b17b07e736f5753b7c48f1168f45", null ],
+    [ "ResolveVariable", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_ad76e3f7d46c6a4004412643fcf1983c0.html#ad76e3f7d46c6a4004412643fcf1983c0", null ],
+    [ "_canHaveApplyImports", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_af59e05305d680040a5c16767539506b4.html#af59e05305d680040a5c16767539506b4", null ],
+    [ "_excludedNamespaces", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a7837539b58eed73402a7d389b40e37dc.html#a7837539b58eed73402a7d389b40e37dc", null ],
+    [ "_extensionNamespaces", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a2975e188fcd460bbb84c6114458f5948.html#a2975e188fcd460bbb84c6114458f5948", null ],
+    [ "_forwardCompatibility", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a0b0a535a56f926d4e1b42f19e8da721b.html#a0b0a535a56f926d4e1b42f19e8da721b", null ],
+    [ "_parent", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a9d758726ebc294f13119b1d6972e2143.html#a9d758726ebc294f13119b1d6972e2143", null ],
+    [ "_variables", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_ab5f954ba9ecacf82bb8f8255ab97c412.html#ab5f954ba9ecacf82bb8f8255ab97c412", null ],
+    [ "scopes", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope.html#aa18a63e2330efffd442e874e9fe42e6f", null ],
+    [ "CanHaveApplyImports", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a347152f4cd6f03f23396117467008b5e.html#a347152f4cd6f03f23396117467008b5e", null ],
+    [ "ForwardCompatibility", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a82ba73a58a12063ce9cf048e58f3d3d3.html#a82ba73a58a12063ce9cf048e58f3d3d3", null ],
+    [ "Parent", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_a47b1dc68744655042b4a7dfb269973d2.html#a47b1dc68744655042b4a7dfb269973d2", null ],
+    [ "Scopes", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope.html#adcaa7457b797a353de7b7e18d3ec1839", null ],
+    [ "Variables", "d3/d20/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1InputScope_abe7ae2b624d2713718ccfab73a618a79.html#abe7ae2b624d2713718ccfab73a618a79", null ]
+];

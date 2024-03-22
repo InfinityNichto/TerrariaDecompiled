@@ -1,0 +1,4 @@
+var EnumeratorToEnumVariantMarshaler_8cs =
+[
+    [ "System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler", "d2/d14/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorToEnumVariantMarshaler.html", "d2/d14/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorToEnumVariantMarshaler" ]
+];

@@ -1,0 +1,6 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN =
+[
+    [ "sin_addr", "d8/dc1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN_a40b8ae034f1ccae468996fefede76bdd.html#a40b8ae034f1ccae468996fefede76bdd", null ],
+    [ "sin_family", "d8/dc1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN_ae4e5e71872f6215917374d934c49a182.html#ae4e5e71872f6215917374d934c49a182", null ],
+    [ "sin_port", "d8/dc1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN_a7524c511db1e9c2b588dfe40c058f63d.html#a7524c511db1e9c2b588dfe40c058f63d", null ]
+];

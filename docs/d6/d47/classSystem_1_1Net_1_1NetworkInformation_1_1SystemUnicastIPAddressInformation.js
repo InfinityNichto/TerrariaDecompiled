@@ -1,0 +1,26 @@
+var classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation =
+[
+    [ "SystemUnicastIPAddressInformation", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a9d112326700f13b81d174e634196ce0e.html#a9d112326700f13b81d174e634196ce0e", null ],
+    [ "MarshalUnicastIpAddressInformationCollection", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a6b9ef388b91f9683e9a864fe5d03d74f.html#a6b9ef388b91f9683e9a864fe5d03d74f", null ],
+    [ "PrefixLengthToSubnetMask", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation.html#aa52cbbe352be2a4cecbcef40867742ed", null ],
+    [ "_dadState", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a00db1f347813da6ce4111de7ae427f6b.html#a00db1f347813da6ce4111de7ae427f6b", null ],
+    [ "_dhcpLeaseLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_af8b5a6ad7551ad59ae40faa577c15404.html#af8b5a6ad7551ad59ae40faa577c15404", null ],
+    [ "_innerInfo", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a7c2d4f75c61e9d179b54736915e6c653.html#a7c2d4f75c61e9d179b54736915e6c653", null ],
+    [ "_ipv4Mask", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a53e3cc16b50e49d064639af4702ef575.html#a53e3cc16b50e49d064639af4702ef575", null ],
+    [ "_preferredLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a27f679c17645476055dc76b1e49b13f3.html#a27f679c17645476055dc76b1e49b13f3", null ],
+    [ "_prefixLength", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a35500dff977a44741765a011457db893.html#a35500dff977a44741765a011457db893", null ],
+    [ "_prefixOrigin", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a525b0d6dad598fa15199651cc64e69f5.html#a525b0d6dad598fa15199651cc64e69f5", null ],
+    [ "_suffixOrigin", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_adb93718184d5b98bb434eda5d4e8cca4.html#adb93718184d5b98bb434eda5d4e8cca4", null ],
+    [ "_validLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_af17d718006f1a16944040ad24aa89a80.html#af17d718006f1a16944040ad24aa89a80", null ],
+    [ "Address", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_ac6091fa75713334a6bb9e3bc358c2b6b.html#ac6091fa75713334a6bb9e3bc358c2b6b", null ],
+    [ "AddressPreferredLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_af7bbbaa0eeba06d3813478644c70788a.html#af7bbbaa0eeba06d3813478644c70788a", null ],
+    [ "AddressValidLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a1982c610f40f2e3a94be5568a20de987.html#a1982c610f40f2e3a94be5568a20de987", null ],
+    [ "DhcpLeaseLifetime", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a1a55e71637cfa3f9870fd9ffb943537f.html#a1a55e71637cfa3f9870fd9ffb943537f", null ],
+    [ "DuplicateAddressDetectionState", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a6ae003afb7023962c9e51b9b984ca83e.html#a6ae003afb7023962c9e51b9b984ca83e", null ],
+    [ "IPv4Mask", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_aa05545852432c474385cb3d2c1682061.html#aa05545852432c474385cb3d2c1682061", null ],
+    [ "IsDnsEligible", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_aa213e71bbb7ffeee69c80510b3db2652.html#aa213e71bbb7ffeee69c80510b3db2652", null ],
+    [ "IsTransient", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a451b7e59cc6f1e182d85b400f73088fd.html#a451b7e59cc6f1e182d85b400f73088fd", null ],
+    [ "PrefixLength", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a1beec4c20dc1bdafcc92b840affb9e13.html#a1beec4c20dc1bdafcc92b840affb9e13", null ],
+    [ "PrefixOrigin", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a93c6c4fecb92abbea53851da7df493b6.html#a93c6c4fecb92abbea53851da7df493b6", null ],
+    [ "SuffixOrigin", "d6/d47/classSystem_1_1Net_1_1NetworkInformation_1_1SystemUnicastIPAddressInformation_a2fd8526a9dad4ea15dd411969738ca95.html#a2fd8526a9dad4ea15dd411969738ca95", null ]
+];

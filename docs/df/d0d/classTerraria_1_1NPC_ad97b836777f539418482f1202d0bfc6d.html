@@ -105,7 +105,7 @@ $(function(){initNavTree('df/d0d/classTerraria_1_1NPC_ad97b836777f539418482f1202
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">void</a> Terraria.NPC.UpdateNPC_BuffClearExpiredBuffs </td>
+          <td class="memname"><a class="el" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">void</a> Terraria.NPC.UpdateNPC_BuffClearExpiredBuffs </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -124,11 +124,11 @@ $(function(){initNavTree('df/d0d/classTerraria_1_1NPC_ad97b836777f539418482f1202
 <div class="line"><span class="lineno">88657</span>        {</div>
 <div class="line"><span class="lineno">88658</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">88659</span>        }</div>
-<div class="line"><span class="lineno">88660</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a> = 0; <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a> &lt; <a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_a2f761d467f9366a31c1c7f6d7f203c3c.html#a2f761d467f9366a31c1c7f6d7f203c3c">maxBuffs</a>; <a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a>++)</div>
+<div class="line"><span class="lineno">88660</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../dd/dab/namespaceSystem_1_1Text_1_1RegularExpressions_aee66935ceaf4e2bbda30c7f3d0260c1d.html#aee66935ceaf4e2bbda30c7f3d0260c1da865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; <a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_a2f761d467f9366a31c1c7f6d7f203c3c.html#a2f761d467f9366a31c1c7f6d7f203c3c">maxBuffs</a>; <a class="code hl_enumvalue" href="../../dd/dab/namespaceSystem_1_1Text_1_1RegularExpressions_aee66935ceaf4e2bbda30c7f3d0260c1d.html#aee66935ceaf4e2bbda30c7f3d0260c1da865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
 <div class="line"><span class="lineno">88661</span>        {</div>
-<div class="line"><span class="lineno">88662</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_ae412502d4090763987ad1aae9e5982ac.html#ae412502d4090763987ad1aae9e5982ac">buffType</a>[<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a>] &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_a5b2aa498670f87dd7dc6afe0b66f5b9e.html#a5b2aa498670f87dd7dc6afe0b66f5b9e">buffTime</a>[<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a>] &lt;= 0)</div>
+<div class="line"><span class="lineno">88662</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_ae412502d4090763987ad1aae9e5982ac.html#ae412502d4090763987ad1aae9e5982ac">buffType</a>[i] &gt; 0 &amp;&amp; <a class="code hl_variable" href="../../df/d0d/classTerraria_1_1NPC_a5b2aa498670f87dd7dc6afe0b66f5b9e.html#a5b2aa498670f87dd7dc6afe0b66f5b9e">buffTime</a>[i] &lt;= 0)</div>
 <div class="line"><span class="lineno">88663</span>            {</div>
-<div class="line"><span class="lineno">88664</span>                <a class="code hl_function" href="../../df/d0d/classTerraria_1_1NPC_a9ef7b20efd9fa0424cc25a3ec3c86389.html#a9ef7b20efd9fa0424cc25a3ec3c86389">DelBuff</a>(<a class="code hl_class" href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">i</a>);</div>
+<div class="line"><span class="lineno">88664</span>                <a class="code hl_function" href="../../df/d0d/classTerraria_1_1NPC_a9ef7b20efd9fa0424cc25a3ec3c86389.html#a9ef7b20efd9fa0424cc25a3ec3c86389">DelBuff</a>(i);</div>
 <div class="line"><span class="lineno">88665</span>                <span class="keywordflow">if</span> (Main.netMode == 2)</div>
 <div class="line"><span class="lineno">88666</span>                {</div>
 <div class="line"><span class="lineno">88667</span>                    NetMessage.SendData(54, -1, -1, <span class="keyword">null</span>, <a class="code hl_variable" href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">whoAmI</a>);</div>
@@ -136,21 +136,14 @@ $(function(){initNavTree('df/d0d/classTerraria_1_1NPC_ad97b836777f539418482f1202
 <div class="line"><span class="lineno">88669</span>            }</div>
 <div class="line"><span class="lineno">88670</span>        }</div>
 <div class="line"><span class="lineno">88671</span>    }</div>
-<div class="ttc" id="aclassReLogic_1_1Content_1_1Asset_html"><div class="ttname"><a href="../../da/d68/classReLogic_1_1Content_1_1Asset.html">ReLogic.Content.Asset</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d52/Asset_8cs_source.html#l00007">Asset.cs:8</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1_html_a754be389f7458077b235b054b9e4afc1"><div class="ttname"><a href="../../df/df6/classTerraria_1_1Entity_a754be389f7458077b235b054b9e4afc1.html#a754be389f7458077b235b054b9e4afc1">Terraria.Entity.whoAmI</a></div><div class="ttdeci">int whoAmI</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d56/Entity_8cs_source.html#l00008">Entity.cs:8</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1NPC_a2f761d467f9366a31c1c7f6d7f203c3c_html_a2f761d467f9366a31c1c7f6d7f203c3c"><div class="ttname"><a href="../../df/d0d/classTerraria_1_1NPC_a2f761d467f9366a31c1c7f6d7f203c3c.html#a2f761d467f9366a31c1c7f6d7f203c3c">Terraria.NPC.maxBuffs</a></div><div class="ttdeci">static readonly int maxBuffs</div><div class="ttdef"><b>Definition</b> <a href="../../de/d94/NPC_8cs_source.html#l00211">NPC.cs:211</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1NPC_a5b2aa498670f87dd7dc6afe0b66f5b9e_html_a5b2aa498670f87dd7dc6afe0b66f5b9e"><div class="ttname"><a href="../../df/d0d/classTerraria_1_1NPC_a5b2aa498670f87dd7dc6afe0b66f5b9e.html#a5b2aa498670f87dd7dc6afe0b66f5b9e">Terraria.NPC.buffTime</a></div><div class="ttdeci">int[] buffTime</div><div class="ttdef"><b>Definition</b> <a href="../../de/d94/NPC_8cs_source.html#l00215">NPC.cs:215</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1NPC_a9ef7b20efd9fa0424cc25a3ec3c86389_html_a9ef7b20efd9fa0424cc25a3ec3c86389"><div class="ttname"><a href="../../df/d0d/classTerraria_1_1NPC_a9ef7b20efd9fa0424cc25a3ec3c86389.html#a9ef7b20efd9fa0424cc25a3ec3c86389">Terraria.NPC.DelBuff</a></div><div class="ttdeci">void DelBuff(int buffIndex)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d94/NPC_8cs_source.html#l86824">NPC.cs:86824</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1NPC_ae412502d4090763987ad1aae9e5982ac_html_ae412502d4090763987ad1aae9e5982ac"><div class="ttname"><a href="../../df/d0d/classTerraria_1_1NPC_ae412502d4090763987ad1aae9e5982ac.html#ae412502d4090763987ad1aae9e5982ac">Terraria.NPC.buffType</a></div><div class="ttdeci">int[] buffType</div><div class="ttdef"><b>Definition</b> <a href="../../de/d94/NPC_8cs_source.html#l00213">NPC.cs:213</a></div></div>
+<div class="ttc" id="anamespaceSystem_1_1Text_1_1RegularExpressions_aee66935ceaf4e2bbda30c7f3d0260c1d_html_aee66935ceaf4e2bbda30c7f3d0260c1da865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../dd/dab/namespaceSystem_1_1Text_1_1RegularExpressions_aee66935ceaf4e2bbda30c7f3d0260c1d.html#aee66935ceaf4e2bbda30c7f3d0260c1da865c0c0b4ab0e063e5caa3387c1a8741">System.Text.RegularExpressions.ExceptionArgument.i</a></div><div class="ttdeci">@ i</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../da/dd5/classTerraria_1_1Main_a4400e39a13e76f8d1f439d8cb473fad5.html#a4400e39a13e76f8d1f439d8cb473fad5">Terraria.Main.netMode</a>, and <a class="el" href="../../d2/dfe/classTerraria_1_1NetMessage_a0099400efdc729b71368da55adc01263.html#a0099400efdc729b71368da55adc01263">Terraria.NetMessage.SendData()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d0d/classTerraria_1_1NPC_ad97b836777f539418482f1202d0bfc6d_ad97b836777f539418482f1202d0bfc6d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>

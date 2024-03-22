@@ -1,0 +1,205 @@
+var namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes =
+[
+    [ "BIND_OPTS", "db/db0/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1BIND__OPTS.html", "db/db0/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1BIND__OPTS" ],
+    [ "BINDPTR", "d9/dad/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1BINDPTR.html", "d9/dad/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1BINDPTR" ],
+    [ "CONNECTDATA", "dd/d70/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1CONNECTDATA.html", "dd/d70/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1CONNECTDATA" ],
+    [ "DISPPARAMS", "d4/d7e/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1DISPPARAMS.html", "d4/d7e/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1DISPPARAMS" ],
+    [ "ELEMDESC", "d7/da7/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ELEMDESC.html", "d7/da7/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ELEMDESC" ],
+    [ "EXCEPINFO", "d8/d67/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1EXCEPINFO.html", "d8/d67/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1EXCEPINFO" ],
+    [ "FILETIME", "d8/d91/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FILETIME.html", "d8/d91/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FILETIME" ],
+    [ "FORMATETC", "db/d61/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FORMATETC.html", "db/d61/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FORMATETC" ],
+    [ "FUNCDESC", "dd/db4/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FUNCDESC.html", "dd/db4/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1FUNCDESC" ],
+    [ "IAdviseSink", "d2/d84/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IAdviseSink.html", "d2/d84/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IAdviseSink" ],
+    [ "IBindCtx", "d3/d27/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IBindCtx.html", "d3/d27/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IBindCtx" ],
+    [ "IConnectionPoint", "dd/d30/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPoint.html", "dd/d30/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPoint" ],
+    [ "IConnectionPointContainer", "db/d5b/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPointContainer.html", "db/d5b/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IConnectionPointContainer" ],
+    [ "IDataObject", "d9/df1/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IDataObject.html", "d9/df1/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IDataObject" ],
+    [ "IDLDESC", "d6/d13/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IDLDESC.html", "d6/d13/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IDLDESC" ],
+    [ "IEnumConnectionPoints", "d3/d81/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumConnectionPoints.html", "d3/d81/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumConnectionPoints" ],
+    [ "IEnumConnections", "d1/d21/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumConnections.html", "d1/d21/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumConnections" ],
+    [ "IEnumerable", "d1/d99/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumerable.html", "d1/d99/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumerable" ],
+    [ "IEnumerator", "dd/def/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumerator.html", "dd/def/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumerator" ],
+    [ "IEnumFORMATETC", "d4/d98/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumFORMATETC.html", "d4/d98/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumFORMATETC" ],
+    [ "IEnumMoniker", "d2/d1d/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumMoniker.html", "d2/d1d/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumMoniker" ],
+    [ "IEnumSTATDATA", "db/df6/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumSTATDATA.html", "db/df6/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumSTATDATA" ],
+    [ "IEnumString", "d3/ddd/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumString.html", "d3/ddd/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumString" ],
+    [ "IEnumVARIANT", "d1/d30/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumVARIANT.html", "d1/d30/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IEnumVARIANT" ],
+    [ "IMoniker", "d4/da6/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IMoniker.html", "d4/da6/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IMoniker" ],
+    [ "IPersistFile", "d4/d05/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IPersistFile.html", "d4/d05/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IPersistFile" ],
+    [ "IRunningObjectTable", "d5/ded/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IRunningObjectTable.html", "d5/ded/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IRunningObjectTable" ],
+    [ "IStream", "de/d0f/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IStream.html", "de/d0f/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1IStream" ],
+    [ "ITypeComp", "d8/d02/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeComp.html", "d8/d02/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeComp" ],
+    [ "ITypeInfo", "dd/d6f/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeInfo.html", "dd/d6f/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeInfo" ],
+    [ "ITypeInfo2", "dc/d81/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeInfo2.html", "dc/d81/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeInfo2" ],
+    [ "ITypeLib", "d7/d44/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeLib.html", "d7/d44/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeLib" ],
+    [ "ITypeLib2", "d7/d01/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeLib2.html", "d7/d01/interfaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1ITypeLib2" ],
+    [ "PARAMDESC", "d8/d03/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1PARAMDESC.html", "d8/d03/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1PARAMDESC" ],
+    [ "STATDATA", "de/dc1/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STATDATA.html", "de/dc1/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STATDATA" ],
+    [ "STATSTG", "df/d0f/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STATSTG.html", "df/d0f/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STATSTG" ],
+    [ "STGMEDIUM", "d9/d75/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STGMEDIUM.html", "d9/d75/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1STGMEDIUM" ],
+    [ "TYPEATTR", "d3/dda/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPEATTR.html", "d3/dda/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPEATTR" ],
+    [ "TYPEDESC", "da/db4/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPEDESC.html", "da/db4/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPEDESC" ],
+    [ "TYPELIBATTR", "d1/dec/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPELIBATTR.html", "d1/dec/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1TYPELIBATTR" ],
+    [ "VARDESC", "d8/d45/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1VARDESC.html", "d8/d45/structSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_1_1VARDESC" ],
+    [ "ADVF", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5", [
+      [ "ADVF_NODATA", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5ae958fb944f2dcd940e6cb1356af04f49", null ],
+      [ "ADVF_PRIMEFIRST", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5a644e66e413e003a3569f654b04e80170", null ],
+      [ "ADVF_ONLYONCE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5ad2ec9fc4ffc182cadba0bce119ac3990", null ],
+      [ "ADVF_DATAONSTOP", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5a9b5e3fe8d0ccacb30649543d41c50fad", null ],
+      [ "ADVFCACHE_NOHANDLER", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5a047a7216e8fcf84c87181dbce5fe6407", null ],
+      [ "ADVFCACHE_FORCEBUILTIN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5a348d0fceac841ef4338a10c55dd7c4ca", null ],
+      [ "ADVFCACHE_ONSAVE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a0d2605bed749baedba3528aaab3bc8b5.html#a0d2605bed749baedba3528aaab3bc8b5a01cd397d8c5373a350316014845a4ae1", null ]
+    ] ],
+    [ "CALLCONV", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372dea", [
+      [ "CC_CDECL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa87f0fdd6abb5407d654b10d0da2efe17", null ],
+      [ "CC_MSCPASCAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaae392c5d67255b031c8f71dcf290723c2", null ],
+      [ "CC_PASCAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa263315d12f9c65e88abebc56382fb616", null ],
+      [ "CC_MACPASCAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaaf9763abcd627d10d799713d2654d129c", null ],
+      [ "CC_STDCALL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa6a7e39c6fb013b065cfb1d24a9b96d80", null ],
+      [ "CC_RESERVED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa14cd775f190f0fd048a6b6e384c622d6", null ],
+      [ "CC_SYSCALL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa81d638c0a1527b95232fe485caf49271", null ],
+      [ "CC_MPWCDECL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa26b6d5dd958e40840addabab2ce21f2c", null ],
+      [ "CC_MPWPASCAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaa62ce9f16880cd337c845917168b06eb3", null ],
+      [ "CC_MAX", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a61ebca27e1566a190a7db6d31e372dea.html#a61ebca27e1566a190a7db6d31e372deaaa2d7dbb7fab55e791b72d2f9bb190dc2", null ]
+    ] ],
+    [ "DATADIR", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a85851d690ff0fffef30d4a59f62580ba.html#a85851d690ff0fffef30d4a59f62580ba", [
+      [ "DATADIR_GET", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a85851d690ff0fffef30d4a59f62580ba.html#a85851d690ff0fffef30d4a59f62580baa5f0b161afde241a0ce36d557f2aab7be", null ],
+      [ "DATADIR_SET", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a85851d690ff0fffef30d4a59f62580ba.html#a85851d690ff0fffef30d4a59f62580baaa82d02800d37884888a7b5096d5bc162", null ]
+    ] ],
+    [ "DESCKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38", [
+      [ "DESCKIND_NONE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38ad46aee7ae6c1f11b9dcbac82ae25da24", null ],
+      [ "DESCKIND_FUNCDESC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38a3f78ffcc93301565ab55cd8f22d3e6a6", null ],
+      [ "DESCKIND_VARDESC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38a4b274ac01b39fa9f23ce8952379ca083", null ],
+      [ "DESCKIND_TYPECOMP", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38ae3c855ab0e7361c72030731e1bb7157d", null ],
+      [ "DESCKIND_IMPLICITAPPOBJ", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38a0e2791e31ea125c07e0f26f61961ddf9", null ],
+      [ "DESCKIND_MAX", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aee24f6978cce0d3f637db3e0dda5ac38.html#aee24f6978cce0d3f637db3e0dda5ac38a3e7d15b12e73e5d3cfebbfeb1c942c5f", null ]
+    ] ],
+    [ "DVASPECT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a6911fd7fa3ec57c69e9c32ffcca634d0.html#a6911fd7fa3ec57c69e9c32ffcca634d0", [
+      [ "DVASPECT_CONTENT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a6911fd7fa3ec57c69e9c32ffcca634d0.html#a6911fd7fa3ec57c69e9c32ffcca634d0a2fbfe177fbc3a80c0741bf06fbce789f", null ],
+      [ "DVASPECT_THUMBNAIL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a6911fd7fa3ec57c69e9c32ffcca634d0.html#a6911fd7fa3ec57c69e9c32ffcca634d0a13686d900942230bbf2da1e80bdf9e5b", null ],
+      [ "DVASPECT_ICON", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a6911fd7fa3ec57c69e9c32ffcca634d0.html#a6911fd7fa3ec57c69e9c32ffcca634d0a3210c492160d110065129a2394b5149f", null ],
+      [ "DVASPECT_DOCPRINT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a6911fd7fa3ec57c69e9c32ffcca634d0.html#a6911fd7fa3ec57c69e9c32ffcca634d0a3222773e2a260f98dfcb1eb97ba24c1f", null ]
+    ] ],
+    [ "FUNCFLAGS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12", [
+      [ "FUNCFLAG_FRESTRICTED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a39405e7017a62b727be24c415066bff8", null ],
+      [ "FUNCFLAG_FSOURCE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12ac66a024dd9a7bf4ef78b5389174433d7", null ],
+      [ "FUNCFLAG_FBINDABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a8e38362a13741c1acf8bb3b8750ee1d8", null ],
+      [ "FUNCFLAG_FREQUESTEDIT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12aaf8fba5f4696414e5839cbc040c93e5b", null ],
+      [ "FUNCFLAG_FDISPLAYBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12ad22ce94202d73faaa0783b0c685f6a77", null ],
+      [ "FUNCFLAG_FDEFAULTBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a069d3511b1e06356d5e2380c538b0da7", null ],
+      [ "FUNCFLAG_FHIDDEN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a1bcc306f592615d51096cfdffb34f7a0", null ],
+      [ "FUNCFLAG_FUSESGETLASTERROR", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12acd7909b6efb994c6b17a952af8474a28", null ],
+      [ "FUNCFLAG_FDEFAULTCOLLELEM", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12abcedaedb155055a85e9581310eaa27c7", null ],
+      [ "FUNCFLAG_FUIDEFAULT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a45e6cc7bc6d9f1dd9dcf36a490710814", null ],
+      [ "FUNCFLAG_FNONBROWSABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12a52179f254033f5f5ce49b953cac12ab5", null ],
+      [ "FUNCFLAG_FREPLACEABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12ab61d45d391dfbcbc61d167e4f5f50feb", null ],
+      [ "FUNCFLAG_FIMMEDIATEBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab14873f60c0a496447c84b6781a37d12.html#ab14873f60c0a496447c84b6781a37d12abfdbb780dc2606717ec2d543aa231fe8", null ]
+    ] ],
+    [ "FUNCKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316d", [
+      [ "FUNC_VIRTUAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316da28bef9b90ab8da051a1b05be5bf58fb2", null ],
+      [ "FUNC_PUREVIRTUAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316da2caa056a94048ab4f012fe1e98e71783", null ],
+      [ "FUNC_NONVIRTUAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316dab5f335ef781584b3521ada36acad74db", null ],
+      [ "FUNC_STATIC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316da26b165754abfe855fe4c767261dc9a79", null ],
+      [ "FUNC_DISPATCH", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a436f22b3ab36a3f672cc1eecbf55316d.html#a436f22b3ab36a3f672cc1eecbf55316daa673b215086e0f243d5176480437f63c", null ]
+    ] ],
+    [ "IDLFLAG", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1", [
+      [ "IDLFLAG_NONE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1af73109f7a995d0b3290cf5a6c5578ee6", null ],
+      [ "IDLFLAG_FIN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1a52dd63449bd999e3703c77bde673c238", null ],
+      [ "IDLFLAG_FOUT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1a41912567a3f938f70eab27a661d74827", null ],
+      [ "IDLFLAG_FLCID", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1ad2524813b5dc8b9a1ed3d7d3106ad491", null ],
+      [ "IDLFLAG_FRETVAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_af4337e55fe3e7e4b64e3d1424f6fcde1.html#af4337e55fe3e7e4b64e3d1424f6fcde1ad951492f15d0f7eb53dc8b66518fcd46", null ]
+    ] ],
+    [ "IMPLTYPEFLAGS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aba050244fe5aedc717a7bfd7deee6c68.html#aba050244fe5aedc717a7bfd7deee6c68", [
+      [ "IMPLTYPEFLAG_FDEFAULT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aba050244fe5aedc717a7bfd7deee6c68.html#aba050244fe5aedc717a7bfd7deee6c68a2ad6523a8cf79c5b7b6022aae66034d7", null ],
+      [ "IMPLTYPEFLAG_FSOURCE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aba050244fe5aedc717a7bfd7deee6c68.html#aba050244fe5aedc717a7bfd7deee6c68a728f6c5b51470368d881f392bb36f6f0", null ],
+      [ "IMPLTYPEFLAG_FRESTRICTED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aba050244fe5aedc717a7bfd7deee6c68.html#aba050244fe5aedc717a7bfd7deee6c68a88aa9b006e202537ae9f701a87c80dcb", null ],
+      [ "IMPLTYPEFLAG_FDEFAULTVTABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_aba050244fe5aedc717a7bfd7deee6c68.html#aba050244fe5aedc717a7bfd7deee6c68a0598777f99e696de01388073d84b907d", null ]
+    ] ],
+    [ "INVOKEKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a2115aec5687121ed6bd9ae89b94b42c2.html#a2115aec5687121ed6bd9ae89b94b42c2", [
+      [ "INVOKE_FUNC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a2115aec5687121ed6bd9ae89b94b42c2.html#a2115aec5687121ed6bd9ae89b94b42c2ab0798336fe312c43f515743dc29d38f0", null ],
+      [ "INVOKE_PROPERTYGET", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a2115aec5687121ed6bd9ae89b94b42c2.html#a2115aec5687121ed6bd9ae89b94b42c2ac71321472a3ab922d274932dd9ec97ed", null ],
+      [ "INVOKE_PROPERTYPUT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a2115aec5687121ed6bd9ae89b94b42c2.html#a2115aec5687121ed6bd9ae89b94b42c2a1ceb183543204b005c08e2a099f4f07b", null ],
+      [ "INVOKE_PROPERTYPUTREF", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a2115aec5687121ed6bd9ae89b94b42c2.html#a2115aec5687121ed6bd9ae89b94b42c2a3b11b98a7b3be33721c61d44b90e5ef9", null ]
+    ] ],
+    [ "LIBFLAGS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ae2f6a7f18a137955cd4641b2f1056b96.html#ae2f6a7f18a137955cd4641b2f1056b96", [
+      [ "LIBFLAG_FRESTRICTED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ae2f6a7f18a137955cd4641b2f1056b96.html#ae2f6a7f18a137955cd4641b2f1056b96adc9924f170d9b1bb4bf249d59620ba15", null ],
+      [ "LIBFLAG_FCONTROL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ae2f6a7f18a137955cd4641b2f1056b96.html#ae2f6a7f18a137955cd4641b2f1056b96a273e0ca49303e9a4791f287356d50b06", null ],
+      [ "LIBFLAG_FHIDDEN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ae2f6a7f18a137955cd4641b2f1056b96.html#ae2f6a7f18a137955cd4641b2f1056b96a7c163f56918e43d6e0992d44cc34de4e", null ],
+      [ "LIBFLAG_FHASDISKIMAGE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ae2f6a7f18a137955cd4641b2f1056b96.html#ae2f6a7f18a137955cd4641b2f1056b96a266841efe16953ac578d7330dfe81fe5", null ]
+    ] ],
+    [ "PARAMFLAG", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470e", [
+      [ "PARAMFLAG_NONE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470eaebdc55c04c4b7493de5b33c652203f5a", null ],
+      [ "PARAMFLAG_FIN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ea5f435e1b7eb4d076f29a74af1abf3d74", null ],
+      [ "PARAMFLAG_FOUT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ead8c53742f6bf73f3211924c03a57f450", null ],
+      [ "PARAMFLAG_FLCID", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ea87e18249ccfc9263985136b9c25a164c", null ],
+      [ "PARAMFLAG_FRETVAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ea7395c80f7e3d67d8f985fa9fb312782b", null ],
+      [ "PARAMFLAG_FOPT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470eac2b532650c1e3a06e1a3441482c01177", null ],
+      [ "PARAMFLAG_FHASDEFAULT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ea091b345599134f80d410a0368ae7fe03", null ],
+      [ "PARAMFLAG_FHASCUSTDATA", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a4a8d1056afb371de71b70a6a1bb7470e.html#a4a8d1056afb371de71b70a6a1bb7470ea02ad5dedcde2387cfb56b1c3c1d2b409", null ]
+    ] ],
+    [ "SYSKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad93650bae66983b7f7f18f4cfa6ffa3d.html#ad93650bae66983b7f7f18f4cfa6ffa3d", [
+      [ "SYS_WIN16", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad93650bae66983b7f7f18f4cfa6ffa3d.html#ad93650bae66983b7f7f18f4cfa6ffa3daeaeb0f775bacd5440dc924f4e10bbebc", null ],
+      [ "SYS_WIN32", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad93650bae66983b7f7f18f4cfa6ffa3d.html#ad93650bae66983b7f7f18f4cfa6ffa3dabe13f40f5539937d406dfcb6207b58d4", null ],
+      [ "SYS_MAC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad93650bae66983b7f7f18f4cfa6ffa3d.html#ad93650bae66983b7f7f18f4cfa6ffa3daed696a8b1813bf5e11dd9f22fdeb98b4", null ],
+      [ "SYS_WIN64", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad93650bae66983b7f7f18f4cfa6ffa3d.html#ad93650bae66983b7f7f18f4cfa6ffa3dad12a5c249af7dfc547efad27337afaf9", null ]
+    ] ],
+    [ "TYMED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5ba", [
+      [ "TYMED_HGLOBAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa825f116ce65c7a779ac8d444fba59089", null ],
+      [ "TYMED_FILE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa24895f8bb40d8b3453ca2eb6aed4bcef", null ],
+      [ "TYMED_ISTREAM", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa3e8fa091a1d13c2e8e01a66cdbfb060c", null ],
+      [ "TYMED_ISTORAGE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa449bccaafa6762297410d750477a2e4f", null ],
+      [ "TYMED_GDI", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baaefc2ac22bf2de1f05a48dc4d67ed1aa1", null ],
+      [ "TYMED_MFPICT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baafe7005fd5a60ee7c2598f0a540ea3e3d", null ],
+      [ "TYMED_ENHMF", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa87556bbba6d0d2a39f5b3c983c808847", null ],
+      [ "TYMED_NULL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ab7bf4d7c2fabf66d217736c3b419a5ba.html#ab7bf4d7c2fabf66d217736c3b419a5baa5d0efa99b76e104015f72aecaafb22bc", null ]
+    ] ],
+    [ "TYPEFLAGS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9f", [
+      [ "TYPEFLAG_FAPPOBJECT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fafa33bcc1c00fc7f40c0039e24c43966d", null ],
+      [ "TYPEFLAG_FCANCREATE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa7b3a302d369bace867c8c9d89c791351", null ],
+      [ "TYPEFLAG_FLICENSED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa5b9cf0a5732d7b110866821adf3dab17", null ],
+      [ "TYPEFLAG_FPREDECLID", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa5181c7562b71a635e0e43b1be827a26b", null ],
+      [ "TYPEFLAG_FHIDDEN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9faafd290329567381c11fa91b3bcf16ca0", null ],
+      [ "TYPEFLAG_FCONTROL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9faf5fb2dfb864c1e725844b4eb12a7879a", null ],
+      [ "TYPEFLAG_FDUAL", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa80279cfce866a1af568e779b70565e46", null ],
+      [ "TYPEFLAG_FNONEXTENSIBLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa6d59c0f2e95e4ad3d28dd36e548fa82b", null ],
+      [ "TYPEFLAG_FOLEAUTOMATION", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa7ee772c37f973ecd50e8886c8f067575", null ],
+      [ "TYPEFLAG_FRESTRICTED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fac1abc1d86322361f05f6c1f474469bcd", null ],
+      [ "TYPEFLAG_FAGGREGATABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9faab40eaa0dd6df1b4f09abe75f947e0a3", null ],
+      [ "TYPEFLAG_FREPLACEABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fa5d0130f06818208c750eb088ce742310", null ],
+      [ "TYPEFLAG_FDISPATCHABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fafb45503f63b19ed9352c8f01ceac6868", null ],
+      [ "TYPEFLAG_FREVERSEBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9fafc3bc5cc320dbc7fc9793dd71ccde6c5", null ],
+      [ "TYPEFLAG_FPROXY", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7b70c596694ab30bedb14325d8492f9f.html#a7b70c596694ab30bedb14325d8492f9faf72d5f3a2a42071b67de6a5e2eb99301", null ]
+    ] ],
+    [ "TYPEKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65df", [
+      [ "TKIND_ENUM", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfaa9b388cd050ced8ba749c19713ad1688", null ],
+      [ "TKIND_RECORD", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfacc9b820fbd1ffa6a2118929a6ae7a6bf", null ],
+      [ "TKIND_MODULE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa6edd4a564d1c4e5c8153345f6618e77c", null ],
+      [ "TKIND_INTERFACE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa610c513a941c6111524f6f013a6e02d7", null ],
+      [ "TKIND_DISPATCH", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa4d0f955c5c255a51ba89fdcb21c68889", null ],
+      [ "TKIND_COCLASS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa6615780121083aa1aad0a4875b4c6228", null ],
+      [ "TKIND_ALIAS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa0b26adf8a44997e50371f56a87c1027f", null ],
+      [ "TKIND_UNION", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfaf3ed2a7c32b2a27db15c129a1020e122", null ],
+      [ "TKIND_MAX", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a677020fa202c03499d79e298f2ad65df.html#a677020fa202c03499d79e298f2ad65dfa4fa61c6fa9e12bb4b7294aa6866f7324", null ]
+    ] ],
+    [ "VARFLAGS", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cade", [
+      [ "VARFLAG_FREADONLY", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea37a3797d14b6cee1df5aad5676e64312", null ],
+      [ "VARFLAG_FSOURCE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadeacf8fb499ef23874fd0abf887b036df67", null ],
+      [ "VARFLAG_FBINDABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea276994aa24c249afd8d106909a101bb0", null ],
+      [ "VARFLAG_FREQUESTEDIT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea0008ce2227136d77ff15600ea683cffe", null ],
+      [ "VARFLAG_FDISPLAYBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea7d12475cc154607958644c2a4197fed9", null ],
+      [ "VARFLAG_FDEFAULTBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadeaeae4fecdad453bbfbf7c13dd56b819d3", null ],
+      [ "VARFLAG_FHIDDEN", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea38fb2995c4fd7f5154a2ead5d1288677", null ],
+      [ "VARFLAG_FRESTRICTED", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadeaf334ac682fce558c0e23020e23ceacf8", null ],
+      [ "VARFLAG_FDEFAULTCOLLELEM", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea1de982722a6a57e43adda5ff489956d8", null ],
+      [ "VARFLAG_FUIDEFAULT", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadeaafe71ac155f47d499b6ae0d302bfd250", null ],
+      [ "VARFLAG_FNONBROWSABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadeac1d64201e6634423c01b9610c5a9512b", null ],
+      [ "VARFLAG_FREPLACEABLE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea3bd5a1b7e04487ca3c7422f3c3ecadbb", null ],
+      [ "VARFLAG_FIMMEDIATEBIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_a7be7ede17fdc98d4cc923d592118cade.html#a7be7ede17fdc98d4cc923d592118cadea62f63fa34062a12755227cc5803eec1b", null ]
+    ] ],
+    [ "VARKIND", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222d", [
+      [ "VAR_PERINSTANCE", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222dadf6442b2f25de7b7d4521a1841245d03", null ],
+      [ "VAR_STATIC", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222da5367d5362665ade92dc5174ea65c71af", null ],
+      [ "VAR_CONST", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222dad5cec632d154b6dc7bffca1b89471376", null ],
+      [ "VAR_DISPATCH", "d6/dfa/namespaceSystem_1_1Runtime_1_1InteropServices_1_1ComTypes_ad5c9b4b9a03fae204eea91ed6b00222d.html#ad5c9b4b9a03fae204eea91ed6b00222dacb4edde8a65cbaeffa6e3b3a13bd7265", null ]
+    ] ]
+];

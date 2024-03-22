@@ -1,0 +1,25 @@
+var classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel =
+[
+    [ "UnboundedChannelReader", "db/d7a/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_1_1UnboundedChannelReader.html", "db/d7a/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_1_1UnboundedChannelReader" ],
+    [ "UnboundedChannelWriter", "dd/d50/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_1_1UnboundedChannelWriter.html", "dd/d50/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_1_1UnboundedChannelWriter" ],
+    [ "SingleConsumerUnboundedChannel", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_ae6f7e9bab4002772a3da2363d4af8700.html#ae6f7e9bab4002772a3da2363d4af8700", null ],
+    [ "CreateBounded< T >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#aa19980042f88aa41d4d9b2527cf89121", null ],
+    [ "CreateBounded< T >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#ada6ced0a178eb682432ce464116d7a6a", null ],
+    [ "CreateBounded< T >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#ab1193659b0d700f61427606f03ae70e1", null ],
+    [ "CreateUnbounded< T >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#a77124462a6822a7802b59230343ea7e6", null ],
+    [ "CreateUnbounded< T >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#a88bd56b279202f8be8606fddc35c859d", null ],
+    [ "GetEnumerator", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a0c5d1e7a1dcce5bf88eb35c94ff6fc40.html#a0c5d1e7a1dcce5bf88eb35c94ff6fc40", null ],
+    [ "operator ChannelReader< TRead >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#aecb76a22ac800db680d7739b44b7ec5c", null ],
+    [ "operator ChannelWriter< TWrite >", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#ae115712fa8f9f72f4de207673615ec75", null ],
+    [ "_blockedReader", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a5eeba828181fc31ae4fd8b9031c3adf2.html#a5eeba828181fc31ae4fd8b9031c3adf2", null ],
+    [ "_completion", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a2bd48d2fa861305af6e8f30edad13ca8.html#a2bd48d2fa861305af6e8f30edad13ca8", null ],
+    [ "_doneWriting", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a334956f4c1e061c8f65b5f016f1f130a.html#a334956f4c1e061c8f65b5f016f1f130a", null ],
+    [ "_items", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a048dd315ab8b965a8f63827516738108.html#a048dd315ab8b965a8f63827516738108", null ],
+    [ "_runContinuationsAsynchronously", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a56ed7eb4681c2b9f7b696b139e634eb7.html#a56ed7eb4681c2b9f7b696b139e634eb7", null ],
+    [ "_waitingReader", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a7f07198fee1f3f08c07785a67f9c008f.html#a7f07198fee1f3f08c07785a67f9c008f", null ],
+    [ "ChannelIsClosedForDebugger", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_aa118aba6e9c4fa091a07ad9ce38a4086.html#aa118aba6e9c4fa091a07ad9ce38a4086", null ],
+    [ "ItemsCountForDebugger", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a49859ea11f90633f099d95175548fca1.html#a49859ea11f90633f099d95175548fca1", null ],
+    [ "Reader", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#ac672c132f4f1559a04fca43525c64ede", null ],
+    [ "SyncObj", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel_a0b66ca3395d8ad3ec40e0d1cfb3740a4.html#a0b66ca3395d8ad3ec40e0d1cfb3740a4", null ],
+    [ "Writer", "d7/d7f/classSystem_1_1Threading_1_1Channels_1_1SingleConsumerUnboundedChannel.html#a34415d7e8c900131f7533d091671f607", null ]
+];

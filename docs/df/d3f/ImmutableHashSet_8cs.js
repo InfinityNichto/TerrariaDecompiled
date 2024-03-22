@@ -1,0 +1,16 @@
+var ImmutableHashSet_8cs =
+[
+    [ "System.Collections.Immutable.ImmutableHashSet< T >", "d0/de1/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet.html", "d0/de1/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.HashBucketByValueEqualityComparer", "d6/db0/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucketByValueEqualityComparer.html", "d6/db0/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucketByValueEqualityComparer" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.HashBucketByRefEqualityComparer", "da/d55/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucketByRefEqualityComparer.html", "da/d55/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucketByRefEqualityComparer" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.Builder", "d6/de2/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1Builder.html", "d6/de2/classSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1Builder" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.Enumerator", "d6/d19/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1Enumerator.html", "d6/d19/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1Enumerator" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.HashBucket", "d7/d8f/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucket.html", "d7/d8f/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucket" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.HashBucket.Enumerator", "d5/d37/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucket_1_1Enumerator.html", "d5/d37/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1HashBucket_1_1Enumerator" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.MutationInput", "db/d84/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1MutationInput.html", "db/d84/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1MutationInput" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.MutationResult", "de/d76/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1MutationResult.html", "de/d76/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1MutationResult" ],
+    [ "System.Collections.Immutable.ImmutableHashSet< T >.NodeEnumerable", "d1/d82/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1NodeEnumerable.html", "d1/d82/structSystem_1_1Collections_1_1Immutable_1_1ImmutableHashSet_1_1NodeEnumerable" ],
+    [ "CountType", "df/d3f/ImmutableHashSet_8cs_af53b222694e0d9e447c782a9361edfbd.html#af53b222694e0d9e447c782a9361edfbd", null ],
+    [ "OperationResult", "df/d3f/ImmutableHashSet_8cs_a426c1d4d4666d19cd70d2668961bf83d.html#a426c1d4d4666d19cd70d2668961bf83d", null ],
+    [ "Position", "df/d3f/ImmutableHashSet_8cs_ab91b34ae619fcdfcba4522b4f335bf83.html#ab91b34ae619fcdfcba4522b4f335bf83", null ]
+];

@@ -1,0 +1,4 @@
+var structSystem_1_1Runtime_1_1InteropServices_1_1ComWrappers_1_1ComInterfaceDispatch_1_1ComInterfaceInstance =
+[
+    [ "GcHandle", "da/d64/structSystem_1_1Runtime_1_1InteropServices_1_1ComWrappers_1_1ComInterfaceDispatch_1_1ComInterfaceInstance_ae5654835b7a09d57eee9770031cf8c9f.html#ae5654835b7a09d57eee9770031cf8c9f", null ]
+];

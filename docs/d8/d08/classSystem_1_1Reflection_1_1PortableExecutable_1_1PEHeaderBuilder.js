@@ -1,0 +1,27 @@
+var classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder =
+[
+    [ "PEHeaderBuilder", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a6381c824419f1b4f5133df2959b779db.html#a6381c824419f1b4f5133df2959b779db", null ],
+    [ "ComputeSizeOfPEHeaders", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a6ff8594ca3fac281a597439be3dcfc49.html#a6ff8594ca3fac281a597439be3dcfc49", null ],
+    [ "CreateExecutableHeader", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a0b8c2b10b24b38d353c1270efe143dd6.html#a0b8c2b10b24b38d353c1270efe143dd6", null ],
+    [ "CreateLibraryHeader", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_adc9c6731cd074e580fb6d278745e35fc.html#adc9c6731cd074e580fb6d278745e35fc", null ],
+    [ "DllCharacteristics", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a0d83eb3ae450a3168d693c10661d4cf5.html#a0d83eb3ae450a3168d693c10661d4cf5", null ],
+    [ "FileAlignment", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a4a6dd90620fa98e57d42f9679b0822d7.html#a4a6dd90620fa98e57d42f9679b0822d7", null ],
+    [ "ImageBase", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_ac71a26071904b6f4125dc56643b68012.html#ac71a26071904b6f4125dc56643b68012", null ],
+    [ "ImageCharacteristics", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a2b8056ba26a5a4783985f5890b11e342.html#a2b8056ba26a5a4783985f5890b11e342", null ],
+    [ "Is32Bit", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a58bc92ec2fa6dcea01ebbb251843ea2d.html#a58bc92ec2fa6dcea01ebbb251843ea2d", null ],
+    [ "Machine", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a2c931fed6091c04233a60e5019332b4d.html#a2c931fed6091c04233a60e5019332b4d", null ],
+    [ "MajorImageVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a94a6230d4265b1b32d76c78df02dc476.html#a94a6230d4265b1b32d76c78df02dc476", null ],
+    [ "MajorLinkerVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a11b02062c386ac0040394b267dd410a9.html#a11b02062c386ac0040394b267dd410a9", null ],
+    [ "MajorOperatingSystemVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_ada6c1fdfb6d65373042de400e9ae3a79.html#ada6c1fdfb6d65373042de400e9ae3a79", null ],
+    [ "MajorSubsystemVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_ac4dbb2a3987e652fbf2cffc9d53c32b3.html#ac4dbb2a3987e652fbf2cffc9d53c32b3", null ],
+    [ "MinorImageVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_abb03ea8138824b2334b112eea1b768b4.html#abb03ea8138824b2334b112eea1b768b4", null ],
+    [ "MinorLinkerVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a790f3c96aaaea90688e1ba8ecad1ac1b.html#a790f3c96aaaea90688e1ba8ecad1ac1b", null ],
+    [ "MinorOperatingSystemVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a06969c391b2754d5d26c72912bb253a1.html#a06969c391b2754d5d26c72912bb253a1", null ],
+    [ "MinorSubsystemVersion", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a821568c37a964df311ee83d3f95d610b.html#a821568c37a964df311ee83d3f95d610b", null ],
+    [ "SectionAlignment", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a825c9893edd08ceb1f118d5264b3ff0b.html#a825c9893edd08ceb1f118d5264b3ff0b", null ],
+    [ "SizeOfHeapCommit", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a3aa614e2a7bbc3e86e8c6393a8cd990b.html#a3aa614e2a7bbc3e86e8c6393a8cd990b", null ],
+    [ "SizeOfHeapReserve", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a752c5322083cf96c8618ca03f8ecaa4b.html#a752c5322083cf96c8618ca03f8ecaa4b", null ],
+    [ "SizeOfStackCommit", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a50ce244e94ea8fe945fe8322d8e78e74.html#a50ce244e94ea8fe945fe8322d8e78e74", null ],
+    [ "SizeOfStackReserve", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a245fe0f6d94011a597a0340f0cbd9689.html#a245fe0f6d94011a597a0340f0cbd9689", null ],
+    [ "Subsystem", "d8/d08/classSystem_1_1Reflection_1_1PortableExecutable_1_1PEHeaderBuilder_a3b7ab863d301ae20e9c08c2cf9232ce1.html#a3b7ab863d301ae20e9c08c2cf9232ce1", null ]
+];

@@ -1,0 +1,12 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator =
+[
+    [ "NullableIntAverageAggregationOperatorEnumerator", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator_a83103bffbba3c7a60465628b99ac5a2b.html#a83103bffbba3c7a60465628b99ac5a2b", null ],
+    [ "Dispose", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator_a3c26c61bf6aa66ddee846f1ad78dd42a.html#a3c26c61bf6aa66ddee846f1ad78dd42a", null ],
+    [ "MoveNext", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator_a94830d020c98598bd16e964fb380bcb4.html#a94830d020c98598bd16e964fb380bcb4", null ],
+    [ "_cancellationToken", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_source", "db/dc9/classSystem_1_1Linq_1_1Parallel_1_1NullableIntAverageAggregationOperator_1_1NullableIntAverageAggregationOperatorEnumerator_ac4102a43521fd4c4a9c0fd1e1f513aea.html#ac4102a43521fd4c4a9c0fd1e1f513aea", null ]
+];

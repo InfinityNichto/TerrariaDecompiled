@@ -1,0 +1,35 @@
+var structInterop_1_1SspiCli_1_1SCH__CREDENTIALS =
+[
+    [ "Flags", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117", [
+      [ "Zero", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117ad7ed4ee1df437474d005188535f74875", null ],
+      [ "SCH_CRED_NO_SYSTEM_MAPPER", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a71bbcadf0405c7d9b36d8eb0d0523cc4", null ],
+      [ "SCH_CRED_NO_SERVERNAME_CHECK", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a95d4ec288ad6f44180f5f2a455fb4140", null ],
+      [ "SCH_CRED_MANUAL_CRED_VALIDATION", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117aa33d6695233620cad813a86158bac887", null ],
+      [ "SCH_CRED_NO_DEFAULT_CREDS", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a0b494c2221be66b33c698c368c0786ef", null ],
+      [ "SCH_CRED_AUTO_CRED_VALIDATION", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117aaa3cc9562f753740284ba5d7851517b0", null ],
+      [ "SCH_CRED_USE_DEFAULT_CREDS", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a48d934df8056937016f528e4b41cd4f7", null ],
+      [ "SCH_DISABLE_RECONNECTS", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a87d067fc563d8de11fd3ec8c86051b5a", null ],
+      [ "SCH_CRED_REVOCATION_CHECK_END_CERT", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a86f200270c997acf1b7e8f26573b7e4e", null ],
+      [ "SCH_CRED_REVOCATION_CHECK_CHAIN", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a45dd9d3b9e302e8b348765a82bab7d9a", null ],
+      [ "SCH_CRED_REVOCATION_CHECK_CHAIN_EXCLUDE_ROOT", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a9b682964ff6d57069a880e903f883308", null ],
+      [ "SCH_CRED_IGNORE_NO_REVOCATION_CHECK", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117ae7ed46ba120ce252f3cf9c9d58a33007", null ],
+      [ "SCH_CRED_IGNORE_REVOCATION_OFFLINE", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a09a87b6895b70f5200298d6c2003f114", null ],
+      [ "SCH_CRED_CACHE_ONLY_URL_RETRIEVAL_ON_CREATE", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a578994a3a49b7ee64e1e6fe9b061ba84", null ],
+      [ "SCH_SEND_ROOT_CERT", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a8387bbffad409fee566221baeff181be", null ],
+      [ "SCH_SEND_AUX_RECORD", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a0f84553c53ec3827f1e5645cb8f3b509", null ],
+      [ "SCH_USE_STRONG_CRYPTO", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117aa7307237a1f16273d9af377528c2379d", null ],
+      [ "SCH_USE_PRESHAREDKEY_ONLY", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a9f991bc83351626e71a4e968ab104765", null ],
+      [ "SCH_ALLOW_NULL_ENCRYPTION", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_aede85e440987da75f87f07b1aa7d5117.html#aede85e440987da75f87f07b1aa7d5117a327924d966c1b0b840b95d21c02fd642", null ]
+    ] ],
+    [ "aphMappers", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_af2da6bcecfe1f81b50d7d65baaadd158.html#af2da6bcecfe1f81b50d7d65baaadd158", null ],
+    [ "cCreds", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a7adb9eaab62049fcd91f2c2bda11fea0.html#a7adb9eaab62049fcd91f2c2bda11fea0", null ],
+    [ "cMappers", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a3d7f3a9b1472926cb22460f9c4bb181d.html#a3d7f3a9b1472926cb22460f9c4bb181d", null ],
+    [ "cTlsParameters", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_ae89f978792136516899840f2994eeac7.html#ae89f978792136516899840f2994eeac7", null ],
+    [ "dwCredformat", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a0d86ba923a294418035d35fa6577a092.html#a0d86ba923a294418035d35fa6577a092", null ],
+    [ "dwFlags", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_ad9ff49140641fd90a5a43240fcdfd52e.html#ad9ff49140641fd90a5a43240fcdfd52e", null ],
+    [ "dwSessionLifespan", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a2b3af9510a63e8a9edc95bdc0049149f.html#a2b3af9510a63e8a9edc95bdc0049149f", null ],
+    [ "dwVersion", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_ab0bf8b9c5a4e0cbbcd823fa61f219947.html#ab0bf8b9c5a4e0cbbcd823fa61f219947", null ],
+    [ "hRootStore", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a9220193179c1766e037815acf67aff2f.html#a9220193179c1766e037815acf67aff2f", null ],
+    [ "paCred", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a7824377e49bdb8e64b5e19e92d18e80d.html#a7824377e49bdb8e64b5e19e92d18e80d", null ],
+    [ "pTlsParameters", "d8/d59/structInterop_1_1SspiCli_1_1SCH__CREDENTIALS_a6a71dc494096a4236b723b1503196534.html#a6a71dc494096a4236b723b1503196534", null ]
+];

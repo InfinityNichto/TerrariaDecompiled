@@ -1,0 +1,12 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator =
+[
+    [ "NullableFloatAverageAggregationOperatorEnumerator", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator_afeecad03ff124f179c3515b57c985b76.html#afeecad03ff124f179c3515b57c985b76", null ],
+    [ "Dispose", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator_afbccb5db8a2890b0a0900d28d7f50940.html#afbccb5db8a2890b0a0900d28d7f50940", null ],
+    [ "MoveNext", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator_a8a967ade6e7331a30b735ec6a0802e77.html#a8a967ade6e7331a30b735ec6a0802e77", null ],
+    [ "_cancellationToken", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_source", "d3/d51/classSystem_1_1Linq_1_1Parallel_1_1NullableFloatAverageAggregationOperator_1_1NullableFloatAverageAggregationOperatorEnumerator_a8516233c4f2cb059592d8ee6267becf5.html#a8516233c4f2cb059592d8ee6267becf5", null ]
+];

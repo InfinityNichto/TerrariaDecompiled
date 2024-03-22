@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C616333028459a2877c128d2fbecc3d4c =
+[
+    [ "ErrorCode", "dc/de5/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C616333028459a2877c128d2fbecc3d4c_a3d4ae35d3b6f294feca46ab1cde94812.html#a3d4ae35d3b6f294feca46ab1cde94812", null ]
+];

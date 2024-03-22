@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['microsoft_0',['Microsoft',['../d2/df0/namespaceMicrosoft.html',1,'']]],
+  ['microsoft_3a_3acodeanalysis_1',['CodeAnalysis',['../d7/d41/namespaceMicrosoft_1_1CodeAnalysis.html',1,'Microsoft']]],
+  ['microsoft_3a_3aextensions_2',['Extensions',['../dc/d61/namespaceMicrosoft_1_1Extensions.html',1,'Microsoft']]],
+  ['microsoft_3a_3aextensions_3a_3ainternal_3',['Internal',['../db/dd8/namespaceMicrosoft_1_1Extensions_1_1Internal.html',1,'Microsoft::Extensions']]],
+  ['microsoft_3a_3awin32_4',['Win32',['../da/d37/namespaceMicrosoft_1_1Win32.html',1,'Microsoft']]],
+  ['microsoft_3a_3awin32_3a_3asafehandles_5',['SafeHandles',['../d4/d67/namespaceMicrosoft_1_1Win32_1_1SafeHandles.html',1,'Microsoft::Win32']]],
+  ['microsoft_3a_3axna_6',['Xna',['../d2/d63/namespaceMicrosoft_1_1Xna.html',1,'Microsoft']]],
+  ['microsoft_3a_3axna_3a_3aframework_7',['Framework',['../d1/dcb/namespaceMicrosoft_1_1Xna_1_1Framework.html',1,'Microsoft::Xna']]],
+  ['microsoft_3a_3axna_3a_3aframework_3a_3agraphics_8',['Graphics',['../d0/d1c/namespaceMicrosoft_1_1Xna_1_1Framework_1_1Graphics.html',1,'Microsoft::Xna::Framework']]],
+  ['ms_9',['MS',['../de/d69/namespaceMS.html',1,'']]],
+  ['ms_3a_3ainternal_10',['Internal',['../d9/d10/namespaceMS_1_1Internal.html',1,'MS']]],
+  ['ms_3a_3ainternal_3a_3axml_11',['Xml',['../d0/da1/namespaceMS_1_1Internal_1_1Xml.html',1,'MS::Internal']]],
+  ['ms_3a_3ainternal_3a_3axml_3a_3acache_12',['Cache',['../d4/dc8/namespaceMS_1_1Internal_1_1Xml_1_1Cache.html',1,'MS::Internal::Xml']]],
+  ['ms_3a_3ainternal_3a_3axml_3a_3alinq_13',['Linq',['../d1/d4a/namespaceMS_1_1Internal_1_1Xml_1_1Linq.html',1,'MS::Internal::Xml']]],
+  ['ms_3a_3ainternal_3a_3axml_3a_3alinq_3a_3acomponentmodel_14',['ComponentModel',['../d2/dc6/namespaceMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel.html',1,'MS::Internal::Xml::Linq']]],
+  ['ms_3a_3ainternal_3a_3axml_3a_3axpath_15',['XPath',['../db/d7a/namespaceMS_1_1Internal_1_1Xml_1_1XPath.html',1,'MS::Internal::Xml']]]
+];

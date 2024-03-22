@@ -1,0 +1,25 @@
+var classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics =
+[
+    [ "DefaultTtl", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a9bf5d4430256e7f04d864e5d3d7b9873.html#a9bf5d4430256e7f04d864e5d3d7b9873", null ],
+    [ "ForwardingEnabled", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a010bf46a1cb92b5b404c9ddd7051d818.html#a010bf46a1cb92b5b404c9ddd7051d818", null ],
+    [ "NumberOfInterfaces", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_aad0de1315555f7fe8b6db6170da75e37.html#aad0de1315555f7fe8b6db6170da75e37", null ],
+    [ "NumberOfIPAddresses", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_aca6a834025c0b05c95d0cb34af869043.html#aca6a834025c0b05c95d0cb34af869043", null ],
+    [ "NumberOfRoutes", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a779ee23ab9765e6cc94552be4d30f8e4.html#a779ee23ab9765e6cc94552be4d30f8e4", null ],
+    [ "OutputPacketRequests", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a57c18a94962d169e9f6fdae3d50c9835.html#a57c18a94962d169e9f6fdae3d50c9835", null ],
+    [ "OutputPacketRoutingDiscards", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a0609e5e3a3bc9883973795a491b6904c.html#a0609e5e3a3bc9883973795a491b6904c", null ],
+    [ "OutputPacketsDiscarded", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a42947cff08fbb0a48f74b49deba72e07.html#a42947cff08fbb0a48f74b49deba72e07", null ],
+    [ "OutputPacketsWithNoRoute", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a34bc008f9f27ad25aab1a9478982e240.html#a34bc008f9f27ad25aab1a9478982e240", null ],
+    [ "PacketFragmentFailures", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_ac46c7eb3fbfe24d0f33896c8ea1a4f6f.html#ac46c7eb3fbfe24d0f33896c8ea1a4f6f", null ],
+    [ "PacketReassembliesRequired", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a1a84b64759ff7841d6cd6cd840397a78.html#a1a84b64759ff7841d6cd6cd840397a78", null ],
+    [ "PacketReassemblyFailures", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a37087ea273eb4b256d986b6f4f54154e.html#a37087ea273eb4b256d986b6f4f54154e", null ],
+    [ "PacketReassemblyTimeout", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a872aed0f63d1d47d336395e86d896f3b.html#a872aed0f63d1d47d336395e86d896f3b", null ],
+    [ "PacketsFragmented", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_aee5beb703a84e366345ab25122244847.html#aee5beb703a84e366345ab25122244847", null ],
+    [ "PacketsReassembled", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a5c8754272f354b4f7c8017d87fb77fb0.html#a5c8754272f354b4f7c8017d87fb77fb0", null ],
+    [ "ReceivedPackets", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_aaff4cd0393d0971d11e6ee4c20b835c5.html#aaff4cd0393d0971d11e6ee4c20b835c5", null ],
+    [ "ReceivedPacketsDelivered", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a767ffc777509cbe8ccf1e997401d4381.html#a767ffc777509cbe8ccf1e997401d4381", null ],
+    [ "ReceivedPacketsDiscarded", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a9be7dee7b64da5ced4266c7727dfcb44.html#a9be7dee7b64da5ced4266c7727dfcb44", null ],
+    [ "ReceivedPacketsForwarded", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_acf6a48947ab43895e3081a9570ab9097.html#acf6a48947ab43895e3081a9570ab9097", null ],
+    [ "ReceivedPacketsWithAddressErrors", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_abf7c520761af84ff49c5d27f9769612d.html#abf7c520761af84ff49c5d27f9769612d", null ],
+    [ "ReceivedPacketsWithHeadersErrors", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a2d55162f88fabdc18dfecb013d091bb6.html#a2d55162f88fabdc18dfecb013d091bb6", null ],
+    [ "ReceivedPacketsWithUnknownProtocol", "da/ded/classSystem_1_1Net_1_1NetworkInformation_1_1IPGlobalStatistics_a395cebae708c73cef34bc6d24129be7f.html#a395cebae708c73cef34bc6d24129be7f", null ]
+];

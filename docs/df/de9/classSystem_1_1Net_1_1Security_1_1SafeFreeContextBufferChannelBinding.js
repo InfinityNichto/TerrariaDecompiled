@@ -1,0 +1,26 @@
+var classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding =
+[
+    [ "Close", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#aa5d1a98a1419a7bfeaf7373b86996046", null ],
+    [ "CreateEmptyHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_a16e2f520de2629d1901fdbc9c80c4396.html#a16e2f520de2629d1901fdbc9c80c4396", null ],
+    [ "DangerousAddRef", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a016e15831e479135e9927eed4afc4d6d", null ],
+    [ "DangerousGetHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a424cc281bd8123fdfb254fb943233b9f", null ],
+    [ "DangerousRelease", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a0b33a39fe618278a5098954f5689f7c1", null ],
+    [ "Dispose", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#aa6f4faab748ef89385be080c9333476a", null ],
+    [ "Dispose", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a344d136a775824ae067d8bee9b303060", null ],
+    [ "InternalRelease", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#aa85089f98aeaef674d178780f24b7f5e", null ],
+    [ "QueryContextChannelBinding", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_adb84a31d224a0efabfd2975b868e6bec.html#adb84a31d224a0efabfd2975b868e6bec", null ],
+    [ "ReleaseHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#aa0b0c5a16a6eddffe1c1db710d6ecfee", null ],
+    [ "Set", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_a587c4bc3a345d6c7798910412a0bc5b6.html#a587c4bc3a345d6c7798910412a0bc5b6", null ],
+    [ "SetHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a3fb15f153dbeb6d1885b4918eefdd25a", null ],
+    [ "SetHandleAsInvalid", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a52aa845d880e936a4f3d725864ef9d4a", null ],
+    [ "ToString", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_a29ad942ea139cae29ff5b43f1d72cdf2.html#a29ad942ea139cae29ff5b43f1d72cdf2", null ],
+    [ "_fullyInitialized", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a19664aa0b411365b153e47ca7cd2edc9", null ],
+    [ "_ownsHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#aece96629eca5c98ec8b4ec443eec813e", null ],
+    [ "_size", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_ac86e9c59c05b16f6b037dcd0ab9f7afc.html#ac86e9c59c05b16f6b037dcd0ab9f7afc", null ],
+    [ "_state", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#ab3a69aaa593e0a8456d3076ff13c22e5", null ],
+    [ "handle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a7998659110bb0dab360363c425b828f7", null ],
+    [ "IsClosed", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a993302e5d4328d7205ccd5e511abb5b5", null ],
+    [ "IsInvalid", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_a4eca893a3d8299009dff6b9e0bc5c54e.html#a4eca893a3d8299009dff6b9e0bc5c54e", null ],
+    [ "OwnsHandle", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding.html#a54e920aaac84119d574a001bfcaf60f1", null ],
+    [ "Size", "df/de9/classSystem_1_1Net_1_1Security_1_1SafeFreeContextBufferChannelBinding_a5a37ddf73d56071a06fddbc91809f3e3.html#a5a37ddf73d56071a06fddbc91809f3e3", null ]
+];

@@ -16,6 +16,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest =
     [ "CloseFilteringGrid", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest_a8547dd73078a7bcc8a15fa0d594be5d5.html#a8547dd73078a7bcc8a15fa0d594be5d5", null ],
     [ "CloseSortingGrid", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest_a46cb46557aa23a65f6234c5b2fc90f69.html#a46cb46557aa23a65f6234c5b2fc90f69", null ],
     [ "CompareTo", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d5/d13/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIBestiaryTest.html#a172ab329792a6b10d313e66ccd63f30f", null ],

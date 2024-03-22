@@ -3,6 +3,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu =
     [ "Activate", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a53dde9d58711507264436e68759382d7", null ],
     [ "Append", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "CompareTo", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "de/d39/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIEmotesMenu.html#a172ab329792a6b10d313e66ccd63f30f", null ],

@@ -1,0 +1,18 @@
+var classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64 =
+[
+    [ "BitScanForward", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64.html#aa1dd6fb9b833fd1fdf34797ecac2fc42", null ],
+    [ "BitScanReverse", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64.html#a92716b1904aa3db4f4a73f444cb34c54", null ],
+    [ "ConvertScalarToVector128Double", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a08a9398b90128b2a84937de0fe01e03a.html#a08a9398b90128b2a84937de0fe01e03a", null ],
+    [ "ConvertScalarToVector128Int64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_abf06247a7a68a09c8255e443781f95bd.html#abf06247a7a68a09c8255e443781f95bd", null ],
+    [ "ConvertScalarToVector128Single", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64.html#a261ee1c6094c56c8c6014640d5ef71e8", null ],
+    [ "ConvertScalarToVector128UInt64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a8aba73638423ed84b720f58f99c488de.html#a8aba73638423ed84b720f58f99c488de", null ],
+    [ "ConvertToInt64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a375df5c452667a56ac98c4d1e294c593.html#a375df5c452667a56ac98c4d1e294c593", null ],
+    [ "ConvertToInt64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64.html#ae38385fc7c02d6f50a1e6561eeb994d8", null ],
+    [ "ConvertToInt64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a8d90ad0503db80e43a1f8fca2af3b36d.html#a8d90ad0503db80e43a1f8fca2af3b36d", null ],
+    [ "ConvertToInt64WithTruncation", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_aad36b46bc96afc4ba876e79bcc637408.html#aad36b46bc96afc4ba876e79bcc637408", null ],
+    [ "ConvertToInt64WithTruncation", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64.html#a1a69497534f50d8e920a0f024ed2f2eb", null ],
+    [ "ConvertToUInt64", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a8b4c4585db2cfba975c9545595abe7fd.html#a8b4c4585db2cfba975c9545595abe7fd", null ],
+    [ "StoreNonTemporal", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_aba2adc3608960db73966e44b5d8e2d97.html#aba2adc3608960db73966e44b5d8e2d97", null ],
+    [ "StoreNonTemporal", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a493b5601b0628a220f7528b104bfc5c9.html#a493b5601b0628a220f7528b104bfc5c9", null ],
+    [ "IsSupported", "df/d14/classSystem_1_1Runtime_1_1Intrinsics_1_1X86_1_1Sse2_1_1X64_a24c6184420271ec7af04bebca7753c23.html#a24c6184420271ec7af04bebca7753c23", null ]
+];

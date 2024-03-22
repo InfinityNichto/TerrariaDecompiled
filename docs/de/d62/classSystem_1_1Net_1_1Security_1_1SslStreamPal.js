@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1Security_1_1SslStreamPal =
+[
+    [ "AcceptSecurityContext", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a491298e7231cf8b22cd149bd78df9053.html#a491298e7231cf8b22cd149bd78df9053", null ],
+    [ "AcquireCredentialsHandle", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_afb6c9bc9627525f225f6cfe3ce88f899.html#afb6c9bc9627525f225f6cfe3ce88f899", null ],
+    [ "AcquireCredentialsHandle", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a9af0ab0553ca7c66c669b9fde45f9de5.html#a9af0ab0553ca7c66c669b9fde45f9de5", null ],
+    [ "AcquireCredentialsHandle", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a29c0ecac17a060f4c2a0f826b7ba56c1.html#a29c0ecac17a060f4c2a0f826b7ba56c1", null ],
+    [ "AcquireCredentialsHandleSchannelCred", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a5edda58f1e9eb3ca4d53f1437ee1945c.html#a5edda58f1e9eb3ca4d53f1437ee1945c", null ],
+    [ "AcquireCredentialsHandleSchCredentials", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a53690627cf74557ff575635f25382127.html#a53690627cf74557ff575635f25382127", null ],
+    [ "ApplyAlertToken", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a2e88da37b0e7749df88c4ec87e08c97c.html#a2e88da37b0e7749df88c4ec87e08c97c", null ],
+    [ "ApplyShutdownToken", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a3743f649bbe859377cacf45d324443d5.html#a3743f649bbe859377cacf45d324443d5", null ],
+    [ "AttachCertificateStore", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_ad7acb2230cc53eeba4289175180ee150.html#ad7acb2230cc53eeba4289175180ee150", null ],
+    [ "ConvertAlpnProtocolListToByteArray", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a225bc6d72c7fd39f7a4e06ca743a74d0.html#a225bc6d72c7fd39f7a4e06ca743a74d0", null ],
+    [ "CreateSecureCredential", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_aaacfb73051d1e8998394c47dff9891a1.html#aaacfb73051d1e8998394c47dff9891a1", null ],
+    [ "DecryptMessage", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a500439a0fe1ff529ddeb223e407ab9f9.html#a500439a0fe1ff529ddeb223e407ab9f9", null ],
+    [ "EncryptMessage", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_aa44515cbdc07c0e316374e0e073161d3.html#aa44515cbdc07c0e316374e0e073161d3", null ],
+    [ "GetException", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a4d03cad4a6fd7ef7ad595fe7bd29c73f.html#a4d03cad4a6fd7ef7ad595fe7bd29c73f", null ],
+    [ "GetNegotiatedApplicationProtocol", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_abbcfeacf58d52db4a56f77667ae7d50b.html#abbcfeacf58d52db4a56f77667ae7d50b", null ],
+    [ "GetProtocolFlagsFromSslProtocols", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a6e82ddefe2ca92b54e1df27becf29607.html#a6e82ddefe2ca92b54e1df27becf29607", null ],
+    [ "InitializeSecurityContext", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a4420579d2e5ff7958627f3a6c6c86806.html#a4420579d2e5ff7958627f3a6c6c86806", null ],
+    [ "QueryContextChannelBinding", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_ab79f33c4287ce060979ec8ad0a8c3e76.html#ab79f33c4287ce060979ec8ad0a8c3e76", null ],
+    [ "QueryContextConnectionInfo", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a186ae30c60dc8a66cb81b5b48e22d5b2.html#a186ae30c60dc8a66cb81b5b48e22d5b2", null ],
+    [ "QueryContextStreamSizes", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a9137f505641b4a15c7af926adc0ca41c.html#a9137f505641b4a15c7af926adc0ca41c", null ],
+    [ "Renegotiate", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a6eed72b396111a0773d513fb714d8901.html#a6eed72b396111a0773d513fb714d8901", null ],
+    [ "VerifyPackageInfo", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_a5384eec3087a53d7ad4cdcf08b3351e1.html#a5384eec3087a53d7ad4cdcf08b3351e1", null ],
+    [ "s_schannelShutdownBytes", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_aed295b1aeeecaae179c781b625d03eb0.html#aed295b1aeeecaae179c781b625d03eb0", null ],
+    [ "UseNewCryptoApi", "de/d62/classSystem_1_1Net_1_1Security_1_1SslStreamPal_acdec0c4885c17f18676a4d2f52e6bbcd.html#acdec0c4885c17f18676a4d2f52e6bbcd", null ]
+];

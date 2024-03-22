@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1WebSockets_1_1WebSocket =
+[
+    [ "Abort", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a8f7a91f8eaf0999187bab4c05887affa.html#a8f7a91f8eaf0999187bab4c05887affa", null ],
+    [ "CloseAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ad4d10d34a0fef6d4a380a070eb8efe99.html#ad4d10d34a0fef6d4a380a070eb8efe99", null ],
+    [ "CloseOutputAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a8fed62e4c744aa75a44aec03d1bc758e.html#a8fed62e4c744aa75a44aec03d1bc758e", null ],
+    [ "CreateClientBuffer", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a18dd436d29532ca6120686e2f1f2a7a2.html#a18dd436d29532ca6120686e2f1f2a7a2", null ],
+    [ "CreateClientWebSocket", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a8d2172077b6ca927337b967732e3edfe.html#a8d2172077b6ca927337b967732e3edfe", null ],
+    [ "CreateFromStream", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ae2c0c7c68fd8ac940e72f0d9e620284f.html#ae2c0c7c68fd8ac940e72f0d9e620284f", null ],
+    [ "CreateFromStream", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_aeba6cf2dc4085e3c13983d3afade4560.html#aeba6cf2dc4085e3c13983d3afade4560", null ],
+    [ "CreateServerBuffer", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a4f6b132a566a71abd3da08f89a5b99a5.html#a4f6b132a566a71abd3da08f89a5b99a5", null ],
+    [ "Dispose", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a2ef1af9aa78552da18bf9c092fa12759.html#a2ef1af9aa78552da18bf9c092fa12759", null ],
+    [ "IsApplicationTargeting45", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a24f1f2cb43dd9a622bc9e310b6b74bd6.html#a24f1f2cb43dd9a622bc9e310b6b74bd6", null ],
+    [ "IsStateTerminal", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a09bc7830aec34835b8b5a58447aba343.html#a09bc7830aec34835b8b5a58447aba343", null ],
+    [ "ReceiveAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a84eddfd0fc111678d97acd4d5a02951b.html#a84eddfd0fc111678d97acd4d5a02951b", null ],
+    [ "ReceiveAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a56c923ec7536c31e3372624f9493a73b.html#a56c923ec7536c31e3372624f9493a73b", null ],
+    [ "RegisterPrefixes", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ae4ef65e030834eab706b3d80810ef45e.html#ae4ef65e030834eab706b3d80810ef45e", null ],
+    [ "SendAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_abdeb5650315b8ee76e84eee1178a3c86.html#abdeb5650315b8ee76e84eee1178a3c86", null ],
+    [ "SendAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ab9e157cb346e2923ce0df7ba1f514f64.html#ab9e157cb346e2923ce0df7ba1f514f64", null ],
+    [ "SendAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a1a4492f71c84e99e4fb4185e9a7294ee.html#a1a4492f71c84e99e4fb4185e9a7294ee", null ],
+    [ "SendWithArrayPoolAsync", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a152cffb9e75575e71be64749341285fa.html#a152cffb9e75575e71be64749341285fa", null ],
+    [ "ThrowOnInvalidState", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ad8acef5643f5258c5785bc91ec56c124.html#ad8acef5643f5258c5785bc91ec56c124", null ],
+    [ "CloseStatus", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_ace1074e08d1261512b482d847ef4b114.html#ace1074e08d1261512b482d847ef4b114", null ],
+    [ "CloseStatusDescription", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a0ae3033f43676640832f89c424ce70f9.html#a0ae3033f43676640832f89c424ce70f9", null ],
+    [ "DefaultKeepAliveInterval", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_afe7d39438e3c7de41d7ebe1adb727ef9.html#afe7d39438e3c7de41d7ebe1adb727ef9", null ],
+    [ "State", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_a5f3eccb473695cd9d43122a5a30b6cb8.html#a5f3eccb473695cd9d43122a5a30b6cb8", null ],
+    [ "SubProtocol", "d8/d28/classSystem_1_1Net_1_1WebSockets_1_1WebSocket_af3ddb466d91255d739b99c74d9f22a51.html#af3ddb466d91255d739b99c74d9f22a51", null ]
+];

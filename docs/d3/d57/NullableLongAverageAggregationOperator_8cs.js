@@ -1,0 +1,5 @@
+var NullableLongAverageAggregationOperator_8cs =
+[
+    [ "System.Linq.Parallel.NullableLongAverageAggregationOperator", "d1/d81/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator.html", "d1/d81/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator" ],
+    [ "System.Linq.Parallel.NullableLongAverageAggregationOperator.NullableLongAverageAggregationOperatorEnumerator< TKey >", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator.html", "dc/d9f/classSystem_1_1Linq_1_1Parallel_1_1NullableLongAverageAggregationOperator_1_1NullableLongAverageAggregationOperatorEnumerator" ]
+];

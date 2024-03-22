@@ -1,0 +1,27 @@
+var classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties =
+[
+    [ "SystemIPGlobalProperties", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a52e693cd4b41351c6fa317e3b90f8d85.html#a52e693cd4b41351c6fa317e3b90f8d85", null ],
+    [ "BeginGetUnicastAddresses", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a93422c65c9670f82dc7ec44dc0ea1589.html#a93422c65c9670f82dc7ec44dc0ea1589", null ],
+    [ "BeginGetUnicastAddresses", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties.html#ac3a9560003fd93901529237c45c01aa2", null ],
+    [ "EndGetUnicastAddresses", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_ac3027ea8b626f55e98692851e2063bd6.html#ac3027ea8b626f55e98692851e2063bd6", null ],
+    [ "GetActiveTcpConnections", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a668389596a30c3fc129d81285faa8b15.html#a668389596a30c3fc129d81285faa8b15", null ],
+    [ "GetActiveTcpListeners", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a398cf3397d4216911c64e7eff215ac19.html#a398cf3397d4216911c64e7eff215ac19", null ],
+    [ "GetActiveUdpListeners", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_adecd877b678af731c3cbf01ac32c53b9.html#adecd877b678af731c3cbf01ac32c53b9", null ],
+    [ "GetAllTcpConnections", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_aef26aa2793fcabc9d9f26703b843bb11.html#aef26aa2793fcabc9d9f26703b843bb11", null ],
+    [ "GetIcmpV4Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a6a731cbb5da2d2d5f27a2f16cb1c720f.html#a6a731cbb5da2d2d5f27a2f16cb1c720f", null ],
+    [ "GetIcmpV6Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_aea22557779adad59766beb5d0df019a3.html#aea22557779adad59766beb5d0df019a3", null ],
+    [ "GetIPGlobalProperties", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties.html#a329018d324d7ba947c4b34456d4d65f0", null ],
+    [ "GetIPv4GlobalStatistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a2b6fa2a389c2260f197a51c205ee5fb5.html#a2b6fa2a389c2260f197a51c205ee5fb5", null ],
+    [ "GetIPv6GlobalStatistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a37f8d80bd8663f326298b746b7979e08.html#a37f8d80bd8663f326298b746b7979e08", null ],
+    [ "GetTcpIPv4Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a4dcfb5773e1d06d86f8490d4117a14d2.html#a4dcfb5773e1d06d86f8490d4117a14d2", null ],
+    [ "GetTcpIPv6Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_af85e275c583aac408e123d1264f7a293.html#af85e275c583aac408e123d1264f7a293", null ],
+    [ "GetUdpIPv4Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_abf7305606e876db28f40d7ba72237e65.html#abf7305606e876db28f40d7ba72237e65", null ],
+    [ "GetUdpIPv6Statistics", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_aadac3d990768a66f1ce69b09bdeff653.html#aadac3d990768a66f1ce69b09bdeff653", null ],
+    [ "GetUnicastAddresses", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a2a7874f4bb555637cd7a0ffd61ed8225.html#a2a7874f4bb555637cd7a0ffd61ed8225", null ],
+    [ "GetUnicastAddressesAsync", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a9b93338f1d61ceebdfd2cb5658bd7e83.html#a9b93338f1d61ceebdfd2cb5658bd7e83", null ],
+    [ "DhcpScopeName", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_afd2971699df9c11fa125f0550b2e915a.html#afd2971699df9c11fa125f0550b2e915a", null ],
+    [ "DomainName", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_ab5cdf0340ca1db3e1547bee2ba001d20.html#ab5cdf0340ca1db3e1547bee2ba001d20", null ],
+    [ "HostName", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a6d87eec38f32f24efe78127f38e4b773.html#a6d87eec38f32f24efe78127f38e4b773", null ],
+    [ "IsWinsProxy", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_ab0912810388af2e3bca97f4cc550994f.html#ab0912810388af2e3bca97f4cc550994f", null ],
+    [ "NodeType", "df/da9/classSystem_1_1Net_1_1NetworkInformation_1_1SystemIPGlobalProperties_a24a7bb4e00ebcdaea2974a6383163f35.html#a24a7bb4e00ebcdaea2974a6383163f35", null ]
+];

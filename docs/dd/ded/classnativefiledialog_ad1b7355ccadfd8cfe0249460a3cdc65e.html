@@ -107,7 +107,7 @@ $(function(){initNavTree('dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460
         <tr>
           <td class="memname">static unsafe <a class="el" href="../../d5/d92/classstring.html">string</a> nativefiledialog.UTF8_ToManaged </td>
           <td>(</td>
-          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>s</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../db/db4/structSystem_1_1IntPtr.html">IntPtr</a></td>          <td class="paramname"><span class="paramname"><em>s</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -124,49 +124,40 @@ $(function(){initNavTree('dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460
 
 <p class="definition">Definition at line <a class="el" href="../../db/d14/nativefiledialog_8cs_source.html#l00045">45</a> of file <a class="el" href="../../db/d14/nativefiledialog_8cs_source.html">nativefiledialog.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (s == IntPtr.Zero)</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">s</a> == <a class="code hl_struct" href="../../db/db4/structSystem_1_1IntPtr.html">IntPtr</a>.<a class="code hl_variable" href="../../db/db4/structSystem_1_1IntPtr_a671794e921120e1d43e18781fd6ca4a8.html#a671794e921120e1d43e18781fd6ca4a8">Zero</a>)</div>
 <div class="line"><span class="lineno">   48</span>        {</div>
 <div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   50</span>        }</div>
 <div class="line"><span class="lineno">   51</span>        <span class="keywordtype">byte</span>* ptr;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">for</span> (ptr = (<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)s; *ptr != 0; ptr++)</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">for</span> (ptr = (<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">s</a>; *ptr != 0; ptr++)</div>
 <div class="line"><span class="lineno">   53</span>        {</div>
 <div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> num = (<a class="code hl_class" href="../../d1/da0/classint.html">int</a>)(ptr - (<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)s);</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> num = (int)(ptr - (<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">s</a>);</div>
 <div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (num == 0)</div>
 <div class="line"><span class="lineno">   57</span>        {</div>
 <div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Empty;</div>
 <div class="line"><span class="lineno">   59</span>        }</div>
 <div class="line"><span class="lineno">   60</span>        <span class="keywordtype">char</span>* ptr2 = stackalloc <span class="keywordtype">char</span>[num];</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">int</span> chars = Encoding.UTF8.GetChars((<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)s, num, ptr2, num);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">string</span> result = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d92/classstring.html">string</a>(ptr2, 0, chars);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637ab69d9bc635ccd79ad2c64bc862abe3b4">chars</a> = <a class="code hl_class" href="../../da/d83/classSystem_1_1Text_1_1Encoding.html">Encoding</a>.<a class="code hl_property" href="../../da/d83/classSystem_1_1Text_1_1Encoding_a512fe96ac1087a83ef66007170c7769f.html#a512fe96ac1087a83ef66007170c7769f">UTF8</a>.GetChars((<span class="keywordtype">byte</span>*)(<span class="keywordtype">void</span>*)<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">s</a>, num, ptr2, num);</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">string</span> result = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d92/classstring.html">string</a>(ptr2, 0, <a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637ab69d9bc635ccd79ad2c64bc862abe3b4">chars</a>);</div>
 <div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (freePtr)</div>
 <div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="../../dd/ded/classnativefiledialog_a9379e614ccca5315d4b2ae289321a33b.html#a9379e614ccca5315d4b2ae289321a33b">free</a>(s);</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="../../dd/ded/classnativefiledialog_a9379e614ccca5315d4b2ae289321a33b.html#a9379e614ccca5315d4b2ae289321a33b">free</a>(<a class="code hl_enumvalue" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">s</a>);</div>
 <div class="line"><span class="lineno">   66</span>        }</div>
 <div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassint_html"><div class="ttname"><a href="../../d1/da0/classint.html">int</a></div></div>
+<div class="ttc" id="aclassSystem_1_1Text_1_1Encoding_a512fe96ac1087a83ef66007170c7769f_html_a512fe96ac1087a83ef66007170c7769f"><div class="ttname"><a href="../../da/d83/classSystem_1_1Text_1_1Encoding_a512fe96ac1087a83ef66007170c7769f.html#a512fe96ac1087a83ef66007170c7769f">System.Text.Encoding.UTF8</a></div><div class="ttdeci">static Encoding UTF8</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dec/Encoding_8cs_source.html#l00526">Encoding.cs:526</a></div></div>
+<div class="ttc" id="aclassSystem_1_1Text_1_1Encoding_html"><div class="ttname"><a href="../../da/d83/classSystem_1_1Text_1_1Encoding.html">System.Text.Encoding</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/dec/Encoding_8cs_source.html#l00014">Encoding.cs:15</a></div></div>
 <div class="ttc" id="aclassnativefiledialog_a9379e614ccca5315d4b2ae289321a33b_html_a9379e614ccca5315d4b2ae289321a33b"><div class="ttname"><a href="../../dd/ded/classnativefiledialog_a9379e614ccca5315d4b2ae289321a33b.html#a9379e614ccca5315d4b2ae289321a33b">nativefiledialog.free</a></div><div class="ttdeci">static void free(IntPtr ptr)</div></div>
 <div class="ttc" id="aclassstring_html"><div class="ttname"><a href="../../d5/d92/classstring.html">string</a></div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">System.ExceptionArgument.s</a></div><div class="ttdeci">@ s</div></div>
+<div class="ttc" id="anamespaceSystem_a566c7365b77de53642aa0634953e1637_html_a566c7365b77de53642aa0634953e1637ab69d9bc635ccd79ad2c64bc862abe3b4"><div class="ttname"><a href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637ab69d9bc635ccd79ad2c64bc862abe3b4">System.ExceptionArgument.chars</a></div><div class="ttdeci">@ chars</div></div>
+<div class="ttc" id="astructSystem_1_1IntPtr_a671794e921120e1d43e18781fd6ca4a8_html_a671794e921120e1d43e18781fd6ca4a8"><div class="ttname"><a href="../../db/db4/structSystem_1_1IntPtr_a671794e921120e1d43e18781fd6ca4a8.html#a671794e921120e1d43e18781fd6ca4a8">System.IntPtr.Zero</a></div><div class="ttdeci">static readonly IntPtr Zero</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d82/IntPtr_8cs_source.html#l00018">IntPtr.cs:18</a></div></div>
+<div class="ttc" id="astructSystem_1_1IntPtr_html"><div class="ttname"><a href="../../db/db4/structSystem_1_1IntPtr.html">System.IntPtr</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d82/IntPtr_8cs_source.html#l00013">IntPtr.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../dd/ded/classnativefiledialog_a9379e614ccca5315d4b2ae289321a33b.html#a9379e614ccca5315d4b2ae289321a33b">free()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637ab69d9bc635ccd79ad2c64bc862abe3b4">System.chars</a>, <a class="el" href="../../dd/ded/classnativefiledialog_a9379e614ccca5315d4b2ae289321a33b.html#a9379e614ccca5315d4b2ae289321a33b">free()</a>, <a class="el" href="../../d6/d27/namespaceSystem_a566c7365b77de53642aa0634953e1637.html#a566c7365b77de53642aa0634953e1637a03c7c0ace395d80182db07ae2c30f034">System.s</a>, <a class="el" href="../../da/d83/classSystem_1_1Text_1_1Encoding_a512fe96ac1087a83ef66007170c7769f.html#a512fe96ac1087a83ef66007170c7769f">System.Text.Encoding.UTF8</a>, and <a class="el" href="../../db/db4/structSystem_1_1IntPtr_a671794e921120e1d43e18781fd6ca4a8.html#a671794e921120e1d43e18781fd6ca4a8">System.IntPtr.Zero</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dd/ded/classnativefiledialog_af0422ad594b56553df0ff318fd9a3ac0.html#af0422ad594b56553df0ff318fd9a3ac0">NFD_GetError()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_aeadaef3670dc3de9281eb92c4df871e7.html#aeadaef3670dc3de9281eb92c4df871e7">NFD_OpenDialog()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_acb46121037d493af00e9e86f7b4e480e.html#acb46121037d493af00e9e86f7b4e480e">NFD_PathSet_GetPath()</a>, <a class="el" href="../../dd/ded/classnativefiledialog_ac6566d4b3f5f2c251dee9ae2588ba05a.html#ac6566d4b3f5f2c251dee9ae2588ba05a">NFD_PickFolder()</a>, and <a class="el" href="../../dd/ded/classnativefiledialog_ad015f810ae97b11cebc345376a7dc842.html#ad015f810ae97b11cebc345376a7dc842">NFD_SaveDialog()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e_ad1b7355ccadfd8cfe0249460a3cdc65e_cgraph.svg" width="374" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/ded/classnativefiledialog_ad1b7355ccadfd8cfe0249460a3cdc65e_ad1b7355ccadfd8cfe0249460a3cdc65e_icgraph.svg" width="650" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>

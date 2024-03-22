@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['postprocessingevents_0',['PostProcessingEvents',['../de/d29/classReLogic_1_1Peripherals_1_1RGB_1_1ChromaPipeline_aa2b72469602ff296433f24a85cbf37d9.html#aa2b72469602ff296433f24a85cbf37d9',1,'ReLogic::Peripherals::RGB::ChromaPipeline']]]
+  ['m_5fcompleted_0',['m_Completed',['../d9/d0e/classSystem_1_1Net_1_1WebSockets_1_1WebSocketHttpListenerDuplexStream_1_1HttpListenerAsyncEventArgs_addf07e61afbc19af68807ce89625df58.html#addf07e61afbc19af68807ce89625df58',1,'System::Net::WebSockets::WebSocketHttpListenerDuplexStream::HttpListenerAsyncEventArgs']]],
+  ['mergefailed_1',['MergeFailed',['../d4/d5b/classSystem_1_1Data_1_1DataSet_ad2fddba712d5dd0f399c7ae8b8bf5adb.html#ad2fddba712d5dd0f399c7ae8b8bf5adb',1,'System::Data::DataSet']]]
 ];

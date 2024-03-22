@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1Cee588847812bc8e2fa1f3bc7683f2252 =
+[
+    [ "Address", "d0/d1c/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1Cee588847812bc8e2fa1f3bc7683f2252_ad5f6fdcabc73d4fd4dd1bf7052fad436.html#ad5f6fdcabc73d4fd4dd1bf7052fad436", null ]
+];

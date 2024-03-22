@@ -24,6 +24,7 @@ var structReLogic_1_1Utilities_1_1Vector2D =
     [ "Dot", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_a439d32c5215ec86df1b37bb721636434.html#a439d32c5215ec86df1b37bb721636434", null ],
     [ "Dot", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_af95dc61b5d61ee4c8213729fa88ac084.html#af95dc61b5d61ee4c8213729fa88ac084", null ],
     [ "Equals", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_ac1dd082b6de677d74aca46f29e3a2ff1.html#ac1dd082b6de677d74aca46f29e3a2ff1", null ],
+    [ "Equals", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D.html#a5d372723026c2ae82d4bcd50067e582c", null ],
     [ "Equals", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_a6332d46c5d7a8b0a65f5722d6b9267b8.html#a6332d46c5d7a8b0a65f5722d6b9267b8", null ],
     [ "GetHashCode", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_a392aabceb03b5657d219f13fa65f928d.html#a392aabceb03b5657d219f13fa65f928d", null ],
     [ "Hermite", "de/d1e/structReLogic_1_1Utilities_1_1Vector2D_a5e7dee2c497f0c3e688b88232912ea5e.html#a5e7dee2c497f0c3e688b88232912ea5e", null ],

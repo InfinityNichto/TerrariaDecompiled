@@ -1,0 +1,27 @@
+var classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode =
+[
+    [ "ClassDataNode", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode_aad341d01ec40f7b55d43f110044d6916.html#aad341d01ec40f7b55d43f110044d6916", null ],
+    [ "AddQualifiedNameAttribute", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a5ed774bd35dfb1b5b17f7a096d14103a", null ],
+    [ "Clear", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode_a2de3f6b97a0e57b3c96abf1c86475fa3.html#a2de3f6b97a0e57b3c96abf1c86475fa3", null ],
+    [ "GetData", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a5ee1625833c63337f4126dda06ad9fc1", null ],
+    [ "GetValue", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a19298b50eb24f7a3b2f9134e2c9dd25d", null ],
+    [ "_clrAssemblyName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a3c6cf3004ec81212e0aa31db0dda400d", null ],
+    [ "_clrTypeName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a5839c42a482cda79466abb278319a1e1", null ],
+    [ "_dataContractName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a7143d31a6470af4db9b73be0cf96991f", null ],
+    [ "_dataContractNamespace", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#ac3efd33a1b86ef4d17d97dd9888099c2", null ],
+    [ "_id", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a75c9c0e9dba74324f13e4170caa122b5", null ],
+    [ "_isFinalValue", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a81243944bcec02dbca9b2e8482a5b5b3", null ],
+    [ "_members", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode_a72f957616ca7404c51ec7b784c877709.html#a72f957616ca7404c51ec7b784c877709", null ],
+    [ "_value", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#adc3b7eba032186e8fd621d805f538bb8", null ],
+    [ "dataType", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a4dd9f4bd36a9dc2fb4da65a324cc3395", null ],
+    [ "ClrAssemblyName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#acf237928e3dbe8d636f4c9c34c3e707a", null ],
+    [ "ClrTypeName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a46fe4ade5dc53a3b1ab70f7eb47a6047", null ],
+    [ "DataContractName", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#aa4f7fe639f887cd5d82344104452c510", null ],
+    [ "DataContractNamespace", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a5ab9dbe00374c958bde79330d9138af4", null ],
+    [ "DataType", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#ae8c81da924558b2e17ef54ad544cdc4f", null ],
+    [ "Id", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#aa4065860a832a7e03b54c80853a5f4a0", null ],
+    [ "IsFinalValue", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a6ea3188474cecf2a5a433ae06492bd28", null ],
+    [ "Members", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode_ac3e2ba15a00e43400eeda34b3eb54a14.html#ac3e2ba15a00e43400eeda34b3eb54a14", null ],
+    [ "PreservesReferences", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a47b990f9ea80e61e84a8f17ce66701d1", null ],
+    [ "Value", "d2/d7e/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataNode.html#a15de56bb4f5dcb2be622dbcaeeecfc7d", null ]
+];

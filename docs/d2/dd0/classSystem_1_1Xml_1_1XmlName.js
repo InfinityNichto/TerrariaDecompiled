@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1XmlName =
+[
+    [ "XmlName", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a04d2497b64c0ddcc3cd0400a1169dd4e.html#a04d2497b64c0ddcc3cd0400a1169dd4e", null ],
+    [ "Create", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a5238fe35e4cc5f4bc0040de1a8671828.html#a5238fe35e4cc5f4bc0040de1a8671828", null ],
+    [ "Equals", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a3813508e82965eb6184bf59aa9c6c8cd.html#a3813508e82965eb6184bf59aa9c6c8cd", null ],
+    [ "GetHashCode", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a585482c30a1f496b8f2545a585610374.html#a585482c30a1f496b8f2545a585610374", null ],
+    [ "_hashCode", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a883f67a0754a62c08039567d5435ca02.html#a883f67a0754a62c08039567d5435ca02", null ],
+    [ "_localName", "d2/dd0/classSystem_1_1Xml_1_1XmlName_aa5e688d9c276b7ef01d4ce5fcadfd2bd.html#aa5e688d9c276b7ef01d4ce5fcadfd2bd", null ],
+    [ "_name", "d2/dd0/classSystem_1_1Xml_1_1XmlName_aa0119d16d15c1581191e195782151b4a.html#aa0119d16d15c1581191e195782151b4a", null ],
+    [ "_ns", "d2/dd0/classSystem_1_1Xml_1_1XmlName_adc9e39513748231444dd9275eb946066.html#adc9e39513748231444dd9275eb946066", null ],
+    [ "_prefix", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a87c1b1c8235a5a473c0716e09d840f7b.html#a87c1b1c8235a5a473c0716e09d840f7b", null ],
+    [ "next", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a22be9ff57a05370a840b88946af8c337.html#a22be9ff57a05370a840b88946af8c337", null ],
+    [ "ownerDoc", "d2/dd0/classSystem_1_1Xml_1_1XmlName_ad4f78add9a7dfb373a26351b5569a7bd.html#ad4f78add9a7dfb373a26351b5569a7bd", null ],
+    [ "HashCode", "d2/dd0/classSystem_1_1Xml_1_1XmlName_aaf044bac6b0673307c84dd5039a1a734.html#aaf044bac6b0673307c84dd5039a1a734", null ],
+    [ "IsDefault", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a9d8eb9b2d7df489ef46a5aa82b3f22d6.html#a9d8eb9b2d7df489ef46a5aa82b3f22d6", null ],
+    [ "IsNil", "d2/dd0/classSystem_1_1Xml_1_1XmlName_aefa0c1a37a6e3ea172edc160c8983d68.html#aefa0c1a37a6e3ea172edc160c8983d68", null ],
+    [ "LocalName", "d2/dd0/classSystem_1_1Xml_1_1XmlName_ad6a092e512794412aaa181c37389621a.html#ad6a092e512794412aaa181c37389621a", null ],
+    [ "MemberType", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a241838f6006993c929a926c32d7ad9f0.html#a241838f6006993c929a926c32d7ad9f0", null ],
+    [ "Name", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a59dc8e4a391f7ea6768bbaca8b50fc53.html#a59dc8e4a391f7ea6768bbaca8b50fc53", null ],
+    [ "NamespaceURI", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a9519d08334df731ac53ced42ec5b5490.html#a9519d08334df731ac53ced42ec5b5490", null ],
+    [ "OwnerDocument", "d2/dd0/classSystem_1_1Xml_1_1XmlName_ab2917d522a22fcbb154d05e7330cc5e6.html#ab2917d522a22fcbb154d05e7330cc5e6", null ],
+    [ "Prefix", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a5ad8d11e0c16ed3d693f79f152ac9068.html#a5ad8d11e0c16ed3d693f79f152ac9068", null ],
+    [ "SchemaAttribute", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a5819db66d9782c525c4dc42c50f1cc86.html#a5819db66d9782c525c4dc42c50f1cc86", null ],
+    [ "SchemaElement", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a650a8833474dcc8524906ed1684eabed.html#a650a8833474dcc8524906ed1684eabed", null ],
+    [ "SchemaType", "d2/dd0/classSystem_1_1Xml_1_1XmlName_a2bdf9126c967996bbf14c0ddf5bee775.html#a2bdf9126c967996bbf14c0ddf5bee775", null ],
+    [ "Validity", "d2/dd0/classSystem_1_1Xml_1_1XmlName_af094fb3cf7c7605836d1e72cfd0ad5c8.html#af094fb3cf7c7605836d1e72cfd0ad5c8", null ]
+];

@@ -1,0 +1,14 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo =
+[
+    [ "ClientAlpnList", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a2eb84d36f7a0f72c14cb6e1f48d1064a.html#a2eb84d36f7a0f72c14cb6e1f48d1064a", null ],
+    [ "ClientAlpnListLength", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_af069fa68e7d823cca50aaac7a36cb9f5.html#af069fa68e7d823cca50aaac7a36cb9f5", null ],
+    [ "CryptoBuffer", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a2e09f748eb76d9aee2913334c21dead8.html#a2e09f748eb76d9aee2913334c21dead8", null ],
+    [ "CryptoBufferLength", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a8a9795553a36f3898578d45eb0e9622d.html#a8a9795553a36f3898578d45eb0e9622d", null ],
+    [ "LocalAddress", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_ad90d5abf4e867ea33cbe4cdefcae172d.html#ad90d5abf4e867ea33cbe4cdefcae172d", null ],
+    [ "NegotiatedAlpn", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a7e71858e84a77a3fefe5330167ea7f0c.html#a7e71858e84a77a3fefe5330167ea7f0c", null ],
+    [ "NegotiatedAlpnLength", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a0ad4ed1c392d9eee5eb3728d3de85f6c.html#a0ad4ed1c392d9eee5eb3728d3de85f6c", null ],
+    [ "QuicVersion", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a9adfa46daf644f46eccb11584094a80f.html#a9adfa46daf644f46eccb11584094a80f", null ],
+    [ "RemoteAddress", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a06bf325e8903cfc85748547964487c67.html#a06bf325e8903cfc85748547964487c67", null ],
+    [ "ServerName", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_ab856edc4fe9dff830d8f29e36656e16d.html#ab856edc4fe9dff830d8f29e36656e16d", null ],
+    [ "ServerNameLength", "d8/dcd/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1NewConnectionInfo_a8fc29895c3114bed34b332f49ec3fe8c.html#a8fc29895c3114bed34b332f49ec3fe8c", null ]
+];

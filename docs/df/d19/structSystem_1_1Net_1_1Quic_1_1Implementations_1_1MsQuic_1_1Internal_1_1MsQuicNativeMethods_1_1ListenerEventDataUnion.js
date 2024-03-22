@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ListenerEventDataUnion =
+[
+    [ "NewConnection", "df/d19/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ListenerEventDataUnion_ad194b01ef24556f596d401fdcb597aaf.html#ad194b01ef24556f596d401fdcb597aaf", null ]
+];

@@ -7,6 +7,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem =
     [ "CloudButtonClick", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem_adafb29fbdf5bfeff357fa593ce0280bc.html#adafb29fbdf5bfeff357fa593ce0280bc", null ],
     [ "CloudMouseOver", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem_a64b7bc29173ddb7fb948d8c6120cc9d7.html#a64b7bc29173ddb7fb948d8c6120cc9d7", null ],
     [ "CompareTo", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem_ac4a07aac9e1816578b6f2af41e8a5a17.html#ac4a07aac9e1816578b6f2af41e8a5a17", null ],
+    [ "CompareTo", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d4/d21/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIWorldListItem.html#a172ab329792a6b10d313e66ccd63f30f", null ],

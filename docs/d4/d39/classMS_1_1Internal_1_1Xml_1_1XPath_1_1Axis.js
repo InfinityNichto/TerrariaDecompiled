@@ -1,0 +1,48 @@
+var classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis =
+[
+    [ "AstType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218", [
+      [ "Axis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218a39e6b4ab3e4adecf031d3aa8410bb3ce", null ],
+      [ "Operator", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218ae1b3ec89ead7f83a9245ed5c9cacfdbf", null ],
+      [ "Filter", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218ad7778d0c64b6ba21494c97f77a66885a", null ],
+      [ "ConstantOperand", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218aeb919e9d4fff2524c3536a8a0cf34162", null ],
+      [ "Function", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218a86408593c34af77fdd90df932f8b5261", null ],
+      [ "Group", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218a03937134cedab9078be39a77ee3a48a0", null ],
+      [ "Root", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218afa03eb688ad8aa1db593d33dabd89bad", null ],
+      [ "Variable", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218a47c14840d8e15331fa420b9b2f757cd9", null ],
+      [ "Error", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis.html#a518b89eab2899a1c77b85256595b4218a902b0d55fddef6f8d651fe1035b7d4bd", null ]
+    ] ],
+    [ "AxisType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36d", [
+      [ "Ancestor", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36dac9858b3d24f8dbd9ebb4893d1c1c37df", null ],
+      [ "AncestorOrSelf", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da0cefe2a45359eec087721fbf56202f75", null ],
+      [ "Attribute", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36daf2bbdf9f72c085adc4d0404e370f0f4c", null ],
+      [ "Child", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36daa82fea383f121c803741f8de1c209734", null ],
+      [ "Descendant", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da66cfc6d3293129634b681bc5476cc895", null ],
+      [ "DescendantOrSelf", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36dae3099f11022bdd125ddc7b886b1c0899", null ],
+      [ "Following", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da6f796b0e6deb4f4c2c0ee0ed5e10e117", null ],
+      [ "FollowingSibling", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da77e1db914e86aa43969d275fa1e41995", null ],
+      [ "Namespace", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36dab3ba0fe968ce39dcfc6fe8cc0f1b02da", null ],
+      [ "Parent", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da30269022e9d8f51beaabb52e5d0de2b7", null ],
+      [ "Preceding", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da75e2813e41f142bab900dbb3df8e275e", null ],
+      [ "PrecedingSibling", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36daf30cf15ecbf15cd52deea6ada7ce1f80", null ],
+      [ "Self", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36daad6e7652b1bdfb38783486c2c3d5e806", null ],
+      [ "None", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ad0da7696d8c7f1e1871942fccf26a36d.html#ad0da7696d8c7f1e1871942fccf26a36da6adf97f83acf6453d4a6a4b1070f3754", null ]
+    ] ],
+    [ "Axis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_addb0b46f4a6e98368d0c7f68110015ef.html#addb0b46f4a6e98368d0c7f68110015ef", null ],
+    [ "Axis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_aca9941bebb2c7a07326b74e0df84059c.html#aca9941bebb2c7a07326b74e0df84059c", null ],
+    [ "_axisType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_adca15c44e086831cb20f24bd1839df64.html#adca15c44e086831cb20f24bd1839df64", null ],
+    [ "_input", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a23c3ce4f16a79163ab3c00c9f8369bdc.html#a23c3ce4f16a79163ab3c00c9f8369bdc", null ],
+    [ "_name", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a931cc26105abcb17b9ab8356f712f2f1.html#a931cc26105abcb17b9ab8356f712f2f1", null ],
+    [ "_nodeType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a6362e53f228850b5790b114cfb3d9e52.html#a6362e53f228850b5790b114cfb3d9e52", null ],
+    [ "_prefix", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a38ad37a1336dee72933501f7402dd618.html#a38ad37a1336dee72933501f7402dd618", null ],
+    [ "_urn", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a6f97c0a881b6b9942df4e964987eb3a6.html#a6f97c0a881b6b9942df4e964987eb3a6", null ],
+    [ "abbrAxis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ac30115265c2866823676332ec2e5a723.html#ac30115265c2866823676332ec2e5a723", null ],
+    [ "AbbrAxis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_ac536ca6334d81096529965606715efa5.html#ac536ca6334d81096529965606715efa5", null ],
+    [ "Input", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_affd15d351990f581c431a4856695af0d.html#affd15d351990f581c431a4856695af0d", null ],
+    [ "Name", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_af1edf3072577325d29a62ac36329d7ab.html#af1edf3072577325d29a62ac36329d7ab", null ],
+    [ "NodeType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a420959fa92ab158556beb44d952df3b8.html#a420959fa92ab158556beb44d952df3b8", null ],
+    [ "Prefix", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a085d4f7e7a9aafe8c98cd2a2418a535d.html#a085d4f7e7a9aafe8c98cd2a2418a535d", null ],
+    [ "ReturnType", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a4d394f1dd95d1d702bf000455aaf1d18.html#a4d394f1dd95d1d702bf000455aaf1d18", null ],
+    [ "Type", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a11da5219ac3a5c02825538205fc01889.html#a11da5219ac3a5c02825538205fc01889", null ],
+    [ "TypeOfAxis", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a92a75cab60aa2456e2a6b813f89b9623.html#a92a75cab60aa2456e2a6b813f89b9623", null ],
+    [ "Urn", "d4/d39/classMS_1_1Internal_1_1Xml_1_1XPath_1_1Axis_a8c009e0b5c4e93cd93660783931d185d.html#a8c009e0b5c4e93cd93660783931d185d", null ]
+];

@@ -1,0 +1,6 @@
+var classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1QuicExceptionHelpers =
+[
+    [ "CreateExceptionForHResult", "d1/dd6/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1QuicExceptionHelpers_ac5164db60e49f5911ecd518d1a8aab60.html#ac5164db60e49f5911ecd518d1a8aab60", null ],
+    [ "MapMsQuicStatusToHResult", "d1/dd6/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1QuicExceptionHelpers_ac61c3596625bc9db64091dee7feb04b4.html#ac61c3596625bc9db64091dee7feb04b4", null ],
+    [ "ThrowIfFailed", "d1/dd6/classSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1QuicExceptionHelpers_aa20be693f0191ae4bd88e15fc48cb6aa.html#aa20be693f0191ae4bd88e15fc48cb6aa", null ]
+];

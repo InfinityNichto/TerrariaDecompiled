@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataShutdownComplete =
+[
+    [ "ConnectionShutdown", "d9/d2c/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataShutdownComplete_a5f3f81c10070366036d3e3c8af8a7a90.html#a5f3f81c10070366036d3e3c8af8a7a90", null ]
+];

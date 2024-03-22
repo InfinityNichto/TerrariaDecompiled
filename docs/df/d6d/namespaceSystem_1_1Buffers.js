@@ -1,0 +1,35 @@
+var namespaceSystem_1_1Buffers =
+[
+    [ "Binary", "d4/d38/namespaceSystem_1_1Buffers_1_1Binary.html", "d4/d38/namespaceSystem_1_1Buffers_1_1Binary" ],
+    [ "Text", "d5/da6/namespaceSystem_1_1Buffers_1_1Text.html", "d5/da6/namespaceSystem_1_1Buffers_1_1Text" ],
+    [ "ArrayBufferWriter", "d5/dc5/classSystem_1_1Buffers_1_1ArrayBufferWriter.html", "d5/dc5/classSystem_1_1Buffers_1_1ArrayBufferWriter" ],
+    [ "ArrayMemoryPool", "db/df4/classSystem_1_1Buffers_1_1ArrayMemoryPool.html", "db/df4/classSystem_1_1Buffers_1_1ArrayMemoryPool" ],
+    [ "ArrayPool", "d6/d5a/classSystem_1_1Buffers_1_1ArrayPool.html", "d6/d5a/classSystem_1_1Buffers_1_1ArrayPool" ],
+    [ "ArrayPoolEventSource", "d3/d1f/classSystem_1_1Buffers_1_1ArrayPoolEventSource.html", "d3/d1f/classSystem_1_1Buffers_1_1ArrayPoolEventSource" ],
+    [ "BuffersExtensions", "d3/d25/classSystem_1_1Buffers_1_1BuffersExtensions.html", "d3/d25/classSystem_1_1Buffers_1_1BuffersExtensions" ],
+    [ "ConfigurableArrayPool", "d4/d3e/classSystem_1_1Buffers_1_1ConfigurableArrayPool.html", "d4/d3e/classSystem_1_1Buffers_1_1ConfigurableArrayPool" ],
+    [ "IBufferWriter", "d9/d59/interfaceSystem_1_1Buffers_1_1IBufferWriter.html", "d9/d59/interfaceSystem_1_1Buffers_1_1IBufferWriter" ],
+    [ "IMemoryOwner", "d0/d29/interfaceSystem_1_1Buffers_1_1IMemoryOwner.html", "d0/d29/interfaceSystem_1_1Buffers_1_1IMemoryOwner" ],
+    [ "IPinnable", "d7/d6b/interfaceSystem_1_1Buffers_1_1IPinnable.html", "d7/d6b/interfaceSystem_1_1Buffers_1_1IPinnable" ],
+    [ "MemoryHandle", "d3/d06/structSystem_1_1Buffers_1_1MemoryHandle.html", "d3/d06/structSystem_1_1Buffers_1_1MemoryHandle" ],
+    [ "MemoryManager", "d5/d4b/classSystem_1_1Buffers_1_1MemoryManager.html", "d5/d4b/classSystem_1_1Buffers_1_1MemoryManager" ],
+    [ "MemoryPool", "db/dde/classSystem_1_1Buffers_1_1MemoryPool.html", "db/dde/classSystem_1_1Buffers_1_1MemoryPool" ],
+    [ "PointerMemoryManager", "d6/d52/classSystem_1_1Buffers_1_1PointerMemoryManager.html", "d6/d52/classSystem_1_1Buffers_1_1PointerMemoryManager" ],
+    [ "ReadOnlySequence", "df/dff/structSystem_1_1Buffers_1_1ReadOnlySequence.html", "df/dff/structSystem_1_1Buffers_1_1ReadOnlySequence" ],
+    [ "ReadOnlySequenceDebugView", "d5/df9/classSystem_1_1Buffers_1_1ReadOnlySequenceDebugView.html", "d5/df9/classSystem_1_1Buffers_1_1ReadOnlySequenceDebugView" ],
+    [ "ReadOnlySequenceSegment", "d8/d2c/classSystem_1_1Buffers_1_1ReadOnlySequenceSegment.html", "d8/d2c/classSystem_1_1Buffers_1_1ReadOnlySequenceSegment" ],
+    [ "SequenceReader", "d4/db9/structSystem_1_1Buffers_1_1SequenceReader.html", "d4/db9/structSystem_1_1Buffers_1_1SequenceReader" ],
+    [ "SequenceReaderExtensions", "dd/d1a/classSystem_1_1Buffers_1_1SequenceReaderExtensions.html", "dd/d1a/classSystem_1_1Buffers_1_1SequenceReaderExtensions" ],
+    [ "StandardFormat", "d2/d77/structSystem_1_1Buffers_1_1StandardFormat.html", "d2/d77/structSystem_1_1Buffers_1_1StandardFormat" ],
+    [ "TlsOverPerCoreLockedStacksArrayPool", "d8/d6c/classSystem_1_1Buffers_1_1TlsOverPerCoreLockedStacksArrayPool.html", "d8/d6c/classSystem_1_1Buffers_1_1TlsOverPerCoreLockedStacksArrayPool" ],
+    [ "Utilities", "d6/db6/classSystem_1_1Buffers_1_1Utilities.html", "d6/db6/classSystem_1_1Buffers_1_1Utilities" ],
+    [ "OperationStatus", "df/d6d/namespaceSystem_1_1Buffers_ac4fed37c8957a813fe690e508a941d37.html#ac4fed37c8957a813fe690e508a941d37", [
+      [ "Done", "df/d6d/namespaceSystem_1_1Buffers_ac4fed37c8957a813fe690e508a941d37.html#ac4fed37c8957a813fe690e508a941d37af92965e2c8a7afb3c1b9a5c09a263636", null ],
+      [ "DestinationTooSmall", "df/d6d/namespaceSystem_1_1Buffers_ac4fed37c8957a813fe690e508a941d37.html#ac4fed37c8957a813fe690e508a941d37ac5f4cfa63472a392b920e04dfcdec319", null ],
+      [ "NeedMoreData", "df/d6d/namespaceSystem_1_1Buffers_ac4fed37c8957a813fe690e508a941d37.html#ac4fed37c8957a813fe690e508a941d37ad18cc8933052b7595886de81ec4b1dac", null ],
+      [ "InvalidData", "df/d6d/namespaceSystem_1_1Buffers_ac4fed37c8957a813fe690e508a941d37.html#ac4fed37c8957a813fe690e508a941d37a3c4b6828f5a12280debdb5a12e0e72ba", null ]
+    ] ],
+    [ "ReadOnlySpanAction< T, in TArg >", "df/d6d/namespaceSystem_1_1Buffers_af37d9bda0aa55787b9ee84bc4e652e52.html#af37d9bda0aa55787b9ee84bc4e652e52", null ],
+    [ "SpanAction< T, in TArg >", "df/d6d/namespaceSystem_1_1Buffers_a73ed406150a19d4e0f08cb65b5982ac0.html#a73ed406150a19d4e0f08cb65b5982ac0", null ],
+    [ "SpanFunc< TSpan, in T1, in T2, in T3, out TResult >", "df/d6d/namespaceSystem_1_1Buffers_af588ba12b8dd625da326bedcb0ca855e.html#af588ba12b8dd625da326bedcb0ca855e", null ]
+];

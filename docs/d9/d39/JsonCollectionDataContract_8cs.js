@@ -1,0 +1,5 @@
+var JsonCollectionDataContract_8cs =
+[
+    [ "System.Runtime.Serialization.Json.JsonCollectionDataContract", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract.html", "de/dd0/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract" ],
+    [ "System.Runtime.Serialization.Json.JsonCollectionDataContract.JsonCollectionDataContractCriticalHelper", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper.html", "da/d59/classSystem_1_1Runtime_1_1Serialization_1_1Json_1_1JsonCollectionDataContract_1_1JsonCollectionDataContractCriticalHelper" ]
+];

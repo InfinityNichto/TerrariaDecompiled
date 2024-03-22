@@ -1,0 +1,8 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6 =
+[
+    [ "sin6_addr", "df/dc9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6_a1146f42add324d978ec2db619c1d235a.html#a1146f42add324d978ec2db619c1d235a", null ],
+    [ "sin6_family", "df/dc9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6_ad309b9729bab78c03d85a57c2a874215.html#ad309b9729bab78c03d85a57c2a874215", null ],
+    [ "sin6_flowinfo", "df/dc9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6_abaf3f470afd80ae2083ed301e8c93d37.html#abaf3f470afd80ae2083ed301e8c93d37", null ],
+    [ "sin6_port", "df/dc9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6_ad6851887ffa92bb48acc3ea659519498.html#ad6851887ffa92bb48acc3ea659519498", null ],
+    [ "sin6_scope_id", "df/dc9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__IN6_afb3ceb0f5926c35a241d69bc5f3e0ffd.html#afb3ceb0f5926c35a241d69bc5f3e0ffd", null ]
+];

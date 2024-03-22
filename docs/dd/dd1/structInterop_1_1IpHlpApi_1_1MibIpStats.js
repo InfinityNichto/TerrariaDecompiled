@@ -1,0 +1,26 @@
+var structInterop_1_1IpHlpApi_1_1MibIpStats =
+[
+    [ "defaultTtl", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a775ce2e6b9530aab71b96cd876f79f97.html#a775ce2e6b9530aab71b96cd876f79f97", null ],
+    [ "forwardingEnabled", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a6421069b1a47e32274566142db6ffb67.html#a6421069b1a47e32274566142db6ffb67", null ],
+    [ "interfaces", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a30784bcbaf0577df23ab5d1f5029cc5d.html#a30784bcbaf0577df23ab5d1f5029cc5d", null ],
+    [ "ipAddresses", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a4bd833bf66f77ac6bae933e6d1bd8a86.html#a4bd833bf66f77ac6bae933e6d1bd8a86", null ],
+    [ "outputPacketRoutingDiscards", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a05da7ba349850ad4942125b0aa3afb2c.html#a05da7ba349850ad4942125b0aa3afb2c", null ],
+    [ "outputPacketsDiscarded", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_aeb581e4d9d503b07446f03808b254c47.html#aeb581e4d9d503b07446f03808b254c47", null ],
+    [ "outputPacketsWithNoRoute", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a44aef9fbe396dd7b751e8710ddb48903.html#a44aef9fbe396dd7b751e8710ddb48903", null ],
+    [ "packetOutputRequests", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a9235735173ac4386a76bc71269990be0.html#a9235735173ac4386a76bc71269990be0", null ],
+    [ "packetReassemblyTimeout", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_aa0fa7a3be0a977fac5fbb609799562a0.html#aa0fa7a3be0a977fac5fbb609799562a0", null ],
+    [ "packetsForwarded", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_aacf536fe3a5b4d05e04fa5bf0e773130.html#aacf536fe3a5b4d05e04fa5bf0e773130", null ],
+    [ "packetsFragmentCreated", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a0ebf3855dfff8a4c141af0bd545816f9.html#a0ebf3855dfff8a4c141af0bd545816f9", null ],
+    [ "packetsFragmented", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a2edc59c00250ca87e01b96d288aa61e8.html#a2edc59c00250ca87e01b96d288aa61e8", null ],
+    [ "packetsFragmentFailed", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a1f761a1ac3792d5c3046a6dd13232ee6.html#a1f761a1ac3792d5c3046a6dd13232ee6", null ],
+    [ "packetsReassembled", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a10f44c9aaaffd6a386f945bfc310d6b3.html#a10f44c9aaaffd6a386f945bfc310d6b3", null ],
+    [ "packetsReassemblyFailed", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a8a44158a6e6ee35a1ff4f08d668c9ec4.html#a8a44158a6e6ee35a1ff4f08d668c9ec4", null ],
+    [ "packetsReassemblyRequired", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a55e9100559932e92c527b45725b3b7d5.html#a55e9100559932e92c527b45725b3b7d5", null ],
+    [ "packetsReceived", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_add8e5b40c88abfee40b0a8a6d56f022b.html#add8e5b40c88abfee40b0a8a6d56f022b", null ],
+    [ "receivedPacketsDelivered", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a4d7a7e542fd4df871529491c0130479b.html#a4d7a7e542fd4df871529491c0130479b", null ],
+    [ "receivedPacketsDiscarded", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_ab079eac4d1b4807540046b8684b278c1.html#ab079eac4d1b4807540046b8684b278c1", null ],
+    [ "receivedPacketsWithAddressErrors", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a1b228d0e2c9a208db54ec7d758d934d3.html#a1b228d0e2c9a208db54ec7d758d934d3", null ],
+    [ "receivedPacketsWithHeaderErrors", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_aa5f67731db15c9cc489fac923b1cb2bf.html#aa5f67731db15c9cc489fac923b1cb2bf", null ],
+    [ "receivedPacketsWithUnknownProtocols", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_ad0fac24630349deb9f228d0bfe3d90f8.html#ad0fac24630349deb9f228d0bfe3d90f8", null ],
+    [ "routes", "dd/dd1/structInterop_1_1IpHlpApi_1_1MibIpStats_a4a152728ca015095cd74a6c2dd332e20.html#a4a152728ca015095cd74a6c2dd332e20", null ]
+];

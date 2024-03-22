@@ -1,0 +1,5 @@
+var NullableDoubleMinMaxAggregationOperator_8cs =
+[
+    [ "System.Linq.Parallel.NullableDoubleMinMaxAggregationOperator", "d8/d31/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator.html", "d8/d31/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator" ],
+    [ "System.Linq.Parallel.NullableDoubleMinMaxAggregationOperator.NullableDoubleMinMaxAggregationOperatorEnumerator< TKey >", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator.html", "d7/d1f/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleMinMaxAggregationOperator_1_1NullableDoubleMinMaxAggregationOperatorEnumerator" ]
+];

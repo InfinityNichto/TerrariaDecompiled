@@ -1,0 +1,37 @@
+var SignatureTypeCode_8cs =
+[
+    [ "SignatureTypeCode", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4a", [
+      [ "Invalid", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa4bbb8f967da6d1a610596d7257179c2b", null ],
+      [ "Void", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa81ceb48a978444906d80119200aa358d", null ],
+      [ "Boolean", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa27226c864bac7454a8504f8edb15d95b", null ],
+      [ "Char", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa8e95e84813830072b7516cfaa7dbc1a9", null ],
+      [ "SByte", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa7e76fb67fc7b4cb0004bc45f2bd92723", null ],
+      [ "Byte", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aaa245c3230debe5c956484ecc6fa93877", null ],
+      [ "Int16", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa39bc2ae44b184207f560ff8619823208", null ],
+      [ "UInt16", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa8bd950a9d7779b83f5c30046c9aaf1cf", null ],
+      [ "Int32", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aac06129f6e6e15c09328365e553f1dc31", null ],
+      [ "UInt32", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aae7956ed7be1c5025a27ed3cb42a396bd", null ],
+      [ "Int64", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aafbde23b11d7e59af7828e81144c8b487", null ],
+      [ "UInt64", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aaaf71234725f0470ccf993e263a8b820a", null ],
+      [ "Single", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa66ba162102bbf6ae31b522aec561735e", null ],
+      [ "Double", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aad909d38d705ce75386dd86e611a82f5b", null ],
+      [ "String", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa27118326006d3829667a400ad23d5d98", null ],
+      [ "Pointer", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa61cf8510205077b6f5491d38cd44c0f7", null ],
+      [ "ByReference", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa14c8f55d70991895a619a26cee6b7a90", null ],
+      [ "GenericTypeParameter", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aaf4be4419f33382d2d27efb867e3b911e", null ],
+      [ "Array", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa4410ec34d9e6c1a68100ca0ce033fb17", null ],
+      [ "GenericTypeInstance", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa9c785ab9dbf1a3089954786c85af1321", null ],
+      [ "TypedReference", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aae776398fc59825cb14b396a5a69ee6df", null ],
+      [ "IntPtr", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aad01da193dfa4b0185a3f33d8c85d8b21", null ],
+      [ "UIntPtr", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aaf3d6390301b7bfeb54d505b8d1a6850f", null ],
+      [ "FunctionPointer", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa208adf8bf2acdb0d453083d29d6e7afb", null ],
+      [ "Object", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa497031794414a552435f90151ac3b54b", null ],
+      [ "SZArray", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa5b5444a10c1f1ae37389fff0edc552db", null ],
+      [ "GenericMethodParameter", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aae79e7bbeb9b603310662353fee90c01e", null ],
+      [ "RequiredModifier", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aad9122798103c3854f9ab7f4e8cc525b2", null ],
+      [ "OptionalModifier", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aad26017c10f0cbd3ea741df77489d5b7b", null ],
+      [ "TypeHandle", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aab3e2c9026265964764f0b3040a0caa3f", null ],
+      [ "Sentinel", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa7b71dfec5c8dd524069eed634dc0a3a5", null ],
+      [ "Pinned", "de/d4a/SignatureTypeCode_8cs.html#a87a5138bc6b099d4510dd9b5eed32e4aa3c5e891bff07947cbae2fda89162df9f", null ]
+    ] ]
+];

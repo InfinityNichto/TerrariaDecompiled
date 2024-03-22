@@ -1,0 +1,5 @@
+var interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationService =
+[
+    [ "Deserialize", "d6/dbd/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationService_a70eef1d8951f7fd399500ecd867c72fe.html#a70eef1d8951f7fd399500ecd867c72fe", null ],
+    [ "Serialize", "d6/dbd/interfaceSystem_1_1ComponentModel_1_1Design_1_1Serialization_1_1IDesignerSerializationService_afda50a8bad97b7e6e02e388dea75ac73.html#afda50a8bad97b7e6e02e388dea75ac73", null ]
+];

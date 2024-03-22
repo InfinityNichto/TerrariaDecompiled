@@ -1,0 +1,11 @@
+var namespaceSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers =
+[
+    [ "ComDataHelpers", "db/d33/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1ComDataHelpers.html", "db/d33/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1ComDataHelpers" ],
+    [ "EnumerableToDispatchMarshaler", "d7/d84/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumerableToDispatchMarshaler.html", "d7/d84/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumerableToDispatchMarshaler" ],
+    [ "EnumerableViewOfDispatch", "d2/d50/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumerableViewOfDispatch.html", "d2/d50/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumerableViewOfDispatch" ],
+    [ "EnumeratorToEnumVariantMarshaler", "d2/d14/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorToEnumVariantMarshaler.html", "d2/d14/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorToEnumVariantMarshaler" ],
+    [ "EnumeratorViewOfEnumVariant", "d3/da0/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorViewOfEnumVariant.html", "d3/da0/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumeratorViewOfEnumVariant" ],
+    [ "EnumVariantViewOfEnumerator", "d9/d2a/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumVariantViewOfEnumerator.html", "d9/d2a/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1EnumVariantViewOfEnumerator" ],
+    [ "ExpandoToDispatchExMarshaler", "d7/dc9/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1ExpandoToDispatchExMarshaler.html", "d7/dc9/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1ExpandoToDispatchExMarshaler" ],
+    [ "TypeToTypeInfoMarshaler", "d4/d54/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1TypeToTypeInfoMarshaler.html", "d4/d54/classSystem_1_1Runtime_1_1InteropServices_1_1CustomMarshalers_1_1TypeToTypeInfoMarshaler" ]
+];

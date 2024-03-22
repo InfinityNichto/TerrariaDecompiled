@@ -1,0 +1,5 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1Common_1_1CachedGenericDelegates =
+[
+    [ "CreateUnlinkerShimAction", "dc/d6e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1Common_1_1CachedGenericDelegates_a78ca6845015b830c83bd2b641021d145.html#a78ca6845015b830c83bd2b641021d145", null ],
+    [ "DefaultTResultFunc", "dc/d6e/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1Common_1_1CachedGenericDelegates_af50bd8a44c554de1fe8080f4d46c4708.html#af50bd8a44c554de1fe8080f4d46c4708", null ]
+];

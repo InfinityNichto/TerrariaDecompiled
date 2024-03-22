@@ -3,6 +3,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList =
     [ "Activate", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#a53dde9d58711507264436e68759382d7", null ],
     [ "Append", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "CompareTo", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList_a61b8c7688b469199fcb0b8ff5e043f51.html#a61b8c7688b469199fcb0b8ff5e043f51", null ],
     [ "CopyStyle", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d9/df7/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIList_1_1UIInnerList.html#a172ab329792a6b10d313e66ccd63f30f", null ],

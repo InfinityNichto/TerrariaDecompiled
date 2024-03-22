@@ -1,0 +1,11 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation =
+[
+    [ "DebuggingInformation", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_aaac33a514c24f4ef88cc971b01fc5119.html#aaac33a514c24f4ef88cc971b01fc5119", null ],
+    [ "_target", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a25d52bdb1b7bce4142701d9dd39f861f.html#a25d52bdb1b7bce4142701d9dd39f861f", null ],
+    [ "DataflowBlockOptions", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a3822011179548247ccd031e1716fa97a.html#a3822011179548247ccd031e1716fa97a", null ],
+    [ "InputQueue", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_aaa5b928f133cdeea10d5a1a2e1ce1f7b.html#aaa5b928f133cdeea10d5a1a2e1ce1f7b", null ],
+    [ "IsDecliningPermanently", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a9061153d1240e8d26d1742d3bdac003e.html#a9061153d1240e8d26d1742d3bdac003e", null ],
+    [ "NumberOfBatchesCompleted", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a27867ebf9eb3d71fb0f8268bf626e60a.html#a27867ebf9eb3d71fb0f8268bf626e60a", null ],
+    [ "PostponedMessages", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a8bf6a53434afad2be2d5d9fa1a0ba8ce.html#a8bf6a53434afad2be2d5d9fa1a0ba8ce", null ],
+    [ "TaskForInputProcessing", "d8/d79/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1DebuggingInformation_a1c3d506b131fc5c09c8536e336b219f2.html#a1c3d506b131fc5c09c8536e336b219f2", null ]
+];

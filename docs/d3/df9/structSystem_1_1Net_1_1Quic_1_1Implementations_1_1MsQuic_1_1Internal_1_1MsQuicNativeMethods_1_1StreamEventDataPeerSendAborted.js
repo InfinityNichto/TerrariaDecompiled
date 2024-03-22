@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataPeerSendAborted =
+[
+    [ "ErrorCode", "d3/df9/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1StreamEventDataPeerSendAborted_a1b0a5c6b4e1cc1fe0436560a15139e4f.html#a1b0a5c6b4e1cc1fe0436560a15139e4f", null ]
+];

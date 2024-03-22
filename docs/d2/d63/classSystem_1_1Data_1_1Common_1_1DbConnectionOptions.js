@@ -1,0 +1,37 @@
+var classSystem_1_1Data_1_1Common_1_1DbConnectionOptions =
+[
+    [ "ParserState", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2", [
+      [ "NothingYet", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a095c42a5dd3937845c7b055282d2ae29", null ],
+      [ "Key", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a897356954c2cd3d41b221e3f24f99bba", null ],
+      [ "KeyEqual", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a322033f508d9d96238b4fffbf6b5df3f", null ],
+      [ "KeyEnd", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2abaa5d8ec8a45964d91ba3e9cb1a516b6", null ],
+      [ "UnquotedValue", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2aeaaae2f18d6e94642ec29df4ba7ce245", null ],
+      [ "DoubleQuoteValue", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2abd283b6b5c7e2b5db3920774a7b57c0a", null ],
+      [ "DoubleQuoteValueQuote", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2ab6bd2798abb4abd574c1c3e4f441e0f7", null ],
+      [ "SingleQuoteValue", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a05327304af06bf9af510b3870eebd556", null ],
+      [ "SingleQuoteValueQuote", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2aefdd436bf03638615165fc5c0ad087bf", null ],
+      [ "BraceQuoteValue", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a38456057c079119b19312b31319bf6ab", null ],
+      [ "BraceQuoteValueQuote", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2aff20349bf482b01373596e38dd5acf70", null ],
+      [ "QuotedValueEnd", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a5701bd3f8c500b1577879b54c95f9512", null ],
+      [ "NullTermination", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a918b63dbb9ce8932c47409465cb164f2.html#a918b63dbb9ce8932c47409465cb164f2a576662e6fe40db1906117dcfc287f4d9", null ]
+    ] ],
+    [ "DbConnectionOptions", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a59927f591a1b323ee5479fd3fab6b628.html#a59927f591a1b323ee5479fd3fab6b628", null ],
+    [ "AppendKeyValuePairBuilder", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a20f27e93e384675167acca8f50dace5d.html#a20f27e93e384675167acca8f50dace5d", null ],
+    [ "GetKeyName", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_addaa98a2f237ade51fc403bee21b95bb.html#addaa98a2f237ade51fc403bee21b95bb", null ],
+    [ "GetKeyValue", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a2dd5283568c41b8d04091f859f95b128.html#a2dd5283568c41b8d04091f859f95b128", null ],
+    [ "GetKeyValuePair", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a7fff6cc1ef51a31f23d17662acc6431b.html#a7fff6cc1ef51a31f23d17662acc6431b", null ],
+    [ "IsKeyNameValid", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_ac36958ea8f3e0728b661e0beba60caa8.html#ac36958ea8f3e0728b661e0beba60caa8", null ],
+    [ "IsValueValidInternal", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a256911f9d08e742b1d6a164c0b27098d.html#a256911f9d08e742b1d6a164c0b27098d", null ],
+    [ "ParseInternal", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a269f57930d38a14bd13524d5289e024a.html#a269f57930d38a14bd13524d5289e024a", null ],
+    [ "ValidateKeyValuePair", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a89599a1f39ac29b8a94d17d18d227969.html#a89599a1f39ac29b8a94d17d18d227969", null ],
+    [ "_hasPasswordKeyword", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_aa96a2f7823b65512444e02c1a25e4c5d.html#aa96a2f7823b65512444e02c1a25e4c5d", null ],
+    [ "_hasUserIdKeyword", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a11ae389591a4ba1b857692c8e5a44903.html#a11ae389591a4ba1b857692c8e5a44903", null ],
+    [ "_keyChain", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_ad7450b4e8f60f790d026c2b8b68c938e.html#ad7450b4e8f60f790d026c2b8b68c938e", null ],
+    [ "_parsetable", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a5f465a72af12f5ac0884f17a083b56e7.html#a5f465a72af12f5ac0884f17a083b56e7", null ],
+    [ "_useOdbcRules", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_aa71fc45c53cabd80901c86c7088d1e9e.html#aa71fc45c53cabd80901c86c7088d1e9e", null ],
+    [ "_usersConnectionString", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a4f633d372ae179a8538faa1df0ef5a56.html#a4f633d372ae179a8538faa1df0ef5a56", null ],
+    [ "s_connectionStringQuoteOdbcValueRegex", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_afc8ccfc2886967c6947aa8c2dcec6fe1.html#afc8ccfc2886967c6947aa8c2dcec6fe1", null ],
+    [ "s_connectionStringQuoteValueRegex", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_aa5fdc5928179c366565a44299a7bee8d.html#aa5fdc5928179c366565a44299a7bee8d", null ],
+    [ "s_connectionStringValidKeyRegex", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_aaa0a79fdcfaf0144a78fb0499e921852.html#aaa0a79fdcfaf0144a78fb0499e921852", null ],
+    [ "s_connectionStringValidValueRegex", "d2/d63/classSystem_1_1Data_1_1Common_1_1DbConnectionOptions_a12e200d5998a8948390d0dfc53d715c1.html#a12e200d5998a8948390d0dfc53d715c1", null ]
+];

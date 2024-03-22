@@ -1,0 +1,25 @@
+var classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger =
+[
+    [ "BigInteger", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a238e69c0c762a690200a3537cf01c38a.html#a238e69c0c762a690200a3537cf01c38a", null ],
+    [ "Add", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a54d6d93de43e094c620db09340066eca.html#a54d6d93de43e094c620db09340066eca", null ],
+    [ "CompareTo", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a9f93fde81de93cf8096e2404189d3ff4.html#a9f93fde81de93cf8096e2404189d3ff4", null ],
+    [ "CompareTo", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger.html#a01c7b7c2613269003848242162567051", null ],
+    [ "DivRem", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a1bf19f00f21369bc494609b499fc4359.html#a1bf19f00f21369bc494609b499fc4359", null ],
+    [ "Ensure", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a20c1da4c619ba02466b346f28471f4b0.html#a20c1da4c619ba02466b346f28471f4b0", null ],
+    [ "InitFromBigint", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_ae7a775a25520f89479710651eb209d84.html#ae7a775a25520f89479710651eb209d84", null ],
+    [ "InitFromDigits", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a32b6c9c1851ed3ec7c71635f640cc424.html#a32b6c9c1851ed3ec7c71635f640cc424", null ],
+    [ "InitFromFloatingDecimal", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a1c6981d0ca54aa0a38ae202b7ff16d95.html#a1c6981d0ca54aa0a38ae202b7ff16d95", null ],
+    [ "InitFromRgu", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_abb648062b139b4a1dd959eb118fe8415.html#abb648062b139b4a1dd959eb118fe8415", null ],
+    [ "MulAdd", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a59865ab29822664146ef492cf52d96c6.html#a59865ab29822664146ef492cf52d96c6", null ],
+    [ "MulPow5", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_aba064d6eab1db62cc8cdc80826e85a51.html#aba064d6eab1db62cc8cdc80826e85a51", null ],
+    [ "ShiftLeft", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a3ba464e2fcb2aba780fb397a7f7a4b94.html#a3ba464e2fcb2aba780fb397a7f7a4b94", null ],
+    [ "ShiftRight", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_aee54ed077bb7e2f3944065d0f1b38eba.html#aee54ed077bb7e2f3944065d0f1b38eba", null ],
+    [ "ShiftUsRight", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a45e1c79210e6896c8acb1a5eb52d3bed.html#a45e1c79210e6896c8acb1a5eb52d3bed", null ],
+    [ "Subtract", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a2e409f61a4286024174e6600811a275c.html#a2e409f61a4286024174e6600811a275c", null ],
+    [ "_capacity", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a6b7145d20e0488c631f5b7e1446f4483.html#a6b7145d20e0488c631f5b7e1446f4483", null ],
+    [ "_digits", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a758b0065582c8516c2228b4b7c075faf.html#a758b0065582c8516c2228b4b7c075faf", null ],
+    [ "_length", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_afbda5b6fc32f974ef5c88cff22ebaba2.html#afbda5b6fc32f974ef5c88cff22ebaba2", null ],
+    [ "Length", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_aa6e60d34100eb1f8f33a3589a940982f.html#aa6e60d34100eb1f8f33a3589a940982f", null ],
+    [ "this[int idx]", "dd/d41/classSystem_1_1Xml_1_1Xsl_1_1XPathConvert_1_1BigInteger_a7886551401609b15ba1e477703a2365d.html#a7886551401609b15ba1e477703a2365d", null ]
+];

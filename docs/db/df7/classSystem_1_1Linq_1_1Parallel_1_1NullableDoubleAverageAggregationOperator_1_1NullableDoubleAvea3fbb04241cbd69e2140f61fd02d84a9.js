@@ -1,0 +1,12 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9 =
+[
+    [ "NullableDoubleAverageAggregationOperatorEnumerator", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9_ac38ad68db4c7309927ca764fc660aaee.html#ac38ad68db4c7309927ca764fc660aaee", null ],
+    [ "Dispose", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9_a61c03a99ab0a0928c0b8dc93973dd364.html#a61c03a99ab0a0928c0b8dc93973dd364", null ],
+    [ "MoveNext", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9_a55f7fae806bd6269e1bee9b96d42bf4c.html#a55f7fae806bd6269e1bee9b96d42bf4c", null ],
+    [ "_cancellationToken", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_source", "db/df7/classSystem_1_1Linq_1_1Parallel_1_1NullableDoubleAverageAggregationOperator_1_1NullableDoubleAvea3fbb04241cbd69e2140f61fd02d84a9_a0acbb501b5e691ad98f1a356fa661836.html#a0acbb501b5e691ad98f1a356fa661836", null ]
+];

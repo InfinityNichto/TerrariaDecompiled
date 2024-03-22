@@ -1,0 +1,6 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEventDataConnected =
+[
+    [ "NegotiatedAlpn", "dd/d1d/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEventDataConnected_ad0a55efee83869b44743b26960e14890.html#ad0a55efee83869b44743b26960e14890", null ],
+    [ "NegotiatedAlpnLength", "dd/d1d/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEventDataConnected_abc7680bb5ca83d0f749be824c2b021e0.html#abc7680bb5ca83d0f749be824c2b021e0", null ],
+    [ "SessionResumed", "dd/d1d/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1ConnectionEventDataConnected_aeb2ac99d79eaac0e6ae71a7f07291bc2.html#aeb2ac99d79eaac0e6ae71a7f07291bc2", null ]
+];

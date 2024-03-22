@@ -1,0 +1,27 @@
+var classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder =
+[
+    [ "BranchInfo", "dc/d0b/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_1_1BranchInfo.html", "dc/d0b/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_1_1BranchInfo" ],
+    [ "ExceptionHandlerInfo", "d1/def/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_1_1ExceptionHandlerInfo.html", "d1/def/structSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_1_1ExceptionHandlerInfo" ],
+    [ "ControlFlowBuilder", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_abcbef1fe992a570343a597fa0f051ddd.html#abcbef1fe992a570343a597fa0f051ddd", null ],
+    [ "AddBranch", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ae43e4e0bde966a67e7460f98e7d655a6.html#ae43e4e0bde966a67e7460f98e7d655a6", null ],
+    [ "AddCatchRegion", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a70d967e3e323d402f79d4dbce317da41.html#a70d967e3e323d402f79d4dbce317da41", null ],
+    [ "AddExceptionRegion", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_aa67ff73e2a4fc0e53f32835b2102780f.html#aa67ff73e2a4fc0e53f32835b2102780f", null ],
+    [ "AddFaultRegion", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ae0c338d864978530361f8226e77c9dc2.html#ae0c338d864978530361f8226e77c9dc2", null ],
+    [ "AddFilterRegion", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a21d0d27cf0d2476f9b96217baa5444b6.html#a21d0d27cf0d2476f9b96217baa5444b6", null ],
+    [ "AddFinallyRegion", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_af0a579f5901dde949d2c5bec2ffd921c.html#af0a579f5901dde949d2c5bec2ffd921c", null ],
+    [ "AddLabel", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ae2ebdce5a307cbc34f9d6d6c38681383.html#ae2ebdce5a307cbc34f9d6d6c38681383", null ],
+    [ "Clear", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a6866cb8a6b2585de79a25dd6751a53dd.html#a6866cb8a6b2585de79a25dd6751a53dd", null ],
+    [ "CopyCodeAndFixupBranches", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a8e38bfea093d14ca70b9ca6a2c5b3cfd.html#a8e38bfea093d14ca70b9ca6a2c5b3cfd", null ],
+    [ "GetLabelOffsetChecked", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a1657da2cf0ea42a9338d9711aa2a149f.html#a1657da2cf0ea42a9338d9711aa2a149f", null ],
+    [ "HasSmallExceptionRegions", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a66d680a76add0d73a7232981fb6d54cc.html#a66d680a76add0d73a7232981fb6d54cc", null ],
+    [ "MarkLabel", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_aa289d3c25afdde5a7772d69030931bea.html#aa289d3c25afdde5a7772d69030931bea", null ],
+    [ "SerializeExceptionTable", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a77b8f67a0fd4009da8e69e320ae8a3e3.html#a77b8f67a0fd4009da8e69e320ae8a3e3", null ],
+    [ "ValidateLabel", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a06a3d5abc68e809bc42f535658bf059c.html#a06a3d5abc68e809bc42f535658bf059c", null ],
+    [ "_branches", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a507db826c215cb103ab1b3422c10c9e8.html#a507db826c215cb103ab1b3422c10c9e8", null ],
+    [ "_labels", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ac5f4b1f755c5b3e6a97a4969a87c7dc2.html#ac5f4b1f755c5b3e6a97a4969a87c7dc2", null ],
+    [ "_lazyExceptionHandlers", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ab213cb5a1a1299e312b4a73095209723.html#ab213cb5a1a1299e312b4a73095209723", null ],
+    [ "BranchCount", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a8b846c99b4ba6fc5aebcacad59bef405.html#a8b846c99b4ba6fc5aebcacad59bef405", null ],
+    [ "Branches", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_ad6382ba065cd592f055baf3c9623c2b4.html#ad6382ba065cd592f055baf3c9623c2b4", null ],
+    [ "ExceptionHandlerCount", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_a41a3eea330aeb3cf6a7a67aef00ddb69.html#a41a3eea330aeb3cf6a7a67aef00ddb69", null ],
+    [ "Labels", "d5/ded/classSystem_1_1Reflection_1_1Metadata_1_1Ecma335_1_1ControlFlowBuilder_aa98e415142bfc5e80bed9efcba63359f.html#aa98e415142bfc5e80bed9efcba63359f", null ]
+];

@@ -1,0 +1,5 @@
+var X509CertificateCollection_8cs =
+[
+    [ "System.Security.Cryptography.X509Certificates.X509CertificateCollection", "d4/d62/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection.html", "d4/d62/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection" ],
+    [ "System.Security.Cryptography.X509Certificates.X509CertificateCollection.X509CertificateEnumerator", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator.html", "de/dcd/classSystem_1_1Security_1_1Cryptography_1_1X509Certificates_1_1X509CertificateCollection_1_1X509CertificateEnumerator" ]
+];

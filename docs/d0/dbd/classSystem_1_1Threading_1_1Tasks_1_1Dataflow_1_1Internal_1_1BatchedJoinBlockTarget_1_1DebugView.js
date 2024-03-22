@@ -1,0 +1,7 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTarget_1_1DebugView =
+[
+    [ "DebugView", "d0/dbd/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTarget_1_1DebugView_a49c91aa81b389a0585ba302f8e5c38aa.html#a49c91aa81b389a0585ba302f8e5c38aa", null ],
+    [ "_batchedJoinBlockTarget", "d0/dbd/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTarget_1_1DebugView_a748038b9b3a08c9fde0009723b8d4775.html#a748038b9b3a08c9fde0009723b8d4775", null ],
+    [ "InputQueue", "d0/dbd/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTarget_1_1DebugView_a2c673700e8bae9c21552a935fb128348.html#a2c673700e8bae9c21552a935fb128348", null ],
+    [ "IsDecliningPermanently", "d0/dbd/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1BatchedJoinBlockTarget_1_1DebugView_a0803d9c7f14cf472249f3601b38ee79f.html#a0803d9c7f14cf472249f3601b38ee79f", null ]
+];

@@ -1,0 +1,6 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__INET =
+[
+    [ "Ipv4", "d4/de1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__INET_ad446d7a10a34ecb2094f7f94c6dac4fa.html#ad446d7a10a34ecb2094f7f94c6dac4fa", null ],
+    [ "Ipv6", "d4/de1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__INET_a7222f2c416fc739445ee62a9a40b5a65.html#a7222f2c416fc739445ee62a9a40b5a65", null ],
+    [ "si_family", "d4/de1/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1SOCKADDR__INET_a5c2f57a1903b410655d9769070346c43.html#a5c2f57a1903b410655d9769070346c43", null ]
+];

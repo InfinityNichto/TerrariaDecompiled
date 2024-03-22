@@ -2,5 +2,27 @@ var searchData=
 [
   ['gamemodestate_0',['GameModeState',['../d2/dc4/classTerraria_1_1Social_1_1Base_1_1RichPresenceState_aa30b4246539e900ebaad30292045d0a0.html#aa30b4246539e900ebaad30292045d0a0',1,'Terraria::Social::Base::RichPresenceState']]],
   ['gamenotificationtype_1',['GameNotificationType',['../d2/df4/namespaceTerraria_1_1GameContent_af4db74619ca68df95a55ae98748bc628.html#af4db74619ca68df95a55ae98748bc628',1,'Terraria::GameContent']]],
-  ['gatetype_2',['GateType',['../d7/df0/structTerraria_1_1GameContent_1_1PotionOfReturnGateHelper_a41b0805d1002b281b6e2ce10e6f8ecdc.html#a41b0805d1002b281b6e2ce10e6f8ecdc',1,'Terraria::GameContent::PotionOfReturnGateHelper']]]
+  ['gatetype_2',['GateType',['../d7/df0/structTerraria_1_1GameContent_1_1PotionOfReturnGateHelper_a41b0805d1002b281b6e2ce10e6f8ecdc.html#a41b0805d1002b281b6e2ce10e6f8ecdc',1,'Terraria::GameContent::PotionOfReturnGateHelper']]],
+  ['gc_5falloc_5fflags_3',['GC_ALLOC_FLAGS',['../d7/d64/classSystem_1_1GC_ac420d60e06ccc30fecd79038d3f1b726.html#ac420d60e06ccc30fecd79038d3f1b726',1,'System::GC']]],
+  ['gccollectionmode_4',['GCCollectionMode',['../d6/d27/namespaceSystem_a011447069ea1286be8eac7ee19131341.html#a011447069ea1286be8eac7ee19131341',1,'System']]],
+  ['gchandletype_5',['GCHandleType',['../df/d96/namespaceSystem_1_1Runtime_1_1InteropServices_ab7a6efec76259b0901209cf092c3211f.html#ab7a6efec76259b0901209cf092c3211f',1,'System::Runtime::InteropServices']]],
+  ['gckind_6',['GCKind',['../d6/d27/namespaceSystem_a85001be446b13ff66b20725bf67c06b3.html#a85001be446b13ff66b20725bf67c06b3',1,'System']]],
+  ['gclargeobjectheapcompactionmode_7',['GCLargeObjectHeapCompactionMode',['../dd/dc8/namespaceSystem_1_1Runtime_af40e915972d22e6933fc50c166df5de1.html#af40e915972d22e6933fc50c166df5de1',1,'System::Runtime']]],
+  ['gclatencymode_8',['GCLatencyMode',['../dd/dc8/namespaceSystem_1_1Runtime_a4aa54ea8c0c21685b1f2c7b78d3d434c.html#a4aa54ea8c0c21685b1f2c7b78d3d434c',1,'System::Runtime']]],
+  ['gcnotificationstatus_9',['GCNotificationStatus',['../d6/d27/namespaceSystem_a49c61c43839c9baeda489ad799b9881d.html#a49c61c43839c9baeda489ad799b9881d',1,'System']]],
+  ['generatenametype_10',['GenerateNameType',['../d9/dfa/namespaceSystem_1_1Xml_1_1Xsl_1_1IlGen_aa3efc6c96eb92d67b2bd929adabeb9cf.html#aa3efc6c96eb92d67b2bd929adabeb9cf',1,'System::Xml::Xsl::IlGen']]],
+  ['genericparameterattributes_11',['GenericParameterAttributes',['../d2/d2c/namespaceSystem_1_1Reflection_a47889f7adf43aada25651fa90566336c.html#a47889f7adf43aada25651fa90566336c',1,'System::Reflection']]],
+  ['genericuriparseroptions_12',['GenericUriParserOptions',['../d6/d27/namespaceSystem_a650b42509a6ea6def6a00793712456da.html#a650b42509a6ea6def6a00793712456da',1,'System']]],
+  ['get_5ffileex_5finfo_5flevels_13',['GET_FILEEX_INFO_LEVELS',['../d3/d49/classInterop_1_1Kernel32_a9b881bcb073b6153fd2d977286049bca.html#a9b881bcb073b6153fd2d977286049bca',1,'Interop.Kernel32.GET_FILEEX_INFO_LEVELS'],['../d3/d49/classInterop_1_1Kernel32_a9b881bcb073b6153fd2d977286049bca.html#a9b881bcb073b6153fd2d977286049bca',1,'Interop.Kernel32.GET_FILEEX_INFO_LEVELS']]],
+  ['getadaptersaddressesflags_14',['GetAdaptersAddressesFlags',['../d2/d52/classInterop_1_1IpHlpApi_aeaef2dfae51672898a48fe767a13139b.html#aeaef2dfae51672898a48fe767a13139b',1,'Interop::IpHlpApi']]],
+  ['getbytesmode_15',['GetBytesMode',['../d7/db8/structSystem_1_1Numerics_1_1BigInteger_a234377de4ee5e7eaab63e8ee68479415.html#a234377de4ee5e7eaab63e8ee68479415',1,'System::Numerics::BigInteger']]],
+  ['getdefaultproviderflags_16',['GetDefaultProviderFlags',['../d2/de8/classInterop_1_1Advapi32_a45db28e648b358347b8b4244734d2032.html#a45db28e648b358347b8b4244734d2032',1,'Interop::Advapi32']]],
+  ['getpathoption_17',['GetPathOption',['../df/d86/classSystem_1_1Net_1_1FtpControlStream_ad40499ebb00d79def2608ce2997661ae.html#ad40499ebb00d79def2608ce2997661ae',1,'System::Net::FtpControlStream']]],
+  ['gotoexpressionkind_18',['GotoExpressionKind',['../dc/dde/namespaceSystem_1_1Linq_1_1Expressions_afd8dd7f46ebbf157e933f428e42aa8b8.html#afd8dd7f46ebbf157e933f428e42aa8b8',1,'System::Linq::Expressions']]],
+  ['graphemeclusterbreaktype_19',['GraphemeClusterBreakType',['../d2/da3/namespaceSystem_1_1Text_1_1Unicode_a8cf91f030e016fbf623eea1f73aec730.html#a8cf91f030e016fbf623eea1f73aec730',1,'System::Text::Unicode']]],
+  ['graphicsdevicestatus_20',['GraphicsDeviceStatus',['../d0/d1c/namespaceMicrosoft_1_1Xna_1_1Framework_1_1Graphics_ae3144d9e616e5a55d96bbf72d5837b65.html#ae3144d9e616e5a55d96bbf72d5837b65',1,'Microsoft::Xna::Framework::Graphics']]],
+  ['graphicsprofile_21',['GraphicsProfile',['../d0/d1c/namespaceMicrosoft_1_1Xna_1_1Framework_1_1Graphics_a3504fc54a22eeed003fcb560206bbc6d.html#a3504fc54a22eeed003fcb560206bbc6d',1,'Microsoft::Xna::Framework::Graphics']]],
+  ['gregoriancalendartypes_22',['GregorianCalendarTypes',['../df/d43/namespaceSystem_1_1Globalization_ab532fbcc5781031a5fb4c23d960b8d6e.html#ab532fbcc5781031a5fb4c23d960b8d6e',1,'System::Globalization']]],
+  ['groupbybehavior_23',['GroupByBehavior',['../d9/d8f/namespaceSystem_1_1Data_1_1Common_aaa9fd0ffea34c055e73be9d233cdf5a6.html#aaa9fd0ffea34c055e73be9d233cdf5a6',1,'System::Data::Common']]],
+  ['guidparsethrowstyle_24',['GuidParseThrowStyle',['../dc/de1/structSystem_1_1Guid_abc90d848a28185039d0b2668457032c8.html#abc90d848a28185039d0b2668457032c8',1,'System::Guid']]]
 ];

@@ -4,6 +4,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls =
     [ "Append", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#a4f78a3ab59b3dffcdc5b68328a46f103", null ],
     [ "AssembleBindPanels", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls_aac2a6d0131fb982be671103c6408c824.html#aac2a6d0131fb982be671103c6408c824", null ],
     [ "CompareTo", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateBindingGroup", "d9/d76/classTerraria_1_1GameContent_1_1UI_1_1States_1_1UIManageControls_afdfdf2014e96d25172bc4a413b450ce0.html#afdfdf2014e96d25172bc4a413b450ce0", null ],

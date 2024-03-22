@@ -1,0 +1,4 @@
+var ExtendedProtectionPolicyTypeConverter_8cs =
+[
+    [ "System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter", "dd/d11/classSystem_1_1Security_1_1Authentication_1_1ExtendedProtection_1_1ExtendedProtectionPolicyTypeConverter.html", "dd/d11/classSystem_1_1Security_1_1Authentication_1_1ExtendedProtection_1_1ExtendedProtectionPolicyTypeConverter" ]
+];

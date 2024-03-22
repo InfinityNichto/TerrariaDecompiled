@@ -1,0 +1,9 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState =
+[
+    [ "NonGreedyState", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_a691c3403ef045b77d5f28f39cc75d383.html#a691c3403ef045b77d5f28f39cc75d383", null ],
+    [ "AcceptFewerThanBatchSize", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_a26f444f9c4402a056356d471ab6af13e.html#a26f444f9c4402a056356d471ab6af13e", null ],
+    [ "PostponedMessages", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_aee470a11351008043d486bd7f300a5f0.html#aee470a11351008043d486bd7f300a5f0", null ],
+    [ "PostponedMessagesTemp", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_ab29aaaedbada24509283f7ea4f96ccba.html#ab29aaaedbada24509283f7ea4f96ccba", null ],
+    [ "ReservedSourcesTemp", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_a0cec0ff9ef2131afa0781c111c9816c4.html#a0cec0ff9ef2131afa0781c111c9816c4", null ],
+    [ "TaskForInputProcessing", "d7/d83/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchBlock_1_1BatchBlockTargetCore_1_1NonGreedyState_a74ffb88fecabe176be3da9428b5f7f8f.html#a74ffb88fecabe176be3da9428b5f7f8f", null ]
+];

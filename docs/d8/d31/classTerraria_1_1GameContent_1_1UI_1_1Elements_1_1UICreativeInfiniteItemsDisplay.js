@@ -17,6 +17,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDis
     [ "BuildSacrificeMenuContents", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay_a73bd09673556c264b2391105e933ac59.html#a73bd09673556c264b2391105e933ac59", null ],
     [ "Click_SearchArea", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay_ac11c5f42fb564b01135f25a1a0554c10.html#ac11c5f42fb564b01135f25a1a0554c10", null ],
     [ "CompareTo", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "CreateBasicPanel", "d8/d31/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UICreativeInfiniteItemsDisplay_ae08a68b9bf13271353376e08eff7c9b7.html#ae08a68b9bf13271353376e08eff7c9b7", null ],

@@ -1,0 +1,25 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView =
+[
+    [ "DebugView", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a350f6e87227b80a85a062ed0289cf181.html#a350f6e87227b80a85a062ed0289cf181", null ],
+    [ "DebugView", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_af65e783cb3832135b36021e43bac0b61.html#af65e783cb3832135b36021e43bac0b61", null ],
+    [ "_batchedJoinBlock", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ace818dfb5429826c969626ae2c4d34b1.html#ace818dfb5429826c969626ae2c4d34b1", null ],
+    [ "_batchedJoinBlock", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ab485f5598f787cece5fc0667cae77243.html#ab485f5598f787cece5fc0667cae77243", null ],
+    [ "_sourceDebuggingInformation", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a67eafa5a25f8a80af3a97006bb4f5af1.html#a67eafa5a25f8a80af3a97006bb4f5af1", null ],
+    [ "_sourceDebuggingInformation", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_aae5e26b286e6671e39c4a8408e723949.html#aae5e26b286e6671e39c4a8408e723949", null ],
+    [ "BatchesCreated", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_aee74b9e5d6b2e0ce79d78e47b1a525e1.html#aee74b9e5d6b2e0ce79d78e47b1a525e1", null ],
+    [ "BatchSize", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a008aa292618b84d3662796fc5dc2364c.html#a008aa292618b84d3662796fc5dc2364c", null ],
+    [ "DataflowBlockOptions", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a151f07aaf3611d20932eb331ef36d132.html#a151f07aaf3611d20932eb331ef36d132", null ],
+    [ "Id", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ad9f100d8c02a50d9dd8048600e800ba6.html#ad9f100d8c02a50d9dd8048600e800ba6", null ],
+    [ "IsCompleted", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a7087462ad96ee1006e47bd9621c724a5.html#a7087462ad96ee1006e47bd9621c724a5", null ],
+    [ "LinkedTargets", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a8880ae226280116407df1f50d90240fc.html#a8880ae226280116407df1f50d90240fc", null ],
+    [ "LinkedTargets", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ac816c5aa7a57ecf1422a1f351c6e8014.html#ac816c5aa7a57ecf1422a1f351c6e8014", null ],
+    [ "NextMessageReservedFor", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a9a9647d616ccaf1081424430e7cc644a.html#a9a9647d616ccaf1081424430e7cc644a", null ],
+    [ "NextMessageReservedFor", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a40079ab2a2810bbcbc7b368169c9c382.html#a40079ab2a2810bbcbc7b368169c9c382", null ],
+    [ "OutputQueue", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a187e9c51adfab682ff5133cd8692edcc.html#a187e9c51adfab682ff5133cd8692edcc", null ],
+    [ "OutputQueue", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ac510724c683206a0294a4cc651decb33.html#ac510724c683206a0294a4cc651decb33", null ],
+    [ "RemainingItemsForBatch", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a3c8c3bf52d63d5a1394653303d11d204.html#a3c8c3bf52d63d5a1394653303d11d204", null ],
+    [ "Target1", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_accb317ffcf52a876893d0a1a33de2ee7.html#accb317ffcf52a876893d0a1a33de2ee7", null ],
+    [ "Target2", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a278a249693e6421a969a0eab86aeb995.html#a278a249693e6421a969a0eab86aeb995", null ],
+    [ "Target3", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_ad68709c5262b7359e6e1bcf338cfa96c.html#ad68709c5262b7359e6e1bcf338cfa96c", null ],
+    [ "TaskForOutputProcessing", "de/d71/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1BatchedJoinBlock_1_1DebugView_a189f1e407fecba9e24e632828ab37be9.html#a189f1e407fecba9e24e632828ab37be9", null ]
+];

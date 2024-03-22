@@ -112,22 +112,22 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/da0/classint.html">int</a></td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>center</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>center</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ref Vector2</td>          <td class="paramname"><span class="paramname"><em>closestPointOut</em>, </span></td>
+          <td class="paramtype">ref <a class="el" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>closestPointOut</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -157,19 +157,19 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b
 <div class="line"><span class="lineno">  194</span>        {</div>
 <div class="line"><span class="lineno">  195</span>            edgesToTest &amp;= TileEdges.Top | TileEdges.BottomLeftSlope | <a class="code hl_enumeration" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a05213fbac4d5db4be99736bc194cb2c8.html#a05213fbac4d5db4be99736bc194cb2c8">TileEdges</a>.BottomRightSlope;</div>
 <div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>        Vector2 tilePosition = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)x * 16f, (<span class="keywordtype">float</span>)y * 16f);</div>
+<div class="line"><span class="lineno">  197</span>        <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a> tilePosition = <span class="keyword">new</span> <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a>((<span class="keywordtype">float</span>)x * 16f, (<span class="keywordtype">float</span>)y * 16f);</div>
 <div class="line"><span class="lineno">  198</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  199</span>        <a class="code hl_struct" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment.html">LineSegment</a> edge = <span class="keywordflow">default</span>(<a class="code hl_struct" href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment.html">LineSegment</a>);</div>
 <div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_aa5a049df094679bd25d8b5bd9023839f.html#aa5a049df094679bd25d8b5bd9023839f">GetSlopeEdge</a>(ref edgesToTest, tile, tilePosition, ref edge))</div>
 <div class="line"><span class="lineno">  201</span>        {</div>
 <div class="line"><span class="lineno">  202</span>            closestPointOut = <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">ClosestPointOnLineSegment</a>(center, edge);</div>
-<div class="line"><span class="lineno">  203</span>            distanceSquaredOut = Vector2.DistanceSquared(closestPointOut, center);</div>
+<div class="line"><span class="lineno">  203</span>            distanceSquaredOut = <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a>.<a class="code hl_function" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d.html#ad38d673a8138fb36f9eef89e5378f94d">DistanceSquared</a>(closestPointOut, center);</div>
 <div class="line"><span class="lineno">  204</span>            flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  205</span>        }</div>
 <div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ad80d33b2afcf690a70036cb45ffecab0.html#ad80d33b2afcf690a70036cb45ffecab0">GetTopOrBottomEdge</a>(edgesToTest, x, y, tilePosition, ref edge))</div>
 <div class="line"><span class="lineno">  207</span>        {</div>
-<div class="line"><span class="lineno">  208</span>            Vector2 vector = <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">ClosestPointOnLineSegment</a>(center, edge);</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordtype">float</span> num = Vector2.DistanceSquared(vector, center);</div>
+<div class="line"><span class="lineno">  208</span>            <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a> vector = <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">ClosestPointOnLineSegment</a>(center, edge);</div>
+<div class="line"><span class="lineno">  209</span>            <span class="keywordtype">float</span> num = <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a>.<a class="code hl_function" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d.html#ad38d673a8138fb36f9eef89e5378f94d">DistanceSquared</a>(vector, center);</div>
 <div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (!flag || num &lt; distanceSquaredOut)</div>
 <div class="line"><span class="lineno">  211</span>            {</div>
 <div class="line"><span class="lineno">  212</span>                distanceSquaredOut = num;</div>
@@ -179,8 +179,8 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b
 <div class="line"><span class="lineno">  216</span>        }</div>
 <div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a246f7556969cb08668292dffac4bdbca.html#a246f7556969cb08668292dffac4bdbca">GetLeftOrRightEdge</a>(edgesToTest, x, y, tilePosition, ref edge))</div>
 <div class="line"><span class="lineno">  218</span>        {</div>
-<div class="line"><span class="lineno">  219</span>            Vector2 vector2 = <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">ClosestPointOnLineSegment</a>(center, edge);</div>
-<div class="line"><span class="lineno">  220</span>            <span class="keywordtype">float</span> num2 = Vector2.DistanceSquared(vector2, center);</div>
+<div class="line"><span class="lineno">  219</span>            <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a> vector2 = <a class="code hl_function" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">ClosestPointOnLineSegment</a>(center, edge);</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordtype">float</span> num2 = <a class="code hl_struct" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Vector2</a>.<a class="code hl_function" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d.html#ad38d673a8138fb36f9eef89e5378f94d">DistanceSquared</a>(vector2, center);</div>
 <div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (!flag || num2 &lt; distanceSquaredOut)</div>
 <div class="line"><span class="lineno">  222</span>            {</div>
 <div class="line"><span class="lineno">  223</span>                distanceSquaredOut = num2;</div>
@@ -196,25 +196,13 @@ $(function(){initNavTree('d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b
 <div class="ttc" id="aclassTerraria_1_1Physics_1_1BallCollision_aa5a049df094679bd25d8b5bd9023839f_html_aa5a049df094679bd25d8b5bd9023839f"><div class="ttname"><a href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_aa5a049df094679bd25d8b5bd9023839f.html#aa5a049df094679bd25d8b5bd9023839f">Terraria.Physics.BallCollision.GetSlopeEdge</a></div><div class="ttdeci">static bool GetSlopeEdge(ref TileEdges edgesToTest, Tile tile, Vector2 tilePosition, ref LineSegment edge)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc9/BallCollision_8cs_source.html#l00231">BallCollision.cs:231</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1Physics_1_1BallCollision_ad80d33b2afcf690a70036cb45ffecab0_html_ad80d33b2afcf690a70036cb45ffecab0"><div class="ttname"><a href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ad80d33b2afcf690a70036cb45ffecab0.html#ad80d33b2afcf690a70036cb45ffecab0">Terraria.Physics.BallCollision.GetTopOrBottomEdge</a></div><div class="ttdeci">static bool GetTopOrBottomEdge(TileEdges edgesToTest, int x, int y, Vector2 tilePosition, ref LineSegment edge)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc9/BallCollision_8cs_source.html#l00278">BallCollision.cs:278</a></div></div>
 <div class="ttc" id="anamespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd_html_a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152"><div class="ttname"><a href="../../d0/d0d/namespaceTerraria_1_1Physics_a460df4cd5b42416923caafb1b24d35dd.html#a460df4cd5b42416923caafb1b24d35ddac5457c5f3cfb4da8638ce7190f8e5152">Terraria.Physics.BallPassThroughType.Tile</a></div><div class="ttdeci">@ Tile</div></div>
+<div class="ttc" id="astructMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d_html_ad38d673a8138fb36f9eef89e5378f94d"><div class="ttname"><a href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d.html#ad38d673a8138fb36f9eef89e5378f94d">Microsoft.Xna.Framework.Vector2.DistanceSquared</a></div><div class="ttdeci">static float DistanceSquared(Vector2 value1, Vector2 value2)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/Microsoft_8Xna_8Framework_2Vector2_8cs_source.html#l00107">Vector2.cs:107</a></div></div>
+<div class="ttc" id="astructMicrosoft_1_1Xna_1_1Framework_1_1Vector2_html"><div class="ttname"><a href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2.html">Microsoft.Xna.Framework.Vector2</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/Microsoft_8Xna_8Framework_2Vector2_8cs_source.html#l00011">Vector2.cs:12</a></div></div>
 <div class="ttc" id="astructTerraria_1_1DataStructures_1_1LineSegment_html"><div class="ttname"><a href="../../de/d3f/structTerraria_1_1DataStructures_1_1LineSegment.html">Terraria.DataStructures.LineSegment</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d0a/LineSegment_8cs_source.html#l00005">LineSegment.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">Terraria.Physics.BallCollision.ClosestPointOnLineSegment()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a246f7556969cb08668292dffac4bdbca.html#a246f7556969cb08668292dffac4bdbca">Terraria.Physics.BallCollision.GetLeftOrRightEdge()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_aa5a049df094679bd25d8b5bd9023839f.html#aa5a049df094679bd25d8b5bd9023839f">Terraria.Physics.BallCollision.GetSlopeEdge()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ad80d33b2afcf690a70036cb45ffecab0.html#ad80d33b2afcf690a70036cb45ffecab0">Terraria.Physics.BallCollision.GetTopOrBottomEdge()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a50663c6ed56eea1a69a8c2db91488160.html#a50663c6ed56eea1a69a8c2db91488160">Terraria.Physics.BallCollision.ClosestPointOnLineSegment()</a>, <a class="el" href="../../dd/da4/structMicrosoft_1_1Xna_1_1Framework_1_1Vector2_ad38d673a8138fb36f9eef89e5378f94d.html#ad38d673a8138fb36f9eef89e5378f94d">Microsoft.Xna.Framework.Vector2.DistanceSquared()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a733ae3bfe37c93bf1cc86eb4ce27b57e.html#a733ae3bfe37c93bf1cc86eb4ce27b57e">Terraria.Tile.frameY</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a246f7556969cb08668292dffac4bdbca.html#a246f7556969cb08668292dffac4bdbca">Terraria.Physics.BallCollision.GetLeftOrRightEdge()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_aa5a049df094679bd25d8b5bd9023839f.html#aa5a049df094679bd25d8b5bd9023839f">Terraria.Physics.BallCollision.GetSlopeEdge()</a>, <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_ad80d33b2afcf690a70036cb45ffecab0.html#ad80d33b2afcf690a70036cb45ffecab0">Terraria.Physics.BallCollision.GetTopOrBottomEdge()</a>, <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a38bb9749f89eeb6c767e86efa96dbc91.html#a38bb9749f89eeb6c767e86efa96dbc91">Terraria.Tile.nactive()</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8d9b64d5cfb1f943fc5e76c8b1ae4245.html#a8d9b64d5cfb1f943fc5e76c8b1ae4245">Terraria.Main.tile</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a8bcfd283fba8873b30721dcc689dc4b9.html#a8bcfd283fba8873b30721dcc689dc4b9">Terraria.Main.tileSolid</a>, <a class="el" href="../../da/dd5/classTerraria_1_1Main_a24226c699f21bcbad31c7607b695506a.html#a24226c699f21bcbad31c7607b695506a">Terraria.Main.tileSolidTop</a>, and <a class="el" href="../../d3/ddc/classTerraria_1_1Tile_a80ff591baeb6738b9bc9328babaa2a3f.html#a80ff591baeb6738b9bc9328babaa2a3f">Terraria.Tile.type</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_aa03609d276e5401880cf2a7d5d3fa248.html#aa03609d276e5401880cf2a7d5d3fa248">Terraria.Physics.BallCollision.GetClosestEdgeToCircle()</a>.</p>
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b8d5326dd098b3ac63072a92e67bd_a741b8d5326dd098b3ac63072a92e67bd_cgraph.svg" width="100%" height="520"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d2/d86/classTerraria_1_1Physics_1_1BallCollision_a741b8d5326dd098b3ac63072a92e67bd_a741b8d5326dd098b3ac63072a92e67bd_icgraph.svg" width="100%" height="558"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>

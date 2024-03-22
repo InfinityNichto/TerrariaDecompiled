@@ -1,0 +1,7 @@
+var BinaryQueryOperator_8cs =
+[
+    [ "System.Linq.Parallel.BinaryQueryOperator< TLeftInput, TRightInput, TOutput >", "de/d38/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator.html", "de/d38/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator" ],
+    [ "System.Linq.Parallel.BinaryQueryOperator< TLeftInput, TRightInput, TOutput >.BinaryQueryOperatorResults", "de/df3/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults.html", "de/df3/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults" ],
+    [ "System.Linq.Parallel.BinaryQueryOperator< TLeftInput, TRightInput, TOutput >.BinaryQueryOperatorResults.LeftChildResultsRecipient", "d6/dea/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults_1_1LeftChildResultsRecipient.html", "d6/dea/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults_1_1LeftChildResultsRecipient" ],
+    [ "System.Linq.Parallel.BinaryQueryOperator< TLeftInput, TRightInput, TOutput >.BinaryQueryOperatorResults.RightChildResultsRecipient< TLeftKey >", "d4/df5/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults_1_1RightChildResultsRecipient.html", "d4/df5/classSystem_1_1Linq_1_1Parallel_1_1BinaryQueryOperator_1_1BinaryQueryOperatorResults_1_1RightChildResultsRecipient" ]
+];

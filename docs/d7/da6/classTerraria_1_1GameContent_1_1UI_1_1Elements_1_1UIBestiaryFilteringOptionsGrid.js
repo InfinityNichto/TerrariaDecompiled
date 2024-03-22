@@ -7,6 +7,8 @@ var classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptions
     [ "BuildContainer", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid_abd8d3b9676e139b18d69cce1b97472cb.html#abd8d3b9676e139b18d69cce1b97472cb", null ],
     [ "ClickOption", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid_ae6289405fd1c1717ec59b63072fcb9f7.html#ae6289405fd1c1717ec59b63072fcb9f7", null ],
     [ "CompareTo", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#a2994ca41b4979ba577e1ee3d645568f9", null ],
+    [ "CompareTo", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#aee07ac6c066c32fac845169afa9fd0e9", null ],
+    [ "CompareTo", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#a01c7b7c2613269003848242162567051", null ],
     [ "ContainsPoint", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#a8f396cc02a5946a0911215c4a2ee71c0", null ],
     [ "CopyStyle", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#accdf02eb116da34a9acbd1791809671d", null ],
     [ "Deactivate", "d7/da6/classTerraria_1_1GameContent_1_1UI_1_1Elements_1_1UIBestiaryFilteringOptionsGrid.html#a172ab329792a6b10d313e66ccd63f30f", null ],

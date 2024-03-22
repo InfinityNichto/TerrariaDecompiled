@@ -1,0 +1,188 @@
+var namespaceSystem_1_1Security_1_1AccessControl =
+[
+    [ "AccessRule", "d3/da5/classSystem_1_1Security_1_1AccessControl_1_1AccessRule.html", "d3/da5/classSystem_1_1Security_1_1AccessControl_1_1AccessRule" ],
+    [ "AceEnumerator", "d2/df9/classSystem_1_1Security_1_1AccessControl_1_1AceEnumerator.html", "d2/df9/classSystem_1_1Security_1_1AccessControl_1_1AceEnumerator" ],
+    [ "AuditRule", "dc/d7d/classSystem_1_1Security_1_1AccessControl_1_1AuditRule.html", "dc/d7d/classSystem_1_1Security_1_1AccessControl_1_1AuditRule" ],
+    [ "AuthorizationRule", "d1/dc3/classSystem_1_1Security_1_1AccessControl_1_1AuthorizationRule.html", "d1/dc3/classSystem_1_1Security_1_1AccessControl_1_1AuthorizationRule" ],
+    [ "AuthorizationRuleCollection", "d7/d66/classSystem_1_1Security_1_1AccessControl_1_1AuthorizationRuleCollection.html", "d7/d66/classSystem_1_1Security_1_1AccessControl_1_1AuthorizationRuleCollection" ],
+    [ "CommonAce", "de/da3/classSystem_1_1Security_1_1AccessControl_1_1CommonAce.html", "de/da3/classSystem_1_1Security_1_1AccessControl_1_1CommonAce" ],
+    [ "CommonAcl", "df/d77/classSystem_1_1Security_1_1AccessControl_1_1CommonAcl.html", "df/d77/classSystem_1_1Security_1_1AccessControl_1_1CommonAcl" ],
+    [ "CommonObjectSecurity", "d5/d80/classSystem_1_1Security_1_1AccessControl_1_1CommonObjectSecurity.html", "d5/d80/classSystem_1_1Security_1_1AccessControl_1_1CommonObjectSecurity" ],
+    [ "CommonSecurityDescriptor", "d8/dc5/classSystem_1_1Security_1_1AccessControl_1_1CommonSecurityDescriptor.html", "d8/dc5/classSystem_1_1Security_1_1AccessControl_1_1CommonSecurityDescriptor" ],
+    [ "CompoundAce", "de/db0/classSystem_1_1Security_1_1AccessControl_1_1CompoundAce.html", "de/db0/classSystem_1_1Security_1_1AccessControl_1_1CompoundAce" ],
+    [ "CustomAce", "da/d8c/classSystem_1_1Security_1_1AccessControl_1_1CustomAce.html", "da/d8c/classSystem_1_1Security_1_1AccessControl_1_1CustomAce" ],
+    [ "DirectoryObjectSecurity", "de/df0/classSystem_1_1Security_1_1AccessControl_1_1DirectoryObjectSecurity.html", "de/df0/classSystem_1_1Security_1_1AccessControl_1_1DirectoryObjectSecurity" ],
+    [ "DirectorySecurity", "d8/d72/classSystem_1_1Security_1_1AccessControl_1_1DirectorySecurity.html", "d8/d72/classSystem_1_1Security_1_1AccessControl_1_1DirectorySecurity" ],
+    [ "DiscretionaryAcl", "d4/d4a/classSystem_1_1Security_1_1AccessControl_1_1DiscretionaryAcl.html", "d4/d4a/classSystem_1_1Security_1_1AccessControl_1_1DiscretionaryAcl" ],
+    [ "FileSecurity", "db/d10/classSystem_1_1Security_1_1AccessControl_1_1FileSecurity.html", "db/d10/classSystem_1_1Security_1_1AccessControl_1_1FileSecurity" ],
+    [ "FileSystemAccessRule", "d0/d0a/classSystem_1_1Security_1_1AccessControl_1_1FileSystemAccessRule.html", "d0/d0a/classSystem_1_1Security_1_1AccessControl_1_1FileSystemAccessRule" ],
+    [ "FileSystemAuditRule", "d3/d7c/classSystem_1_1Security_1_1AccessControl_1_1FileSystemAuditRule.html", "d3/d7c/classSystem_1_1Security_1_1AccessControl_1_1FileSystemAuditRule" ],
+    [ "FileSystemSecurity", "d8/dd3/classSystem_1_1Security_1_1AccessControl_1_1FileSystemSecurity.html", "d8/dd3/classSystem_1_1Security_1_1AccessControl_1_1FileSystemSecurity" ],
+    [ "GenericAce", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce.html", "db/dd7/classSystem_1_1Security_1_1AccessControl_1_1GenericAce" ],
+    [ "GenericAcl", "df/dd4/classSystem_1_1Security_1_1AccessControl_1_1GenericAcl.html", "df/dd4/classSystem_1_1Security_1_1AccessControl_1_1GenericAcl" ],
+    [ "GenericSecurityDescriptor", "d8/d74/classSystem_1_1Security_1_1AccessControl_1_1GenericSecurityDescriptor.html", "d8/d74/classSystem_1_1Security_1_1AccessControl_1_1GenericSecurityDescriptor" ],
+    [ "KnownAce", "d5/def/classSystem_1_1Security_1_1AccessControl_1_1KnownAce.html", "d5/def/classSystem_1_1Security_1_1AccessControl_1_1KnownAce" ],
+    [ "NativeObjectSecurity", "d1/ddb/classSystem_1_1Security_1_1AccessControl_1_1NativeObjectSecurity.html", "d1/ddb/classSystem_1_1Security_1_1AccessControl_1_1NativeObjectSecurity" ],
+    [ "ObjectAccessRule", "de/d7f/classSystem_1_1Security_1_1AccessControl_1_1ObjectAccessRule.html", "de/d7f/classSystem_1_1Security_1_1AccessControl_1_1ObjectAccessRule" ],
+    [ "ObjectAce", "d5/d80/classSystem_1_1Security_1_1AccessControl_1_1ObjectAce.html", "d5/d80/classSystem_1_1Security_1_1AccessControl_1_1ObjectAce" ],
+    [ "ObjectAuditRule", "d2/da5/classSystem_1_1Security_1_1AccessControl_1_1ObjectAuditRule.html", "d2/da5/classSystem_1_1Security_1_1AccessControl_1_1ObjectAuditRule" ],
+    [ "ObjectSecurity", "dd/dae/classSystem_1_1Security_1_1AccessControl_1_1ObjectSecurity.html", "dd/dae/classSystem_1_1Security_1_1AccessControl_1_1ObjectSecurity" ],
+    [ "Privilege", "d6/d2e/classSystem_1_1Security_1_1AccessControl_1_1Privilege.html", "d6/d2e/classSystem_1_1Security_1_1AccessControl_1_1Privilege" ],
+    [ "PrivilegeNotHeldException", "dd/d66/classSystem_1_1Security_1_1AccessControl_1_1PrivilegeNotHeldException.html", "dd/d66/classSystem_1_1Security_1_1AccessControl_1_1PrivilegeNotHeldException" ],
+    [ "QualifiedAce", "d4/d76/classSystem_1_1Security_1_1AccessControl_1_1QualifiedAce.html", "d4/d76/classSystem_1_1Security_1_1AccessControl_1_1QualifiedAce" ],
+    [ "RawAcl", "d9/d47/classSystem_1_1Security_1_1AccessControl_1_1RawAcl.html", "d9/d47/classSystem_1_1Security_1_1AccessControl_1_1RawAcl" ],
+    [ "RawSecurityDescriptor", "dc/d1d/classSystem_1_1Security_1_1AccessControl_1_1RawSecurityDescriptor.html", "dc/d1d/classSystem_1_1Security_1_1AccessControl_1_1RawSecurityDescriptor" ],
+    [ "SystemAcl", "d0/d4b/classSystem_1_1Security_1_1AccessControl_1_1SystemAcl.html", "d0/d4b/classSystem_1_1Security_1_1AccessControl_1_1SystemAcl" ],
+    [ "Win32", "d0/d50/classSystem_1_1Security_1_1AccessControl_1_1Win32.html", "d0/d50/classSystem_1_1Security_1_1AccessControl_1_1Win32" ],
+    [ "AccessControlActions", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a0742c9bd810a532bff0a1cea92efcf7f.html#a0742c9bd810a532bff0a1cea92efcf7f", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a0742c9bd810a532bff0a1cea92efcf7f.html#a0742c9bd810a532bff0a1cea92efcf7fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "View", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a0742c9bd810a532bff0a1cea92efcf7f.html#a0742c9bd810a532bff0a1cea92efcf7fa4351cfebe4b61d8aa5efa1d020710005", null ],
+      [ "Change", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a0742c9bd810a532bff0a1cea92efcf7f.html#a0742c9bd810a532bff0a1cea92efcf7faf4ec5f57bd4d31b803312d873be40da9", null ]
+    ] ],
+    [ "AccessControlModification", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482ee", [
+      [ "Add", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eeaec211f7c20af43e742bf2570c3cb84f9", null ],
+      [ "Set", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eea5d5b78699e57104f2fa03bbdf7b9197b", null ],
+      [ "Reset", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eea526d688f37a86d3c3f27d0c5016eb71d", null ],
+      [ "Remove", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eea1063e38cb53d94d386f21227fcd84717", null ],
+      [ "RemoveAll", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eeaacdfe07ce0b00334b0b17e5e825dcc4d", null ],
+      [ "RemoveSpecific", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad414067eee2e8b2b295d862335d482ee.html#ad414067eee2e8b2b295d862335d482eeadbb03a8de5f099cc9dfc7020edd0194b", null ]
+    ] ],
+    [ "AccessControlSections", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91f", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Audit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91faeda63b570db82e05c2fd7b5f0c3bb20f", null ],
+      [ "Access", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91fabf733d8a933c1601697f364223fc7ecb", null ],
+      [ "Owner", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91fab6f4a2ec6356bbd56d49f2096bf9d3d3", null ],
+      [ "Group", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91fa03937134cedab9078be39a77ee3a48a0", null ],
+      [ "All", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a3547f27f5c87a0f94f16b0cbcafac91f.html#a3547f27f5c87a0f94f16b0cbcafac91fab1c94ca2fbc3e78fc30069c8d0f01680", null ]
+    ] ],
+    [ "AccessControlType", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a360f676b95644acfb6322ff1886a6d28.html#a360f676b95644acfb6322ff1886a6d28", [
+      [ "Allow", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a360f676b95644acfb6322ff1886a6d28.html#a360f676b95644acfb6322ff1886a6d28a45f0fb72a0defdfdb01de4b5a5a6876b", null ],
+      [ "Deny", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a360f676b95644acfb6322ff1886a6d28.html#a360f676b95644acfb6322ff1886a6d28a3682d1665cf331373000c20680732d3a", null ]
+    ] ],
+    [ "AceFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "ObjectInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004ad5e3976cd396a5e1a65250081118ad4b", null ],
+      [ "ContainerInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a4dc7537f04238501add6faa4d5471ee5", null ],
+      [ "NoPropagateInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004abb40985bac4f33c37c5e3847e7c0b25f", null ],
+      [ "InheritOnly", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a3ae23849d2ca9fa9d828c74e1b4d4534", null ],
+      [ "Inherited", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004ab0b517d3de3f2b55489e488a238a8c25", null ],
+      [ "SuccessfulAccess", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a49308feb34ffbce084ab090fb6f753c3", null ],
+      [ "FailedAccess", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a358930f2bbb59d29dcd959d97e7518a7", null ],
+      [ "InheritanceFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004a5aec97730f228c8badb651b82d6123cf", null ],
+      [ "AuditFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a8deedabaf370af34073291970dcfe004.html#a8deedabaf370af34073291970dcfe004ad1c46618c1621bf064e48ae9b396cc1b", null ]
+    ] ],
+    [ "AceQualifier", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a45ef3d03817eb46bc1e88ba336b7521c.html#a45ef3d03817eb46bc1e88ba336b7521c", [
+      [ "AccessAllowed", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a45ef3d03817eb46bc1e88ba336b7521c.html#a45ef3d03817eb46bc1e88ba336b7521ca4897987f05e17e6902d65b35870c107f", null ],
+      [ "AccessDenied", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a45ef3d03817eb46bc1e88ba336b7521c.html#a45ef3d03817eb46bc1e88ba336b7521cacbcc0759909213e7cdba1f0cbf253126", null ],
+      [ "SystemAudit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a45ef3d03817eb46bc1e88ba336b7521c.html#a45ef3d03817eb46bc1e88ba336b7521cae4b03764bce085a1b0bad4c0f5bc3a59", null ],
+      [ "SystemAlarm", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a45ef3d03817eb46bc1e88ba336b7521c.html#a45ef3d03817eb46bc1e88ba336b7521cacd66f6e56136fda0a794f384ba1fa49d", null ]
+    ] ],
+    [ "AceType", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45", [
+      [ "AccessAllowed", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a4897987f05e17e6902d65b35870c107f", null ],
+      [ "AccessDenied", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45acbcc0759909213e7cdba1f0cbf253126", null ],
+      [ "SystemAudit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45ae4b03764bce085a1b0bad4c0f5bc3a59", null ],
+      [ "SystemAlarm", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45acd66f6e56136fda0a794f384ba1fa49d", null ],
+      [ "AccessAllowedCompound", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a13c17c7b6413759f8e41161696218fe5", null ],
+      [ "AccessAllowedObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45ad0791ef76eb5c85be0b37ee1c727f308", null ],
+      [ "AccessDeniedObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a6e4874c1502e6747e95ca4538c5bcb02", null ],
+      [ "SystemAuditObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a8f6776117f5ab0b0bf64d9f35b5ea51b", null ],
+      [ "SystemAlarmObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a3a063ea4aa870c5e1ff32bfc0618f6be", null ],
+      [ "AccessAllowedCallback", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45ad4d34287584cacbf321fed4fe615cab0", null ],
+      [ "AccessDeniedCallback", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a48f1b6ace44e17befc98290cbdd56152", null ],
+      [ "AccessAllowedCallbackObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a19c82d66e765aa9b6ed22a5531f0bc90", null ],
+      [ "AccessDeniedCallbackObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a4daacb4d03231f640ba541aa5d64fa83", null ],
+      [ "SystemAuditCallback", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45aa8c7ab85ea97142faf7070e051b71836", null ],
+      [ "SystemAlarmCallback", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a20440937616f093b48056de3f48bfcee", null ],
+      [ "SystemAuditCallbackObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45a8bdbc585bf81afb01e7d0d5f9f8e71a3", null ],
+      [ "SystemAlarmCallbackObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45adb362308ef9ad437c0fd551e33fad1d9", null ],
+      [ "MaxDefinedAceType", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a25f74cbfb497b27f2befa62a736bfc45.html#a25f74cbfb497b27f2befa62a736bfc45ae54a0c06c5ce85aa724f167798bf76dd", null ]
+    ] ],
+    [ "AuditFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a52784c7b9ba7299e28d7813ddd6d4a97.html#a52784c7b9ba7299e28d7813ddd6d4a97", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a52784c7b9ba7299e28d7813ddd6d4a97.html#a52784c7b9ba7299e28d7813ddd6d4a97a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Success", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a52784c7b9ba7299e28d7813ddd6d4a97.html#a52784c7b9ba7299e28d7813ddd6d4a97a505a83f220c02df2f85c3810cd9ceb38", null ],
+      [ "Failure", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a52784c7b9ba7299e28d7813ddd6d4a97.html#a52784c7b9ba7299e28d7813ddd6d4a97ae139a585510a502bbf1841cf589f5086", null ]
+    ] ],
+    [ "CompoundAceType", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a4975a4dfe57b02ff6f66cdc71cdd3562.html#a4975a4dfe57b02ff6f66cdc71cdd3562", [
+      [ "Impersonation", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a4975a4dfe57b02ff6f66cdc71cdd3562.html#a4975a4dfe57b02ff6f66cdc71cdd3562ac377e99a8597d5abfaa43bd6ef4fb689", null ]
+    ] ],
+    [ "ControlFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "OwnerDefaulted", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a793c3ed7ed7605f350be2d462e46c033", null ],
+      [ "GroupDefaulted", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a18f491f4bcaa2f100d197cb6ae4fd73b", null ],
+      [ "DiscretionaryAclPresent", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02abc7bd42d98436bcd56a1aa69fed99d0a", null ],
+      [ "DiscretionaryAclDefaulted", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a5d7df6557561db17e74b76b8172f0aac", null ],
+      [ "SystemAclPresent", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02ab75a2315b0f38fdead892fc791a6d308", null ],
+      [ "SystemAclDefaulted", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02abf8cdc49f93e0d412ba4b130a3888040", null ],
+      [ "DiscretionaryAclUntrusted", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02afddad9a160ab40123bd296eef0bc8635", null ],
+      [ "ServerSecurity", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02ae023abe3a901bdf66233c9df7d95e452", null ],
+      [ "DiscretionaryAclAutoInheritRequired", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a47cd1d443622be1292fde6a0b471f23b", null ],
+      [ "SystemAclAutoInheritRequired", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02afb915313918049489db6802684492f75", null ],
+      [ "DiscretionaryAclAutoInherited", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a98fedb2081b1f6ddbcfc3d0368c2fd31", null ],
+      [ "SystemAclAutoInherited", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a7276f066980fdd4d86669359c9cb1f4b", null ],
+      [ "DiscretionaryAclProtected", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a6c75b19b5d0b1530f6f142c308c70df3", null ],
+      [ "SystemAclProtected", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a28bde5faf9fcdd336015e0b7325fd585", null ],
+      [ "RMControlValid", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02af765390e6f3c44b301f5c9d6c5ef62a9", null ],
+      [ "SelfRelative", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_afcb695b3e00c16a60aaa1d254f05ea02.html#afcb695b3e00c16a60aaa1d254f05ea02a8ff36f6fab3f46b7f68705b19ffd8123", null ]
+    ] ],
+    [ "FileSystemRights", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1a", [
+      [ "ReadData", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa9737b198b43957e0daee34be05d34687", null ],
+      [ "ListDirectory", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aab7d3aa194943aa16f20889f042086069", null ],
+      [ "WriteData", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa6e1b51cfac84762d246873062581366d", null ],
+      [ "CreateFiles", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aabbb992d8cfdc63aac2f7f49683724be2", null ],
+      [ "AppendData", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aafb0842088cddfff4746fea0f6a0afd01", null ],
+      [ "CreateDirectories", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aac8d000b7fbcb5f75f70bc423850b5e9f", null ],
+      [ "ReadExtendedAttributes", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa721920642d6f43e0f5d2172e0afee463", null ],
+      [ "WriteExtendedAttributes", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aadda2caf384dfda99dc7d5accaf2b8135", null ],
+      [ "ExecuteFile", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa7f7413bd983f50dae1342455318ccd69", null ],
+      [ "Traverse", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa975e8b324cf1e05ee9c7490b51c230e0", null ],
+      [ "DeleteSubdirectoriesAndFiles", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aabe0ed4c5cc820817d20b25c5dbd302fb", null ],
+      [ "ReadAttributes", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa29d5eebe071ec16a16eaf04b7cf717f5", null ],
+      [ "WriteAttributes", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa70e88a144f018b27557a6d1f7bfdc027", null ],
+      [ "Delete", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aaf2a6c498fb90ee345d997f888fce3b18", null ],
+      [ "ReadPermissions", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aae1c92b30b08d486bf4793cf49a55d6af", null ],
+      [ "ChangePermissions", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aaeee2f0e26d79c327733e00edcd874bb2", null ],
+      [ "TakeOwnership", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa0148c75e378cd6e4934669437136396e", null ],
+      [ "Synchronize", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aab18b960c57a784907dc1cd97ba8a8065", null ],
+      [ "FullControl", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa8a1db58568147877ebe2c30e1a822b8d", null ],
+      [ "Read", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa7a1a5f3e79fdc91edf2f5ead9d66abb4", null ],
+      [ "ReadAndExecute", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa8a1f1ed01b9d6d145309ce94f3721b65", null ],
+      [ "Write", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa1129c0e4d43f2d121652a7302712cff6", null ],
+      [ "Modify", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_aad233f3b7a2386db9a4744e33ef73f1a.html#aad233f3b7a2386db9a4744e33ef73f1aa7f090bbab1cc7f9c08bf4e54d932d3c0", null ]
+    ] ],
+    [ "InheritanceFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a211dfe4c7dc14c40bc2f74ea3aa6a0ff.html#a211dfe4c7dc14c40bc2f74ea3aa6a0ff", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a211dfe4c7dc14c40bc2f74ea3aa6a0ff.html#a211dfe4c7dc14c40bc2f74ea3aa6a0ffa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "ContainerInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a211dfe4c7dc14c40bc2f74ea3aa6a0ff.html#a211dfe4c7dc14c40bc2f74ea3aa6a0ffa4dc7537f04238501add6faa4d5471ee5", null ],
+      [ "ObjectInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a211dfe4c7dc14c40bc2f74ea3aa6a0ff.html#a211dfe4c7dc14c40bc2f74ea3aa6a0ffad5e3976cd396a5e1a65250081118ad4b", null ]
+    ] ],
+    [ "ObjectAceFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ac0ece01089bb580fa41abd0db719708a.html#ac0ece01089bb580fa41abd0db719708a", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ac0ece01089bb580fa41abd0db719708a.html#ac0ece01089bb580fa41abd0db719708aa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "ObjectAceTypePresent", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ac0ece01089bb580fa41abd0db719708a.html#ac0ece01089bb580fa41abd0db719708aa8fcb6d15494ff95b23c71d6eab1a7dce", null ],
+      [ "InheritedObjectAceTypePresent", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ac0ece01089bb580fa41abd0db719708a.html#ac0ece01089bb580fa41abd0db719708aa316d318a9e1aae968ea876bd0d043d3f", null ]
+    ] ],
+    [ "PropagationFlags", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a6a7b54bdd8418109324b795c1929d30f.html#a6a7b54bdd8418109324b795c1929d30f", [
+      [ "None", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a6a7b54bdd8418109324b795c1929d30f.html#a6a7b54bdd8418109324b795c1929d30fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "NoPropagateInherit", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a6a7b54bdd8418109324b795c1929d30f.html#a6a7b54bdd8418109324b795c1929d30fabb40985bac4f33c37c5e3847e7c0b25f", null ],
+      [ "InheritOnly", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a6a7b54bdd8418109324b795c1929d30f.html#a6a7b54bdd8418109324b795c1929d30fa3ae23849d2ca9fa9d828c74e1b4d4534", null ]
+    ] ],
+    [ "ResourceType", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2d", [
+      [ "Unknown", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "FileObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2daaa01a4f443bfa42bf66fd96c7a6a6e46", null ],
+      [ "Service", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2dac2ba7e785c49050f48da9aacc45c2b85", null ],
+      [ "Printer", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da37fe93164a9c7b7622bab12c349b98c8", null ],
+      [ "RegistryKey", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da19aba105214cd0ba3e135256bc64f2d2", null ],
+      [ "LMShare", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2daafe1288ef181a6522585fbcb2e671466", null ],
+      [ "KernelObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2dae001fe22a61413f0935879d9a1fbc7e4", null ],
+      [ "WindowObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2dae55a23bfe28a0e52c9505c63ce6e9302", null ],
+      [ "DSObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da638bb9511fe626903a7d4559285e1d1c", null ],
+      [ "DSObjectAll", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da2872e87deb15b2417bbac3fb3f3f54c1", null ],
+      [ "ProviderDefined", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2daa018dd8d8aeb1c1d47c26bca7a4a1c92", null ],
+      [ "WmiGuidObject", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da98decfddef7682a95c566603356e506f", null ],
+      [ "RegistryWow6432Key", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_a13e857c667c0d868b4d0800f73b06c2d.html#a13e857c667c0d868b4d0800f73b06c2da171de1fa446d60cee9ffacdf781d8ed1", null ]
+    ] ],
+    [ "SecurityInfos", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad82f75bd970a2f50d2d3aa5dcc4a1512.html#ad82f75bd970a2f50d2d3aa5dcc4a1512", [
+      [ "Owner", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad82f75bd970a2f50d2d3aa5dcc4a1512.html#ad82f75bd970a2f50d2d3aa5dcc4a1512ab6f4a2ec6356bbd56d49f2096bf9d3d3", null ],
+      [ "Group", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad82f75bd970a2f50d2d3aa5dcc4a1512.html#ad82f75bd970a2f50d2d3aa5dcc4a1512a03937134cedab9078be39a77ee3a48a0", null ],
+      [ "DiscretionaryAcl", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad82f75bd970a2f50d2d3aa5dcc4a1512.html#ad82f75bd970a2f50d2d3aa5dcc4a1512a3c425b5b46a6c222dcde2998c3a76547", null ],
+      [ "SystemAcl", "d5/d8e/namespaceSystem_1_1Security_1_1AccessControl_ad82f75bd970a2f50d2d3aa5dcc4a1512.html#ad82f75bd970a2f50d2d3aa5dcc4a1512a3cac3142a9bee70f935eb46ac07cc1de", null ]
+    ] ]
+];

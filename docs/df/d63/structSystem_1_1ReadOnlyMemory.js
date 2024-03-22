@@ -1,0 +1,28 @@
+var structSystem_1_1ReadOnlyMemory =
+[
+    [ "ReadOnlyMemory", "df/d63/structSystem_1_1ReadOnlyMemory_ad5015af6ad1255d5ddc5441f6f8752a2.html#ad5015af6ad1255d5ddc5441f6f8752a2", null ],
+    [ "ReadOnlyMemory", "df/d63/structSystem_1_1ReadOnlyMemory_a525507e68d99af222252a6cfd4dc9765.html#a525507e68d99af222252a6cfd4dc9765", null ],
+    [ "ReadOnlyMemory", "df/d63/structSystem_1_1ReadOnlyMemory_a58eeb1a7f0f2019a70172ee57ef0e8b6.html#a58eeb1a7f0f2019a70172ee57ef0e8b6", null ],
+    [ "CopyTo", "df/d63/structSystem_1_1ReadOnlyMemory_a5c289a66046d12347175e6eb11660483.html#a5c289a66046d12347175e6eb11660483", null ],
+    [ "Equals", "df/d63/structSystem_1_1ReadOnlyMemory_afd2547329e577e8649c430ff9184e178.html#afd2547329e577e8649c430ff9184e178", null ],
+    [ "Equals", "df/d63/structSystem_1_1ReadOnlyMemory_a295e2613a1d439823333875ae2ac23e0.html#a295e2613a1d439823333875ae2ac23e0", null ],
+    [ "Equals", "df/d63/structSystem_1_1ReadOnlyMemory.html#a5d372723026c2ae82d4bcd50067e582c", null ],
+    [ "GetHashCode", "df/d63/structSystem_1_1ReadOnlyMemory_a90a015715ebaadd6fe634643f7150f0f.html#a90a015715ebaadd6fe634643f7150f0f", null ],
+    [ "GetObjectStartLength", "df/d63/structSystem_1_1ReadOnlyMemory_a463571e7664222fb7f73a0de7b8feb1c.html#a463571e7664222fb7f73a0de7b8feb1c", null ],
+    [ "operator ReadOnlyMemory< T >", "df/d63/structSystem_1_1ReadOnlyMemory_a232a80671c2e74d6df1a16452f575c4c.html#a232a80671c2e74d6df1a16452f575c4c", null ],
+    [ "operator ReadOnlyMemory< T >", "df/d63/structSystem_1_1ReadOnlyMemory_af8dee90198f5a5c5638255c85c26a88f.html#af8dee90198f5a5c5638255c85c26a88f", null ],
+    [ "Pin", "df/d63/structSystem_1_1ReadOnlyMemory_ae49823355ec4383ff529be07de9808d5.html#ae49823355ec4383ff529be07de9808d5", null ],
+    [ "Slice", "df/d63/structSystem_1_1ReadOnlyMemory_a97ec568b7e1125cc4db4ba5a2fd0728a.html#a97ec568b7e1125cc4db4ba5a2fd0728a", null ],
+    [ "Slice", "df/d63/structSystem_1_1ReadOnlyMemory_aef12ccaaa12b68feb9b38522bcc1ec4b.html#aef12ccaaa12b68feb9b38522bcc1ec4b", null ],
+    [ "ToArray", "df/d63/structSystem_1_1ReadOnlyMemory_a8535457949a1464af3e3cdf0ce959772.html#a8535457949a1464af3e3cdf0ce959772", null ],
+    [ "ToString", "df/d63/structSystem_1_1ReadOnlyMemory_a02e0e61e4407456f619c8089652913c6.html#a02e0e61e4407456f619c8089652913c6", null ],
+    [ "TryCopyTo", "df/d63/structSystem_1_1ReadOnlyMemory_ae280d535fec3516742b45f8bca7e39bb.html#ae280d535fec3516742b45f8bca7e39bb", null ],
+    [ "_index", "df/d63/structSystem_1_1ReadOnlyMemory_ac89d8c3536ce4b24db959d9b7f10f97d.html#ac89d8c3536ce4b24db959d9b7f10f97d", null ],
+    [ "_length", "df/d63/structSystem_1_1ReadOnlyMemory_a6ce47f12eaadd0a080ebebd247653a58.html#a6ce47f12eaadd0a080ebebd247653a58", null ],
+    [ "_object", "df/d63/structSystem_1_1ReadOnlyMemory_ad119aafdbc31cf7be4fe17e4520f120f.html#ad119aafdbc31cf7be4fe17e4520f120f", null ],
+    [ "RemoveFlagsBitMask", "df/d63/structSystem_1_1ReadOnlyMemory_a82fbec50a8ab5c63cbe90a26a575bb53.html#a82fbec50a8ab5c63cbe90a26a575bb53", null ],
+    [ "Empty", "df/d63/structSystem_1_1ReadOnlyMemory_ace43f3d3be1ae61ffc5234d0c96eda09.html#ace43f3d3be1ae61ffc5234d0c96eda09", null ],
+    [ "IsEmpty", "df/d63/structSystem_1_1ReadOnlyMemory_a7016aea8745a629be467f9cc982bfa37.html#a7016aea8745a629be467f9cc982bfa37", null ],
+    [ "Length", "df/d63/structSystem_1_1ReadOnlyMemory_aef7854215f1d961bb9c913ca613c414a.html#aef7854215f1d961bb9c913ca613c414a", null ],
+    [ "Span", "df/d63/structSystem_1_1ReadOnlyMemory_a7c729d0b64d4762867999e9b0db34702.html#a7c729d0b64d4762867999e9b0db34702", null ]
+];

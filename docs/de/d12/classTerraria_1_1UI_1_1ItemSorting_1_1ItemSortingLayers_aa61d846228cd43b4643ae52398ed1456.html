@@ -114,30 +114,30 @@ $(function(){initNavTree('de/d12/classTerraria_1_1UI_1_1ItemSorting_1_1ItemSorti
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> ItemSortingLayer(<span class="stringliteral">&quot;Misc - Ropes&quot;</span>, delegate(ItemSortingLayer layer, Item[] inv, <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> itemsToSort)</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> ItemSortingLayer(<span class="stringliteral">&quot;Misc - Ropes&quot;</span>, delegate(ItemSortingLayer layer, Item[] inv, List&lt;int&gt; itemsToSort)</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code hl_class" href="../../d6/da9/classList.html">List&lt;int&gt;</a> indexesSortable6 = itemsToSort.Where((<span class="keywordtype">int</span> i) =&gt; inv[i].netID &gt; 0 &amp;&amp; ItemID.Sets.SortingPriorityRopes[inv[i].netID] &gt; -1).ToList();</div>
+<div class="line">            List&lt;int&gt; indexesSortable6 = itemsToSort.Where((<span class="keywordtype">int</span> i) =&gt; inv[i].netID &gt; 0 &amp;&amp; ItemID.Sets.SortingPriorityRopes[inv[i].netID] &gt; -1).ToList();</div>
 <div class="line">            layer.Validate(ref indexesSortable6, inv);</div>
 <div class="line">            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> item33 <span class="keywordflow">in</span> indexesSortable6)</div>
 <div class="line">            {</div>
 <div class="line">                itemsToSort.Remove(item33);</div>
 <div class="line">            }</div>
-<div class="line">            indexesSortable6.Sort(delegate(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line">            <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">indexesSortable6</a>.Sort(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">delegate</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">int</span> num6 = <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee.html#aa1213df45e0c68121369930cf0e556ee">SortingPriorityRopes</a>[inv[y].netID].CompareTo(<a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee.html#aa1213df45e0c68121369930cf0e556ee">SortingPriorityRopes</a>[inv[x].netID]);</div>
-<div class="line">                <span class="keywordflow">if</span> (num6 == 0)</div>
+<div class="line">                <span class="keywordtype">int</span> <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> = <a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee.html#aa1213df45e0c68121369930cf0e556ee">SortingPriorityRopes</a>[<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[y].netID].CompareTo(<a class="code hl_class" href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">ItemID</a>.<a class="code hl_class" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Sets</a>.<a class="code hl_variable" href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee.html#aa1213df45e0c68121369930cf0e556ee">SortingPriorityRopes</a>[<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[x].netID]);</div>
+<div class="line">                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> == 0)</div>
 <div class="line">                {</div>
-<div class="line">                    num6 = inv[y].stack.CompareTo(inv[x].stack);</div>
+<div class="line">                    <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> = <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[y].stack.CompareTo(<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">inv</a>[x].stack);</div>
 <div class="line">                }</div>
-<div class="line">                <span class="keywordflow">if</span> (num6 == 0)</div>
+<div class="line">                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> == 0)</div>
 <div class="line">                {</div>
-<div class="line">                    num6 = x.CompareTo(y);</div>
+<div class="line">                    <a class="code hl_class" href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">num6</a> = x.CompareTo(y);</div>
 <div class="line">                }</div>
 <div class="line">                <span class="keywordflow">return</span> num6;</div>
 <div class="line">            });</div>
 <div class="line">            <span class="keywordflow">return</span> indexesSortable6;</div>
 <div class="line">        })</div>
-<div class="ttc" id="aclassList_html"><div class="ttname"><a href="../../d6/da9/classList.html">List</a></div></div>
+<div class="ttc" id="aclassSystem_1_1Collections_1_1Generic_1_1Dictionary_html"><div class="ttname"><a href="../../d7/d26/classSystem_1_1Collections_1_1Generic_1_1Dictionary.html">System.Collections.Generic.Dictionary</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d61/Dictionary_8cs_source.html#l00013">Dictionary.cs:14</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee_html_aa1213df45e0c68121369930cf0e556ee"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets_aa1213df45e0c68121369930cf0e556ee.html#aa1213df45e0c68121369930cf0e556ee">Terraria.ID.ItemID.Sets.SortingPriorityRopes</a></div><div class="ttdeci">static int[] SortingPriorityRopes</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d27/ItemID_8cs_source.html#l01072">ItemID.cs:1072</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_1_1Sets_html"><div class="ttname"><a href="../../d8/dc6/classTerraria_1_1ID_1_1ItemID_1_1Sets.html">Terraria.ID.ItemID.Sets</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d27/ItemID_8cs_source.html#l00045">ItemID.cs:46</a></div></div>
 <div class="ttc" id="aclassTerraria_1_1ID_1_1ItemID_html"><div class="ttname"><a href="../../de/d57/classTerraria_1_1ID_1_1ItemID.html">Terraria.ID.ItemID</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d27/ItemID_8cs_source.html#l00008">ItemID.cs:9</a></div></div>

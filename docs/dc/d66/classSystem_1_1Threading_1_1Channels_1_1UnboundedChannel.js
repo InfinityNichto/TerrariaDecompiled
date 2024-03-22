@@ -1,0 +1,25 @@
+var classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel =
+[
+    [ "UnboundedChannelReader", "d0/df5/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_1_1UnboundedChannelReader.html", "d0/df5/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_1_1UnboundedChannelReader" ],
+    [ "UnboundedChannelWriter", "db/d6e/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_1_1UnboundedChannelWriter.html", "db/d6e/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_1_1UnboundedChannelWriter" ],
+    [ "UnboundedChannel", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_af05f13c874838e5343f99ebb64d2fd82.html#af05f13c874838e5343f99ebb64d2fd82", null ],
+    [ "CreateBounded< T >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#aa19980042f88aa41d4d9b2527cf89121", null ],
+    [ "CreateBounded< T >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#ada6ced0a178eb682432ce464116d7a6a", null ],
+    [ "CreateBounded< T >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#ab1193659b0d700f61427606f03ae70e1", null ],
+    [ "CreateUnbounded< T >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#a77124462a6822a7802b59230343ea7e6", null ],
+    [ "CreateUnbounded< T >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#a88bd56b279202f8be8606fddc35c859d", null ],
+    [ "GetEnumerator", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a9fb228ac2b81cea4559fbd024d62b433.html#a9fb228ac2b81cea4559fbd024d62b433", null ],
+    [ "operator ChannelReader< TRead >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#aecb76a22ac800db680d7739b44b7ec5c", null ],
+    [ "operator ChannelWriter< TWrite >", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#ae115712fa8f9f72f4de207673615ec75", null ],
+    [ "_blockedReaders", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a261db00ed3a5a95888058d646843ace4.html#a261db00ed3a5a95888058d646843ace4", null ],
+    [ "_completion", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a474088b63c2f8679ac56618284854966.html#a474088b63c2f8679ac56618284854966", null ],
+    [ "_doneWriting", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a1d8a4fd43417718a9b943ae9b6d21dd9.html#a1d8a4fd43417718a9b943ae9b6d21dd9", null ],
+    [ "_items", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a884e843e99c9d0c424ccd34574249f12.html#a884e843e99c9d0c424ccd34574249f12", null ],
+    [ "_runContinuationsAsynchronously", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_aec1840b77f3eec271ddc663c76865670.html#aec1840b77f3eec271ddc663c76865670", null ],
+    [ "_waitingReadersTail", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a4ff933d52e845abc8c1125e3ced65f6b.html#a4ff933d52e845abc8c1125e3ced65f6b", null ],
+    [ "ChannelIsClosedForDebugger", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a8086288dde15e39c72f5fea4f795e556.html#a8086288dde15e39c72f5fea4f795e556", null ],
+    [ "ItemsCountForDebugger", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a6d0ce898d64c2e7fcf936400332f598d.html#a6d0ce898d64c2e7fcf936400332f598d", null ],
+    [ "Reader", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#ac672c132f4f1559a04fca43525c64ede", null ],
+    [ "SyncObj", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel_a481db539c61faeea18d7f7c92e963d2b.html#a481db539c61faeea18d7f7c92e963d2b", null ],
+    [ "Writer", "dc/d66/classSystem_1_1Threading_1_1Channels_1_1UnboundedChannel.html#a34415d7e8c900131f7533d091671f607", null ]
+];

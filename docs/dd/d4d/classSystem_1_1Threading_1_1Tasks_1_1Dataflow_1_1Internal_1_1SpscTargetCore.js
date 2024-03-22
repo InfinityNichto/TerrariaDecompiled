@@ -1,0 +1,28 @@
+var classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore =
+[
+    [ "DebuggingInformation", "da/d5f/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_1_1DebuggingInformation.html", "da/d5f/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_1_1DebuggingInformation" ],
+    [ "SpscTargetCore", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a00f1783f40cea34ecd948afed2d92278.html#a00f1783f40cea34ecd948afed2d92278", null ],
+    [ "Complete", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_ab332af0a41a9db22e99f35ddc926fe4d.html#ab332af0a41a9db22e99f35ddc926fe4d", null ],
+    [ "CompleteBlockOncePossible", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a306fac40fcc68a1d16e1a3047b5934d7.html#a306fac40fcc68a1d16e1a3047b5934d7", null ],
+    [ "GetDebuggingInformation", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_af876cfc85a2b9e354dcc1607314e1834.html#af876cfc85a2b9e354dcc1607314e1834", null ],
+    [ "OfferMessage", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_addecf14f768e1f8ef2dec3ac3d3dcf2a.html#addecf14f768e1f8ef2dec3ac3d3dcf2a", null ],
+    [ "OfferMessage_Slow", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a29e016a99c54c8991e6b1953cc6afef1.html#a29e016a99c54c8991e6b1953cc6afef1", null ],
+    [ "Post", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_aefa46529fadae5291e5f70d9fd22fa6e.html#aefa46529fadae5291e5f70d9fd22fa6e", null ],
+    [ "ProcessMessagesLoopCore", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_af1ec516fae439ccb5ca3fe04f76cf11e.html#af1ec516fae439ccb5ca3fe04f76cf11e", null ],
+    [ "ScheduleConsumerIfNecessary", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a20a02dd9081e9cf4b38ff4eaa2f8d1d8.html#a20a02dd9081e9cf4b38ff4eaa2f8d1d8", null ],
+    [ "StoreException", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_ae813bec8ecd88d35ba8c6eda76171b57.html#ae813bec8ecd88d35ba8c6eda76171b57", null ],
+    [ "_action", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a5598c0dcb04e6d956febbbf5636519f7.html#a5598c0dcb04e6d956febbbf5636519f7", null ],
+    [ "_activeConsumer", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_ab5c20880be0a561ad05391b7ca8bd984.html#ab5c20880be0a561ad05391b7ca8bd984", null ],
+    [ "_completionReserved", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a9355d7794b844ae87b19d1e7b01c5fac.html#a9355d7794b844ae87b19d1e7b01c5fac", null ],
+    [ "_completionTask", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_ab282b84c1e156bf3b1ad85ded95ca12f.html#ab282b84c1e156bf3b1ad85ded95ca12f", null ],
+    [ "_dataflowBlockOptions", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_aa26ce3450b91e35703ec3f5c7c21d88a.html#aa26ce3450b91e35703ec3f5c7c21d88a", null ],
+    [ "_decliningPermanently", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a7906b4bf480f0c213bb8ce9335db9573.html#a7906b4bf480f0c213bb8ce9335db9573", null ],
+    [ "_exceptions", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_ad24823db4f71c5d40c3459311d8ed6d2.html#ad24823db4f71c5d40c3459311d8ed6d2", null ],
+    [ "_messages", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_af14b0b1aa1f3d119aa8d95d075fd4769.html#af14b0b1aa1f3d119aa8d95d075fd4769", null ],
+    [ "_owningTarget", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_afccdfb07872e452f5d56e2b31bb7cf04.html#afccdfb07872e452f5d56e2b31bb7cf04", null ],
+    [ "Completion", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a982dbda6840803a2edd65f6c13806e02.html#a982dbda6840803a2edd65f6c13806e02", null ],
+    [ "CompletionSource", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a67fb8ab533a29a7900ad66b464afe56a.html#a67fb8ab533a29a7900ad66b464afe56a", null ],
+    [ "DataflowBlockOptions", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a02fe76708f4cc923970b65b97fbfbe61.html#a02fe76708f4cc923970b65b97fbfbe61", null ],
+    [ "DebuggerDisplayContent", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_adf7bc7f857062b529db347f9264be737.html#adf7bc7f857062b529db347f9264be737", null ],
+    [ "InputCount", "dd/d4d/classSystem_1_1Threading_1_1Tasks_1_1Dataflow_1_1Internal_1_1SpscTargetCore_a39711251305a06c2c31fc632d214992c.html#a39711251305a06c2c31fc632d214992c", null ]
+];

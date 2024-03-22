@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Serialization_1_1EnumMapping =
+[
+    [ "_constants", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping_ac3d8f85eda2c542211a3cbcf8ae7a10c.html#ac3d8f85eda2c542211a3cbcf8ae7a10c", null ],
+    [ "_includeInSchema", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#af36fa7cddf90df867b82ef08312f398f", null ],
+    [ "_isFlags", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping_a913e00740961ab9ae6f1bf0e3afe6b69.html#a913e00740961ab9ae6f1bf0e3afe6b69", null ],
+    [ "_isList", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a4db1c39370e31f6a4a031dc528d3c91f", null ],
+    [ "_isSoap", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#ad571377a3491ee9d63f42aa5bc5067ce", null ],
+    [ "_reference", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a80dbe3acdc465e38945496127c7db520", null ],
+    [ "_referencedByElement", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a3edaf5327baf84d79e02b04cab33a2d6", null ],
+    [ "_referencedByTopLevelElement", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a019de421297f678d245b7ba7e7737a12", null ],
+    [ "_typeDesc", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#ab70cd577a7f6fa2f97c17bf9e648d2e0", null ],
+    [ "_typeName", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a8a8008bb792052a9b31dd9693ed6a17e", null ],
+    [ "_typeNs", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#afe8412dfcddee48bfa95c7f5717e7c0c", null ],
+    [ "Constants", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping_a15dc5efc0c720330f083b1babf2520e3.html#a15dc5efc0c720330f083b1babf2520e3", null ],
+    [ "DefaultElementName", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a582cfcccf60601a47a1c09f0847228ae", null ],
+    [ "IncludeInSchema", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#ada9f9b95c5c5c9790907c57e32ecde66", null ],
+    [ "IsAnonymousType", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a74b30042dba6881c324f413c61b39ac4", null ],
+    [ "IsFlags", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping_a30e6698118ab050dbe40b80c325f67f0.html#a30e6698118ab050dbe40b80c325f67f0", null ],
+    [ "IsList", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a61555f4a653df124a8dda9dc9e528e51", null ],
+    [ "IsReference", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a219dc49574909f9ac350163d80f38b1e", null ],
+    [ "IsSoap", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a20d36c3f03dcf14add55dd1c43587d79", null ],
+    [ "Namespace", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a82f5af9c6e96f55ab87a3aece1adb140", null ],
+    [ "ReferencedByElement", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#af57e7fc5739230f8585537d4a57af648", null ],
+    [ "ReferencedByTopLevelElement", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a2f86dfed6da0da56c43229ffb58862a8", null ],
+    [ "TypeDesc", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#af1e3f6eca1fe06c6d2ef58c822f0a348", null ],
+    [ "TypeName", "d6/d0f/classSystem_1_1Xml_1_1Serialization_1_1EnumMapping.html#a36e2c7c800e6689afb9626d3abe80a1e", null ]
+];

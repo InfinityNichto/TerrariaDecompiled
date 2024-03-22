@@ -1,0 +1,27 @@
+var structSystem_1_1Net_1_1ArrayBuffer =
+[
+    [ "ArrayBuffer", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a0256239afee2e5882fd88a1430d8197c.html#a0256239afee2e5882fd88a1430d8197c", null ],
+    [ "ArrayBuffer", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a0256239afee2e5882fd88a1430d8197c.html#a0256239afee2e5882fd88a1430d8197c", null ],
+    [ "AvailableMemorySliced", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a31d60e3d0b07d3c851fd97f9120083a8.html#a31d60e3d0b07d3c851fd97f9120083a8", null ],
+    [ "Commit", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a5d60893d0336b06b992302f311db950f.html#a5d60893d0336b06b992302f311db950f", null ],
+    [ "Commit", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a5d60893d0336b06b992302f311db950f.html#a5d60893d0336b06b992302f311db950f", null ],
+    [ "Discard", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a9f5229b32bc65876ce3499c752770c49.html#a9f5229b32bc65876ce3499c752770c49", null ],
+    [ "Discard", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a9f5229b32bc65876ce3499c752770c49.html#a9f5229b32bc65876ce3499c752770c49", null ],
+    [ "Dispose", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a59600dc9187e3e420f25e167ab3d01a4.html#a59600dc9187e3e420f25e167ab3d01a4", null ],
+    [ "Dispose", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a59600dc9187e3e420f25e167ab3d01a4.html#a59600dc9187e3e420f25e167ab3d01a4", null ],
+    [ "EnsureAvailableSpace", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ac78bd7ba85f210613ebd986ee42fa4dd.html#ac78bd7ba85f210613ebd986ee42fa4dd", null ],
+    [ "EnsureAvailableSpace", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ac78bd7ba85f210613ebd986ee42fa4dd.html#ac78bd7ba85f210613ebd986ee42fa4dd", null ],
+    [ "Grow", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_aabfc17e6eda1651ba2ee1ffb518f349b.html#aabfc17e6eda1651ba2ee1ffb518f349b", null ],
+    [ "_activeStart", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a4c49b8a4464b7895f5ff9d7354e1ddf6.html#a4c49b8a4464b7895f5ff9d7354e1ddf6", null ],
+    [ "_availableStart", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a8f0c5560f066c41c870751bbd0425937.html#a8f0c5560f066c41c870751bbd0425937", null ],
+    [ "_bytes", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a3577396afc8ad56edf45c63b720e0e2a.html#a3577396afc8ad56edf45c63b720e0e2a", null ],
+    [ "_usePool", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a2151ab89208c86b66b5425051a27c44d.html#a2151ab89208c86b66b5425051a27c44d", null ],
+    [ "ActiveLength", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a416f8dcf29c68e2dc247d1bea1b18b1f.html#a416f8dcf29c68e2dc247d1bea1b18b1f", null ],
+    [ "ActiveMemory", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ade65d8d467d740f9d6836a15b86a5fb4.html#ade65d8d467d740f9d6836a15b86a5fb4", null ],
+    [ "ActiveReadOnlySpan", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a454e548c87a21036fe26e9e92165bd0b.html#a454e548c87a21036fe26e9e92165bd0b", null ],
+    [ "ActiveSpan", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a2ebe93914fa3e0932efb9533f877d8dc.html#a2ebe93914fa3e0932efb9533f877d8dc", null ],
+    [ "AvailableLength", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ab2018c1b7a3c230f86cb3604140b1952.html#ab2018c1b7a3c230f86cb3604140b1952", null ],
+    [ "AvailableMemory", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_a1e9df2c5307e27f5b0d8f8a4e0841416.html#a1e9df2c5307e27f5b0d8f8a4e0841416", null ],
+    [ "AvailableSpan", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ac9ec2af0e31564bccecb2aa346200153.html#ac9ec2af0e31564bccecb2aa346200153", null ],
+    [ "Capacity", "d4/d71/structSystem_1_1Net_1_1ArrayBuffer_ab132297331f9b7506960f72b3c49ce96.html#ab132297331f9b7506960f72b3c49ce96", null ]
+];

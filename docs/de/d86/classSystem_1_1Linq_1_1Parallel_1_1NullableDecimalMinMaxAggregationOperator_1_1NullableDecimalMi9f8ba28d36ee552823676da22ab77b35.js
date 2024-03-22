@@ -1,0 +1,13 @@
+var classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35 =
+[
+    [ "NullableDecimalMinMaxAggregationOperatorEnumerator", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35_a3562b6ce52fc4016561b7103cd4b5756.html#a3562b6ce52fc4016561b7103cd4b5756", null ],
+    [ "Dispose", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35_ac9c717f79a8e28e987c8545fc44c8ab1.html#ac9c717f79a8e28e987c8545fc44c8ab1", null ],
+    [ "MoveNext", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35.html#ac7eb45ca422c6883f79c36f6c8e8081d", null ],
+    [ "MoveNextCore", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35.html#aace3b76c2c70bc590c7b1e02da25523b", null ],
+    [ "MoveNextCore", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35_a3442f7301efe814d1babcc9a334ee003.html#a3442f7301efe814d1babcc9a334ee003", null ],
+    [ "_cancellationToken", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35.html#a5bfdd6b11d47881d16ba0563b2928f41", null ],
+    [ "_done", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35.html#a96936aa94c3f29260fad665caf972555", null ],
+    [ "_partitionIndex", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35.html#ac3effb83bda1e99dbd66830a371dfaa9", null ],
+    [ "_sign", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35_adc3a493e18c51b8c5eca241fe716b5a1.html#adc3a493e18c51b8c5eca241fe716b5a1", null ],
+    [ "_source", "de/d86/classSystem_1_1Linq_1_1Parallel_1_1NullableDecimalMinMaxAggregationOperator_1_1NullableDecimalMi9f8ba28d36ee552823676da22ab77b35_ae87726aef397d6dbee141fdc7ecbfa23.html#ae87726aef397d6dbee141fdc7ecbfa23", null ]
+];

@@ -1,0 +1,37 @@
+var classSystem_1_1Net_1_1Http_1_1AuthenticationHelper =
+[
+    [ "AuthenticationChallenge", "d3/d1b/structSystem_1_1Net_1_1Http_1_1AuthenticationHelper_1_1AuthenticationChallenge.html", "d3/d1b/structSystem_1_1Net_1_1Http_1_1AuthenticationHelper_1_1AuthenticationChallenge" ],
+    [ "DigestResponse", "d7/d3c/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_1_1DigestResponse.html", "d7/d3c/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_1_1DigestResponse" ],
+    [ "AuthenticationType", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a870bacc820e2380d145a443347d0d0a7.html#a870bacc820e2380d145a443347d0d0a7", [
+      [ "Basic", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a870bacc820e2380d145a443347d0d0a7.html#a870bacc820e2380d145a443347d0d0a7a972e73b7a882d0802a4e3a16946a2f94", null ],
+      [ "Digest", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a870bacc820e2380d145a443347d0d0a7.html#a870bacc820e2380d145a443347d0d0a7ae5cfc515f312c9e85f367e9854d9963e", null ],
+      [ "Ntlm", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a870bacc820e2380d145a443347d0d0a7.html#a870bacc820e2380d145a443347d0d0a7a3f7ebffbbd962068248ea77736f37599", null ],
+      [ "Negotiate", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a870bacc820e2380d145a443347d0d0a7.html#a870bacc820e2380d145a443347d0d0a7ae481ddec4f99e1a01fa3c80225a2197c", null ]
+    ] ],
+    [ "ComputeHash", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a2d3aa3de869a999276ffe0c052bc00e5.html#a2d3aa3de869a999276ffe0c052bc00e5", null ],
+    [ "GetDigestTokenForCredential", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a9a061ce9bab774852178f15d96b8a09a.html#a9a061ce9bab774852178f15d96b8a09a", null ],
+    [ "GetRandomAlphaNumericString", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_ade0efd7f7b3bcf51b725c146642e3580.html#ade0efd7f7b3bcf51b725c146642e3580", null ],
+    [ "GetResponseAuthenticationHeaderValues", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a81157bf99ce93ad794eea7c3e9c43428.html#a81157bf99ce93ad794eea7c3e9c43428", null ],
+    [ "InnerSendAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a574242d606db97822a830e3bd111e39e.html#a574242d606db97822a830e3bd111e39e", null ],
+    [ "InnerSendAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aa38ea6b54fc29a43809eb8540a29b91b.html#aa38ea6b54fc29a43809eb8540a29b91b", null ],
+    [ "IsAuthenticationChallenge", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a1a39a5ccbec32ff3a3170e3ede93bdeb.html#a1a39a5ccbec32ff3a3170e3ede93bdeb", null ],
+    [ "IsServerNonceStale", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a706087277069d6c09f79c80fc4c31160.html#a706087277069d6c09f79c80fc4c31160", null ],
+    [ "IsSessionAuthenticationChallenge", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aca1a05b10e84461515a8469ace095269.html#aca1a05b10e84461515a8469ace095269", null ],
+    [ "ProxySupportsConnectionAuth", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_af830dcde4f296afdc48a0b19f64c730a.html#af830dcde4f296afdc48a0b19f64c730a", null ],
+    [ "SendWithAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a1477420b4d4f0ac8e622203401729907.html#a1477420b4d4f0ac8e622203401729907", null ],
+    [ "SendWithNtAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aa0154988a77eea4ef785b3d5d4fbad22.html#aa0154988a77eea4ef785b3d5d4fbad22", null ],
+    [ "SendWithNtConnectionAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_ab22d3d5518247ca59d1b7d102dc73a27.html#ab22d3d5518247ca59d1b7d102dc73a27", null ],
+    [ "SendWithNtProxyAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a7d7f315c410d9baca31aca33b82150c0.html#a7d7f315c410d9baca31aca33b82150c0", null ],
+    [ "SendWithProxyAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_ab67b874d87d8fb021ba75f7b736496aa.html#ab67b874d87d8fb021ba75f7b736496aa", null ],
+    [ "SendWithRequestAuthAsync", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a5458aa1c22f806b5f4d9c87f0fdf35ec.html#a5458aa1c22f806b5f4d9c87f0fdf35ec", null ],
+    [ "SetBasicAuthToken", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a3a42c5dc8d9dfb0dd46436d75b4cbdfb.html#a3a42c5dc8d9dfb0dd46436d75b4cbdfb", null ],
+    [ "SetRequestAuthenticationHeaderValue", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aa7ce348a12d13f5b9f1da2bf83045d0e.html#aa7ce348a12d13f5b9f1da2bf83045d0e", null ],
+    [ "TryGetAuthenticationChallenge", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a9942e1b6d60ada79749dd20ea04c774b.html#a9942e1b6d60ada79749dd20ea04c774b", null ],
+    [ "TryGetChallengeDataForScheme", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aa4c641a46cc781bfa0e2d189243d357b.html#aa4c641a46cc781bfa0e2d189243d357b", null ],
+    [ "TryGetRepeatedChallenge", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_adc7501cb8705c4a47db20c894e1f2b02.html#adc7501cb8705c4a47db20c894e1f2b02", null ],
+    [ "TryGetValidAuthenticationChallengeForScheme", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_ac2041feeadb0313b060b9a295bba3390.html#ac2041feeadb0313b060b9a295bba3390", null ],
+    [ "TrySetDigestAuthToken", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_aeb742e06f0ee1295a948c87956b61108.html#aeb742e06f0ee1295a948c87956b61108", null ],
+    [ "s_alphaNumChooser", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a28b796ed6004924cd8862d17d46b990b.html#a28b796ed6004924cd8862d17d46b990b", null ],
+    [ "s_usePortInSpn", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a6ecf3f5ca9577c7c533d54f1508c7fce.html#a6ecf3f5ca9577c7c533d54f1508c7fce", null ],
+    [ "UsePortInSpn", "d9/d1a/classSystem_1_1Net_1_1Http_1_1AuthenticationHelper_a5c144b808b2e6c1c66fa0c2aca559975.html#a5c144b808b2e6c1c66fa0c2aca559975", null ]
+];

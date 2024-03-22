@@ -1,0 +1,8 @@
+var ClassDataContract_8cs =
+[
+    [ "System.Runtime.Serialization.ClassDataContract", "dd/dc2/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract.html", "dd/dc2/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract" ],
+    [ "System.Runtime.Serialization.ClassDataContract.ClassDataContractCriticalHelper", "df/d5c/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper.html", "df/d5c/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper" ],
+    [ "System.Runtime.Serialization.ClassDataContract.ClassDataContractCriticalHelper.Member", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member.html", "d6/d90/structSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1Member" ],
+    [ "System.Runtime.Serialization.ClassDataContract.ClassDataContractCriticalHelper.DataMemberConflictComparer", "d7/dae/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer.html", "d7/dae/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1ClassDataContractCriticalHelper_1_1DataMemberConflictComparer" ],
+    [ "System.Runtime.Serialization.ClassDataContract.DataMemberComparer", "da/dc0/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1DataMemberComparer.html", "da/dc0/classSystem_1_1Runtime_1_1Serialization_1_1ClassDataContract_1_1DataMemberComparer" ]
+];

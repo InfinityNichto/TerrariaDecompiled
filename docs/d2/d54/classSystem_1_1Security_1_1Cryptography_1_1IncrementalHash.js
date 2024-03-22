@@ -1,0 +1,26 @@
+var classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash =
+[
+    [ "IncrementalHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a385c3ab16dace317dcacd0b5195ab942.html#a385c3ab16dace317dcacd0b5195ab942", null ],
+    [ "IncrementalHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ac322ba6bb6e38902cc5c3ff365035062.html#ac322ba6bb6e38902cc5c3ff365035062", null ],
+    [ "AppendData", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a950535ebf5b72c9ca439e31e8374236e.html#a950535ebf5b72c9ca439e31e8374236e", null ],
+    [ "AppendData", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a7d730ae64625b16117c7796346e172b8.html#a7d730ae64625b16117c7796346e172b8", null ],
+    [ "AppendData", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a62e02904498bc5947394be608ec85f43.html#a62e02904498bc5947394be608ec85f43", null ],
+    [ "CreateHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a5dac7e89e1a8adbff26473a90090182b.html#a5dac7e89e1a8adbff26473a90090182b", null ],
+    [ "CreateHMAC", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a852fe4d1c4ef65e7762a18694ee062d5.html#a852fe4d1c4ef65e7762a18694ee062d5", null ],
+    [ "CreateHMAC", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a7c2202d28d220035cd286ad7f7b780e5.html#a7c2202d28d220035cd286ad7f7b780e5", null ],
+    [ "Dispose", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a474bcebe47710c359bc855f5a7b66d01.html#a474bcebe47710c359bc855f5a7b66d01", null ],
+    [ "GetCurrentHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a0141f9d268ffa9545232930383b1e5d1.html#a0141f9d268ffa9545232930383b1e5d1", null ],
+    [ "GetCurrentHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ad49b221b6cae8add8a034f65bed56312.html#ad49b221b6cae8add8a034f65bed56312", null ],
+    [ "GetCurrentHashCore", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a837416bc32e4df70ff3088e4c9115841.html#a837416bc32e4df70ff3088e4c9115841", null ],
+    [ "GetHashAndReset", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ab522751d049229aeee3d780209fbe9c4.html#ab522751d049229aeee3d780209fbe9c4", null ],
+    [ "GetHashAndReset", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ae21d53efe61772e4b85d9b0ab7052f50.html#ae21d53efe61772e4b85d9b0ab7052f50", null ],
+    [ "GetHashAndResetCore", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_acb173a2d53d63048fcec7905350b0316.html#acb173a2d53d63048fcec7905350b0316", null ],
+    [ "TryGetCurrentHash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ae1ba5de02d6081babb52acdb17ccbf53.html#ae1ba5de02d6081babb52acdb17ccbf53", null ],
+    [ "TryGetHashAndReset", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a99a78c4b7da39e9fdca95fe16eddfb1c.html#a99a78c4b7da39e9fdca95fe16eddfb1c", null ],
+    [ "_algorithmName", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a3cbdbba7528a58707f8511c35ac00027.html#a3cbdbba7528a58707f8511c35ac00027", null ],
+    [ "_disposed", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_ac4d475573fc9c3b283d3eaf3c85a8215.html#ac4d475573fc9c3b283d3eaf3c85a8215", null ],
+    [ "_hash", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_aa8ae92d4782347930573709e19e884b0.html#aa8ae92d4782347930573709e19e884b0", null ],
+    [ "_hmac", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a77a1191f58c9b8eb714162f86cfb4a11.html#a77a1191f58c9b8eb714162f86cfb4a11", null ],
+    [ "AlgorithmName", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a25dcbaa2a2494c3ee6de9abca46bea12.html#a25dcbaa2a2494c3ee6de9abca46bea12", null ],
+    [ "HashLengthInBytes", "d2/d54/classSystem_1_1Security_1_1Cryptography_1_1IncrementalHash_a2c1a6c13c39080b9fa8dd7b205283ea0.html#a2c1a6c13c39080b9fa8dd7b205283ea0", null ]
+];

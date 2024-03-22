@@ -1,0 +1,28 @@
+var structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle =
+[
+    [ "GCHandle", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a2d23e459ba6e4761133eb5dee7252d22.html#a2d23e459ba6e4761133eb5dee7252d22", null ],
+    [ "GCHandle", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a7ae084b26785c332fd04acf122f137a9.html#a7ae084b26785c332fd04acf122f137a9", null ],
+    [ "AddrOfPinnedObject", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a82b9bc4fb7465be2bdd7f49a34652a8a.html#a82b9bc4fb7465be2bdd7f49a34652a8a", null ],
+    [ "Alloc", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a90e89e64546947e3ea305c1915cbc404.html#a90e89e64546947e3ea305c1915cbc404", null ],
+    [ "Alloc", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a022618c9ceb944b6d2dc7ac1569fd5e9.html#a022618c9ceb944b6d2dc7ac1569fd5e9", null ],
+    [ "Equals", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a26412d2e3e7a4e7a603b0ae03269fea2.html#a26412d2e3e7a4e7a603b0ae03269fea2", null ],
+    [ "Free", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a780e435590f8a76e38ea3fd01d9ec068.html#a780e435590f8a76e38ea3fd01d9ec068", null ],
+    [ "FromIntPtr", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_afea51ffdde404737611d29398d6adfb8.html#afea51ffdde404737611d29398d6adfb8", null ],
+    [ "GetHandleValue", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_ab204d3b31626ae196de4e2b96e3b0d56.html#ab204d3b31626ae196de4e2b96e3b0d56", null ],
+    [ "GetHashCode", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a4e615d9af6a438bbb30622051e99e031.html#a4e615d9af6a438bbb30622051e99e031", null ],
+    [ "InternalAlloc", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a7fd49a2ca3ffb7f0158460ad856d6bd9.html#a7fd49a2ca3ffb7f0158460ad856d6bd9", null ],
+    [ "InternalCompareExchange", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_afe7121af63543f692b579b33e9a4cbf5.html#afe7121af63543f692b579b33e9a4cbf5", null ],
+    [ "InternalFree", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_acbfa9d106b851824ef5b8a81649fdae7.html#acbfa9d106b851824ef5b8a81649fdae7", null ],
+    [ "InternalGet", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_af2fa446dd282cc075461ea81234ba357.html#af2fa446dd282cc075461ea81234ba357", null ],
+    [ "InternalSet", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a7f14a58ecb008a59c651e771dabb5c34.html#a7f14a58ecb008a59c651e771dabb5c34", null ],
+    [ "IsPinned", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a11ae8dd3af9aa914d30e196913b2b4e7.html#a11ae8dd3af9aa914d30e196913b2b4e7", null ],
+    [ "operator GCHandle", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a3217ad63042ae6fefcb0c6895799c3b8.html#a3217ad63042ae6fefcb0c6895799c3b8", null ],
+    [ "operator IntPtr", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a281c6cf943cdc4b3d6c70d523a8c2787.html#a281c6cf943cdc4b3d6c70d523a8c2787", null ],
+    [ "operator!=", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a73d2ac0ff8811ddf70fc66461729e1d2.html#a73d2ac0ff8811ddf70fc66461729e1d2", null ],
+    [ "operator==", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a24e7499aa001c227f9c7bd7a27fcf6e3.html#a24e7499aa001c227f9c7bd7a27fcf6e3", null ],
+    [ "ThrowIfInvalid", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_ab0c9028c9ac037c7d4453c45e800b3cd.html#ab0c9028c9ac037c7d4453c45e800b3cd", null ],
+    [ "ToIntPtr", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a1332e0f5158e51cf74847ee44bf05cb7.html#a1332e0f5158e51cf74847ee44bf05cb7", null ],
+    [ "_handle", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_ad58b53493c0f831fe22a3b7fccbb894e.html#ad58b53493c0f831fe22a3b7fccbb894e", null ],
+    [ "IsAllocated", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a3ab478976f82c8a12eae227b0d15e19a.html#a3ab478976f82c8a12eae227b0d15e19a", null ],
+    [ "Target", "dc/d13/structSystem_1_1Runtime_1_1InteropServices_1_1GCHandle_a6f5acee01c37d3cc1236f00b80e55bbd.html#a6f5acee01c37d3cc1236f00b80e55bbd", null ]
+];

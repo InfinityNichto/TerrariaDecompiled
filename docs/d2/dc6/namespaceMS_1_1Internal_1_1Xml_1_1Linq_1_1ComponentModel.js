@@ -1,0 +1,15 @@
+var namespaceMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel =
+[
+    [ "XAttributeValuePropertyDescriptor", "d4/dd3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XAttributeValuePropertyDescriptor.html", "d4/dd3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XAttributeValuePropertyDescriptor" ],
+    [ "XDeferredAxis", "d0/d9a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XDeferredAxis.html", "d0/d9a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XDeferredAxis" ],
+    [ "XDeferredSingleton", "d8/d2b/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XDeferredSingleton.html", "d8/d2b/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XDeferredSingleton" ],
+    [ "XElementAttributePropertyDescriptor", "dd/d4a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementAttributePropertyDescriptor.html", "dd/d4a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementAttributePropertyDescriptor" ],
+    [ "XElementDescendantsPropertyDescriptor", "d3/de7/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementDescendantsPropertyDescriptor.html", "d3/de7/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementDescendantsPropertyDescriptor" ],
+    [ "XElementElementPropertyDescriptor", "d2/dc3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementElementPropertyDescriptor.html", "d2/dc3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementElementPropertyDescriptor" ],
+    [ "XElementElementsPropertyDescriptor", "d7/d36/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementElementsPropertyDescriptor.html", "d7/d36/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementElementsPropertyDescriptor" ],
+    [ "XElementValuePropertyDescriptor", "d9/d8c/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementValuePropertyDescriptor.html", "d9/d8c/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementValuePropertyDescriptor" ],
+    [ "XElementXmlPropertyDescriptor", "d6/d9a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementXmlPropertyDescriptor.html", "d6/d9a/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XElementXmlPropertyDescriptor" ],
+    [ "XPropertyDescriptor", "da/d3c/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XPropertyDescriptor.html", "da/d3c/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XPropertyDescriptor" ],
+    [ "XTypeDescriptionProvider", "da/da3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XTypeDescriptionProvider.html", "da/da3/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XTypeDescriptionProvider" ],
+    [ "XTypeDescriptor", "db/d96/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XTypeDescriptor.html", "db/d96/classMS_1_1Internal_1_1Xml_1_1Linq_1_1ComponentModel_1_1XTypeDescriptor" ]
+];

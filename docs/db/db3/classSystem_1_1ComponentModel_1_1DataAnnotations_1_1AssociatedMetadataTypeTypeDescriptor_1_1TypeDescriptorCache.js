@@ -1,0 +1,10 @@
+var classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache =
+[
+    [ "CheckAssociatedMetadataType", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_a17cf43ef32961c1f81dd5b899e2cb12a.html#a17cf43ef32961c1f81dd5b899e2cb12a", null ],
+    [ "GetAssociatedMetadata", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_a07c3ad8f94a552f83d1630a2450e5f5b.html#a07c3ad8f94a552f83d1630a2450e5f5b", null ],
+    [ "GetAssociatedMetadataType", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_a0e418dc279fa2d6173f76d4c861a1901.html#a0e418dc279fa2d6173f76d4c861a1901", null ],
+    [ "ValidateMetadataType", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_a3c0f8d44842a2d4de29cfeee64565581.html#a3c0f8d44842a2d4de29cfeee64565581", null ],
+    [ "s_metadataTypeCache", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_abf4a5e62ac56fbd98e0e7e940b1cbf98.html#abf4a5e62ac56fbd98e0e7e940b1cbf98", null ],
+    [ "s_typeMemberCache", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_a790b6c5f2cee327484f1168aaf668343.html#a790b6c5f2cee327484f1168aaf668343", null ],
+    [ "s_validatedMetadataTypeCache", "db/db3/classSystem_1_1ComponentModel_1_1DataAnnotations_1_1AssociatedMetadataTypeTypeDescriptor_1_1TypeDescriptorCache_ae54c3e70991bed1c1bb66176ab27a2c4.html#ae54c3e70991bed1c1bb66176ab27a2c4", null ]
+];

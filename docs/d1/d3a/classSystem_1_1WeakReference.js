@@ -1,0 +1,25 @@
+var classSystem_1_1WeakReference =
+[
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_aac279ff9e0c85a05009d11c3a2650f57.html#aac279ff9e0c85a05009d11c3a2650f57", null ],
+    [ "~WeakReference", "d1/d3a/classSystem_1_1WeakReference_ad93d7d6643376ad9fc518081114de59d.html#ad93d7d6643376ad9fc518081114de59d", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_ae98ec8d63748316c8a7d3d89b66b0792.html#ae98ec8d63748316c8a7d3d89b66b0792", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_a125a3275627daa290381900336ab37bc.html#a125a3275627daa290381900336ab37bc", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_a2152c8f69b9638f7565925854b648f14.html#a2152c8f69b9638f7565925854b648f14", null ],
+    [ "~WeakReference", "d1/d3a/classSystem_1_1WeakReference_ad93d7d6643376ad9fc518081114de59d.html#ad93d7d6643376ad9fc518081114de59d", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_a6633741257434baf088ac80959d3a3fd.html#a6633741257434baf088ac80959d3a3fd", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_ace4cf02f8bdcdca547ac1544750eac59.html#ace4cf02f8bdcdca547ac1544750eac59", null ],
+    [ "WeakReference", "d1/d3a/classSystem_1_1WeakReference_a2152c8f69b9638f7565925854b648f14.html#a2152c8f69b9638f7565925854b648f14", null ],
+    [ "Create", "d1/d3a/classSystem_1_1WeakReference_a17c08a42f6ca842b8c6ecc62b08692e3.html#a17c08a42f6ca842b8c6ecc62b08692e3", null ],
+    [ "Create", "d1/d3a/classSystem_1_1WeakReference_adb04c9845bfb84a12181a4f820f956b4.html#adb04c9845bfb84a12181a4f820f956b4", null ],
+    [ "GetObjectData", "d1/d3a/classSystem_1_1WeakReference_a262bd5c72ea43b0d1a3a24c6873cf639.html#a262bd5c72ea43b0d1a3a24c6873cf639", null ],
+    [ "GetObjectData", "d1/d3a/classSystem_1_1WeakReference_af086b8feb9d6f3ad22ea56c8cb599b42.html#af086b8feb9d6f3ad22ea56c8cb599b42", null ],
+    [ "IsTrackResurrection", "d1/d3a/classSystem_1_1WeakReference_a3d315cf7edb4ef90083a6426e576fe4e.html#a3d315cf7edb4ef90083a6426e576fe4e", null ],
+    [ "IsTrackResurrection", "d1/d3a/classSystem_1_1WeakReference_a3d315cf7edb4ef90083a6426e576fe4e.html#a3d315cf7edb4ef90083a6426e576fe4e", null ],
+    [ "SetTarget", "d1/d3a/classSystem_1_1WeakReference_ae1eb46862fb0ca41edbd132ba6fa87a7.html#ae1eb46862fb0ca41edbd132ba6fa87a7", null ],
+    [ "TryGetTarget", "d1/d3a/classSystem_1_1WeakReference_ada6df7eb8c320ec8eaa1888fdcecfb9a.html#ada6df7eb8c320ec8eaa1888fdcecfb9a", null ],
+    [ "m_handle", "d1/d3a/classSystem_1_1WeakReference_aae2bb058e309d423f47424974e1ea5ef.html#aae2bb058e309d423f47424974e1ea5ef", null ],
+    [ "IsAlive", "d1/d3a/classSystem_1_1WeakReference_aecc92f89a1a739891d22c03b8a099208.html#aecc92f89a1a739891d22c03b8a099208", null ],
+    [ "Target", "d1/d3a/classSystem_1_1WeakReference_ac317d970bdfbd3cf3dcb1b4d9190d1b4.html#ac317d970bdfbd3cf3dcb1b4d9190d1b4", null ],
+    [ "Target", "d1/d3a/classSystem_1_1WeakReference_a3ea087d64cd76dd23b7c6466263141a0.html#a3ea087d64cd76dd23b7c6466263141a0", null ],
+    [ "TrackResurrection", "d1/d3a/classSystem_1_1WeakReference_a47870eb58b749bbea7bb58949f9511a7.html#a47870eb58b749bbea7bb58949f9511a7", null ]
+];

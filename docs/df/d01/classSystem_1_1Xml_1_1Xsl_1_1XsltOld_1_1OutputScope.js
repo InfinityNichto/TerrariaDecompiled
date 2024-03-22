@@ -1,0 +1,27 @@
+var classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope =
+[
+    [ "OutputScope", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_ac39cd4f1224f43ce3fefc1072996f27b.html#ac39cd4f1224f43ce3fefc1072996f27b", null ],
+    [ "AddNamespace", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope.html#ad994676d0e908837cfc1c7264beb0111", null ],
+    [ "FindPrefix", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a42af278b3b2d09a4702aa9d49737802c.html#a42af278b3b2d09a4702aa9d49737802c", null ],
+    [ "Init", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_af38608b8ad784c192c8f84674746a11d.html#af38608b8ad784c192c8f84674746a11d", null ],
+    [ "ResolveAtom", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope.html#ac9bfb41e4df217aa2d663aaf1bbb6a8e", null ],
+    [ "ResolveNonAtom", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope.html#a5425b17b07e736f5753b7c48f1168f45", null ],
+    [ "_htmlElementProps", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a74375810362ef86f7399466644d0c18d.html#a74375810362ef86f7399466644d0c18d", null ],
+    [ "_lang", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a2113f24d5f4f16e2bafb8622dc5aa4da.html#a2113f24d5f4f16e2bafb8622dc5aa4da", null ],
+    [ "_mixed", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a457f646c781dc8cc6bddbd35155aae2e.html#a457f646c781dc8cc6bddbd35155aae2e", null ],
+    [ "_name", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a714af2708ba182b92326d29d659cf7e6.html#a714af2708ba182b92326d29d659cf7e6", null ],
+    [ "_nsUri", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a54a9f7e1da83df9e5397420b243139e1.html#a54a9f7e1da83df9e5397420b243139e1", null ],
+    [ "_prefix", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a7345a59e0c11d572e0558edc72002846.html#a7345a59e0c11d572e0558edc72002846", null ],
+    [ "_space", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a7fb774bccd73f612aaaf02af215e8adc.html#a7fb774bccd73f612aaaf02af215e8adc", null ],
+    [ "_toCData", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a59dca877edc2abd6512155dc234351bf.html#a59dca877edc2abd6512155dc234351bf", null ],
+    [ "scopes", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope.html#aa18a63e2330efffd442e874e9fe42e6f", null ],
+    [ "HtmlElementProps", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a0e98679ecdf0e3b13c6789ed0727a065.html#a0e98679ecdf0e3b13c6789ed0727a065", null ],
+    [ "Lang", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_aeab307dce788de4daffce582adf58877.html#aeab307dce788de4daffce582adf58877", null ],
+    [ "Mixed", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a9d6cb618b6e9cd39f24f8682142f8552.html#a9d6cb618b6e9cd39f24f8682142f8552", null ],
+    [ "Name", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a85982dedc52438a63c02717a8046a343.html#a85982dedc52438a63c02717a8046a343", null ],
+    [ "Namespace", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_acc8f422db920f2de5385620e49c00826.html#acc8f422db920f2de5385620e49c00826", null ],
+    [ "Prefix", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_ac98fd42c2f1eed62049af831ff1aa46b.html#ac98fd42c2f1eed62049af831ff1aa46b", null ],
+    [ "Scopes", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope.html#adcaa7457b797a353de7b7e18d3ec1839", null ],
+    [ "Space", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_a0c4eff3d014422403fbca4dda0ec06fa.html#a0c4eff3d014422403fbca4dda0ec06fa", null ],
+    [ "ToCData", "df/d01/classSystem_1_1Xml_1_1Xsl_1_1XsltOld_1_1OutputScope_aca27675b99642b958ec6a75ba81fb60f.html#aca27675b99642b958ec6a75ba81fb60f", null ]
+];

@@ -1,0 +1,4 @@
+var structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C7b483d5b4f15b9636c87a2c1b8618b59 =
+[
+    [ "Status", "d1/d1f/structSystem_1_1Net_1_1Quic_1_1Implementations_1_1MsQuic_1_1Internal_1_1MsQuicNativeMethods_1_1C7b483d5b4f15b9636c87a2c1b8618b59_a8b8bed6e416aeae6970bf76416937461.html#a8b8bed6e416aeae6970bf76416937461", null ]
+];

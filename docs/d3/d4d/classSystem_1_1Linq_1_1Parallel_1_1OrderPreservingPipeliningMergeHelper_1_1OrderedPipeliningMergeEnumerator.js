@@ -1,0 +1,17 @@
+var classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator =
+[
+    [ "OrderedPipeliningMergeEnumerator", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a3285f87f1f5f570a0d753de22ca34f98.html#a3285f87f1f5f570a0d753de22ca34f98", null ],
+    [ "Dispose", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_ad1d10330a44f1e0a2d14c8b3e84b2f50.html#ad1d10330a44f1e0a2d14c8b3e84b2f50", null ],
+    [ "MoveNext", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a3b35c19b5e560edab5a94f882ae31e2d.html#a3b35c19b5e560edab5a94f882ae31e2d", null ],
+    [ "Reset", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator.html#ad80f9cd60f4ec3f13f90b5081bc332ae", null ],
+    [ "ThrowIfInTearDown", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_af92fc7d1d260ede2818a572b9fe3ad2a.html#af92fc7d1d260ede2818a572b9fe3ad2a", null ],
+    [ "TryGetPrivateElement", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a5a243df65fc7b75f81f24c496fa43224.html#a5a243df65fc7b75f81f24c496fa43224", null ],
+    [ "TryWaitForElement", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a8059d0c5566c10263def2bc6f7ea92d3.html#a8059d0c5566c10263def2bc6f7ea92d3", null ],
+    [ "_initialized", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a88000658000eec6912c210e855745621.html#a88000658000eec6912c210e855745621", null ],
+    [ "_mergeHelper", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_afd94e4c887f95db00e27c50baf0f6c37.html#afd94e4c887f95db00e27c50baf0f6c37", null ],
+    [ "_privateBuffer", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a55d5d9f3ea2e4c7a1edd0c3082b674d4.html#a55d5d9f3ea2e4c7a1edd0c3082b674d4", null ],
+    [ "_producerHeap", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_ae665e3345d9c0a83f7b636bf6cb34f69.html#ae665e3345d9c0a83f7b636bf6cb34f69", null ],
+    [ "_producerNextElement", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a35acdd67aa1f2036603bba7dd0abcc83.html#a35acdd67aa1f2036603bba7dd0abcc83", null ],
+    [ "_taskGroupState", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator.html#aa6c2db9966da45d9cb0e48f1c5062565", null ],
+    [ "Current", "d3/d4d/classSystem_1_1Linq_1_1Parallel_1_1OrderPreservingPipeliningMergeHelper_1_1OrderedPipeliningMergeEnumerator_a59fcb9162a40e7512066095b6cf72be5.html#a59fcb9162a40e7512066095b6cf72be5", null ]
+];

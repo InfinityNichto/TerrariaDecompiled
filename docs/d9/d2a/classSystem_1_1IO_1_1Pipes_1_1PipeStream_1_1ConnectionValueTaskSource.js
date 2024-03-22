@@ -1,0 +1,27 @@
+var classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource =
+[
+    [ "ConnectionValueTaskSource", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource_ab08ea7da4d6d6d69a355c4c79d09061f.html#ab08ea7da4d6d6d69a355c4c79d09061f", null ],
+    [ "Complete", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a84fb983c377a52236dc9145219923b55", null ],
+    [ "CompleteCore", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource_ac6ce1aff559b9a7edb369ff19b5ff823.html#ac6ce1aff559b9a7edb369ff19b5ff823", null ],
+    [ "Dispose", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a7441d53b436b5c624c092c7e7cf4a103", null ],
+    [ "FinishedScheduling", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a6c16dfd25c99c92baf8864b607cfda59", null ],
+    [ "GetResult", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#aead301c59f2fd85424d42b0d4269dce8", null ],
+    [ "GetResult", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#ab89197360f08b8a3f44443e08a513b68", null ],
+    [ "GetStatus", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#af3eef692bb73c13a0558e74c682bcc56", null ],
+    [ "IOCallback", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#af5cfe9a851c4e38661fb93e3107054f7", null ],
+    [ "OnCompleted", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a4701d2dbca0ef41d273386c0b1cd65a0", null ],
+    [ "OnCompleted", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a39eec24454822f2f2e4d6617b16b9a8a", null ],
+    [ "OnCompleted", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a39eec24454822f2f2e4d6617b16b9a8a", null ],
+    [ "PrepareForOperation", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a0b9b1fb130389de74771f1975fc1059e", null ],
+    [ "RegisterForCancellation", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a5cb7b8ca1b8c6b632be81e621d9f08d6", null ],
+    [ "ReleaseResources", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#ae6b7d3c42445944750b0c9ef866bc416", null ],
+    [ "_cancellationRegistration", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a392ff614f753d61ed63a2b1f0a6f9d05", null ],
+    [ "_memoryHandle", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a2a2ec4e6f39761b01cd5eb2fad69f0b0", null ],
+    [ "_overlapped", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#ac7c19ed849517d592ac0e67b56d835a1", null ],
+    [ "_pipeStream", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a577d3a514dfcbe72ee20901284b0bef6", null ],
+    [ "_preallocatedOverlapped", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a7701546347cee1cf7888c827262dc92c", null ],
+    [ "_result", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#acdf006660236d3d9052ae017c3ba76f6", null ],
+    [ "_source", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#ab800392bc9151032434be1db4df2df6f", null ],
+    [ "s_ioCallback", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#a1afffb4305e721bea24f75299ee8d48f", null ],
+    [ "Version", "d9/d2a/classSystem_1_1IO_1_1Pipes_1_1PipeStream_1_1ConnectionValueTaskSource.html#ad7b933ee064ece00c88037d04f160d10", null ]
+];
