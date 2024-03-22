@@ -7,7 +7,7 @@
 This is the repository for ***Terraria*** source code, decompiled using ***ILSpy***. <br>
 Source code browser available at:
 [![click-me - infinitynichto.github.io/TerrariaDecompiled](https://img.shields.io/badge/click--me-infinitynichto.github.io%2FTerrariaDecompiled-informational?logo=dependabot&logoColor=informational)](https://infinitynichto.github.io/TerrariaDecompiled) <br>
-Last updated: `25 December 2023` <br><br>
+Last updated: `22 March 2023` <br><br>
 Other links: <br>
 [![click-me - infinitynichto.github.io/TMLDecompiled](https://img.shields.io/badge/click--me-infinitynichto.github.io%2FTMLDecompiled-informational?logo=dependabot&logoColor=informational)](https://infinitynichto.github.io/TMLDecompiled) <br>
 • Asset browser upcoming!
